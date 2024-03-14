@@ -1,0 +1,2466 @@
+Odontologia As screen:
+    Fill: |-
+        =ColorValue("#F5F5F5")
+    OnVisible: |
+        =
+
+    TextInput28_1 As text:
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =598
+        OnSelect: =
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =1031
+        X: =305
+        Y: =170
+        ZIndex: =1
+
+    Label32_3 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        Size: =14
+        Text: ="Parte Superior"
+        Width: =171
+        X: =475
+        Y: =300
+        ZIndex: =2
+
+    Label32_4 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        Size: =14
+        Text: ="Parte Inferior"
+        Width: =171
+        X: =475
+        Y: =525
+        ZIndex: =3
+
+    Label32_6 As label:
+        Align: =Align.Center
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =38
+        Text: =Sum(Filter(colguardarDientes_caries,Maxilar="Superior"),Caries)
+        Width: =83
+        X: =1062
+        Y: =275
+        ZIndex: =4
+
+    Label32_7 As label:
+        Align: =Align.Center
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =38
+        Text: =Sum(Filter(colguardarDientes_caries,Maxilar="Inferior"),Caries)
+        Width: =83
+        X: =1062
+        Y: =500
+        ZIndex: =5
+
+    Label32_8 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =14
+        Text: ="Caries"
+        Width: =83
+        X: =1062
+        Y: =349
+        ZIndex: =6
+
+    Label32_9 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =14
+        Text: ="Caries"
+        Width: =83
+        X: =1062
+        Y: =574
+        ZIndex: =7
+
+    Button3_48 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =Button3_48.BorderColor
+        Font: =Font.'Segoe UI'
+        Height: =36
+        HoverBorderColor: =ColorFade(Button3_48.BorderColor, 20%)
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: =
+        PaddingLeft: =25
+        PressedBorderColor: |-
+            =ColorValue("#6DE8D2")
+        PressedColor: |-
+            =ColorValue("#6DE8D2")
+        PressedFill: =Button3_48.Color
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="RADIOGRAFÍAS"
+        Width: =196
+        X: =1110
+        Y: =200
+        ZIndex: =8
+
+    Image4_49 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =Image4_49.BorderColor
+        Height: =16
+        HoverBorderColor: =ColorFade(Image4_49.BorderColor, 20%)
+        HoverFill: =ColorFade(Image4_49.Fill, 20%)
+        Image: ='Shape (39)'
+        OnSelect: =
+        PressedBorderColor: =ColorFade(Image4_49.BorderColor, -20%)
+        PressedFill: =ColorFade(Image4_49.Fill, -20%)
+        Width: =16
+        X: =1123
+        Y: =210
+        ZIndex: =9
+
+    Image24 As image:
+        Height: =156
+        Image: ='MicrosoftTeams-image (27)'
+        Width: =318
+        X: =660
+        Y: =243
+        ZIndex: =10
+
+    Image24_1 As image:
+        Height: =156
+        Image: ='MicrosoftTeams-image (28)'
+        Width: =318
+        X: =660
+        Y: =469
+        ZIndex: =11
+
+    Button1_98 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        HoverBorderColor: |-
+            =ColorValue("#26495B")
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: |-
+            =UpdateContext({_varSuperiorOdontologia:true})
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =11
+        Text: ="EXAMINAR"
+        Width: =159
+        X: =742
+        Y: =413
+        ZIndex: =12
+
+    Button1_99 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        HoverBorderColor: |-
+            =ColorValue("#26495B")
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: |-
+            =UpdateContext({_varInferiorOdontologia:true})
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =11
+        Text: ="EXAMINAR"
+        Width: =159
+        X: =742
+        Y: =641
+        ZIndex: =13
+
+    Label32_5 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        Size: =18
+        Text: ="Análisis"
+        Width: =131
+        X: =770
+        Y: =189
+        ZIndex: =14
+
+    Button3_49 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        FocusedBorderColor: =Button3_49.BorderColor
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: =ColorFade(Button3_49.BorderColor, 20%)
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: =
+        PressedBorderColor: =Button3_49.Fill
+        PressedColor: =Button3_49.Fill
+        PressedFill: =Button3_49.Color
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="CONTINUAR"
+        Visible: =varTriajeInicial
+        Width: =369
+        X: =636
+        Y: =694
+        ZIndex: =15
+
+    Circle1_38 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Molar-48"),Diente)="Molar-48",true,false)
+        Width: =9
+        X: =681
+        Y: =480
+        ZIndex: =16
+
+    Circle1_39 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Molar-47"),Diente)="Molar-47",true,false)
+        Width: =9
+        X: =686
+        Y: =505
+        ZIndex: =17
+
+    Circle1_40 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Molar-46"),Diente)="Molar-46",true,false)
+        Width: =9
+        X: =699
+        Y: =534
+        ZIndex: =18
+
+    Circle1_41 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Premolar-45"),Diente)="Premolar-45",true,false)
+        Width: =9
+        X: =716
+        Y: =557
+        ZIndex: =19
+
+    Circle1_42 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Premolar-44"),Diente)="Premolar-44",true,false)
+        Width: =9
+        X: =733
+        Y: =573
+        ZIndex: =20
+
+    Circle1_43 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Canino-43"),Diente)="Canino-43",true,false)
+        Width: =9
+        X: =754
+        Y: =588
+        ZIndex: =21
+
+    Circle1_44 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Incisivo-42"),Diente)="Incisivo-42",true,false)
+        Width: =9
+        X: =774
+        Y: =594
+        ZIndex: =22
+
+    Circle1_45 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Incisivo-41"),Diente)="Incisivo-41",true,false)
+        Width: =9
+        X: =800
+        Y: =598
+        ZIndex: =23
+
+    Circle1_46 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Molar-38"),Diente)="Molar-38",true,false)
+        Width: =9
+        X: =947
+        Y: =481
+        ZIndex: =24
+
+    Circle1_47 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Molar-37"),Diente)="Molar-37",true,false)
+        Width: =9
+        X: =942
+        Y: =505
+        ZIndex: =25
+
+    Circle1_48 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Molar-36"),Diente)="Molar-36",true,false)
+        Width: =9
+        X: =929
+        Y: =535
+        ZIndex: =26
+
+    Circle1_49 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Premolar-35"),Diente)="Premolar-35",true,false)
+        Width: =9
+        X: =911
+        Y: =558
+        ZIndex: =27
+
+    Circle1_50 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Premolar-34"),Diente)="Premolar-34",true,false)
+        Width: =9
+        X: =892
+        Y: =573
+        ZIndex: =28
+
+    Circle1_51 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Canino-33"),Diente)="Canino-33",true,false)
+        Width: =9
+        X: =875
+        Y: =586
+        ZIndex: =29
+
+    Circle1_52 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Incisivo-32"),Diente)="Incisivo-32",true,false)
+        Width: =9
+        X: =853
+        Y: =594
+        ZIndex: =30
+
+    Circle1_53 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Inferior",Diente="Incisivo-31"),Diente)="Incisivo-31",true,false)
+        Width: =9
+        X: =828
+        Y: =598
+        ZIndex: =31
+
+    Circle1_54 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Molar-18"),Diente)="Molar-18",true,false)
+        Width: =9
+        X: =681
+        Y: =379
+        ZIndex: =32
+
+    Circle1_55 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Molar-17"),Diente)="Molar-17",true,false)
+        Width: =9
+        X: =685
+        Y: =353
+        ZIndex: =33
+
+    Circle1_56 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Molar-16"),Diente)="Molar-16",true,false)
+        Width: =9
+        X: =698
+        Y: =323
+        ZIndex: =34
+
+    Circle1_57 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Premolar-15"),Diente)="Premolar-15",true,false)
+        Width: =9
+        X: =717
+        Y: =303
+        ZIndex: =35
+
+    Group3_14 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =35
+
+        Button3_43 As button:
+            BorderColor: |-
+                =ColorValue("#26495B")
+            Color: |-
+                =ColorValue("#26495B")
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =Button3_43.BorderColor
+            Height: =60
+            HoverBorderColor: =ColorFade(Button3_43.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: =//Navigate('Dashboard Control')
+            PaddingLeft: =25
+            PressedBorderColor: |-
+                =ColorValue("#6DE8D2")
+            PressedColor: |-
+                =ColorValue("#6DE8D2")
+            PressedFill: =Button3_43.Color
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="En Cola"
+            Width: =215
+            X: =30
+            Y: =126
+            ZIndex: =50
+
+        Image4_45 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_45.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_45.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_45.Fill, 20%)
+            Image: ='Shape (37)'
+            OnSelect: =//Navigate('Dashboard Control')
+            PressedBorderColor: =ColorFade(Image4_45.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_45.Fill, -20%)
+            Width: =25
+            X: =52
+            Y: =143
+            ZIndex: =51
+
+    Circle1_58 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Premolar-14"),Diente)="Premolar-14",true,false)
+        Width: =9
+        X: =732
+        Y: =285
+        ZIndex: =36
+
+    Circle1_59 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Canino-13"),Diente)="Canino-13",true,false)
+        Width: =9
+        X: =754
+        Y: =271
+        ZIndex: =37
+
+    Circle1_60 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Incisivo-12"),Diente)="Incisivo-12",true,false)
+        Width: =9
+        X: =774
+        Y: =264
+        ZIndex: =38
+
+    Circle1_61 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Incisivo-11"),Diente)="Incisivo-11",true,false)
+        Width: =9
+        X: =800
+        Y: =262
+        ZIndex: =39
+
+    Group4_15 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =39
+
+        Button3_44 As button:
+            BorderColor: |-
+                =ColorValue("#26495B")
+            Color: |-
+                =ColorValue("#26495B")
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: |-
+                =ColorValue("#6DE8D2")
+            FocusedBorderColor: =Button3_44.BorderColor
+            Height: =60
+            HoverBorderColor: =ColorFade(Button3_44.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: |
+                =false
+            PaddingLeft: =25
+            PressedBorderColor: =Button3_44.Fill
+            PressedColor: =Button3_44.Fill
+            PressedFill: =Button3_44.Color
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="En Atención"
+            Width: =215
+            X: =30
+            Y: =212
+            ZIndex: =52
+
+        Image4_46 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_46.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_46.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_46.Fill, 20%)
+            Image: ='Shape (38)'
+            PressedBorderColor: =ColorFade(Image4_46.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_46.Fill, -20%)
+            Width: =25
+            X: =52
+            Y: =229
+            ZIndex: =53
+
+    Circle1_62 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Incisivo-21"),Diente)="Incisivo-21",true,false)
+        Width: =9
+        X: =829
+        Y: =262
+        ZIndex: =40
+
+    Circle1_63 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Incisivo-22"),Diente)="Incisivo-22",true,false)
+        Width: =9
+        X: =852
+        Y: =266
+        ZIndex: =41
+
+    Circle1_64 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Canino-23"),Diente)="Canino-23",true,false)
+        Width: =9
+        X: =872
+        Y: =273
+        ZIndex: =42
+
+    Circle1_65 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Premolar-24"),Diente)="Premolar-24",true,false)
+        Width: =9
+        X: =892
+        Y: =285
+        ZIndex: =43
+
+    Circle1_66 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Premolar-25"),Diente)="Premolar-25",true,false)
+        Width: =9
+        X: =912
+        Y: =303
+        ZIndex: =44
+
+    Group3_15 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =44
+
+        Button3_45 As button:
+            BorderColor: |-
+                =ColorValue("#26495B")
+            Color: |-
+                =ColorValue("#26495B")
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =Button3_45.BorderColor
+            Height: =60
+            HoverBorderColor: =ColorFade(Button3_45.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: =Navigate('Consulta Medica Pacientes')
+            PaddingLeft: =25
+            PressedBorderColor: |-
+                =ColorValue("#6DE8D2")
+            PressedColor: |-
+                =ColorValue("#6DE8D2")
+            PressedFill: =Button3_45.Color
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="Registro"
+            Width: =215
+            X: =30
+            Y: =298
+            ZIndex: =54
+
+        Image4_47 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_47.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_47.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_47.Fill, 20%)
+            Image: ='Shape (39)'
+            OnSelect: =Navigate('Consulta Medica Pacientes')
+            PressedBorderColor: =ColorFade(Image4_47.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_47.Fill, -20%)
+            Width: =25
+            X: =52
+            Y: =316
+            ZIndex: =55
+
+    Circle1_67 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Molar-26"),Diente)="Molar-26",true,false)
+        Width: =9
+        X: =931
+        Y: =324
+        ZIndex: =45
+
+    Circle1_68 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Molar-27"),Diente)="Molar-27",true,false)
+        Width: =9
+        X: =941
+        Y: =352
+        ZIndex: =46
+
+    Circle1_69 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =9
+        Visible: =If(LookUp(colguardarDientes_caries,And(Maxilar="Superior",Diente="Molar-28"),Diente)="Molar-28",true,false)
+        Width: =9
+        X: =946
+        Y: =378
+        ZIndex: =47
+
+    Label32_2 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: |-
+            ="Etapa: Odontología"
+        Width: =230
+        X: =325
+        Y: =116
+        ZIndex: =48
+
+    Button3_42 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        FocusedBorderColor: =Button3_42.BorderColor
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: =ColorFade(Button3_42.BorderColor, 20%)
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: |-
+            =ForAll(colguardarDientes_caries As var,
+            Patch('public.Medical_Center_Odontologia',Defaults('public.Medical_Center_Odontologia'),
+            { id:First(SortByColumns('public.Medical_Center_Odontologia',"id",SortOrder.Descending)).id+1,
+            DNI_CI:"76984706",
+            Diente:var.Diente,
+            Caries:var.Caries,
+            Maxilar:var.Maxilar
+            }))
+        PressedBorderColor: =Button3_42.Fill
+        PressedColor: =Button3_42.Fill
+        PressedFill: =Button3_42.Color
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="CONTINUAR/guardar"
+        Visible: =varDatosPersonalesHM
+        Width: =369
+        X: =636
+        Y: =694
+        ZIndex: =49
+
+    Group4_16 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =20
+        ZIndex: =49
+
+        Button3_47 As button:
+            BorderColor: |-
+                =ColorValue("#26495B")
+            Color: |-
+                =ColorValue("#26495B")
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =Button3_47.BorderColor
+            Height: =60
+            HoverBorderColor: =ColorFade(Button3_47.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: =Exit()
+            PaddingLeft: =25
+            PressedBorderColor: |-
+                =ColorValue("#6DE8D2")
+            PressedColor: |-
+                =ColorValue("#6DE8D2")
+            PressedFill: =Button3_47.Color
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="Salir"
+            Width: =215
+            X: =30
+            Y: =676
+            ZIndex: =56
+
+        Image4_48 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_48.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_48.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_48.Fill, 20%)
+            Image: ='cerrar-sesion(1)'
+            OnSelect: =Exit()
+            PressedBorderColor: =ColorFade(Image4_48.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_48.Fill, -20%)
+            Width: =25
+            X: =52
+            Y: =693
+            ZIndex: =57
+
+    Rectangle2_16 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle2_16.Fill
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        FocusedBorderColor: =Rectangle2_16.BorderColor
+        Height: =96
+        HoverFill: =Rectangle2_16.Fill
+        PressedFill: =Rectangle2_16.Fill
+        Width: =1366
+        ZIndex: =58
+
+    Label3_17 As label:
+        Color: |-
+            =ColorValue("#26495B")
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        OnSelect: =Set(filter_status, "En Atención")
+        Size: =24
+        Text: ="Medical Center"
+        Width: =329
+        X: =88
+        Y: =24
+        ZIndex: =59
+
+    Image12_10 As image:
+        Height: =48
+        Image: ='image 15 (1)'
+        Width: =45
+        X: =30
+        Y: =24
+        ZIndex: =60
+
+    Image6_5 As image:
+        Height: =179
+        Image: =Subtract_1
+        Width: =215
+        X: =30
+        Y: =419
+        ZIndex: =61
+
+    Notificaciones_9 As group:
+        Height: =5
+        Width: =5
+        X: =30
+        Y: =20
+        ZIndex: =61
+
+        Button2_120 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            Text: =""
+            Width: =48
+            X: =1288
+            Y: =26
+            ZIndex: =65
+
+        Icon3_53 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Bell
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =1292
+            Y: =30
+            ZIndex: =66
+
+        Button2_121 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            PressedFill: =RGBA(0, 0, 0, 0.16)
+            Text: =""
+            Width: =48
+            X: =1288
+            Y: =26
+            ZIndex: =67
+
+    Label9_10 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =35
+        Text: ="TICKET"
+        Width: =212
+        X: =31
+        Y: =432
+        ZIndex: =62
+
+    Correo_9 As group:
+        Height: =5
+        Width: =5
+        X: =30
+        Y: =20
+        ZIndex: =62
+
+        Button2_122 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            Text: =""
+            Width: =48
+            X: =1216
+            Y: =26
+            ZIndex: =68
+
+        Icon3_54 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Mail
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =1220
+            Y: =30
+            ZIndex: =69
+
+        Button2_123 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Text: =""
+            Width: =48
+            X: =1216
+            Y: =26
+            ZIndex: =70
+
+    Label9_11 As label:
+        Align: =Align.Center
+        Color: =RGBA(38, 73, 91, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =100
+        Size: =46
+        Text: |-
+            =//Left(Gallery3.Selected.'Codigo del Servicio';1)& "-" & Gallery3.Selected.'Número de Ticket'
+            "I-48"
+        Width: =200
+        X: =37
+        Y: =459
+        ZIndex: =63
+
+    Calendario_35 As group:
+        Height: =5
+        Width: =5
+        X: =30
+        Y: =20
+        ZIndex: =63
+
+        Button2_124 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varCalendario:true});
+                Set(_dateSelected, Today());
+                Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
+            Text: =""
+            Width: =48
+            X: =1144
+            Y: =26
+            ZIndex: =71
+
+        Icon3_55 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.CalendarBlank
+            OnSelect: |-
+                =UpdateContext({_varCalendario:true});
+                Set(_dateSelected, Today());
+                Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =1148
+            Y: =30
+            ZIndex: =72
+
+        Button2_125 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varCalendario:true});
+                Set(_dateSelected, Today());
+                Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Text: =""
+            Width: =48
+            X: =1144
+            Y: =26
+            ZIndex: =73
+
+    Button1_100 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(232, 17, 17, 1)
+        Font: =Font.'Segoe UI'
+        Height: =48
+        OnSelect: |-
+            =UpdateContext({_Emergencia_DCA:true})
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="EMERGENCIA"
+        Width: =298
+        X: =534
+        Y: =26
+        ZIndex: =64
+
+    Rectangle2_17 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle2_17.Fill
+        Fill: =RGBA(202, 202, 202, 1)
+        FocusedBorderColor: =Rectangle2_17.BorderColor
+        Height: =672
+        HoverFill: =Rectangle2_17.Fill
+        PressedFill: =Rectangle2_17.Fill
+        Width: =1
+        X: =275
+        Y: =96
+        ZIndex: =74
+
+    Rectangle24 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.26)
+        Height: =768
+        Visible: =_varSuperiorOdontologia
+        Width: =1366
+        ZIndex: =75
+
+    TextInput31 As text:
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =340
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: =_varSuperiorOdontologia
+        Width: =803
+        X: =316
+        Y: =207
+        ZIndex: =76
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =95
+
+        Image22 As image:
+            Height: =234
+            Image: ='Vector 28'
+            Visible: =_varSuperiorOdontologia
+            Width: =479
+            X: =353
+            Y: =260
+            ZIndex: =77
+
+        Image23 As image:
+            Height: =220
+            Image: ='Vector 26'
+            Visible: =_varSuperiorOdontologia
+            Width: =14
+            X: =587
+            Y: =274
+            ZIndex: =78
+
+        Image21 As image:
+            Height: =37
+            Image: ='Vector 18'
+            OnSelect: |
+                =Set(varDienteS18,!varDienteS18);
+                Set(varNombreDienteS18,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =370
+            Y: =457
+            ZIndex: =79
+
+        Image21_1 As image:
+            Height: =37
+            Image: ='Vector 19'
+            OnSelect: =Set(varDienteS17,!varDienteS17);Set(varNombreDienteS17,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =376
+            Y: =417
+            ZIndex: =80
+
+        Image21_2 As image:
+            Height: =37
+            Image: ='Vector 20'
+            OnSelect: =Set(varDienteS16,!varDienteS16);Set(varNombreDienteS16,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =393
+            Y: =376
+            ZIndex: =81
+
+        Image21_3 As image:
+            Height: =37
+            Image: ='Vector 21'
+            OnSelect: =Set(varDienteS15,!varDienteS15);Set(varNombreDienteS15,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =419
+            Y: =341
+            ZIndex: =82
+
+        Image21_4 As image:
+            Height: =37
+            Image: ='Vector 22'
+            OnSelect: =Set(varDienteS14,!varDienteS14);Set(varNombreDienteS14,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =450
+            Y: =314
+            ZIndex: =83
+
+        Image21_5 As image:
+            Height: =37
+            Image: ='Vector 23'
+            OnSelect: =Set(varDienteS13,!varDienteS13);Set(varNombreDienteS13,true);
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =478
+            Y: =292
+            ZIndex: =84
+
+        Image21_6 As image:
+            Height: =37
+            Image: ='Vector 24'
+            OnSelect: =Set(varDienteS12,!varDienteS12);Set(varNombreDienteS12,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =511
+            Y: =279
+            ZIndex: =85
+
+        Image21_7 As image:
+            Height: =37
+            Image: ='Vector 25'
+            OnSelect: =Set(varDienteS11,!varDienteS11);Set(varNombreDienteS11,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =550
+            Y: =269
+            ZIndex: =86
+
+        Image21_8 As image:
+            Height: =37
+            Image: ='Vector 18 (1)'
+            OnSelect: =Set(varDienteS28,!varDienteS28);Set(varNombreDienteS28,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =777
+            Y: =457
+            ZIndex: =87
+
+        Image21_9 As image:
+            Height: =37
+            Image: ='Vector 19 (1)'
+            OnSelect: =Set(varDienteS27,!varDienteS27);Set(varNombreDienteS27,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =771
+            Y: =417
+            ZIndex: =88
+
+        Image21_10 As image:
+            Height: =37
+            Image: ='Vector 20 (1)'
+            OnSelect: =Set(varDienteS26,!varDienteS26);Set(varNombreDienteS26,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =754
+            Y: =376
+            ZIndex: =89
+
+        Image21_11 As image:
+            Height: =37
+            Image: ='Vector 21 (1)'
+            OnSelect: =Set(varDienteS25,!varDienteS25);Set(varNombreDienteS25,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =728
+            Y: =341
+            ZIndex: =90
+
+        Image21_12 As image:
+            Height: =37
+            Image: ='Vector 22 (1)'
+            OnSelect: =Set(varDienteS24,!varDienteS24);Set(varNombreDienteS24,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =697
+            Y: =314
+            ZIndex: =91
+
+        Image21_13 As image:
+            Height: =37
+            Image: ='Vector 23 (1)'
+            OnSelect: =Set(varDienteS23,!varDienteS23);Set(varNombreDienteS23,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =669
+            Y: =292
+            ZIndex: =92
+
+        Image21_14 As image:
+            Height: =37
+            Image: ='Vector 24 (1)'
+            OnSelect: =Set(varDienteS22,!varDienteS22);Set(varNombreDienteS22,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =639
+            Y: =279
+            ZIndex: =93
+
+        Image21_15 As image:
+            Height: =37
+            Image: ='Vector 25'
+            OnSelect: =Set(varDienteS21,!varDienteS21);Set(varNombreDienteS21,true)
+            Visible: =_varSuperiorOdontologia
+            Width: =42
+            X: =597
+            Y: =269
+            ZIndex: =94
+
+        Circle1 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS18
+            Width: =13
+            X: =384
+            Y: =469
+            ZIndex: =95
+
+        Circle1_7 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS17
+            Width: =13
+            X: =390
+            Y: =428
+            ZIndex: =96
+
+        Circle1_8 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS16
+            Width: =13
+            X: =409
+            Y: =388
+            ZIndex: =97
+
+        Circle1_9 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS15
+            Width: =13
+            X: =434
+            Y: =351
+            ZIndex: =98
+
+        Circle1_10 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS14
+            Width: =13
+            X: =464
+            Y: =326
+            ZIndex: =99
+
+        Circle1_11 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS13
+            Width: =13
+            X: =492
+            Y: =304
+            ZIndex: =100
+
+        Circle1_12 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS12
+            Width: =13
+            X: =525
+            Y: =291
+            ZIndex: =101
+
+        Circle1_13 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS11
+            Width: =13
+            X: =565
+            Y: =279
+            ZIndex: =102
+
+        Circle1_14 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS21
+            Width: =13
+            X: =611
+            Y: =279
+            ZIndex: =108
+
+        Circle1_15 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS22
+            Width: =13
+            X: =651
+            Y: =287
+            ZIndex: =109
+
+        Circle1_16 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS23
+            Width: =13
+            X: =681
+            Y: =304
+            ZIndex: =110
+
+        Circle1_17 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS24
+            Width: =13
+            X: =711
+            Y: =327
+            ZIndex: =111
+
+        Circle1_18 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS25
+            Width: =13
+            X: =742
+            Y: =354
+            ZIndex: =112
+
+        Circle1_19 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS26
+            Width: =13
+            X: =768
+            Y: =387
+            ZIndex: =113
+
+        Circle1_20 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS27
+            Width: =13
+            X: =784
+            Y: =428
+            ZIndex: =114
+
+        Circle1_21 As circle:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =13
+            Visible: =varDienteS28
+            Width: =13
+            X: =791
+            Y: =468
+            ZIndex: =115
+
+        Label35_2 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Text: ="Derecha"
+            Visible: =_varSuperiorOdontologia
+            X: =432
+            Y: =432
+            ZIndex: =116
+
+        Label35_3 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Text: ="Izquierda"
+            Visible: =_varSuperiorOdontologia
+            X: =608
+            Y: =432
+            ZIndex: =117
+
+        Label35_4 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="11"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =542
+            Y: =219
+            ZIndex: =118
+
+        Label35_5 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="12"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =490
+            Y: =237
+            ZIndex: =119
+
+        Label35_6 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="13"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =450
+            Y: =254
+            ZIndex: =120
+
+        Label35_7 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="14"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =411
+            Y: =278
+            ZIndex: =121
+
+        Label35_8 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="15"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =384
+            Y: =319
+            ZIndex: =122
+
+        Label35_9 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="16"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =351
+            Y: =352
+            ZIndex: =123
+
+        Label35_10 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="17"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =331
+            Y: =404
+            ZIndex: =124
+
+        Label35_11 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="18"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =320
+            Y: =458
+            ZIndex: =125
+
+        Label35_12 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="21"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =608
+            Y: =219
+            ZIndex: =126
+
+        Label35_13 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="22"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =665
+            Y: =237
+            ZIndex: =127
+
+        Label35_14 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="23"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =713
+            Y: =254
+            ZIndex: =128
+
+        Label35_15 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="24"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =752
+            Y: =278
+            ZIndex: =129
+
+        Label35_16 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="25"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =787
+            Y: =319
+            ZIndex: =130
+
+        Label35_17 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="26"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =805
+            Y: =356
+            ZIndex: =131
+
+        Label35_18 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="27"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =827
+            Y: =404
+            ZIndex: =132
+
+        Label35_19 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =35
+            Text: ="28"
+            Visible: =_varSuperiorOdontologia
+            Width: =32
+            X: =837
+            Y: =458
+            ZIndex: =133
+
+    TextInput32 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Format: =TextFormat.Number
+        Height: =88
+        HintText: ="0"
+        PaddingLeft: =5
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Size: =28
+        Visible: |
+            =If(!IsBlank(Label35_1.Text)  And _varSuperiorOdontologia,true ,false)
+        Width: =70
+        X: =950
+        Y: =329
+        ZIndex: =103
+
+    Label35 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        Text: ="Caries"
+        Visible: |
+            =If(!IsBlank(Label35_1.Text)  And _varSuperiorOdontologia,true ,false)
+        X: =907
+        Y: =429
+        ZIndex: =104
+
+    Button1_101 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        HoverBorderColor: |-
+            =ColorValue("#26495B")
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: |-
+            =Collect(colguardarDientes_caries,{Diente:Label35_1.Text,Caries:Value(TextInput32.Text),Maxilar:"Superior"});
+            Set(varNombreDienteS18,false);
+            Set(varNombreDienteS17,false);
+            Set(varNombreDienteS16,false);
+            Set(varNombreDienteS15,false);
+            Set(varNombreDienteS14,false);
+            Set(varNombreDienteS13,false);
+            Set(varNombreDienteS12,false);
+            Set(varNombreDienteS11,false);
+            Reset(TextInput32)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =11
+        Text: ="Guardar"
+        Visible: |
+            =If(!IsBlank(Label35_1.Text)  And _varSuperiorOdontologia,true ,false)
+        Width: =159
+        X: =904
+        Y: =475
+        ZIndex: =105
+
+    Label35_1 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =16
+        Text: |-
+            =If(varNombreDienteS18=true,"Molar-18",If(varNombreDienteS17=true,"Molar-17",If(varNombreDienteS16=true,"Molar-16",If(varNombreDienteS15=true,"Premolar-15",If(varNombreDienteS14=true,"Premolar-14",If(varNombreDienteS13=true,"Canino-13",If(varNombreDienteS12=true,"Incisivo-12",If(varNombreDienteS11=true,"Incisivo-11",
+            If(varNombreDienteS28=true,"Molar-28",If(varNombreDienteS27=true,"Molar-27",If(varNombreDienteS26=true,"Molar-26",If(varNombreDienteS25=true,"Premolar-25",If(varNombreDienteS24=true,"Premolar-24",If(varNombreDienteS23=true,"Canino-23",If(varNombreDienteS22=true,"Incisivo-22",If(varNombreDienteS21=true,"Incisivo-21"))))))))))))))))
+        Visible: =_varSuperiorOdontologia
+        X: =910
+        Y: =261
+        ZIndex: =106
+
+    Icon15 As icon.Cancel:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |
+            =UpdateContext({_varSuperiorOdontologia:false});
+            Set(varDienteS18,false);
+            Set(varDienteS17,false);
+            Set(varDienteS16,false);
+            Set(varDienteS15,false);
+            Set(varDienteS14,false);
+            Set(varDienteS13,false);
+            Set(varDienteS12,false);
+            Set(varDienteS11,false);
+            
+            Set(varDienteS28,false);
+            Set(varDienteS27,false);
+            Set(varDienteS26,false);
+            Set(varDienteS25,false);
+            Set(varDienteS24,false);
+            Set(varDienteS23,false);
+            Set(varDienteS22,false);
+            Set(varDienteS21,false);
+            
+            Set(varNombreDienteS18,false);
+            Set(varNombreDienteS17,false);
+            Set(varNombreDienteS16,false);
+            Set(varNombreDienteS15,false);
+            Set(varNombreDienteS14,false);
+            Set(varNombreDienteS13,false);
+            Set(varNombreDienteS12,false);
+            Set(varNombreDienteS11,false);
+            
+            Set(varNombreDienteS28,false);
+            Set(varNombreDienteS27,false);
+            Set(varNombreDienteS26,false);
+            Set(varNombreDienteS25,false);
+            Set(varNombreDienteS24,false);
+            Set(varNombreDienteS23,false);
+            Set(varNombreDienteS22,false);
+            Set(varNombreDienteS21,false);
+        Visible: =_varSuperiorOdontologia
+        Width: =37
+        X: =1058
+        Y: =222
+        ZIndex: =107
+
+    Image12 As image:
+        Height: =41
+        Image: ='Shape (45)'
+        Visible: =If(IsBlank(Label35_1.Text) And _varSuperiorOdontologia,true,false)
+        Width: =50
+        X: =973
+        Y: =327
+        ZIndex: =134
+
+    Label35_20 As label:
+        Align: =Align.Center
+        Color: =RGBA(187, 187, 187, 1)
+        Font: =Font.'Segoe UI'
+        Text: |-
+            ="Seleccione un
+            diente"
+        Visible: =If(IsBlank(Label35_1.Text) And _varSuperiorOdontologia,true,false)
+        X: =923
+        Y: =378
+        ZIndex: =135
+
+    Rectangle20 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.26)
+        Height: =768
+        Visible: =_varInferiorOdontologia
+        Width: =1366
+        ZIndex: =136
+
+    TextInput31_1 As text:
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =340
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: =_varInferiorOdontologia
+        Width: =803
+        X: =336
+        Y: =227
+        ZIndex: =137
+
+    Image25 As image:
+        Height: =234
+        Image: ='Vector 29'
+        Visible: =_varInferiorOdontologia
+        Width: =479
+        X: =400
+        Y: =288
+        ZIndex: =138
+
+    Image26 As image:
+        Height: =37
+        Image: ='Vector 18 (2)'
+        OnSelect: |-
+            =Set(varDienteI48,!varDienteI48);
+            Set(varNombreDienteI48,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =410
+        Y: =288
+        ZIndex: =139
+
+    Image26_1 As image:
+        Height: =37
+        Image: ='Vector 19 (2)'
+        OnSelect: |-
+            =Set(varDienteI47,!varDienteI47);
+            Set(varNombreDienteI47,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =415
+        Y: =329
+        ZIndex: =140
+
+    Image26_2 As image:
+        Height: =37
+        Image: ='Vector 20 (2)'
+        OnSelect: |-
+            =Set(varDienteI46,!varDienteI46);
+            Set(varNombreDienteI46,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =429
+        Y: =365
+        ZIndex: =141
+
+    Image26_3 As image:
+        Height: =37
+        Image: ='Vector 21 (2)'
+        OnSelect: |-
+            =Set(varDienteI45,!varDienteI45);
+            Set(varNombreDienteI45,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =450
+        Y: =396
+        ZIndex: =142
+
+    Image26_4 As image:
+        Height: =37
+        Image: ='Vector 22 (2)'
+        OnSelect: |-
+            =Set(varDienteI44,!varDienteI44);
+            Set(varNombreDienteI44,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =479
+        Y: =426
+        ZIndex: =143
+
+    Image26_5 As image:
+        Height: =37
+        Image: ='Vector 24 (3)'
+        OnSelect: |-
+            =Set(varDienteI32,!varDienteI32);
+            Set(varNombreDienteI32,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =686
+        Y: =465
+        ZIndex: =144
+
+    Image26_6 As image:
+        Height: =37
+        Image: ='Vector 24 (2)'
+        OnSelect: |-
+            =Set(varDienteI42,!varDienteI42);
+            Set(varNombreDienteI42,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =545
+        Y: =465
+        ZIndex: =145
+
+    Image26_7 As image:
+        Height: =37
+        Image: ='Vector 25 (4)'
+        OnSelect: |-
+            =Set(varDienteI41,!varDienteI41);
+            Set(varNombreDienteI41,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =585
+        Y: =477
+        ZIndex: =146
+
+    Image26_8 As image:
+        Height: =37
+        Image: ='Vector 23 (2)'
+        OnSelect: |-
+            =Set(varDienteI43,!varDienteI43);
+            Set(varNombreDienteI43,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =510
+        Y: =450
+        ZIndex: =147
+
+    Image23_1 As image:
+        Height: =220
+        Image: ='Vector 26'
+        Visible: =_varInferiorOdontologia
+        Width: =14
+        X: =628
+        Y: =294
+        ZIndex: =148
+
+    Image26_9 As image:
+        Height: =37
+        Image: ='Vector 25 (3)'
+        OnSelect: |-
+            =Set(varDienteI31,!varDienteI31);
+            Set(varNombreDienteI31,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =642
+        Y: =477
+        ZIndex: =149
+
+    Image26_10 As image:
+        Height: =37
+        Image: ='Vector 22 (3)'
+        OnSelect: |-
+            =Set(varDienteI34,!varDienteI34);
+            Set(varNombreDienteI34,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =754
+        Y: =425
+        ZIndex: =150
+
+    Image26_11 As image:
+        Height: =37
+        Image: ='Vector 23 (3)'
+        OnSelect: |-
+            =Set(varDienteI33,!varDienteI33);
+            Set(varNombreDienteI33,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =725
+        Y: =450
+        ZIndex: =151
+
+    Image26_12 As image:
+        Height: =37
+        Image: ='Vector 20 (3)'
+        OnSelect: |-
+            =Set(varDienteI36,!varDienteI36);
+            Set(varNombreDienteI36,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =806
+        Y: =365
+        ZIndex: =152
+
+    Image26_13 As image:
+        Height: =37
+        Image: ='Vector 21 (3)'
+        OnSelect: |-
+            =Set(varDienteI35,!varDienteI35);
+            Set(varNombreDienteI35,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =781
+        Y: =396
+        ZIndex: =153
+
+    Image26_14 As image:
+        Height: =37
+        Image: ='Vector 18 (3)'
+        OnSelect: |-
+            =Set(varDienteI38,!varDienteI38);
+            Set(varNombreDienteI38,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =827
+        Y: =288
+        ZIndex: =154
+
+    Image26_15 As image:
+        Height: =37
+        Image: ='Vector 19 (3)'
+        OnSelect: |-
+            =Set(varDienteI37,!varDienteI37);
+            Set(varNombreDienteI37,true)
+        Visible: =_varInferiorOdontologia
+        Width: =42
+        X: =823
+        Y: =329
+        ZIndex: =155
+
+    Label34 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        Text: ="Derecha"
+        Visible: =_varInferiorOdontologia
+        X: =468
+        Y: =309
+        ZIndex: =156
+
+    Label34_1 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        Text: ="Izquierda"
+        Visible: =_varInferiorOdontologia
+        X: =648
+        Y: =309
+        ZIndex: =157
+
+    Label36 As label:
+        Height: =35
+        Text: ="41"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =576
+        Y: =520
+        ZIndex: =158
+
+    Label36_1 As label:
+        Height: =35
+        Text: ="42"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =530
+        Y: =509
+        ZIndex: =159
+
+    Label36_2 As label:
+        Height: =35
+        Text: ="43"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =482
+        Y: =486
+        ZIndex: =160
+
+    Label36_3 As label:
+        Height: =35
+        Text: ="44"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =440
+        Y: =455
+        ZIndex: =161
+
+    Label36_4 As label:
+        Height: =35
+        Text: ="45"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =413
+        Y: =421
+        ZIndex: =162
+
+    Label36_5 As label:
+        Height: =35
+        Text: ="46"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =395
+        Y: =378
+        ZIndex: =163
+
+    Label36_6 As label:
+        Height: =35
+        Text: ="47"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =376
+        Y: =339
+        ZIndex: =164
+
+    Label36_7 As label:
+        Height: =35
+        Text: ="48"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =363
+        Y: =290
+        ZIndex: =165
+
+    Label36_8 As label:
+        Height: =35
+        Text: ="31"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =654
+        Y: =520
+        ZIndex: =166
+
+    Label36_9 As label:
+        Height: =35
+        Text: ="32"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =709
+        Y: =509
+        ZIndex: =167
+
+    Label36_10 As label:
+        Height: =35
+        Text: ="33"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =761
+        Y: =486
+        ZIndex: =168
+
+    Label36_11 As label:
+        Height: =35
+        Text: ="34"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =807
+        Y: =455
+        ZIndex: =169
+
+    Label36_12 As label:
+        Height: =35
+        Text: ="35"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =837
+        Y: =421
+        ZIndex: =170
+
+    Label36_13 As label:
+        Height: =35
+        Text: ="36"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =858
+        Y: =378
+        ZIndex: =171
+
+    Label36_14 As label:
+        Height: =35
+        Text: ="37"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =872
+        Y: =339
+        ZIndex: =172
+
+    Label36_15 As label:
+        Height: =35
+        Text: ="38"
+        Visible: =_varInferiorOdontologia
+        Width: =32
+        X: =879
+        Y: =290
+        ZIndex: =173
+
+    Circle1_22 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI38
+        Width: =13
+        X: =841
+        Y: =299
+        ZIndex: =174
+
+    Circle1_23 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI37
+        Width: =13
+        X: =837
+        Y: =342
+        ZIndex: =175
+
+    Circle1_24 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI36
+        Width: =13
+        X: =819
+        Y: =378
+        ZIndex: =176
+
+    Circle1_25 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI35
+        Width: =13
+        X: =795
+        Y: =409
+        ZIndex: =177
+
+    Circle1_26 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI34
+        Width: =13
+        X: =768
+        Y: =437
+        ZIndex: =178
+
+    Circle1_27 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI33
+        Width: =13
+        X: =738
+        Y: =462
+        ZIndex: =179
+
+    Circle1_28 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI32
+        Width: =13
+        X: =700
+        Y: =477
+        ZIndex: =180
+
+    Circle1_29 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI31
+        Width: =13
+        X: =658
+        Y: =490
+        ZIndex: =181
+
+    Circle1_30 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI48
+        Width: =13
+        X: =425
+        Y: =300
+        ZIndex: =182
+
+    Circle1_31 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI47
+        Width: =13
+        X: =431
+        Y: =340
+        ZIndex: =183
+
+    Circle1_32 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI46
+        Width: =13
+        X: =444
+        Y: =375
+        ZIndex: =184
+
+    Circle1_33 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI45
+        Width: =13
+        X: =466
+        Y: =407
+        ZIndex: =185
+
+    Circle1_34 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI43
+        Width: =13
+        X: =526
+        Y: =461
+        ZIndex: =186
+
+    Circle1_35 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI44
+        Width: =13
+        X: =491
+        Y: =435
+        ZIndex: =187
+
+    Circle1_36 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI41
+        Width: =13
+        X: =599
+        Y: =490
+        ZIndex: =188
+
+    Circle1_37 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =13
+        Visible: =varDienteI42
+        Width: =13
+        X: =561
+        Y: =477
+        ZIndex: =189
+
+    TextInput32_1 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Format: =TextFormat.Number
+        Height: =88
+        HintText: ="0"
+        PaddingLeft: =5
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Size: =28
+        Visible: =If(!IsBlank(Label35_22.Text) And _varInferiorOdontologia,true,false)
+        Width: =70
+        X: =980
+        Y: =355
+        ZIndex: =190
+
+    Label35_21 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        Text: ="Caries"
+        Visible: =If(!IsBlank(Label35_22.Text) And _varInferiorOdontologia,true,false)
+        X: =937
+        Y: =455
+        ZIndex: =191
+
+    Button1_102 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        HoverBorderColor: |-
+            =ColorValue("#26495B")
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: |-
+            =Collect(colguardarDientes_caries,{Diente:Label35_22.Text,Caries:Value(TextInput32_1.Text),Maxilar:"Inferior"});
+            Set(varNombreDienteI48,false);
+            Set(varNombreDienteI47,false);
+            Set(varNombreDienteI46,false);
+            Set(varNombreDienteI45,false);
+            Set(varNombreDienteI44,false);
+            Set(varNombreDienteI43,false);
+            Set(varNombreDienteI42,false);
+            Set(varNombreDienteI41,false);
+            
+            Set(varNombreDienteI38,false);
+            Set(varNombreDienteI37,false);
+            Set(varNombreDienteI36,false);
+            Set(varNombreDienteI35,false);
+            Set(varNombreDienteI34,false);
+            Set(varNombreDienteI33,false);
+            Set(varNombreDienteI32,false);
+            Set(varNombreDienteI31,false);
+            Reset(TextInput32_1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =11
+        Text: ="Guardar"
+        Visible: =If(!IsBlank(Label35_22.Text) And _varInferiorOdontologia,true,false)
+        Width: =159
+        X: =934
+        Y: =501
+        ZIndex: =192
+
+    Label35_22 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =16
+        Text: |-
+            =If(varNombreDienteI48=true,"Molar-48",If(varNombreDienteI47=true,"Molar-47",If(varNombreDienteI46=true,"Molar-46",If(varNombreDienteI45=true,"Premolar-45",If(varNombreDienteI44=true,"Premolar-44",If(varNombreDienteI43=true,"Canino-43",If(varNombreDienteI42=true,"Incisivo-42",If(varNombreDienteI41=true,"Incisivo-41",
+            If(varNombreDienteI38=true,"Molar-38",If(varNombreDienteI37=true,"Molar-37",If(varNombreDienteI36=true,"Molar-36",If(varNombreDienteI35=true,"Premolar-35",If(varNombreDienteI34=true,"Premolar-34",If(varNombreDienteI33=true,"Canino-33",If(varNombreDienteI32=true,"Incisivo-32",If(varNombreDienteI31=true,"Incisivo-31"))))))))))))))))
+        Visible: =_varInferiorOdontologia
+        X: =940
+        Y: =287
+        ZIndex: =193
+
+    Icon15_1 As icon.Cancel:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |
+            =UpdateContext({_varInferiorOdontologia:false});
+            Set(varDienteI48,false);
+            Set(varDienteI47,false);
+            Set(varDienteI46,false);
+            Set(varDienteI45,false);
+            Set(varDienteI44,false);
+            Set(varDienteI43,false);
+            Set(varDienteI42,false);
+            Set(varDienteI41,false);
+            
+            Set(varDienteI38,false);
+            Set(varDienteI37,false);
+            Set(varDienteI36,false);
+            Set(varDienteI35,false);
+            Set(varDienteI34,false);
+            Set(varDienteI33,false);
+            Set(varDienteI32,false);
+            Set(varDienteI31,false);
+            
+            Set(varNombreDienteI48,false);
+            Set(varNombreDienteI47,false);
+            Set(varNombreDienteI46,false);
+            Set(varNombreDienteI45,false);
+            Set(varNombreDienteI44,false);
+            Set(varNombreDienteI43,false);
+            Set(varNombreDienteI42,false);
+            Set(varNombreDienteI41,false);
+            
+            Set(varNombreDienteI38,false);
+            Set(varNombreDienteI37,false);
+            Set(varNombreDienteI36,false);
+            Set(varNombreDienteI35,false);
+            Set(varNombreDienteI34,false);
+            Set(varNombreDienteI33,false);
+            Set(varNombreDienteI32,false);
+            Set(varNombreDienteI31,false);
+        Visible: =_varInferiorOdontologia
+        Width: =37
+        X: =1078
+        Y: =242
+        ZIndex: =194
+
+    Image12_11 As image:
+        Height: =41
+        Image: ='Shape (45)'
+        Visible: =If(IsBlank(Label35_22.Text) And _varInferiorOdontologia,true,false)
+        Width: =50
+        X: =1006
+        Y: =364
+        ZIndex: =195
+
+    Label35_23 As label:
+        Align: =Align.Center
+        Color: =RGBA(187, 187, 187, 1)
+        Font: =Font.'Segoe UI'
+        Text: |-
+            ="Seleccione un
+            diente"
+        Visible: =If(IsBlank(Label35_22.Text) And _varInferiorOdontologia,true,false)
+        X: =956
+        Y: =415
+        ZIndex: =196
+

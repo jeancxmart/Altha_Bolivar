@@ -1,0 +1,23 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-12-15T17:45:01.0670000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "Caries": "Caries",
+      "Diente": "Diente",
+      "DNI_CI": "DNI_CI",
+      "id": "id",
+      "Maxilar": "Maxilar"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Odontologia",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

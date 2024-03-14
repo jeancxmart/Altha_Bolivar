@@ -1,0 +1,41 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "activo": "activo",
+      "antecendentes": "antecendentes",
+      "cod_hc_principal": "cod_hc_principal",
+      "diagnosticos": "diagnosticos",
+      "enfermedad_actual": "enfermedad_actual",
+      "examen_fisico_peso": "examen_fisico_peso",
+      "examen_fisico_talla": "examen_fisico_talla",
+      "fecha_del_registro_historia": "fecha_del_registro_historia",
+      "id": "id",
+      "id_doctor": "id_doctor",
+      "id_especialidad": "id_especialidad",
+      "id_paciente": "id_paciente",
+      "id_sede": "id_sede",
+      "id_serial": "id_serial",
+      "paraclinico": "paraclinico",
+      "proxima_cita": "proxima_cita",
+      "recomendaciones": "recomendaciones",
+      "signos_vitales_fc": "signos_vitales_fc",
+      "signos_vitales_fr": "signos_vitales_fr",
+      "signos_vitales_sat02": "signos_vitales_sat02",
+      "signos_vitales_temp": "signos_vitales_temp",
+      "tratamiento": "tratamiento",
+      "version": "version"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.mc_historia_cirugia_pediatrica",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

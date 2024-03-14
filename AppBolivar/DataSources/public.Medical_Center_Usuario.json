@@ -1,0 +1,38 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "Activo": "Activo",
+      "Correo": "Correo",
+      "CPP": "CPP",
+      "Disponibilidad": "Disponibilidad",
+      "Especialidad": "Especialidad",
+      "fechaCuota": "fechaCuota",
+      "id": "id",
+      "Imagen": "Imagen",
+      "Meta": "Meta",
+      "Modo_Nocturno": "Modo_Nocturno",
+      "Nombre_Consultorio": "Nombre_Consultorio",
+      "NombreImage": "NombreImage",
+      "RNE": "RNE",
+      "Rol": "Rol",
+      "Splash_Screen": "Splash_Screen",
+      "Splash_Screen_viaje_Guiado": "Splash_Screen_viaje_Guiado",
+      "Tabla_Maestra": "Tabla_Maestra",
+      "url": "url",
+      "Usuario": "Usuario",
+      "View_Splash_Screen_viaje_Guiado": "View_Splash_Screen_viaje_Guiado"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Usuario",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

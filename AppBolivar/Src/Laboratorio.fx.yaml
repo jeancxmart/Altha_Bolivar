@@ -1,0 +1,1759 @@
+Laboratorio As screen:
+    Fill: |-
+        =ColorValue("#F5F5F5")
+    OnVisible: =Set(ObtencionMuestra,true);Set(Muestra,false);Set(ResultadosAnalisis,false)
+
+    TextInput28_2 As text:
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =598
+        OnSelect: =
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =1031
+        X: =305
+        Y: =170
+        ZIndex: =1
+
+    Canvas1_10 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =481
+        Visible: =ResultadosAnalisis
+        Width: =1031
+        X: =305
+        Y: =287
+        ZIndex: =2
+
+        DataCard1_10 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =718
+            Visible: =ResultadosAnalisis
+            Width: =1031
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label38_19 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =28
+                Size: =16
+                Text: ="Resultado"
+                Width: =152
+                X: =415
+                Y: =30
+                ZIndex: =1
+
+            Label38_20 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =12
+                Text: |-
+                    ="Hemoglobina:"
+                X: =185
+                Y: =72
+                ZIndex: =2
+
+            Label38_21 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =12
+                Text: |-
+                    ="Hematrocito:"
+                X: =185
+                Y: =112
+                ZIndex: =3
+
+            Label38_22 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =12
+                Text: |-
+                    ="Recuento de glóbulos blancos:"
+                Width: =250
+                X: =185
+                Y: =152
+                ZIndex: =4
+
+            Label38_23 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =12
+                Text: |-
+                    ="Recuento de plaquetas:"
+                Width: =220
+                X: =185
+                Y: =192
+                ZIndex: =5
+
+            Label38_24 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =12
+                Text: |-
+                    ="Neutrófilos:"
+                X: =185
+                Y: =232
+                ZIndex: =6
+
+            Label38_25 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =12
+                Text: |-
+                    ="Linfocitos:"
+                X: =185
+                Y: =272
+                ZIndex: =7
+
+            Label38_26 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="16 g/dL"
+                X: =419
+                Y: =72
+                ZIndex: =8
+
+            Label38_27 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="40%"
+                X: =419
+                Y: =112
+                ZIndex: =9
+
+            Label38_28 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="5.3 x 10^3 células/µL"
+                Width: =250
+                X: =419
+                Y: =152
+                ZIndex: =10
+
+            Label38_29 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="400,000 células/µL"
+                Width: =250
+                X: =419
+                Y: =192
+                ZIndex: =11
+
+            Label38_30 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="50%"
+                X: =419
+                Y: =232
+                ZIndex: =12
+
+            Label38_31 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="20%"
+                X: =419
+                Y: =272
+                ZIndex: =13
+
+            Label38_32 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =12
+                Text: |-
+                    ="Monocitos:"
+                X: =185
+                Y: =312
+                ZIndex: =14
+
+            Label38_33 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =12
+                Text: |-
+                    ="Eosinófilos:"
+                X: =185
+                Y: =352
+                ZIndex: =15
+
+            Label38_34 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =12
+                Text: |-
+                    ="Basófilos:"
+                X: =185
+                Y: =392
+                ZIndex: =16
+
+            Label38_35 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="5%"
+                X: =419
+                Y: =312
+                ZIndex: =17
+
+            Label38_36 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="2%"
+                X: =419
+                Y: =352
+                ZIndex: =18
+
+            Label38_37 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="1%"
+                X: =419
+                Y: =392
+                ZIndex: =19
+
+            Label38_38 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="16 g/dL - 20 g/dL "
+                X: =646
+                Y: =72
+                ZIndex: =20
+
+            Label38_39 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="30% - 40%"
+                X: =646
+                Y: =112
+                ZIndex: =21
+
+            Label38_40 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="5.3 - 10 x 10^3 células/µL"
+                Width: =250
+                X: =646
+                Y: =152
+                ZIndex: =22
+
+            Label38_41 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="300,000 - 400,000 células/µL"
+                Width: =250
+                X: =646
+                Y: =192
+                ZIndex: =23
+
+            Label38_42 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="40% - 50%"
+                X: =646
+                Y: =232
+                ZIndex: =24
+
+            Label38_43 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="20% - 50%"
+                X: =646
+                Y: =272
+                ZIndex: =25
+
+            Label38_44 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="5% - 10%"
+                X: =646
+                Y: =312
+                ZIndex: =26
+
+            Label38_45 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="1% - 3%"
+                X: =646
+                Y: =352
+                ZIndex: =27
+
+            Label38_46 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Size: =12
+                Text: ="1% - 2%"
+                X: =646
+                Y: =392
+                ZIndex: =28
+
+            Label38_47 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =28
+                Size: =16
+                Text: ="Rango Referencial"
+                Width: =197
+                X: =646
+                Y: =30
+                ZIndex: =29
+
+            Label38_48 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =12
+                Text: ="Observaciones"
+                X: =118
+                Y: =444
+                ZIndex: =30
+
+            TextInput33 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Height: =103
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =796
+                X: =118
+                Y: =480
+                ZIndex: =31
+
+            BtnCancelarFormDCA_5 As button:
+                BorderColor: |-
+                    =ColorValue("#26495B")
+                Color: |-
+                    =ColorValue("#26495B")
+                DisabledBorderColor: =RGBA(116, 116, 116, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                FocusedBorderColor: =BtnCancelarFormDCA_5.BorderColor
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                HoverBorderColor: =ColorFade(BtnCancelarFormDCA_5.BorderColor, 20%)
+                HoverColor: |-
+                    =ColorValue("#26495B")
+                HoverFill: |-
+                    =ColorValue("#6DE8D2")
+                OnSelect: =Set(ObtencionMuestra,false);Set(Muestra,true);Set(ResultadosAnalisis,false)
+                PressedBorderColor: |-
+                    =ColorValue("#6DE8D2")
+                PressedColor: |-
+                    =ColorValue("#6DE8D2")
+                PressedFill: =BtnCancelarFormDCA_5.Color
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Size: =12
+                Text: ="ATRAS"
+                Width: =260
+                X: =244
+                Y: =627
+                ZIndex: =32
+
+            BtnGuardarForm_DCA_6 As button:
+                BorderColor: |-
+                    =ColorValue("#26495B")
+                Color: |-
+                    =ColorValue("#26495B")
+                Fill: |-
+                    =ColorValue("#6DE8D2")
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                HoverBorderColor: |-
+                    =ColorValue("#26495B")
+                HoverColor: |-
+                    =ColorValue("#26495B")
+                HoverFill: |-
+                    =ColorValue("#6DE8D2")
+                OnSelect: |-
+                    =Set(Antecedentes,false);
+                    Set(ResultadosAnalisis,true)
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Size: =12
+                Text: ="Generar Reporte"
+                Width: =260
+                X: =526
+                Y: =627
+                ZIndex: =33
+
+    Image8_5 As image:
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        Height: =36
+        Image: ='Shape (32)'
+        ImagePosition: =ImagePosition.Center
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =36
+        X: =499
+        Y: =203
+        ZIndex: =3
+
+    Image8_6 As image:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Fill: |-
+            =ColorValue("
+            #D9D9D9")
+        Height: =36
+        Image: ='Shape (33)'
+        ImagePosition: =ImagePosition.Center
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =If(Muestra=true,false,true)
+        Width: =36
+        X: =791
+        Y: =203
+        ZIndex: =4
+
+    Image8_7 As image:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Fill: |-
+            =ColorValue("
+            #D9D9D9")
+        Height: =36
+        Image: ='Shape (34)'
+        ImagePosition: =ImagePosition.Center
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =If(ResultadosAnalisis=true,false,true)
+        Width: =36
+        X: =1092
+        Y: =203
+        ZIndex: =5
+
+    Rectangle2_18 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle2_18.Fill
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        FocusedBorderColor: =Rectangle2_18.BorderColor
+        Height: =96
+        HoverFill: =Rectangle2_18.Fill
+        PressedFill: =Rectangle2_18.Fill
+        Width: =1366
+        ZIndex: =6
+
+    Button1_103 As button:
+        Fill: =RGBA(232, 17, 17, 1)
+        Font: =Font.'Segoe UI'
+        Height: =48
+        OnSelect: |-
+            =UpdateContext({_Emergencia_DCA:true})
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="Emergencia"
+        Width: =298
+        X: =534
+        Y: =26
+        ZIndex: =7
+
+    Label1_20 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: |-
+            =ColorValue("#26495B")
+        FocusedBorderColor: =Label1_20.BorderColor
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        HoverBorderColor: =Label1_20.BorderColor
+        HoverColor: =Label1_20.Color
+        HoverFill: =Label1_20.Fill
+        PaddingRight: =20
+        PressedBorderColor: =Label1_20.BorderColor
+        PressedColor: =Label1_20.Color
+        PressedFill: =Label1_20.Fill
+        Size: =16
+        Text: =User().FullName
+        Width: =148
+        X: =1144
+        Y: =26
+        ZIndex: =8
+
+    Image3_8 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =Image3_8.BorderColor
+        Height: =48
+        HoverBorderColor: =ColorFade(Image3_8.BorderColor, 20%)
+        HoverFill: =ColorFade(Image3_8.Fill, 20%)
+        Image: =User().Image
+        PressedBorderColor: =ColorFade(Image3_8.BorderColor, -20%)
+        PressedFill: =ColorFade(Image3_8.Fill, -20%)
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Width: =48
+        X: =1288
+        Y: =26
+        ZIndex: =9
+
+    Label3_18 As label:
+        Color: |-
+            =ColorValue("#26495B")
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        OnSelect: =Set(filter_status, "En Atención")
+        Size: =24
+        Text: ="Medical Center"
+        Width: =329
+        X: =88
+        Y: =24
+        ZIndex: =10
+
+    Group3_16 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =16
+
+        Button3_50 As button:
+            BorderColor: |-
+                =ColorValue("#26495B")
+            Color: |-
+                =ColorValue("#26495B")
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =Button3_50.BorderColor
+            Height: =60
+            HoverBorderColor: =ColorFade(Button3_50.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: =//Navigate('Dashboard Control')
+            PaddingLeft: =25
+            PressedBorderColor: |-
+                =ColorValue("#6DE8D2")
+            PressedColor: |-
+                =ColorValue("#6DE8D2")
+            PressedFill: =Button3_50.Color
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="En Cola"
+            Width: =215
+            X: =30
+            Y: =126
+            ZIndex: =21
+
+        Image4_50 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_50.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_50.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_50.Fill, 20%)
+            Image: ='Shape (37)'
+            OnSelect: =//Navigate('Dashboard Control')
+            PressedBorderColor: =ColorFade(Image4_50.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_50.Fill, -20%)
+            Width: =25
+            X: =52
+            Y: =143
+            ZIndex: =22
+
+    Group4_17 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =19
+
+        Button3_51 As button:
+            BorderColor: |-
+                =ColorValue("#26495B")
+            Color: |-
+                =ColorValue("#26495B")
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =Button3_51.BorderColor
+            Height: =60
+            HoverBorderColor: =ColorFade(Button3_51.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: =Exit()
+            PaddingLeft: =25
+            PressedBorderColor: |-
+                =ColorValue("#6DE8D2")
+            PressedColor: |-
+                =ColorValue("#6DE8D2")
+            PressedFill: =Button3_51.Color
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="Salir"
+            Width: =215
+            X: =30
+            Y: =676
+            ZIndex: =24
+
+        Image4_51 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_51.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_51.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_51.Fill, 20%)
+            Image: ='cerrar-sesion(1)'
+            OnSelect: =Exit()
+            PressedBorderColor: =ColorFade(Image4_51.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_51.Fill, -20%)
+            Width: =25
+            X: =52
+            Y: =693
+            ZIndex: =25
+
+    Image12_12 As image:
+        Height: =48
+        Image: ='image 15 (1)'
+        Width: =45
+        X: =30
+        Y: =24
+        ZIndex: =20
+
+    Button3_24 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =Button3_24.BorderColor
+        Height: =60
+        HoverBorderColor: =ColorFade(Button3_24.BorderColor, 20%)
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: =Navigate('Consulta Medica Atencion')
+        PaddingLeft: =25
+        PressedBorderColor: |-
+            =ColorValue("#6DE8D2")
+        PressedColor: |-
+            =ColorValue("#6DE8D2")
+        PressedFill: =Button3_24.Color
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Text: ="En Atención"
+        Width: =215
+        X: =30
+        Y: =212
+        ZIndex: =23
+
+    Notificaciones_10 As group:
+        Height: =5
+        Width: =5
+        X: =30
+        Y: =40
+        ZIndex: =24
+
+        Button2_126 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            Text: =""
+            Width: =48
+            X: =1054
+            Y: =26
+            ZIndex: =11
+
+        Icon3_56 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Bell
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =1058
+            Y: =30
+            ZIndex: =12
+
+        Button2_127 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            PressedFill: =RGBA(0, 0, 0, 0.16)
+            Text: =""
+            Width: =48
+            X: =1054
+            Y: =26
+            ZIndex: =13
+
+    Correo_10 As group:
+        Height: =5
+        Width: =5
+        X: =30
+        Y: =40
+        ZIndex: =25
+
+        Button2_128 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            Text: =""
+            Width: =48
+            X: =982
+            Y: =26
+            ZIndex: =14
+
+        Icon3_57 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Mail
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =986
+            Y: =30
+            ZIndex: =15
+
+        Button2_129 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Text: =""
+            Width: =48
+            X: =982
+            Y: =26
+            ZIndex: =16
+
+    Button3_28 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        FocusedBorderColor: =Button3_28.BorderColor
+        Height: =68
+        HoverBorderColor: =ColorFade(Button3_28.BorderColor, 20%)
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: =Navigate('Consulta Medica Pacientes')
+        PaddingLeft: =25
+        PressedBorderColor: =Button3_28.Fill
+        PressedColor: =Button3_28.Fill
+        PressedFill: =Button3_28.Color
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Text: ="Registro"
+        Width: =215
+        X: =30
+        Y: =298
+        ZIndex: =26
+
+    Calendario_36 As group:
+        Height: =5
+        Width: =5
+        X: =30
+        Y: =40
+        ZIndex: =26
+
+        Button2_130 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =Set(_dateSelected_DCAR, Today());
+                Set(_firstDayOfMonth_DCAR, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView_DCAR, DateAdd(_firstDayOfMonth_DCAR, -(Weekday(_firstDayOfMonth_DCAR) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth_DCAR, DateAdd(DateAdd(_firstDayOfMonth_DCAR, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                UpdateContext({_varCalendario:true});
+            Text: =""
+            Width: =48
+            X: =910
+            Y: =26
+            ZIndex: =17
+
+        Icon3_58 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.CalendarBlank
+            OnSelect: |-
+                =Set(_dateSelected_DCAR, Today());
+                Set(_firstDayOfMonth_DCAR, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView_DCAR, DateAdd(_firstDayOfMonth_DCAR, -(Weekday(_firstDayOfMonth_DCAR) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth_DCAR, DateAdd(DateAdd(_firstDayOfMonth_DCAR, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                UpdateContext({_varCalendario:true});
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =914
+            Y: =30
+            ZIndex: =18
+
+        Button2_131 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =Set(_dateSelected_DCAR, Today());
+                Set(_firstDayOfMonth_DCAR, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView_DCAR, DateAdd(_firstDayOfMonth_DCAR, -(Weekday(_firstDayOfMonth_DCAR) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth_DCAR, DateAdd(DateAdd(_firstDayOfMonth_DCAR, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                UpdateContext({_varCalendario:true});
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Text: =""
+            Width: =48
+            X: =910
+            Y: =26
+            ZIndex: =19
+
+    Rectangle2_19 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle2_19.Fill
+        Fill: =RGBA(202, 202, 202, 1)
+        FocusedBorderColor: =Rectangle2_19.BorderColor
+        Height: =672
+        HoverFill: =Rectangle2_19.Fill
+        PressedFill: =Rectangle2_19.Fill
+        Width: =1
+        X: =275
+        Y: =96
+        ZIndex: =27
+
+    Label32_10 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: |-
+            ="Etapa: Laboratorio"
+        Width: =230
+        X: =325
+        Y: =116
+        ZIndex: =28
+
+    Label27_2 As label:
+        Color: |-
+            =
+            If(Or(Muestra=true ,ResultadosAnalisis=true),ColorValue("#6DE8D2"),ColorValue("#D9D9D9"))
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        PaddingLeft: =0
+        PaddingRight: =0
+        Size: =12
+        Text: ="- - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+        Width: =266
+        X: =535
+        Y: =203
+        ZIndex: =29
+
+    Label27_3 As label:
+        Color: |-
+            =If(ResultadosAnalisis=true ,ColorValue("#6DE8D2"),ColorValue("#D9D9D9"))
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        PaddingLeft: =0
+        PaddingRight: =0
+        Size: =12
+        Text: ="- - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+        Width: =266
+        X: =827
+        Y: =203
+        ZIndex: =30
+
+    Button6_5 As button:
+        BorderColor: =
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =36
+        HoverColor: =
+        HoverFill: =
+        PressedColor: =
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: =""
+        Width: =36
+        X: =499
+        Y: =203
+        ZIndex: =31
+
+    Button6_6 As button:
+        BorderStyle: =BorderStyle.None
+        Color: |-
+            =
+            ColorValue("#D9D9D9")
+        DisabledFill: =
+        DisplayMode: =If(Or(varAntecedentesHM=true  ,varFisiologiaHM=true),DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =36
+        HoverFill: =
+        PressedFill: =
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: =""
+        Width: =36
+        X: =791
+        Y: =203
+        ZIndex: =32
+
+    Button6_7 As button:
+        BorderStyle: =BorderStyle.None
+        Color: |-
+            =
+            ColorValue("#D9D9D9")
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =If(varFisiologiaHM=true,DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =36
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: =""
+        Width: =36
+        X: =1092
+        Y: =203
+        ZIndex: =33
+
+    Label37_3 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =10
+        Text: ="Obtención de Muestra"
+        X: =441
+        Y: =243
+        ZIndex: =34
+
+    Label37_4 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =10
+        Text: ="Análisis de Muestra"
+        X: =734
+        Y: =243
+        ZIndex: =35
+
+    Label37_5 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =10
+        Text: ="Resultados de Análisis"
+        Width: =178
+        X: =1021
+        Y: =243
+        ZIndex: =36
+
+    Image8_8 As image:
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        Height: =36
+        Image: ='Shape (35)'
+        ImagePosition: =ImagePosition.Center
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =If(Or(Muestra=true  ,ResultadosAnalisis=true),true,false)
+        Width: =36
+        X: =791
+        Y: =203
+        ZIndex: =37
+
+    Image8_9 As image:
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        Height: =36
+        Image: ='Shape (36)_1'
+        ImagePosition: =ImagePosition.Center
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =ResultadosAnalisis
+        Width: =36
+        X: =1092
+        Y: =203
+        ZIndex: =38
+
+    TxtNombreDCA_5 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Height: =36
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Size: =12
+        Visible: =ObtencionMuestra
+        Width: =518
+        X: =423
+        Y: =323
+        ZIndex: =39
+
+    lblNombreDCA_5 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        PaddingLeft: =0
+        Size: =12
+        Text: ="Pacientes"
+        Visible: =ObtencionMuestra
+        Width: =228
+        X: =423
+        Y: =287
+        ZIndex: =40
+
+    lblsexoDCA_5 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        PaddingLeft: =0
+        Size: =12
+        Text: ="Exámen"
+        Visible: =ObtencionMuestra
+        Width: =228
+        X: =701
+        Y: =383
+        ZIndex: =41
+
+    GroupSexo_DCA_5 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =45
+
+        TxtSexoDCA_5 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            Font: =Font.'Segoe UI'
+            Height: =36
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =240
+            X: =701
+            Y: =423
+            ZIndex: =42
+
+        dpSexo_DCA_5 As dropdown:
+            BorderStyle: =BorderStyle.None
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 0, 0, 1)
+            ChevronHoverBackground: =
+            ChevronHoverFill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HoverBorderColor: =
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Items: =["Completo"]
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =236
+            X: =701
+            Y: =423
+            ZIndex: =43
+
+    lblsexoDCA_6 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        PaddingLeft: =0
+        Size: =12
+        Text: ="Tipo de Muestra"
+        Visible: =ObtencionMuestra
+        Width: =228
+        X: =979
+        Y: =383
+        ZIndex: =47
+
+    Group5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =48
+
+        TxtfechanacimientoDCA_5 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Segoe UI'
+            Height: =36
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =240
+            X: =979
+            Y: =323
+            ZIndex: =44
+
+        lblfechanacimientoDCA_5 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            PaddingLeft: =0
+            Size: =12
+            Text: ="Fecha de Recolección"
+            Visible: =ObtencionMuestra
+            Width: =228
+            X: =979
+            Y: =287
+            ZIndex: =45
+
+        dateFechaNacimiento_1 As datepicker:
+            BorderStyle: =BorderStyle.None
+            Font: =Font.'Segoe UI'
+            Height: =34
+            IconBackground: =RGBA(0, 0, 0, 0)
+            IconFill: =RGBA(0, 0, 0, 1)
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =237
+            X: =979
+            Y: =324
+            ZIndex: =46
+
+    lblsexoDCA_7 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        PaddingLeft: =0
+        Size: =12
+        Text: ="Tipo de Análisis"
+        Visible: =ObtencionMuestra
+        Width: =228
+        X: =423
+        Y: =383
+        ZIndex: =50
+
+    GroupSexo_DCA_6 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =51
+
+        TxtSexoDCA_6 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            Font: =Font.'Segoe UI'
+            Height: =36
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =240
+            X: =979
+            Y: =423
+            ZIndex: =48
+
+        dpSexo_DCA_6 As dropdown:
+            BorderStyle: =BorderStyle.None
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 0, 0, 1)
+            ChevronHoverBackground: =
+            ChevronHoverFill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HoverBorderColor: =
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Items: =["Suero"]
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =236
+            X: =979
+            Y: =424
+            ZIndex: =49
+
+    lblsexoDCA_8 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        PaddingLeft: =0
+        Size: =12
+        Text: ="Estado"
+        Visible: =ObtencionMuestra
+        Width: =228
+        X: =701
+        Y: =575
+        ZIndex: =53
+
+    GroupSexo_DCA_7 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =54
+
+        TxtSexoDCA_7 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            Font: =Font.'Segoe UI'
+            Height: =36
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =240
+            X: =423
+            Y: =419
+            ZIndex: =51
+
+        dpSexo_DCA_7 As dropdown:
+            BorderStyle: =BorderStyle.None
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 0, 0, 1)
+            ChevronHoverBackground: =
+            ChevronHoverFill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HoverBorderColor: =
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Items: =["Analisis Hematológico"]
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =236
+            X: =423
+            Y: =420
+            ZIndex: =52
+
+    lblsexoDCA_9 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        PaddingLeft: =0
+        Size: =12
+        Text: ="Tipo de Obtención"
+        Visible: =ObtencionMuestra
+        Width: =228
+        X: =423
+        Y: =575
+        ZIndex: =56
+
+    GroupSexo_DCA_8 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =57
+
+        TxtSexoDCA_8 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            Font: =Font.'Segoe UI'
+            Height: =36
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =240
+            X: =701
+            Y: =611
+            ZIndex: =54
+
+        dpSexo_DCA_8 As dropdown:
+            BorderStyle: =BorderStyle.None
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 0, 0, 1)
+            ChevronHoverBackground: =
+            ChevronHoverFill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HoverBorderColor: =
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Items: =["Sin Recolectar"]
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =236
+            X: =701
+            Y: =612
+            ZIndex: =55
+
+    TxtNombreDCA_6 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Height: =36
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Size: =12
+        Visible: =ObtencionMuestra
+        Width: =796
+        X: =423
+        Y: =515
+        ZIndex: =59
+
+    lblNombreDCA_6 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        PaddingLeft: =0
+        Size: =12
+        Text: ="Requerimiento para el Exámen"
+        Visible: =ObtencionMuestra
+        Width: =328
+        X: =423
+        Y: =479
+        ZIndex: =60
+
+    BtnCancelarFormDCA_4 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =BtnCancelarFormDCA_4.BorderColor
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: =ColorFade(BtnCancelarFormDCA_4.BorderColor, 20%)
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: =Set(ObtencionMuestra,true);Set(Muestra,false);Set(ResultadosAnalisis,false)
+        PressedBorderColor: |-
+            =ColorValue("#6DE8D2")
+        PressedColor: |-
+            =ColorValue("#6DE8D2")
+        PressedFill: =BtnCancelarFormDCA_4.Color
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="ATRAS"
+        Visible: =Muestra
+        Width: =260
+        X: =549
+        Y: =698
+        ZIndex: =61
+
+    GroupSexo_DCA_9 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =61
+
+        TxtSexoDCA_9 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            Font: =Font.'Segoe UI'
+            Height: =36
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =240
+            X: =423
+            Y: =611
+            ZIndex: =57
+
+        dpSexo_DCA_9 As dropdown:
+            BorderStyle: =BorderStyle.None
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 0, 0, 1)
+            ChevronHoverBackground: =
+            ChevronHoverFill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HoverBorderColor: =
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Items: =["Presencial"]
+            Size: =12
+            Visible: =ObtencionMuestra
+            Width: =236
+            X: =423
+            Y: =612
+            ZIndex: =58
+
+    BtnGuardarForm_DCA_4 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: |-
+            =ColorValue("#26495B")
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: |-
+            =Set(ObtencionMuestra,false);
+            Set(Muestra,true)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="SIGUIENTE"
+        Visible: =ObtencionMuestra
+        Width: =260
+        X: =691
+        Y: =698
+        ZIndex: =62
+
+    BtnGuardarForm_DCA_5 As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        Color: |-
+            =ColorValue("#26495B")
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: |-
+            =ColorValue("#26495B")
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: |-
+            =Set(Muestra,false);
+            Set(ResultadosAnalisis,true)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="SIGUIENTE"
+        Visible: =Muestra
+        Width: =260
+        X: =833
+        Y: =698
+        ZIndex: =63
+
+    Label38 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        Size: =18
+        Text: ="Fin de análisis"
+        Visible: =Muestra
+        Width: =252
+        X: =745
+        Y: =281
+        ZIndex: =64
+
+    Label38_1 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: |-
+            ="Hemoglobina:"
+        Visible: =Muestra
+        X: =629
+        Y: =325
+        ZIndex: =65
+
+    Label38_2 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: |-
+            ="Hematrocito:"
+        Visible: =Muestra
+        X: =629
+        Y: =365
+        ZIndex: =66
+
+    Label38_3 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: |-
+            ="Recuento de glóbulos blancos:"
+        Visible: =Muestra
+        Width: =250
+        X: =629
+        Y: =405
+        ZIndex: =67
+
+    Label38_4 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: |-
+            ="Recuento de plaquetas:"
+        Visible: =Muestra
+        Width: =220
+        X: =629
+        Y: =445
+        ZIndex: =68
+
+    Label38_5 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: |-
+            ="Neutrófilos:"
+        Visible: =Muestra
+        X: =629
+        Y: =485
+        ZIndex: =69
+
+    Label38_6 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: |-
+            ="Linfocitos:"
+        Visible: =Muestra
+        X: =629
+        Y: =525
+        ZIndex: =70
+
+    Label38_7 As label:
+        Font: =Font.'Segoe UI'
+        Height: =20
+        Size: =12
+        Text: ="16 g/dL"
+        Visible: =Muestra
+        X: =863
+        Y: =325
+        ZIndex: =71
+
+    Label38_8 As label:
+        Font: =Font.'Segoe UI'
+        Height: =20
+        Size: =12
+        Text: ="40%"
+        Visible: =Muestra
+        X: =863
+        Y: =365
+        ZIndex: =72
+
+    Label38_9 As label:
+        Font: =Font.'Segoe UI'
+        Height: =20
+        Size: =12
+        Text: ="5.3 x 10^3 células/µL"
+        Visible: =Muestra
+        Width: =250
+        X: =863
+        Y: =405
+        ZIndex: =73
+
+    Label38_10 As label:
+        Font: =Font.'Segoe UI'
+        Height: =20
+        Size: =12
+        Text: ="400,000 células/µL"
+        Visible: =Muestra
+        Width: =250
+        X: =863
+        Y: =445
+        ZIndex: =74
+
+    Label38_11 As label:
+        Font: =Font.'Segoe UI'
+        Height: =20
+        Size: =12
+        Text: ="50%"
+        Visible: =Muestra
+        X: =863
+        Y: =485
+        ZIndex: =75
+
+    Label38_12 As label:
+        Font: =Font.'Segoe UI'
+        Height: =20
+        Size: =12
+        Text: ="20%"
+        Visible: =Muestra
+        X: =863
+        Y: =525
+        ZIndex: =76
+
+    Label38_13 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: |-
+            ="Monocitos:"
+        Visible: =Muestra
+        X: =629
+        Y: =565
+        ZIndex: =77
+
+    Label38_14 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: |-
+            ="Eosinófilos:"
+        Visible: =Muestra
+        X: =629
+        Y: =605
+        ZIndex: =78
+
+    Label38_15 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: |-
+            ="Basófilos:"
+        Visible: =Muestra
+        X: =629
+        Y: =645
+        ZIndex: =79
+
+    Label38_16 As label:
+        Font: =Font.'Segoe UI'
+        Height: =20
+        Size: =12
+        Text: ="5%"
+        Visible: =Muestra
+        X: =863
+        Y: =565
+        ZIndex: =80
+
+    Label38_17 As label:
+        Font: =Font.'Segoe UI'
+        Height: =20
+        Size: =12
+        Text: ="2%"
+        Visible: =Muestra
+        X: =863
+        Y: =605
+        ZIndex: =81
+
+    Label38_18 As label:
+        Font: =Font.'Segoe UI'
+        Height: =20
+        Size: =12
+        Text: ="1%"
+        Visible: =Muestra
+        X: =863
+        Y: =645
+        ZIndex: =82
+

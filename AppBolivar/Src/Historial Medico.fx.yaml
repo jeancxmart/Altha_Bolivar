@@ -1,0 +1,1657 @@
+"'Historial Medico' As screen":
+    Fill: |-
+        =ColorValue("#F5F5F5")
+    OnVisible: |-
+        =Set(varDatosPersonalesHM,true);
+        Set(varAntecedentesHM,false);
+        Set(varFisiologiaHM,false);
+        
+         Reset( TxtNombreDCA_4);
+                 Reset( TxtApellidoDCA_4);
+                Reset(TxtdniDCA_4);
+                 Reset( dpSexo_DCA_4);
+                 Reset(TxtocupacionDCA_4);
+               Reset(dateFechaNacimiento);
+              
+                 Reset( dpNacionalidad_DCA_4);
+               Reset( TxtresidenciaDCA_4);
+                 Reset(TxtMotivoDCA_12);
+                 Reset( TxtEnfermedadDCA_28);
+                Reset( TxtMalestarDCA_13);
+                Reset( TxtAntecedentesFamiliaresDCA_32);
+                Reset( TxtAntecedentesFamiliaresDCA_29);
+                Reset(TxtAntecedentesFamiliaresDCA_33);
+                 Reset( TxtAntecedentesFamiliaresDCA_29);
+                
+               Reset( TxtAntecedentesPersonalesDCA_30);
+                 Reset( TxtAlimentacionDCA_14);
+                Reset( TxtSueñoDCA_31);
+               
+                 Reset( TxtEjerciciosDCA_33);
+                Reset( TxtAlergiasDCA_34)
+
+    Group3_10 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        Button3_30 As button:
+            BorderColor: |-
+                =ColorValue("#26495B")
+            Color: |-
+                =ColorValue("#26495B")
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =Button3_30.BorderColor
+            Height: =60
+            HoverBorderColor: =ColorFade(Button3_30.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: =//Navigate('Dashboard Control')
+            PaddingLeft: =25
+            PressedBorderColor: |-
+                =ColorValue("#6DE8D2")
+            PressedColor: |-
+                =ColorValue("#6DE8D2")
+            PressedFill: =Button3_30.Color
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="En Cola"
+            Width: =215
+            X: =30
+            Y: =126
+            ZIndex: =1
+
+        Image4_37 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_37.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_37.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_37.Fill, 20%)
+            Image: ='Shape (37)'
+            OnSelect: =//Navigate('Dashboard Control')
+            PressedBorderColor: =ColorFade(Image4_37.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_37.Fill, -20%)
+            Width: =25
+            X: =52
+            Y: =143
+            ZIndex: =2
+
+    Group4_11 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =4
+
+        Button3_31 As button:
+            BorderColor: |-
+                =ColorValue("#26495B")
+            Color: |-
+                =ColorValue("#26495B")
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: |-
+                =ColorValue("#6DE8D2")
+            FocusedBorderColor: =Button3_31.BorderColor
+            Height: =60
+            HoverBorderColor: =ColorFade(Button3_31.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: =Navigate('Consulta Medica Atencion')/*Set(filter_status; "En Atención")*/;Set(AtencionClick,false)
+            PaddingLeft: =25
+            PressedBorderColor: =Button3_31.Fill
+            PressedColor: =Button3_31.Fill
+            PressedFill: =Button3_31.Color
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="En Atención"
+            Width: =215
+            X: =30
+            Y: =212
+            ZIndex: =3
+
+        Image4_38 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_38.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_38.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_38.Fill, 20%)
+            Image: ='Shape (38)'
+            OnSelect: =Navigate('Consulta Medica Atencion')/*Set(filter_status; "En Atención")*/;Set(AtencionClick,false)
+            PressedBorderColor: =ColorFade(Image4_38.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_38.Fill, -20%)
+            Width: =25
+            X: =52
+            Y: =229
+            ZIndex: =4
+
+    Group3_11 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+        Button3_32 As button:
+            BorderColor: |-
+                =ColorValue("#26495B")
+            Color: |-
+                =ColorValue("#26495B")
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =Button3_32.BorderColor
+            Height: =60
+            HoverBorderColor: =ColorFade(Button3_32.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: =Navigate('Consulta Medica Pacientes')
+            PaddingLeft: =25
+            PressedBorderColor: |-
+                =ColorValue("#6DE8D2")
+            PressedColor: |-
+                =ColorValue("#6DE8D2")
+            PressedFill: =Button3_32.Color
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="Registro"
+            Width: =215
+            X: =30
+            Y: =298
+            ZIndex: =5
+
+        Image4_39 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_39.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_39.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_39.Fill, 20%)
+            Image: ='Shape (39)'
+            OnSelect: =Navigate('Consulta Medica Pacientes')
+            PressedBorderColor: =ColorFade(Image4_39.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_39.Fill, -20%)
+            Width: =25
+            X: =52
+            Y: =316
+            ZIndex: =6
+
+    Rectangle2_12 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle2_12.Fill
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        FocusedBorderColor: =Rectangle2_12.BorderColor
+        Height: =96
+        HoverFill: =Rectangle2_12.Fill
+        PressedFill: =Rectangle2_12.Fill
+        Width: =1366
+        ZIndex: =9
+
+    Label3_15 As label:
+        Color: |-
+            =ColorValue("#26495B")
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        OnSelect: =Set(filter_status, "En Atención")
+        Size: =24
+        Text: ="Medical Plus"
+        Width: =329
+        X: =88
+        Y: =24
+        ZIndex: =10
+
+    Group4_12 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =32
+        ZIndex: =10
+
+        Button3_33 As button:
+            BorderColor: |-
+                =ColorValue("#26495B")
+            Color: |-
+                =ColorValue("#26495B")
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =Button3_33.BorderColor
+            Height: =60
+            HoverBorderColor: =ColorFade(Button3_33.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: =Exit()
+            PaddingLeft: =25
+            PressedBorderColor: |-
+                =ColorValue("#6DE8D2")
+            PressedColor: |-
+                =ColorValue("#6DE8D2")
+            PressedFill: =Button3_33.Color
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="Salir"
+            Width: =215
+            X: =30
+            Y: =676
+            ZIndex: =7
+
+        Image4_40 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_40.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_40.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_40.Fill, 20%)
+            Image: ='cerrar-sesion(1)'
+            OnSelect: =Exit()
+            PressedBorderColor: =ColorFade(Image4_40.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_40.Fill, -20%)
+            Width: =25
+            X: =52
+            Y: =693
+            ZIndex: =8
+
+    Image12_8 As image:
+        Height: =50
+        Image: ='061bbafe-d526-447c-aafb-3a13dda01f25'
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =50
+        X: =30
+        Y: =24
+        ZIndex: =11
+
+    Rectangle2_13 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle2_13.Fill
+        Fill: =RGBA(202, 202, 202, 1)
+        FocusedBorderColor: =Rectangle2_13.BorderColor
+        Height: =672
+        HoverFill: =Rectangle2_13.Fill
+        PressedFill: =Rectangle2_13.Fill
+        Width: =1
+        X: =275
+        Y: =96
+        ZIndex: =12
+
+    Label27 As label:
+        Color: |-
+            =
+            If(Or(varAntecedentesHM=true ,varFisiologiaHM=true),ColorValue("#6DE8D2"),ColorValue("#D9D9D9"))
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        PaddingLeft: =0
+        PaddingRight: =0
+        Size: =12
+        Text: ="- - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+        Width: =266
+        X: =540
+        Y: =179
+        ZIndex: =13
+
+    Label27_1 As label:
+        Color: |-
+            =If(varFisiologiaHM=true ,ColorValue("#6DE8D2"),ColorValue("#D9D9D9"))
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        PaddingLeft: =0
+        PaddingRight: =0
+        Size: =12
+        Text: ="- - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+        Width: =266
+        X: =832
+        Y: =179
+        ZIndex: =14
+
+    Image8 As image:
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        Height: =36
+        Image: ='Shape (40)'
+        ImagePosition: =ImagePosition.Center
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =36
+        X: =504
+        Y: =179
+        ZIndex: =15
+
+    Image8_1 As image:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Fill: |-
+            =ColorValue("
+            #D9D9D9")
+        Height: =36
+        Image: ='Shape (44)'
+        ImagePosition: =ImagePosition.Center
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =If(varAntecedentesHM=true,false,true)
+        Width: =36
+        X: =796
+        Y: =179
+        ZIndex: =16
+
+    Image8_2 As image:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Fill: |-
+            =ColorValue("
+            #D9D9D9")
+        Height: =36
+        Image: ='Shape (43)'
+        ImagePosition: =ImagePosition.Center
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =If(varFisiologiaHM=true,false,true)
+        Width: =36
+        X: =1097
+        Y: =179
+        ZIndex: =17
+
+    Label28 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =16
+        Text: ="Historial Médico"
+        Width: =180
+        X: =731
+        Y: =124
+        ZIndex: =18
+
+    TextInput25 As text:
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =493
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =1031
+        X: =309
+        Y: =276
+        ZIndex: =19
+
+    Canvas1_9 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =496
+        Width: =1031
+        X: =309
+        Y: =272
+        ZIndex: =20
+
+        DataCard1_9 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(varAntecedentesHM,820,865)
+            Width: =1031
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            TxtNombreDCA_4 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: |-
+                    =First(ForAll(Split(TicketSelected.DNI_Paciente," "), {Result: ThisRecord.Value})).Result
+                Font: =Font.'Segoe UI'
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varDatosPersonalesHM
+                Width: =380
+                X: =118
+                Y: =80
+                ZIndex: =1
+
+            lblNombreDCA_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Nombres"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =118
+                Y: =40
+                ZIndex: =2
+
+            TxtApellidoDCA_4 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: |-
+                    =Concat(LastN(ForAll(Split(TicketSelected.Paciente," "), {Result: ThisRecord.Value}),CountRows(ForAll(Split(TicketSelected.Paciente," "), {Result: ThisRecord.Value}))-1),Result," ")
+                Font: =Font.'Segoe UI'
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varDatosPersonalesHM
+                Width: =380
+                X: =548
+                Y: =80
+                ZIndex: =3
+
+            lblApellidoDCA_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Apellidos"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =548
+                Y: =40
+                ZIndex: =4
+
+            TxtdniDCA_4 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =TicketSelected.DNI_Paciente
+                Font: =Font.'Segoe UI'
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varDatosPersonalesHM
+                Width: =240
+                X: =118
+                Y: =180
+                ZIndex: =5
+
+            lblDNIDCA_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="DNI o C.I"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =118
+                Y: =140
+                ZIndex: =6
+
+            TxtfechanacimientoDCA_4 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varDatosPersonalesHM
+                Width: =240
+                X: =118
+                Y: =277
+                ZIndex: =7
+
+            lblfechanacimientoDCA_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Fecha de nacimiento"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =118
+                Y: =237
+                ZIndex: =8
+
+            lblsexoDCA_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Sexo"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =410
+                Y: =140
+                ZIndex: =9
+
+            lblestadocivilDCA_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Estado Civil"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =397
+                Y: =237
+                ZIndex: =11
+
+            TxtocupacionDCA_4 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varDatosPersonalesHM
+                Width: =240
+                X: =685
+                Y: =179
+                ZIndex: =14
+
+            lblocupacionDCA_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Ocupación"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =685
+                Y: =139
+                ZIndex: =15
+
+            GroupEstadoCivil_DCA_4 As group:
+                Height: =5
+                Width: =5
+                X: =10
+                Y: =-48
+                ZIndex: =16
+
+                txtEstadoCivil_DCA_4 As text:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Default: =""
+                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.'Segoe UI'
+                    Height: =36
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =12
+                    Visible: =varDatosPersonalesHM
+                    Width: =240
+                    X: =397
+                    Y: =277
+                    ZIndex: =10
+
+                dpEstadoCivil_DCA_4 As dropdown:
+                    BorderStyle: =BorderStyle.None
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronFill: =RGBA(0, 0, 0, 1)
+                    ChevronHoverBackground: =
+                    ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                    Height: =34
+                    HoverBorderColor: =
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    Items: =["Soltero(a)","Casado(a)","Viudo(a)"]
+                    Visible: =varDatosPersonalesHM
+                    Width: =236
+                    X: =398
+                    Y: =278
+                    ZIndex: =12
+
+            lblNacionalidadDCA_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Nacionalidad"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =118
+                Y: =342
+                ZIndex: =18
+
+            TxtresidenciaDCA_4 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varDatosPersonalesHM
+                Width: =516
+                X: =398
+                Y: =382
+                ZIndex: =20
+
+            lblResidenciaDCA_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Dirección de Residencia"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =398
+                Y: =342
+                ZIndex: =21
+
+            TxtMotivoDCA_12 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =89
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varDatosPersonalesHM
+                Width: =796
+                X: =118
+                Y: =492
+                ZIndex: =22
+
+            lblMotiviDCA_12 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Motivo de Hospitalización"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =118
+                Y: =452
+                ZIndex: =23
+
+            TxtEnfermedadDCA_28 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =89
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varDatosPersonalesHM
+                Width: =796
+                X: =118
+                Y: =654
+                ZIndex: =24
+
+            GroupNacionalidad_DCA_4 As group:
+                Height: =5
+                Width: =5
+                X: =10
+                Y: =-48
+                ZIndex: =25
+
+                txtNacionalidad_DCA_4 As text:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Default: =""
+                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.'Segoe UI'
+                    Height: =36
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =12
+                    Visible: =varDatosPersonalesHM
+                    Width: =240
+                    X: =118
+                    Y: =382
+                    ZIndex: =17
+
+                dpNacionalidad_DCA_4 As dropdown:
+                    BorderStyle: =BorderStyle.None
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronFill: =RGBA(0, 0, 0, 1)
+                    ChevronHoverBackground: =
+                    ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                    Height: =34
+                    HoverBorderColor: =
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    Items: =["Peruana","Extranjero"]
+                    Visible: =varDatosPersonalesHM
+                    Width: =236
+                    X: =118
+                    Y: =383
+                    ZIndex: =19
+
+            lblEnfermedadDCA_28 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =29
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Enfermedad Actual"
+                Visible: =varDatosPersonalesHM
+                Width: =228
+                X: =118
+                Y: =614
+                ZIndex: =26
+
+            Button3_34 As button:
+                BorderColor: |-
+                    =ColorValue("#26495B")
+                Color: |-
+                    =ColorValue("#26495B")
+                DisabledBorderColor: =RGBA(116, 116, 116, 1)
+                Fill: |-
+                    =ColorValue("#6DE8D2")
+                FocusedBorderColor: =Button3_34.BorderColor
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                HoverBorderColor: =ColorFade(Button3_34.BorderColor, 20%)
+                HoverColor: |-
+                    =ColorValue("#26495B")
+                HoverFill: |-
+                    =ColorValue("#6DE8D2")
+                OnSelect: |-
+                    =Set(varDatosPersonalesHM,false);
+                    Set(varAntecedentesHM,true);
+                    Set(varFisiologiaHM,false)
+                PressedBorderColor: =Button3_34.Fill
+                PressedColor: =Button3_34.Fill
+                PressedFill: =Button3_34.Color
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Text: ="SIGUIENTE"
+                Visible: =varDatosPersonalesHM
+                Width: =345
+                X: =358
+                Y: =780
+                ZIndex: =32
+
+            GroupSexo_DCA_4 As group:
+                Height: =5
+                Width: =5
+                X: =10
+                Y: =-48
+                ZIndex: =32
+
+                TxtSexoDCA_4 As text:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Default: =""
+                    Font: =Font.'Segoe UI'
+                    Height: =36
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =12
+                    Visible: =varDatosPersonalesHM
+                    Width: =240
+                    X: =409
+                    Y: =180
+                    ZIndex: =30
+
+                dpSexo_DCA_4 As dropdown:
+                    BorderStyle: =BorderStyle.None
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronFill: =RGBA(0, 0, 0, 1)
+                    ChevronHoverBackground: =
+                    ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                    Default: =//TicketSelected.Sexo
+                    Height: =34
+                    HoverBorderColor: =
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    Items: =["Masculino","Femenino","Otro"]
+                    Visible: =varDatosPersonalesHM
+                    Width: =236
+                    X: =410
+                    Y: =181
+                    ZIndex: =31
+
+            TxtMalestarDCA_13 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =89
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varAntecedentesHM
+                Width: =796
+                X: =134
+                Y: =67
+                ZIndex: =33
+
+            lblMotiviDCA_13 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =44
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Antecedentes del Malestar Actual"
+                Visible: =varAntecedentesHM
+                Width: =328
+                X: =134
+                Y: =23
+                ZIndex: =34
+
+            TxtAntecedentesFamiliaresDCA_29 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varAntecedentesHM
+                Width: =653
+                X: =275
+                Y: =225
+                ZIndex: =35
+
+            lblEnfermedadDCA_29 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =44
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Antecedentes Familiares"
+                Visible: =varAntecedentesHM
+                Width: =328
+                X: =134
+                Y: =179
+                ZIndex: =36
+
+            TxtAntecedentesPersonalesDCA_30 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =89
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varAntecedentesHM
+                Width: =796
+                X: =134
+                Y: =606
+                ZIndex: =37
+
+            lblEnfermedadDCA_30 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =44
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Historial de Padecimiento u Operaciones"
+                Visible: =varAntecedentesHM
+                Width: =428
+                X: =134
+                Y: =558
+                ZIndex: =38
+
+            Button3_35 As button:
+                BorderColor: |-
+                    =ColorValue("#26495B")
+                Color: |-
+                    =ColorValue("#26495B")
+                DisabledBorderColor: =RGBA(116, 116, 116, 1)
+                Fill: |-
+                    =ColorValue("#6DE8D2")
+                FocusedBorderColor: =Button3_35.BorderColor
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                HoverBorderColor: =ColorFade(Button3_35.BorderColor, 20%)
+                HoverColor: |-
+                    =ColorValue("#26495B")
+                HoverFill: |-
+                    =ColorValue("#6DE8D2")
+                OnSelect: |-
+                    =Set(varDatosPersonalesHM,false);
+                    Set(varAntecedentesHM,false);
+                    Set(varFisiologiaHM,true)
+                PressedBorderColor: =Button3_35.Fill
+                PressedColor: =Button3_35.Fill
+                PressedFill: =Button3_35.Color
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Text: ="SIGUIENTE"
+                Visible: =varAntecedentesHM
+                Width: =345
+                X: =358
+                Y: =740
+                ZIndex: =39
+
+            TxtAlimentacionDCA_14 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =89
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varFisiologiaHM
+                Width: =796
+                X: =118
+                Y: =76
+                ZIndex: =40
+
+            lblMotiviDCA_14 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =44
+                PaddingLeft: =0
+                Size: =14
+                Text: ="¿Cuál es tu Alimentación?"
+                Visible: =varFisiologiaHM
+                Width: =328
+                X: =118
+                Y: =30
+                ZIndex: =41
+
+            TxtSueñoDCA_31 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =89
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varFisiologiaHM
+                Width: =796
+                X: =118
+                Y: =224
+                ZIndex: =42
+
+            lblEnfermedadDCA_31 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =46
+                PaddingLeft: =0
+                Size: =14
+                Text: ="¿Cuanto es la cantidad de horas de sueño?"
+                Visible: =varFisiologiaHM
+                Width: =380
+                X: =118
+                Y: =179
+                ZIndex: =43
+
+            TxtEjerciciosDCA_33 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =89
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varFisiologiaHM
+                Width: =796
+                X: =118
+                Y: =372
+                ZIndex: =46
+
+            lblEnfermedadDCA_33 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =44
+                PaddingLeft: =0
+                Size: =14
+                Text: ="¿Cada cuánto tiempo haces ejercicios?"
+                Visible: =varFisiologiaHM
+                Width: =428
+                X: =118
+                Y: =323
+                ZIndex: =47
+
+            TxtAlergiasDCA_34 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =89
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varFisiologiaHM
+                Width: =796
+                X: =118
+                Y: =520
+                ZIndex: =48
+
+            lblEnfermedadDCA_34 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =44
+                PaddingLeft: =0
+                Size: =14
+                Text: ="¿A qué eres Alergico?"
+                Visible: =varFisiologiaHM
+                Width: =328
+                X: =118
+                Y: =472
+                ZIndex: =49
+
+            Button3_36 As button:
+                BorderColor: |-
+                    =ColorValue("#26495B")
+                Color: |-
+                    =ColorValue("#26495B")
+                DisabledBorderColor: =RGBA(116, 116, 116, 1)
+                Fill: |-
+                    =ColorValue("#6DE8D2")
+                FocusedBorderColor: =Button3_36.BorderColor
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                HoverBorderColor: =ColorFade(Button3_36.BorderColor, 20%)
+                HoverColor: |-
+                    =ColorValue("#26495B")
+                HoverFill: |-
+                    =ColorValue("#6DE8D2")
+                OnSelect: |-
+                    =Patch(
+                        'public.Medical_Center_Historial_Principal',
+                        Defaults('public.Medical_Center_Historial_Principal'),
+                        {
+                            id:"",
+                            Nombres: TxtNombreDCA_4.Text,
+                            Apellidos: TxtApellidoDCA_4.Text,
+                            DNI_CI: TxtdniDCA_4.Text,
+                            Sexo: dpSexo_DCA_4.Selected.Value,
+                            Ocupacion: TxtocupacionDCA_4.Text,
+                            Fecha_Nacimiento: dateFechaNacimiento.SelectedDate,
+                           
+                            Nacionalidad: dpNacionalidad_DCA_4.Selected.Value,
+                            Direccion: TxtresidenciaDCA_4.Text,
+                            Motivo: TxtMotivoDCA_12.Text,
+                            Enfermedad_Actual: TxtEnfermedadDCA_28.Text,
+                            Antecedentes_Malestar_Actual: TxtMalestarDCA_13.Text,
+                            Antecedentes_Padre: TxtAntecedentesFamiliaresDCA_32.Text,
+                            Nombre_Padre: TxtAntecedentesFamiliaresDCA_29.Text,
+                            Antecedentes_Madre:TxtAntecedentesFamiliaresDCA_33.Text,
+                            Nombre_Madre: TxtAntecedentesFamiliaresDCA_29.Text,
+                            
+                            Antecedentes_Personales: TxtAntecedentesPersonalesDCA_30.Text,
+                            Alimentacion: TxtAlimentacionDCA_14.Text,
+                            Sueño: TxtSueñoDCA_31.Text,
+                          
+                            Ejercicios: TxtEjerciciosDCA_33.Text,
+                            Alergias: TxtAlergiasDCA_34.Text
+                        }
+                    );Navigate('Consulta Medica Atencion');
+                     Reset( TxtNombreDCA_4);
+                             Reset( TxtApellidoDCA_4);
+                            Reset(TxtdniDCA_4);
+                             Reset( dpSexo_DCA_4);
+                             Reset(TxtocupacionDCA_4);
+                           Reset(dateFechaNacimiento);
+                          
+                             Reset( dpNacionalidad_DCA_4);
+                           Reset( TxtresidenciaDCA_4);
+                             Reset(TxtMotivoDCA_12);
+                             Reset( TxtEnfermedadDCA_28);
+                            Reset( TxtMalestarDCA_13);
+                            Reset( TxtAntecedentesFamiliaresDCA_32);
+                            Reset( TxtAntecedentesFamiliaresDCA_29);
+                            Reset(TxtAntecedentesFamiliaresDCA_33);
+                             Reset( TxtAntecedentesFamiliaresDCA_29);
+                            
+                           Reset( TxtAntecedentesPersonalesDCA_30);
+                             Reset( TxtAlimentacionDCA_14);
+                            Reset( TxtSueñoDCA_31);
+                            
+                             Reset( TxtEjerciciosDCA_33);
+                            Reset( TxtAlergiasDCA_34)
+                PaddingLeft: =25
+                PressedBorderColor: =Button3_36.Fill
+                PressedColor: =Button3_36.Fill
+                PressedFill: =Button3_36.Color
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Text: ="GUARDAR INFORMACIÓN"
+                Visible: =varFisiologiaHM
+                Width: =345
+                X: =358
+                Y: =788
+                ZIndex: =50
+
+            dateFechaNacimiento As datepicker:
+                BorderStyle: =BorderStyle.None
+                Height: =34
+                IconBackground: =RGBA(0, 0, 0, 0)
+                IconFill: =RGBA(0, 0, 0, 1)
+                Visible: =varDatosPersonalesHM
+                Width: =237
+                X: =120
+                Y: =278
+                ZIndex: =51
+
+            lblEnfermedadDCA_37 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =37
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Nombre Padre "
+                Visible: =varAntecedentesHM
+                Width: =141
+                X: =134
+                Y: =224
+                ZIndex: =52
+
+            TxtAntecedentesFamiliaresDCA_30 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varAntecedentesHM
+                Width: =653
+                X: =277
+                Y: =395
+                ZIndex: =53
+
+            lblEnfermedadDCA_38 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =37
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Nombre Madre"
+                Visible: =varAntecedentesHM
+                Width: =141
+                X: =136
+                Y: =395
+                ZIndex: =54
+
+            TxtAntecedentesFamiliaresDCA_32 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =86
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varAntecedentesHM
+                Width: =653
+                X: =277
+                Y: =279
+                ZIndex: =55
+
+            lblEnfermedadDCA_40 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =37
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Problemas"
+                Visible: =varAntecedentesHM
+                Width: =141
+                X: =134
+                Y: =278
+                ZIndex: =56
+
+            TxtAntecedentesFamiliaresDCA_33 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Height: =86
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Visible: =varAntecedentesHM
+                Width: =653
+                X: =277
+                Y: =451
+                ZIndex: =57
+
+            lblEnfermedadDCA_41 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =37
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Problemas"
+                Visible: =varAntecedentesHM
+                Width: =141
+                X: =134
+                Y: =450
+                ZIndex: =58
+
+    Image8_3 As image:
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        Height: =36
+        Image: ='Shape (41)'
+        ImagePosition: =ImagePosition.Center
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =If(Or(varAntecedentesHM=true  ,varFisiologiaHM=true),true,false)
+        Width: =36
+        X: =796
+        Y: =179
+        ZIndex: =21
+
+    Image8_4 As image:
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        Height: =36
+        Image: ='Shape (42)'
+        ImagePosition: =ImagePosition.Center
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =If(varFisiologiaHM=true,true,false)
+        Width: =36
+        X: =1097
+        Y: =179
+        ZIndex: =22
+
+    Button6 As button:
+        BorderColor: =
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =36
+        HoverColor: =
+        HoverFill: =
+        OnSelect: |-
+            =Set(varDatosPersonalesHM,true);
+            Set(varAntecedentesHM,false);
+            Set(varFisiologiaHM,false)
+        PressedColor: =
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: =""
+        Width: =36
+        X: =504
+        Y: =179
+        ZIndex: =23
+
+    Button6_1 As button:
+        BorderStyle: =BorderStyle.None
+        Color: |-
+            =
+            ColorValue("#D9D9D9")
+        DisabledFill: =
+        DisplayMode: =If(Or(varAntecedentesHM=true  ,varFisiologiaHM=true),DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =36
+        HoverFill: =
+        OnSelect: |-
+            =Set(varDatosPersonalesHM,false);
+            Set(varAntecedentesHM,true);
+            Set(varFisiologiaHM,false)
+        PressedFill: =
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: =""
+        Width: =36
+        X: =796
+        Y: =179
+        ZIndex: =24
+
+    Button6_3 As button:
+        BorderStyle: =BorderStyle.None
+        Color: |-
+            =
+            ColorValue("#D9D9D9")
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =If(varFisiologiaHM=true,DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =36
+        OnSelect: |-
+            =Set(varDatosPersonalesHM,false);
+            Set(varAntecedentesHM,false);
+            Set(varFisiologiaHM,true)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Text: =""
+        Width: =36
+        X: =1097
+        Y: =179
+        ZIndex: =25
+
+    Image6_3 As image:
+        Height: =179
+        Image: =Subtract_1
+        Visible: =false
+        Width: =215
+        X: =30
+        Y: =419
+        ZIndex: =26
+
+    Label9_6 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =35
+        Text: ="TICKET"
+        Visible: =false
+        Width: =212
+        X: =31
+        Y: =432
+        ZIndex: =27
+
+    Label9_7 As label:
+        Align: =Align.Center
+        Color: =RGBA(38, 73, 91, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =100
+        Size: =46
+        Text: |-
+            =//Left(Gallery3.Selected.'Codigo del Servicio';1)& "-" & Gallery3.Selected.'Número de Ticket'
+            "I-48"
+        Visible: =false
+        Width: =200
+        X: =37
+        Y: =459
+        ZIndex: =28
+
+    Button1_96 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(232, 17, 17, 1)
+        Font: =Font.'Segoe UI'
+        Height: =48
+        OnSelect: |-
+            =UpdateContext({_Emergencia_DCA:true})
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="EMERGENCIA"
+        Width: =298
+        X: =534
+        Y: =26
+        ZIndex: =29
+
+    Label37 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: ="Datos Personales"
+        X: =446
+        Y: =219
+        ZIndex: =39
+
+    Notificaciones_7 As group:
+        Height: =5
+        Width: =5
+        X: =30
+        Y: =40
+        ZIndex: =39
+
+        Button2_108 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            Text: =""
+            Width: =48
+            X: =1288
+            Y: =26
+            ZIndex: =30
+
+        Icon3_47 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Bell
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =1292
+            Y: =30
+            ZIndex: =31
+
+        Button2_109 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            PressedFill: =RGBA(0, 0, 0, 0.16)
+            Text: =""
+            Width: =48
+            X: =1288
+            Y: =26
+            ZIndex: =32
+
+    Label37_1 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: ="Antecedentes"
+        X: =739
+        Y: =219
+        ZIndex: =40
+
+    Correo_7 As group:
+        Height: =5
+        Width: =5
+        X: =30
+        Y: =40
+        ZIndex: =40
+
+        Button2_110 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            Text: =""
+            Width: =48
+            X: =1216
+            Y: =26
+            ZIndex: =33
+
+        Icon3_48 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Mail
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =1220
+            Y: =30
+            ZIndex: =34
+
+        Button2_111 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Text: =""
+            Width: =48
+            X: =1216
+            Y: =26
+            ZIndex: =35
+
+    Label37_2 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =20
+        Size: =12
+        Text: ="Hábitos Fisiológicos"
+        Width: =178
+        X: =1026
+        Y: =219
+        ZIndex: =41
+
+    Calendario_33 As group:
+        Height: =5
+        Width: =5
+        X: =30
+        Y: =40
+        ZIndex: =41
+
+        Button2_112 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varCalendario:true});
+                Set(_dateSelected, Today());
+                Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
+            Text: =""
+            Width: =48
+            X: =1144
+            Y: =26
+            ZIndex: =36
+
+        Icon3_49 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.CalendarBlank
+            OnSelect: |-
+                =UpdateContext({_varCalendario:true});
+                Set(_dateSelected, Today());
+                Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =1148
+            Y: =30
+            ZIndex: =37
+
+        Button2_113 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varCalendario:true});
+                Set(_dateSelected, Today());
+                Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));
+                Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Text: =""
+            Width: =48
+            X: =1144
+            Y: =26
+            ZIndex: =38
+

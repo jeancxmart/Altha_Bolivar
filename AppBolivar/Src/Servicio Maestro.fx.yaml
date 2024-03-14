@@ -1,0 +1,3501 @@
+"'Servicio Maestro' As screen":
+    Fill: |-
+        =ColorValue("#F5F5F5")
+
+    TextInput5_34 As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =550
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =788
+        X: =504
+        Y: =194
+        ZIndex: =1
+
+    Label3_25 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        Size: =18
+        Text: ="Lista de Servicios"
+        Width: =352
+        X: =519
+        Y: =213
+        ZIndex: =2
+
+    TextInput5_35 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =36
+        HintText: ="Buscar servicios"
+        PaddingLeft: =50
+        PaddingRight: =64
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Width: =380
+        X: =524
+        Y: =278
+        ZIndex: =3
+
+    Image18_8 As image:
+        Height: =14
+        Image: ='Shape (53)'
+        Width: =19
+        X: =543
+        Y: =289
+        ZIndex: =4
+
+    "Gallery5_8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =369
+        Items: |-
+            =If(
+                LookUp(
+                    'public.Medical_Center_Usuario',
+                    Correo = User().Email,
+                    Tabla_Maestra
+                ) = true,
+                Search(
+                    Filter(
+                        'public.Medical_Center_Servicios',
+                        Or(
+                            id_sede = _varSede.id,
+                            Nombre_Consultorio = "TABLA MAESTRA"
+                        )
+                    ),
+                    Proper(TextInput5_35.Text),
+                    "Servicio"
+                ),
+                Search(
+                    Filter(
+                        'public.Medical_Center_Servicios',
+                        id_sede = _varSede.id
+                    ),
+                    Proper(TextInput5_35.Text),
+                    "Servicio"
+                )
+            )
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =53
+        Width: =788
+        X: =504
+        Y: =374
+        ZIndex: =5
+
+        Title4_8 As label:
+            Font: =Font.'Segoe UI'
+            Height: =29
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: |
+                =ThisItem.Servicio
+            Width: =130
+            X: =20
+            Y: =12
+            ZIndex: =2
+
+        Subtitle3_18 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =24
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: |-
+                =varSimboloMaestros & Text(ThisItem.Costo,"# ###.00")
+            Width: =118
+            X: =605
+            Y: =12
+            ZIndex: =3
+
+        Subtitle3_15 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =24
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =If(Len(ThisItem.Descripcion)>=30 ,Left(ThisItem.Descripcion,27)&"...",ThisItem.Descripcion)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =206
+            X: =175
+            Y: =12
+            ZIndex: =4
+
+        Rectangle5_18 As rectangle:
+            Fill: =RGBA(147, 147, 147, 1)
+            Height: =2
+            Width: =748
+            X: =20
+            Y: =48
+            ZIndex: =6
+
+        Icon2_6 As icon.More:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =24
+            Icon: =Icon.More
+            OnSelect: |-
+                =UpdateContext({_varMenuMedicamentoPopUp:true});Set(MedicamentoSelected,Gallery5_8.Selected)
+            Rotation: =90
+            Width: =24
+            X: =744
+            Y: =12
+            ZIndex: =7
+
+        Subtitle3_22 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =24
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =LookUp('public.Medical_Center_Especialidad',id=ThisItem.especialidad,Especialidad)
+            Width: =118
+            X: =415
+            Y: =12
+            ZIndex: =8
+
+    Label6_15 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =24
+        Text: ="Servicio"
+        Width: =130
+        X: =524
+        Y: =330
+        ZIndex: =6
+
+    Label6_16 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =24
+        Text: ="Descripción"
+        Width: =130
+        X: =679
+        Y: =330
+        ZIndex: =7
+
+    Label6_17 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =24
+        Text: ="Costo"
+        Width: =140
+        X: =1097
+        Y: =330
+        ZIndex: =8
+
+    Rectangle5_17 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =2
+        Width: =748
+        X: =524
+        Y: =366
+        ZIndex: =9
+
+    Label6_83 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =24
+        Text: ="Especialidad"
+        Width: =130
+        X: =914
+        Y: =330
+        ZIndex: =10
+
+    TextInput5_33 As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =550
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =400
+        X: =74
+        Y: =194
+        ZIndex: =11
+
+    TextInput4_13 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Height: =36
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Width: =360
+        X: =94
+        Y: =326
+        ZIndex: =12
+
+    TextInput4_15 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Height: =36
+        Mode: =TextMode.MultiLine
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Width: =360
+        X: =94
+        Y: =414
+        ZIndex: =13
+
+    Group2_5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Rectangle3_6 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =96
+            Width: =1366
+            ZIndex: =25
+
+        Image11_7 As image:
+            Height: =80
+            Image: =getLogo
+            OnSelect: =Navigate(Home)
+            Width: =119
+            X: =30
+            Y: =8
+            ZIndex: =27
+
+    TextInput4_17 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Format: =TextFormat.Number
+        Height: =36
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Width: =326
+        X: =126
+        Y: =504
+        ZIndex: =14
+
+    Label4_59 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =12
+        Text: ="Costo del Servicio"
+        Width: =277
+        X: =93
+        Y: =468
+        ZIndex: =15
+
+    Label4_57 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =12
+        Text: ="Descripción"
+        Width: =277
+        X: =94
+        Y: =378
+        ZIndex: =16
+
+    Label4_55 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =12
+        Text: ="Nombre del Servicio"
+        Width: =277
+        X: =94
+        Y: =288
+        ZIndex: =17
+
+    Label4_51 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =41
+        Size: =18
+        Text: ="Nuevo"
+        Width: =177
+        X: =96
+        Y: =213
+        ZIndex: =18
+
+    ButtonAtender_9 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisplayMode: =If(IsBlank(TextInput4_13.Text) || IsBlank(TextInput4_15.Text) ||  IsBlank(TextInput4_17.Text),DisplayMode.Disabled ,  DisplayMode.Edit)
+        Fill: =ColorFondoBoton
+        Font: =Font.'Segoe UI'
+        Height: =44
+        HoverBorderColor: =ColorFondoBoton
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =Patch(
+                'public.Medical_Center_Servicios',
+                Defaults('public.Medical_Center_Servicios'),
+                {
+                    id: First(
+                        SortByColumns(
+                            'public.Medical_Center_Servicios',
+                            "id",
+                            SortOrder.Descending
+                        )
+                    ).id + 1,
+                    Costo: Value(TextInput4_17.Text),
+                    Descripcion: TextInput4_15.Text,
+                    Servicio: Proper(TextInput4_13.Text),
+                    activo:true,
+                    especialidad:ComboBox3.Selected.id,
+                    Tipo_Moneda: LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda),
+                    id_sede : _varSede.id
+                }
+            );
+            Refresh('public.Medical_Center_Servicios');
+            Reset(TextInput4_17);
+                  Reset( TextInput4_15);
+                    Reset( TextInput4_13);
+                    Reset(ComboBox3);
+                    If(And(LookUp('public.Medical_Center_Usuario',Correo=User().Email,Rol)="Administrador",LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,fase)="Incompleto"),
+                    Patch('public.Medical_Center_VerificacionApp',LookUp('public.Medical_Center_VerificacionApp',correo=User().Email),
+            {agregar_servicio:true}),false);
+            
+            
+            If(And(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,
+            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,
+            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,
+            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,
+            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,
+            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,
+            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true),Set(varViewPopUpVerificacionCompletado,true),false)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="AGREGAR SERVICIO"
+        Visible: |
+            =true
+        Width: =360
+        X: =93
+        Y: =665
+        ZIndex: =19
+
+    Button1_136 As button:
+        BorderColor: =ColorFondoBoton
+        Color: =ColorFondoBoton
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: =ColorFondoBoton
+        HoverColor: =ColorFondoBoton
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =UpdateContext({_varCargaDatos:true})
+        PressedBorderColor: =ColorFondoBoton
+        PressedColor: =ColorFondoBoton
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =11
+        Text: ="CARGA MASIVA"
+        X: =294
+        Y: =214
+        ZIndex: =20
+
+    Label4_61 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        Size: =12
+        Text: =varSimboloMaestros
+        Width: =27
+        X: =93
+        Y: =504
+        ZIndex: =21
+
+    TextInput4_28 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Font: =Font.'Segoe UI'
+        Height: =36
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Width: =360
+        X: =93
+        Y: =600
+        ZIndex: =22
+
+    Label4_62 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =12
+        Text: ="Especialidad"
+        Width: =277
+        X: =93
+        Y: =561
+        ZIndex: =23
+
+    ComboBox3 As combobox:
+        BorderStyle: =BorderStyle.None
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(0, 0, 0, 1)
+        DisplayFields: =["Especialidad"]
+        Font: =Font.'Segoe UI'
+        Height: =30
+        IsSearchable: =false
+        Items: =Filter('public.Medical_Center_Especialidad',activo=true, id_sede = _varSede.id)
+        SearchFields: =["Especialidad"]
+        SearchItems: =[]
+        SelectMultiple: =false
+        Size: =12
+        Width: =346
+        X: =101
+        Y: =603
+        ZIndex: =24
+
+    Group6_3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =25
+
+        Button2_17 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            Text: =""
+            Width: =48
+            X: =985
+            Y: =26
+            ZIndex: =28
+
+        Icon3_18 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Bell
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =989
+            Y: =29
+            ZIndex: =29
+
+        Button2_16 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true});
+                ClearCollect(colAlertaNotificacion,Filter('public.Medical_Center_Counter',usuario=User().Email,id_sede = _varSede.id,Text(fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy")));
+                
+                ForAll(colAlertaNotificacion,
+                
+                Patch('public.Medical_Center_Counter',ThisRecord,
+                {Alerta:false}))
+            PressedFill: =RGBA(0, 0, 0, 0.16)
+            Text: =""
+            Width: =48
+            X: =985
+            Y: =26
+            ZIndex: =30
+
+        Button2_38 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            Text: =""
+            Width: =48
+            X: =908
+            Y: =24
+            ZIndex: =31
+
+        Icon3_19 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Mail
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Width: =40
+            X: =911
+            Y: =30
+            ZIndex: =32
+
+        Button2_37 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Text: =""
+            Width: =48
+            X: =907
+            Y: =26
+            ZIndex: =33
+
+        Button2_36 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(232, 17, 17, 0.39)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Text: =""
+            Width: =48
+            X: =834
+            Y: =26
+            ZIndex: =34
+
+        Image17_5 As image:
+            Height: =34
+            Image: ='Ellipse 1'
+            Width: =31
+            X: =843
+            Y: =32
+            ZIndex: =35
+
+        Label5_9 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =23
+            Size: =10
+            Text: ="ICE"
+            Width: =48
+            X: =834
+            Y: =37
+            ZIndex: =36
+
+        TextInput5_30 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =48
+            PaddingLeft: =0
+            PaddingRight: =64
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =false
+            Width: =500
+            X: =300
+            Y: =26
+            ZIndex: =37
+
+        Image18_7 As image:
+            Height: =27
+            Image: ='Shape (53)'
+            Visible: =false
+            Width: =29
+            X: =753
+            Y: =36
+            ZIndex: =38
+
+    Circle4_5 As circle:
+        Fill: |-
+            =If(LookUp('public.Medical_Center_Usuario',Correo=User().Email,Disponibilidad)=true,ColorValue("
+            #3DA534"),RGBA(255, 0, 0, 1))
+        Height: =22
+        Width: =22
+        X: =1132
+        Y: =60
+        ZIndex: =26
+
+    Group3_6 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =33
+
+        Rectangle7_11 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =768
+            OnSelect: |-
+                =UpdateContext({_varMenuDesplegable:!_varMenuDesplegable})
+            Visible: =_varMenuDesplegable
+            Width: =1366
+            ZIndex: =120
+
+        TextInput5_29 As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            FontWeight: =FontWeight.Lighter
+            Height: =295
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varMenuDesplegable
+            Width: =267
+            X: =1086
+            Y: =19
+            ZIndex: =121
+
+        Label1_19 As label:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Label1_19.BorderColor
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =34
+            HoverBorderColor: =Label1_19.BorderColor
+            HoverColor: =Label1_19.Color
+            HoverFill: =Label1_19.Fill
+            PaddingRight: =20
+            PressedBorderColor: =Label1_19.BorderColor
+            PressedColor: =Label1_19.Color
+            PressedFill: =Label1_19.Fill
+            Size: =12
+            Text: =User().FullName
+            Width: =196
+            X: =1158
+            Y: =26
+            ZIndex: =122
+
+        Image3_10 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image3_10.BorderColor
+            Height: =48
+            HoverBorderColor: =ColorFade(Image3_10.BorderColor, 20%)
+            HoverFill: =ColorFade(Image3_10.Fill, 20%)
+            Image: =User().Image
+            PressedBorderColor: =ColorFade(Image3_10.BorderColor, -20%)
+            PressedFill: =ColorFade(Image3_10.Fill, -20%)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Width: =48
+            X: =1098
+            Y: =28
+            ZIndex: =123
+
+        Icon2_5 As icon.ChevronUp:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =17
+            Icon: =Icon.ChevronDown
+            OnSelect: |-
+                =UpdateContext({_varMenuDesplegable:!_varMenuDesplegable})
+            Rotation: =If(_varMenuDesplegable=true,180,0)
+            Width: =20
+            X: =1316
+            Y: =57
+            ZIndex: =124
+
+        Label1_21 As label:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(95, 106, 146, 1)
+            FocusedBorderColor: =Label1_21.BorderColor
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =20
+            HoverBorderColor: =Label1_21.BorderColor
+            HoverColor: =Label1_21.Color
+            HoverFill: =Label1_21.Fill
+            PaddingRight: =20
+            PressedBorderColor: =Label1_21.BorderColor
+            PressedColor: =Label1_21.Color
+            PressedFill: =Label1_21.Fill
+            Size: =10
+            Text: =LookUp('public.Medical_Center_Usuario',Correo=User().Email,Especialidad)
+            Width: =147
+            X: =1158
+            Y: =60
+            ZIndex: =125
+
+        "Gallery1_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            Height: =218
+            Items: |
+                =Table(
+                {Img:If(LookUp('public.Medical_Center_Usuario',Correo=User().Email,Disponibilidad)=true,comprobado,eliminar),Nombre:If(LookUp('public.Medical_Center_Usuario',Correo=User().Email,Disponibilidad)=true,"Disponible","No Disponible")},    
+                {Img:'Shape (32)',Nombre:"Exámenes de Laboratorio"},
+                {Img:'Shape (54)',Nombre:"Medicamentos"},
+                {Img:'Shape (55)',Nombre:"Tratamientos"},
+                {Img:'Shape (45)_1',Nombre:"Servicios"},
+                {Img:'Clipboard Task List',Nombre:"Tests"}
+                )
+            Layout: =Layout.Vertical
+            OnSelect: |-
+                =If(
+                    ThisItem.Nombre = "Medicamentos",
+                    Navigate('Medicamentos Maestro'),
+                
+                     If(
+                    ThisItem.Nombre = "Tests",
+                    Navigate(Test_Maestro),
+                    If(
+                        ThisItem.Nombre = "Tratamientos",
+                        Navigate('Tratamiento Maestro'),
+                        If(
+                            ThisItem.Nombre = "Servicios",
+                            Navigate('Servicio Maestro'),
+                            If(
+                                ThisItem.Nombre = "Exámenes de Laboratorio",
+                                Navigate('Laboratorio Maestro'),
+                            If(ThisItem.Nombre="No Disponible",Patch('public.Medical_Center_Usuario',LookUp('public.Medical_Center_Usuario',Correo=User().Email),{Disponibilidad:true}),
+                            If(ThisItem.Nombre="Disponible",Patch('public.Medical_Center_Usuario',LookUp('public.Medical_Center_Usuario',Correo=User().Email),{Disponibilidad:false}))))
+                        )
+                    )
+                ));
+                UpdateContext({_varMenuDesplegable: !_varMenuDesplegable})
+            TemplatePadding: =0
+            TemplateSize: =34
+            Visible: =_varMenuDesplegable
+            Width: =267
+            X: =1086
+            Y: =97
+            ZIndex: =126
+
+            Image19_5 As image:
+                Height: =18
+                Image: =ThisItem.Img
+                OnSelect: =Select(Parent)
+                Width: =15
+                X: =14
+                Y: =8
+                ZIndex: =1
+
+            Title1_5 As label:
+                Color: |-
+                    =If(ThisItem.Nombre="No Disponible",RGBA(255, 0, 0, 1),If(ThisItem.Nombre="Disponible",ColorValue("
+                    #3DA534"),RGBA(0, 0, 0, 1)))
+                Font: =Font.'Segoe UI'
+                Height: =18
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10
+                Text: =ThisItem.Nombre
+                VerticalAlign: =VerticalAlign.Top
+                Width: =153
+                X: =47
+                Y: =8
+                ZIndex: =2
+
+        Button4_3 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =77
+            HoverBorderColor: =
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({_varMenuDesplegable:!_varMenuDesplegable});
+            PressedBorderColor: =
+            PressedColor: =
+            PressedFill: =
+            Text: =""
+            Width: =207
+            X: =1146
+            Y: =19
+            ZIndex: =127
+
+    Label4_45 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =41
+        Size: =16
+        Text: ="Retroceder"
+        Width: =277
+        X: =80
+        Y: =129
+        ZIndex: =39
+
+    Icon1_3 As icon.ArrowLeft:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =36
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate('Consulta Medica Dashboard')
+        Width: =36
+        X: =33
+        Y: =132
+        ZIndex: =40
+
+    Label3_24 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        Size: =28
+        Text: ="Servicios"
+        Width: =352
+        X: =562
+        Y: =120
+        ZIndex: =41
+
+    Rectangle5_16 As rectangle:
+        Fill: =ColorFondoBoton
+        Height: =2
+        Width: =1366
+        Y: =96
+        ZIndex: =42
+
+    Rectangle5_15 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =2
+        Visible: =_varMenuDesplegable
+        Width: =267
+        X: =1087
+        Y: =89
+        ZIndex: =43
+
+    Rectangle21_12 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =768
+        OnSelect: |-
+            =UpdateContext({_varCorreo_DCA:false})
+        Visible: =_varCorreo_DCA
+        Width: =1366
+        ZIndex: =44
+
+    TextInput23_12 As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =156
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: =_varCorreo_DCA
+        Width: =426
+        X: =547
+        Y: =80
+        ZIndex: =45
+
+    Gallery2_21 As gallery.galleryVertical:
+        Height: =150
+        Items: |-
+            =//Filter(Office365Outlook.GetEmails();Text(DateTimeReceived;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy"))
+            Filter(Office365Outlook.GetEmails(),Text(DateValue(DateTimeReceived),"dd/mm/yyyy") in Text(Today(),"dd/mm/yyyy"))
+        Layout: =Layout.Vertical
+        TemplateSize: =68
+        Visible: =_varCorreo_DCA
+        Width: =427
+        X: =544
+        Y: =83
+        ZIndex: =46
+
+        Image4_81 As image:
+            Height: =37
+            Image: ='Shape (8)'
+            OnSelect: =Select(Parent)
+            Width: =48
+            X: =12
+            Y: =15
+            ZIndex: =1
+
+        Label1_60 As label:
+            Font: =Font.'Segoe UI'
+            Height: =42
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: =ThisItem.Subject
+            Width: =227
+            X: =73
+            Y: =10
+            ZIndex: =2
+
+        Rectangle22_21 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =417
+            Y: =65
+            ZIndex: =4
+
+        Label1_61 As label:
+            Font: =Font.'Segoe UI'
+            Height: =42
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: =ThisItem.DateTimeReceived
+            Width: =105
+            X: =312
+            Y: =10
+            ZIndex: =5
+
+    Label46_13 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =132
+        Size: =15
+        Text: ="No hay ninguna notificación"
+        Visible: =If(false && _varCorreo_DCA,true,false)
+        Width: =405
+        X: =551
+        Y: =90
+        ZIndex: =47
+
+    Rectangle23_12 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =768
+        OnSelect: |-
+            =UpdateContext({_varNotificacion:false})
+        Visible: =_varNotificacion
+        Width: =1366
+        ZIndex: =48
+
+    TextInput24_12 As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =156
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: =_varNotificacion
+        Width: =426
+        X: =628
+        Y: =80
+        ZIndex: =49
+
+    Gallery2_25 As gallery.galleryVertical:
+        Height: =156
+        Items: =SortByColumns(colAlerta,"id",SortOrder.Descending)
+        Layout: =Layout.Vertical
+        TemplateSize: =68
+        Visible: =_varNotificacion
+        Width: =424
+        X: =628
+        Y: =80
+        ZIndex: =50
+
+        Label1_65 As label:
+            Font: =Font.'Segoe UI'
+            Height: =65
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: ="El paciente " &ThisItem.DNI_Paciente & " a cambiado el estado a "& ThisItem.etapa &" - " & ThisItem.estado
+            Width: =360
+            X: =12
+            ZIndex: =2
+
+        Rectangle22_25 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =414
+            Y: =65
+            ZIndex: =4
+
+    Label46_17 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =132
+        Size: =15
+        Text: ="No hay ninguna notificación"
+        Visible: |
+            =If(IsEmpty(colAlerta) && _varNotificacion,true,false)
+        Width: =409
+        X: =640
+        Y: =90
+        ZIndex: =51
+
+    Circle2_6 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =20
+        Visible: |
+            =//If(varContador2<>varContador1;true;false)
+            If(Last(colAlerta).Alerta=true,true,false)
+        Width: =20
+        X: =1017
+        Y: =19
+        ZIndex: =52
+
+    Timer1_7 As timer:
+        AutoPause: =false
+        AutoStart: =true
+        Duration: =2000
+        OnTimerStart: |+
+            =
+            ClearCollect(colAlerta,Filter('public.Medical_Center_Counter',usuario=User().Email,id_sede = _varSede.id,Text(fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy")));
+            
+            
+            
+            
+        Repeat: =true
+        Visible: =false
+        ZIndex: =53
+
+    Image12_29 As image:
+        Height: =80
+        Image: ='Transparente Original'
+        OnSelect: =
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =Not(Parent.Printing)
+        Width: =119
+        X: =631
+        Y: =8
+        ZIndex: =54
+
+    Group8_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =63
+
+        Rectangle7_9 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.24)
+            Height: =768
+            Visible: =_varMenuServicio
+            Width: =1366
+            ZIndex: =77
+
+        TextInput5_31 As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =562
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varMenuServicio
+            Width: =420
+            X: =520
+            Y: =118
+            ZIndex: =78
+
+        Label9_20 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            Size: =18
+            Text: ="Servicio"
+            Visible: =_varMenuServicio
+            Width: =200
+            X: =541
+            Y: =146
+            ZIndex: =79
+
+        Label9_21 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            Size: =12
+            Text: ="Nombre del Servicio"
+            Visible: =_varMenuServicio
+            Width: =240
+            X: =541
+            Y: =202
+            ZIndex: =80
+
+        Label9_22 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =28
+            Size: =12
+            Text: =ServicioSelected.Servicio
+            Visible: =_varMenuServicio
+            Width: =358
+            X: =541
+            Y: =234
+            ZIndex: =81
+
+        Label9_23 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            Size: =12
+            Text: ="Descripción"
+            Visible: =_varMenuServicio
+            Width: =158
+            X: =541
+            Y: =278
+            ZIndex: =82
+
+        Label9_24 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =84
+            Size: =12
+            Text: =ServicioSelected.Descripcion
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =_varMenuServicio
+            Width: =358
+            X: =541
+            Y: =310
+            ZIndex: =83
+
+        Label9_25 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            Size: =12
+            Text: ="Costo"
+            Visible: =_varMenuServicio
+            Width: =158
+            X: =541
+            Y: =411
+            ZIndex: =84
+
+        Label9_26 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =28
+            Size: =12
+            Text: |-
+                =varSimboloMaestros & Text(ServicioSelected.Costo, "# ##.00")
+            Visible: =_varMenuServicio
+            Width: =358
+            X: =541
+            Y: =443
+            ZIndex: =85
+
+        Button5_4 As button:
+            BorderColor: =ColorFondoBoton
+            Color: =ColorFondoBoton
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =44
+            HoverColor: =ColorFondoBoton
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =UpdateContext({_varMenuServicioEditar:true});UpdateContext({_varMenuServicio:false})
+            PressedBorderColor: =ColorFondoBoton
+            PressedColor: =ColorFondoBoton
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="EDITAR SERVICIO"
+            Visible: =_varMenuServicio
+            Width: =375
+            X: =541
+            Y: =554
+            ZIndex: =86
+
+        Button5_5 As button:
+            BorderColor: =RGBA(232, 17, 17, 1)
+            Color: =RGBA(232, 17, 17, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =44
+            HoverColor: =RGBA(232, 17, 17, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =UpdateContext({_varMenuServicioEliminar:true});UpdateContext({_varMenuServicio:false})
+            PressedBorderColor: =RGBA(232, 17, 17, 1)
+            PressedColor: =RGBA(232, 17, 17, 1)
+            PressedFill: =
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="ELIMINAR SERVICIO"
+            Visible: =_varMenuServicio
+            Width: =375
+            X: =541
+            Y: =614
+            ZIndex: =87
+
+        Icon3_2 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({_varMenuServicio:false})
+            Visible: =_varMenuServicio
+            Width: =40
+            X: =875
+            Y: =137
+            ZIndex: =88
+
+    Group9_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =66
+
+        Rectangle7_10 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.24)
+            Height: =768
+            OnSelect: |-
+                =UpdateContext({_varMenuMedicamentoPopUp:false})
+            Visible: =_varMenuMedicamentoPopUp
+            Width: =1366
+            ZIndex: =74
+
+        TextInput5_36 As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =136
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varMenuMedicamentoPopUp
+            Width: =133
+            X: =1139
+            Y: =420
+            ZIndex: =75
+
+        "Gallery2_6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            Height: =136
+            Items: |-
+                =If(CountRows(Filter('public.Medical_Center_Counter',id_sede = _varSede.id,etapa="Atención Medica",estado="Atendido",Upper(Servicio) = Upper(MedicamentoSelected.Servicio)))=0,
+                Table({Image:'Shape (56)',Nombre:"Ver"},
+                {Image:'Shape (58)',Nombre:"Editar"},
+                {Image:'Shape (57)',Nombre:"Eliminar"}
+                ),
+                Table({Image:'Shape (56)',Nombre:"Ver"},
+                {Image:'Shape (58)',Nombre:"Editar"},
+                {Image:'Shape (57)',Nombre:If(MedicamentoSelected.activo=true || IsBlank(MedicamentoSelected.activo),"Desactivar","Activar")}
+                ))
+            Layout: =Layout.Vertical
+            OnSelect: |-
+                =If(ThisItem.Nombre="Ver",UpdateContext({_varMenuServicio:true}),
+                If(ThisItem.Nombre="Editar",UpdateContext({_varMenuServicioEditar:true}),
+                If(ThisItem.Nombre="Eliminar",UpdateContext({_varMenuServicioEliminar:true}),
+                If(ThisItem.Nombre="Desactivar",Patch('public.Medical_Center_Servicios',LookUp('public.Medical_Center_Servicios',id=MedicamentoSelected.id),{activo:true}),
+                If(ThisItem.Nombre="Activar",Patch('public.Medical_Center_Servicios',LookUp('public.Medical_Center_Servicios',id=MedicamentoSelected.id),{activo:false})
+                )))))
+                
+                ;UpdateContext({_varMenuMedicamentoPopUp:false});Set(ServicioSelected,Gallery5_8.Selected)
+            TemplatePadding: =0
+            TemplateSize: =43
+            Visible: =_varMenuMedicamentoPopUp
+            Width: =134
+            X: =1138
+            Y: =420
+            ZIndex: =76
+
+            Image20_2 As image:
+                Height: =25
+                Image: =ThisItem.Image
+                OnSelect: =Select(Parent)
+                Width: =20
+                X: =12
+                Y: =12
+                ZIndex: =1
+
+            Title2_4 As label:
+                Font: =Font.'Segoe UI'
+                Height: =23
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: =ThisItem.Nombre
+                VerticalAlign: =VerticalAlign.Top
+                Width: =80
+                X: =48
+                Y: =14
+                ZIndex: =2
+
+    Group10_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =86
+
+        Rectangle10_2 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.26)
+            Height: =768
+            Visible: =_varMenuServicioEliminar
+            Width: =1366
+            ZIndex: =101
+
+        TextInput5_4 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =222
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varMenuServicioEliminar
+            Width: =420
+            X: =491
+            Y: =226
+            ZIndex: =102
+
+        Label10_2 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            Size: =18
+            Text: ="Eliminar Servicio"
+            Visible: =_varMenuServicioEliminar
+            Width: =420
+            X: =491
+            Y: =246
+            ZIndex: =103
+
+        HtmlText2_4 As htmlViewer:
+            Font: =Font.'Segoe UI'
+            Height: =78
+            HtmlText: |-
+                =//"Muestre el texto <b><font color=blue>HTML</font></b> aquí."
+                "¿Estás seguro que deseas eliminar el servicio <b>"& ServicioSelected.Servicio &" </b>?. Esta acción no se puede revertir"
+            Size: =12
+            Visible: =_varMenuServicioEliminar
+            Width: =380
+            X: =511
+            Y: =285
+            ZIndex: =104
+
+        Button7_4 As button:
+            BorderColor: =ColorFondoBoton
+            Color: =ColorFondoBoton
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =44
+            HoverColor: =ColorFondoBoton
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =UpdateContext({_varMenuServicioEliminar:false})
+            PressedBorderColor: =ColorFondoBoton
+            PressedColor: =ColorFondoBoton
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="NO, CANCELAR"
+            Visible: =_varMenuServicioEliminar
+            Width: =180
+            X: =511
+            Y: =374
+            ZIndex: =105
+
+        Button7_5 As button:
+            BorderColor: =RGBA(232, 17, 17, 1)
+            Color: =RGBA(232, 17, 17, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =44
+            HoverColor: =RGBA(232, 17, 17, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =Remove('public.Medical_Center_Servicios',ServicioSelected);UpdateContext({_varMenuServicioEliminar:false})
+            PressedBorderColor: =RGBA(232, 17, 17, 1)
+            PressedColor: =RGBA(232, 17, 17, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="SI, ELIMINAR"
+            Visible: =_varMenuServicioEliminar
+            Width: =180
+            X: =711
+            Y: =374
+            ZIndex: =106
+
+    Rectangle9_7 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.23)
+        Height: =768
+        Visible: =_varMenuServicioEditar
+        Width: =1366
+        ZIndex: =89
+
+    TextInput5_32 As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(241, 242, 246, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =579
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: =_varMenuServicioEditar
+        Width: =400
+        X: =520
+        Y: =120
+        ZIndex: =90
+
+    TextInput4_10 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =ServicioSelected.Servicio
+        Font: =Font.'Segoe UI'
+        Height: =36
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Visible: =_varMenuServicioEditar
+        Width: =360
+        X: =540
+        Y: =240
+        ZIndex: =91
+
+    TextInput4_14 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =ServicioSelected.Descripcion
+        Font: =Font.'Segoe UI'
+        Height: =111
+        Mode: =TextMode.MultiLine
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Visible: =_varMenuServicioEditar
+        Width: =360
+        X: =540
+        Y: =328
+        ZIndex: =92
+
+    TextInput4_16 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =ServicioSelected.Costo
+        Font: =Font.'Segoe UI'
+        Format: =TextFormat.Number
+        Height: =36
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Visible: =_varMenuServicioEditar
+        Width: =325
+        X: =574
+        Y: =492
+        ZIndex: =93
+
+    Label4_58 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =12
+        Text: ="Costo"
+        Visible: =_varMenuServicioEditar
+        Width: =277
+        X: =540
+        Y: =456
+        ZIndex: =94
+
+    Label4_56 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =12
+        Text: ="Descripción"
+        Visible: =_varMenuServicioEditar
+        Width: =277
+        X: =540
+        Y: =292
+        ZIndex: =95
+
+    Label4_50 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =12
+        Text: ="Nombre del Servicio"
+        Visible: =_varMenuServicioEditar
+        Width: =277
+        X: =540
+        Y: =202
+        ZIndex: =96
+
+    Label4_46 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =41
+        Size: =18
+        Text: ="Servicio"
+        Visible: =_varMenuServicioEditar
+        Width: =177
+        X: =540
+        Y: =139
+        ZIndex: =97
+
+    ButtonAtender_8 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =ColorFondoBoton
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: =ColorFondoBoton
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =Patch(
+                'public.Medical_Center_Servicios',
+                LookUp(
+                    'public.Medical_Center_Servicios',
+                    id = ServicioSelected.id
+                ),
+                {
+                    Servicio: Proper(TextInput4_10.Text),
+                    Descripcion: TextInput4_14.Text,
+                    especialidad: ComboBox3_1.Selected.id,
+                    Costo: Value(TextInput4_16.Text),
+                    id_sede : _varSede.id
+                }
+            );
+            UpdateContext({_varMenuServicioEditar: false});
+            If(
+                And(
+                    LookUp(
+                        'public.Medical_Center_Usuario',
+                        Correo = User().Email,
+                        Rol
+                    ) = "Administrador",
+                    LookUp(
+                        'public.Medical_Center_VerificacionApp',
+                        correo = User().Email,
+                        fase
+                    ) = "Incompleto"
+                ),
+                Patch(
+                    'public.Medical_Center_VerificacionApp',
+                    LookUp(
+                        'public.Medical_Center_VerificacionApp',
+                        correo = User().Email
+                    ),
+                    {agregar_servicio: true}
+                ),
+                false
+            );
+            Reset(ComboBox3_1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Text: ="GUARDAR CAMBIOS"
+        Visible: =_varMenuServicioEditar
+        Width: =360
+        X: =541
+        Y: =636
+        ZIndex: =98
+
+    Group18_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =98
+
+        Rectangle22_2 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.29)
+            Height: =768
+            Visible: =_varCargaDatos
+            Width: =1366
+            ZIndex: =107
+
+        TextInput11_7 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =334
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varCargaDatos
+            Width: =400
+            X: =496
+            Y: =214
+            ZIndex: =108
+
+        Label31_2 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            Size: =18
+            Text: ="Carga Masiva"
+            Visible: =_varCargaDatos
+            Width: =196
+            X: =516
+            Y: =234
+            ZIndex: =109
+
+        TextInput11_6 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =154
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varCargaDatos
+            Width: =360
+            X: =516
+            Y: =286
+            ZIndex: =110
+
+        Adjunto_7 As attachments:
+            AddAttachmentText: ="Adjunte el archivo aquí"
+            BorderColor: |-
+                =ColorValue("#A0835C")
+            BorderStyle: =BorderStyle.None
+            DropTargetBorderStyle: =BorderStyle.Solid
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            Height: =164
+            HoverFill: =RGBA(0, 0, 0, 0)
+            IsInDataCard: =true
+            ItemFill: =
+            Items: =
+            MaxAttachments: =1
+            MaxAttachmentSize: =20
+            MaxAttachmentsText: =
+            NoAttachmentsText: =
+            OnAddFile: |
+                =Set(
+                    varDemoFromAttachmentServicios,
+                    JSON(
+                        Image29_3.Image,
+                        JSONFormat.IncludeBinaryData
+                    )
+                );
+                Set(
+                    varBase64OnlyServicios,
+                    Mid(
+                        varDemoFromAttachmentServicios,
+                        Find(
+                            ",",
+                            varDemoFromAttachmentServicios
+                        ) + 1,
+                        Len(varDemoFromAttachmentServicios) - Find(
+                            ",",
+                            varDemoFromAttachmentServicios
+                        ) - 1
+                    )
+                );
+                RemoveIf(
+                    papps_Medi_Plus_Servicios_Temporal,
+                    true
+                );
+                ImportarDatos_Servicios.Run(
+                    Last(Adjunto_7.Attachments).Name,
+                    varBase64OnlyServicios
+                );
+                Refresh(papps_Medi_Plus_Servicios_Temporal);
+                ClearCollect(
+                    colDatosExcelServicios,
+                    papps_Medi_Plus_Servicios_Temporal
+                );
+            OnRemoveFile: |-
+                =RemoveIf(papps_Medi_Plus_Servicios_Temporal,true);
+                Refresh(papps_Medi_Plus_Servicios_Temporal);
+                Clear(colDatosExcelServicios)
+            PaddingBottom: =5
+            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5.0)
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedColor: =RGBA(0, 0, 0, 1)
+            PressedFill: =RGBA(0, 0, 0, 0.02)
+            Reset: =true
+            Size: =14
+            Tooltip: =
+            Visible: =_varCargaDatos
+            Width: =360
+            X: =516
+            Y: =280
+            ZIndex: =111
+
+        Button8_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =If(IsEmpty(colDatosExcelServicios),DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =ColorFondoBoton
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =ColorFondoBoton
+            HoverFill: =ColorFondoBoton
+            OnSelect: |-
+                =If(
+                    !IsBlank(
+                        ForAll(
+                            colDatosExcelServicios As datosServicios,
+                            Patch(
+                                'public.Medical_Center_Servicios',
+                                Defaults('public.Medical_Center_Servicios'),
+                                {
+                                    id: First(
+                                        SortByColumns(
+                                            'public.Medical_Center_Servicios',
+                                            "id",
+                                            SortOrder.Descending
+                                        )
+                                    ).id + 1,
+                                    Servicio: datosServicios.Servicio,
+                                    Descripcion: datosServicios.Descripcion,
+                                    Costo: Value(datosServicios.Costo),
+                                    Tipo_Moneda: LookUp(
+                                        'public.Medical_Center_Consultorio_Medico',
+                                        id_sede = _varSede.id,
+                                        Moneda
+                                    ),
+                                    id_sede : _varSede.id
+                                }
+                            )
+                        )
+                    ),
+                    Reset(Adjunto_7);
+                    Clear(colDatosExcelServicios),
+                    Notify(
+                        "Error, guardar nuevamente",
+                        NotificationType.Error
+                    )
+                );
+                UpdateContext({_varCargaDatos: false})
+            PressedBorderColor: =ColorFondoBoton
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFondoBoton
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =14
+            Text: ="CARGAR"
+            Visible: =_varCargaDatos
+            Width: =360
+            X: =516
+            Y: =476
+            ZIndex: =112
+
+        Image29_3 As image:
+            BorderThickness: =2
+            Height: =36
+            Image: =Last(Adjunto_7.Attachments).Value
+            Visible: =false
+            Width: =64
+            X: =530
+            Y: =438
+            ZIndex: =113
+
+        Icon9_2 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =36
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({_varCargaDatos:false})
+            Visible: =_varCargaDatos
+            Width: =40
+            X: =839
+            Y: =226
+            ZIndex: =114
+
+    Icon5_3 As icon.Cancel:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({_varMenuServicioEditar:false});Reset(ComboBox3_1)
+        Visible: =_varMenuServicioEditar
+        Width: =40
+        X: =858
+        Y: =138
+        ZIndex: =99
+
+    Label4_60 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        Size: =12
+        Text: =varSimboloMaestros
+        Visible: =_varMenuServicioEditar
+        Width: =30
+        X: =544
+        Y: =492
+        ZIndex: =100
+
+    TextInput4_29 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Font: =Font.'Segoe UI'
+        Height: =36
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Visible: =_varMenuServicioEditar
+        Width: =360
+        X: =537
+        Y: =577
+        ZIndex: =115
+
+    Label4_63 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =12
+        Text: ="Especialidad"
+        Visible: =_varMenuServicioEditar
+        Width: =277
+        X: =537
+        Y: =538
+        ZIndex: =116
+
+    ComboBox3_1 As combobox:
+        BorderStyle: =BorderStyle.None
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(0, 0, 0, 1)
+        DefaultSelectedItems: =[LookUp('public.Medical_Center_Especialidad',id=ServicioSelected.especialidad,Especialidad)]
+        DisplayFields: =["Especialidad"]
+        Font: =Font.'Segoe UI'
+        Height: =30
+        IsSearchable: =false
+        Items: =Filter('public.Medical_Center_Especialidad', id_sede = _varSede.id)
+        SearchFields: =["Especialidad"]
+        SearchItems: =[]
+        SelectMultiple: =false
+        Size: =12
+        Visible: =_varMenuServicioEditar
+        Width: =346
+        X: =545
+        Y: =580
+        ZIndex: =117
+
+    GroupChecklistVerificación_4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =117
+
+        ChecklistVerificación_Oculto_4 As groupContainer.manualLayoutContainer:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =482
+            RadiusBottomLeft: |
+                =8
+            RadiusTopLeft: =8
+            Visible: |-
+                =/*If(Or(LookUp('public.Medical_Center_Usuario';And(Correo=User().Email;Rol="Administrador");Splash_Screen_viaje_Guiado)=false;
+                IsBlank(LookUp('public.Medical_Center_Usuario';And(Correo=User().Email;Rol="Administrador");Splash_Screen_viaje_Guiado)));
+                true;false)*/
+                LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,fase)="Incompleto"
+            Width: =50
+            X: |+
+                =1366-ChecklistVerificación_Oculto_4.Width
+                
+                
+            Y: =188
+            ZIndex: =55
+
+            ButtonMostrarChecklist_4 As button:
+                BorderThickness: =0
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =482
+                HoverColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =
+                OnSelect: |-
+                    =UpdateContext({mostrarchecklist:true})
+                PressedFill: =
+                Text: =""
+                Width: =50
+                ZIndex: =24
+
+            Check_113 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,false,true)
+                Width: =36
+                X: =7
+                Y: =52
+                ZIndex: =25
+
+            Check_115 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,true,false)
+                Width: =36
+                X: =7
+                Y: =100
+                ZIndex: =26
+
+            Check_117 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,false,true)
+                Width: =36
+                X: =7
+                Y: =148
+                ZIndex: =27
+
+            Check_119 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,false,true)
+                Width: =36
+                X: =7
+                Y: =196
+                ZIndex: =28
+
+            Check_121 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,false,true)
+                Width: =36
+                X: =7
+                Y: =244
+                ZIndex: =29
+
+            Check_123 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,false,true)
+                Width: =36
+                X: =7
+                Y: =292
+                ZIndex: =30
+
+            Check_125 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true,false,true)
+                Width: =36
+                X: =7
+                Y: =340
+                ZIndex: =31
+
+            Check_116 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,false,true)
+                Width: =36
+                X: =7
+                Y: =100
+                ZIndex: =32
+
+            Check_114 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,true,false)
+                Width: =36
+                X: =7
+                Y: =52
+                ZIndex: =33
+
+            Check_118 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,true,false)
+                Width: =36
+                X: =7
+                Y: =148
+                ZIndex: =34
+
+            Check_120 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,true,false)
+                Width: =36
+                X: =7
+                Y: =196
+                ZIndex: =35
+
+            Check_124 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,true,false)
+                Width: =36
+                X: =7
+                Y: =292
+                ZIndex: =36
+
+            Check_122 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,true,false)
+                Width: =36
+                X: =7
+                Y: =244
+                ZIndex: =37
+
+            Check_126 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true,true,false)
+                Width: =36
+                X: =7
+                Y: =340
+                ZIndex: =38
+
+            Check_273 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_test)=true,false,true)
+                Width: =36
+                X: =7
+                Y: =389
+                ZIndex: =39
+
+            Check_274 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_test)=true,true,false)
+                Width: =36
+                X: =7
+                Y: =389
+                ZIndex: =40
+
+        ButtonOcultar_39 As button:
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =768
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({mostrarchecklist:false})
+            PressedFill: =
+            Text: =""
+            Visible: =mostrarchecklist
+            Width: =1366
+            ZIndex: =56
+
+        ChecklistVerificación_4 As groupContainer.manualLayoutContainer:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =482
+            RadiusBottomLeft: |
+                =8
+            RadiusTopLeft: =8
+            Visible: |
+                =mostrarchecklist
+            Width: =286
+            X: |+
+                =1366-ChecklistVerificación_4.Width
+                
+                
+            Y: =188
+            ZIndex: =57
+
+            Actividad_43 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Información de consultorio"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,false,true)
+                Width: =191
+                X: =54
+                Y: =65
+                ZIndex: =1
+
+            Título_Verificación_6 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =21
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Verificación Inicial de App"
+                Width: =188
+                X: =49
+                Y: =16
+                ZIndex: =2
+
+            Check_127 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,false,true)
+                Width: =36
+                X: =10
+                Y: =57
+                ZIndex: =3
+
+            IconHelp_43 As image:
+                Height: =16
+                Image: =icon_help
+                OnSelect: |-
+                    =UpdateContext({ayuda1:true})
+                Width: =16
+                X: =253
+                Y: =68
+                ZIndex: =4
+
+            Actividad_44 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Lista de especialidades"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,false,true)
+                Width: =161
+                X: =54
+                Y: =113
+                ZIndex: =5
+
+            Check_129 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,true,false)
+                Width: =36
+                X: =10
+                Y: =105
+                ZIndex: =6
+
+            IconHelp_44 As image:
+                Height: =16
+                Image: =icon_help
+                OnSelect: |-
+                    =UpdateContext({ayuda2:true})
+                Width: =16
+                X: =223
+                Y: =116
+                ZIndex: =7
+
+            Actividad_45 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Configuración de roles"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,false,true)
+                Width: =185
+                X: =54
+                Y: =161
+                ZIndex: =8
+
+            Check_131 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,false,true)
+                Width: =36
+                X: =10
+                Y: =153
+                ZIndex: =9
+
+            IconHelp_45 As image:
+                Height: =16
+                Image: =icon_help
+                OnSelect: |-
+                    =UpdateContext({ayuda3:true})
+                Width: =16
+                X: =247
+                Y: =164
+                ZIndex: =10
+
+            Actividad_46 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Agregar exámenes"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,false,true)
+                Width: =132
+                X: =54
+                Y: =209
+                ZIndex: =11
+
+            Check_133 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,false,true)
+                Width: =36
+                X: =10
+                Y: =201
+                ZIndex: =12
+
+            IconHelp_46 As image:
+                Height: =16
+                Image: =icon_help
+                OnSelect: |-
+                    =UpdateContext({ayuda4:true})
+                Width: =16
+                X: =194
+                Y: =212
+                ZIndex: =13
+
+            Actividad_47 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Revisión de medicamentos"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,false,true)
+                Width: =195
+                X: =54
+                Y: =257
+                ZIndex: =14
+
+            Check_135 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,false,true)
+                Width: =36
+                X: =10
+                Y: =249
+                ZIndex: =15
+
+            IconHelp_47 As image:
+                Height: =16
+                Image: =icon_help
+                OnSelect: |-
+                    =UpdateContext({ayuda5:true})
+                Width: =16
+                X: =250
+                Y: =259
+                ZIndex: =16
+
+            Actividad_48 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Agregar tratamientos"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,false,true)
+                Width: =151
+                X: =54
+                Y: =305
+                ZIndex: =17
+
+            Check_137 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,false,true)
+                Width: =36
+                X: =10
+                Y: =297
+                ZIndex: =18
+
+            IconHelp_48 As image:
+                Height: =16
+                Image: =icon_help
+                OnSelect: |-
+                    =UpdateContext({ayuda6:true})
+                Width: =16
+                X: =213
+                Y: =307
+                ZIndex: =19
+
+            Actividad_49 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Agregar servicios"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true,false,true)
+                Width: =122
+                X: =54
+                Y: =353
+                ZIndex: =20
+
+            Check_139 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true,false,true)
+                Width: =36
+                X: =10
+                Y: =345
+                ZIndex: =21
+
+            IconHelp_49 As image:
+                Height: =16
+                Image: =icon_help
+                OnSelect: |-
+                    =UpdateContext({ayuda7:true})
+                Width: =16
+                X: =183
+                Y: =355
+                ZIndex: =22
+
+            ButtonOmitirVerificación_6 As button:
+                BorderThickness: =0
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                Height: =36
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(44, 97, 112, 0.1)
+                OnSelect: |-
+                    =Patch('public.Medical_Center_Usuario',LookUp('public.Medical_Center_Usuario',Correo=User().Email),
+                    {Splash_Screen_viaje_Guiado:true
+                    
+                    });Patch('public.Medical_Center_VerificacionApp',LookUp('public.Medical_Center_VerificacionApp',correo=User().Email),
+                    {fase:"Omitir"
+                    
+                    
+                    });
+                    Navigate(Home);UpdateContext({mostrarchecklist:false}) & UpdateContext({checklistoculto:false})
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =RGBA(44, 97, 112, 0.2)
+                Size: =9
+                Text: ="Omitir Verificación"
+                Visible: |-
+                    =/*If(And(LookUp('public.Medical_Center_VerificacionApp';correo=User().Email;informacion_consultorio)=true;
+                    LookUp('public.Medical_Center_VerificacionApp';correo=User().Email;lista_especialidades)=true;
+                    LookUp('public.Medical_Center_VerificacionApp';correo=User().Email;configuracion_usuario)=true;
+                    LookUp('public.Medical_Center_VerificacionApp';correo=User().Email;agregar_examenes)=true;
+                    LookUp('public.Medical_Center_VerificacionApp';correo=User().Email;agregar_medicamento)=true;
+                    LookUp('public.Medical_Center_VerificacionApp';correo=User().Email;agregar_tratamiento)=true;
+                    LookUp('public.Medical_Center_VerificacionApp';correo=User().Email;agregar_servicio)=true);true;false)*/
+                    true
+                Width: =122
+                X: =82
+                Y: =439
+                ZIndex: =23
+
+            Check_130 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,false,true)
+                Width: =36
+                X: =10
+                Y: =105
+                ZIndex: =24
+
+            Check_128 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,true,false)
+                Width: =36
+                X: =10
+                Y: =57
+                ZIndex: =25
+
+            Check_132 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,true,false)
+                Width: =36
+                X: =10
+                Y: =153
+                ZIndex: =26
+
+            Check_134 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,true,false)
+                Width: =36
+                X: =10
+                Y: =201
+                ZIndex: =27
+
+            Check_138 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,true,false)
+                Width: =36
+                X: =10
+                Y: =297
+                ZIndex: =28
+
+            Check_136 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,true,false)
+                Width: =36
+                X: =10
+                Y: =249
+                ZIndex: =29
+
+            Check_140 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true,true,false)
+                Width: =36
+                X: =10
+                Y: =345
+                ZIndex: =30
+
+            Actividad_71 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Strikethrough: =true
+                Text: ="Información de consultorio"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,true,false)
+                Width: =191
+                X: =54
+                Y: =65
+                ZIndex: =31
+
+            Actividad_72 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Strikethrough: =true
+                Text: ="Lista de especialidades"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,true,false)
+                Width: =161
+                X: =54
+                Y: =113
+                ZIndex: =32
+
+            Actividad_73 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Strikethrough: =true
+                Text: ="Configuración de roles"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,true,false)
+                Width: =185
+                X: =54
+                Y: =161
+                ZIndex: =33
+
+            Actividad_74 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Strikethrough: =true
+                Text: ="Agregar exámenes"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,true,false)
+                Width: =132
+                X: =54
+                Y: =209
+                ZIndex: =34
+
+            Actividad_75 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Strikethrough: =true
+                Text: ="Revisión de  medicamentos"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,true,false)
+                Width: =195
+                X: =54
+                Y: =257
+                ZIndex: =35
+
+            Actividad_76 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Strikethrough: =true
+                Text: ="Agregar tratamientos"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,true,false)
+                Width: =151
+                X: =54
+                Y: =305
+                ZIndex: =36
+
+            Actividad_77 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Strikethrough: =true
+                Text: ="Agregar servicios"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true,true,false)
+                Width: =122
+                X: =54
+                Y: =353
+                ZIndex: =37
+
+            Actividad_149 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Agregar test"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_test)=true,false,true)
+                Width: =122
+                X: =54
+                Y: =400
+                ZIndex: =38
+
+            Check_261 As image:
+                Height: =36
+                Image: =check_no_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_test)=true,false,true)
+                Width: =36
+                X: =10
+                Y: =392
+                ZIndex: =39
+
+            IconHelp_82 As image:
+                Height: =16
+                Image: =icon_help
+                OnSelect: |-
+                    =UpdateContext({ayuda8:true})
+                Width: =16
+                X: =153
+                Y: =402
+                ZIndex: =40
+
+            Check_262 As image:
+                Height: =36
+                Image: =check_completado
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_test)=true,true,false)
+                Width: =36
+                X: =10
+                Y: =392
+                ZIndex: =41
+
+            Actividad_150 As label:
+                Color: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,RGBA(180, 180, 180, 1),RGBA(44, 46, 53, 1))
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Strikethrough: =true
+                Text: ="Agregar test"
+                Visible: =If(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_test)=true,true,false)
+                Width: =122
+                X: =54
+                Y: =400
+                ZIndex: =42
+
+        ButtonOcultar_38 As button:
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =768
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({ayuda1:false})
+            PressedFill: =
+            Text: =""
+            Visible: =ayuda1
+            Width: =1366
+            ZIndex: =58
+
+        AyudaActividad_35 As groupContainer.manualLayoutContainer:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =160
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: |
+                =ayuda1
+            Width: =288
+            X: =1078
+            Y: =286
+            ZIndex: =59
+
+            TituloActividad_35 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =21
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Información de consultorio"
+                Width: =200
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+            DescripciónActividad_35 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                Height: =64
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: ="Revise la información de su consultorio. A esta sección se llega desde la Pantalla de Inicio, luego ingrese al módulo de Configuración y ubíquese en la pestaña de Consultorio."
+                Width: =268
+                X: =10
+                Y: =39
+                ZIndex: =2
+
+            ButtonIrASección_35 As button:
+                BorderThickness: =0
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =36
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(44, 97, 112, 0.1)
+                OnSelect: |-
+                    =Navigate('Administracion Usuario');
+                    Set(var_Consultorio,true);
+                    Set(varCompañiaView,true);
+                    Set(varUsuarioView,false);
+                    Set(varEspecialidadView,false);
+                    UpdateContext({ayuda1:false});UpdateContext({mostrarchecklist:false})
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =RGBA(44, 97, 112, 0.2)
+                Size: =9
+                Text: ="Ir a la Sección"
+                Width: =122
+                X: =156
+                Y: =114
+                ZIndex: =3
+
+        ButtonOcultar_37 As button:
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =768
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({ayuda2:false})
+            PressedFill: =
+            Text: =""
+            Visible: =ayuda2
+            Width: =1366
+            ZIndex: =60
+
+        AyudaActividad_34 As groupContainer.manualLayoutContainer:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =168
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =ayuda2
+            Width: =288
+            X: =1078
+            Y: =339
+            ZIndex: =61
+
+            TituloActividad_34 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =21
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Lista de Especialidades"
+                Width: =200
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+            DescripciónActividad_34 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                Height: =80
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: ="Agregue las especialidades con las que cuenta el consultorio. A esta sección se llega desde la Pantalla de Inicio, luego ingrese al módulo de Configuración y ubíquese en la pestaña de Especialidades."
+                Width: =268
+                X: =10
+                Y: =39
+                ZIndex: =2
+
+            ButtonIrASección_34 As button:
+                BorderThickness: =0
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =36
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(44, 97, 112, 0.1)
+                OnSelect: |-
+                    =Navigate('Administracion Usuario');
+                    Set(var_Consultorio,true);
+                    Set(varCompañiaView,false);
+                    Set(varUsuarioView,false);
+                    Set(varEspecialidadView,true);
+                    UpdateContext({ayuda2:false});UpdateContext({mostrarchecklist:false})
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =RGBA(44, 97, 112, 0.2)
+                Size: =9
+                Text: ="Ir a la Sección"
+                Width: =122
+                X: =156
+                Y: =122
+                ZIndex: =3
+
+        ButtonOcultar_35 As button:
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =768
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({ayuda3:false})
+            PressedFill: =
+            Text: =""
+            Visible: =ayuda3
+            Width: =1366
+            ZIndex: =62
+
+        AyudaActividad_32 As groupContainer.manualLayoutContainer:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =160
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: |
+                =ayuda3
+            Width: =288
+            X: =1078
+            Y: =382
+            ZIndex: =63
+
+            TituloActividad_32 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =21
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Configuración de Roles"
+                Width: =200
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+            DescripciónActividad_32 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                Height: =64
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: ="Agregue o edite un usuario. A esta sección se llega desde la Pantalla de Inicio, luego ingrese al módulo de Configuración y ubíquese en la sección de Rol."
+                Width: =268
+                X: =10
+                Y: =39
+                ZIndex: =2
+
+            ButtonIrASección_32 As button:
+                BorderThickness: =0
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =36
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(44, 97, 112, 0.1)
+                OnSelect: |-
+                    =Navigate('Administracion Usuario');
+                    Set(var_Consultorio,true);
+                    Set(varCompañiaView,false);
+                    Set(varUsuarioView,true);
+                    Set(varEspecialidadView,false);
+                    UpdateContext({ayuda3:false});UpdateContext({mostrarchecklist:false})
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =RGBA(44, 97, 112, 0.2)
+                Size: =9
+                Text: ="Ir a la Sección"
+                Width: =122
+                X: =156
+                Y: =114
+                ZIndex: =3
+
+        ButtonOcultar_36 As button:
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =768
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({ayuda4:false})
+            PressedFill: =
+            Text: =""
+            Visible: =ayuda4
+            Width: =1366
+            ZIndex: =64
+
+        AyudaActividad_33 As groupContainer.manualLayoutContainer:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =168
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: |
+                =ayuda4
+            Width: =288
+            X: =1078
+            Y: =434
+            ZIndex: =65
+
+            TituloActividad_33 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =21
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Agregar Exámenes"
+                Width: =200
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+            DescripciónActividad_33 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                Height: =80
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: ="Agregue un examen de laboratorio. A esta sección se llega desde la Pantalla de Inicio, luego ingrese al módulo de Atención Médica, despliegue las Opciones de Usuario en la esquina superior derecha y selecione la opción Exámenes."
+                Width: =268
+                X: =10
+                Y: =39
+                ZIndex: =2
+
+            ButtonIrASección_33 As button:
+                BorderThickness: =0
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =36
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(44, 97, 112, 0.1)
+                OnSelect: |-
+                    =Navigate('Laboratorio Maestro');UpdateContext({ayuda4:false});UpdateContext({mostrarchecklist:false})
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =RGBA(44, 97, 112, 0.2)
+                Size: =9
+                Text: ="Ir a la Sección"
+                Width: =122
+                X: =156
+                Y: =122
+                ZIndex: =3
+
+        ButtonOcultar_34 As button:
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =768
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({ayuda5:false})
+            PressedFill: =
+            Text: =""
+            Visible: =ayuda5
+            Width: =1366
+            ZIndex: =66
+
+        AyudaActividad_31 As groupContainer.manualLayoutContainer:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =168
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: |
+                =ayuda5
+            Width: =288
+            X: =1078
+            Y: =478
+            ZIndex: =67
+
+            TituloActividad_31 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =21
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Revisión de Medicamentos"
+                Width: =200
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+            DescripciónActividad_31 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                Height: =80
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: ="Revise la lista de medicamentos. A esta sección se llega desde la Pantalla de Inicio, luego ingrese al módulo de Atención Médica, despliegue las Opciones de Usuario en la esquina superior derecha y selecione la opción Medicamentos."
+                Width: =268
+                X: =10
+                Y: =39
+                ZIndex: =2
+
+            ButtonIrASección_31 As button:
+                BorderThickness: =0
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =36
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(44, 97, 112, 0.1)
+                OnSelect: |-
+                    =Navigate('Medicamentos Maestro');UpdateContext({ayuda5:false});UpdateContext({mostrarchecklist:false})
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =RGBA(44, 97, 112, 0.2)
+                Size: =9
+                Text: ="Ir a la Sección"
+                Width: =122
+                X: =156
+                Y: =122
+                ZIndex: =3
+
+        ButtonOcultar_33 As button:
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =768
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({ayuda6:false})
+            PressedFill: =
+            Text: =""
+            Visible: =ayuda6
+            Width: =1366
+            ZIndex: =68
+
+        AyudaActividad_30 As groupContainer.manualLayoutContainer:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =168
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: |
+                =ayuda6
+            Width: =288
+            X: =1078
+            Y: =478
+            ZIndex: =69
+
+            TituloActividad_30 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =21
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Agregar Tratamientos"
+                Width: =200
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+            DescripciónActividad_30 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                Height: =80
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: ="Agregue un tratamiento. A esta sección se llega desde la Pantalla de Inicio, luego ingrese al módulo de Atención Médica, despliegue las Opciones de Usuario en la esquina superior derecha y selecione la opción Tratamientos."
+                Width: =268
+                X: =10
+                Y: =39
+                ZIndex: =2
+
+            ButtonIrASección_30 As button:
+                BorderThickness: =0
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =36
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(44, 97, 112, 0.1)
+                OnSelect: |-
+                    =Navigate('Tratamiento Maestro');UpdateContext({ayuda6:false});UpdateContext({mostrarchecklist:false})
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =RGBA(44, 97, 112, 0.2)
+                Size: =9
+                Text: ="Ir a la Sección"
+                Width: =122
+                X: =156
+                Y: =122
+                ZIndex: =3
+
+        ButtonOcultar_32 As button:
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =768
+            HoverFill: =
+            OnSelect: |-
+                =UpdateContext({ayuda7:false})
+            PressedFill: =
+            Text: =""
+            Visible: =ayuda7
+            Width: =1366
+            ZIndex: =70
+
+        AyudaActividad_29 As groupContainer.manualLayoutContainer:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =168
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: |
+                =ayuda7
+            Width: =288
+            X: =1078
+            Y: =574
+            ZIndex: =71
+
+            TituloActividad_29 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =21
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Agregar Servicios"
+                Width: =200
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+            DescripciónActividad_29 As label:
+                Color: =RGBA(44, 46, 53, 1)
+                Font: =Font.'Segoe UI'
+                Height: =80
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: ="Agregue un servicio. A esta sección se llega desde la Pantalla de Inicio, luego ingrese al módulo de Atención Médica, despliegue las Opciones de Usuario en la esquina superior derecha y selecione la opción Servicios."
+                Width: =268
+                X: =10
+                Y: =39
+                ZIndex: =2
+
+            ButtonIrASección_29 As button:
+                BorderThickness: =0
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =36
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(44, 97, 112, 0.1)
+                OnSelect: |-
+                    =Navigate('Servicio Maestro');UpdateContext({ayuda7:false});UpdateContext({mostrarchecklist:false})
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =RGBA(44, 97, 112, 0.2)
+                Size: =9
+                Text: ="Ir a la Sección"
+                Width: =122
+                X: =156
+                Y: =122
+                ZIndex: =3
+
+    Label9_36 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =12
+        Text: ="Especialidad"
+        Visible: =_varMenuServicio
+        Width: =158
+        X: =541
+        Y: =480
+        ZIndex: =118
+
+    Label9_37 As label:
+        Color: =RGBA(95, 106, 146, 1)
+        Font: =Font.'Segoe UI'
+        Height: =28
+        Size: =12
+        Text: =LookUp('public.Medical_Center_Especialidad',id=ServicioSelected.especialidad,Especialidad)
+        Visible: =_varMenuServicio
+        Width: =358
+        X: =541
+        Y: =512
+        ZIndex: =119
+
+    Group8_6 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =119
+
+        Rectangle42_4 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.19)
+            Height: =768
+            Visible: =varViewPopUpVerificacionCompletado
+            Width: =1366
+            ZIndex: =72
+
+        "'Popup ChecklistExitoso_4' As groupContainer.manualLayoutContainer":
+            BorderThickness: =2
+            Fill: =RGBA(241, 242, 246, 1)
+            Height: =244
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =varViewPopUpVerificacionCompletado
+            Width: =332
+            X: =574
+            Y: =284
+            ZIndex: =73
+
+            DescripciónCompletada_4 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="¡ Buen Trabajo!"
+                Width: =112
+                X: =110
+                Y: =92
+                ZIndex: =1
+
+            Título_BuenTrabajo_4 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Height: =32
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =9
+                Text: ="Ha completado el checklist con éxito, ahora puede usar todas las funcionalidades de Altha."
+                Width: =292
+                X: =20
+                Y: =124
+                ZIndex: =2
+
+            insignia_checklist_4 As image:
+                Height: =56
+                Image: ='insignia checklist exitoso'
+                Width: =56
+                X: =138
+                Y: =20
+                ZIndex: =3
+
+            ButtonGenial_4 As button:
+                BorderThickness: =0
+                Fill: =RGBA(44, 97, 112, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                HoverBorderColor: =
+                HoverFill: =RGBA(32, 71, 82, 0.8)
+                OnSelect: |-
+                    =Patch('public.Medical_Center_Usuario',LookUp('public.Medical_Center_Usuario',Correo=User().Email),
+                    {Splash_Screen_viaje_Guiado:true
+                    
+                    });Patch('public.Medical_Center_VerificacionApp',LookUp('public.Medical_Center_VerificacionApp',correo=User().Email),
+                    {fase:"Completado"
+                    
+                    
+                    });
+                    Navigate(Home);Set(varViewPopUpVerificacionCompletado,false)
+                PressedBorderColor: =
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(32, 71, 82, 1)
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Size: =12
+                Text: ="GENIAL"
+                Width: =292
+                X: =20
+                Y: =180
+                ZIndex: =4
+
+    ButtonOcultar_76 As button:
+        BorderThickness: =0
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =768
+        HoverFill: =
+        OnSelect: |-
+            =UpdateContext({ayuda8:false})
+        PressedFill: =
+        Text: =""
+        Visible: =ayuda8
+        Width: =1366
+        ZIndex: =128
+
+    AyudaActividad_68 As groupContainer.manualLayoutContainer:
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =168
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: |
+            =ayuda8
+        Width: =288
+        X: =1078
+        Y: =574
+        ZIndex: =129
+
+        TituloActividad_68 As label:
+            Color: =RGBA(44, 46, 53, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =21
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: ="Agregar Test"
+            Width: =200
+            X: =10
+            Y: =10
+            ZIndex: =1
+
+        DescripciónActividad_68 As label:
+            Color: =RGBA(44, 46, 53, 1)
+            Font: =Font.'Segoe UI'
+            Height: =80
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =9
+            Text: ="Agregue un test. A esta sección se llega desde la Pantalla de Inicio, luego ingrese al módulo de Atención Médica, despliegue las Opciones de Usuario en la esquina superior derecha y selecione la opción Test."
+            Width: =268
+            X: =10
+            Y: =39
+            ZIndex: =2
+
+        ButtonIrASección_68 As button:
+            BorderThickness: =0
+            Color: =RGBA(44, 97, 112, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            HoverColor: =RGBA(44, 97, 112, 1)
+            HoverFill: =RGBA(44, 97, 112, 0.1)
+            OnSelect: |-
+                =Navigate(Test_Maestro);UpdateContext({ayuda8:false});UpdateContext({mostrarchecklist:false})
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedColor: =RGBA(44, 97, 112, 1)
+            PressedFill: =RGBA(44, 97, 112, 0.2)
+            Size: =9
+            Text: ="Ir a la Sección"
+            Width: =122
+            X: =156
+            Y: =122
+            ZIndex: =3
+

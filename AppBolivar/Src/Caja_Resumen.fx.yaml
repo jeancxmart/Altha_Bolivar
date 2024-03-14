@@ -1,0 +1,1350 @@
+Caja_Resumen As screen:
+    Fill: |-
+        =ColorValue("#F5F5F5")
+    OnVisible: =
+
+    Gallery16 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =672
+        Items: |
+            =Filter('public.Medical_Center_Ticket',And(Date(Year(fecha_cita),Month(fecha_cita),Day(fecha_cita)) >= Date(Year(datePiker_Caja_Registro_4.SelectedDate),Month(datePiker_Caja_Registro_4.SelectedDate),Day(datePiker_Caja_Registro_4.SelectedDate)) ,
+            
+            Date(Year(fecha_cita),Month(fecha_cita),Day(fecha_cita)) <= Date(Year(datePiker_Caja_Registro_4.SelectedDate),Month(datePiker_Caja_Registro_4.SelectedDate),Day(datePiker_Caja_Registro_3.SelectedDate))))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =86
+        Visible: =false
+        Width: =1089
+        X: =277
+        Y: =96
+        ZIndex: =1
+
+        Label75 As label:
+            OnSelect: =Select(Parent)
+            Text: =Date(Year(ThisItem.fecha_cita),Month(ThisItem.fecha_cita),Day(ThisItem.fecha_cita))
+            Width: =244
+            ZIndex: =1
+
+        Label76 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Doctor
+            Width: =244
+            X: =138
+            ZIndex: =2
+
+        Label76_1 As label:
+            OnSelect: =Select(Parent)
+            Text: =LookUp('public.Medical_Center_Usuario',Correo=ThisItem.Doctor,Nombre_Consultorio)
+            Width: =244
+            X: =369
+            ZIndex: =3
+
+    Rectangle_Barra_Superior_Caja_Registro_1 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =96
+        Width: =1366
+        ZIndex: =2
+
+    img_Logo_Caja_Registro_1 As image:
+        Height: =80
+        Image: =getLogo
+        OnSelect: =Navigate(Home)
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =3
+
+    Group12_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =6
+
+        Button2_24 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            Text: =""
+            Visible: =false
+            Width: =48
+            X: =980
+            Y: =44
+            ZIndex: =4
+
+        Button2_56 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            Text: =""
+            Visible: =false
+            Width: =48
+            X: =902
+            Y: =48
+            ZIndex: =5
+
+        Button2_57 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(232, 17, 17, 1)
+            Font: =Font.'Segoe UI'
+            Height: =44
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Size: =14
+            Text: ="EMERGENCIA"
+            Visible: =false
+            Width: =280
+            X: =830
+            Y: =26
+            ZIndex: =6
+
+        TextInput5_62 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =48
+            PaddingLeft: =0
+            PaddingRight: =64
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =false
+            Width: =500
+            X: =309
+            Y: =24
+            ZIndex: =7
+
+        Image18_22 As image:
+            Height: =27
+            Image: ='Shape (53)'
+            Visible: =false
+            Width: =29
+            X: =762
+            Y: =34
+            ZIndex: =8
+
+        lbl_Perfil_Caja_Registro_1 As label:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =lbl_Perfil_Caja_Registro_1.BorderColor
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =48
+            HoverBorderColor: =lbl_Perfil_Caja_Registro_1.BorderColor
+            HoverColor: =lbl_Perfil_Caja_Registro_1.Color
+            HoverFill: =lbl_Perfil_Caja_Registro_1.Fill
+            PaddingRight: =20
+            PressedBorderColor: =lbl_Perfil_Caja_Registro_1.BorderColor
+            PressedColor: =lbl_Perfil_Caja_Registro_1.Color
+            PressedFill: =lbl_Perfil_Caja_Registro_1.Fill
+            Size: =12
+            Text: =User().FullName
+            Width: =142
+            X: =1224
+            Y: =24
+            ZIndex: =9
+
+        img_Perfil_Caja_Registro_1 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =img_Perfil_Caja_Registro_1.BorderColor
+            Height: =48
+            HoverBorderColor: =ColorFade(img_Perfil_Caja_Registro_1.BorderColor, 20%)
+            HoverFill: =ColorFade(img_Perfil_Caja_Registro_1.Fill, 20%)
+            Image: =User().Image
+            PressedBorderColor: =ColorFade(img_Perfil_Caja_Registro_1.BorderColor, -20%)
+            PressedFill: =ColorFade(img_Perfil_Caja_Registro_1.Fill, -20%)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Width: =48
+            X: =1164
+            Y: =24
+            ZIndex: =10
+
+    Rectangle5_35 As rectangle:
+        Fill: =ColorFondoBoton
+        Height: =2
+        Width: =1366
+        Y: =96
+        ZIndex: =11
+
+    Image12_31 As image:
+        Height: =80
+        Image: ='Transparente Original'
+        OnSelect: =
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =Not(Parent.Printing)
+        Width: =119
+        X: =631
+        Y: =8
+        ZIndex: =12
+
+    btn_Registro_Caja_Registro_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn_Registro_Caja_Registro_1.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn_Registro_Caja_Registro_1.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(Caja_Registro)
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255,255,255,1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Registro"
+        Width: =216
+        X: =30
+        Y: =367
+        ZIndex: =13
+
+    img_Registro_Caja_Registro_1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Registro_Caja_Registro_1.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Registro_Caja_Registro_1.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Registro_Caja_Registro_1.Fill, 20%)
+        Image: ='Shape (95)'
+        OnSelect: =Navigate(Caja_Registro)
+        PressedBorderColor: =ColorFade(img_Registro_Caja_Registro_1.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Registro_Caja_Registro_1.Fill, -20%)
+        Width: =25
+        X: =53
+        Y: =382
+        ZIndex: =14
+
+    btn_Dashboard_Caja_Registro_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn_Dashboard_Caja_Registro_1.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn_Dashboard_Caja_Registro_1.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(Caja)
+        PaddingLeft: =25
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255,255,255,1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Dashboard"
+        Width: =216
+        X: =30
+        Y: =120
+        ZIndex: =15
+
+    img_Dashboard_Dashboard_Caja_Registro_1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Dashboard_Dashboard_Caja_Registro_1.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Dashboard_Dashboard_Caja_Registro_1.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Dashboard_Dashboard_Caja_Registro_1.Fill, 20%)
+        Image: ='Shape (91)'
+        OnSelect: =Navigate(Caja)
+        PressedBorderColor: =ColorFade(img_Dashboard_Dashboard_Caja_Registro_1.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Dashboard_Dashboard_Caja_Registro_1.Fill, -20%)
+        Width: =25
+        X: =53
+        Y: =137
+        ZIndex: =16
+
+    btn_Salir_Caja_Registro_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn_Salir_Caja_Registro_1.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn_Salir_Caja_Registro_1.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(Home)
+        PaddingLeft: =0
+        PaddingRight: =35
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255,255,255,1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Salir"
+        Width: =216
+        X: =30
+        Y: =676
+        ZIndex: =17
+
+    img_Salir_Caja_Registro_1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Salir_Caja_Registro_1.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Salir_Caja_Registro_1.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Salir_Caja_Registro_1.Fill, 20%)
+        Image: ='Shape (87)'
+        OnSelect: =Navigate(Home)
+        PressedBorderColor: =ColorFade(img_Salir_Caja_Registro_1.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Salir_Caja_Registro_1.Fill, -20%)
+        Width: =25
+        X: =53
+        Y: =693
+        ZIndex: =18
+
+    Rectangle_Separador_Caja_Registro_1 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle_Separador_Caja_Registro_1.Fill
+        Fill: =RGBA(147, 147, 147, 1)
+        FocusedBorderColor: =Rectangle_Separador_Caja_Registro_1.BorderColor
+        Height: =672
+        HoverFill: =Rectangle_Separador_Caja_Registro_1.Fill
+        PressedFill: =Rectangle_Separador_Caja_Registro_1.Fill
+        Width: =1
+        X: =276
+        Y: =96
+        ZIndex: =19
+
+    btn__Dashboard_Caja_3 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn__Dashboard_Caja_3.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn__Dashboard_Caja_3.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(Caja_Informes)
+        PaddingLeft: =10
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255,255,255,1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Informes"
+        Width: =216
+        X: =30
+        Y: =287
+        ZIndex: =20
+
+    img_Dashboard_Caja_3 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Dashboard_Caja_3.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Dashboard_Caja_3.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Dashboard_Caja_3.Fill, 20%)
+        Image: ='Shape (100)'
+        OnSelect: =Navigate(Caja_Informes)
+        PressedBorderColor: =ColorFade(img_Dashboard_Caja_3.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Dashboard_Caja_3.Fill, -20%)
+        Width: =25
+        X: =53
+        Y: =304
+        ZIndex: =21
+
+    btn_Registro_Caja_3 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =ColorFondoBoton
+        FocusedBorderColor: =btn_Registro_Caja_3.BorderColor
+        Height: =56
+        HoverBorderColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =ColorFondoBoton
+        OnSelect: =
+        PaddingLeft: =10
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFondoBoton
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Resumen"
+        Width: =216
+        X: =30
+        Y: =204
+        ZIndex: =22
+
+    img_Registro_Caja_3 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Registro_Caja_3.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Registro_Caja_3.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Registro_Caja_3.Fill, 20%)
+        Image: ='MicrosoftTeams-image (15)'
+        OnSelect: =
+        PressedBorderColor: =ColorFade(img_Registro_Caja_3.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Registro_Caja_3.Fill, -20%)
+        Width: =25
+        X: =53
+        Y: =219
+        ZIndex: =23
+
+    Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =669
+        Width: =1085
+        X: =277
+        Y: =98
+        ZIndex: =24
+
+        DataCard1_1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =956
+            Width: =1085
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            lbl_Registro_Pago_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =36
+                Size: =16
+                Text: ="Desde"
+                Width: =87
+                X: =30
+                Y: =80
+                ZIndex: =1
+
+            txt_DatePiker_Caja_Registro_3 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: |-
+                    =//If(varCaja=true;"";If(varCaja=false;AtencionSelected.Nombre_Paciente))
+                    ""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                HintText: =""
+                PaddingLeft: =50
+                PaddingRight: =64
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Reset: =true
+                Size: =12
+                Width: =200
+                X: =416
+                Y: =79
+                ZIndex: =2
+
+            datePiker_Caja_Registro_3 As datepicker:
+                BorderStyle: =BorderStyle.None
+                Font: =Font.'Segoe UI'
+                Height: =26
+                IconBackground: =RGBA(255, 255, 255, 1)
+                IconFill: =RGBA(0, 0, 0, 1)
+                InputTextPlaceholder: =
+                Size: =12
+                Width: =190
+                X: =422
+                Y: =85
+                ZIndex: =3
+
+            lbl_Registro_Pago_5 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =36
+                Size: =16
+                Text: ="Hasta "
+                Width: =79
+                X: =339
+                Y: =80
+                ZIndex: =4
+
+            txt_DatePiker_Caja_Registro_4 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: |-
+                    =//If(varCaja=true;"";If(varCaja=false;AtencionSelected.Nombre_Paciente))
+                    ""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                HintText: =""
+                PaddingLeft: =50
+                PaddingRight: =64
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Reset: =true
+                Size: =12
+                Width: =200
+                X: =117
+                Y: =80
+                ZIndex: =5
+
+            datePiker_Caja_Registro_4 As datepicker:
+                BorderStyle: =BorderStyle.None
+                Font: =Font.'Segoe UI'
+                Height: =26
+                IconBackground: =RGBA(255, 255, 255, 1)
+                IconFill: =RGBA(0, 0, 0, 1)
+                InputTextPlaceholder: =
+                Size: =12
+                Width: =190
+                X: =120
+                Y: =85
+                ZIndex: =6
+
+            lbl_Registro_Pago_6 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =39
+                Size: =16
+                Text: |
+                    ="Resumen de Operaciones" 
+                Width: =532
+                X: =30
+                Y: =22
+                ZIndex: =7
+
+            TextInput19 As text:
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =190
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =500
+                X: =30
+                Y: =145
+                ZIndex: =8
+
+            TextInput19_2 As text:
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =190
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =500
+                X: =560
+                Y: =145
+                ZIndex: =9
+
+            TextInput19_3 As text:
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =190
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =500
+                X: =30
+                Y: =360
+                ZIndex: =10
+
+            TextInput19_4 As text:
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =190
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =500
+                X: =560
+                Y: =360
+                ZIndex: =11
+
+            TextInput19_5 As text:
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =338
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =500
+                X: =30
+                Y: =580
+                ZIndex: =12
+
+            TextInput19_6 As text:
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =338
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =500
+                X: =560
+                Y: =580
+                ZIndex: =13
+
+            lbl_Atendidos_1 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Atendidas"
+                Width: =84
+                X: =245
+                Y: =276
+                ZIndex: =14
+
+            lbl_Por_Atender_1 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Ausentes"
+                Width: =96
+                X: =395
+                Y: =276
+                ZIndex: =15
+
+            lbl_Count_Atendidos_1 As label:
+                Align: =Align.Center
+                Color: =ColorFondoBoton
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =28
+                Text: |-
+                    =CountRows(SortByColumns(Filter('public.Medical_Center_Counter',estado="Atendido",etapa="Atención Medica",id_sede = _varSede.id , DateValue(Text(fecha,"dd/mm/yyyy")) >= DateValue(Text( datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy")) && DateValue(Text(fecha,"dd/mm/yyyy")) <= DateValue(Text( datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy"))),"fecha")
+                    )
+                Width: =100
+                X: =237
+                Y: =212
+                ZIndex: =16
+
+            lbl_Count_Por_Atender_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(132, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =28
+                Text: =Value(lbl_Count_Atendidos_2.Text) - Value(lbl_Count_Atendidos_1.Text)
+                Width: =100
+                X: =395
+                Y: =212
+                ZIndex: =17
+
+            lbl_Count_Atendidos_2 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =28
+                Text: =CountRows(Filter(Gallery16.AllItems,Label76_1.Text=getUser.Nombre_Consultorio))
+                Width: =100
+                X: =79
+                Y: =212
+                ZIndex: =18
+
+            lbl_Atendidos_2 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Programadas"
+                Width: =112
+                X: =79
+                Y: =276
+                ZIndex: =19
+
+            lbl_Atendidos_3 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =24
+                Size: =14
+                Text: ="Citas"
+                Width: =84
+                X: =265
+                Y: =160
+                ZIndex: =20
+
+            Rectangle12 As rectangle:
+                Fill: =RGBA(147, 147, 147, 1)
+                Height: =88
+                Width: =2
+                X: =214
+                Y: =212
+                ZIndex: =21
+
+            Rectangle12_2 As rectangle:
+                Fill: =RGBA(147, 147, 147, 1)
+                Height: =1
+                Width: =22
+                X: =356
+                Y: =240
+                ZIndex: =22
+
+            lbl_Atendidos_4 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Recurrentes"
+                Width: =100
+                X: =237
+                Y: =496
+                ZIndex: =23
+
+            lbl_Por_Atender_2 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Nuevos"
+                Width: =96
+                X: =395
+                Y: =496
+                ZIndex: =24
+
+            lbl_Count_Atendidos_3 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =28
+                Text: =Value(lbl_Count_Atendidos_4.Text) - Value(lbl_Count_Por_Atender_2.Text)
+                Width: =100
+                X: =237
+                Y: =432
+                ZIndex: =25
+
+            lbl_Count_Por_Atender_2 As label:
+                Align: =Align.Center
+                Color: =ColorFondoBoton
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =28
+                Text: |
+                    =
+                    CountRows(Filter('public.Medical_Center_Counter',id_sede = _varSede.id,Or(Servicio="Cita: primera consulta",Servicio="Primera Consulta"),estado="Atendido",etapa="Atención Medica",DateValue(Text(fecha,"dd/mm/yyyy")) >= DateValue(Text( datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy")) && DateValue(Text(fecha,"dd/mm/yyyy")) <= DateValue(Text( datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy"))))
+                Width: =100
+                X: =395
+                Y: =432
+                ZIndex: =26
+
+            lbl_Count_Atendidos_4 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =28
+                Text: |-
+                    =//CountRows(Gallery6_2.AllItems)
+                    CountRows(Filter(Gallery16.AllItems,Label76_1.Text=getUser.Nombre_Consultorio,Estatus="Atendido"))
+                Width: =100
+                X: =79
+                Y: =432
+                ZIndex: =27
+
+            lbl_Atendidos_5 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Total"
+                Width: =100
+                X: =79
+                Y: =496
+                ZIndex: =28
+
+            lbl_Atendidos_6 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =24
+                Size: =14
+                Text: ="Pacientes"
+                Width: =94
+                X: =245
+                Y: =380
+                ZIndex: =29
+
+            Rectangle12_4 As rectangle:
+                Fill: =RGBA(147, 147, 147, 1)
+                Height: =1
+                Width: =22
+                X: =352
+                Y: =460
+                ZIndex: =30
+
+            lbl_Atendidos_7 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =24
+                Size: =14
+                Text: ="Ventas"
+                Width: =84
+                X: =787
+                Y: =160
+                ZIndex: =31
+
+            lbl_Count_Atendidos_5 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =28
+                Text: |-
+                    =varSimboloMaestros &  
+                    
+                        
+                        If(
+                            IsBlank(
+                                Sum(Filter('public.Medical_Center_Pagos', id_sede = _varSede.id,DateValue(Text(Fecha,"dd/mm/yyyy"))>=DateValue(Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy"))&&DateValue(Text(Fecha,"dd/mm/yyyy"))<=DateValue(Text(datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy"))),Monto)
+                                )
+                                ,0,
+                                
+                                Sum(Filter('public.Medical_Center_Pagos', id_sede = _varSede.id,DateValue(Text(Fecha,"dd/mm/yyyy"))>=DateValue(Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy"))&&DateValue(Text(Fecha,"dd/mm/yyyy"))<=DateValue(Text(datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy"))),Monto))
+                Width: =300
+                X: =650
+                Y: =212
+                ZIndex: =32
+
+            Label20 As label:
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =38
+                Size: =12
+                Text: |
+                    =If(And(Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy") ,Text(datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy"))
+                    Or And(Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy")=Text(datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy"))
+                    ,
+                    
+                    /*"Ventas de ayer  "& varSimboloMaestros & If(IsBlank(Sum(Filter('public.Medical_Center_Pagos'; id_sede = _varSede.id;Month(Fecha)=If(Month(Today())=1;12;Month(Today())-1));Monto));0;Text(Sum(Filter('public.Medical_Center_Pagos'; id_sede = _varSede.id;Month(Fecha)=If(Month(Today())=1;12;Month(Today())-1));Monto));"# ###.00");*/
+                    
+                    "Ventas de ayer  "& varSimboloMaestros &If(IsBlank(Sum(Filter('public.Medical_Center_Pagos', id_sede = _varSede.id,Text(Fecha,"dd/mm/yyyy")=Text(datePiker_Caja_Registro_4.SelectedDate-1,"dd/mm/yyyy")),Monto)),0,Sum(Filter('public.Medical_Center_Pagos', id_sede = _varSede.id,Text(Fecha,"dd/mm/yyyy")=Text(datePiker_Caja_Registro_4.SelectedDate-1,"dd/mm/yyyy")),Monto)),
+                    
+                    
+                    
+                    "Ventas del periodo (mes) anterior  "& varSimboloMaestros & If(IsBlank(Sum(Filter('public.Medical_Center_Pagos', id_sede = _varSede.id,Month(Fecha)=Month(datePiker_Caja_Registro_4.SelectedDate)-1),Monto)),0,
+                    Sum(Filter('public.Medical_Center_Pagos', id_sede = _varSede.id,Month(Fecha)=Month(datePiker_Caja_Registro_4.SelectedDate)-1),Monto))
+                    )
+                Width: =340
+                X: =623
+                Y: =276
+                ZIndex: =34
+
+            Label29 As label:
+                Color: =ColorFondoBoton
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =27
+                Size: =10
+                Text: =Value(Value(VentaTotal.Text)-Value(ventaAnterior.Text))/100 & "%"
+                Width: =58
+                X: =995
+                Y: =242
+                ZIndex: =35
+
+            Image9 As image:
+                Height: =11
+                Image: ='Shape - 2023-04-24T113852.762'
+                Width: =16
+                X: =974
+                Y: =253
+                ZIndex: =36
+
+            Rectangle12_6 As rectangle:
+                Fill: =RGBA(147, 147, 147, 1)
+                Height: =88
+                Width: =2
+                X: =214
+                Y: =432
+                ZIndex: =37
+
+            lbl_Atendidos_8 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =24
+                Size: =14
+                Text: ="Consultas"
+                Width: =105
+                X: =773
+                Y: =380
+                ZIndex: =38
+
+            Image9_1 As image:
+                Height: =20
+                Image: ='MicrosoftTeams-image (16)'
+                Width: =20
+                X: =649
+                Y: =434
+                ZIndex: =39
+
+            Image9_2 As image:
+                Height: =20
+                Image: ='MicrosoftTeams-image (17)'
+                Width: =20
+                X: =807
+                Y: =434
+                ZIndex: =40
+
+            Image9_3 As image:
+                Height: =20
+                Image: ='MicrosoftTeams-image (18)'
+                Width: =20
+                X: =925
+                Y: =434
+                ZIndex: =41
+
+            Image9_4 As image:
+                Height: =20
+                Image: ='MicrosoftTeams-image (19)'
+                Width: =20
+                X: =999
+                Y: =434
+                ZIndex: =42
+
+            Rectangle12_7 As rectangle:
+                Fill: =RGBA(147, 147, 147, 1)
+                Height: =88
+                Width: =2
+                X: =744
+                Y: =432
+                ZIndex: =43
+
+            Rectangle12_8 As rectangle:
+                Fill: =RGBA(147, 147, 147, 1)
+                Height: =88
+                Width: =2
+                X: =896
+                Y: =432
+                ZIndex: =44
+
+            lbl_Count_Atendidos_6 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =32
+                Size: =16
+                Text: =Round(IfError(Sum(galCajaResumen.AllItems.Subtitle1_2,Subtitle1_2.Text)/CountRows(galCajaResumen.AllItems),0),2) &" min"
+                Width: =144
+                X: =589
+                Y: =464
+                ZIndex: =45
+
+            lbl_Count_Atendidos_7 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =32
+                Size: =16
+                Text: |-
+                    =/*Round(Sum(Filter('public.Medical_Center_Encuesta';Respondio_Paciente= true ;id_sede = _varSede.id;DateValue(Text(Fecha;"dd/mm/yyyy"))>=DateValue(Text(datePiker_Caja_Registro_4.SelectedDate;"dd/mm/yyyy"))&&DateValue(Text(Fecha;"dd/mm/yyyy"))<=DateValue(Text(datePiker_Caja_Registro_3.SelectedDate;"dd/mm/yyyy")));Puntaje)/If(CountRows(Filter('public.Medical_Center_Encuesta';Respondio_Paciente= true ;id_sede = _varSede.id;DateValue(Text(Fecha;"dd/mm/yyyy"))>=DateValue(Text(datePiker_Caja_Registro_4.SelectedDate;"dd/mm/yyyy"))&&DateValue(Text(Fecha;"dd/mm/yyyy"))<=DateValue(Text(datePiker_Caja_Registro_3.SelectedDate;"dd/mm/yyyy"))))=0;1;CountRows(Filter('public.Medical_Center_Encuesta';Respondio_Paciente= true ;id_sede = _varSede.id;DateValue(Text(Fecha;"dd/mm/yyyy"))>=DateValue(Text(datePiker_Caja_Registro_4.SelectedDate;"dd/mm/yyyy"))&&DateValue(Text(Fecha;"dd/mm/yyyy"))<=DateValue(Text(datePiker_Caja_Registro_3.SelectedDate;"dd/mm/yyyy")))));1)/100*/
+                    
+                    Value(Round(Value(IfError(Value(CountRows(Filter('public.Medical_Center_Encuesta',Respondio_Paciente= true ,id_sede = _varSede.id,DateValue(Text(Fecha,"dd/mm/yyyy"))>=DateValue(Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy"))&&DateValue(Text(Fecha,"dd/mm/yyyy"))<=DateValue(Text(datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy")), Value(Puntaje) >= 8)) / CountRows(Filter('public.Medical_Center_Encuesta',Respondio_Paciente= true ,id_sede = _varSede.id,DateValue(Text(Fecha,"dd/mm/yyyy"))>=DateValue(Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy"))&&DateValue(Text(Fecha,"dd/mm/yyyy"))<=DateValue(Text(datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy"))))),0)/100),2)
+                    -
+                    Round(Value(IfError(Value(CountRows(Filter('public.Medical_Center_Encuesta',Respondio_Paciente= true ,id_sede = _varSede.id,DateValue(Text(Fecha,"dd/mm/yyyy"))>=DateValue(Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy"))&&DateValue(Text(Fecha,"dd/mm/yyyy"))<=DateValue(Text(datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy")), Value(Puntaje) <= 6)) / CountRows(Filter('public.Medical_Center_Encuesta',Respondio_Paciente= true ,id_sede = _varSede.id,DateValue(Text(Fecha,"dd/mm/yyyy"))>=DateValue(Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy"))&&DateValue(Text(Fecha,"dd/mm/yyyy"))<=DateValue(Text(datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy"))))),0)/100),2)*100) & "%"
+                Width: =100
+                X: =767
+                Y: =464
+                ZIndex: =46
+
+            lbl_Count_Atendidos_8 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =32
+                Size: =16
+                Text: |+
+                    =Round(IfError(Value(CountRows(Filter(galCajaResumen2.AllItems,Label11_4.Text="Femenino"))/CountRows(galCajaResumen2.AllItems)),0),2)*100 &" %"
+                    
+                Width: =74
+                X: =905
+                Y: =464
+                ZIndex: =47
+
+            lbl_Count_Atendidos_9 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =32
+                Size: =16
+                Text: |+
+                    =Round(IfError(Value(CountRows(Filter(galCajaResumen2.AllItems,Label11_4.Text="Masculino"))/CountRows(galCajaResumen2.AllItems)),0),2)*100 &" %"
+                    
+                Width: =74
+                X: =979
+                Y: =464
+                ZIndex: =48
+
+            lbl_Por_Atender_3 As label:
+                Align: =Align.Center
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =10
+                Text: ="Tiempo Promedio"
+                Width: =125
+                X: =596
+                Y: =504
+                ZIndex: =49
+
+            lbl_Por_Atender_4 As label:
+                Align: =Align.Center
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =10
+                Text: ="Satisfacción"
+                Width: =100
+                X: =769
+                Y: =504
+                ZIndex: =50
+
+            lbl_Por_Atender_5 As label:
+                Align: =Align.Center
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =10
+                Text: ="Género Pacientes"
+                Width: =145
+                X: =907
+                Y: =504
+                ZIndex: =51
+
+            lbl_Atendidos_9 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =24
+                Size: =14
+                Text: ="Ventas por especialidad"
+                Width: =241
+                X: =173
+                Y: =600
+                ZIndex: =52
+
+            lbl_Atendidos_10 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =24
+                OnSelect: |-
+                    =With({wNro_:Sort(galCajaResumen4.AllItems,Value(Label11.Text),SortOrder.Descending)},Sequence(2000))
+                Size: =14
+                Text: ="Top ventas médicos"
+                Width: =241
+                X: =721
+                Y: =600
+                ZIndex: =53
+
+            PieChart1_1 As pieChart:
+                Height: =269
+                ItemColorSet: =[ColorFondoBoton,ColorSegundo,ColorTercero,ColorCuarto, RGBA(180, 95, 217,1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1)]
+                Items: =galCajaResumen3.AllItems
+                Size: =8
+                Width: =481
+                X: =46
+                Y: =624
+                ZIndex: =54
+
+            lbl_Por_Atender_7 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =10
+                Text: ="Médico"
+                Width: =107
+                X: =589
+                Y: =644
+                ZIndex: =56
+
+            lbl_Por_Atender_8 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =10
+                Text: ="Venta"
+                Width: =50
+                X: =787
+                Y: =644
+                ZIndex: =57
+
+            lbl_Por_Atender_9 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =10
+                Text: ="Meta"
+                Width: =50
+                X: =895
+                Y: =644
+                ZIndex: =58
+
+            lbl_Por_Atender_10 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =10
+                Text: ="Diferencia"
+                Width: =84
+                X: =976
+                Y: =644
+                ZIndex: =59
+
+            Gallery7 As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =233
+                Items: |+
+                    =
+                    Sort(galCajaResumen4.AllItems,Value(Label11.Text),SortOrder.Descending)
+                    
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =54
+                Width: =495
+                X: =562
+                Y: =673
+                ZIndex: =60
+
+                Label32 As label:
+                    Color: =RGBA(95, 106, 146, 1)
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        =//LookUp(UsuariosdeOffice365.SearchUser();Mail=ThisItem.Value;DisplayName)
+                        ThisItem.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =191
+                    X: =10
+                    ZIndex: =2
+
+                Label30_1 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(95, 106, 146, 1)
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        =varSimboloMaestros &" " & Text(Value(Text(ThisItem.Label11.Text)),"# ###.00")
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =100
+                    X: =202
+                    ZIndex: =3
+
+                Label30_2 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(95, 106, 146, 1)
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        =varSimboloMaestros & " "&Text(Value(LookUp('public.Medical_Center_Usuario',And(Usuario=ThisItem.Value,Text(fechaCuota,"dd/mm/yyyy")=Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy")),Meta)),"# ###.00")
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =100
+                    X: =302
+                    ZIndex: =4
+
+                Label30_3 As label:
+                    Align: =Align.Center
+                    Color: =If(Value(ThisItem.Label11.Text) >= Value(LookUp('public.Medical_Center_Usuario',And(Usuario=ThisItem.Value,Text(fechaCuota,"dd/mm/yyyy")=Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy")),Meta)),RGBA(95, 106, 146, 1),RGBA(132, 0, 0, 1))
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        =If(Value(ThisItem.Label11.Text) >= Value(LookUp('public.Medical_Center_Usuario',And(Usuario=ThisItem.Value,Text(fechaCuota,"dd/mm/yyyy")=Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy")),Meta)),"+","")&
+                        ThisItem.Label11.Text - Value(LookUp('public.Medical_Center_Usuario',And(Usuario=ThisItem.Value,Text(fechaCuota,"dd/mm/yyyy")=Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy")),Meta))
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =83
+                    X: =402
+                    ZIndex: =5
+
+                Rectangle13 As rectangle:
+                    Fill: =RGBA(147, 147, 147, 1)
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Width: =485
+                    Y: =50
+                    ZIndex: =6
+
+            VentaTotal As label:
+                Text: |-
+                    =If(
+                        IsBlank(
+                            Sum(
+                                Filter(
+                                    'public.Medical_Center_Pagos',
+                                    id_sede = _varSede.id,
+                                    DateValue(
+                                        Text(
+                                            Fecha,
+                                            "dd/mm/yyyy"
+                                        )
+                                    ) >= DateValue(
+                                        Text(
+                                            datePiker_Caja_Registro_4.SelectedDate,
+                                            "dd/mm/yyyy"
+                                        )
+                                    ) && DateValue(
+                                        Text(
+                                            Fecha,
+                                            "dd/mm/yyyy"
+                                        )
+                                    ) <= DateValue(
+                                        Text(
+                                            datePiker_Caja_Registro_3.SelectedDate,
+                                            "dd/mm/yyyy"
+                                        )
+                                    )
+                                ),
+                                Monto
+                            )
+                        ),
+                        0,
+                        Sum(
+                            Filter(
+                                'public.Medical_Center_Pagos',
+                                id_sede = _varSede.id,
+                                DateValue(
+                                    Text(
+                                        Fecha,
+                                        "dd/mm/yyyy"
+                                    )
+                                ) >= DateValue(
+                                    Text(
+                                        datePiker_Caja_Registro_4.SelectedDate,
+                                        "dd/mm/yyyy"
+                                    )
+                                ) && DateValue(
+                                    Text(
+                                        Fecha,
+                                        "dd/mm/yyyy"
+                                    )
+                                ) <= DateValue(
+                                    Text(
+                                        datePiker_Caja_Registro_3.SelectedDate,
+                                        "dd/mm/yyyy"
+                                    )
+                                )
+                            ),
+                            Monto
+                        )
+                    )
+                Visible: =false
+                X: =922
+                Y: =61
+                ZIndex: =61
+
+            ventaAnterior As label:
+                Text: |-
+                    =/*If(Text(datePiker_Caja_Registro_4;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy") && Text(datePiker_Caja_Registro_3;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy");
+                    
+                    If(IsBlank(Sum(Filter('public.Medical_Center_Pagos'; id_sede = _varSede.id;Month(Fecha)=If(Month(Today())=1;12;Month(Today())-1));Monto));0;Sum(Filter('public.Medical_Center_Pagos'; id_sede = _varSede.id;Month(Fecha)=If(Month(Today())=1;12;Month(Today())-1));Monto));
+                    
+                    
+                     If(IsBlank(Sum(Filter('public.Medical_Center_Pagos'; id_sede = _varSede.id;Month(Fecha)=Month(datePiker_Caja_Registro_4)-1);Monto));0;
+                    Sum(Filter('public.Medical_Center_Pagos'; id_sede = _varSede.id;Month(Fecha)=Month(datePiker_Caja_Registro_4)-1);Monto))
+                    )
+                    */
+                    If(Text(datePiker_Caja_Registro_4.SelectedDate,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy") && Text(datePiker_Caja_Registro_3.SelectedDate,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy"),
+                    
+                    If(IsBlank(Sum(Filter('public.Medical_Center_Pagos', id_sede = _varSede.id,Text(Fecha,"dd/mm/yyyy")=Text(Today()-1,"dd/mm/yyyy")),Monto)),0,Sum(Filter('public.Medical_Center_Pagos', id_sede = _varSede.id,Text(Fecha,"dd/mm/yyyy")=Text(Today()-1,"dd/mm/yyyy")),Monto)),
+                    
+                    
+                     If(IsBlank(Sum(Filter('public.Medical_Center_Pagos', id_sede = _varSede.id,Month(Fecha)=Month(datePiker_Caja_Registro_4.SelectedDate)-1),Monto)),0,
+                    Sum(Filter('public.Medical_Center_Pagos', id_sede = _varSede.id,Month(Fecha)=Month(datePiker_Caja_Registro_4.SelectedDate)-1),Monto))
+                    )
+                Visible: =false
+                X: =922
+                Y: =101
+                ZIndex: =62
+
+            Rectangle13_3 As rectangle:
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =1
+                OnSelect: =
+                Width: =485
+                X: =568
+                Y: =669
+                ZIndex: =63
+
+            Button9_3 As button:
+                BorderColor: =ColorFondoBoton
+                Fill: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Normal
+                Height: =44
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Text: =""
+                Width: =49
+                X: =995
+                Y: =17
+                ZIndex: =64
+
+            Icon_Refresh_1 As icon.Reload:
+                Color: =ColorFondoBoton
+                Height: =44
+                Icon: =Icon.Reload
+                OnSelect: =Refresh('public.Medical_Center_Pagos');Refresh('public.Medical_Center_Counter');Reset(datePiker_Caja_Registro_3);Reset(datePiker_Caja_Registro_4);Refresh('public.Medical_Center_Ticket');Refresh('public.Medical_Center_time_log')
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =49
+                X: =995
+                Y: =17
+                ZIndex: =65
+

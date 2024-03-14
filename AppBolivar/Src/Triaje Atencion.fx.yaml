@@ -1,0 +1,1045 @@
+"'Triaje Atencion' As screen":
+    Fill: |-
+        =ColorValue("#F5F5F5")
+    OnVisible: |-
+        =Reset(Canvas2_1);
+        Set(varTriajefinal,false);
+        Set(varTriajeInicial,true);
+        Set(varImagenInicial,true);
+        Set(varHombreTriaje,false);
+        
+        Set(varMujerTriaje,false);
+        
+          Reset( txt_Temperatura);
+                Reset(  txt_Presion);
+             
+                Reset(  txt_Saturacion);
+               
+              Reset( txt_Edad);
+               Reset( txt_Peso);
+                Reset( txt_Altura);
+        
+        Reset(Radio_Mujer);
+        Reset(Radio_Hombre)
+
+    Rectangle5_33 As rectangle:
+        Fill: =ColorFondoBoton
+        Height: =2
+        Width: =1366
+        Y: =96
+        ZIndex: =1
+
+    Rectangle_Barra_Superior_Atencion_Triaje As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle_Barra_Superior_Atencion_Triaje.Fill
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =Rectangle_Barra_Superior_Atencion_Triaje.BorderColor
+        Height: =96
+        HoverFill: =Rectangle_Barra_Superior_Atencion_Triaje.Fill
+        PressedFill: =Rectangle_Barra_Superior_Atencion_Triaje.Fill
+        Width: =1366
+        ZIndex: =2
+
+    img_Logo_Atencion_Triaje As image:
+        Height: =80
+        Image: =getLogo
+        OnSelect: =Navigate(Home)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =3
+
+    btn_Emregencia_Atencion_Triaje As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(232, 17, 17, 1)
+        Font: =Font.'Segoe UI'
+        Height: =44
+        OnSelect: |-
+            =UpdateContext({_varEmergenciaAtencionCliente:true})
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="EMERGENCIA"
+        Width: =280
+        X: =835
+        Y: =26
+        ZIndex: =4
+
+    Image12_35 As image:
+        Height: =80
+        Image: ='Transparente Original'
+        OnSelect: =Navigate(Home)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =Not(Parent.Printing)
+        Width: =119
+        X: =631
+        Y: =8
+        ZIndex: =9
+
+    Rectangle_Separador_Atencion_Triaje As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle_Separador_Atencion_Triaje.Fill
+        Fill: =RGBA(202, 202, 202, 1)
+        FocusedBorderColor: =Rectangle_Separador_Atencion_Triaje.BorderColor
+        Height: =672
+        HoverFill: =Rectangle_Separador_Atencion_Triaje.Fill
+        PressedFill: =Rectangle_Separador_Atencion_Triaje.Fill
+        Width: =1
+        X: =275
+        Y: =96
+        ZIndex: =10
+
+    Image6_4 As image:
+        Height: =179
+        Image: =Subtract_1
+        Visible: =false
+        Width: =215
+        X: =30
+        Y: =419
+        ZIndex: =11
+
+    Label9_8 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =35
+        Text: ="TICKET"
+        Visible: =false
+        Width: =212
+        X: =31
+        Y: =432
+        ZIndex: =12
+
+    Label9_9 As label:
+        Align: =Align.Center
+        Color: =RGBA(38, 73, 91, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =100
+        Size: =46
+        Text: |-
+            =//Left(Gallery3.Selected.'Codigo del Servicio';1)& "-" & Gallery3.Selected.'Número de Ticket'
+            "I-48"
+        Visible: =false
+        Width: =200
+        X: =37
+        Y: =459
+        ZIndex: =13
+
+    txt_Fondo_Categoria_Triaje As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =598
+        OnSelect: =
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =1030
+        X: =306
+        Y: =170
+        ZIndex: =14
+
+    lbl_Atencion_Triaje As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        OnSelect: =
+        Size: =18
+        Text: ="Atención de Triaje"
+        Width: =230
+        X: =305
+        Y: =116
+        ZIndex: =35
+
+    lbl_Categoria_Triaje As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        OnSelect: =Reset(galTipoTriaje)
+        Size: =18
+        Text: ="Categoría de Triaje"
+        Visible: =varTriajefinal
+        Width: =304
+        X: =720
+        Y: =189
+        ZIndex: =36
+
+    btn_Pasar_Consultorio As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =ColorFondoBoton
+        FocusedBorderColor: =btn_Pasar_Consultorio.BorderColor
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: =ColorFade(btn_Pasar_Consultorio.BorderColor, 20%)
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =Patch(
+                'public.Medical_Center_Triaje',
+                Defaults('public.Medical_Center_Triaje'),
+                {   id:First(SortByColumns('public.Medical_Center_Triaje',"id",SortOrder.Descending)).id+1,
+                DNI_CI:TriajeSelected.DNI_Paciente,
+                    Sexo: If(
+                        varHombreTriaje = true,
+                        "Hombre",
+                        If(
+                            varMujerTriaje = true,
+                            "Mujer"
+                        )
+                    ),
+                    Temperatura: txt_Temperatura.Text,
+                    Presion_Arterial: txt_Presion.Text,
+                 
+                    Saturacion_Oxigeno: txt_Saturacion.Text,
+                    
+                    Edad:Value(txt_Edad.Text),
+                    Peso:Value(txt_Peso.Text),
+                    Altura:Value(txt_Altura.Text),
+                  
+                    fecha:Today(),
+                    IMC:txt_IMC.Text,
+                   
+                    Categoria:galTipoTriaje.Selected.desc//If(var1_Triaje=true,"No Urgente",If(var2_Triaje=true,"Urgente, pero no emergente",If(var3_Triaje=true,"Emergencia",If(var4_Triaje=true,"Crítica"))))
+            
+                }
+            );If(getUser.Rol="Doctor" || getUser.Rol= "Administrador",Navigate('Consulta Medica Dashboard'),Navigate(Triaje_Dashboard));
+            
+            Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=TriajeSelected.id_Ticket),
+            {   
+              estado:"Atendido",
+              etapa:"Triaje",
+              usuario:TriajeSelected.usuario,
+              Alerta:true
+            })
+            
+            ;
+            
+            
+                  Reset( txt_Temperatura);
+                    Reset(  txt_Presion);
+                   
+                    Reset(  txt_Saturacion);
+                 
+                  Reset( txt_Edad);
+                   Reset( txt_Peso);
+                    Reset( txt_Altura);
+              
+            
+                Reset(galTipoTriaje)
+        PressedBorderColor: =btn_Pasar_Consultorio.Fill
+        PressedColor: =btn_Pasar_Consultorio.Fill
+        PressedFill: =btn_Pasar_Consultorio.Color
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="PASAR A CONSULTORIO MÉDICO"
+        Visible: =varTriajefinal
+        Width: =369
+        X: =637
+        Y: =690
+        ZIndex: =37
+
+    Radio_Hombre As radio:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        Font: =Font.'Segoe UI'
+        FontWeight: =If(varHombreTriaje,FontWeight.Bold,FontWeight.Normal)
+        Height: =67
+        Items: =["Hombre"]
+        LineHeight: =3
+        OnSelect: |-
+            =Set(varHombreTriaje,true);
+            Set(varMujerTriaje,false);
+        PaddingBottom: =0
+        PaddingLeft: =5
+        PaddingTop: =0
+        RadioBorderColor: =RGBA(0, 0, 0, 1)
+        RadioSelectionFill: =ColorFondoBoton
+        RadioSize: =30
+        Reset: =If(varMujerTriaje=true,true,false)
+        Visible: =varTriajeInicial
+        Width: =185
+        X: =640
+        Y: =177
+        ZIndex: =38
+
+    Radio_Mujer As radio:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        Font: =Font.'Segoe UI'
+        FontWeight: =If(varMujerTriaje,FontWeight.Bold,FontWeight.Normal)
+        Height: =69
+        Items: =["Mujer"]
+        LineHeight: =3
+        OnSelect: |-
+            =Set(varHombreTriaje,false);
+            Set(varMujerTriaje,true);
+        PaddingBottom: =0
+        PaddingLeft: =5
+        PaddingTop: =0
+        RadioBorderColor: =RGBA(0, 0, 0, 1)
+        RadioSelectionFill: =ColorFondoBoton
+        RadioSize: =30
+        Reset: =If(varHombreTriaje=true,true,false)
+        Visible: =varTriajeInicial
+        Width: =191
+        X: =911
+        Y: =177
+        ZIndex: =39
+
+    Image_triaje1 As image:
+        Height: =504
+        Image: =If(varImagenInicial=true,'image 17',If(varTemperatura_Triaje=true,'image 18',If(varPresionArterial_Triaje=true,'image 19',If(varFrecuenciaCardiaca_Triaje=true,'image 20'))))
+        Visible: =varTriajeInicial
+        Width: =444
+        X: =365
+        Y: =234
+        ZIndex: =40
+
+    Canvas2_1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =438
+        Visible: =varTriajeInicial
+        Width: =420
+        X: =863
+        Y: =228
+        ZIndex: =41
+
+        DataCard2_1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =438
+            Width: =420
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            txt_Temperatura As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =36
+                OnSelect: |
+                    =Set(varTemperatura_Triaje,true);
+                    Set(varPresionArterial_Triaje,false);
+                    Set(varFrecuenciaCardiaca_Triaje,false);
+                    Set(varImagenInicial,false);
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Width: =380
+                X: =20
+                Y: =302
+                ZIndex: =2
+
+            lbl_Etiqueta_Temperatura As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Text: ="Temperatura"
+                Width: =200
+                X: =20
+                Y: =270
+                ZIndex: =3
+
+            txt_Presion As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =36
+                OnSelect: |-
+                    =Set(varTemperatura_Triaje,false);
+                    Set(varPresionArterial_Triaje,true);
+                    Set(varFrecuenciaCardiaca_Triaje,false);
+                    Set(varImagenInicial,false);
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Width: =182
+                X: =20
+                Y: =386
+                ZIndex: =4
+
+            lbl_Etiqueta_Presion As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Text: ="Presión Arterial"
+                Width: =200
+                X: =20
+                Y: =354
+                ZIndex: =5
+
+            lbl_Etiqueta_Saturacion As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Text: ="Saturación de Oxígeno"
+                Width: =200
+                X: =218
+                Y: =354
+                ZIndex: =7
+
+            txt_Saturacion As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Width: =182
+                X: =218
+                Y: =386
+                ZIndex: =8
+
+            lbl_Etiqueta_Edad As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Text: ="Edad"
+                Width: =200
+                X: =20
+                Y: =18
+                ZIndex: =13
+
+            txt_Altura As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Width: =132
+                X: =20
+                Y: =134
+                ZIndex: =14
+
+            lbl_Etiqueta_Altura As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Text: ="Altura (m)"
+                Width: =90
+                X: =20
+                Y: =102
+                ZIndex: =15
+
+            txt_Peso As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Width: =132
+                X: =168
+                Y: =134
+                ZIndex: =16
+
+            lbl_Etiqueta_Peso As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Text: ="Peso (Kg)"
+                Width: =90
+                X: =168
+                Y: =102
+                ZIndex: =17
+
+            txt_Edad As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: |-
+                    =With({birthday:LookUp('public.Medical_Center_Historial_Principal',DNI_CI = TriajeSelected.DNI_Paciente,Fecha_Nacimiento)},
+                    DateDiff(birthday,Today(),TimeUnit.Years)-1*(Date(Year(Now()),Month(birthday),Day(birthday))>Today())
+                    )
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Width: =132
+                X: =20
+                Y: =50
+                ZIndex: =18
+
+            txt_IMC As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.None
+                Default: =Round(IfError(Value(txt_Peso.Text)/Value(txt_Altura.Text)^2,0),1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(237, 237, 237, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Width: =84
+                X: =316
+                Y: =134
+                ZIndex: =21
+
+            lbl_Etiqueta_Peso_1 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Text: ="IMC"
+                Width: =90
+                X: =316
+                Y: =102
+                ZIndex: =22
+
+            txt_IMC_1 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.None
+                Default: |-
+                    =If(And(Value(txt_IMC.Text)>=18.5,Value(txt_IMC.Text)<=24.9),"Normal",
+                    If(And(Value(txt_IMC.Text)>=25,Value(txt_IMC.Text)<=29.9),"Sobrepeso",
+                    If(And(Value(txt_IMC.Text)>=30,Value(txt_IMC.Text)<=34.9),"Obesidad I",
+                    If(And(Value(txt_IMC.Text)>=35,Value(txt_IMC.Text)<=39.9),"Obesidad II",
+                    If(Value(txt_IMC.Text)>=40,"Obesidad III")))))
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(237, 237, 237, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Width: =380
+                X: =20
+                Y: =218
+                ZIndex: =23
+
+            lbl_Etiqueta_Peso_2 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Text: ="Nivel de Peso"
+                Width: =124
+                X: =20
+                Y: =186
+                ZIndex: =24
+
+            txt_IMC_2 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.None
+                Default: |
+                    =/*<1 Bebé
+                    1-9 Niño/Niña
+                    10-19 Adolescente
+                    20- 60 Adultos
+                    61< Adulto Mayor*/
+                    
+                    If(Value(txt_Edad.Text)<1,"Bebé",
+                    If(And(Value(txt_Edad.Text)>=1 , Value(txt_Edad.Text)<=9),"Niño/Niña",
+                    If(And(Value(txt_Edad.Text)>=10 , Value(txt_Edad.Text)<=19),"Adolescente",
+                    If(And(Value(txt_Edad.Text)>=20 , Value(txt_Edad.Text)<=60),"Adultos",
+                    If(Value(txt_Edad.Text)>61,"Adulto Mayor")))))
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(237, 237, 237, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Width: =232
+                X: =168
+                Y: =50
+                ZIndex: =25
+
+            lbl_Etiqueta_Peso_3 As label:
+                Font: =Font.'Segoe UI'
+                Height: =20
+                Text: ="Denominación"
+                Width: =125
+                X: =168
+                Y: =18
+                ZIndex: =26
+
+    btn_Continuar As button:
+        BorderColor: |-
+            =ColorValue("#26495B")
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        DisplayMode: |-
+            =If( IsBlank(txt_Altura.Text) || IsBlank(txt_Peso.Text)  ||IsBlank(txt_Temperatura.Text) || IsBlank(txt_Presion.Text) || IsBlank(txt_Saturacion.Text)   ||And(IsBlank(Radio_Hombre.Selected)
+            ,IsBlank(Radio_Mujer.Selected)),DisplayMode.Disabled,DisplayMode.Edit)
+        Fill: =ColorFondoBoton
+        FocusedBorderColor: =btn_Continuar.BorderColor
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: =ColorFade(btn_Continuar.BorderColor, 20%)
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: |
+            =Reset(galTipoTriaje);
+            Set(varTriajefinal,true);
+            Set(varTriajeInicial,false);
+        PressedBorderColor: =btn_Continuar.Fill
+        PressedColor: =btn_Continuar.Fill
+        PressedFill: =btn_Continuar.Color
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="CONTINUAR"
+        Visible: =varTriajeInicial
+        Width: =369
+        X: =888
+        Y: =708
+        ZIndex: =42
+
+    galTipoTriaje As gallery.galleryVertical:
+        Default: ={}
+        DelayItemLoading: =true
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =130*2+50*3
+        Items: |-
+            =Table(
+            {value:1,desc:"No Urgente",image:'Vector 17 (4)'},
+            {value:3,desc:"Emergencia",image:'Vector 17 (5)'},
+            {value:2,desc:"Urgente, pero no emergente",image:'Vector 17 (6)'},
+            {value:4,desc:"Crítica",image:'Vector 17 (3)'}
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =50
+        TemplateSize: =130
+        Visible: =varTriajefinal
+        Width: =1000
+        WrapCount: =2
+        X: =321
+        Y: =247
+        ZIndex: =51
+
+        Container20 As groupContainer.horizontalAutoLayoutContainer:
+            BorderColor: =If(ThisItem.IsSelected,RGBA(77, 77, 77, 1),Color.Black)
+            BorderThickness: =2
+            Fill: =If(ThisItem.IsSelected,RGBA(240, 240, 240, 1),Color.White)
+            Height: =Parent.TemplateHeight
+            LayoutGap: =20
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =25
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.TemplateWidth
+            X: =
+            ZIndex: =1
+
+            Container29 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                FillPortions: =0
+                Height: =75
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Width: =75
+                ZIndex: =1
+
+                img_5 As image:
+                    Height: =75
+                    Image: =ThisItem.image
+                    Width: =75
+                    ZIndex: =1
+
+                lbl_5 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =75
+                    PaddingBottom: =0
+                    PaddingTop: =0
+                    Size: =40
+                    Text: =ThisItem.value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =75
+                    ZIndex: =2
+
+            lbl_Etiqueta_Critica_1 As label:
+                AlignInContainer: =AlignInContainer.Center
+                FillPortions: =1
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                LayoutMinWidth: =50
+                Size: =16
+                Text: =ThisItem.desc
+                Width: =50
+                X: =1022
+                Y: =473
+                ZIndex: =2
+
+    Group2_7 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =68
+
+        btn_Dashboard_Atencion_Triaje As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =btn_Dashboard_Atencion_Triaje.BorderColor
+            Height: =58
+            HoverBorderColor: =ColorFade(btn_Dashboard_Atencion_Triaje.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: =Navigate(Triaje_Dashboard)
+            PaddingLeft: =25
+            PressedBorderColor: =RGBA(0, 0, 0, 1)
+            PressedColor: =RGBA(0, 0, 0, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Text: ="Dashboard"
+            Width: =216
+            X: =30
+            Y: =126
+            ZIndex: =43
+
+        img_Dashboard_Atencion_Triaje As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =img_Dashboard_Atencion_Triaje.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(img_Dashboard_Atencion_Triaje.BorderColor, 20%)
+            HoverFill: =ColorFade(img_Dashboard_Atencion_Triaje.Fill, 20%)
+            Image: ='Shape (91)'
+            OnSelect: =Navigate(Triaje_Dashboard)
+            PressedBorderColor: =ColorFade(img_Dashboard_Atencion_Triaje.BorderColor, -20%)
+            PressedFill: =ColorFade(img_Dashboard_Atencion_Triaje.Fill, -20%)
+            Width: =25
+            X: =53
+            Y: =143
+            ZIndex: =44
+
+        btn_Atencion_Atencion_Triaje As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =ColorFondoBoton
+            FocusedBorderColor: =btn_Atencion_Atencion_Triaje.BorderColor
+            Height: =58
+            HoverBorderColor: =ColorFondoBoton
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |
+                =false
+            PaddingLeft: =15
+            PressedBorderColor: =btn_Atencion_Atencion_Triaje.Fill
+            PressedColor: =btn_Atencion_Atencion_Triaje.Fill
+            PressedFill: =btn_Atencion_Atencion_Triaje.Color
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Text: ="Atención"
+            Width: =216
+            X: =30
+            Y: =212
+            ZIndex: =45
+
+        img_Atencion_Atencion_Triaje As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =img_Atencion_Atencion_Triaje.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(img_Atencion_Atencion_Triaje.BorderColor, 20%)
+            HoverFill: =ColorFade(img_Atencion_Atencion_Triaje.Fill, 20%)
+            Image: ='Shape (98)'
+            PressedBorderColor: =ColorFade(img_Atencion_Atencion_Triaje.BorderColor, -20%)
+            PressedFill: =ColorFade(img_Atencion_Atencion_Triaje.Fill, -20%)
+            Width: =25
+            X: =53
+            Y: =229
+            ZIndex: =46
+
+        Button3_73 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =Button3_73.BorderColor
+            Height: =58
+            HoverBorderColor: =ColorFade(Button3_73.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: |-
+                =ColorValue("#6DE8D2")
+            OnSelect: =Navigate('Consulta Medica Pacientes')
+            PaddingLeft: =25
+            PressedBorderColor: |-
+                =ColorValue("#6DE8D2")
+            PressedColor: |-
+                =ColorValue("#6DE8D2")
+            PressedFill: =Button3_73.Color
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Text: ="Pacientes"
+            Visible: =false
+            Width: =216
+            X: =30
+            Y: =298
+            ZIndex: =47
+
+        Image4_73 As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =Image4_73.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(Image4_73.BorderColor, 20%)
+            HoverFill: =ColorFade(Image4_73.Fill, 20%)
+            Image: ='Shape (52)'
+            OnSelect: =Navigate('Consulta Medica Pacientes')
+            PressedBorderColor: =ColorFade(Image4_73.BorderColor, -20%)
+            PressedFill: =ColorFade(Image4_73.Fill, -20%)
+            Visible: =false
+            Width: =25
+            X: =53
+            Y: =316
+            ZIndex: =48
+
+        btn_Salir_Atencion_Triaje As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =btn_Salir_Atencion_Triaje.BorderColor
+            Height: =58
+            HoverBorderColor: =ColorFade(btn_Salir_Atencion_Triaje.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: =Navigate(Home)
+            PaddingLeft: =0
+            PaddingRight: =35
+            PressedBorderColor: =RGBA(0, 0, 0, 1)
+            PressedColor: =RGBA(0, 0, 0, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Text: ="Salir"
+            Width: =216
+            X: =30
+            Y: =676
+            ZIndex: =49
+
+        img_Salir_Atencion_Triaje As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =img_Salir_Atencion_Triaje.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(img_Salir_Atencion_Triaje.BorderColor, 20%)
+            HoverFill: =ColorFade(img_Salir_Atencion_Triaje.Fill, 20%)
+            Image: ='Shape (87)'
+            OnSelect: =Navigate(Home)
+            PressedBorderColor: =ColorFade(img_Salir_Atencion_Triaje.BorderColor, -20%)
+            PressedFill: =ColorFade(img_Salir_Atencion_Triaje.Fill, -20%)
+            Width: =25
+            X: =53
+            Y: =693
+            ZIndex: =50
+
+        Rectangle2_25 As rectangle:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            DisabledFill: =Rectangle2_25.Fill
+            Fill: =RGBA(147, 147, 147, 1)
+            FocusedBorderColor: =Rectangle2_25.BorderColor
+            Height: =672
+            HoverFill: =Rectangle2_25.Fill
+            PressedFill: =Rectangle2_25.Fill
+            Width: =1
+            X: =274
+            Y: =96
+            ZIndex: =52
+
+    Group6_7 As group:
+        Height: =5
+        Width: =5
+        X: =13
+        Y: =20
+        ZIndex: =75
+
+        TextInput5_52 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =48
+            PaddingLeft: =0
+            PaddingRight: =64
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =false
+            Width: =500
+            X: =305
+            Y: =24
+            ZIndex: =5
+
+        Image18_16 As image:
+            Height: =27
+            Image: ='Shape (53)'
+            Visible: =false
+            Width: =29
+            X: =758
+            Y: =34
+            ZIndex: =6
+
+    Group_Perfil_Atencion_Triaje As group:
+        Height: =5
+        Width: =5
+        X: =13
+        Y: =20
+        ZIndex: =76
+
+        lbl_Perfil_Atencion_Triaje As label:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =lbl_Perfil_Atencion_Triaje.BorderColor
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =48
+            HoverBorderColor: =lbl_Perfil_Atencion_Triaje.BorderColor
+            HoverColor: =lbl_Perfil_Atencion_Triaje.Color
+            HoverFill: =lbl_Perfil_Atencion_Triaje.Fill
+            PaddingRight: =20
+            PressedBorderColor: =lbl_Perfil_Atencion_Triaje.BorderColor
+            PressedColor: =lbl_Perfil_Atencion_Triaje.Color
+            PressedFill: =lbl_Perfil_Atencion_Triaje.Fill
+            Size: =12
+            Text: =User().FullName
+            Width: =142
+            X: =1216
+            Y: =22
+            ZIndex: =7
+
+        img_Perfil_Atencion_Triaje As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =img_Perfil_Atencion_Triaje.BorderColor
+            Height: =48
+            HoverBorderColor: =ColorFade(img_Perfil_Atencion_Triaje.BorderColor, 20%)
+            HoverFill: =ColorFade(img_Perfil_Atencion_Triaje.Fill, 20%)
+            Image: =User().Image
+            PressedBorderColor: =ColorFade(img_Perfil_Atencion_Triaje.BorderColor, -20%)
+            PressedFill: =ColorFade(img_Perfil_Atencion_Triaje.Fill, -20%)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Width: =48
+            X: =1156
+            Y: =22
+            ZIndex: =8
+
+    Group13_3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =79
+
+        Rectangle_Emregencia_Atencion_Triaje As rectangle:
+            AccessibleLabel: =
+            Fill: =RGBA(0, 0, 0, 0.3)
+            Height: =768
+            OnSelect: |-
+                =UpdateContext({_varEmergenciaAtencionCliente:false})
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =1366
+            ZIndex: =53
+
+        txt_Fondo_Emergencia_Atencion_Triaje As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =404
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =404
+            X: =513
+            Y: =138
+            ZIndex: =54
+
+        lbl_Emregencia_Atencion_Triaje As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =44
+            Size: =27
+            Text: ="Emergencia"
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =400
+            X: =513
+            Y: =162
+            ZIndex: =55
+
+        img_btn_Emregencia_Atencion_Triaje As image:
+            Height: =376
+            Image: ='Group 92'
+            OnSelect: |-
+                =UpdateContext({_varEmergenciaAtencionCliente:false})
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =361
+            X: =513
+            Y: =156
+            ZIndex: =56
+

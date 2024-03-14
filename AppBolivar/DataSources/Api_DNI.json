@@ -1,0 +1,8 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_api-5fdni-5fe77b83cdc7dbc871-5f2de0c21655bc2015",
+    "Name": "Api_DNI",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo"
+  }
+]

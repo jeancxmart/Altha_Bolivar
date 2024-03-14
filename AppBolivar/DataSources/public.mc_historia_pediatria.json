@@ -1,0 +1,43 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "activo": "activo",
+      "cod_hc_principal": "cod_hc_principal",
+      "diagnostico": "diagnostico",
+      "examen_fisico_peso": "examen_fisico_peso",
+      "examen_fisico_sato2": "examen_fisico_sato2",
+      "examen_fisico_talla": "examen_fisico_talla",
+      "examen_funcional": "examen_funcional",
+      "examen_funcional_alimentacion": "examen_funcional_alimentacion",
+      "examen_funcional_ant_familiares": "examen_funcional_ant_familiares",
+      "examen_funcional_ant_neonatales": "examen_funcional_ant_neonatales",
+      "examen_funcional_ant_personales": "examen_funcional_ant_personales",
+      "examen_funcional_epidemiologo": "examen_funcional_epidemiologo",
+      "examen_funcional_vacunas": "examen_funcional_vacunas",
+      "fecha_registro": "fecha_registro",
+      "id": "id",
+      "id_doctor": "id_doctor",
+      "id_especialidad": "id_especialidad",
+      "id_paciente": "id_paciente",
+      "id_sede": "id_sede",
+      "id_serial": "id_serial",
+      "motivo_consulta": "motivo_consulta",
+      "paraclinicos": "paraclinicos",
+      "proxima_cita_pro_cita": "proxima_cita_pro_cita",
+      "tratamiento": "tratamiento",
+      "version": "version"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.mc_historia_pediatria",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

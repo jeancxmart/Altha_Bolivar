@@ -1,0 +1,51 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:51:59.4270000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "activo": "activo",
+      "Alergias": "Alergias",
+      "Alimentacion": "Alimentacion",
+      "Antecedentes_Madre": "Antecedentes_Madre",
+      "Antecedentes_Malestar_Actual": "Antecedentes_Malestar_Actual",
+      "Antecedentes_Padre": "Antecedentes_Padre",
+      "Antecedentes_Personales": "Antecedentes_Personales",
+      "Apellidos": "Apellidos",
+      "cod_hm": "cod_hm",
+      "Consultorio_Medico": "Consultorio_Medico",
+      "correo": "correo",
+      "Direccion": "Direccion",
+      "DNI_CI": "DNI_CI",
+      "Ejercicios": "Ejercicios",
+      "Enfermedad_Actual": "Enfermedad_Actual",
+      "Estado_Civil": "Estado_Civil",
+      "fecha_creacion": "fecha_creacion",
+      "Fecha_Nacimiento": "Fecha_Nacimiento",
+      "Grado_Instruccion": "Grado_Instruccion",
+      "id": "id",
+      "id_sede": "id_sede",
+      "id_serial": "id_serial",
+      "Imagen_Id": "Imagen_Id",
+      "Motivo": "Motivo",
+      "Nacionalidad": "Nacionalidad",
+      "Nombre_Madre": "Nombre_Madre",
+      "Nombre_Padre": "Nombre_Padre",
+      "Nombres": "Nombres",
+      "Ocupacion": "Ocupacion",
+      "Sexo": "Sexo",
+      "Sueño": "Sueño",
+      "telefono": "telefono",
+      "version": "version"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Historial_Principal",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

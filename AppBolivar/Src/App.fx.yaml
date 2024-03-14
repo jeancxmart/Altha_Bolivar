@@ -1,0 +1,360 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |
+        =Set(
+            ColorFondoBoton,
+            ColorValue("#2C6170")
+        );
+        Set(
+            ColorSegundo,
+            ColorValue("#FE6D3B")
+        );
+        Set(
+            ColorTercero,
+            ColorValue("#5F6A92")
+        );
+        Set(
+            ColorCuarto,
+            ColorValue("#E11A1A")
+        );
+        Set(
+            getUser,
+            LookUp(
+                'public.Medical_Center_Usuario',
+                Correo = User().Email
+            )
+        );
+        If(
+            And(
+                LookUp(
+                    'public.Medical_Center_VerificacionApp',
+                    And(
+                        correo = User().Email,
+                        id_sede = _varSede.id
+                    ),
+                    correo
+                ) = User().Email,
+                LookUp(
+                    'public.Medical_Center_Usuario',
+                    And(
+                        //Sede?
+                        Rol = "Administrador",
+                        Correo = User().Email
+                    ),
+                    Correo
+                ) = User().Email
+            ),
+            false,
+            Patch(
+                'public.Medical_Center_VerificacionApp',
+                Defaults('public.Medical_Center_VerificacionApp'),
+                {
+                    correo: User().Email,
+                    fase: "Incompleto"
+                }
+            )
+        );
+        Set(
+            getEspecialidad,
+           LookUp('public.Medical_Center_Especialidad', id =  LookUp('public.Medical_Center_S&E_Relacion', id = LookUp('public.Medical_Center_R&D_Relacion', id_doctor = getUser.id And id_sede = _varSede.id).id_se_relacion).id_especialidad).Especialidad
+        );
+        Set(
+            getLogo,
+            If(
+                IsBlank(
+                    LookUp(
+                        'public.Medical_Center_Consultorio_Medico',
+                        id_sede = _varSede.id,
+                        Imagen_Id
+                    )
+                ),
+                SampleImage,
+                AzureBlobStorage.GetFileContent(
+                    LookUp(
+                        'public.Medical_Center_Consultorio_Medico',
+                        id_sede = _varSede.id,
+                        Imagen_Id
+                    )
+                )
+            )
+        );
+        //REVISAR, al primer onstart no figura el logo
+        //Se desea que figure el logo del primer registro de consultorio medico? 
+        ClearCollect(
+            colMaestroSimboloMoneda,
+            {
+                Descrip: "SOLES",
+                Simbolo: "S/ "
+            },
+            {
+                Descrip: "DOLARES",
+                Simbolo: "$ "
+            },
+            {
+                Descrip: "EUROS",
+                Simbolo: "€ "
+            },
+            {
+                Descrip: "BOLIVAR",
+                Simbolo: "Bs. "
+            }
+        );
+        Set(
+            varSimboloMaestros,
+            LookUp(
+                colMaestroSimboloMoneda,
+                Descrip = LookUp(
+                    'public.Medical_Center_Consultorio_Medico',
+                    id_sede = _varSede.id,
+                    Moneda
+                ),
+                Simbolo
+            )
+        );
+        ClearCollect(
+            LeaveTypeCollection,
+            Table(
+                {
+                    type: "En Cola",
+                    Imagen: 'Shape (37)'
+                },
+                {
+                    type: "En Atención",
+                    Imagen: 'Shape (38)'
+                },
+                {
+                    type: "Registro",
+                    Imagen: 'Shape (39)'
+                },
+                {
+                    type: "Salir",
+                    Imagen: 'cerrar-sesion(1)'
+                }
+            )
+        );
+        // Styles components
+        Set(
+            colorBgButton,
+            RGBA(
+                7,
+                34,
+                39,
+                6
+            )
+        );
+        Set(
+            colorBgButtonPressed,
+            ColorValue("#4FBDBA")
+        );
+        Set(
+            colorBgButtonHover,
+            ColorValue("#AEFEFF")
+        );
+        Set(
+            colorBordrButton,
+            ColorValue("#072227")
+        );
+        Set(
+            colorBordrButtonHover,
+            ColorValue("#AEFEFF")
+        );
+        Set(
+            colorFontTitle,
+            Color.White
+        );
+        Set(
+            colorFontSubTitle,
+            Color.White
+        );
+        Set(
+            colorFontTitleHover,
+            ColorValue("#072227")
+        );
+        Set(
+            colorFontSubTitleHover,
+            ColorValue("#072227")
+        );
+        Set(
+            colorPrimary,
+            ColorValue("#4FBDBA")
+        );
+        Set(
+            colorSuccess,
+            ColorValue("#AEFEFF")
+        );
+        Set(
+            colorInfo,
+            ColorValue("#072227")
+        );
+        Set(
+            colorWarning,
+            ColorValue("#072227")
+        );
+        Set(
+            colorDanger,
+            ColorValue("#072227")
+        );
+        ClearCollect(
+            colAlertaNotificacion,
+            Filter(
+                'public.Medical_Center_Counter',
+                usuario = User().Email,
+                id_sede = _varSede.id
+            )
+        );
+        ForAll(
+            colAlertaNotificacion,
+            Patch(
+                'public.Medical_Center_Counter',
+                ThisRecord,
+                {Alerta: false}
+            )
+        );
+        /*--Modo Claro----*/
+        Set(
+            varcolor_ClaroElementoPrimario,
+            ColorValue("#2C6170")
+        );
+        Set(
+            varcolor_ClaroElementoSecundario,
+            ColorValue("#FE6D3B")
+        );
+        Set(
+            varcolor_ClaroBackgroundApp,
+            ColorValue("#F1F2F6")
+        );
+        Set(
+            varcolor_ClaroBackgroundBlanco,
+            ColorValue("#FFFFFF")
+        );
+        Set(
+            varcolor_ClaroBackgroundDeshabilitado,
+            ColorValue("#EFEFEF")
+        );
+        Set(
+            varcolor_ClaroTextoPrimario,
+            ColorValue("#2C2E35")
+        );
+        Set(
+            varcolor_ClaroTextoSecundario,
+            ColorValue("#5F6A92")
+        );
+        Set(
+            varcolor_ClaroTextoPlaceholder,
+            ColorValue("#939393")
+        );
+        Set(
+            varcolor_ClaroAccionRojo,
+            ColorValue("#E11A1A")
+        );
+        Set(
+            varcolor_ClaroAccionVerde,
+            ColorValue("#3DA534")
+        );
+        Set(
+            varcolor_ClaroAccionAmarillo,
+            ColorValue("#A3A616")
+        );
+        Set(
+            varcolor_ClaroAcompañamientoPrimario,
+            ColorValue("#CAD5DB")
+        );
+        Set(
+            varcolor_ClaroAcompañamientoSecundario,
+            ColorValue("#F4D7D1")
+        );
+        Set(
+            varcolor_ClaroEstadoPresionado1,
+            ColorValue("#1F4D5A")
+        );
+        Set(
+            varcolor_ClaroEstadoPresionado2,
+            ColorValue("#EAEFF1")
+        );
+        Set(
+            varcolor_ClaroEstadoPresionado3,
+            ColorValue("#FCE8E8")
+        );
+        Set(
+            varcolor_ClaroEstadoPresionado4,
+            ColorValue("#CA1111")
+        );
+        /*--Modo Oscuro --*/
+        Set(
+            varcolor_OscuroElementoPrimario,
+            ColorValue("#4394AB")
+        );
+        Set(
+            varcolor_OscuroElementoPrimario2,
+            ColorValue("#58A7BE")
+        );
+        Set(
+            varcolor_OscuroBackgroundApp,
+            ColorValue("#444653")
+        );
+        Set(
+            varcolor_OscuroBackgroundContenedor,
+            ColorValue("#353535")
+        );
+        Set(
+            varcolor_OscuroBackgroundNegro,
+            ColorValue("#212121")
+        );
+        Set(
+            varcolor_OscuroBackgroundDeshabilitado,
+            ColorValue("#353535")
+        );
+        Set(
+            varcolor_OscuroBackgroundLínea,
+            ColorValue("#212121")
+        );
+        Set(
+            varcolor_OscuroTextoPrimario,
+            ColorValue("#f3f3f3")
+        );
+        Set(
+            varcolor_OscuroTextoSecundario,
+            ColorValue("#C0C0C0")
+        );
+        Set(
+            varcolor_OscuroTextoPlaceholder,
+            ColorValue("#979797")
+        );
+        Set(
+            varcolor_OscuroAccionRojo,
+            ColorValue("#FF3232")
+        );
+        Set(
+            varcolor_OscuroAccionVerde,
+            ColorValue("#29BC1D")
+        );
+        Set(
+            varcolor_OscuroAccionAmarillo,
+            ColorValue("#d1d50a")
+        );
+        Set(
+            varcolor_OscuroEstadoPresionado1,
+            ColorValue("#2E7488")
+        );
+        Set(
+            varcolor_OscuroEstadoPresionado2,
+            ColorValue("#353541")
+        );
+        Set(
+            varcolor_OscuroEstadoPresionado4,
+            ColorValue("#C81C1C")
+        );
+    StartScreen: |-
+        =With({currentUser:LookUp('public.Medical_Center_Usuario',Correo=User().Email)},
+        If(false Or !currentUser.Activo,'Sin Acceso', If(And(currentUser.Activo = true),Or(currentUser.Splash_Screen=false,IsBlank(currentUser.Splash_Screen))), Onboarding, Home)
+        
+        )
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

@@ -1,0 +1,1686 @@
+Caja_Registro As screen:
+    Fill: |-
+        =ColorValue("#F5F5F5")
+    OnVisible: =Refresh('public.Medical_Center_Counter')
+
+    Rectangle_Barra_Superior_Caja_Registro As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =96
+        Width: =1366
+        ZIndex: =1
+
+    img_Logo_Caja_Registro As image:
+        Height: =80
+        Image: =getLogo
+        OnSelect: =Navigate(Home)
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =2
+
+    btn_Emergencia_Caja_Registro As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(232, 17, 17, 1)
+        Font: =Font.'Segoe UI'
+        Height: =44
+        OnSelect: |-
+            =UpdateContext({_varEmergenciaAtencionCliente:true})
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="EMERGENCIA"
+        Width: =280
+        X: =835
+        Y: =26
+        ZIndex: =10
+
+    Rectangle5_34 As rectangle:
+        Fill: =ColorFondoBoton
+        Height: =2
+        Width: =1366
+        Y: =96
+        ZIndex: =11
+
+    Image12_33 As image:
+        Height: =80
+        Image: ='Transparente Original'
+        OnSelect: =Navigate(Home)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =Not(Parent.Printing)
+        Width: =119
+        X: =631
+        Y: =8
+        ZIndex: =12
+
+    lbl_Registro_Pago_1 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        Size: =14
+        Text: ="Dede"
+        Width: =74
+        X: =673
+        Y: =172
+        ZIndex: =13
+
+    Group12_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Button2_23 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varNotificacion:true})
+            Text: =""
+            Visible: =false
+            Width: =48
+            X: =980
+            Y: =44
+            ZIndex: =3
+
+        Button2_55 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            Text: =""
+            Visible: =false
+            Width: =48
+            X: =902
+            Y: =48
+            ZIndex: =4
+
+        Button2_54 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(232, 17, 17, 1)
+            Font: =Font.'Segoe UI'
+            Height: =44
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varCorreo_DCA:true})
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Size: =14
+            Text: ="EMERGENCIA"
+            Visible: =false
+            Width: =280
+            X: =830
+            Y: =26
+            ZIndex: =5
+
+        TextInput5_61 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =48
+            PaddingLeft: =0
+            PaddingRight: =64
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =false
+            Width: =500
+            X: =309
+            Y: =24
+            ZIndex: =6
+
+        Image18_21 As image:
+            Height: =27
+            Image: ='Shape (53)'
+            Visible: =false
+            Width: =29
+            X: =762
+            Y: =34
+            ZIndex: =7
+
+        lbl_Perfil_Caja_Registro As label:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =lbl_Perfil_Caja_Registro.BorderColor
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =48
+            HoverBorderColor: =lbl_Perfil_Caja_Registro.BorderColor
+            HoverColor: =lbl_Perfil_Caja_Registro.Color
+            HoverFill: =lbl_Perfil_Caja_Registro.Fill
+            PaddingRight: =20
+            PressedBorderColor: =lbl_Perfil_Caja_Registro.BorderColor
+            PressedColor: =lbl_Perfil_Caja_Registro.Color
+            PressedFill: =lbl_Perfil_Caja_Registro.Fill
+            Size: =12
+            Text: =User().FullName
+            Width: =142
+            X: =1224
+            Y: =24
+            ZIndex: =8
+
+        img_Perfil_Caja_Registro As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =img_Perfil_Caja_Registro.BorderColor
+            Height: =48
+            HoverBorderColor: =ColorFade(img_Perfil_Caja_Registro.BorderColor, 20%)
+            HoverFill: =ColorFade(img_Perfil_Caja_Registro.Fill, 20%)
+            Image: =User().Image
+            PressedBorderColor: =ColorFade(img_Perfil_Caja_Registro.BorderColor, -20%)
+            PressedFill: =ColorFade(img_Perfil_Caja_Registro.Fill, -20%)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Width: =48
+            X: =1164
+            Y: =24
+            ZIndex: =9
+
+    txt_DatePiker_Caja_Registro_1 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =//If(varCaja=true;"";If(varCaja=false;AtencionSelected.Nombre_Paciente))
+            ""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Font: =Font.'Segoe UI'
+        Height: =36
+        HintText: =""
+        PaddingLeft: =50
+        PaddingRight: =64
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Reset: =true
+        Size: =12
+        Width: =226
+        X: =1090
+        Y: =171
+        ZIndex: =14
+
+    datePiker_Caja_Registro_1 As datepicker:
+        BorderStyle: =BorderStyle.None
+        DefaultDate: =
+        Font: =Font.'Segoe UI'
+        Height: =26
+        IconBackground: =RGBA(255, 255, 255, 1)
+        IconFill: =RGBA(0, 0, 0, 1)
+        InputTextPlaceholder: =
+        Size: =12
+        Width: =209
+        X: =1093
+        Y: =176
+        ZIndex: =15
+
+    lbl_Registro_Pago_2 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        Size: =14
+        Text: ="Hasta "
+        Width: =79
+        X: =1005
+        Y: =172
+        ZIndex: =16
+
+    Button9_1 As button:
+        BorderColor: =ColorFondoBoton
+        Fill: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =44
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: =""
+        Width: =49
+        X: =1267
+        Y: =109
+        ZIndex: =17
+
+    Button9_2 As button:
+        BorderColor: =ColorFondoBoton
+        Fill: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: =""
+        Width: =49
+        X: =1187
+        Y: =109
+        ZIndex: =18
+
+    txt_DatePiker_Caja_Registro As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =//If(varCaja=true;"";If(varCaja=false;AtencionSelected.Nombre_Paciente))
+            ""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Font: =Font.'Segoe UI'
+        Height: =36
+        HintText: =""
+        PaddingLeft: =50
+        PaddingRight: =64
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Reset: =true
+        Size: =12
+        Width: =226
+        X: =748
+        Y: =172
+        ZIndex: =19
+
+    datePiker_Caja_Registro As datepicker:
+        BorderStyle: =BorderStyle.None
+        DefaultDate: =
+        Font: =Font.'Segoe UI'
+        Height: =26
+        IconBackground: =RGBA(255, 255, 255, 1)
+        IconFill: =RGBA(0, 0, 0, 1)
+        InputTextPlaceholder: =
+        Size: =12
+        Width: =209
+        X: =751
+        Y: =177
+        ZIndex: =20
+
+    btn_Registro_Caja_Registro As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =ColorFondoBoton
+        FocusedBorderColor: =btn_Registro_Caja_Registro.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn_Registro_Caja_Registro.BorderColor, 20%)
+        HoverFill: =ColorFondoBoton
+        OnSelect: =Navigate('Atencion Cliente Dashboard');Refresh('public.Medical_Center_Counter')
+        PaddingLeft: =15
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFondoBoton
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Registro"
+        Width: =216
+        X: =30
+        Y: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Reportes)="Limitado",202,367)
+        ZIndex: =21
+
+    img_Registro_Caja_Registro As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Registro_Caja_Registro.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Registro_Caja_Registro.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Registro_Caja_Registro.Fill, 20%)
+        Image: ='Shape (94)'
+        OnSelect: =Navigate('Atencion Cliente Dashboard')
+        PressedBorderColor: =ColorFade(img_Registro_Caja_Registro.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Registro_Caja_Registro.Fill, -20%)
+        Width: =25
+        X: =53
+        Y: =btn_Registro_Caja_Registro.Y+15
+        ZIndex: =22
+
+    btn_Dashboard_Caja_Registro As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn_Dashboard_Caja_Registro.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn_Dashboard_Caja_Registro.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(Caja)
+        PaddingLeft: =25
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255,255,255,1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Dashboard"
+        Width: =216
+        X: =30
+        Y: =120
+        ZIndex: =23
+
+    img_Dashboard_Dashboard_Caja_Registro As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Dashboard_Dashboard_Caja_Registro.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Dashboard_Dashboard_Caja_Registro.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Dashboard_Dashboard_Caja_Registro.Fill, 20%)
+        Image: ='Shape (91)'
+        OnSelect: =Navigate(Caja)
+        PressedBorderColor: =ColorFade(img_Dashboard_Dashboard_Caja_Registro.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Dashboard_Dashboard_Caja_Registro.Fill, -20%)
+        Width: =25
+        X: =53
+        Y: =137
+        ZIndex: =24
+
+    btn_Salir_Caja_Registro As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn_Salir_Caja_Registro.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn_Salir_Caja_Registro.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(Home)
+        PaddingLeft: =0
+        PaddingRight: =35
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255,255,255,1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Salir"
+        Width: =216
+        X: =30
+        Y: =676
+        ZIndex: =25
+
+    img_Salir_Caja_Registro As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Salir_Caja_Registro.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Salir_Caja_Registro.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Salir_Caja_Registro.Fill, 20%)
+        Image: ='Shape (87)'
+        OnSelect: =Navigate(Home)
+        PressedBorderColor: =ColorFade(img_Salir_Caja_Registro.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Salir_Caja_Registro.Fill, -20%)
+        Width: =25
+        X: =53
+        Y: =693
+        ZIndex: =26
+
+    Rectangle_Separador_Caja_Registro As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle_Separador_Caja_Registro.Fill
+        Fill: =RGBA(147, 147, 147, 1)
+        FocusedBorderColor: =Rectangle_Separador_Caja_Registro.BorderColor
+        Height: =672
+        HoverFill: =Rectangle_Separador_Caja_Registro.Fill
+        PressedFill: =Rectangle_Separador_Caja_Registro.Fill
+        Width: =1
+        X: =276
+        Y: =96
+        ZIndex: =27
+
+    gal_Caja_Registro As gallery.galleryVertical:
+        Height: =548
+        Items: |-
+            =   If(IsBlank(datePiker_Caja_Registro.SelectedDate),   Search( SortByColumns(  Filter('public.Medical_Center_Pagos',Estatus="Pagado", id_sede = _varSede.id ),"id",SortOrder.Descending),Proper(txt_Buscador_Caja_Registro.Text),"DNI_RUC","Tipo_Pago","Tipo_Resgistro","Paciente","Nombre_Doctor"),
+            
+               Search( SortByColumns(  Filter('public.Medical_Center_Pagos',Estatus="Pagado" Or Estatus="Devolución", id_sede = _varSede.id ,DateValue(Text(Fecha,"dd/mm/yyyy")) >= DateValue(Text( datePiker_Caja_Registro.SelectedDate,"dd/mm/yyyy")) && DateValue(Text(Fecha,"dd/mm/yyyy")) <= DateValue(Text( datePiker_Caja_Registro_1.SelectedDate,"dd/mm/yyyy")) ),"id",SortOrder.Descending),Proper(txt_Buscador_Caja_Registro.Text),"DNI_RUC","Tipo_Pago","Tipo_Resgistro","Paciente","Nombre_Doctor")
+               )
+               
+                 
+            
+                                
+            
+            
+            
+            
+            
+                                
+        Layout: =Layout.Vertical
+        TemplateSize: =128
+        Width: =1088
+        X: =277
+        Y: =219
+        ZIndex: =28
+
+        TextInput12_2 As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =104
+            OnSelect: =Select(Parent)
+            PaddingLeft: =5
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =1030
+            X: =30
+            Y: =16
+            ZIndex: =1
+
+        ButtonAtender_19 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =If(ThisItem.Estatus="Devolución",DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =ColorFondoBoton
+            Font: =Font.'Segoe UI'
+            Height: =44
+            HoverBorderColor: =ColorFondoBoton
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =/*Patch('public.Medical_Center_Counter';LookUp('public.Medical_Center_Counter';id=ThisItem.id);
+                {   
+                  estado:"En Cola";
+                  etapa:"Triaje";
+                  usuario:User().Email
+                })
+                
+                */
+                Set(CajaRegistroSelected,ThisItem);
+                UpdateContext({_varCajaRegistro:true})
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: =If(ThisItem.Estatus="Devolución" ,"DEVOLUCIÓN","VER PAGO")
+            Visible: |
+                =true
+            Width: =185
+            X: =824
+            Y: =45
+            ZIndex: =2
+
+        num_ticket_record_55 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =22
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                = "Paciente:"
+            Width: =81
+            X: =50
+            Y: =40
+            ZIndex: =3
+
+        num_ticket_record_56 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =22
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                =//ThisItem.Paciente
+                If(Len(ThisItem.Paciente)<19,ThisItem.Paciente,Left(ThisItem.Paciente,16)&"...")
+            Width: =209
+            X: =123
+            Y: =40
+            ZIndex: =4
+
+        num_ticket_record_61 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =22
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                ="Servicio:"
+            Width: =81
+            X: =50
+            Y: =72
+            ZIndex: =5
+
+        num_ticket_record_62 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                =//If(ThisItem.estado="En Cola";Substitute(ThisItem.Servicio;"Cita: ";"");ThisItem.estado)
+                ThisItem.Servicio
+            Width: =209
+            X: =123
+            Y: =72
+            ZIndex: =6
+
+        num_ticket_record_57 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =22
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                ="Médico:"
+            Width: =81
+            X: =332
+            Y: =41
+            ZIndex: =7
+
+        num_ticket_record_63 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =22
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                ="Fecha:"
+            Width: =81
+            X: =332
+            Y: =73
+            ZIndex: =9
+
+        num_ticket_record_64 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =22
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =Text(ThisItem.Fecha,"dd/mm/yyyy")
+            Width: =167
+            X: =399
+            Y: =73
+            ZIndex: =10
+
+        num_ticket_record_59 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =22
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                ="Tipo:"
+            Width: =81
+            X: =569
+            Y: =41
+            ZIndex: =11
+
+        num_ticket_record_60 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =22
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                =ThisItem.Tipo_Resgistro
+                 /* If(LookUp('public.Medical_Center_Historial_Principal';DNI_CI=ThisItem.DNI_Paciente;DNI_CI)=ThisItem.DNI_Paciente;"Rellenada";"Falta Rellenar") */
+            Width: =166
+            X: =638
+            Y: =41
+            ZIndex: =12
+
+        num_ticket_record_65 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =22
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                ="Medio:"
+            Width: =81
+            X: =569
+            Y: =73
+            ZIndex: =13
+
+        num_ticket_record_66 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =21
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Tipo_Pago
+            Width: =186
+            X: =638
+            Y: =73
+            ZIndex: =14
+
+        num_ticket_record_58 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =22
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Nombre_Doctor
+            Width: =170
+            X: =399
+            Y: =40
+            ZIndex: =15
+
+    lbl_Registro_Pago As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =39
+        Size: =16
+        Text: ="Registro de Pagos"
+        Width: =532
+        X: =306
+        Y: =120
+        ZIndex: =29
+
+    txt_Buscador_Caja_Registro As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: |-
+            =//If(varCaja=true;"";If(varCaja=false;AtencionSelected.Nombre_Paciente))
+            ""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =36
+        HintText: ="Buscar"
+        PaddingLeft: =50
+        PaddingRight: =64
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Reset: =true
+        Size: =12
+        Width: =342
+        X: =306
+        Y: =172
+        ZIndex: =30
+
+    img_Lupa_Caja_Registro As image:
+        Height: =14
+        Image: ='Shape (53)'
+        Width: =19
+        X: =322
+        Y: =183
+        ZIndex: =31
+
+    Label40_29 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =24
+        Size: =12
+        Text: =
+        Width: =89
+        X: =63
+        Y: =253
+        ZIndex: =32
+
+    Label40_30 As label:
+        Font: =Font.'Segoe UI'
+        Height: =24
+        Size: =12
+        Text: =CajaRegistroSelected.Monto
+        Visible: =false
+        Width: =76
+        X: =364
+        Y: =257
+        ZIndex: =33
+
+    Icon_Refresh As icon.Reload:
+        Color: =ColorFondoBoton
+        Height: =44
+        Icon: =Icon.Reload
+        OnSelect: =Refresh('public.Medical_Center_Pagos');Refresh('public.Medical_Center_Counter');Reset(datePiker_Caja_Registro);Reset(datePiker_Caja_Registro_1)
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        Width: =49
+        X: =1267
+        Y: =109
+        ZIndex: =41
+
+    Label55 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =120
+        Size: =16
+        Text: ="No hay servicios pagados"
+        Visible: =If(IsEmpty( Filter('public.Medical_Center_Pagos',Estatus="Pagado", id_sede = _varSede.id )),true,false)
+        Width: =670
+        X: =440
+        Y: =412
+        ZIndex: =42
+
+    Icon19 As icon.Download:
+        Color: =ColorFondoBoton
+        Height: =44
+        Icon: =Icon.Download
+        OnSelect: |-
+            =//No tocar ni mover el codigo, se altera el formato csv
+            
+            Set(
+                Random,
+                Rand()
+            );
+            Set(
+                NombreArchivo,
+                "Registro de Pago " & Today()
+            );
+            ForAll(
+                gal_Caja_Registro.AllItems As AsPago,
+                Collect(
+                    colDatosExportar,
+                    {
+                        Tipo_Pago: AsPago.Tipo_Pago,
+                        Monto: AsPago.Monto,
+                        Paciente: AsPago.Paciente,
+                        Tipo_Registro: AsPago.Tipo_Resgistro,
+                        DNI_RUC: AsPago.DNI_RUC,
+                        Nombre_Doctor: AsPago.Nombre_Doctor,
+                        Servicio: AsPago.Servicio,
+                        Fecha: AsPago.Fecha
+                    }
+                )
+            );
+            //No tocar ni mover el contenido de la variable, se altera el formato csv
+            Set(
+                ExportCSV,
+                "Tipo_Pago;Monto;Paciente;Tipo_Registro;DNI_RUC;Nombre_Doctor;Servicio;Fecha
+            " & Concat(
+                    colDatosExportar,
+                    Tipo_Pago & ";" & Monto & ";" & Paciente & ";" & Tipo_Registro & ";" & DNI_RUC & ";" & Nombre_Doctor & ";" & Servicio & ";" & Fecha & Char(10)
+                )
+            );
+            CSV_RegistroPago.Run(
+                NombreArchivo,
+                ExportCSV,
+                User().Email
+            );
+            Clear(colDatosExportar);
+            Notify(
+                "Se le acaba de enviar el documento a su correo",
+                NotificationType.Success,
+                2000
+            )
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        Width: =49
+        X: =1187
+        Y: =109
+        ZIndex: =43
+
+    btn__Dashboard_Caja_2 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn__Dashboard_Caja_2.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn__Dashboard_Caja_2.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(Caja_Informes)
+        PaddingLeft: =15
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255,255,255,1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Informes"
+        Visible: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Reportes)="Limitado",false,true)
+        Width: =216
+        X: =30
+        Y: =287
+        ZIndex: =44
+
+    img_Dashboard_Caja_2 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Dashboard_Caja_2.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Dashboard_Caja_2.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Dashboard_Caja_2.Fill, 20%)
+        Image: ='Shape (100)'
+        OnSelect: =Navigate(Caja_Informes)
+        PressedBorderColor: =ColorFade(img_Dashboard_Caja_2.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Dashboard_Caja_2.Fill, -20%)
+        Visible: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Reportes)="Limitado",false,true)
+        Width: =25
+        X: =53
+        Y: =304
+        ZIndex: =45
+
+    btn_Registro_Caja_2 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn_Registro_Caja_2.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn_Registro_Caja_2.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(Caja_Resumen)
+        PaddingLeft: =15
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255,255,255,1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Resumen"
+        Tooltip: =
+        Visible: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Reportes)="Limitado",false,true)
+        Width: =216
+        X: =30
+        Y: =204
+        ZIndex: =46
+
+    img_Registro_Caja_2 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Registro_Caja_2.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Registro_Caja_2.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Registro_Caja_2.Fill, 20%)
+        Image: ='MicrosoftTeams-image (14)'
+        OnSelect: =Navigate(Caja_Resumen)
+        PressedBorderColor: =ColorFade(img_Registro_Caja_2.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Registro_Caja_2.Fill, -20%)
+        Tooltip: =
+        Visible: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Reportes)="Limitado",false,true)
+        Width: =25
+        X: =53
+        Y: =219
+        ZIndex: =47
+
+    Rectangle_Pago_Registrado As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.27)
+        Height: =768
+        OnSelect: |-
+            =UpdateContext({_varCajaRegistro:false})
+        Visible: =_varCajaRegistro
+        Width: =1366
+        ZIndex: =48
+
+    Group15_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =52
+
+        txt_Fondo_Detalle As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =530
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varCaja
+            Width: =544
+            X: =424
+            Y: =103
+            ZIndex: =67
+
+        img_Logo_Detalle As image:
+            Height: =80
+            Image: =getLogo
+            Visible: =_varCaja
+            Width: =119
+            X: =439
+            Y: =114
+            ZIndex: =68
+
+        lbl_Paciente_Detalle As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: |-
+                ="Paciente:"
+            Visible: =_varCaja
+            Width: =89
+            X: =444
+            Y: =207
+            ZIndex: =69
+
+        lbl_Medico_Detalle As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: |-
+                ="Médico:"
+            Visible: =_varCaja
+            Width: =89
+            X: =444
+            Y: =247
+            ZIndex: =70
+
+        lbl_DNI_Detalle As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: |-
+                ="DNI:"
+            Visible: =_varCaja
+            Width: =89
+            X: =812
+            Y: =207
+            ZIndex: =71
+
+        lbl_fecha_Etiqueta_Detalle As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: |-
+                ="Fecha:"
+            Visible: =_varCaja
+            Width: =79
+            X: =812
+            Y: =247
+            ZIndex: =72
+
+        lbl_Nombre_Paciente As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =24
+            Size: =12
+            Text: =CajaRegistroSelected.Paciente
+            Visible: =_varCaja
+            Width: =248
+            X: =517
+            Y: =207
+            ZIndex: =73
+
+        lbl_Nombre_Medico As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =24
+            Size: =12
+            Text: =LookUp('public.Medical_Center_Usuario',Correo=CajaRegistroSelected.Usuario,Usuario)
+            Visible: =_varCaja
+            Width: =248
+            X: =517
+            Y: =247
+            ZIndex: =74
+
+        lbl_Nro_DNI_Detalle As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =24
+            Size: =12
+            Text: =CajaRegistroSelected.DNI_Paciente
+            Visible: =_varCaja
+            Width: =121
+            X: =853
+            Y: =207
+            ZIndex: =75
+
+        lbl_fecha_Detalle As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =24
+            Size: =12
+            Text: =Text(CajaRegistroSelected.Fecha,"dd/mm/yyyy")
+            Visible: =_varCaja
+            Width: =108
+            X: =866
+            Y: =247
+            ZIndex: =76
+
+        Rectangle25_2 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =2
+            Visible: =_varCaja
+            Width: =510
+            X: =444
+            Y: =295
+            ZIndex: =77
+
+        lbl_Etiqueta_Servicio As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: ="Servicio"
+            Visible: =_varCaja
+            Width: =89
+            X: =487
+            Y: =319
+            ZIndex: =78
+
+        lbl_Etiqueta_Total As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: ="Total"
+            Visible: =_varCaja
+            Width: =76
+            X: =892
+            Y: =319
+            ZIndex: =79
+
+        lbl_Monto_Servicio As label:
+            Font: =Font.'Segoe UI'
+            Height: =24
+            Size: =12
+            Text: |-
+                =varSimboloMaestros & Text(Value(Label40_30.Text),"# ###.00")
+            Visible: =_varCaja
+            Width: =76
+            X: =880
+            Y: =359
+            ZIndex: =80
+
+        lbl_Nro_Servicio As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: ="1"
+            Visible: =_varCaja
+            Width: =26
+            X: =444
+            Y: =359
+            ZIndex: =81
+
+        lbl_Descripcion_Servicio As label:
+            Font: =Font.'Segoe UI'
+            Height: =24
+            Size: =12
+            Text: |-
+                =//If(CajaSelected.estado="En Cola";Substitute(CajaSelected.Servicio;"Cita: ";"");CajaSelected.estado)
+                CajaRegistroSelected.Servicio
+            Visible: =_varCaja
+            Width: =221
+            X: =486
+            Y: =359
+            ZIndex: =82
+
+        Rectangle25_3 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =1
+            Visible: =_varCaja
+            Width: =462
+            X: =486
+            Y: =399
+            ZIndex: =83
+
+        lbl_Etiqueta_Precio As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: ="Precio" 
+            Visible: =_varCaja
+            Width: =76
+            X: =767
+            Y: =415
+            ZIndex: =84
+
+        lbl_Precio As label:
+            Font: =Font.'Segoe UI'
+            Height: =24
+            Size: =12
+            Text: |-
+                =varSimboloMaestros & Text(Round(Value(Label40_30.Text)/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%))+1),2),"# ###.00")
+            Visible: =_varCaja
+            Width: =76
+            X: =880
+            Y: =415
+            ZIndex: =85
+
+        lbl_Etiqueta_IGV As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: =If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES","I.G.V 18%","I.V.A 16%" )
+            Visible: =_varCaja
+            Width: =97
+            X: =767
+            Y: =447
+            ZIndex: =86
+
+        lbl_GV As label:
+            Font: =Font.'Segoe UI'
+            Height: =24
+            Size: =12
+            Text: |-
+                =varSimboloMaestros & Text(Round(Value(Label40_30.Text)/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%))+1),2)*Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%)),"# ###.00")
+            Visible: =_varCaja
+            Width: =76
+            X: =880
+            Y: =447
+            ZIndex: =87
+
+        lbl_Etiqueta_Monto_Total As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: ="TOTAL" 
+            Visible: =_varCaja
+            Width: =76
+            X: =767
+            Y: =479
+            ZIndex: =88
+
+        lbl_MonotTotal_Descripcion As label:
+            Font: =Font.'Segoe UI'
+            Height: =24
+            Size: =12
+            Text: |-
+                =varSimboloMaestros & Text(Sum(Round(Value(Label40_30.Text)/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%))+1),2),Round(Value(Label40_30.Text)/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%))+1),2)*Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%))),"# ###.00")
+            Visible: =_varCaja
+            Width: =76
+            X: =880
+            Y: =479
+            ZIndex: =89
+
+    Group_Imprimir_Detalle As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =64
+
+        Button2_151 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            Text: =""
+            Visible: =false
+            Width: =48
+            X: =836
+            Y: =116
+            ZIndex: =34
+
+        Icon3_66 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Print
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Visible: =false
+            Width: =40
+            X: =840
+            Y: =120
+            ZIndex: =35
+
+        Button2_152 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Text: =""
+            Visible: =false
+            Width: =48
+            X: =836
+            Y: =116
+            ZIndex: =36
+
+    Rectangle_Detalle As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.27)
+        Height: =768
+        Visible: =_varCaja
+        Width: =1366
+        ZIndex: =66
+
+    Group13_7 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =81
+
+        Rectangle_Emregencia_Caja_Registro As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.3)
+            Height: =768
+            OnSelect: |-
+                =UpdateContext({_varEmergenciaAtencionCliente:false})
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =1366
+            ZIndex: =37
+
+        txt_Fondo_Emergencia_Caja_Registro As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =404
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =404
+            X: =513
+            Y: =138
+            ZIndex: =38
+
+        lbl_Emergencia_Caja_Registro As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =44
+            Size: =27
+            Text: ="Emergencia"
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =400
+            X: =513
+            Y: =162
+            ZIndex: =39
+
+        img_btn_Emergencia_Caja_Registro As image:
+            Height: =376
+            Image: ='Group 92'
+            OnSelect: |-
+                =UpdateContext({_varEmergenciaAtencionCliente:false})
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =361
+            X: =513
+            Y: =156
+            ZIndex: =40
+
+    icon_Cerrar_Detalle As icon.Cancel:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =37
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({_varCaja:false});
+            UpdateContext({_varRegistrarPago:false})
+        Visible: =_varCaja
+        Width: =38
+        X: =912
+        Y: =120
+        ZIndex: =90
+
+    Rectangle_Cancelar_Pago As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.29)
+        Height: =768
+        OnSelect: |-
+            =UpdateContext({_varCajaDevolver:false});
+        Visible: =_varCajaDevolver
+        Width: =1366
+        ZIndex: =91
+
+    Group22 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =93
+
+        txt_Fondo_Pago_Registrado As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =572
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varCajaRegistro
+            Width: =400
+            X: =543
+            Y: =108
+            ZIndex: =49
+
+        lbl_Pago_Registrado As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =16
+            Text: ="Pago Registrado"
+            Visible: =_varCajaRegistro
+            Width: =302
+            X: =563
+            Y: =130
+            ZIndex: =50
+
+        lbl_Tipo As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Size: =12
+            Text: |-
+                ="Tipo:"
+            Visible: =_varCajaRegistro
+            X: =563
+            Y: =200
+            ZIndex: =51
+
+        lbl_DNI_Caja_Registro As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Size: =12
+            Text: |-
+                ="DNI:"
+            Visible: =_varCajaRegistro
+            X: =563
+            Y: =244
+            ZIndex: =52
+
+        lbl_Paciente_Caja_Registro As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Size: =12
+            Text: |-
+                ="Paciente:"
+            Visible: =_varCajaRegistro
+            X: =563
+            Y: =288
+            ZIndex: =53
+
+        lbl_Total_Caja_Registro As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Size: =12
+            Text: |-
+                ="Total:"
+            Visible: =_varCajaRegistro
+            X: =563
+            Y: =332
+            ZIndex: =54
+
+        lbl_Medio_Pago As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Size: =12
+            Text: |-
+                ="Medio de Pago:"
+            Visible: =_varCajaRegistro
+            Width: =136
+            X: =563
+            Y: =374
+            ZIndex: =55
+
+        lbl_Evidencia_Caja_Registro As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Size: =12
+            Text: |-
+                ="Evidencia:"
+            Visible: =_varCajaRegistro
+            X: =563
+            Y: =420
+            ZIndex: =56
+
+        lbl_Tipo_Registro As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Size: =12
+            Text: =CajaRegistroSelected.Tipo_Resgistro
+            Visible: =_varCajaRegistro
+            X: =691
+            Y: =200
+            ZIndex: =57
+
+        lbl_DNI_Paciente As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Size: =12
+            Text: =CajaRegistroSelected.DNI_Paciente
+            Visible: =_varCajaRegistro
+            X: =691
+            Y: =244
+            ZIndex: =58
+
+        lbl_Paciente_Pago_Registrado As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Size: =12
+            Text: =CajaRegistroSelected.Paciente
+            Visible: =_varCajaRegistro
+            X: =691
+            Y: =288
+            ZIndex: =59
+
+        lbl_Monto_Pago_Registrado As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Size: =12
+            Text: |-
+                =varSimboloMaestros & Text(CajaRegistroSelected.Monto,"# ###.00")
+            Visible: =_varCajaRegistro
+            X: =691
+            Y: =332
+            ZIndex: =60
+
+        lbl_Tipo_Pago As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Size: =12
+            Text: |
+                =CajaRegistroSelected.Tipo_Pago
+            Visible: =_varCajaRegistro
+            X: =691
+            Y: =374
+            ZIndex: =61
+
+        img_Evidencia_Caja_Registro As image:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Height: =90
+            Image: |
+                =If(IsBlank(CajaRegistroSelected.id_Image),SampleImage,AzureBlobStorage.GetFileContent(CajaRegistroSelected.id_Image))
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varCajaRegistro
+            Width: =90
+            X: =691
+            Y: =434
+            ZIndex: =62
+
+        btn_Ver_Detalle As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =ColorFondoBoton
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =44
+            HoverBorderColor: =ColorFondoBoton
+            HoverColor: =ColorFondoBoton
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =/*Patch('public.Medical_Center_Counter';LookUp('public.Medical_Center_Counter';id=ThisItem.id);
+                {   
+                  estado:"En Cola";
+                  etapa:"Triaje";
+                  usuario:User().Email
+                })
+                
+                */
+                
+                UpdateContext({_varCaja:true});
+                UpdateContext({_varCajaRegistro:false})
+            PressedColor: =ColorFondoBoton
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="VER DETALLES"
+            Visible: =_varCajaRegistro
+            Width: =360
+            X: =563
+            Y: =546
+            ZIndex: =63
+
+        btn_Cancelar_Pago As button:
+            BorderColor: =RGBA(232, 17, 17, 1)
+            Color: =RGBA(232, 17, 17, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =44
+            HoverFill: =RGBA(232, 17, 17, 1)
+            OnSelect: |
+                =/*Patch('public.Medical_Center_Counter';LookUp('public.Medical_Center_Counter';id=ThisItem.id);
+                {   
+                  estado:"En Cola";
+                  etapa:"Triaje";
+                  usuario:User().Email
+                })
+                
+                */
+                UpdateContext({_varCajaRegistro:false});
+                UpdateContext({_varCajaDevolver:true});
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="CANCELAR PAGO REGISTRADO"
+            Visible: =_varCajaRegistro
+            Width: =360
+            X: =563
+            Y: =606
+            ZIndex: =64
+
+        icon_Cerrar_Caja_Registro As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =30
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({_varCajaRegistro:false})
+            Visible: =_varCajaRegistro
+            Width: =30
+            X: =895
+            Y: =140
+            ZIndex: =65
+
+    Group23 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =99
+
+        txt_Fondo_Cancelar_Pedido As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =222
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varCajaDevolver
+            Width: =420
+            X: =536
+            Y: =266
+            ZIndex: =92
+
+        lbl_Etiqueta_Cancelar_Pago As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =44
+            Size: =16
+            Text: ="Cancelar Pago Registrado"
+            Visible: =_varCajaDevolver
+            Width: =420
+            X: =536
+            Y: =286
+            ZIndex: =93
+
+        lbl_Descripcion_Cancelar_Pago As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =48
+            Size: =12
+            Text: ="¿Estás seguro que deseas cancelar el pago registrado? Esta acción no se puede revertir"
+            Visible: =_varCajaDevolver
+            Width: =380
+            X: =556
+            Y: =330
+            ZIndex: =94
+
+        btn_No_Volver As button:
+            BorderColor: =ColorFondoBoton
+            Color: =ColorFondoBoton
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =44
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =UpdateContext({_varCajaDevolver:false})
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="NO, VOLVER"
+            Visible: =_varCajaDevolver
+            Width: =180
+            X: =556
+            Y: =414
+            ZIndex: =95
+
+        btn_Si_Cancelar As button:
+            BorderColor: =RGBA(232, 17, 17, 1)
+            Color: =RGBA(232, 17, 17, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =44
+            HoverColor: =RGBA(232, 17, 17, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =Patch('public.Medical_Center_Pagos',LookUp('public.Medical_Center_Pagos',id=CajaRegistroSelected.id),
+                {Estatus:"Devolución"
+                });
+                
+                Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=CajaRegistroSelected.id_ticket),
+                {   
+                  estado:"En Cola",
+                  etapa:"Caja"
+                 
+                });
+                UpdateContext({_varCajaDevolver:false})
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="SI, CANCELAR"
+            Visible: =_varCajaDevolver
+            Width: =180
+            X: =756
+            Y: =414
+            ZIndex: =96
+

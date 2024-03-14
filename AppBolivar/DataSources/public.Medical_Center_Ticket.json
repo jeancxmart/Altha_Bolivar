@@ -1,0 +1,35 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:51:59.4270000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "cita_finalizada": "cita_finalizada",
+      "Correo": "Correo",
+      "Doctor": "Doctor",
+      "Estatus": "Estatus",
+      "fecha_cita": "fecha_cita",
+      "fecha_creacion": "fecha_creacion",
+      "hora_cita": "hora_cita",
+      "id": "id",
+      "id_especialidad_x_sede": "id_especialidad_x_sede",
+      "id_Pacientes_DNI": "id_Pacientes_DNI",
+      "id_servicio": "id_servicio",
+      "Nacionalidad": "Nacionalidad",
+      "Nombre_Paciente": "Nombre_Paciente",
+      "Nota": "Nota",
+      "Servicio": "Servicio",
+      "Sexo": "Sexo",
+      "Telefono_Celular": "Telefono_Celular"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Ticket",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "Activo": "Activo",
+      "Consultorio_Medico": "Consultorio_Medico",
+      "fecha_Bloqueo": "fecha_Bloqueo",
+      "HoraFinal": "HoraFinal",
+      "HoraInicial": "HoraInicial",
+      "id": "id",
+      "id_sede": "id_sede",
+      "UsuarioCorreo": "UsuarioCorreo"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Calendario_Bloquear",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

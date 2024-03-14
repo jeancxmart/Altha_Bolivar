@@ -1,0 +1,34 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2023-04-19T17:06:20.5090000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "Altura": "Altura",
+      "Apertura_Ocular": "Apertura_Ocular",
+      "Categoria": "Categoria",
+      "DNI_CI": "DNI_CI",
+      "Edad": "Edad",
+      "fecha": "fecha",
+      "Frecuencia_Cardiaca": "Frecuencia_Cardiaca",
+      "Glucemia_Capilar": "Glucemia_Capilar",
+      "id": "id",
+      "IMC": "IMC",
+      "Peso": "Peso",
+      "Presion_Arterial": "Presion_Arterial",
+      "Referido": "Referido",
+      "Saturacion_Oxigeno": "Saturacion_Oxigeno",
+      "Sexo": "Sexo",
+      "Temperatura": "Temperatura"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Triaje",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

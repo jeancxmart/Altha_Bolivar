@@ -1,0 +1,30 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "consultorio_medico": "consultorio_medico",
+      "DNI_Paciente_Test": "DNI_Paciente_Test",
+      "fecha_test": "fecha_test",
+      "id": "id",
+      "id_Documento": "id_Documento",
+      "id_sede": "id_sede",
+      "nombre": "nombre",
+      "nombre_Documento": "nombre_Documento",
+      "preguntas": "preguntas",
+      "resultado": "resultado",
+      "tipo": "tipo",
+      "url_Documento": "url_Documento"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Test_Paciente",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

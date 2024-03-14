@@ -1,0 +1,30 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "accion_terapeutica": "accion_terapeutica",
+      "codigo": "codigo",
+      "composicion": "composicion",
+      "Consultorio": "Consultorio",
+      "id": "id",
+      "id_sede": "id_sede",
+      "indicaciones_y_observaciones": "indicaciones_y_observaciones",
+      "medicamento": "medicamento",
+      "Personalizable": "Personalizable",
+      "restriccion_de_uso": "restriccion_de_uso",
+      "sustanciaActiva": "sustanciaActiva",
+      "unidad_manejo": "unidad_manejo"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Medicamentos",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

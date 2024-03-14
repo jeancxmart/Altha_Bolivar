@@ -1,0 +1,248 @@
+Onboarding As screen:
+    Fill: =RGBA(241, 242, 246, 1)
+    OnVisible: |-
+        =Set(Onboarding1,true);
+        Set(Onboarding2,false);
+        Set(Onboarding3,false);
+        Set(Onboarding4,false);
+
+    imgContenido As image:
+        Height: =If(Onboarding4,275,226)
+        Image: =If(Onboarding1,'Group 175',If(Onboarding2,ob2,If(Onboarding3,ob3,If(Onboarding4,ob4))))
+        ImagePosition: =If(Onboarding1,ImagePosition.Fill,ImagePosition.Fit)
+        Width: =340
+        X: =185
+        Y: =If(Onboarding4,247,272)
+        ZIndex: =1
+
+    lblContenido As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        Height: =128
+        Size: =18
+        Text: |-
+            =
+            If(Onboarding1,"Realiza el agendamiento de tu cita de manera Online sin complicaciones ni largas esperas, elige la fecha y hora que mejor se ajuste a tu agenda y confirma tu cita con unos pocos pasos.",
+            If(Onboarding2,"Mejora la experiencia de tus pacientes al brindarles la información que necesitan de forma rápida y precisa. También podrás gestionar las citas pendientes y el historial clínico.",If(Onboarding3,"Gestiona los movimientos financieros generados por la atención de pacientes, y obtén estadísticas de las operaciones y reportes del funcionamiento de su consultorio.",If(Onboarding4,"Agiliza el proceso de atención de tus pacientes, tendrás acceso a la historia clínica, el manejo de tratamientos automatizados, y podrás generar recetas, descansos médicos y exámenes solicitados de una forma sencilla."))))
+        Width: =606
+        X: =611
+        Y: =324
+        ZIndex: =2
+
+    lblTitulo As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =52
+        Size: =28
+        Text: =If(Onboarding1,"Agendamiento de cita Online",If(Onboarding2,"Módulo Atención al Cliente",If(Onboarding3,"Módulo Caja",If(Onboarding4,"Módulo Atención Médica"))))
+        Width: =600
+        X: =611
+        Y: =241
+        ZIndex: =3
+
+    derecha1 As image:
+        Height: =40
+        Image: ='Shape - 2023-05-29T134506.122'
+        OnSelect: |-
+            =Set(Onboarding1,false);
+            Set(Onboarding2,true);
+            Set(Onboarding3,false);
+            Set(Onboarding4,false);
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Visible: =Onboarding1
+        Width: =40
+        X: =1251
+        Y: =348
+        ZIndex: =4
+
+    btnOmitir As button:
+        BorderColor: =
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(44, 97, 112, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        HoverColor: =RGBA(44, 97, 112, 1)
+        HoverFill: =
+        OnSelect: |-
+            =
+            
+                
+                    Patch(
+                        'public.Medical_Center_Usuario',
+                        First(Filter('public.Medical_Center_Usuario',Correo=User().Email)),
+                        {Splash_Screen: true}
+                    )
+                ;Navigate(Home)
+        PaddingLeft: =0
+        PaddingRight: =0
+        PressedColor: =RGBA(44, 97, 112, 1)
+        PressedFill: =
+        Size: =14
+        Text: ="Omitir"
+        Width: =61
+        X: =1143
+        Y: =143
+        ZIndex: =5
+
+    circuloOnboarding1 As circle:
+        Fill: =RGBA(44, 97, 112, 0.2)
+        Height: =20
+        Width: =20
+        X: =821
+        Y: =508
+        ZIndex: =6
+
+    circuloOnboarding2 As circle:
+        Fill: =RGBA(44, 97, 112, 0.2)
+        Height: =20
+        Width: =20
+        X: =If(Onboarding3 ||Onboarding4 ,861,901)
+        Y: =508
+        ZIndex: =7
+
+    circuloOnboarding3 As circle:
+        Fill: =RGBA(44, 97, 112, 0.2)
+        Height: =20
+        Width: =20
+        X: =If(Onboarding4 ,901,941)
+        Y: =508
+        ZIndex: =8
+
+    circuloOnboarding4 As circle:
+        Fill: =RGBA(44, 97, 112, 0.2)
+        Height: =20
+        Width: =20
+        X: =981
+        Y: =508
+        ZIndex: =9
+
+    txtCirculoOnboarding As text:
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        DisabledFill: =RGBA(44, 97, 112, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =20
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Width: =60
+        X: =If(Onboarding1,821,If(Onboarding2,862,If(Onboarding3,901,If(Onboarding4,941))))
+        Y: =508
+        ZIndex: =10
+
+    derecha2 As image:
+        Height: =40
+        Image: ='Shape - 2023-05-29T134506.122'
+        OnSelect: |-
+            =Set(Onboarding1,false);
+            Set(Onboarding2,false);
+            Set(Onboarding3,true);
+            Set(Onboarding4,false);
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Visible: =Onboarding2
+        Width: =40
+        X: =1251
+        Y: =348
+        ZIndex: =12
+
+    izquierda2 As image:
+        Height: =40
+        Image: ='Shape - 2023-05-29T141734.050'
+        OnSelect: |-
+            =Set(Onboarding1,true);
+            Set(Onboarding2,false);
+            Set(Onboarding3,false);
+            Set(Onboarding4,false);
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Visible: =Onboarding2
+        Width: =40
+        X: =75
+        Y: =348
+        ZIndex: =13
+
+    derecha3 As image:
+        Height: =40
+        Image: ='Shape - 2023-05-29T134506.122'
+        OnSelect: |-
+            =Set(Onboarding1,false);
+            Set(Onboarding2,false);
+            Set(Onboarding3,false);
+            Set(Onboarding4,true);
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Visible: =Onboarding3
+        Width: =40
+        X: =1251
+        Y: =348
+        ZIndex: =14
+
+    izquierda3 As image:
+        Height: =40
+        Image: ='Shape - 2023-05-29T141734.050'
+        OnSelect: |-
+            =Set(Onboarding1,false);
+            Set(Onboarding2,true);
+            Set(Onboarding3,false);
+            Set(Onboarding4,false);
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Visible: =Onboarding3
+        Width: =40
+        X: =75
+        Y: =348
+        ZIndex: =15
+
+    izquierda4 As image:
+        Height: =40
+        Image: ='Shape - 2023-05-29T141734.050'
+        OnSelect: |-
+            =Set(Onboarding1,false);
+            Set(Onboarding2,false);
+            Set(Onboarding3,true);
+            Set(Onboarding4,false);
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Visible: =Onboarding4
+        Width: =40
+        X: =75
+        Y: =348
+        ZIndex: =17
+
+    btnContunuarOnboarding As button:
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(44, 97, 112, 1)
+        Font: =Font.'Segoe UI'
+        Height: =56
+        HoverFill: =RGBA(44, 97, 112, 1)
+        OnSelect: =Navigate(Home)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =16
+        Text: ="COMENZAR"
+        Visible: =Onboarding4
+        Width: =280
+        X: =771
+        Y: =568
+        ZIndex: =18
+

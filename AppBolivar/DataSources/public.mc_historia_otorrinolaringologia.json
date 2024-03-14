@@ -1,0 +1,42 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "activo": "activo",
+      "ant_personales_patologicos": "ant_personales_patologicos",
+      "cod_hc_principal": "cod_hc_principal",
+      "diagnosticos": "diagnosticos",
+      "examen_orl_boca_orofaringe": "examen_orl_boca_orofaringe",
+      "examen_orl_nariz": "examen_orl_nariz",
+      "examen_orl_oido": "examen_orl_oido",
+      "fecha_registro": "fecha_registro",
+      "habitos_ambiente_ruidoso": "habitos_ambiente_ruidoso",
+      "habitos_audifonos": "habitos_audifonos",
+      "habitos_hisopo": "habitos_hisopo",
+      "habitos_ocupacion": "habitos_ocupacion",
+      "habitos_tabaco": "habitos_tabaco",
+      "id": "id",
+      "id_doctor": "id_doctor",
+      "id_especialidad": "id_especialidad",
+      "id_paciente": "id_paciente",
+      "id_sede": "id_sede",
+      "id_serial": "id_serial",
+      "inicio_enferm_actual": "inicio_enferm_actual",
+      "qx": "qx",
+      "ram": "ram",
+      "tratamiento": "tratamiento",
+      "version": "version"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.mc_historia_otorrinolaringologia",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

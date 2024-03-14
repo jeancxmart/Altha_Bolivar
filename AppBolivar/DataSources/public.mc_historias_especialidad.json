@@ -1,0 +1,24 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:51:59.4270000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "cod_hc": "cod_hc",
+      "cod_hm": "cod_hm",
+      "id": "id",
+      "id_especialidad": "id_especialidad",
+      "id_serial": "id_serial",
+      "plantilla_hc": "plantilla_hc"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.mc_historias_especialidad",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

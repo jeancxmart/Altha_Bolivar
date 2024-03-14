@@ -1,0 +1,31 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "agregar_examenes": "agregar_examenes",
+      "agregar_medicamento": "agregar_medicamento",
+      "agregar_servicio": "agregar_servicio",
+      "agregar_test": "agregar_test",
+      "agregar_tratamiento": "agregar_tratamiento",
+      "configuracion_usuario": "configuracion_usuario",
+      "Consultorio_Medico": "Consultorio_Medico",
+      "correo": "correo",
+      "fase": "fase",
+      "id": "id",
+      "id_sede": "id_sede",
+      "informacion_consultorio": "informacion_consultorio",
+      "lista_especialidades": "lista_especialidades"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_VerificacionApp",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

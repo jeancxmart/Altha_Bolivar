@@ -1,0 +1,1353 @@
+"'Atencion Cliente Dashboard' As screen":
+    Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundApp,varcolor_OscuroBackgroundApp)
+    OnVisible: |-
+        =If(
+            IsBlank(_userDomaincita),
+            UpdateContext({_showLoadingcita: true});
+            Set(
+                _userDomaincita,
+                Right(
+                    User().Email,
+                    Len(User().Email) - Find(
+                        "@",
+                        User().Email
+                    )
+                )
+            );
+            Set(
+                _dateSelectedcita,
+                Today()
+            );
+            Set(
+                _firstDayOfMonthcita,
+                DateAdd(
+                    Today(),
+                    1 - Day(Today()),
+                    TimeUnit.Days
+                )
+            );
+            Set(
+                _firstDayInViewcita,
+                DateAdd(
+                    _firstDayOfMonthcita,
+                    -(Weekday(_firstDayOfMonthcita) - 2 + 1),
+                    TimeUnit.Days
+                )
+            );
+            Set(
+                _lastDayOfMonthcita,
+                DateAdd(
+                    DateAdd(
+                        _firstDayOfMonthcita,
+                        1,
+                        TimeUnit.Months
+                    ),
+                    -1,
+                    TimeUnit.Days
+                )
+            )
+        );
+        Set(
+            _calendarVisiblecita,
+            false
+        );
+        UpdateContext({_showLoadingcita: true});
+        Set(
+            _minDatecita,
+            DateAdd(
+                _firstDayOfMonthcita,
+                -(Weekday(_firstDayOfMonthcita) - 2 + 1),
+                TimeUnit.Days
+            )
+        );
+        Set(
+            _maxDatecita,
+            DateAdd(
+                DateAdd(
+                    _firstDayOfMonthcita,
+                    -(Weekday(_firstDayOfMonthcita) - 2 + 1),
+                    TimeUnit.Days
+                ),
+                40,
+                TimeUnit.Days
+            )
+        );
+        ClearCollect(
+            MyCalendarEventscita,
+            Office365Outlook.GetEventsCalendarViewV2(
+                "Calendar",
+                Text(
+                    _minDatecita,
+                    DateTimeFormat.UTC
+                ),
+                Text(
+                    _maxDatecita,
+                    DateTimeFormat.UTC
+                )
+            ).value
+        );
+        UpdateContext({_showLoadingcita: false});
+
+    btn_Citas_AC_1 As button:
+        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        FocusedBorderColor: =btn_Citas_AC_1.BorderColor
+        Height: =56
+        HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+        HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        OnSelect: =Navigate('Atencion Cliente Historia Medica')
+        PaddingLeft: =55
+        PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+        PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Historia Médica"
+        Width: =216
+        X: =30
+        Y: =303
+        ZIndex: =1
+
+    img_Citas_AC_2 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Citas_AC_2.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Citas_AC_2.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Citas_AC_2.Fill, 20%)
+        Image: ='Shape - 2023-04-24T093256.743'
+        OnSelect: =Navigate('Atencion Cliente Historia Medica')
+        PressedBorderColor: =ColorFade(img_Citas_AC_2.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Citas_AC_2.Fill, -20%)
+        Width: =25
+        X: =51
+        Y: =318
+        ZIndex: =2
+
+    Rectangle5_29 As rectangle:
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+        Height: =2
+        Width: =1366
+        Y: =96
+        ZIndex: =3
+
+    TextInput1_3 As text:
+        Default: =""
+        DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+        DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundContenedor)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundContenedor)
+        Height: =380
+        HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundContenedor)
+        OnSelect: =
+        PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundContenedor)
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Width: =600
+        X: =306
+        Y: =364
+        ZIndex: =13
+
+    gal_Servicio As gallery.galleryVertical:
+        Height: =234
+        Items: |
+            =
+            Search(
+                Filter(
+                    'public.Medical_Center_Servicios',
+                    id_sede = _varSede.id
+                ),
+                Proper(txt_Buscador_AC.Text),
+                "Servicio",
+                "Descripcion"
+            )
+            
+            /*If(
+                (filter_status = "En Cola" Or filter_status = "Transferido");
+                
+                Sort(
+                        Filter(
+                            
+                                //qcts_dispenser_client_ticket;
+                                
+                                Filter( 
+                                        qcts_dispenser_client_ticket;
+                                        'Codigo del Servicio' in Filter(qcts_dispenser_desks_services; Desk = desk_user).Service
+            
+                                );
+                                
+            
+                                ((Estatus.Value = "En Cola") Or (Estatus.Value = "Transferido")) 
+                                && Text(Creado;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy")
+                                && (Desk = desk_user Or IsBlank(Desk) Or IsEmpty(Desk))
+                        )
+            
+                ; Creado; Ascending);
+            
+                filter_status = "En Atención";
+                
+                Sort(
+                    Filter(
+                        //qcts_dispenser_client_ticket;
+                        Filter( 
+                                        qcts_dispenser_client_ticket;
+                                        'Codigo del Servicio' in Filter(qcts_dispenser_desks_services; Desk = desk_user).Service
+            
+                                );
+                        ((Estatus.Value = "En Atención") Or 
+                        (Estatus.Value = "Atendido") Or 
+                        (Estatus.Value = "Cancelado") Or 
+                        (Estatus.Value = "Rellamado"))  && 
+                        Text(Creado;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy") &&
+                        Desk = desk_user
+                    )
+            
+                ; Creado; Descending)
+            )
+            */
+                /*antiguo codigo
+                Sort(
+                        Filter(
+                            
+                                //qcts_dispenser_client_ticket;
+                                
+                                Filter( 
+                                        qcts_dispenser_client_ticket;
+                                        'Codigo del Servicio' in Filter(qcts_dispenser_desks_services; Desk = desk_user).Service
+            
+                                );
+                                
+            
+                                ((Estatus.Value = "En Cola") Or (Estatus.Value = "Transferido")) 
+                                && Text(Creado;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy")
+                                && (Desk = desk_user Or IsBlank(Desk) Or IsEmpty(Desk))
+                        )
+            
+                ; Creado; Descending)*/
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplateSize: =71
+        Width: =600
+        X: =306
+        Y: =498
+        ZIndex: =14
+
+        num_ticket_record_28 As label:
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: =ThisItem.Servicio
+            VerticalAlign: =VerticalAlign.Top
+            Width: =127
+            X: =8
+            Y: =6
+            ZIndex: =7
+
+        num_ticket_record_23 As label:
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoSecundario,varcolor_OscuroTextoSecundario)
+            Font: =Font.'Segoe UI'
+            Height: =59
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: =ThisItem.Descripcion
+            VerticalAlign: =VerticalAlign.Top
+            Width: =309
+            X: =147
+            Y: =6
+            ZIndex: =9
+
+        num_ticket_record_29 As label:
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoSecundario,varcolor_OscuroTextoSecundario)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: |-
+                =varSimboloMaestros & Text(ThisItem.Costo,"# ###.00")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =96
+            X: =479
+            Y: =6
+            ZIndex: =10
+
+    txt_Calendario_Paciente_por_Atender As text:
+        Default: =""
+        DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+        DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundContenedor)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =572
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =400
+        X: =936
+        Y: =172
+        ZIndex: =15
+
+    lbl_Fecha As label:
+        Align: =Align.Center
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Text: =Text(_firstDayOfMonthcita, "mmmm yyyy")
+        Width: =400
+        Wrap: =false
+        X: =936
+        Y: =179
+        ZIndex: =16
+
+    icon_Left_Calendario As icon.ChevronLeft:
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Height: =40
+        Icon: =Icon.ChevronLeft
+        OnSelect: |-
+            =/*changes month view to previous month*/
+            Set(_firstDayOfMonthcita, DateAdd(_firstDayOfMonthcita, -1, TimeUnit.Months));
+            Set(_firstDayInViewcita, DateAdd(_firstDayOfMonthcita, -(Weekday(_firstDayOfMonthcita) - 2 + 1), TimeUnit.Days));
+            Set(_lastDayOfMonthcita, DateAdd(DateAdd(_firstDayOfMonthcita, 1, TimeUnit.Months), -1, TimeUnit.Days));
+            /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
+            If(_minDatecita > _firstDayOfMonthcita, Set(_minDatecita, _firstDayOfMonthcita); Collect(MyCalendarEventscita, Office365Outlook.GetEventsCalendarViewV2("Calendar", Text(_minDatecita, DateTimeFormat.UTC), Text(_lastDayOfMonthcita, DateTimeFormat.UTC)).value))
+        PaddingBottom: =7
+        PaddingLeft: =7
+        PaddingRight: =7
+        PaddingTop: =7
+        TabIndex: =0
+        Tooltip: ="Ver el mes anterior"
+        Width: =40
+        X: =962
+        Y: =179
+        ZIndex: =17
+
+    Group2_3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        Rectangle_Barra_Superior As rectangle:
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+            Height: =96
+            Width: =1366
+            ZIndex: =4
+
+        img_Logo_AC As image:
+            Height: =80
+            Image: =getLogo
+            OnSelect: =Navigate(Home)
+            Width: =119
+            X: =30
+            Y: =8
+            ZIndex: =5
+
+        btn_Dashboard_AC As button:
+            BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+            FocusedBorderColor: =btn_Dashboard_AC.BorderColor
+            Height: =56
+            HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
+            HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+            OnSelect: =
+            PaddingLeft: =15
+            PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
+            PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Text: ="Dashboard"
+            Width: =216
+            X: =30
+            Y: =126
+            ZIndex: =6
+
+        img_Dashboard_AC As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =img_Dashboard_AC.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(img_Dashboard_AC.BorderColor, 20%)
+            HoverFill: =ColorFade(img_Dashboard_AC.Fill, 20%)
+            Image: ='Shape (85)'
+            OnSelect: =
+            PressedBorderColor: =ColorFade(img_Dashboard_AC.BorderColor, -20%)
+            PressedFill: =ColorFade(img_Dashboard_AC.Fill, -20%)
+            Width: =25
+            X: =51
+            Y: =141
+            ZIndex: =7
+
+        btn_Citas_AC As button:
+            BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+            FocusedBorderColor: =btn_Citas_AC.BorderColor
+            Height: =56
+            HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+            HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+            OnSelect: =Navigate('Atencion Cliente Citas')
+            PaddingLeft: =0
+            PaddingRight: =50
+            PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+            PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Text: ="Citas"
+            Width: =216
+            X: =30
+            Y: =212
+            ZIndex: =8
+
+        img_Citas_AC As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =img_Citas_AC.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(img_Citas_AC.BorderColor, 20%)
+            HoverFill: =ColorFade(img_Citas_AC.Fill, 20%)
+            Image: ='Shape (88)'
+            OnSelect: =Navigate('Atencion Cliente Citas')
+            PressedBorderColor: =ColorFade(img_Citas_AC.BorderColor, -20%)
+            PressedFill: =ColorFade(img_Citas_AC.Fill, -20%)
+            Width: =25
+            X: =51
+            Y: =229
+            ZIndex: =9
+
+        btn_Salir_AC As button:
+            BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+            FocusedBorderColor: =btn_Salir_AC.BorderColor
+            Height: =56
+            HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+            HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+            OnSelect: =Navigate(Home)
+            PaddingLeft: =0
+            PaddingRight: =50
+            PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+            PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Text: ="Salir"
+            Width: =216
+            X: =30
+            Y: =676
+            ZIndex: =10
+
+        img_Salir_AC As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =img_Salir_AC.BorderColor
+            Height: =25
+            HoverBorderColor: =ColorFade(img_Salir_AC.BorderColor, 20%)
+            HoverFill: =ColorFade(img_Salir_AC.Fill, 20%)
+            Image: ='Shape (87)'
+            OnSelect: =Navigate(Home)
+            PressedBorderColor: =ColorFade(img_Salir_AC.BorderColor, -20%)
+            PressedFill: =ColorFade(img_Salir_AC.Fill, -20%)
+            Width: =25
+            X: =51
+            Y: =693
+            ZIndex: =11
+
+        Rectangle_Separador_AC As rectangle:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            DisabledFill: =Rectangle_Separador_AC.Fill
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            FocusedBorderColor: =Rectangle_Separador_AC.BorderColor
+            Height: =672
+            HoverFill: =Rectangle_Separador_AC.Fill
+            PressedFill: =Rectangle_Separador_AC.Fill
+            Width: =1
+            X: =276
+            Y: =96
+            ZIndex: =12
+
+    icon_Right_Calendario As icon.ChevronRight:
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Height: =40
+        Icon: =Icon.ChevronRight
+        OnSelect: |-
+            =/*changes month view to next month*/
+            Set(_firstDayOfMonthcita, DateAdd(_firstDayOfMonthcita, 1, TimeUnit.Months));
+            Set(_firstDayInViewcita, DateAdd(_firstDayOfMonthcita, -(Weekday(_firstDayOfMonthcita) - 2 + 1), TimeUnit.Days));
+            /*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/
+            Set(_lastDayOfMonthcita, DateAdd(DateAdd(_firstDayOfMonthcita, 1, TimeUnit.Months), -1, TimeUnit.Days));
+            If(_lastDayOfMonthcita > _maxDatecita, Set(_maxDatecita, _lastDayOfMonthcita); Collect(MyCalendarEventscita, Office365Outlook.GetEventsCalendarViewV2("Calendar", Text(_firstDayOfMonthcita, DateTimeFormat.UTC), Text(_maxDatecita, DateTimeFormat.UTC)).value))
+        PaddingBottom: =7
+        PaddingLeft: =7
+        PaddingRight: =7
+        PaddingTop: =7
+        TabIndex: =0
+        Tooltip: ="Ver el mes siguiente"
+        Width: =40
+        X: =1275
+        Y: =179
+        ZIndex: =18
+
+    gal_Dias_Calendario As gallery.WeekdayGallery:
+        AccessibleLabel: ="Días de la semana"
+        Height: =46
+        Items: =Calendar.WeekdaysShort()
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =50
+        Width: =360
+        X: =956
+        Y: =242
+        ZIndex: =19
+
+        Title1_10 As label:
+            Align: =Align.Center
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Font: =Font.'Segoe UI'
+            Height: =46
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.Value
+            Width: =46
+            Wrap: =false
+            X: =4
+            Y: =gal_Dias_Calendario.TemplateHeight / 2 - Self.Height / 2
+            ZIndex: =1
+
+    gal_Calendario As gallery.MonthDayGallery:
+        AccessibleLabel: ="Días del mes seleccionado"
+        Height: =194
+        Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =37
+        Width: =350
+        WrapCount: =7
+        X: =960
+        Y: =288
+        ZIndex: =20
+
+        Circle1_72 As circle:
+            Height: =4
+            OnSelect: =Select(Parent)
+            Visible: |-
+                =/*Visible if calendar events are found on this day*/               
+                CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value,TimeUnit.Days))) > 0 && !Subcircle1_9.Visible && Title2_9.Visible
+            Width: =4
+            X: =23
+            Y: =29
+            ZIndex: =1
+
+        Subcircle1_9 As circle:
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+            Height: =3 * Title2_9.Size
+            OnSelect: =Select(Parent)
+            Visible: |-
+                =//And(DateAdd(_firstDayInView; ThisItem.Value) = _dateSelectedAC; Title2_9.Visible)
+                And(DateAdd(_firstDayInViewcita, ThisItem.Value) = _dateSelectedcita, Title2_9.Visible)
+            Width: =Self.Height
+            X: =10
+            Y: =3
+            ZIndex: =2
+
+        Title2_9 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: |
+                =//If(ThisItem.IsSelected;RGBA(255;255;255;1);RGBA(0;0;0;1))
+                If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),
+                If(And(DateAdd(_firstDayInViewcita, ThisItem.Value) = _dateSelectedcita),varcolor_OscuroTextoPrimario,varcolor_ClaroTextoPrimario),
+                If(And(DateAdd(_firstDayInViewcita, ThisItem.Value) = _dateSelectedcita),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario))
+            Fill: |-
+                =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
+                If(
+                    /*Date selected is today*/
+                    DateAdd(_firstDayInViewcita, ThisItem.Value) = Today() && DateAdd(_firstDayInViewcita, ThisItem.Value) = _dateSelectedcita, RGBA(0,0,0,0),
+                    /*Today when it is not selected*/
+                    DateAdd(_firstDayInViewcita, ThisItem.Value) = Today(), ColorFade(Subcircle1_9.Fill, 0.67), 
+                    /*The day is outside the range of the currently selected month*/
+                    Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
+            FocusedBorderColor: =Self.Color
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            Height: =37
+            OnSelect: =Set(_dateSelectedcita, DateAdd(_firstDayInViewcita, ThisItem.Value, TimeUnit.Days))
+            Size: =10
+            TabIndex: =0
+            Text: =Day(DateAdd(_firstDayInViewcita,ThisItem.Value,TimeUnit.Days))
+            Visible: |-
+                =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
+                 !(DateAdd(_firstDayInViewcita,ThisItem.Value,TimeUnit.Days) - Weekday(DateAdd(_firstDayInViewcita,ThisItem.Value,TimeUnit.Days)) + 1 > _lastDayOfMonthcita)
+            Width: =50
+            Wrap: =false
+            ZIndex: =3
+
+    gal_Paciente_por_Atender As gallery.CalendarEventsGallery:
+        AccessibleLabel: ="Eventos del calendario del día seleccionado"
+        Height: =157
+        Items: |-
+            =/*Shows events only on selected date*/
+            SortByColumns(
+                Filter(
+                    'public.Medical_Center_Ticket',
+                    Estatus = "En Cola" Or Estatus = "Transferido",
+                    Text(
+                        fecha_cita,
+                        DateTimeFormat.ShortDate
+                    ) = Text(
+                        _dateSelectedcita,
+                        DateTimeFormat.ShortDate
+                    ),
+                    Doctor = dpUsuarioCalendario.Selected.correo
+                ),
+                "fecha_cita"
+            )
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =60
+        Width: =380
+        X: =945
+        Y: =579
+        ZIndex: =21
+
+        Title8_9 As label:
+            BorderColor: =Self.Color
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoSecundario,varcolor_OscuroTextoSecundario)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            Height: =22
+            OnSelect: =Set(_selectedCalendarEvent, ThisItem)
+            Size: =12
+            TabIndex: =0
+            Text: =ThisItem.Nombre_Paciente
+            Tooltip: =
+            Width: =230
+            Wrap: =false
+            X: =131
+            Y: =8
+            ZIndex: =3
+
+        Body2_9 As label:
+            Align: =Align.Center
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =22
+            OnSelect: =Select(Title8_9)
+            Size: =10
+            Text: =Text(ThisItem.fecha_cita, DateTimeFormat.ShortTime & " AM/PM")
+            Width: =74
+            Wrap: =false
+            X: =15
+            Y: =20
+            ZIndex: =5
+
+        Description2_9 As label:
+            Align: =Align.Center
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            Height: =23
+            OnSelect: =Select(Title8_9)
+            Size: =12
+            Text: =ThisItem.Doctor
+            Visible: =false
+            Width: =74
+            Wrap: =false
+            X: =298
+            Y: =31
+            ZIndex: =6
+
+        Title8_10 As label:
+            BorderColor: =Self.Color
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoSecundario,varcolor_OscuroTextoSecundario)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            Height: =16
+            OnSelect: =Set(_selectedCalendarEvent, ThisItem)
+            Size: =12
+            TabIndex: =0
+            Text: |-
+                ="Doc. Identidad : "& ThisItem.id_Pacientes_DNI
+            Tooltip: =
+            Width: =225
+            Wrap: =false
+            X: =131
+            Y: =38
+            ZIndex: =7
+
+    lbl_Count_Pacientes As label:
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoSecundario,varcolor_OscuroTextoSecundario)
+        Font: =Font.'Segoe UI'
+        Height: =22
+        Text: =CountRows(gal_Paciente_por_Atender.AllItems) & " paciente(s) por atender"
+        Width: =226
+        X: =1006
+        Y: =528
+        ZIndex: =22
+
+    img_Pacientes As image:
+        Height: =28
+        Image: ='Shape (89)'
+        Width: =22
+        X: =971
+        Y: =524
+        ZIndex: =23
+
+    Rectangle_Separador_Calendario As rectangle:
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Height: =2
+        Width: =400
+        X: =936
+        Y: =483
+        ZIndex: =24
+
+    Rectangle_Separador_Paciente As rectangle:
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Height: =2
+        Width: =340
+        X: =966
+        Y: =574
+        ZIndex: =25
+
+    lbl_Opcion As label:
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =31
+        Size: =16
+        Text: ="Opción"
+        Width: =265
+        X: =306
+        Y: =118
+        ZIndex: =26
+
+    lbl_Servicio As label:
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =31
+        Size: =16
+        Text: ="Servicios"
+        Width: =265
+        X: =306
+        Y: =320
+        ZIndex: =27
+
+    btn_Calculadora As button:
+        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        Font: =Font.'Segoe UI'
+        Height: =124
+        HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+        HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+        HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        OnSelect: |-
+            =UpdateContext({_varCotizar: true});
+            ClearCollect(
+                colServicio,
+                Filter(
+                    'public.Medical_Center_Servicios',
+                    id_sede = _varSede.id
+                )
+            );
+            Set(
+                varResetCheck,
+                false
+            )
+        PaddingBottom: =0
+        PaddingTop: =60
+        PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+        PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+        PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =13
+        Text: ="Calculadora"
+        Width: =124
+        X: =306
+        Y: =160
+        ZIndex: =33
+
+    img_Calculadora As image:
+        Height: =24
+        Image: ='Shape (86)'
+        OnSelect: |
+            =UpdateContext({_varCotizar:true});ClearCollect(colServicio,Filter('public.Medical_Center_Servicios', id_sede = _varSede.id));Set(varResetCheck,false) 
+        Width: =24
+        X: =355
+        Y: =187
+        ZIndex: =34
+
+    txt_User As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
+        DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundContenedor)
+        DisplayMode: =DisplayMode.Disabled
+        Font: =Font.'Segoe UI'
+        Height: =36
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Width: =400
+        X: =936
+        Y: =120
+        ZIndex: =35
+
+    txt_Buscador_AC As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        Font: =Font.'Segoe UI'
+        Height: =36
+        HintText: ="Buscar servicio"
+        PaddingLeft: =45
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =380
+        X: =326
+        Y: =384
+        ZIndex: =37
+
+    img_Lupa_AC As image:
+        Height: =20
+        Image: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),'Shape (53)','Shape - 2023-06-08T204530.170')
+        Width: =20
+        X: =340
+        Y: =392
+        ZIndex: =38
+
+    lbl_Servicio2 As label:
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =24
+        Text: ="Servicio"
+        Width: =130
+        X: =323
+        Y: =451
+        ZIndex: =39
+
+    lbl_Descripcion As label:
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =24
+        Text: ="Descripción"
+        Width: =130
+        X: =478
+        Y: =451
+        ZIndex: =40
+
+    lbl_Costo As label:
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =24
+        Text: ="Costo"
+        Width: =106
+        X: =800
+        Y: =451
+        ZIndex: =41
+
+    Rectangle_Separador_Servicio As rectangle:
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Height: =2
+        Width: =560
+        X: =320
+        Y: =487
+        ZIndex: =42
+
+    icon_Cerrar_Calculadora As icon.Cancel:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({_varCotizar:false})
+        Visible: =_varCotizar
+        Width: =40
+        X: =822
+        Y: =237
+        ZIndex: =47
+
+    Rectangle_Calcular_Costo As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.24)
+        Height: =764
+        OnSelect: |-
+            =UpdateContext({_varPresupuesto:false});Set(varResetCheck,false);Clear(colServicio);Clear(colCotizar)
+                
+        Visible: =_varPresupuesto
+        Width: =1366
+        ZIndex: =48
+
+    txt_Fondo_Calcular_Costo As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(241, 242, 246, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =357
+        OnSelect: =
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Visible: =_varPresupuesto
+        Width: =456
+        X: =447
+        Y: =217
+        ZIndex: =49
+
+    lbl_Calcular_Costo As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        Size: =16
+        Text: ="Cálculo de costo"
+        Visible: =_varPresupuesto
+        Width: =201
+        X: =468
+        Y: =232
+        ZIndex: =50
+
+    gal_Calculo_Costo As gallery.galleryVertical:
+        Height: =149
+        Items: =colCotizar
+        Layout: =Layout.Vertical
+        TemplateSize: =43
+        Visible: =_varPresupuesto
+        Width: =421
+        X: =464
+        Y: =287
+        ZIndex: =51
+
+        Label14 As label:
+            Font: =Font.'Segoe UI'
+            Height: =34
+            OnSelect: =Remove(colCotizar,ThisItem)
+            Size: =11
+            Text: =ThisItem.Servicio
+            VerticalAlign: =VerticalAlign.Top
+            Width: =201
+            ZIndex: =1
+
+        Label14_1 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =34
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Costo
+            Visible: =false
+            X: =136
+            ZIndex: =2
+
+        Label11_1 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Size: =12
+            Text: |
+                =varSimboloMaestros & Text(ThisItem.Costo,"# ###.00")
+            VerticalAlign: =VerticalAlign.Top
+            X: =261
+            ZIndex: =3
+
+    Rectangle_Separador_Calcular_Costo As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =2
+        Visible: =_varPresupuesto
+        Width: =404
+        X: =476
+        Y: =436
+        ZIndex: =52
+
+    lbl_Total As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Text: ="TOTAL"
+        Visible: =_varPresupuesto
+        X: =478
+        Y: =449
+        ZIndex: =53
+
+    lbl_Monto_Total As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Text: |-
+            =varSimboloMaestros & Text(Sum(gal_Calculo_Costo.AllItems,Label14_1.Text),"# ###.00")
+        Visible: =_varPresupuesto
+        X: =727
+        Y: =443
+        ZIndex: =54
+
+    btn_Salir As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =ColorFondoBoton
+        FocusedBorderColor: =btn_Salir.BorderColor
+        Font: =Font.'Segoe UI'
+        Height: =44
+        HoverBorderColor: =ColorFondoBoton
+        HoverFill: =ColorFondoBoton
+        OnSelect: |-
+            =UpdateContext({_varPresupuesto:false});Set(varResetCheck,false);Clear(colServicio);Clear(colCotizar)
+                
+        PaddingLeft: =25
+        PressedBorderColor: =ColorFondoBoton
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFondoBoton
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="SALIR"
+        Visible: =_varPresupuesto
+        Width: =360
+        X: =489
+        Y: =509
+        ZIndex: =55
+
+    Group_Calculadora As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =55
+
+        Rectangle_Calculadora As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.24)
+            Height: =768
+            OnSelect: |-
+                =UpdateContext({_varCotizar:false})
+            Visible: =_varCotizar
+            Width: =1366
+            ZIndex: =43
+
+        txt_Fondo_Calculadora As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =331
+            OnSelect: =
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Visible: =_varCotizar
+            Width: =456
+            X: =447
+            Y: =219
+            ZIndex: =44
+
+        btn_Calcular_Costo As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =ColorFondoBoton
+            FocusedBorderColor: =btn_Calcular_Costo.BorderColor
+            Font: =Font.'Segoe UI'
+            Height: =44
+            HoverBorderColor: =ColorFondoBoton
+            HoverFill: =ColorFondoBoton
+            OnSelect: |-
+                =UpdateContext({_varPresupuesto:true});UpdateContext({_varCotizar:false})
+                    
+            PressedBorderColor: =ColorFondoBoton
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFondoBoton
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =14
+            Text: ="CALCULAR COSTOS"
+            Visible: =_varCotizar
+            Width: =360
+            X: =495
+            Y: =482
+            ZIndex: =45
+
+        "gal_Servicio_Calculadora As gallery.'BrowseLayout_Vertical_OneImageTwoColumnVariant_ver4.0'":
+            Height: =159
+            Items: =colServicio
+            Layout: =Layout.Vertical
+            TemplatePadding: =4
+            TemplateSize: =61
+            Visible: =_varCotizar
+            Width: =430
+            WrapCount: =2
+            X: =464
+            Y: =284
+            ZIndex: =46
+
+            Checkbox1_4 As checkbox:
+                BorderStyle: =BorderStyle.None
+                CheckboxBackgroundFill: |-
+                    =//If(Checkbox1_4.Value=true;ColorValue("#6DE8D2") ;If(Checkbox1_4.Value=false;RGBA(255; 255; 255; 1)))
+                    RGBA(255, 255, 255, 1)
+                CheckboxBorderColor: =RGBA(0, 0, 0, 1)
+                Default: =varResetCheck
+                Font: =Font.'Segoe UI'
+                Height: =33
+                OnCheck: |-
+                    =Collect(
+                        colCotizar,{Servicio:ThisItem.Servicio,Costo:ThisItem.Costo})
+                OnUncheck: =RemoveIf(colCotizar,Servicio=ThisItem.Servicio)
+                Size: =11
+                Text: =ThisItem.Servicio
+                Width: =191
+                X: =8
+                Y: =12
+                ZIndex: =3
+
+    lbl_Calculadora As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        OnSelect: =
+        Size: =16
+        Text: ="Calculadora"
+        Visible: =_varCotizar
+        X: =467
+        Y: =236
+        ZIndex: =56
+
+    Timer2 As timer:
+        AutoPause: =false
+        AutoStart: =true
+        Duration: =2000
+        OnTimerStart: =Refresh('public.Medical_Center_Ticket')
+        Repeat: =true
+        Visible: =false
+        Width: =30
+        Y: =315
+        ZIndex: =57
+
+    Group_Perfil As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =57
+
+        lbl_Perfl_AC As label:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            FocusedBorderColor: =lbl_Perfl_AC.BorderColor
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =48
+            HoverBorderColor: =lbl_Perfl_AC.BorderColor
+            HoverColor: =lbl_Perfl_AC.Color
+            HoverFill: =lbl_Perfl_AC.Fill
+            PaddingRight: =20
+            PressedBorderColor: =lbl_Perfl_AC.BorderColor
+            PressedColor: =lbl_Perfl_AC.Color
+            PressedFill: =lbl_Perfl_AC.Fill
+            Size: =12
+            Text: =User().FullName
+            Width: =142
+            X: =1211
+            Y: =24
+            ZIndex: =31
+
+        img_Perfil_AC As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            FocusedBorderColor: =img_Perfil_AC.BorderColor
+            Height: =48
+            HoverBorderColor: =ColorFade(img_Perfil_AC.BorderColor, 20%)
+            HoverFill: =ColorFade(img_Perfil_AC.Fill, 20%)
+            Image: |-
+                =/*If(IsBlank(LookUp('public.Medical_Center_Usuario';Correo=User().Email;Imagen));SampleImage;AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario';Correo=User().Email;Imagen)))*/
+                User().Image
+            PressedBorderColor: =ColorFade(img_Perfil_AC.BorderColor, -20%)
+            PressedFill: =ColorFade(img_Perfil_AC.Fill, -20%)
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Width: =48
+            X: =1151
+            Y: =24
+            ZIndex: =32
+
+    Group6_4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =57
+
+        btn_Emergencia_AC As button:
+            BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Fill: =RGBA(232, 17, 17, 1)
+            Font: =Font.'Segoe UI'
+            Height: =44
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            OnSelect: |-
+                =UpdateContext({_varEmergenciaAtencionCliente:true})
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Size: =14
+            Text: ="EMERGENCIA"
+            Width: =280
+            X: =835
+            Y: =26
+            ZIndex: =28
+
+        TextInput5_38 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Default: =
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =48
+            PaddingLeft: =0
+            PaddingRight: =64
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =false
+            Width: =500
+            X: =300
+            Y: =26
+            ZIndex: =29
+
+        Image18_9 As image:
+            Height: =27
+            Image: ='Shape (53)'
+            Visible: =false
+            Width: =29
+            X: =753
+            Y: =36
+            ZIndex: =30
+
+    Image12_23 As image:
+        Height: =80
+        Image: ='Transparente Original'
+        OnSelect: =
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =Not(Parent.Printing)
+        Width: =119
+        X: =631
+        Y: =8
+        ZIndex: =62
+
+    dpUsuarioCalendario As dropdown:
+        BorderStyle: =BorderStyle.None
+        ChevronBackground: =RGBA(0, 0, 0, 0)
+        ChevronFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        ChevronHoverBackground: =
+        ChevronHoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        Font: =Font.'Segoe UI'
+        Height: =32
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Items: |-
+            =AddColumns(Filter(
+                'public.Medical_Center_R&D_Relacion',
+                estado = true,
+                id_sede = _varSede.id,
+                disponibilidad = true
+                
+            ), "doctor", LookUp('public.Medical_Center_Usuario', id = id_doctor).Usuario)
+        Size: =12
+        Width: =392
+        X: =940
+        Y: =122
+        ZIndex: =63
+
+    Group_Emergencia As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =74
+
+        Rectangle_Emergencia As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.3)
+            Height: =768
+            OnSelect: |-
+                =UpdateContext({_varEmergenciaAtencionCliente:false})
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =1366
+            ZIndex: =58
+
+        txt_Fondo_Emergencia As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =404
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =404
+            X: =513
+            Y: =138
+            ZIndex: =59
+
+        lbl_Emergencia As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =44
+            Size: =27
+            Text: ="Emergencia"
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =400
+            X: =513
+            Y: =162
+            ZIndex: =60
+
+        img_btn_Emergencia As image:
+            Height: =376
+            Image: ='Group 92'
+            OnSelect: |-
+                =UpdateContext({_varEmergenciaAtencionCliente:false})
+            Visible: =_varEmergenciaAtencionCliente
+            Width: =361
+            X: =513
+            Y: =156
+            ZIndex: =61
+

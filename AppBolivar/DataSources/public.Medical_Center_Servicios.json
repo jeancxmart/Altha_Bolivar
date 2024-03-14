@@ -1,0 +1,27 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "activo": "activo",
+      "Costo": "Costo",
+      "Descripcion": "Descripcion",
+      "especialidad": "especialidad",
+      "id": "id",
+      "id_sede": "id_sede",
+      "Nombre_Consultorio": "Nombre_Consultorio",
+      "Servicio": "Servicio",
+      "Tipo_Moneda": "Tipo_Moneda"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Servicios",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

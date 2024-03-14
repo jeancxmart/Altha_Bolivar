@@ -1,0 +1,27 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2023-04-19T17:06:20.5090000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "Correo_Doctor": "Correo_Doctor",
+      "Diagnostico": "Diagnostico",
+      "DNI_Paciente": "DNI_Paciente",
+      "Duracio_Descanso": "Duracio_Descanso",
+      "Fecha_Emision": "Fecha_Emision",
+      "id": "id",
+      "id_Receta": "id_Receta",
+      "Motivo": "Motivo",
+      "Nombre_Doctor": "Nombre_Doctor"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Descanso_Medico",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "ayunas": "ayunas",
+      "consultorio_medico": "consultorio_medico",
+      "examen_nombre": "examen_nombre",
+      "id": "id",
+      "id_sede": "id_sede",
+      "muestra_preferida": "muestra_preferida",
+      "precio": "precio",
+      "protocolo_toma_muestra": "protocolo_toma_muestra"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.Medical_Center_Examenes",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
