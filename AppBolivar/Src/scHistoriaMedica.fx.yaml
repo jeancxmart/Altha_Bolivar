@@ -12881,7 +12881,7 @@ scHistoriaMedica As screen:
                         {num:12,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Sueño", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
                         {num:13,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Menstruación", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
                         {num:14,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Síntomas Gastrointestinales", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
-                        {num:15,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Vómitos", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                        {num:15,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Náuseas", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
                         {num:16,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Vómitos", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
                         {num:17,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Acidez", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
                         {num:18,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Flatulencia", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
