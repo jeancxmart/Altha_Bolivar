@@ -3206,7 +3206,7 @@ scHistoriaMedica As screen:
                         ZIndex: =1
 
                         Container18 As groupContainer.verticalAutoLayoutContainer:
-                            Height: =900+galChecklist.Height
+                            Height: =5700
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutGap: =5
                             LayoutMode: =LayoutMode.Auto
@@ -3665,64 +3665,355 @@ scHistoriaMedica As screen:
                                     Width: =100
                                     ZIndex: =6
 
-                            galChecklist As gallery.variableTemplateHeightGallery:
-                                BorderColor: =RGBA(245, 245, 245, 1)
-                                Default: =First(formularioCamposLineales)
-                                DelayItemLoading: =true
-                                Fill: =RGBA(245, 245, 245, 1)
-                                FillPortions: =0
-                                Height: =CountRows(GroupBy(formularioCamposLineales,"seccion","otros"))*50+72*Self.AllItemsCount
-                                Items: =formularioCamposLineales
-                                Layout: =Layout.Vertical
-                                LayoutMinHeight: =200
-                                LayoutMinWidth: =320
-                                LoadingSpinner: =LoadingSpinner.Data
-                                Selectable: =false
-                                ShowNavigation: =true
-                                ShowScrollbar: =false
-                                TemplatePadding: =0
-                                TemplateSize: =100
-                                Width: =100
-                                ZIndex: =13
+                            Container18_6 As groupContainer.verticalAutoLayoutContainer:
+                                Height: =5100+galChecklist_2.Height // antes era 900
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutGap: =5
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                Width: =Parent.Width
+                                ZIndex: =14
 
-                                Container15_15 As groupContainer.horizontalAutoLayoutContainer:
-                                    Height: |-
-                                        =If(ThisItem.itemID=First(Filter(formularioCamposLineales,seccion=ThisItem.seccion)).itemID
-                                            ,40+72*ThisItem.openSection,If(ThisItem.openSection,72,0))
-                                    LayoutDirection: =LayoutDirection.Vertical
-                                    LayoutGap: =5
+                                Container15_115 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
                                     LayoutMode: =LayoutMode.Auto
-                                    PaddingBottom: =1
-                                    PaddingLeft: =1
-                                    PaddingRight: =1
-                                    PaddingTop: =1
                                     Width: =Parent.Width
-                                    ZIndex: =7
+                                    Y: =60
+                                    ZIndex: =1
 
-                                    lbEncabezado As label:
-                                        AlignInContainer: =AlignInContainer.Stretch
+                                    lbEncabezado_190 As label:
                                         BorderColor: =RGBA(0, 0, 0, 0)
                                         BorderStyle: =BorderStyle.None
                                         BorderThickness: =2
                                         Color: =varcolor_ClaroElementoPrimario
                                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                                         DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FillPortions: =1
                                         FocusedBorderThickness: =4
                                         Font: =Font.'Segoe UI'
                                         FontWeight: =FontWeight.Semibold
-                                        OnSelect: |-
-                                            =UpdateIf(formularioCamposLineales,seccion=ThisItem.seccion,{openSection:!ThisItem.openSection})
+                                        OnSelect: =
                                         PaddingBottom: =0
                                         PaddingLeft: =0
                                         PaddingRight: =0
                                         PaddingTop: =0
                                         Size: =18
-                                        Text: =Left(ThisItem.seccion,1)&Lower(Mid(ThisItem.seccion,2))
-                                        Visible: =ThisItem.itemID=First(Filter(formularioCamposLineales,seccion=ThisItem.seccion)).itemID
+                                        Text: ="Datos Personales"
                                         Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                Container15_116 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =85
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =200
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =1
+                                    PaddingLeft: =1
+                                    PaddingRight: =1
+                                    PaddingTop: =1
+                                    Width: =Parent.Width
+                                    Y: =40
+                                    ZIndex: =2
+
+                                    lbEncabezado_191 As label:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =32
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =14
+                                        Text: ="Lugar de Nacimiento"
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                    txtinput_Gineco_1 As text:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).lugar_de_nacimiento
+                                        Font: =Font.'Segoe UI'
+                                        Height: =36
+                                        OnChange: =
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =0
+                                        X: =10
+                                        ZIndex: =3
+
+                                Container15_117 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =62
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutGap: =30
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    Y: =60
+                                    ZIndex: =3
+
+                                    Container15_118 As groupContainer.horizontalAutoLayoutContainer:
+                                        Height: =76
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =30
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingLeft: =2
+                                        PaddingRight: =2
+                                        Width: =100
+                                        Y: =40
                                         ZIndex: =1
 
-                                    lbEncabezado_15 As label:
+                                        lbEncabezado_192 As label:
+                                            AlignInContainer: =AlignInContainer.Stretch
+                                            BorderColor: =RGBA(0, 0, 0, 0)
+                                            BorderStyle: =BorderStyle.None
+                                            BorderThickness: =2
+                                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                            DisabledColor: =RGBA(161, 159, 157, 1)
+                                            FocusedBorderThickness: =4
+                                            Font: =Font.'Segoe UI'
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =24
+                                            LayoutMinWidth: =50
+                                            OnSelect: =
+                                            PaddingBottom: =0
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Size: =14
+                                            Text: ="Estado Civil"
+                                            Width: =100
+                                            Y: =10
+                                            ZIndex: =2
+
+                                        Container26_5 As groupContainer.manualLayoutContainer:
+                                            BorderThickness: =2
+                                            FillPortions: =0
+                                            Height: =36
+                                            LayoutMinHeight: =100
+                                            LayoutMinWidth: =50
+                                            RadiusBottomLeft: =5
+                                            RadiusBottomRight: =5
+                                            RadiusTopLeft: =5
+                                            RadiusTopRight: =5
+                                            ZIndex: =3
+
+                                            txtinput_Gineco_2 As dropdown:
+                                                BorderStyle: =BorderStyle.None
+                                                ChevronBackground: =RGBA(255, 255, 255, 1)
+                                                ChevronFill: =RGBA(0, 0, 0, 1)
+                                                ChevronHoverBackground: =
+                                                ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                                                Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).estado_civil
+                                                Font: =Font.'Segoe UI'
+                                                Height: =36
+                                                HoverBorderColor: =
+                                                HoverFill: =RGBA(255, 255, 255, 1)
+                                                Items: =["Soltero(a)","Casado(a)","Viudo(a)"]
+                                                Reset: =resetear
+                                                Size: =12
+                                                Width: =Parent.Width-2*Self.X
+                                                X: =1
+                                                ZIndex: =2
+
+                                    Container15_119 As groupContainer.horizontalAutoLayoutContainer:
+                                        Height: =76
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =50
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingLeft: =2
+                                        PaddingRight: =2
+                                        Width: =100
+                                        Y: =40
+                                        ZIndex: =2
+
+                                        lbEncabezado_193 As label:
+                                            AlignInContainer: =AlignInContainer.Stretch
+                                            BorderColor: =RGBA(0, 0, 0, 0)
+                                            BorderStyle: =BorderStyle.None
+                                            BorderThickness: =2
+                                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                            DisabledColor: =RGBA(161, 159, 157, 1)
+                                            FocusedBorderThickness: =4
+                                            Font: =Font.'Segoe UI'
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =24
+                                            LayoutMinWidth: =50
+                                            OnSelect: =
+                                            PaddingBottom: =0
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Size: =14
+                                            Text: ="Nacionalidad"
+                                            Width: =100
+                                            Y: =10
+                                            ZIndex: =2
+
+                                        Container26_7 As groupContainer.manualLayoutContainer:
+                                            BorderThickness: =2
+                                            FillPortions: =0
+                                            Height: =36
+                                            LayoutMinHeight: =100
+                                            LayoutMinWidth: =50
+                                            RadiusBottomLeft: =5
+                                            RadiusBottomRight: =5
+                                            RadiusTopLeft: =5
+                                            RadiusTopRight: =5
+                                            ZIndex: =3
+
+                                            txtinput_Gineco_3 As dropdown:
+                                                BorderStyle: =BorderStyle.None
+                                                ChevronBackground: =RGBA(255, 255, 255, 1)
+                                                ChevronFill: =RGBA(0, 0, 0, 1)
+                                                ChevronHoverBackground: =
+                                                ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                                                Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).nacionalidad
+                                                Font: =Font.'Segoe UI'
+                                                Height: =36
+                                                HoverBorderColor: =
+                                                HoverFill: =RGBA(255, 255, 255, 1)
+                                                Items: =["Peruano(a)","Extranjero(a)"]
+                                                Reset: =resetear
+                                                Size: =12
+                                                Width: =Parent.Width-2*Self.X
+                                                X: =1
+                                                ZIndex: =2
+
+                                    Container15_120 As groupContainer.horizontalAutoLayoutContainer:
+                                        Height: =76
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =50
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingLeft: =2
+                                        PaddingRight: =2
+                                        Width: =100
+                                        Y: =40
+                                        ZIndex: =3
+
+                                        lbEncabezado_194 As label:
+                                            AlignInContainer: =AlignInContainer.Stretch
+                                            BorderColor: =RGBA(0, 0, 0, 0)
+                                            BorderStyle: =BorderStyle.None
+                                            BorderThickness: =2
+                                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                            DisabledColor: =RGBA(161, 159, 157, 1)
+                                            FocusedBorderThickness: =4
+                                            Font: =Font.'Segoe UI'
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =24
+                                            LayoutMinWidth: =50
+                                            OnSelect: =
+                                            PaddingBottom: =0
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            Size: =14
+                                            Text: ="Fecha probable de parto"
+                                            Width: =100
+                                            Y: =10
+                                            ZIndex: =2
+
+                                        Container26_12 As groupContainer.manualLayoutContainer:
+                                            BorderThickness: =2
+                                            FillPortions: =0
+                                            Height: =36
+                                            LayoutMinHeight: =100
+                                            LayoutMinWidth: =50
+                                            RadiusBottomLeft: =5
+                                            RadiusBottomRight: =5
+                                            RadiusTopLeft: =5
+                                            RadiusTopRight: =5
+                                            ZIndex: =3
+
+                                            txtinput_Gineco_4 As datepicker:
+                                                BorderStyle: =BorderStyle.None
+                                                DefaultDate: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fecha_probable_de_parto
+                                                Font: =Font.'Segoe UI'
+                                                Height: =Parent.Height
+                                                IconBackground: =RGBA(255, 255, 255, 1)
+                                                IconFill: =RGBA(0, 0, 0, 1)
+                                                InputTextPlaceholder: =
+                                                Reset: =resetear
+                                                Size: =13
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                Container15_121 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    Y: =60
+                                    ZIndex: =4
+
+                                    lbEncabezado_195 As label:
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =varcolor_ClaroElementoPrimario
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =18
+                                        Text: ="Motivo de Consulta"
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                Container15_122 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =195
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =1
+                                    PaddingLeft: =1
+                                    PaddingRight: =1
+                                    PaddingTop: =1
+                                    Width: =Parent.Width
+                                    Y: =40
+                                    ZIndex: =5
+
+                                    lbEncabezado_196 As label:
                                         AlignInContainer: =AlignInContainer.Stretch
                                         BorderColor: =RGBA(0, 0, 0, 0)
                                         BorderStyle: =BorderStyle.None
@@ -3739,58 +4030,1529 @@ scHistoriaMedica As screen:
                                         PaddingRight: =0
                                         PaddingTop: =0
                                         Size: =14
-                                        Text: =ThisItem.pregunta
-                                        Visible: =ThisItem.openSection
+                                        Text: |-
+                                            ="Motivo
+                                            "
                                         Width: =100
                                         Y: =10
                                         ZIndex: =2
 
-                                    tiScHistoria1_5 As text:
+                                    txtinput_Gineco_5 As richTextEditor:
                                         AlignInContainer: =AlignInContainer.Stretch
                                         BorderColor: =RGBA(0, 0, 0, 1)
-                                        Default: =ThisItem.respuestaTexto
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
+                                        Height: =170
+                                        Width: =100
+                                        ZIndex: =3
+
+                                Container15_123 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    Y: =20
+                                    ZIndex: =6
+
+                                    lbEncabezado_197 As label:
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =varcolor_ClaroElementoPrimario
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
                                         Font: =Font.'Segoe UI'
-                                        Height: =36
-                                        OnChange: |-
-                                            =Patch(formularioCamposLineales,LookUp(formularioCamposLineales,itemID=ThisItem.itemID),{respuestaTexto:Upper(Trim(Self.Text))})
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =18
+                                        Text: ="Enfermedad Actual"
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                Container15_124 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =195
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =1
+                                    PaddingLeft: =1
+                                    PaddingRight: =1
+                                    PaddingTop: =1
+                                    Width: =Parent.Width
+                                    Y: =40
+                                    ZIndex: =7
+
+                                    lbEncabezado_198 As label:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =14
+                                        Text: |-
+                                            ="Enfermedad
+                                            "
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                    txtinput_Gineco_6 As richTextEditor:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
+                                        Height: =170
+                                        Width: =100
+                                        ZIndex: =6
+
+                                Container15_125 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    Y: =20
+                                    ZIndex: =8
+
+                                    lbEncabezado_199 As label:
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =varcolor_ClaroElementoPrimario
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =18
+                                        Text: ="Antecedentes Familiares"
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                Container42 As groupContainer.manualLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =430
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =250
+                                    ZIndex: =9
+
+                                    Label17 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Madre"
+                                        ZIndex: =1
+
+                                    txtinput_Gineco_7 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
                                         RadiusTopLeft: =4
                                         RadiusTopRight: =4
                                         Reset: =resetear
                                         Size: =12
-                                        Visible: =ThisItem.openSection&&ThisItem.tipo_respuesta="textoLinea"
-                                        Width: =0
-                                        X: =10
+                                        Width: =800
+                                        X: =4
+                                        Y: =28
+                                        ZIndex: =2
+
+                                    Label17_1 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Padre"
+                                        Y: =85
                                         ZIndex: =3
 
-                                    Container26_4 As groupContainer.manualLayoutContainer:
-                                        BorderThickness: =2
-                                        FillPortions: =0
-                                        Height: =36
-                                        LayoutMinHeight: =100
-                                        LayoutMinWidth: =50
-                                        RadiusBottomLeft: =5
-                                        RadiusBottomRight: =5
-                                        RadiusTopLeft: =5
-                                        RadiusTopRight: =5
-                                        Visible: =ThisItem.tipo_respuesta="fecha"
+                                    txtinput_Gineco_8 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =113
                                         ZIndex: =4
 
-                                        dpScHistoriaFecha1_1 As datepicker:
-                                            BorderStyle: =BorderStyle.None
-                                            DefaultDate: =
-                                            Font: =Font.'Segoe UI'
-                                            Height: =Parent.Height
-                                            IconBackground: =RGBA(255, 255, 255, 1)
-                                            IconFill: =RGBA(0, 0, 0, 1)
-                                            InputTextPlaceholder: =
-                                            OnSelect: |-
-                                                =Patch(formularioCamposLineales,LookUp(formularioCamposLineales,itemID=ThisItem.itemID),{respuestaDate:Self.SelectedDate})
-                                            Reset: =resetear
-                                            Size: =13
-                                            Width: =Parent.Width
-                                            ZIndex: =1
+                                    Label17_3 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Hermanos"
+                                        Y: =168
+                                        ZIndex: =5
+
+                                    txtinput_Gineco_9 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =196
+                                        ZIndex: =6
+
+                                    Label17_5 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Hijos"
+                                        Y: =252
+                                        ZIndex: =7
+
+                                    txtinput_Gineco_10 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =280
+                                        ZIndex: =8
+
+                                    Label17_7 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Madre"
+                                        Y: =336
+                                        ZIndex: =9
+
+                                    txtinput_Gineco_12 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =364
+                                        ZIndex: =10
+
+                                Container15_126 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    Y: =20
+                                    ZIndex: =10
+
+                                    lbEncabezado_200 As label:
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =varcolor_ClaroElementoPrimario
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =18
+                                        Text: ="Antecedentes de la Pareja"
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                Container42_1 As groupContainer.manualLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =260
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =250
+                                    ZIndex: =11
+
+                                    Label17_9 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Enfermedades crónicas"
+                                        Width: =250
+                                        ZIndex: =1
+
+                                    txtinput_Gineco_13 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =28
+                                        ZIndex: =2
+
+                                    Label17_10 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Tipeaje"
+                                        Width: =200
+                                        Y: =85
+                                        ZIndex: =3
+
+                                    txtinput_Gineco_14 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =113
+                                        ZIndex: =4
+
+                                    Label17_11 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="ETS"
+                                        Y: =168
+                                        ZIndex: =5
+
+                                    txtinput_Gineco_15 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =196
+                                        ZIndex: =6
+
+                                Container15_127 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    Y: =20
+                                    ZIndex: =12
+
+                                    lbEncabezado_201 As label:
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =varcolor_ClaroElementoPrimario
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =18
+                                        Text: ="Antecedentes Personales"
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                Container42_2 As groupContainer.manualLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =430
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =250
+                                    ZIndex: =13
+
+                                    Label17_13 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Patología de Base"
+                                        Width: =250
+                                        ZIndex: =1
+
+                                    txtinput_Gineco_16 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =28
+                                        ZIndex: =2
+
+                                    Label17_41 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Alergia de Medicamentos"
+                                        Width: =250
+                                        Y: =85
+                                        ZIndex: =3
+
+                                    txtinput_Gineco_17 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =113
+                                        ZIndex: =4
+
+                                    Label17_42 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Antecedentes quirúrgicos"
+                                        Width: =250
+                                        Y: =168
+                                        ZIndex: =5
+
+                                    txtinput_Gineco_18 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =196
+                                        ZIndex: =6
+
+                                    Label17_43 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Hábitos Tóxicos"
+                                        Width: =250
+                                        Y: =252
+                                        ZIndex: =7
+
+                                    txtinput_Gineco_19 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =280
+                                        ZIndex: =8
+
+                                    Label17_44 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Hábitos Fisiológicos"
+                                        Width: =300
+                                        Y: =336
+                                        ZIndex: =9
+
+                                    txtinput_Gineco_20 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =364
+                                        ZIndex: =10
+
+                                Container15_128 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    Y: =20
+                                    ZIndex: =14
+
+                                    lbEncabezado_202 As label:
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =varcolor_ClaroElementoPrimario
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =18
+                                        Text: ="Antecedentes Ginecológicos"
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                Container42_3 As groupContainer.manualLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =690
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =250
+                                    ZIndex: =15
+
+                                    Label17_45 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Menarquia"
+                                        Width: =250
+                                        ZIndex: =1
+
+                                    txtinput_Gineco_21 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =28
+                                        ZIndex: =2
+
+                                    Label17_46 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Sexarquia"
+                                        Width: =250
+                                        Y: =85
+                                        ZIndex: =3
+
+                                    txtinput_Gineco_22 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =113
+                                        ZIndex: =4
+
+                                    Label17_47 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="NPS"
+                                        Width: =250
+                                        Y: =168
+                                        ZIndex: =5
+
+                                    txtinput_Gineco_23 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =196
+                                        ZIndex: =6
+
+                                    Label17_48 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="FUR"
+                                        Width: =250
+                                        Y: =252
+                                        ZIndex: =7
+
+                                    txtinput_Gineco_24 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =280
+                                        ZIndex: =8
+
+                                    Label17_49 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Anticonceptivo"
+                                        Y: =336
+                                        ZIndex: =9
+
+                                    txtinput_Gineco_25 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =364
+                                        ZIndex: =10
+
+                                    Label17_50 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Tiempo"
+                                        Y: =421
+                                        ZIndex: =11
+
+                                    txtinput_Gineco_26 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =449
+                                        ZIndex: =12
+
+                                    Label17_51 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Suspensión"
+                                        Y: =512
+                                        ZIndex: =13
+
+                                    txtinput_Gineco_27 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =540
+                                        ZIndex: =14
+
+                                    Label17_53 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Citología Anterior"
+                                        Width: =250
+                                        Y: =605
+                                        ZIndex: =15
+
+                                    txtinput_Gineco_28 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =633
+                                        ZIndex: =16
+
+                                Container15_129 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    Y: =20
+                                    ZIndex: =16
+
+                                    lbEncabezado_203 As label:
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =varcolor_ClaroElementoPrimario
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =18
+                                        Text: ="Antecedentes Obstétricos"
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                Container42_4 As groupContainer.manualLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =1050
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =250
+                                    ZIndex: =17
+
+                                    Label17_54 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Gestas"
+                                        Width: =250
+                                        ZIndex: =1
+
+                                    txtinput_Gineco_29 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =28
+                                        ZIndex: =2
+
+                                    Label17_55 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Deseados"
+                                        Width: =250
+                                        Y: =85
+                                        ZIndex: =3
+
+                                    txtinput_Gineco_30 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =113
+                                        ZIndex: =4
+
+                                    Label17_56 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Partos"
+                                        Width: =250
+                                        Y: =168
+                                        ZIndex: =5
+
+                                    txtinput_Gineco_31 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =196
+                                        ZIndex: =6
+
+                                    Label17_57 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Abortos"
+                                        Width: =250
+                                        Y: =252
+                                        ZIndex: =7
+
+                                    txtinput_Gineco_32 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =280
+                                        ZIndex: =8
+
+                                    Label17_58 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Motivo"
+                                        Y: =336
+                                        ZIndex: =9
+
+                                    txtinput_Gineco_33 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =364
+                                        ZIndex: =10
+
+                                    Label17_59 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Intergenesia"
+                                        Y: =421
+                                        ZIndex: =11
+
+                                    txtinput_Gineco_34 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =449
+                                        ZIndex: =12
+
+                                    Label17_60 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Malformaciones"
+                                        Width: =250
+                                        Y: =512
+                                        ZIndex: =13
+
+                                    txtinput_Gineco_35 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =540
+                                        ZIndex: =14
+
+                                    Label17_61 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Prematuridad"
+                                        Width: =250
+                                        Y: =605
+                                        ZIndex: =15
+
+                                    txtinput_Gineco_36 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =633
+                                        ZIndex: =16
+
+                                    Label17_62 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="HTA"
+                                        Width: =250
+                                        Y: =692
+                                        ZIndex: =17
+
+                                    txtinput_Gineco_37 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =720
+                                        ZIndex: =18
+
+                                    Label17_64 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Diabetes"
+                                        Width: =250
+                                        Y: =784
+                                        ZIndex: =21
+
+                                    txtinput_Gineco_38 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =812
+                                        ZIndex: =22
+
+                                    Label17_66 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Infecciones"
+                                        Width: =250
+                                        Y: =876
+                                        ZIndex: =25
+
+                                    txtinput_Gineco_39 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =904
+                                        ZIndex: =26
+
+                                    Label17_67 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Otros"
+                                        Width: =250
+                                        Y: =964
+                                        ZIndex: =27
+
+                                    txtinput_Gineco_40 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =992
+                                        ZIndex: =28
+
+                                Container15_130 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    Y: =20
+                                    ZIndex: =18
+
+                                    lbEncabezado_204 As label:
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =varcolor_ClaroElementoPrimario
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =18
+                                        Text: ="Atención Prenatal"
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                Container42_5 As groupContainer.manualLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =430
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =250
+                                    ZIndex: =19
+
+                                    Label17_63 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="1ra Consulta"
+                                        Width: =250
+                                        ZIndex: =1
+
+                                    txtinput_Gineco_41 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =28
+                                        ZIndex: =2
+
+                                    Label17_65 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="TG"
+                                        Width: =250
+                                        Y: =85
+                                        ZIndex: =3
+
+                                    txtinput_Gineco_42 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =113
+                                        ZIndex: =4
+
+                                    Label17_68 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Contorles Previos"
+                                        Width: =250
+                                        Y: =168
+                                        ZIndex: =5
+
+                                    txtinput_Gineco_43 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =196
+                                        ZIndex: =6
+
+                                    Label17_69 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Examen Alterado"
+                                        Width: =250
+                                        Y: =252
+                                        ZIndex: =7
+
+                                    txtinput_Gineco_44 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =280
+                                        ZIndex: =8
+
+                                    Label17_70 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="TTO Previo"
+                                        Width: =300
+                                        Y: =336
+                                        ZIndex: =9
+
+                                    txtinput_Gineco_45 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =364
+                                        ZIndex: =10
+
+                                Container15_131 As groupContainer.horizontalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =45
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    Width: =Parent.Width
+                                    Y: =20
+                                    ZIndex: =20
+
+                                    lbEncabezado_205 As label:
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =varcolor_ClaroElementoPrimario
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =18
+                                        Text: ="Examen Físico"
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                Container42_6 As groupContainer.manualLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =620
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =250
+                                    ZIndex: =21
+
+                                    Label17_71 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Peso"
+                                        Width: =250
+                                        ZIndex: =1
+
+                                    txtinput_Gineco_46 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =28
+                                        ZIndex: =2
+
+                                    Label17_72 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="PA"
+                                        Width: =250
+                                        Y: =85
+                                        ZIndex: =3
+
+                                    txtinput_Gineco_47 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =113
+                                        ZIndex: =4
+
+                                    Label17_73 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Piel"
+                                        Width: =250
+                                        Y: =168
+                                        ZIndex: =5
+
+                                    txtinput_Gineco_48 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =196
+                                        ZIndex: =6
+
+                                    Label17_74 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Mamas"
+                                        Width: =250
+                                        Y: =252
+                                        ZIndex: =7
+
+                                    txtinput_Gineco_49 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =280
+                                        ZIndex: =8
+
+                                    Label17_75 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Abdomen"
+                                        Y: =336
+                                        ZIndex: =9
+
+                                    txtinput_Gineco_50 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =364
+                                        ZIndex: =10
+
+                                    Label17_76 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Genitales"
+                                        Y: =421
+                                        ZIndex: =11
+
+                                    txtinput_Gineco_51 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =449
+                                        ZIndex: =12
+
+                                    Label17_77 As label:
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        Size: =14
+                                        Text: ="Neurológico"
+                                        Y: =512
+                                        ZIndex: =13
+
+                                    txtinput_Gineco_52 As text:
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        BorderThickness: =1
+                                        Default: =""
+                                        Height: =37
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Width: =800
+                                        X: =4
+                                        Y: =540
+                                        ZIndex: =14
 
                     DC_Oftalmologia As dataCard.blankCard:
                         BorderColor: =RGBA(0, 0, 0, 1)
