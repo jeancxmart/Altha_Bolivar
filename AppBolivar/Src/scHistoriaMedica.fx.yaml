@@ -400,50 +400,50 @@ scHistoriaMedica As screen:
                                     fecha_probable_de_parto: dpScHistoriaFecha1.SelectedDate,
                                     motivo_de_consulta: RichTextEditor1.HtmlText,
                                     enfermedad_actual :RichTextEditor1_1.HtmlText,
-                                    antecedentes_familiares_madre : LookUp(formularioCamposLineales,num=1,respuestaTexto),
-                                    antecedentes_familiares_padre : LookUp(formularioCamposLineales,num=2,respuestaTexto),
-                                    antecedentes_familiares_hermanos : LookUp(formularioCamposLineales,num=3,respuestaTexto),
-                                    antecedentes_familiares_hijos : LookUp(formularioCamposLineales,num=4,respuestaTexto),
-                                    antecedentes_de_la_pareja_enfermedades_cronicas : LookUp(formularioCamposLineales,num=5,respuestaTexto),
-                                    antecedentes_de_la_pareja_tipeaje : LookUp(formularioCamposLineales,num=6,respuestaTexto),
-                                    antecedentes_de_la_pareja_ets : LookUp(formularioCamposLineales,num=7,respuestaTexto),
-                                    antecedentes_personales_patologia_de_base : LookUp(formularioCamposLineales,num=8,respuestaTexto),
-                                    antecedentes_personales_alergia_de_medicamentos : LookUp(formularioCamposLineales,num=9,respuestaTexto),
-                                    antecedentes_personales_antecedentes_quirurgicos : LookUp(formularioCamposLineales,num=10,respuestaTexto),
-                                    antecedentes_personales_habitos_toxicos : LookUp(formularioCamposLineales,num=11,respuestaTexto),
-                                    antecedentes_personales_habitos_fisiologicos : LookUp(formularioCamposLineales,num=12,respuestaTexto),
-                                    antecedentes_ginecologicos_menarquia :LookUp(formularioCamposLineales,num=13,respuestaTexto),
-                                    antecedentes_ginecologicos_sexarquia: LookUp(formularioCamposLineales,num=14,respuestaTexto),
-                                    antecedentes_ginecologicos_nps :LookUp(formularioCamposLineales,num=15,respuestaTexto),
-                                    antecedentes_ginecologicos_fur :LookUp(formularioCamposLineales,num=16,respuestaTexto),
-                                    antecedentes_ginecologicos_anticonceptivo : LookUp(formularioCamposLineales,num=17,respuestaTexto),
-                                    antecedentes_ginecologicos_tiempo : LookUp(formularioCamposLineales,num=18,respuestaTexto),
-                                    antecedentes_ginecologicos_suspension : LookUp(formularioCamposLineales,num=19,respuestaTexto),
-                                    antecedentes_ginecologicos_citologia_anterior : LookUp(formularioCamposLineales,num=20,respuestaTexto),
-                                    antecedentes_obstetricos_gestas : LookUp(formularioCamposLineales,num=21,respuestaTexto),
-                                    antecedentes_obstetricos_deseados : LookUp(formularioCamposLineales,num=22,respuestaTexto),
-                                    antecedentes_obstetricos_partos : LookUp(formularioCamposLineales,num=23,respuestaTexto),
-                                    antecedentes_obstetricos_abortos : LookUp(formularioCamposLineales,num=24,respuestaTexto),
-                                    antecedentes_obstetricos_motivo : LookUp(formularioCamposLineales,num=25,respuestaTexto),
-                                    antecedentes_obstetricos_intergenesia : LookUp(formularioCamposLineales,num=26,respuestaTexto),
-                                    antecedentes_obstetricos_malformaciones : LookUp(formularioCamposLineales,num=27,respuestaTexto),
-                                    antecedentes_obstetricos_prematuridad : LookUp(formularioCamposLineales,num=28,respuestaTexto),
-                                    antecedentes_obstetricos_hta : LookUp(formularioCamposLineales,num=29,respuestaTexto),
-                                    antecedentes_obstetricos_diabetes : LookUp(formularioCamposLineales,num=30,respuestaTexto),
-                                    antecedentes_obstetricos_infecciones : LookUp(formularioCamposLineales,num=31,respuestaTexto),
-                                    antecedentes_obstetricos_otros : LookUp(formularioCamposLineales,num=32,respuestaTexto),
-                                    atencion_prenatal_primera_consulta : LookUp(formularioCamposLineales,num=33,respuestaTexto),
-                                    atencion_prenatal_tg : LookUp(formularioCamposLineales,num=34,respuestaTexto),
-                                    atencion_prenatal_controles_previos : LookUp(formularioCamposLineales,num=35,respuestaTexto),
-                                    atencion_prenatal_examen_alterado : LookUp(formularioCamposLineales,num=36,respuestaTexto),
-                                    atencion_prenatal_tto_previo : LookUp(formularioCamposLineales,num=37,respuestaTexto),
-                                    examen_fisico_peso: Value(LookUp(formularioCamposLineales,num=38,respuestaTexto)),
-                                    examen_fisico_pa: LookUp(formularioCamposLineales,num=39,respuestaTexto),
-                                    examen_fisico_piel : LookUp(formularioCamposLineales,num=40,respuestaTexto),
-                                    examen_fisico_mamas : LookUp(formularioCamposLineales,num=41,respuestaTexto),
-                                    examen_fisico_abdomen : LookUp(formularioCamposLineales,num=42,respuestaTexto),
-                                    examen_fisico_genitales : LookUp(formularioCamposLineales,num=43,respuestaTexto),
-                                    examen_fisico_neurologico : LookUp(formularioCamposLineales,num=44,respuestaTexto)
+                                    antecedentes_familiares_madre : txtinput_Gineco_7.Text,
+                                    antecedentes_familiares_padre :  txtinput_Gineco_8.Text,
+                                    antecedentes_familiares_hermanos :  txtinput_Gineco_9.Text,
+                                    antecedentes_familiares_hijos :  txtinput_Gineco_10.Text,
+                                    antecedentes_de_la_pareja_enfermedades_cronicas : txtinput_Gineco_13.Text,
+                                    antecedentes_de_la_pareja_tipeaje : txtinput_Gineco_14.Text,
+                                    antecedentes_de_la_pareja_ets : txtinput_Gineco_15.Text,
+                                    antecedentes_personales_patologia_de_base : txtinput_Gineco_16.Text,
+                                    antecedentes_personales_alergia_de_medicamentos : txtinput_Gineco_17.Text,
+                                    antecedentes_personales_antecedentes_quirurgicos : txtinput_Gineco_18.Text,
+                                    antecedentes_personales_habitos_toxicos : txtinput_Gineco_19.Text,
+                                    antecedentes_personales_habitos_fisiologicos : txtinput_Gineco_20.Text,
+                                    antecedentes_ginecologicos_menarquia : txtinput_Gineco_21.Text ,
+                                    antecedentes_ginecologicos_sexarquia: txtinput_Gineco_22.Text,
+                                    antecedentes_ginecologicos_nps :txtinput_Gineco_23.Text,
+                                    antecedentes_ginecologicos_fur : txtinput_Gineco_24.Text,
+                                    antecedentes_ginecologicos_anticonceptivo : txtinput_Gineco_25.Text,
+                                    antecedentes_ginecologicos_tiempo : txtinput_Gineco_26.Text,
+                                    antecedentes_ginecologicos_suspension : txtinput_Gineco_27.Text,
+                                    antecedentes_ginecologicos_citologia_anterior : txtinput_Gineco_28.Text,
+                                    antecedentes_obstetricos_gestas : txtinput_Gineco_29.Text,
+                                    antecedentes_obstetricos_deseados : txtinput_Gineco_30.Text,
+                                    antecedentes_obstetricos_partos : txtinput_Gineco_31.Text,
+                                    antecedentes_obstetricos_abortos : txtinput_Gineco_32.Text,
+                                    antecedentes_obstetricos_motivo : txtinput_Gineco_33.Text,
+                                    antecedentes_obstetricos_intergenesia : txtinput_Gineco_34.Text,
+                                    antecedentes_obstetricos_malformaciones : txtinput_Gineco_35.Text,
+                                    antecedentes_obstetricos_prematuridad : txtinput_Gineco_36.Text,
+                                    antecedentes_obstetricos_hta : txtinput_Gineco_37.Text,
+                                    antecedentes_obstetricos_diabetes : txtinput_Gineco_38.Text,
+                                    antecedentes_obstetricos_infecciones : txtinput_Gineco_39.Text,
+                                    antecedentes_obstetricos_otros : txtinput_Gineco_40.Text,
+                                    atencion_prenatal_primera_consulta : txtinput_Gineco_41.Text,
+                                    atencion_prenatal_tg : txtinput_Gineco_42.Text,
+                                    atencion_prenatal_controles_previos : txtinput_Gineco_43.Text,
+                                    atencion_prenatal_examen_alterado : txtinput_Gineco_44.Text,
+                                    atencion_prenatal_tto_previo : txtinput_Gineco_45.Text,
+                                    examen_fisico_peso: Value(txtinput_Gineco_46.Text),
+                                    examen_fisico_pa: txtinput_Gineco_47.Text,
+                                    examen_fisico_piel : txtinput_Gineco_48.Text,
+                                    examen_fisico_mamas : txtinput_Gineco_49.Text,
+                                    examen_fisico_abdomen : txtinput_Gineco_50.Text,
+                                    examen_fisico_genitales : txtinput_Gineco_51.Text,
+                                    examen_fisico_neurologico : txtinput_Gineco_52.Text
                                     }
                                 ),
                                 "nutricion",
@@ -3666,7 +3666,7 @@ scHistoriaMedica As screen:
                                     ZIndex: =6
 
                             Container18_6 As groupContainer.verticalAutoLayoutContainer:
-                                Height: =5100+galChecklist_2.Height // antes era 900
+                                Height: =
                                 LayoutDirection: =LayoutDirection.Vertical
                                 LayoutGap: =5
                                 LayoutMinHeight: =100
@@ -3674,456 +3674,6 @@ scHistoriaMedica As screen:
                                 LayoutMode: =LayoutMode.Auto
                                 Width: =Parent.Width
                                 ZIndex: =14
-
-                                Container15_115 As groupContainer.horizontalAutoLayoutContainer:
-                                    FillPortions: =0
-                                    Height: =45
-                                    LayoutAlignItems: =LayoutAlignItems.Center
-                                    LayoutMinHeight: =100
-                                    LayoutMinWidth: =250
-                                    LayoutMode: =LayoutMode.Auto
-                                    Width: =Parent.Width
-                                    Y: =60
-                                    ZIndex: =1
-
-                                    lbEncabezado_190 As label:
-                                        BorderColor: =RGBA(0, 0, 0, 0)
-                                        BorderStyle: =BorderStyle.None
-                                        BorderThickness: =2
-                                        Color: =varcolor_ClaroElementoPrimario
-                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                        DisabledColor: =RGBA(161, 159, 157, 1)
-                                        FillPortions: =1
-                                        FocusedBorderThickness: =4
-                                        Font: =Font.'Segoe UI'
-                                        FontWeight: =FontWeight.Semibold
-                                        OnSelect: =
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =18
-                                        Text: ="Datos Personales"
-                                        Width: =100
-                                        Y: =10
-                                        ZIndex: =2
-
-                                Container15_116 As groupContainer.horizontalAutoLayoutContainer:
-                                    FillPortions: =0
-                                    Height: =85
-                                    LayoutDirection: =LayoutDirection.Vertical
-                                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                                    LayoutMinHeight: =100
-                                    LayoutMinWidth: =200
-                                    LayoutMode: =LayoutMode.Auto
-                                    PaddingBottom: =1
-                                    PaddingLeft: =1
-                                    PaddingRight: =1
-                                    PaddingTop: =1
-                                    Width: =Parent.Width
-                                    Y: =40
-                                    ZIndex: =2
-
-                                    lbEncabezado_191 As label:
-                                        AlignInContainer: =AlignInContainer.Stretch
-                                        BorderColor: =RGBA(0, 0, 0, 0)
-                                        BorderStyle: =BorderStyle.None
-                                        BorderThickness: =2
-                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                        DisabledColor: =RGBA(161, 159, 157, 1)
-                                        FocusedBorderThickness: =4
-                                        Font: =Font.'Segoe UI'
-                                        FontWeight: =FontWeight.Semibold
-                                        Height: =32
-                                        OnSelect: =
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =14
-                                        Text: ="Lugar de Nacimiento"
-                                        Width: =100
-                                        Y: =10
-                                        ZIndex: =2
-
-                                    txtinput_Gineco_1 As text:
-                                        AlignInContainer: =AlignInContainer.Stretch
-                                        BorderColor: =RGBA(0, 0, 0, 1)
-                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).lugar_de_nacimiento
-                                        Font: =Font.'Segoe UI'
-                                        Height: =36
-                                        OnChange: =
-                                        RadiusBottomLeft: =4
-                                        RadiusBottomRight: =4
-                                        RadiusTopLeft: =4
-                                        RadiusTopRight: =4
-                                        Reset: =resetear
-                                        Size: =12
-                                        Width: =0
-                                        X: =10
-                                        ZIndex: =3
-
-                                Container15_117 As groupContainer.horizontalAutoLayoutContainer:
-                                    FillPortions: =0
-                                    Height: =62
-                                    LayoutAlignItems: =LayoutAlignItems.Center
-                                    LayoutGap: =30
-                                    LayoutMinHeight: =100
-                                    LayoutMinWidth: =250
-                                    LayoutMode: =LayoutMode.Auto
-                                    Width: =Parent.Width
-                                    Y: =60
-                                    ZIndex: =3
-
-                                    Container15_118 As groupContainer.horizontalAutoLayoutContainer:
-                                        Height: =76
-                                        LayoutDirection: =LayoutDirection.Vertical
-                                        LayoutMinHeight: =30
-                                        LayoutMinWidth: =250
-                                        LayoutMode: =LayoutMode.Auto
-                                        PaddingLeft: =2
-                                        PaddingRight: =2
-                                        Width: =100
-                                        Y: =40
-                                        ZIndex: =1
-
-                                        lbEncabezado_192 As label:
-                                            AlignInContainer: =AlignInContainer.Stretch
-                                            BorderColor: =RGBA(0, 0, 0, 0)
-                                            BorderStyle: =BorderStyle.None
-                                            BorderThickness: =2
-                                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                            DisabledColor: =RGBA(161, 159, 157, 1)
-                                            FocusedBorderThickness: =4
-                                            Font: =Font.'Segoe UI'
-                                            FontWeight: =FontWeight.Semibold
-                                            Height: =24
-                                            LayoutMinWidth: =50
-                                            OnSelect: =
-                                            PaddingBottom: =0
-                                            PaddingLeft: =0
-                                            PaddingRight: =0
-                                            PaddingTop: =0
-                                            Size: =14
-                                            Text: ="Estado Civil"
-                                            Width: =100
-                                            Y: =10
-                                            ZIndex: =2
-
-                                        Container26_5 As groupContainer.manualLayoutContainer:
-                                            BorderThickness: =2
-                                            FillPortions: =0
-                                            Height: =36
-                                            LayoutMinHeight: =100
-                                            LayoutMinWidth: =50
-                                            RadiusBottomLeft: =5
-                                            RadiusBottomRight: =5
-                                            RadiusTopLeft: =5
-                                            RadiusTopRight: =5
-                                            ZIndex: =3
-
-                                            txtinput_Gineco_2 As dropdown:
-                                                BorderStyle: =BorderStyle.None
-                                                ChevronBackground: =RGBA(255, 255, 255, 1)
-                                                ChevronFill: =RGBA(0, 0, 0, 1)
-                                                ChevronHoverBackground: =
-                                                ChevronHoverFill: =RGBA(0, 0, 0, 1)
-                                                Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).estado_civil
-                                                Font: =Font.'Segoe UI'
-                                                Height: =36
-                                                HoverBorderColor: =
-                                                HoverFill: =RGBA(255, 255, 255, 1)
-                                                Items: =["Soltero(a)","Casado(a)","Viudo(a)"]
-                                                Reset: =resetear
-                                                Size: =12
-                                                Width: =Parent.Width-2*Self.X
-                                                X: =1
-                                                ZIndex: =2
-
-                                    Container15_119 As groupContainer.horizontalAutoLayoutContainer:
-                                        Height: =76
-                                        LayoutDirection: =LayoutDirection.Vertical
-                                        LayoutMinHeight: =50
-                                        LayoutMinWidth: =250
-                                        LayoutMode: =LayoutMode.Auto
-                                        PaddingLeft: =2
-                                        PaddingRight: =2
-                                        Width: =100
-                                        Y: =40
-                                        ZIndex: =2
-
-                                        lbEncabezado_193 As label:
-                                            AlignInContainer: =AlignInContainer.Stretch
-                                            BorderColor: =RGBA(0, 0, 0, 0)
-                                            BorderStyle: =BorderStyle.None
-                                            BorderThickness: =2
-                                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                            DisabledColor: =RGBA(161, 159, 157, 1)
-                                            FocusedBorderThickness: =4
-                                            Font: =Font.'Segoe UI'
-                                            FontWeight: =FontWeight.Semibold
-                                            Height: =24
-                                            LayoutMinWidth: =50
-                                            OnSelect: =
-                                            PaddingBottom: =0
-                                            PaddingLeft: =0
-                                            PaddingRight: =0
-                                            PaddingTop: =0
-                                            Size: =14
-                                            Text: ="Nacionalidad"
-                                            Width: =100
-                                            Y: =10
-                                            ZIndex: =2
-
-                                        Container26_7 As groupContainer.manualLayoutContainer:
-                                            BorderThickness: =2
-                                            FillPortions: =0
-                                            Height: =36
-                                            LayoutMinHeight: =100
-                                            LayoutMinWidth: =50
-                                            RadiusBottomLeft: =5
-                                            RadiusBottomRight: =5
-                                            RadiusTopLeft: =5
-                                            RadiusTopRight: =5
-                                            ZIndex: =3
-
-                                            txtinput_Gineco_3 As dropdown:
-                                                BorderStyle: =BorderStyle.None
-                                                ChevronBackground: =RGBA(255, 255, 255, 1)
-                                                ChevronFill: =RGBA(0, 0, 0, 1)
-                                                ChevronHoverBackground: =
-                                                ChevronHoverFill: =RGBA(0, 0, 0, 1)
-                                                Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).nacionalidad
-                                                Font: =Font.'Segoe UI'
-                                                Height: =36
-                                                HoverBorderColor: =
-                                                HoverFill: =RGBA(255, 255, 255, 1)
-                                                Items: =["Peruano(a)","Extranjero(a)"]
-                                                Reset: =resetear
-                                                Size: =12
-                                                Width: =Parent.Width-2*Self.X
-                                                X: =1
-                                                ZIndex: =2
-
-                                    Container15_120 As groupContainer.horizontalAutoLayoutContainer:
-                                        Height: =76
-                                        LayoutDirection: =LayoutDirection.Vertical
-                                        LayoutMinHeight: =50
-                                        LayoutMinWidth: =250
-                                        LayoutMode: =LayoutMode.Auto
-                                        PaddingLeft: =2
-                                        PaddingRight: =2
-                                        Width: =100
-                                        Y: =40
-                                        ZIndex: =3
-
-                                        lbEncabezado_194 As label:
-                                            AlignInContainer: =AlignInContainer.Stretch
-                                            BorderColor: =RGBA(0, 0, 0, 0)
-                                            BorderStyle: =BorderStyle.None
-                                            BorderThickness: =2
-                                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                            DisabledColor: =RGBA(161, 159, 157, 1)
-                                            FocusedBorderThickness: =4
-                                            Font: =Font.'Segoe UI'
-                                            FontWeight: =FontWeight.Semibold
-                                            Height: =24
-                                            LayoutMinWidth: =50
-                                            OnSelect: =
-                                            PaddingBottom: =0
-                                            PaddingLeft: =0
-                                            PaddingRight: =0
-                                            PaddingTop: =0
-                                            Size: =14
-                                            Text: ="Fecha probable de parto"
-                                            Width: =100
-                                            Y: =10
-                                            ZIndex: =2
-
-                                        Container26_12 As groupContainer.manualLayoutContainer:
-                                            BorderThickness: =2
-                                            FillPortions: =0
-                                            Height: =36
-                                            LayoutMinHeight: =100
-                                            LayoutMinWidth: =50
-                                            RadiusBottomLeft: =5
-                                            RadiusBottomRight: =5
-                                            RadiusTopLeft: =5
-                                            RadiusTopRight: =5
-                                            ZIndex: =3
-
-                                            txtinput_Gineco_4 As datepicker:
-                                                BorderStyle: =BorderStyle.None
-                                                DefaultDate: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fecha_probable_de_parto
-                                                Font: =Font.'Segoe UI'
-                                                Height: =Parent.Height
-                                                IconBackground: =RGBA(255, 255, 255, 1)
-                                                IconFill: =RGBA(0, 0, 0, 1)
-                                                InputTextPlaceholder: =
-                                                Reset: =resetear
-                                                Size: =13
-                                                Width: =Parent.Width
-                                                ZIndex: =1
-
-                                Container15_121 As groupContainer.horizontalAutoLayoutContainer:
-                                    FillPortions: =0
-                                    Height: =45
-                                    LayoutAlignItems: =LayoutAlignItems.Center
-                                    LayoutMinHeight: =100
-                                    LayoutMinWidth: =250
-                                    LayoutMode: =LayoutMode.Auto
-                                    Width: =Parent.Width
-                                    Y: =60
-                                    ZIndex: =4
-
-                                    lbEncabezado_195 As label:
-                                        BorderColor: =RGBA(0, 0, 0, 0)
-                                        BorderStyle: =BorderStyle.None
-                                        BorderThickness: =2
-                                        Color: =varcolor_ClaroElementoPrimario
-                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                        DisabledColor: =RGBA(161, 159, 157, 1)
-                                        FillPortions: =1
-                                        FocusedBorderThickness: =4
-                                        Font: =Font.'Segoe UI'
-                                        FontWeight: =FontWeight.Semibold
-                                        OnSelect: =
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =18
-                                        Text: ="Motivo de Consulta"
-                                        Width: =100
-                                        Y: =10
-                                        ZIndex: =2
-
-                                Container15_122 As groupContainer.horizontalAutoLayoutContainer:
-                                    FillPortions: =0
-                                    Height: =195
-                                    LayoutDirection: =LayoutDirection.Vertical
-                                    LayoutMinHeight: =100
-                                    LayoutMinWidth: =250
-                                    LayoutMode: =LayoutMode.Auto
-                                    PaddingBottom: =1
-                                    PaddingLeft: =1
-                                    PaddingRight: =1
-                                    PaddingTop: =1
-                                    Width: =Parent.Width
-                                    Y: =40
-                                    ZIndex: =5
-
-                                    lbEncabezado_196 As label:
-                                        AlignInContainer: =AlignInContainer.Stretch
-                                        BorderColor: =RGBA(0, 0, 0, 0)
-                                        BorderStyle: =BorderStyle.None
-                                        BorderThickness: =2
-                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                        DisabledColor: =RGBA(161, 159, 157, 1)
-                                        FocusedBorderThickness: =4
-                                        Font: =Font.'Segoe UI'
-                                        FontWeight: =FontWeight.Semibold
-                                        Height: =24
-                                        OnSelect: =
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =14
-                                        Text: |-
-                                            ="Motivo
-                                            "
-                                        Width: =100
-                                        Y: =10
-                                        ZIndex: =2
-
-                                    txtinput_Gineco_5 As richTextEditor:
-                                        AlignInContainer: =AlignInContainer.Stretch
-                                        BorderColor: =RGBA(0, 0, 0, 1)
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
-                                        Height: =170
-                                        Width: =100
-                                        ZIndex: =3
-
-                                Container15_123 As groupContainer.horizontalAutoLayoutContainer:
-                                    FillPortions: =0
-                                    Height: =45
-                                    LayoutAlignItems: =LayoutAlignItems.Center
-                                    LayoutMinHeight: =100
-                                    LayoutMinWidth: =250
-                                    LayoutMode: =LayoutMode.Auto
-                                    Width: =Parent.Width
-                                    Y: =20
-                                    ZIndex: =6
-
-                                    lbEncabezado_197 As label:
-                                        BorderColor: =RGBA(0, 0, 0, 0)
-                                        BorderStyle: =BorderStyle.None
-                                        BorderThickness: =2
-                                        Color: =varcolor_ClaroElementoPrimario
-                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                        DisabledColor: =RGBA(161, 159, 157, 1)
-                                        FillPortions: =1
-                                        FocusedBorderThickness: =4
-                                        Font: =Font.'Segoe UI'
-                                        FontWeight: =FontWeight.Semibold
-                                        OnSelect: =
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =18
-                                        Text: ="Enfermedad Actual"
-                                        Width: =100
-                                        Y: =10
-                                        ZIndex: =2
-
-                                Container15_124 As groupContainer.horizontalAutoLayoutContainer:
-                                    FillPortions: =0
-                                    Height: =195
-                                    LayoutDirection: =LayoutDirection.Vertical
-                                    LayoutMinHeight: =100
-                                    LayoutMinWidth: =250
-                                    LayoutMode: =LayoutMode.Auto
-                                    PaddingBottom: =1
-                                    PaddingLeft: =1
-                                    PaddingRight: =1
-                                    PaddingTop: =1
-                                    Width: =Parent.Width
-                                    Y: =40
-                                    ZIndex: =7
-
-                                    lbEncabezado_198 As label:
-                                        AlignInContainer: =AlignInContainer.Stretch
-                                        BorderColor: =RGBA(0, 0, 0, 0)
-                                        BorderStyle: =BorderStyle.None
-                                        BorderThickness: =2
-                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                        DisabledColor: =RGBA(161, 159, 157, 1)
-                                        FocusedBorderThickness: =4
-                                        Font: =Font.'Segoe UI'
-                                        FontWeight: =FontWeight.Semibold
-                                        Height: =24
-                                        OnSelect: =
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =14
-                                        Text: |-
-                                            ="Enfermedad
-                                            "
-                                        Width: =100
-                                        Y: =10
-                                        ZIndex: =2
-
-                                    txtinput_Gineco_6 As richTextEditor:
-                                        AlignInContainer: =AlignInContainer.Stretch
-                                        BorderColor: =RGBA(0, 0, 0, 1)
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
-                                        Height: =170
-                                        Width: =100
-                                        ZIndex: =6
 
                                 Container15_125 As groupContainer.horizontalAutoLayoutContainer:
                                     FillPortions: =0
@@ -4160,7 +3710,7 @@ scHistoriaMedica As screen:
 
                                 Container42 As groupContainer.manualLayoutContainer:
                                     FillPortions: =0
-                                    Height: =430
+                                    Height: =350
                                     LayoutMinHeight: =0
                                     LayoutMinWidth: =250
                                     ZIndex: =9
@@ -4176,7 +3726,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_7 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_madre
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4201,7 +3751,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_8 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_padre
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4226,7 +3776,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_9 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_hermanos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4251,7 +3801,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_10 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_hijos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4263,31 +3813,6 @@ scHistoriaMedica As screen:
                                         X: =4
                                         Y: =280
                                         ZIndex: =8
-
-                                    Label17_7 As label:
-                                        Font: =Font.'Segoe UI'
-                                        FontWeight: =FontWeight.Semibold
-                                        Height: =24
-                                        Size: =14
-                                        Text: ="Madre"
-                                        Y: =336
-                                        ZIndex: =9
-
-                                    txtinput_Gineco_12 As text:
-                                        BorderColor: =RGBA(0, 0, 0, 1)
-                                        BorderThickness: =1
-                                        Default: =""
-                                        Height: =37
-                                        RadiusBottomLeft: =4
-                                        RadiusBottomRight: =4
-                                        RadiusTopLeft: =4
-                                        RadiusTopRight: =4
-                                        Reset: =resetear
-                                        Size: =12
-                                        Width: =800
-                                        X: =4
-                                        Y: =364
-                                        ZIndex: =10
 
                                 Container15_126 As groupContainer.horizontalAutoLayoutContainer:
                                     FillPortions: =0
@@ -4341,7 +3866,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_13 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_de_la_pareja_enfermedades_cronicas
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4367,7 +3892,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_14 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_de_la_pareja_tipeaje
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4392,7 +3917,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_15 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_de_la_pareja_ets
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4457,7 +3982,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_16 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_patologia_de_base
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4483,7 +4008,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_17 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_alergia_de_medicamentos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5389,6 +4914,7 @@ scHistoriaMedica As screen:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
                                         Default: =""
+                                        Format: =TextFormat.Number
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
