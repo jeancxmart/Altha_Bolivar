@@ -3446,3 +3446,9 @@ Home As screen:
         Y: =155
         ZIndex: =57
 
+    Icon12 As icon.Warning:
+        Icon: =Icon.Warning
+        X: =110
+        Y: =138
+        ZIndex: =58
+
