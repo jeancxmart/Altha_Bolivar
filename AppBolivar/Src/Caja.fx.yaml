@@ -1940,51 +1940,84 @@ Caja As screen:
                 HoverColor: |-
                     =ColorValue("#26495B")
                 HoverFill: =RGBA(255, 255, 255, 1)
-                OnSelect: |-
-                    =//UpdateContext({_ViewBoletaPago:true})
-                    
-                    ForAll(Filter(itemsPago,Pago=false) As ItemsPendientePago,
-                        Patch('public.Medical_Center_Pagos',Defaults('public.Medical_Center_Pagos'),
-                    {
-                    id:First(SortByColumns('public.Medical_Center_Pagos',"id",SortOrder.Descending)).id+ItemsPendientePago.valor,     
-                    Tipo_Pago:dpMedioPago.Selected.Nombre,
-                    Usuario:User().Email,
-                    Monto:ItemsPendientePago.Monto,
-                    id_sede : _varSede.id,
-                    id_servicio:ItemsPendientePago.id_servicio_pago,
-                    Paciente:LookUp('public.Medical_Center_Historial_Principal',DNI_CI=CajaSelected.DNI_Paciente,Nombres) & " " & LookUp('public.Medical_Center_Historial_Principal',DNI_CI=CajaSelected.DNI_Paciente,Apellidos),
-                    Fecha:Today(),
-                    id_Image:varAzureFileCaja.Id,
-                    Tipo_Resgistro:dpTipoPago.Selected.Nombre,
-                    DNI_RUC:TextInput1.Text,
-                    Estatus:"Pagado",
-                    DNI_Paciente:CajaSelected.DNI_Paciente,
-                    id_Counter:CajaSelected.id,
-                    id_ticket:CajaSelected.id_Ticket,
-                    id_examen:ItemsPendientePago.id_examen_pago,
-                    
-                    Nombre_Doctor:LookUp('public.Medical_Center_Usuario',Correo=CajaSelected.usuario,Usuario),
-                    Servicio:ItemsPendientePago.NomServ
-                    
-                    
-                    })
+                OnSelect: |
+                    =ForAll(
+                        Filter(
+                            itemsPago,
+                            Pago = false
+                        ) As ItemsPendientePago,
+                        Patch(
+                            'public.Medical_Center_Pagos',
+                            Defaults('public.Medical_Center_Pagos'),
+                            {
+                                id: First(
+                                    SortByColumns(
+                                        'public.Medical_Center_Pagos',
+                                        "id",
+                                        SortOrder.Descending
+                                    )
+                                ).id + ItemsPendientePago.valor,
+                                Tipo_Pago: dpMedioPago.Selected.Nombre,
+                                Usuario: User().Email,
+                                Monto: ItemsPendientePago.Monto,
+                                id_sede: _varSede.id,
+                                id_servicio: ItemsPendientePago.id_servicio_pago,
+                                Paciente: LookUp(
+                                    'public.Medical_Center_Historial_Principal',
+                                    DNI_CI = CajaSelected.DNI_Paciente,
+                                    Nombres
+                                ) & " " & LookUp(
+                                    'public.Medical_Center_Historial_Principal',
+                                    DNI_CI = CajaSelected.DNI_Paciente,
+                                    Apellidos
+                                ),
+                                Fecha: Today(),
+                                id_Image: varAzureFileCaja.Id,
+                                Tipo_Resgistro: dpTipoPago.Selected.Nombre,
+                                DNI_RUC: TextInput1.Text,
+                                Estatus: "Pagado",
+                                DNI_Paciente: CajaSelected.DNI_Paciente,
+                                id_Counter: CajaSelected.id,
+                                id_ticket: CajaSelected.id_Ticket,
+                                id_examen: ItemsPendientePago.id_examen_pago,
+                                Nombre_Doctor: LookUp(
+                                    'public.Medical_Center_Usuario',
+                                    Correo = CajaSelected.usuario,
+                                    Usuario
+                                ),
+                                Servicio: ItemsPendientePago.NomServ
+                            }
+                        )
+                    );
+                    Patch(
+                        'public.Medical_Center_Counter',
+                        LookUp(
+                            'public.Medical_Center_Counter',
+                            id_Ticket = CajaSelected.id_Ticket
+                        ),
+                        {
+                            estado: "Pagado",
+                            etapa: "Caja",
+                            usuario: CajaSelected.usuario,
+                            Alerta: true
+                        }
                     );
                     
-                    Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=CajaSelected.id_Ticket),
-                    {   
-                      estado:"Pagado",
-                      etapa:"Caja",
-                      usuario:CajaSelected.usuario,
-                      Alerta:true
-                    });
+                    Patch(
+                        'public.Medical_Center_Ticket',
+                        LookUp(
+                            'public.Medical_Center_Ticket',
+                            id = CajaSelected.id_Ticket
+                        ),
+                        {caja_finalizada: true}
+                    );
                     
                     Reset(TextInput1_4);
                     Reset(galItemsPago);
-                    UpdateContext({_varCaja:false});
-                    UpdateContext({_varRegistrarPago:false});Reset(dpMedioPago);
-                    UpdateContext({_varRegistrarPago:false});
-                    
-                    If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,triaje)=true,If(getUser.Rol="Doctor" || getUser.Rol= "Administrador",Navigate(Triaje_Dashboard),Navigate(Caja)),Navigate('Consulta Medica Dashboard'))
+                    UpdateContext({_varCaja: false});
+                    UpdateContext({_varRegistrarPago: false});
+                    Reset(dpMedioPago);
+                    UpdateContext({_varRegistrarPago: false});
                 RadiusBottomLeft: =8
                 RadiusBottomRight: =8
                 RadiusTopLeft: =8

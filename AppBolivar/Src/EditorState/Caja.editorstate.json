@@ -22890,7 +22890,8 @@
           "InvariantPropertyName": "Visible",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "Wrap"
       ],
       "DynamicProperties": [
         {
@@ -22964,6 +22965,11 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Wrap",
           "RuleProviderType": "Unknown"
         },
         {
