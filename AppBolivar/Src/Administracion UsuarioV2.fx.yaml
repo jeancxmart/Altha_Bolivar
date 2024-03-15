@@ -4913,7 +4913,7 @@
                 OnSelect: |-
                     =Patch('public.Medical_Center_Roles_Maestro',Defaults('public.Medical_Center_Roles_Maestro'),
                     {id:First(SortByColumns('public.Medical_Center_Roles_Maestro',"id",SortOrder.Descending)).id+1,
-                    rol:TextInput45.Text,
+                    rol:TextInput45_1.Text,
                      id_sede : _varSede.id,
                     Atencion_al_Cliente:"Sin acceso",
                     Caja:"Sin acceso",
@@ -4922,8 +4922,9 @@
                     Seguridad:"Sin acceso",
                     Maestros:"Sin acceso",
                     Reportes:"Sin acceso"
-                    
-                    });UpdateContext({_AddRolPersonalizado:false});Reset(TextInput45)
+                    });
+                    Reset(TextInput45_1)
+                    ;UpdateContext({_AddRolPersonalizado:false})
                 PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
                 PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
                 PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
