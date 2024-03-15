@@ -7,6 +7,7 @@
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
+      "caja_finalizada": "caja_finalizada",
       "cita_finalizada": "cita_finalizada",
       "Correo": "Correo",
       "Doctor": "Doctor",
@@ -23,7 +24,8 @@
       "Nota": "Nota",
       "Servicio": "Servicio",
       "Sexo": "Sexo",
-      "Telefono_Celular": "Telefono_Celular"
+      "Telefono_Celular": "Telefono_Celular",
+      "triaje_finalizada": "triaje_finalizada"
     },
     "DatasetName": "default",
     "EncodeDataset": true,
