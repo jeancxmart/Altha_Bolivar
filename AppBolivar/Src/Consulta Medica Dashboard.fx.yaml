@@ -913,7 +913,7 @@
             DisabledFill: =RGBA(255, 255, 255, 1)
             DisplayMode: =DisplayMode.Disabled
             FontWeight: =FontWeight.Lighter
-            Height: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Caja)="Acceso",297,145)
+            Height: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Caja)="Acceso",255,145)
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
             RadiusTopLeft: =8
@@ -998,7 +998,7 @@
             ZIndex: =57
 
         "gal_Menu_AM As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-            Height: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Caja)="Acceso",218,60)
+            Height: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Caja)="Acceso",170,60)
             Items: |
                 =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Caja)="Acceso"
                 ,Table(
@@ -1006,7 +1006,6 @@
                 {Img:'Shape (32)',Nombre:"Exámenes de Laboratorio"},
                 {Img:'Shape (54)',Nombre:"Medicamentos"},
                 {Img:'Shape (55)',Nombre:"Tratamientos"},
-                {Img:'Shape (45)_1',Nombre:"Servicios"},
                 {Img:'Clipboard Task List',Nombre:"Tests"}
                 )
                 ,
