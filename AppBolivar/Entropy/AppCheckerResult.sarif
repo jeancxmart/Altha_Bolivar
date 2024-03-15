@@ -4014,12 +4014,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label63_1.Text"
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15.Label63.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label63_1.Text",
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15.Label63.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -4033,7 +4033,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label63_1"
+                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15.Label63"
               }
             }
           ],
@@ -4054,12 +4054,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label63_1.Text"
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15.Label63.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label63_1.Text",
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15.Label63.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -4073,7 +4073,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label63_1"
+                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15.Label63"
               }
             }
           ],
@@ -4088,43 +4088,6 @@
           },
           "ruleId": "app-ErrInvalidArgs-Func",
           "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label63_1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label63_1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 7,
-                  "snippet": {
-                    "text": "Parent"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label63_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrFunctionExpectsSelectableControl",
-          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4564,7 +4527,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4684,7 +4647,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4724,7 +4687,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4925,7 +4888,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -4965,7 +4928,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5605,7 +5568,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5645,7 +5608,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5725,7 +5688,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5765,7 +5728,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -6285,7 +6248,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -6405,7 +6368,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -8006,7 +7969,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -8046,7 +8009,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -10127,7 +10090,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -10607,7 +10570,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -11087,7 +11050,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -11167,7 +11130,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -11207,7 +11170,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -11327,7 +11290,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -11407,7 +11370,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -11447,7 +11410,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -11487,7 +11450,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -12407,7 +12370,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -13000,6 +12963,206 @@
           "message": {
             "arguments": [
               "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charOffset": 160,
+                  "snippet": {
+                    "text": ""
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Consulta Medica Atencion",
+                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Eof",
+              "ParenClose"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charOffset": 160,
+                  "snippet": {
+                    "text": ""
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Consulta Medica Atencion",
+                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Eof",
+              "ParenClose"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 84,
+                  "snippet": {
+                    "text": "Consultorio"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Consulta Medica Atencion",
+                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Consultorio"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 20,
+                  "charOffset": 76,
+                  "snippet": {
+                    "text": "IsBlank(Consultorio)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Consulta Medica Atencion",
+                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IsBlank"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 46,
+                  "charOffset": 51,
+                  "snippet": {
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Consulta Medica Atencion",
+                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Or"
             ],
             "id": "issue"
           },
@@ -17814,19 +17977,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.TextInput51_2.AccessibleLabel"
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.TextInput51_2.AccessibleLabel",
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.TextInput51_2"
+                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15"
               }
             }
           ],
@@ -17844,259 +18007,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label41_1.FocusedBorderThickness"
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label41_1.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label41_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label41_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label41_1.TabIndex",
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.Label41_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.TextInput51_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.TextInput51_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container43.TextInput51_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.Dropdown1_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.Dropdown1_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.Dropdown1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.TextInput51_6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.TextInput51_6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.TextInput51_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.Image41_4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.Image41_4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.Image41_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.Image41_4.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.Image41_4.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Gallery1.Image41_4"
+                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Gallery6_15"
               }
             }
           ],
@@ -93323,66 +93246,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Caja",
-                "type": "Caja.img_Registro_Caja_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Caja",
-                "type": "Caja.img_Registro_Caja_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Caja.TextInput5_51.AccessibleLabel"
                 }
               ],
@@ -94013,6 +93876,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Caja",
+                "type": "Caja.img_Registro_Caja_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Caja",
+                "type": "Caja.img_Registro_Caja_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Caja.img_Salir_Caja.AccessibleLabel"
                 }
               ],
@@ -94067,6 +93990,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Consulta Medica Atencion",
+                "type": "'Consulta Medica Atencion'.conTratamientoServ.Container21_3.Container40.Dropdown1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -100767,20 +100720,6 @@
               }
             },
             {
-              "id": "app-ErrFunctionExpectsSelectableControl",
-              "messageStrings": {
-                "issue": {
-                  "text": "Select of a control that doesn’t have an OnSelect property"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-SuggestRemoteExecutionHint-InOpRhs",
               "messageStrings": {
                 "issue": {
@@ -100833,6 +100772,23 @@
                   "Try moving your data to a different data source."
                 ],
                 "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrExpectedFound-Ex-Fnd",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or replace the unexpected characters with an expected character."
+                ],
+                "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }
@@ -101042,7 +100998,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Consulta Medica Atencion\" is 1843, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Consulta Medica Atencion\" is 1837, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
