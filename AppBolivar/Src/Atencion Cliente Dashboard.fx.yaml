@@ -248,6 +248,7 @@
             Text: =ThisItem.Servicio
             VerticalAlign: =VerticalAlign.Top
             Width: =127
+            Wrap: =false
             X: =8
             Y: =6
             ZIndex: =7
@@ -1288,7 +1289,7 @@
                 id_sede = _varSede.id,
                 disponibilidad = true
                 
-            ), "doctor", LookUp('public.Medical_Center_Usuario', id = id_doctor).Usuario)
+            ), "doctor", LookUp('public.Medical_Center_Usuario', Correo = correo ).Usuario)
         Size: =12
         Width: =392
         X: =940

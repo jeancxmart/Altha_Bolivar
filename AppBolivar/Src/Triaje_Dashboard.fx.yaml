@@ -466,6 +466,7 @@ Triaje_Dashboard As screen:
                 =//If(ThisItem.estado="En Cola";Substitute(ThisItem.Servicio;"Cita: ";"");ThisItem.estado)
                 Proper(Substitute(ThisItem.Servicio,"Cita: ",""))
             Width: =197
+            Wrap: =false
             X: =123
             Y: =72
             ZIndex: =6

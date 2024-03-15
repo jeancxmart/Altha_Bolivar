@@ -1933,6 +1933,7 @@
                 IconBackground: =RGBA(255, 255, 255, 1)
                 IconFill: =RGBA(0, 0, 0, 1)
                 InputTextPlaceholder: =
+                PaddingBottom: =0
                 Size: =13
                 StartYear: =1940
                 Width: =233

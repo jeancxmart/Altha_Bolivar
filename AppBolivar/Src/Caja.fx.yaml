@@ -2013,7 +2013,7 @@ Caja As screen:
                     ));
                     
                     If(
-                        _varticketcaja.triaje_finalizada = false,
+                        _varticketcaja.triaje_finalizada = false And  _varticketcaja.cita_finalizada = false ,
                         Navigate(Triaje_Dashboard),
                         If( _varticketcaja.cita_finalizada = false,
                         Navigate('Consulta Medica Dashboard'),Navigate(Caja)
