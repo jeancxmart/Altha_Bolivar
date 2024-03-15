@@ -15067,7 +15067,6 @@
             Label14_4 As label:
                 Color: =RGBA(95, 106, 146, 1)
                 Font: =Font.'Segoe UI'
-                Height: =20
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
                 Size: =9
@@ -15394,7 +15393,7 @@
                     =Table(
                         {value:1,desc:"Tratamiento"},
                         {value:2,desc:"Servicio"}
-                    )
+                    ) 
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
@@ -15453,6 +15452,12 @@
                     Width: =245
                     ZIndex: =1
 
+                Label30 As label:
+                    Text: |-
+                        =ThisItem.Medicamento & ": " & ThisItem.Descripción
+                    Width: =250
+                    ZIndex: =2
+
             Container37 As groupContainer.verticalAutoLayoutContainer:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -15468,12 +15473,6 @@
                     PaddingBottom: =1
                     Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
                     ZIndex: =1
-
-                    Label15 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        FillPortions: =1
-                        Text: ="Text"
-                        ZIndex: =2
 
                     ButtonAtender_27 As button:
                         AlignInContainer: =AlignInContainer.Stretch
