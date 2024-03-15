@@ -33,7 +33,7 @@ Caja As screen:
         Icon: =Icon.Reload
         OnSelect: |-
             =Refresh('public.Medical_Center_Pagos');Refresh('public.Medical_Center_Counter');Refresh('public.Medical_Center_Ticket');Refresh('public.Medical_Center_time_log');
-            UpdateContext({_varCaja:true})
+            //UpdateContext({_varCaja:true})
         PaddingBottom: =10
         PaddingLeft: =10
         PaddingRight: =10
@@ -1978,6 +1978,8 @@ Caja As screen:
                       Alerta:true
                     });
                     
+                    Reset(TextInput1_4);
+                    Reset(galItemsPago);
                     UpdateContext({_varCaja:false});
                     UpdateContext({_varRegistrarPago:false});Reset(dpMedioPago);
                     UpdateContext({_varRegistrarPago:false});
