@@ -328,7 +328,7 @@
                     Fill: =Color.Transparent
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    Height: =44
+                    Height: =49
                     HoverBorderColor: =ColorFondoBoton
                     HoverColor: =ColorFondoBoton
                     HoverFill: =RGBA(255, 255, 255, 1)
@@ -343,8 +343,8 @@
                     Size: =12
                     Text: ="+  CREAR DOCUMENTO"
                     Visible: =If(IsBlank(galDescansoMedico.Selected) && _detalles="medicamentos",true,false)
-                    Width: =260
-                    X: =180
+                    Width: =232
+                    X: =208
                     Y: =248
                     ZIndex: =8
 
@@ -13097,10 +13097,11 @@
         Label11_28 As label:
             Color: =ColorFondoBoton
             Font: =Font.'Segoe UI'
+            Height: =50
             Size: =12
             Text: =var_Tratamiento_Anteriores.Tratamiento
             Visible: =_varRevisarAnteriores
-            Width: =350
+            Width: =372
             X: =581
             Y: =399
             ZIndex: =141
@@ -15424,10 +15425,11 @@
                     ZIndex: =3
 
             Gallery6_15 As gallery.galleryVertical:
-                Height: =140
+                FillPortions: =0
+                Height: =250
                 Items: =var_Tratamiento_a_Usar
                 Layout: =Layout.Vertical
-                LayoutMinHeight: =10
+                LayoutMinHeight: =200
                 LayoutMinWidth: =320
                 OnSelect: |-
                     =/*UpdateContext({_varTratamientoMedicamento:true})*/
