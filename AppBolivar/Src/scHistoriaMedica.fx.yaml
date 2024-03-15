@@ -5185,7 +5185,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).filiacion_ocupacion
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5228,7 +5228,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_1 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).filiacion_procedencia
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5315,7 +5315,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_2 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_motivo
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5358,7 +5358,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_3 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_relato_enf
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5437,7 +5437,7 @@ scHistoriaMedica As screen:
 
                                 tiGinecoLugNacimieto_4 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_generales
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -5492,7 +5492,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_3 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_familiares
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -5547,7 +5547,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_1 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_oftalmicas
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -5602,7 +5602,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_2 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_alergias
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -5733,7 +5733,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_4 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_lensometria_od
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5776,7 +5776,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_5 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_lensometria_oi
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5864,7 +5864,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_6 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_autorefracto_od
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5907,7 +5907,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_7 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_autorefracto_oi
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -6332,7 +6332,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_5 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_parpados_pestanas
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6387,7 +6387,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_6 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_conjuntiva
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6442,7 +6442,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_7 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_esclera
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6497,7 +6497,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_8 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_cornea
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6552,7 +6552,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_9 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_camara_anterior
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6607,7 +6607,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_10 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_vh
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6662,7 +6662,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_11 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =""
+                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_iris_pupila
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6759,7 +6759,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_8 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_pio_od
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -6802,7 +6802,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_9 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_pio_oi
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -6891,7 +6891,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_16 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_arriba
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -6933,7 +6933,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_17 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_izquierda
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -6975,7 +6975,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_18 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_abajo
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7017,7 +7017,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_19 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_derecha
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7106,7 +7106,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_20 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_arriba
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7148,7 +7148,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_21 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_izquierda
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7190,7 +7190,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_23 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_abajo
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7232,7 +7232,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_24 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_derecha
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
