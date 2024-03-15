@@ -15031,12 +15031,12 @@
         Label90_2 As label:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =28
+            Height: =60
             Size: =12
             Text: =var_Tratamiento_Nombre
             Width: =350
             X: =50
-            Y: =284
+            Y: =268
             ZIndex: =8
 
         Label90_3 As label:
@@ -15423,12 +15423,41 @@
                     Y: =Parent.TemplateHeight-Self.Height
                     ZIndex: =3
 
+            Gallery6_15 As gallery.galleryVertical:
+                Height: =140
+                Items: =var_Tratamiento_a_Usar
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =10
+                LayoutMinWidth: =320
+                OnSelect: |-
+                    =/*UpdateContext({_varTratamientoMedicamento:true})*/
+                TemplateSize: =23
+                Visible: =_detalles="medicamentos"
+                Width: =413
+                X: =50
+                Y: =367
+                ZIndex: =3
+
+                Label14_18 As label:
+                    Color: =RGBA(95, 106, 146, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =50
+                    OnSelect: =Select(Parent)
+                    Overflow: =Overflow.Scroll
+                    Size: =12
+                    Text: |-
+                        =//ThisItem.Value.Medicamento & ", " & ThisItem.Value.Descripcion
+                        ThisItem.Medicamento & ": " & ThisItem.Descripción
+                    Visible: =false
+                    Width: =245
+                    ZIndex: =1
+
             Container37 As groupContainer.verticalAutoLayoutContainer:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                ZIndex: =3
+                ZIndex: =4
 
                 conEditTratamiento As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical
@@ -15443,7 +15472,7 @@
                         AlignInContainer: =AlignInContainer.Stretch
                         FillPortions: =1
                         Text: ="Text"
-                        ZIndex: =1
+                        ZIndex: =2
 
                     ButtonAtender_27 As button:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -15476,7 +15505,7 @@
                         Width: =360
                         X: =516
                         Y: =559
-                        ZIndex: =2
+                        ZIndex: =3
 
                 conEditServicio As groupContainer.verticalAutoLayoutContainer:
                     LayoutDirection: =LayoutDirection.Vertical

@@ -345,9 +345,26 @@ App As appinfo:
             ColorValue("#C81C1C")
         );
     StartScreen: |-
-        =With({currentUser:LookUp('public.Medical_Center_Usuario',Correo=User().Email)},
-        If(false Or !currentUser.Activo,'Sin Acceso', If(And(currentUser.Activo = true),Or(currentUser.Splash_Screen=false,IsBlank(currentUser.Splash_Screen))), Onboarding, Home)
-        
+        =With(
+            {
+                currentUser: LookUp(
+                    'public.Medical_Center_Usuario',
+                    Correo = User().Email
+                )
+            },
+            If(
+                false Or !currentUser.Activo,
+                'Sin Acceso',
+                If(
+                    And(currentUser.Activo = true),
+                    Or(
+                        currentUser.Splash_Screen = false,
+                        IsBlank(currentUser.Splash_Screen)
+                    )
+                ),
+                Onboarding,
+                Home
+            )
         )
     Theme: =PowerAppsTheme
 
