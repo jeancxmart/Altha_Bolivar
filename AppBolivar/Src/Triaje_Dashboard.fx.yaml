@@ -402,6 +402,7 @@ Triaje_Dashboard As screen:
             OnSelect: |
                 =Set(varHabilitarAtencionTriaje,true);
                 Set(TriajeSelected,gal_Triaje_Dashboard_Triaje.Selected);Navigate('Triaje Atencion');
+                
                 Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=ThisItem.id_Ticket),{
                     estado:"En Atención",etapa:"Triaje"})
             RadiusBottomLeft: =8

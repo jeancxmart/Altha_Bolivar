@@ -1929,7 +1929,7 @@ Caja As screen:
                         Y: =12
                         ZIndex: =5
 
-            ButtonAtender_18 As button:
+            btnRegistroPago As button:
                 AlignInContainer: =AlignInContainer.Stretch
                 BorderColor: =RGBA(0, 0, 0, 1)
                 DisplayMode: =If(IsBlank(dpMedioPago.Selected) || IsBlank(dpTipoPago.Selected) || IsBlank(TextInput1.Text),DisplayMode.Disabled,DisplayMode.Edit)
@@ -2002,7 +2002,7 @@ Caja As screen:
                             Alerta: true
                         }
                     );
-                    
+                    Set(_varticketcaja,
                     Patch(
                         'public.Medical_Center_Ticket',
                         LookUp(
@@ -2010,7 +2010,14 @@ Caja As screen:
                             id = CajaSelected.id_Ticket
                         ),
                         {caja_finalizada: true}
-                    );
+                    ));
+                    
+                    If(
+                        _varticketcaja.triaje_finalizada = false,
+                        Navigate(Triaje_Dashboard),
+                        If( _varticketcaja.cita_finalizada = false,
+                        Navigate('Consulta Medica Dashboard'),Navigate(Caja)
+                    ));
                     
                     Reset(TextInput1_4);
                     Reset(galItemsPago);
