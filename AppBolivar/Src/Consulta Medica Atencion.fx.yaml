@@ -15356,7 +15356,7 @@
         Container21_3 As groupContainer.verticalAutoLayoutContainer:
             BorderThickness: =2
             Fill: =RGBA(241, 242, 246, 1)
-            Height: =Parent.Height-200
+            Height: =723
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =15
@@ -15369,7 +15369,7 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            Width: =661
+            Width: =649
             X: =(Parent.Width-Self.Width)/2
             Y: =(Parent.Height-Self.Height)/2
             ZIndex: =1
@@ -15425,50 +15425,89 @@
                     Y: =Parent.TemplateHeight-Self.Height
                     ZIndex: =3
 
-            Gallery6_15 As gallery.galleryVertical:
-                FillPortions: =0
-                Height: =150
-                Items: =var_Tratamiento_a_Usar
-                Layout: =Layout.Vertical
-                LayoutMinHeight: =200
-                LayoutMinWidth: =320
-                OnSelect: |-
-                    =/*UpdateContext({_varTratamientoMedicamento:true})*/
-                TemplateSize: =23
-                Visible: =_detalles="medicamentos"
-                Width: =413
-                X: =50
-                Y: =367
-                ZIndex: =3
+            Container43 As groupContainer.manualLayoutContainer:
+                LayoutMinHeight: =260
+                LayoutMinWidth: =250
+                Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
+                ZIndex: =4
 
-                Label30 As label:
-                    Text: |-
-                        =ThisItem.Medicamento & ": " & ThisItem.Descripción
-                    Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
-                    Width: =250
-                    ZIndex: =2
-
-                Label41 As label:
-                    Height: =23
-                    OnSelect: =Select(Parent)
+                Label41_1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderThickness: =2
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =36
+                    OnSelect: =//Select(Parent)
                     Text: =LookUp('public.Medical_Center_Especialidad',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket).id_especialidad,Especialidad)
                     Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
-                    X: =250
-                    ZIndex: =3
+                    Width: =577
+                    X: =10
+                    Y: =106
+                    ZIndex: =2
 
-                Label63 As label:
+                Label63_1 As label:
                     Height: =23
                     OnSelect: =Select(Parent)
                     Text: =LookUp('public.Medical_Center_Diagnostico',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket).id_especialidad,Especialidad)
                     Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
-                    X: =451
-                    ZIndex: =4
+                    X: =461
+                    Y: =40
+                    ZIndex: =3
+
+                Label63_6 As label:
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =20
+                    Text: ="Especialidad"
+                    Width: =230
+                    X: =10
+                    Y: =81
+                    ZIndex: =5
+
+                TextInput51_2 As text:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Default: =""
+                    Font: =Font.'Segoe UI'
+                    Height: =38
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Width: =577
+                    X: =10
+                    Y: =25
+                    ZIndex: =6
+
+                Label63_8 As label:
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =20
+                    Text: ="Diagnóstico"
+                    Width: =230
+                    X: =10
+                    Y: =161
+                    ZIndex: =7
+
+                TextInput51_3 As text:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Default: =""
+                    Font: =Font.'Segoe UI'
+                    Height: =38
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =12
+                    Width: =577
+                    X: =10
+                    Y: =185
+                    ZIndex: =8
 
             Container40 As groupContainer.manualLayoutContainer:
-                LayoutMinHeight: =155
+                LayoutMinHeight: =250
                 LayoutMinWidth: =250
                 Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
-                ZIndex: =4
+                ZIndex: =5
 
                 Label61 As label:
                     Font: =Font.'Segoe UI'
@@ -15486,7 +15525,9 @@
                     ZIndex: =2
 
                 Dropdown1 As dropdown:
-                    ChevronBackground: =RGBA(0, 0, 0, 1)
+                    BorderThickness: =0
+                    ChevronBackground: =ColorFondoBoton
+                    Height: =35
                     Items: |-
                         =Filter(Filter('public.Medical_Center_Medicamentos',Or(id_sede = _varSede.id,IsBlank(Consultorio))),Or(
                          Upper(Dropdown1.AccessibleLabel) in Upper(medicamento) 
@@ -15513,18 +15554,116 @@
                     Text: ="+  NUEVO MEDICAMENTO"
                     Visible: =If(IsBlank(galDescansoMedico.Selected) && _detalles="medicamentos",true,false)
                     Width: =232
-                    X: =168
-                    Y: =103
+                    X: =184
+                    Y: =196
                     ZIndex: =4
+
+                TextInput51_1 As text:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Default: =""
+                    Font: =Font.'Segoe UI'
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Size: =12
+                    Width: =275
+                    X: =275
+                    Y: =35
+                    ZIndex: =5
+
+                Image41_1 As image:
+                    Height: =30
+                    Image: =Delete
+                    OnSelect: |-
+                        =//UpdateContext({_varDUser: ThisItem});
+                        //UpdateContext({_varDUsers: true});
+                    Width: =30
+                    X: =562
+                    Y: =35
+                    ZIndex: =6
+
+                Dropdown1_1 As dropdown:
+                    BorderThickness: =0
+                    ChevronBackground: =ColorFondoBoton
+                    Height: =35
+                    Items: |-
+                        =Filter(Filter('public.Medical_Center_Medicamentos',Or(id_sede = _varSede.id,IsBlank(Consultorio))),Or(
+                         Upper(Dropdown1_1.AccessibleLabel) in Upper(medicamento) 
+                    Width: =168
+                    Y: =87
+                    ZIndex: =7
+
+                Dropdown1_2 As dropdown:
+                    BorderThickness: =0
+                    ChevronBackground: =ColorFondoBoton
+                    Items: |-
+                        =Filter(Filter('public.Medical_Center_Medicamentos',Or(id_sede = _varSede.id,IsBlank(Consultorio))),Or(
+                         Upper(Dropdown1_2.AccessibleLabel) in Upper(medicamento) 
+                    Width: =168
+                    Y: =136
+                    ZIndex: =8
+
+                TextInput51_4 As text:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Default: =""
+                    Font: =Font.'Segoe UI'
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Size: =12
+                    Width: =275
+                    X: =275
+                    Y: =87
+                    ZIndex: =9
+
+                Image41_2 As image:
+                    Height: =30
+                    Image: =Delete
+                    OnSelect: |-
+                        =//UpdateContext({_varDUser: ThisItem});
+                        //UpdateContext({_varDUsers: true});
+                    Width: =30
+                    X: =562
+                    Y: =87
+                    ZIndex: =10
+
+                TextInput51_5 As text:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Default: =""
+                    Font: =Font.'Segoe UI'
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Size: =12
+                    Width: =275
+                    X: =275
+                    Y: =136
+                    ZIndex: =11
+
+                Image41_3 As image:
+                    Height: =30
+                    Image: =Delete
+                    OnSelect: |-
+                        =//UpdateContext({_varDUser: ThisItem});
+                        //UpdateContext({_varDUsers: true});
+                    Width: =30
+                    X: =562
+                    Y: =136
+                    ZIndex: =12
 
             Container37 As groupContainer.verticalAutoLayoutContainer:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                ZIndex: =5
+                ZIndex: =6
 
                 conEditTratamiento As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =50
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutJustifyContent: =LayoutJustifyContent.End
                     LayoutMinHeight: =100

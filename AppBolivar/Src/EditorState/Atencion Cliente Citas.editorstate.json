@@ -13756,14 +13756,7 @@
         "Italic",
         "PaddingTop",
         "PaddingRight",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "PaddingBottom",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "PaddingBottom",
         "PaddingLeft"
       ],
       "HasDynamicProperties": false,
