@@ -26,7 +26,7 @@
                   "charLength": 35,
                   "charOffset": 103,
                   "snippet": {
-                    "text": "DateValue(Text(fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -306,7 +306,7 @@
                   "charLength": 81,
                   "charOffset": 37,
                   "snippet": {
-                    "text": "And(DNI_RUC=ThisItem.DNI_Paciente ; DateValue(Fecha) = DateValue(ThisItem.fecha))"
+                    "text": "And(DNI_RUC=ThisItem.DNI_Paciente , DateValue(Fecha) = DateValue(ThisItem.fecha))"
                   }
                 }
               },
@@ -346,7 +346,7 @@
                   "charLength": 35,
                   "charOffset": 423,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -466,7 +466,7 @@
                   "charLength": 56,
                   "charOffset": 42,
                   "snippet": {
-                    "text": "Date(Year(fecha_cita);Month(fecha_cita);Day(fecha_cita))"
+                    "text": "Date(Year(fecha_cita),Month(fecha_cita),Day(fecha_cita))"
                   }
                 }
               },
@@ -546,7 +546,7 @@
                   "charLength": 409,
                   "charOffset": 38,
                   "snippet": {
-                    "text": "And(Date(Year(fecha_cita);Month(fecha_cita);Day(fecha_cita)) >= Date(Year(datePiker_Caja_Registro_4.SelectedDate);Month(datePiker_Caja_Registro_4.SelectedDate);Day(datePiker_Caja_Registro_4.SelectedDate)) ;\n\nDate(Year(fecha_cita);Month(fecha_cita);Day(fecha_cita)) <= Date(Year(datePiker_Caja_Registro_4.SelectedDate);Month(datePiker_Caja_Registro_4.SelectedDate);Day(datePiker_Caja_Registro_3.SelectedDate)))"
+                    "text": "And(Date(Year(fecha_cita),Month(fecha_cita),Day(fecha_cita)) >= Date(Year(datePiker_Caja_Registro_4.SelectedDate),Month(datePiker_Caja_Registro_4.SelectedDate),Day(datePiker_Caja_Registro_4.SelectedDate)) ,\n\nDate(Year(fecha_cita),Month(fecha_cita),Day(fecha_cita)) <= Date(Year(datePiker_Caja_Registro_4.SelectedDate),Month(datePiker_Caja_Registro_4.SelectedDate),Day(datePiker_Caja_Registro_3.SelectedDate)))"
                   }
                 }
               },
@@ -586,7 +586,7 @@
                   "charLength": 144,
                   "charOffset": 152,
                   "snippet": {
-                    "text": "DateValue(\n                    Text(\n                        Fecha;\n                        \"dd/mm/yyyy\"\n                    )\n                )"
+                    "text": "DateValue(\n                    Text(\n                        Fecha,\n                        \"dd/mm/yyyy\"\n                    )\n                )"
                   }
                 }
               },
@@ -706,7 +706,7 @@
                   "charLength": 124,
                   "charOffset": 979,
                   "snippet": {
-                    "text": "DateValue(\n                Text(\n                    Fecha;\n                    \"dd/mm/yyyy\"\n                )\n            )"
+                    "text": "DateValue(\n                Text(\n                    Fecha,\n                    \"dd/mm/yyyy\"\n                )\n            )"
                   }
                 }
               },
@@ -826,7 +826,7 @@
                   "charLength": 24,
                   "charOffset": 939,
                   "snippet": {
-                    "text": "Text(Fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -906,7 +906,7 @@
                   "charLength": 24,
                   "charOffset": 1068,
                   "snippet": {
-                    "text": "Text(Fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -1146,7 +1146,7 @@
                   "charLength": 35,
                   "charOffset": 129,
                   "snippet": {
-                    "text": "DateValue(Text(fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -1266,7 +1266,7 @@
                   "charLength": 35,
                   "charOffset": 130,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -1386,7 +1386,7 @@
                   "charLength": 35,
                   "charOffset": 470,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -1506,7 +1506,7 @@
                   "charLength": 24,
                   "charOffset": 752,
                   "snippet": {
-                    "text": "Text(Fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -1586,7 +1586,7 @@
                   "charLength": 24,
                   "charOffset": 912,
                   "snippet": {
-                    "text": "Text(Fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -1826,7 +1826,7 @@
                   "charLength": 35,
                   "charOffset": 180,
                   "snippet": {
-                    "text": "DateValue(Text(fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -1946,7 +1946,7 @@
                   "charLength": 35,
                   "charOffset": 1097,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -2066,7 +2066,7 @@
                   "charLength": 35,
                   "charOffset": 1433,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -2186,7 +2186,7 @@
                   "charLength": 35,
                   "charOffset": 1786,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -2306,7 +2306,7 @@
                   "charLength": 35,
                   "charOffset": 2122,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -2426,7 +2426,7 @@
                   "charLength": 29,
                   "charOffset": 102,
                   "snippet": {
-                    "text": "Text(fechaCuota;\"dd/mm/yyyy\")"
+                    "text": "Text(fechaCuota,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -2506,7 +2506,7 @@
                   "charLength": 115,
                   "charOffset": 75,
                   "snippet": {
-                    "text": "And(Usuario=ThisItem.Value;Text(fechaCuota;\"dd/mm/yyyy\")=Text(datePiker_Caja_Registro_4.SelectedDate;\"dd/mm/yyyy\"))"
+                    "text": "And(Usuario=ThisItem.Value,Text(fechaCuota,\"dd/mm/yyyy\")=Text(datePiker_Caja_Registro_4.SelectedDate,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -2546,7 +2546,7 @@
                   "charLength": 29,
                   "charOffset": 107,
                   "snippet": {
-                    "text": "Text(fechaCuota;\"dd/mm/yyyy\")"
+                    "text": "Text(fechaCuota,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -2626,7 +2626,7 @@
                   "charLength": 115,
                   "charOffset": 80,
                   "snippet": {
-                    "text": "And(Usuario=ThisItem.Value;Text(fechaCuota;\"dd/mm/yyyy\")=Text(datePiker_Caja_Registro_4.SelectedDate;\"dd/mm/yyyy\"))"
+                    "text": "And(Usuario=ThisItem.Value,Text(fechaCuota,\"dd/mm/yyyy\")=Text(datePiker_Caja_Registro_4.SelectedDate,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -2666,7 +2666,7 @@
                   "charLength": 29,
                   "charOffset": 308,
                   "snippet": {
-                    "text": "Text(fechaCuota;\"dd/mm/yyyy\")"
+                    "text": "Text(fechaCuota,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -2746,7 +2746,7 @@
                   "charLength": 115,
                   "charOffset": 281,
                   "snippet": {
-                    "text": "And(Usuario=ThisItem.Value;Text(fechaCuota;\"dd/mm/yyyy\")=Text(datePiker_Caja_Registro_4.SelectedDate;\"dd/mm/yyyy\"))"
+                    "text": "And(Usuario=ThisItem.Value,Text(fechaCuota,\"dd/mm/yyyy\")=Text(datePiker_Caja_Registro_4.SelectedDate,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -2786,7 +2786,7 @@
                   "charLength": 29,
                   "charOffset": 107,
                   "snippet": {
-                    "text": "Text(fechaCuota;\"dd/mm/yyyy\")"
+                    "text": "Text(fechaCuota,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -2866,7 +2866,7 @@
                   "charLength": 115,
                   "charOffset": 80,
                   "snippet": {
-                    "text": "And(Usuario=ThisItem.Value;Text(fechaCuota;\"dd/mm/yyyy\")=Text(datePiker_Caja_Registro_4.SelectedDate;\"dd/mm/yyyy\"))"
+                    "text": "And(Usuario=ThisItem.Value,Text(fechaCuota,\"dd/mm/yyyy\")=Text(datePiker_Caja_Registro_4.SelectedDate,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -2904,7 +2904,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 813,
+                  "charOffset": 809,
                   "snippet": {
                     "text": "Consultorio"
                   }
@@ -2944,7 +2944,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 805,
+                  "charOffset": 801,
                   "snippet": {
                     "text": "IsBlank(Consultorio)"
                   }
@@ -2984,9 +2984,9 @@
                 },
                 "region": {
                   "charLength": 46,
-                  "charOffset": 780,
+                  "charOffset": 776,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -3024,9 +3024,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 9546,
+                  "charOffset": 9412,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -3064,7 +3064,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 9570,
+                  "charOffset": 9436,
                   "snippet": {
                     "text": "="
                   }
@@ -3104,9 +3104,9 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 9507,
+                  "charOffset": 9373,
                   "snippet": {
-                    "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
+                    "text": "And(DNI_CI=TicketSelected.DNI_Paciente,Text(fecha,\"dd/mm/yyyy\")=Text(TicketSelected.fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -3144,7 +3144,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 10730,
+                  "charOffset": 10596,
                   "snippet": {
                     "text": "Consultorio"
                   }
@@ -3184,7 +3184,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 10722,
+                  "charOffset": 10588,
                   "snippet": {
                     "text": "IsBlank(Consultorio)"
                   }
@@ -3224,9 +3224,9 @@
                 },
                 "region": {
                   "charLength": 46,
-                  "charOffset": 10697,
+                  "charOffset": 10563,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -3264,9 +3264,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 15815,
+                  "charOffset": 15680,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -3304,7 +3304,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 15839,
+                  "charOffset": 15704,
                   "snippet": {
                     "text": "="
                   }
@@ -3344,9 +3344,9 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 15776,
+                  "charOffset": 15641,
                   "snippet": {
-                    "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
+                    "text": "And(DNI_CI=TicketSelected.DNI_Paciente,Text(fecha,\"dd/mm/yyyy\")=Text(TicketSelected.fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -3384,9 +3384,9 @@
                 },
                 "region": {
                   "charLength": 41,
-                  "charOffset": 16346,
+                  "charOffset": 16211,
                   "snippet": {
-                    "text": "Date(Year(fecha);Month(fecha);Day(fecha))"
+                    "text": "Date(Year(fecha),Month(fecha),Day(fecha))"
                   }
                 }
               },
@@ -3424,7 +3424,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 16388,
+                  "charOffset": 16253,
                   "snippet": {
                     "text": "="
                   }
@@ -3464,9 +3464,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 21010,
+                  "charOffset": 20874,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -3504,7 +3504,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 21034,
+                  "charOffset": 20898,
                   "snippet": {
                     "text": "="
                   }
@@ -3544,9 +3544,9 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 20971,
+                  "charOffset": 20835,
                   "snippet": {
-                    "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
+                    "text": "And(DNI_CI=TicketSelected.DNI_Paciente,Text(fecha,\"dd/mm/yyyy\")=Text(TicketSelected.fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -3584,7 +3584,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 27124,
+                  "charOffset": 26987,
                   "snippet": {
                     "text": "Consultorio"
                   }
@@ -3624,7 +3624,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 27116,
+                  "charOffset": 26979,
                   "snippet": {
                     "text": "IsBlank(Consultorio)"
                   }
@@ -3664,9 +3664,9 @@
                 },
                 "region": {
                   "charLength": 46,
-                  "charOffset": 27091,
+                  "charOffset": 26954,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -3704,9 +3704,9 @@
                 },
                 "region": {
                   "charLength": 71,
-                  "charOffset": 27752,
+                  "charOffset": 27615,
                   "snippet": {
-                    "text": "Text(\n                fecha;\n                \"dd/mm/yyyy\"\n            )"
+                    "text": "Text(\n                fecha,\n                \"dd/mm/yyyy\"\n            )"
                   }
                 }
               },
@@ -3744,7 +3744,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 27824,
+                  "charOffset": 27687,
                   "snippet": {
                     "text": "="
                   }
@@ -3786,7 +3786,7 @@
                   "charLength": 24,
                   "charOffset": 95,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -3866,7 +3866,7 @@
                   "charLength": 104,
                   "charOffset": 56,
                   "snippet": {
-                    "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
+                    "text": "And(DNI_CI=TicketSelected.DNI_Paciente,Text(fecha,\"dd/mm/yyyy\")=Text(TicketSelected.fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -3986,7 +3986,7 @@
                   "charLength": 46,
                   "charOffset": 125,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -4026,7 +4026,7 @@
                   "charLength": 71,
                   "charOffset": 70,
                   "snippet": {
-                    "text": "Text(\n                fecha;\n                \"dd/mm/yyyy\"\n            )"
+                    "text": "Text(\n                fecha,\n                \"dd/mm/yyyy\"\n            )"
                   }
                 }
               },
@@ -4104,9 +4104,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 208,
+                  "charOffset": 206,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -4144,7 +4144,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 232,
+                  "charOffset": 230,
                   "snippet": {
                     "text": "="
                   }
@@ -4266,7 +4266,7 @@
                   "charLength": 46,
                   "charOffset": 51,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -4386,7 +4386,7 @@
                   "charLength": 46,
                   "charOffset": 51,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -4466,7 +4466,7 @@
                   "charLength": 71,
                   "charOffset": 440,
                   "snippet": {
-                    "text": "Text(\n                fecha;\n                \"dd/mm/yyyy\"\n            )"
+                    "text": "Text(\n                fecha,\n                \"dd/mm/yyyy\"\n            )"
                   }
                 }
               },
@@ -4626,7 +4626,7 @@
                   "charLength": 78,
                   "charOffset": 1079,
                   "snippet": {
-                    "text": "Text(\n                fecha_receta;\n                \"dd/mm/yyyy\"\n            )"
+                    "text": "Text(\n                fecha_receta,\n                \"dd/mm/yyyy\"\n            )"
                   }
                 }
               },
@@ -4706,7 +4706,7 @@
                   "charLength": 41,
                   "charOffset": 1465,
                   "snippet": {
-                    "text": "Date(Year(fecha);Month(fecha);Day(fecha))"
+                    "text": "Date(Year(fecha),Month(fecha),Day(fecha))"
                   }
                 }
               },
@@ -4867,7 +4867,7 @@
                   "charLength": 168,
                   "charOffset": 803,
                   "snippet": {
-                    "text": "Or(Upper(TextInput53_1.Text) in Upper(examen_nombre);Upper(TextInput53_1.Text) in Upper(muestra_preferida);Upper(TextInput53_1.Text) in Upper(protocolo_toma_muestra)  )"
+                    "text": "Or(Upper(TextInput53_1.Text) in Upper(examen_nombre),Upper(TextInput53_1.Text) in Upper(muestra_preferida),Upper(TextInput53_1.Text) in Upper(protocolo_toma_muestra)  )"
                   }
                 }
               },
@@ -4907,7 +4907,7 @@
                   "charLength": 41,
                   "charOffset": 11645,
                   "snippet": {
-                    "text": "Date(Year(fecha);Month(fecha);Day(fecha))"
+                    "text": "Date(Year(fecha),Month(fecha),Day(fecha))"
                   }
                 }
               },
@@ -4987,7 +4987,7 @@
                   "charLength": 215,
                   "charOffset": 11535,
                   "snippet": {
-                    "text": "And(DNI_Paciente= TicketSelected.DNI_Paciente;etapa=\"Atención Medica\";estado=\"Atendido\";id_sede = _varSede.id;Date(Year(fecha);Month(fecha);Day(fecha))=Date(Year(fecha_receta);Month(fecha_receta);Day(fecha_receta)))"
+                    "text": "And(DNI_Paciente= TicketSelected.DNI_Paciente,etapa=\"Atención Medica\",estado=\"Atendido\",id_sede = _varSede.id,Date(Year(fecha),Month(fecha),Day(fecha))=Date(Year(fecha_receta),Month(fecha_receta),Day(fecha_receta)))"
                   }
                 }
               },
@@ -5107,7 +5107,7 @@
                   "charLength": 140,
                   "charOffset": 12072,
                   "snippet": {
-                    "text": "LookUp(\n                'public.Medical_Center_Receta_Paciente';\n                Value(Label8_1.Text) = id;\n                id\n            )"
+                    "text": "LookUp(\n                'public.Medical_Center_Receta_Paciente',\n                Value(Label8_1.Text) = id,\n                id\n            )"
                   }
                 }
               },
@@ -5187,7 +5187,7 @@
                   "charLength": 24,
                   "charOffset": 95,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -5267,7 +5267,7 @@
                   "charLength": 104,
                   "charOffset": 56,
                   "snippet": {
-                    "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
+                    "text": "And(DNI_CI=TicketSelected.DNI_Paciente,Text(fecha,\"dd/mm/yyyy\")=Text(TicketSelected.fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -5307,7 +5307,7 @@
                   "charLength": 47,
                   "charOffset": 135,
                   "snippet": {
-                    "text": "Text(\n        fecha;\n        \"dd/mm/yyyy\"\n    )"
+                    "text": "Text(\n        fecha,\n        \"dd/mm/yyyy\"\n    )"
                   }
                 }
               },
@@ -5387,7 +5387,7 @@
                   "charLength": 41,
                   "charOffset": 322,
                   "snippet": {
-                    "text": "Date(Year(fecha);Month(fecha);Day(fecha))"
+                    "text": "Date(Year(fecha),Month(fecha),Day(fecha))"
                   }
                 }
               },
@@ -5545,7 +5545,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 162,
+                  "charOffset": 161,
                   "snippet": {
                     "text": "id"
                   }
@@ -5665,9 +5665,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 158,
+                  "charOffset": 157,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -5705,7 +5705,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 182,
+                  "charOffset": 181,
                   "snippet": {
                     "text": "="
                   }
@@ -5747,7 +5747,7 @@
                   "charLength": 37,
                   "charOffset": 107,
                   "snippet": {
-                    "text": "Text(fecha; DateTimeFormat.ShortDate)"
+                    "text": "Text(fecha, DateTimeFormat.ShortDate)"
                   }
                 }
               },
@@ -5827,7 +5827,7 @@
                   "charLength": 42,
                   "charOffset": 129,
                   "snippet": {
-                    "text": "Text(fecha_cita; DateTimeFormat.ShortDate)"
+                    "text": "Text(fecha_cita, DateTimeFormat.ShortDate)"
                   }
                 }
               },
@@ -5907,7 +5907,7 @@
                   "charLength": 24,
                   "charOffset": 102,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -5987,7 +5987,7 @@
                   "charLength": 42,
                   "charOffset": 401,
                   "snippet": {
-                    "text": "Text(fecha_cita; DateTimeFormat.ShortDate)"
+                    "text": "Text(fecha_cita, DateTimeFormat.ShortDate)"
                   }
                 }
               },
@@ -6067,7 +6067,7 @@
                   "charLength": 24,
                   "charOffset": 106,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -6185,9 +6185,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 157,
+                  "charOffset": 156,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -6225,7 +6225,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 181,
+                  "charOffset": 180,
                   "snippet": {
                     "text": "="
                   }
@@ -6307,7 +6307,7 @@
                   "charLength": 24,
                   "charOffset": 104,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -6387,7 +6387,7 @@
                   "charLength": 122,
                   "charOffset": 56,
                   "snippet": {
-                    "text": "And(DNI_CI=TicketSelected_Registro.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected_Registro.fecha;\"dd/mm/yyyy\"))"
+                    "text": "And(DNI_CI=TicketSelected_Registro.DNI_Paciente,Text(fecha,\"dd/mm/yyyy\")=Text(TicketSelected_Registro.fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -6427,7 +6427,7 @@
                   "charLength": 31,
                   "charOffset": 139,
                   "snippet": {
-                    "text": "Text(fecha_receta;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha_receta,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -6507,7 +6507,7 @@
                   "charLength": 24,
                   "charOffset": 104,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -6587,7 +6587,7 @@
                   "charLength": 122,
                   "charOffset": 56,
                   "snippet": {
-                    "text": "And(DNI_CI=TicketSelected_Registro.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected_Registro.fecha;\"dd/mm/yyyy\"))"
+                    "text": "And(DNI_CI=TicketSelected_Registro.DNI_Paciente,Text(fecha,\"dd/mm/yyyy\")=Text(TicketSelected_Registro.fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -6627,7 +6627,7 @@
                   "charLength": 32,
                   "charOffset": 103,
                   "snippet": {
-                    "text": "Text(Fecha_Emision;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha_Emision,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -6747,7 +6747,7 @@
                   "charLength": 31,
                   "charOffset": 102,
                   "snippet": {
-                    "text": "Text(fecha_receta;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha_receta,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -6827,7 +6827,7 @@
                   "charLength": 31,
                   "charOffset": 766,
                   "snippet": {
-                    "text": "Text(fecha_receta;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha_receta,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -6907,7 +6907,7 @@
                   "charLength": 32,
                   "charOffset": 1072,
                   "snippet": {
-                    "text": "Text(Fecha_Emision;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha_Emision,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -7027,7 +7027,7 @@
                   "charLength": 32,
                   "charOffset": 1344,
                   "snippet": {
-                    "text": "Text(Fecha_Emision;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha_Emision,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -7227,7 +7227,7 @@
                   "charLength": 46,
                   "charOffset": 147,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -7267,7 +7267,7 @@
                   "charLength": 24,
                   "charOffset": 103,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -7387,7 +7387,7 @@
                   "charLength": 24,
                   "charOffset": 102,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -7507,7 +7507,7 @@
                   "charLength": 29,
                   "charOffset": 97,
                   "snippet": {
-                    "text": "Text(fecha_cita;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha_cita,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -7587,7 +7587,7 @@
                   "charLength": 138,
                   "charOffset": 38,
                   "snippet": {
-                    "text": "And(\nid_Pacientes_DNI=TicketSelected_Registro.DNI_Paciente;Text(fecha_cita;\"dd/mm/yyyy\")=Text(TicketSelected_Registro.fecha;\"dd/mm/yyyy\"))"
+                    "text": "And(\nid_Pacientes_DNI=TicketSelected_Registro.DNI_Paciente,Text(fecha_cita,\"dd/mm/yyyy\")=Text(TicketSelected_Registro.fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -7627,7 +7627,7 @@
                   "charLength": 31,
                   "charOffset": 77,
                   "snippet": {
-                    "text": "Text(fecha_receta;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha_receta,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -7707,7 +7707,7 @@
                   "charLength": 24,
                   "charOffset": 106,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -7785,9 +7785,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 158,
+                  "charOffset": 157,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -7825,7 +7825,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 182,
+                  "charOffset": 181,
                   "snippet": {
                     "text": "="
                   }
@@ -7948,7 +7948,7 @@
                   "charLength": 168,
                   "charOffset": 501,
                   "snippet": {
-                    "text": "Or(Upper(TextInput5_48.Text) in Upper(examen_nombre);Upper(TextInput5_48.Text) in Upper(muestra_preferida);Upper(TextInput5_48.Text) in Upper(protocolo_toma_muestra)  )"
+                    "text": "Or(Upper(TextInput5_48.Text) in Upper(examen_nombre),Upper(TextInput5_48.Text) in Upper(muestra_preferida),Upper(TextInput5_48.Text) in Upper(protocolo_toma_muestra)  )"
                   }
                 }
               },
@@ -7988,7 +7988,7 @@
                   "charLength": 24,
                   "charOffset": 106,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -8066,9 +8066,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 157,
+                  "charOffset": 156,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -8106,7 +8106,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 181,
+                  "charOffset": 180,
                   "snippet": {
                     "text": "="
                   }
@@ -8228,7 +8228,7 @@
                   "charLength": 46,
                   "charOffset": 44,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -8348,7 +8348,7 @@
                   "charLength": 46,
                   "charOffset": 44,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -8468,7 +8468,7 @@
                   "charLength": 46,
                   "charOffset": 44,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -8588,7 +8588,7 @@
                   "charLength": 46,
                   "charOffset": 1877,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -8708,7 +8708,7 @@
                   "charLength": 46,
                   "charOffset": 2536,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -8828,7 +8828,7 @@
                   "charLength": 46,
                   "charOffset": 2892,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -8948,7 +8948,7 @@
                   "charLength": 46,
                   "charOffset": 3146,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -9068,7 +9068,7 @@
                   "charLength": 46,
                   "charOffset": 3412,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -9188,7 +9188,7 @@
                   "charLength": 46,
                   "charOffset": 3681,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -9308,7 +9308,7 @@
                   "charLength": 46,
                   "charOffset": 3991,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -9428,7 +9428,7 @@
                   "charLength": 46,
                   "charOffset": 4299,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -9468,7 +9468,7 @@
                   "charLength": 35,
                   "charOffset": 63,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -9588,7 +9588,7 @@
                   "charLength": 35,
                   "charOffset": 112,
                   "snippet": {
-                    "text": "DateValue(Text(fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -9708,7 +9708,7 @@
                   "charLength": 35,
                   "charOffset": 46,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -9828,7 +9828,7 @@
                   "charLength": 35,
                   "charOffset": 91,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -10029,7 +10029,7 @@
                   "charLength": 35,
                   "charOffset": 41,
                   "snippet": {
-                    "text": "DateValue(Text(Fecha;\"dd/mm/yyyy\"))"
+                    "text": "DateValue(Text(Fecha,\"dd/mm/yyyy\"))"
                   }
                 }
               },
@@ -10149,7 +10149,7 @@
                   "charLength": 24,
                   "charOffset": 106,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -10227,9 +10227,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 158,
+                  "charOffset": 157,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -10267,7 +10267,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 182,
+                  "charOffset": 181,
                   "snippet": {
                     "text": "="
                   }
@@ -10387,9 +10387,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 158,
+                  "charOffset": 157,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -10427,7 +10427,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 182,
+                  "charOffset": 181,
                   "snippet": {
                     "text": "="
                   }
@@ -10509,7 +10509,7 @@
                   "charLength": 128,
                   "charOffset": 59,
                   "snippet": {
-                    "text": "Or(Upper(TextInput5_69.Text) in Upper(tipo);Upper(TextInput5_69.Text) in Upper(nombre) ;Upper(TextInput5_69.Text) in Upper(url))"
+                    "text": "Or(Upper(TextInput5_69.Text) in Upper(tipo),Upper(TextInput5_69.Text) in Upper(nombre) ,Upper(TextInput5_69.Text) in Upper(url))"
                   }
                 }
               },
@@ -10549,7 +10549,7 @@
                   "charLength": 24,
                   "charOffset": 106,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -10627,9 +10627,9 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 157,
+                  "charOffset": 156,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -10667,7 +10667,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 181,
+                  "charOffset": 180,
                   "snippet": {
                     "text": "="
                   }
@@ -10789,7 +10789,7 @@
                   "charLength": 46,
                   "charOffset": 1761,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -10909,7 +10909,7 @@
                   "charLength": 46,
                   "charOffset": 1761,
                   "snippet": {
-                    "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
+                    "text": "Or(id_sede = _varSede.id,IsBlank(Consultorio))"
                   }
                 }
               },
@@ -10989,7 +10989,7 @@
                   "charLength": 111,
                   "charOffset": 84,
                   "snippet": {
-                    "text": "Or(Proper(TextInput5_23.Text) in Proper(Especialidad);Proper(TextInput5_23.Text) in Proper(Nombre_Diagnostico))"
+                    "text": "Or(Proper(TextInput5_23.Text) in Proper(Especialidad),Proper(TextInput5_23.Text) in Proper(Nombre_Diagnostico))"
                   }
                 }
               },
@@ -11029,7 +11029,7 @@
                   "charLength": 94,
                   "charOffset": 3,
                   "snippet": {
-                    "text": "CountRows(Filter('public.Medical_Center_Tratamiento';Cod_Tratamiento= TratamientoSelected.id))"
+                    "text": "CountRows(Filter('public.Medical_Center_Tratamiento',Cod_Tratamiento= TratamientoSelected.id))"
                   }
                 }
               },
@@ -11069,7 +11069,7 @@
                   "charLength": 85,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "CountRows(Filter('public.Medical_Center_Usuario';Especialidad=ThisItem.Especialidad))"
+                    "text": "CountRows(Filter('public.Medical_Center_Usuario',Especialidad=ThisItem.Especialidad))"
                   }
                 }
               },
@@ -11109,7 +11109,7 @@
                   "charLength": 24,
                   "charOffset": 189,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -11309,7 +11309,7 @@
                   "charLength": 42,
                   "charOffset": 136,
                   "snippet": {
-                    "text": "Text(fecha_cita; DateTimeFormat.ShortDate)"
+                    "text": "Text(fecha_cita, DateTimeFormat.ShortDate)"
                   }
                 }
               },
@@ -11549,7 +11549,7 @@
                   "charLength": 76,
                   "charOffset": 170,
                   "snippet": {
-                    "text": "Text(\n            fecha_cita;\n            DateTimeFormat.ShortDate\n        )"
+                    "text": "Text(\n            fecha_cita,\n            DateTimeFormat.ShortDate\n        )"
                   }
                 }
               },
@@ -11629,7 +11629,7 @@
                   "charLength": 105,
                   "charOffset": 10547,
                   "snippet": {
-                    "text": "Date(\n                Year(fecha);\n                Month(fecha);\n                Day(fecha)\n            )"
+                    "text": "Date(\n                Year(fecha),\n                Month(fecha),\n                Day(fecha)\n            )"
                   }
                 }
               },
@@ -11709,7 +11709,7 @@
                   "charLength": 414,
                   "charOffset": 10377,
                   "snippet": {
-                    "text": "And(\n            DNI_Paciente = HMSelected.DNI_CI;\n            etapa = \"Atención Medica\";\n            estado = \"Atendido\";\n            id_sede = _varSede.id;\n            Date(\n                Year(fecha);\n                Month(fecha);\n                Day(fecha)\n            ) = Date(\n                Year(fecha_receta);\n                Month(fecha_receta);\n                Day(fecha_receta)\n            )\n        )"
+                    "text": "And(\n            DNI_Paciente = HMSelected.DNI_CI,\n            etapa = \"Atención Medica\",\n            estado = \"Atendido\",\n            id_sede = _varSede.id,\n            Date(\n                Year(fecha),\n                Month(fecha),\n                Day(fecha)\n            ) = Date(\n                Year(fecha_receta),\n                Month(fecha_receta),\n                Day(fecha_receta)\n            )\n        )"
                   }
                 }
               },
@@ -11829,7 +11829,7 @@
                   "charLength": 140,
                   "charOffset": 11116,
                   "snippet": {
-                    "text": "LookUp(\n                'public.Medical_Center_Receta_Paciente';\n                Value(Label8_2.Text) = id;\n                id\n            )"
+                    "text": "LookUp(\n                'public.Medical_Center_Receta_Paciente',\n                Value(Label8_2.Text) = id,\n                id\n            )"
                   }
                 }
               },
@@ -11909,7 +11909,7 @@
                   "charLength": 105,
                   "charOffset": 11566,
                   "snippet": {
-                    "text": "Date(\n                Year(fecha);\n                Month(fecha);\n                Day(fecha)\n            )"
+                    "text": "Date(\n                Year(fecha),\n                Month(fecha),\n                Day(fecha)\n            )"
                   }
                 }
               },
@@ -11989,7 +11989,7 @@
                   "charLength": 414,
                   "charOffset": 11396,
                   "snippet": {
-                    "text": "And(\n            DNI_Paciente = HMSelected.DNI_CI;\n            etapa = \"Atención Medica\";\n            estado = \"Atendido\";\n            id_sede = _varSede.id;\n            Date(\n                Year(fecha);\n                Month(fecha);\n                Day(fecha)\n            ) = Date(\n                Year(fecha_receta);\n                Month(fecha_receta);\n                Day(fecha_receta)\n            )\n        )"
+                    "text": "And(\n            DNI_Paciente = HMSelected.DNI_CI,\n            etapa = \"Atención Medica\",\n            estado = \"Atendido\",\n            id_sede = _varSede.id,\n            Date(\n                Year(fecha),\n                Month(fecha),\n                Day(fecha)\n            ) = Date(\n                Year(fecha_receta),\n                Month(fecha_receta),\n                Day(fecha_receta)\n            )\n        )"
                   }
                 }
               },
@@ -12109,7 +12109,7 @@
                   "charLength": 140,
                   "charOffset": 12247,
                   "snippet": {
-                    "text": "LookUp(\n                'public.Medical_Center_Receta_Paciente';\n                Value(Label8_2.Text) = id;\n                id\n            )"
+                    "text": "LookUp(\n                'public.Medical_Center_Receta_Paciente',\n                Value(Label8_2.Text) = id,\n                id\n            )"
                   }
                 }
               },
@@ -12229,7 +12229,7 @@
                   "charLength": 24,
                   "charOffset": 137,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -12309,7 +12309,7 @@
                   "charLength": 24,
                   "charOffset": 37,
                   "snippet": {
-                    "text": "Text(Fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -12509,7 +12509,7 @@
                   "charLength": 24,
                   "charOffset": 67,
                   "snippet": {
-                    "text": "Text(Fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -12589,7 +12589,7 @@
                   "charLength": 24,
                   "charOffset": 137,
                   "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -12669,7 +12669,7 @@
                   "charLength": 24,
                   "charOffset": 37,
                   "snippet": {
-                    "text": "Text(Fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -12749,7 +12749,7 @@
                   "charLength": 24,
                   "charOffset": 67,
                   "snippet": {
-                    "text": "Text(Fecha;\"dd/mm/yyyy\")"
+                    "text": "Text(Fecha,\"dd/mm/yyyy\")"
                   }
                 }
               },
@@ -83616,306 +83616,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon12_13.AccessibleLabel"
                 }
               ],
@@ -83976,96 +83676,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtNombreDCA_8.AccessibleLabel"
                 }
               ],
@@ -84109,96 +83719,6 @@
                 "member": "AccessibleLabel",
                 "module": "Atencion Cliente Citas",
                 "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtApellidoDCA_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42"
               }
             }
           ],
@@ -84349,96 +83869,6 @@
                 "member": "AccessibleLabel",
                 "module": "Atencion Cliente Citas",
                 "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.dpgrado_DCA_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44"
               }
             }
           ],
@@ -84619,96 +84049,6 @@
                 "member": "AccessibleLabel",
                 "module": "Atencion Cliente Citas",
                 "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.dpEstadoCivil_DCA_12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45"
               }
             }
           ],
@@ -85056,6 +84396,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_7.AccessibleLabel"
                 }
               ],
@@ -85116,6 +84516,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_8.AccessibleLabel"
                 }
               ],
@@ -85159,6 +84619,546 @@
                 "member": "AccessibleLabel",
                 "module": "Atencion Cliente Citas",
                 "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45"
               }
             }
           ],
@@ -100478,123 +100478,123 @@
               "id": "app-UnusedVariables",
               "messageStrings": {
                 "issue": {
-                  "text": "Variable no utilizada"
+                  "text": "Unused variable"
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Quite la variable no utilizada."
+                  "Remove the unused variable."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Esta variable está declarada, pero ningún control hace referencia a ella, por lo que no es necesaria."
+                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
               }
             },
             {
               "id": "app-UnusedMediaResources",
               "messageStrings": {
                 "issue": {
-                  "text": "Archivos multimedia sin usar"
+                  "text": "Unused media files"
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Quite el archivo multimedia que no se use en el panel Medios."
+                  "Remove the unused media file in the Media pane."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "No hay ninguna fórmula de control que haga referencia a este archivo multimedia, por lo que no es necesario. Si se quita, mejorará el rendimiento."
+                "whyFix": "This media file is not referenced by any control formulas so it is not needed. Removing it will improve performance."
               }
             },
             {
               "id": "app-CollectDelegatableDataSource",
               "messageStrings": {
                 "issue": {
-                  "text": "Es posible que las filas recuperadas del origen de datos no estén completas."
+                  "text": "The rows retrieved from the data source may not be complete."
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Limite los datos recopilados del origen de datos actualizando la fórmula \"ClearCollect(colDatosExcelLaboratorio; papps_Medi_Plus_Laboratorio_Temporal)\" para incluir una función de filtrado, como \"Filter\" o \"Search\"."
+                  "Limit the data collected from the data source by updating the formula \"ClearCollect(colDatosExcelLaboratorio, papps_Medi_Plus_Laboratorio_Temporal)\" to include a filtering function, such as 'Filter' or 'Search'."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Si el origen de datos es demasiado grande, es posible que el uso de la función \"Collect\" para crear una colección directamente a partir de un origen de datos conectado no cargue todas las filas."
+                "whyFix": "Using the 'Collect' function to create a collection directly from a connected data source may not load every row if the data source is too large."
               }
             },
             {
               "id": "app-DataSourceDefaultMaxRowsLimit",
               "messageStrings": {
                 "issue": {
-                  "text": "El límite de filas de datos para consultas que no se pueden delegar es mayor que 500"
+                  "text": "Data row limit for non-delegable queries is more than 500"
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Actualice \"Límite de filas de datos para consultas no delegables\" en la configuración avanzada de la aplicación."
+                  "Update 'Data row limit for non-delegable queries' in the advanced app settings."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Un límite de filas de datos superior a 500 puede dar lugar a una aplicación más lenta al ejecutar consultas que no son delegables, ya que la aplicación tendrá que procesar todas las filas, en lugar de ejecutar la consulta en el servidor."
+                "whyFix": "A 'data row limit' more than 500 may result in a slower app when running non-delegable queries, because the app will have to process every row itself, rather than running the query on the server."
               }
             },
             {
               "id": "app-InefficientDelayLoading",
               "messageStrings": {
                 "issue": {
-                  "text": "Retraso de carga ineficiente"
+                  "text": "Inefficient delay loading"
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Use variables, colecciones y contexto de navegación para compartir el estado entre pantallas en su lugar."
+                  "Use variables, collections, and navigation context to share state across screens instead."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Los controles que hacen referencia a controles en otras pantallas pueden ralentizar la carga y la navegación de la aplicación. Al hacer esto, puede que se fuerce a la aplicación a cargar las otras pantallas de inmediato, en lugar de esperar hasta que el usuario navegue a esa pantalla."
+                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
               }
             },
             {
               "id": "app-ScreenHasManyControls",
               "messageStrings": {
                 "issue": {
-                  "text": "Demasiados controles en una pantalla"
+                  "text": "Too many controls on a screen"
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Reduzca el número de controles en la pantalla.",
-                  "Divida la aplicación en más pantallas para reducir la complejidad por pantalla.",
-                  "Use componentes para unificar los controles agrupados que sean idénticos en todas las pantallas y, así, reducir los duplicados.",
-                  "Use galerías para representar una serie de controles similares repetidos.",
-                  "Divida la aplicación en varias aplicaciones para que cada una sea más pequeña y cuente con mejor rendimiento."
+                  "Reduce the number of controls on the screen.",
+                  "Break the app into more screens to reduce the per-screen complexity.",
+                  "Use components to unify grouped controls that are identical across screens, reducing duplication.",
+                  "Use galleries to represent a series of repeated similar controls.",
+                  "Break the app into multiple apps so that each app is small and performant."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Los controles consumen recursos y, si una pantalla tiene demasiados controles, la aplicación puede dejar de responder o ralentizarse. La complejidad estimada de \"Consulta Medica Atencion\" es 1827, que es superior al umbral máximo recomendado (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Consulta Medica Atencion\" is 1827, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
               "id": "app-NumericPropertySizeWarning",
               "messageStrings": {
                 "issue": {
-                  "text": "Permitir la carga de archivos grandes de hasta 10\u00A0MB"
+                  "text": "Allowing upload of large files up to 10 MB"
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Reflexione sobre si necesita archivos adjuntos de este tamaño."
+                  "Consider whether you need attachments of this size."
                 ],
                 "level": "Low",
                 "primaryCategory": "performance",
-                "whyFix": "Se recomienda hacer pruebas en todas las plataformas compatibles para asegurarse de que los archivos adjuntos de este tamaño se pueden cargar correctamente."
+                "whyFix": "We recommend testing on all supported platforms to ensure that attachments of this size can be uploaded successfully."
               }
             }
           ],
