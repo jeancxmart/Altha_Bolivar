@@ -1711,337 +1711,6 @@
         Width: =1366
         ZIndex: =94
 
-    "galCajaRol_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-        BorderThickness: =1
-        DelayItemLoading: =true
-        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-        Height: =147
-        Items: |-
-            =Table({Name:"Acceso",icon:Icon.CheckBadge},
-            {Name:"Sin acceso",icon:Icon.CancelBadge},
-            {Name:"Limitado",icon:Icon.Blocked})
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =49
-        Visible: =SeleccionarRol_2
-        Width: =150
-        X: =330
-        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,458))
-        ZIndex: =95
-
-        Separator3_8 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderThickness: =1
-            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =47
-            ZIndex: =5
-
-        Icon32_25 As icon.CancelBadge:
-            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
-            Height: =24
-            Icon: =ThisItem.icon
-            OnSelect: =Select(Parent)
-            Width: =24
-            X: =68
-            Y: =10
-            ZIndex: =7
-
-        Button25_3 As button:
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =48
-            HoverFill: =
-            OnSelect: |-
-                =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
-                {Caja:ThisItem.Name
-                });
-                Set(SeleccionarRol_2,false);UpdateContext({_FondoPopUp:false})
-            PressedFill: =
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Text: =""
-            Width: =150
-            ZIndex: =8
-
-    "galTriaje_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-        BorderThickness: =1
-        DelayItemLoading: =true
-        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-        Height: =99
-        Items: |-
-            =Table({Name:"Acceso",icon:Icon.CheckBadge},
-            {Name:"Sin acceso",icon:Icon.CancelBadge})
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: |-
-            =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
-            {Triaje:ThisItem.Name
-            });Set(SeleccionarRol_3,false);UpdateContext({_FondoPopUp:false})
-        TemplatePadding: =0
-        TemplateSize: =49
-        Visible: =SeleccionarRol_3
-        Width: =150
-        X: =483
-        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
-        ZIndex: =96
-
-        Separator3_9 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderThickness: =1
-            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =47
-            ZIndex: =5
-
-        Icon32_26 As icon.CancelBadge:
-            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
-            Height: =24
-            Icon: =ThisItem.icon
-            OnSelect: =Select(Parent)
-            Width: =24
-            X: =68
-            Y: =10
-            ZIndex: =7
-
-    "galAtencionMedica_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-        BorderThickness: =1
-        DelayItemLoading: =true
-        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-        Height: =98
-        Items: |-
-            =Table({Name:"Acceso",icon:Icon.CheckBadge},
-            {Name:"Sin acceso",icon:Icon.CancelBadge})
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: |-
-            =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
-            {Atencion_Medica:ThisItem.Name
-            });Set(SeleccionarRol_4,false);UpdateContext({_FondoPopUp:false})
-        TemplatePadding: =0
-        TemplateSize: =49
-        Visible: =SeleccionarRol_4
-        Width: =150
-        X: =635
-        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
-        ZIndex: =97
-
-        Separator3_10 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderThickness: =1
-            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =47
-            ZIndex: =5
-
-        Icon32_27 As icon.CancelBadge:
-            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
-            Height: =24
-            Icon: =ThisItem.icon
-            OnSelect: =Select(Parent)
-            Width: =24
-            X: =68
-            Y: =10
-            ZIndex: =7
-
-    "galSeguridad_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-        BorderThickness: =1
-        DelayItemLoading: =true
-        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-        Height: =99
-        Items: |-
-            =Table({Name:"Acceso",icon:Icon.CheckBadge},
-            {Name:"Sin acceso",icon:Icon.CancelBadge})
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: |-
-            =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
-            {Seguridad:ThisItem.Name
-            });Set(SeleccionarRol_5,false);UpdateContext({_FondoPopUp:false})
-        TemplatePadding: =0
-        TemplateSize: =49
-        Visible: =SeleccionarRol_5
-        Width: =150
-        X: =785
-        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
-        ZIndex: =98
-
-        Separator3_11 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderThickness: =1
-            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =47
-            ZIndex: =5
-
-        Icon32_28 As icon.CancelBadge:
-            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
-            Height: =24
-            Icon: =ThisItem.icon
-            OnSelect: =Select(Parent)
-            Width: =24
-            X: =68
-            Y: =10
-            ZIndex: =7
-
-    "galMaestros_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-        BorderThickness: =1
-        DelayItemLoading: =true
-        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-        Height: =99
-        Items: |-
-            =Table({Name:"Acceso",icon:Icon.CheckBadge},
-            {Name:"Sin acceso",icon:Icon.CancelBadge})
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: |-
-            =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
-            {Maestros:ThisItem.Name
-            });Set(SeleccionarRol_6,false);UpdateContext({_FondoPopUp:false})
-        TemplatePadding: =0
-        TemplateSize: =49
-        Visible: =SeleccionarRol_6
-        Width: =150
-        X: =935
-        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
-        ZIndex: =99
-
-        Separator3_12 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderThickness: =1
-            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =47
-            ZIndex: =5
-
-        Icon32_29 As icon.CancelBadge:
-            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
-            Height: =24
-            Icon: =ThisItem.icon
-            OnSelect: =Select(Parent)
-            Width: =24
-            X: =68
-            Y: =10
-            ZIndex: =7
-
-    "galReportes_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-        BorderThickness: =1
-        DelayItemLoading: =true
-        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-        Height: =99
-        Items: |-
-            =Table({Name:"Acceso",icon:Icon.CheckBadge},
-            {Name:"Sin acceso",icon:Icon.CancelBadge})
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: |-
-            =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
-            {Reportes:ThisItem.Name
-            });Set(SeleccionarRol_7,false);UpdateContext({_FondoPopUp:false})
-        TemplatePadding: =0
-        TemplateSize: =49
-        Visible: =SeleccionarRol_7
-        Width: =150
-        X: =1084
-        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
-        ZIndex: =100
-
-        Separator3_13 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderThickness: =1
-            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =47
-            ZIndex: =5
-
-        Icon32_30 As icon.CancelBadge:
-            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
-            Height: =24
-            Icon: =ThisItem.icon
-            OnSelect: =Select(Parent)
-            Width: =24
-            X: =68
-            Y: =10
-            ZIndex: =7
-
-    "galCajaAtencion_Cliente_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-        BorderThickness: =1
-        DelayItemLoading: =true
-        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-        Height: =98
-        Items: |-
-            =Table({Name:"Acceso",icon:Icon.CheckBadge},
-            {Name:"Sin acceso",icon:Icon.CancelBadge}
-            )
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =49
-        Visible: =SeleccionarRol_1
-        Width: =150
-        X: =180
-        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
-        ZIndex: =101
-
-        Separator3_7 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderThickness: =1
-            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =47
-            ZIndex: =5
-
-        Icon32_24 As icon.CancelBadge:
-            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
-            Height: =24
-            Icon: =ThisItem.icon
-            OnSelect: =Select(Parent)
-            Width: =24
-            X: =68
-            Y: =10
-            ZIndex: =7
-
-        Button25_2 As button:
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =49
-            HoverFill: =
-            OnSelect: |-
-                =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
-                {Atencion_al_Cliente:ThisItem.Name
-                });
-                Set(SeleccionarRol_1,false);UpdateContext({_FondoPopUp:false})
-            PressedFill: =
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Text: =""
-            Width: =150
-            ZIndex: =8
-
     TextInput7_14 As text:
         Default: =""
         DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroBackgroundDeshabilitado)
@@ -2056,7 +1725,7 @@
         Width: =986
         X: =320
         Y: =94
-        ZIndex: =102
+        ZIndex: =95
 
     TextInput7_19 As text:
         Default: =""
@@ -2072,7 +1741,7 @@
         Width: =986
         X: =320
         Y: =460
-        ZIndex: =103
+        ZIndex: =96
 
     Image27_5 As image:
         Height: =180
@@ -2081,7 +1750,7 @@
         Width: =462
         X: =326
         Y: =161
-        ZIndex: =104
+        ZIndex: =97
 
     Image27_6 As image:
         Height: =180
@@ -2090,7 +1759,7 @@
         Width: =462
         X: =786
         Y: =161
-        ZIndex: =105
+        ZIndex: =98
 
     Label74_1 As label:
         Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -2103,7 +1772,7 @@
         Width: =224
         X: =340
         Y: =114
-        ZIndex: =106
+        ZIndex: =99
 
     Label74_5 As label:
         Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -2116,7 +1785,7 @@
         Width: =320
         X: =340
         Y: =489
-        ZIndex: =107
+        ZIndex: =100
 
     Label74_4 As label:
         Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -2129,7 +1798,148 @@
         Width: =320
         X: =651
         Y: =398
-        ZIndex: =108
+        ZIndex: =101
+
+    Image27_7 As image:
+        Height: =180
+        Image: ='image 32'
+        ImagePosition: =ImagePosition.Center
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        Visible: =varBetaView
+        Width: =462
+        X: =330
+        Y: =539
+        ZIndex: =102
+
+    Image27_8 As image:
+        Height: =180
+        Image: ='image 33'
+        ImagePosition: =ImagePosition.Center
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        Visible: =varBetaView
+        Width: =462
+        X: =820
+        Y: =539
+        ZIndex: =103
+
+    Toggle1_1 As toggleSwitch:
+        BorderStyle: =BorderStyle.None
+        FalseText: =
+        Font: =Font.'Segoe UI'
+        OnCheck: |-
+            =Patch('public.Medical_Center_Usuario',LookUp('public.Medical_Center_Usuario',Correo=User().Email),
+            {Modo_Nocturno:true});
+            Set(
+                getUser,
+                LookUp(
+                    'public.Medical_Center_Usuario',
+                    Correo = User().Email
+                ))
+        OnUncheck: |-
+            =Patch('public.Medical_Center_Usuario',LookUp('public.Medical_Center_Usuario',Correo=User().Email),
+            {Modo_Nocturno:false});
+            Set(
+                getUser,
+                LookUp(
+                    'public.Medical_Center_Usuario',
+                    Correo = User().Email
+                ))
+        Size: =12
+        TrueFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+        TrueText: =
+        Visible: =varBetaView
+        X: =1200
+        Y: =116
+        ZIndex: =104
+
+    ButtonOcultar_86 As button:
+        BorderThickness: =0
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =768
+        HoverFill: =
+        OnSelect: |-
+            =UpdateContext({ayuda8:false})
+        PressedFill: =
+        Text: =""
+        Visible: =ayuda8
+        Width: =1366
+        ZIndex: =105
+
+    AyudaActividad_77 As groupContainer.manualLayoutContainer:
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =168
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: |
+            =ayuda8
+        Width: =288
+        X: =1078
+        Y: =574
+        ZIndex: =106
+
+        TituloActividad_77 As label:
+            Color: =RGBA(44, 46, 53, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =21
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: ="Agregar Test"
+            Width: =200
+            X: =10
+            Y: =10
+            ZIndex: =1
+
+        DescripciónActividad_77 As label:
+            Color: =RGBA(44, 46, 53, 1)
+            Font: =Font.'Segoe UI'
+            Height: =80
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =9
+            Text: ="Agregue un test. A esta sección se llega desde la Pantalla de Inicio, luego ingrese al módulo de Atención Médica, despliegue las Opciones de Usuario en la esquina superior derecha y selecione la opción Test."
+            Width: =268
+            X: =10
+            Y: =39
+            ZIndex: =2
+
+        ButtonIrASección_77 As button:
+            BorderThickness: =0
+            Color: =RGBA(44, 97, 112, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            HoverColor: =RGBA(44, 97, 112, 1)
+            HoverFill: =RGBA(44, 97, 112, 0.1)
+            OnSelect: |-
+                =Navigate(Test_Maestro);UpdateContext({ayuda8:false});UpdateContext({mostrarchecklist:false})
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedColor: =RGBA(44, 97, 112, 1)
+            PressedFill: =RGBA(44, 97, 112, 0.2)
+            Size: =9
+            Text: ="Ir a la Sección"
+            Width: =122
+            X: =156
+            Y: =122
+            ZIndex: =3
 
     Group14_6 As group:
         Height: =5
@@ -2268,147 +2078,6 @@
             X: =872
             Y: =228
             ZIndex: =77
-
-    Image27_7 As image:
-        Height: =180
-        Image: ='image 32'
-        ImagePosition: =ImagePosition.Center
-        PaddingBottom: =10
-        PaddingLeft: =10
-        PaddingRight: =10
-        PaddingTop: =10
-        Visible: =varBetaView
-        Width: =462
-        X: =330
-        Y: =539
-        ZIndex: =109
-
-    Image27_8 As image:
-        Height: =180
-        Image: ='image 33'
-        ImagePosition: =ImagePosition.Center
-        PaddingBottom: =10
-        PaddingLeft: =10
-        PaddingRight: =10
-        PaddingTop: =10
-        Visible: =varBetaView
-        Width: =462
-        X: =820
-        Y: =539
-        ZIndex: =110
-
-    Toggle1_1 As toggleSwitch:
-        BorderStyle: =BorderStyle.None
-        FalseText: =
-        Font: =Font.'Segoe UI'
-        OnCheck: |-
-            =Patch('public.Medical_Center_Usuario',LookUp('public.Medical_Center_Usuario',Correo=User().Email),
-            {Modo_Nocturno:true});
-            Set(
-                getUser,
-                LookUp(
-                    'public.Medical_Center_Usuario',
-                    Correo = User().Email
-                ))
-        OnUncheck: |-
-            =Patch('public.Medical_Center_Usuario',LookUp('public.Medical_Center_Usuario',Correo=User().Email),
-            {Modo_Nocturno:false});
-            Set(
-                getUser,
-                LookUp(
-                    'public.Medical_Center_Usuario',
-                    Correo = User().Email
-                ))
-        Size: =12
-        TrueFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
-        TrueText: =
-        Visible: =varBetaView
-        X: =1200
-        Y: =116
-        ZIndex: =111
-
-    ButtonOcultar_86 As button:
-        BorderThickness: =0
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =768
-        HoverFill: =
-        OnSelect: |-
-            =UpdateContext({ayuda8:false})
-        PressedFill: =
-        Text: =""
-        Visible: =ayuda8
-        Width: =1366
-        ZIndex: =112
-
-    AyudaActividad_77 As groupContainer.manualLayoutContainer:
-        BorderThickness: =1
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =168
-        RadiusBottomLeft: =8
-        RadiusBottomRight: =8
-        RadiusTopLeft: =8
-        RadiusTopRight: =8
-        Visible: |
-            =ayuda8
-        Width: =288
-        X: =1078
-        Y: =574
-        ZIndex: =113
-
-        TituloActividad_77 As label:
-            Color: =RGBA(44, 46, 53, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =21
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Agregar Test"
-            Width: =200
-            X: =10
-            Y: =10
-            ZIndex: =1
-
-        DescripciónActividad_77 As label:
-            Color: =RGBA(44, 46, 53, 1)
-            Font: =Font.'Segoe UI'
-            Height: =80
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =9
-            Text: ="Agregue un test. A esta sección se llega desde la Pantalla de Inicio, luego ingrese al módulo de Atención Médica, despliegue las Opciones de Usuario en la esquina superior derecha y selecione la opción Test."
-            Width: =268
-            X: =10
-            Y: =39
-            ZIndex: =2
-
-        ButtonIrASección_77 As button:
-            BorderThickness: =0
-            Color: =RGBA(44, 97, 112, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =36
-            HoverColor: =RGBA(44, 97, 112, 1)
-            HoverFill: =RGBA(44, 97, 112, 0.1)
-            OnSelect: |-
-                =Navigate(Test_Maestro);UpdateContext({ayuda8:false});UpdateContext({mostrarchecklist:false})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            PressedColor: =RGBA(44, 97, 112, 1)
-            PressedFill: =RGBA(44, 97, 112, 0.2)
-            Size: =9
-            Text: ="Ir a la Sección"
-            Width: =122
-            X: =156
-            Y: =122
-            ZIndex: =3
 
     Group14_7 As group:
         Height: =5
@@ -2602,7 +2271,7 @@
                 =UpdateContext({_varNewUsuario:false})
             Visible: =_varNewUsuario
             Width: =1366
-            ZIndex: =135
+            ZIndex: =128
 
         Canvas1_8 As fluidGrid.fluidGridWithBlankCard:
             BorderThickness: =0
@@ -2610,7 +2279,7 @@
             Visible: =_varNewUsuario
             Width: =425
             X: =471
-            ZIndex: =136
+            ZIndex: =129
 
             DataCard1_11 As dataCard:
                 BorderColor: =RGBA(0, 0, 0, 1)
@@ -3360,7 +3029,7 @@
                 =UpdateContext({_TipoRegistro:false});
             Visible: =_TipoRegistro
             Width: =1366
-            ZIndex: =137
+            ZIndex: =130
 
         Container7_2 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -3373,7 +3042,7 @@
             Visible: =_TipoRegistro
             X: =433
             Y: =272
-            ZIndex: =138
+            ZIndex: =131
 
             TextInput47_2 As text:
                 BorderStyle: =BorderStyle.None
@@ -3461,7 +3130,7 @@
                 =UpdateContext({_MedioPago:false});
             Visible: =_MedioPago
             Width: =1366
-            ZIndex: =139
+            ZIndex: =132
 
         Container7_3 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -3474,7 +3143,7 @@
             Visible: =_MedioPago
             X: =433
             Y: =272
-            ZIndex: =140
+            ZIndex: =133
 
             TextInput47_3 As text:
                 BorderStyle: =BorderStyle.None
@@ -3554,7 +3223,7 @@
             Height: =768
             Visible: =_varAddRol
             Width: =1366
-            ZIndex: =143
+            ZIndex: =136
 
         Container3_1 As groupContainer.manualLayoutContainer:
             BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -3569,14 +3238,14 @@
             Width: =1309
             X: =30
             Y: =If(IsEmpty(Filter('public.Medical_Center_Roles_Maestro',Consultorio_Medico<>"")),122,10)
-            ZIndex: =144
+            ZIndex: =137
 
             Gallery14_1 As gallery.galleryVertical:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =1
                 DelayItemLoading: =true
                 Height: =240
-                Items: =Filter('public.Medical_Center_Roles_Maestro',Consultorio_Medico="")
+                Items: =Filter('public.Medical_Center_Roles_Maestro',Consultorio_Medico="Bolivar")
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -3974,7 +3643,15 @@
                 Height: =31
                 Icon: =Icon.Cancel
                 OnSelect: |-
-                    =UpdateContext({_varAddRol:false})
+                    =Set(SeleccionarRol_1,false);
+                    Set(SeleccionarRol_2,false);
+                    Set(SeleccionarRol_3,false);
+                    Set(SeleccionarRol_4,false);
+                    Set(SeleccionarRol_5,false);
+                    Set(SeleccionarRol_6,false);
+                    Set(SeleccionarRol_7,false);
+                    
+                    UpdateContext({_varAddRol:false})
                 Width: =30
                 X: =1254
                 Y: =36
@@ -4074,7 +3751,7 @@
             Gallery15_1 As gallery.galleryVertical:
                 DelayItemLoading: =true
                 Height: =If(IsEmpty(Filter('public.Medical_Center_Roles_Maestro',Consultorio_Medico<>"")),0,98)
-                Items: =Filter('public.Medical_Center_Roles_Maestro',id_sede = _varSede.id)
+                Items: =Filter('public.Medical_Center_Roles_Maestro',id_sede = _varSede.id && Consultorio_Medico <> "Bolivar")
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -4634,7 +4311,7 @@
                 =UpdateContext({_varDUsers: false});
             Visible: =_varDUsers
             Width: =1366
-            ZIndex: =141
+            ZIndex: =134
 
         Container17 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -4648,7 +4325,7 @@
             Width: =420
             X: =473
             Y: =273
-            ZIndex: =142
+            ZIndex: =135
 
             Button3 As button:
                 BorderColor: =RGBA(44, 97, 112, 1)
@@ -4728,7 +4405,7 @@
             Height: =768
             Visible: =_PopUpEliminarRol
             Width: =1366
-            ZIndex: =145
+            ZIndex: =138
 
         Container6_1 As groupContainer.manualLayoutContainer:
             BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -4742,7 +4419,7 @@
             Visible: =_PopUpEliminarRol
             X: =448
             Y: =258
-            ZIndex: =146
+            ZIndex: =139
 
             Button24_17 As button:
                 BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroAccionRojo,varcolor_OscuroAccionRojo)
@@ -4837,7 +4514,7 @@
                 Set(SeleccionarRol_5,false);Set(SeleccionarRol_6,false);Set(SeleccionarRol_7,false)
             Visible: =_AddRolPersonalizado
             Width: =1366
-            ZIndex: =147
+            ZIndex: =140
 
         Container4_1 As groupContainer.manualLayoutContainer:
             BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -4852,7 +4529,7 @@
             Width: =400
             X: =501
             Y: =219
-            ZIndex: =148
+            ZIndex: =141
 
             Label71_2 As label:
                 Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -4950,6 +4627,190 @@
                 Y: =24
                 ZIndex: =5
 
+    Container7_6 As groupContainer.manualLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(0, 0, 0, 0.23)
+        Height: =Parent.Height
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =_varNewEspecialidd
+        Width: =Parent.Width
+        ZIndex: =150
+
+        Container7_14 As groupContainer.manualLayoutContainer:
+            BorderThickness: =2
+            Fill: =varcolor_ClaroBackgroundApp
+            Height: =560
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Visible: =_varNewEspecialidd
+            Width: =400
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+        Container19 As groupContainer.verticalAutoLayoutContainer:
+            BorderThickness: =2
+            Fill: =varcolor_ClaroBackgroundApp
+            Height: =560
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =15
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =20
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =400
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =2
+
+            Label80_12 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: ="Agregar Especialidad"
+                Width: =240
+                X: =20
+                Y: =20
+                ZIndex: =1
+
+            Label80_13 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Nombre de la especialidad"
+                Width: =260
+                X: =20
+                Y: =52
+                ZIndex: =2
+
+            tiNewSpecialty As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =
+                Font: =Font.'Segoe UI'
+                Height: =36
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Size: =12
+                Width: =360
+                X: =20
+                Y: =84
+                ZIndex: =3
+
+            Label80_36 As label:
+                Color: =RGBA(246, 88, 16, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Ya existe la especialidad en la sede"
+                Visible: =LookUp('public.Medical_Center_Especialidad',Especialidad=Proper(Trim(tiNewSpecialty.Text)),id) in Filter('public.Medical_Center_S&E_Relacion',id_sede=_varAllSede.id).id_especialidad
+                Width: =100
+                X: =20
+                Y: =140
+                ZIndex: =4
+
+            Label80_14 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Plantillas H.C."
+                Width: =100
+                X: =20
+                Y: =140
+                ZIndex: =5
+
+            rdPlantillasHC As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                FillPortions: =1
+                Items: =varPlantillasHC
+                LineHeight: =2
+                RadioBorderColor: =RGBA(0, 0, 0, 1)
+                RadioSize: =30
+                ZIndex: =6
+
+            Button28_6 As button:
+                BorderColor: =RGBA(44, 97, 112, 1)
+                BorderStyle: =BorderStyle.None
+                DisplayMode: =If(IsBlank(Trim(tiNewSpecialty.Text))||IsBlank(rdPlantillasHC.Selected.plantilla_hc),DisplayMode.Disabled,DisplayMode.Edit)
+                Fill: =RGBA(44, 97, 112, 1)
+                Font: =Font.'Segoe UI'
+                Height: =44
+                HoverFill: =RGBA(44, 97, 112, 1)
+                OnSelect: |-
+                    =Refresh('public.Medical_Center_S&E_Relacion');
+                    If(IsEmpty(Filter('public.Medical_Center_Especialidad',Especialidad=Proper(Trim(tiNewSpecialty.Text)))),
+                        Set(_relacionv,
+                            Patch('public.Medical_Center_Especialidad', Defaults('public.Medical_Center_Especialidad'),{
+                                id: First(SortByColumns('public.Medical_Center_Especialidad',"id",SortOrder.Descending)).id +1,
+                                Especialidad: Proper(Trim(tiNewSpecialty.Text))
+                            })
+                        ),
+                        Set(_relacionv,LookUp('public.Medical_Center_Especialidad',Especialidad=Proper(Trim(tiNewSpecialty.Text))))
+                    );
+                    
+                     Patch('public.Medical_Center_S&E_Relacion', Defaults('public.Medical_Center_S&E_Relacion'),{
+                    
+                       id: First(SortByColumns('public.Medical_Center_S&E_Relacion',"id",SortOrder.Descending)).id +1,
+                       id_sede: _varAllSede.id,
+                       id_especialidad: _relacionv.id,
+                       plantilla_hc:rdPlantillasHC.Selected.plantilla_hc
+                    });
+                    Select(iconCloseNewSpecialty)
+                PressedFill: =RGBA(44, 97, 112, 1)
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Size: =14
+                Text: ="CREAR ESPECIALIDAD"
+                Width: =360
+                X: =20
+                Y: =476
+                ZIndex: =7
+
+        iconCloseNewSpecialty As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =24
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({_varNewEspecialidd:false});Reset(tiNewSpecialty);Reset(rdPlantillasHC)
+            Width: =24
+            X: =Container19.X+Container19.Width-2*Self.Width
+            Y: =Container19.Y+Self.Height
+            ZIndex: =3
+
     GroupEditUserv2 As group:
         Height: =5
         Width: =5
@@ -4964,7 +4825,7 @@
                 =UpdateContext({_varEditUser:false})
             Visible: =_varEditUser
             Width: =1366
-            ZIndex: =149
+            ZIndex: =142
 
         Canvas1_12 As fluidGrid.fluidGridWithBlankCard:
             BorderThickness: =0
@@ -4972,7 +4833,7 @@
             Visible: =_varEditUser
             Width: =425
             X: =471
-            ZIndex: =150
+            ZIndex: =143
 
             DataCard1_18 As dataCard:
                 BorderColor: =RGBA(0, 0, 0, 1)
@@ -5475,7 +5336,8 @@
                     Height: =15
                     Icon: =Icon.Help
                     OnSelect: |-
-                        =UpdateContext({_varAddRol:true})
+                        =UpdateContext({_varAddRol:true});
+                        UpdateContext({_varEditUser:false})
                     Visible: =_varEditUser
                     Width: =15
                     X: =356
@@ -6947,7 +6809,7 @@
                 =UpdateContext({_varNewSede:false});
             Visible: =_varNewSede
             Width: =1366
-            ZIndex: =151
+            ZIndex: =144
 
         Container7_4 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -6961,7 +6823,7 @@
             Width: =400
             X: =483
             Y: =176
-            ZIndex: =152
+            ZIndex: =145
 
             TextInput47_4 As text:
                 BorderColor: =RGBA(0, 0, 0, 1)
@@ -7225,7 +7087,7 @@
                 =UpdateContext({_varEditSede:false});
             Visible: =_varEditSede
             Width: =1366
-            ZIndex: =153
+            ZIndex: =146
 
         Container7_5 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -7239,7 +7101,7 @@
             Width: =400
             X: =483
             Y: =176
-            ZIndex: =154
+            ZIndex: =147
 
             TextInput47_7 As text:
                 BorderColor: =RGBA(0, 0, 0, 1)
@@ -7385,190 +7247,6 @@
                 Y: =248
                 ZIndex: =9
 
-    Container7_6 As groupContainer.manualLayoutContainer:
-        BorderStyle: =BorderStyle.None
-        Fill: =RGBA(0, 0, 0, 0.23)
-        Height: =Parent.Height
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Visible: =_varNewEspecialidd
-        Width: =Parent.Width
-        ZIndex: =158
-
-        Container7_14 As groupContainer.manualLayoutContainer:
-            BorderThickness: =2
-            Fill: =varcolor_ClaroBackgroundApp
-            Height: =560
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Visible: =_varNewEspecialidd
-            Width: =400
-            X: =(Parent.Width-Self.Width)/2
-            Y: =(Parent.Height-Self.Height)/2
-            ZIndex: =1
-
-        Container19 As groupContainer.verticalAutoLayoutContainer:
-            BorderThickness: =2
-            Fill: =varcolor_ClaroBackgroundApp
-            Height: =560
-            LayoutAlignItems: =LayoutAlignItems.Stretch
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutGap: =15
-            LayoutMode: =LayoutMode.Auto
-            PaddingBottom: =20
-            PaddingLeft: =20
-            PaddingRight: =20
-            PaddingTop: =20
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Width: =400
-            X: =(Parent.Width-Self.Width)/2
-            Y: =(Parent.Height-Self.Height)/2
-            ZIndex: =2
-
-            Label80_12 As label:
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =18
-                Text: ="Agregar Especialidad"
-                Width: =240
-                X: =20
-                Y: =20
-                ZIndex: =1
-
-            Label80_13 As label:
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =24
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =12
-                Text: ="Nombre de la especialidad"
-                Width: =260
-                X: =20
-                Y: =52
-                ZIndex: =2
-
-            tiNewSpecialty As text:
-                BorderColor: =RGBA(0, 0, 0, 1)
-                Default: =
-                Font: =Font.'Segoe UI'
-                Height: =36
-                RadiusBottomLeft: =8
-                RadiusBottomRight: =8
-                RadiusTopLeft: =8
-                RadiusTopRight: =8
-                Size: =12
-                Width: =360
-                X: =20
-                Y: =84
-                ZIndex: =3
-
-            Label80_36 As label:
-                Color: =RGBA(246, 88, 16, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =24
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =12
-                Text: ="Ya existe la especialidad en la sede"
-                Visible: =LookUp('public.Medical_Center_Especialidad',Especialidad=Proper(Trim(tiNewSpecialty.Text)),id) in Filter('public.Medical_Center_S&E_Relacion',id_sede=_varAllSede.id).id_especialidad
-                Width: =100
-                X: =20
-                Y: =140
-                ZIndex: =4
-
-            Label80_14 As label:
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =24
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =12
-                Text: ="Plantillas H.C."
-                Width: =100
-                X: =20
-                Y: =140
-                ZIndex: =5
-
-            rdPlantillasHC As radio:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                FillPortions: =1
-                Items: =varPlantillasHC
-                LineHeight: =2
-                RadioBorderColor: =RGBA(0, 0, 0, 1)
-                RadioSize: =30
-                ZIndex: =6
-
-            Button28_6 As button:
-                BorderColor: =RGBA(44, 97, 112, 1)
-                BorderStyle: =BorderStyle.None
-                DisplayMode: =If(IsBlank(Trim(tiNewSpecialty.Text))||IsBlank(rdPlantillasHC.Selected.plantilla_hc),DisplayMode.Disabled,DisplayMode.Edit)
-                Fill: =RGBA(44, 97, 112, 1)
-                Font: =Font.'Segoe UI'
-                Height: =44
-                HoverFill: =RGBA(44, 97, 112, 1)
-                OnSelect: |-
-                    =Refresh('public.Medical_Center_S&E_Relacion');
-                    If(IsEmpty(Filter('public.Medical_Center_Especialidad',Especialidad=Proper(Trim(tiNewSpecialty.Text)))),
-                        Set(_relacionv,
-                            Patch('public.Medical_Center_Especialidad', Defaults('public.Medical_Center_Especialidad'),{
-                                id: First(SortByColumns('public.Medical_Center_Especialidad',"id",SortOrder.Descending)).id +1,
-                                Especialidad: Proper(Trim(tiNewSpecialty.Text))
-                            })
-                        ),
-                        Set(_relacionv,LookUp('public.Medical_Center_Especialidad',Especialidad=Proper(Trim(tiNewSpecialty.Text))))
-                    );
-                    
-                     Patch('public.Medical_Center_S&E_Relacion', Defaults('public.Medical_Center_S&E_Relacion'),{
-                    
-                       id: First(SortByColumns('public.Medical_Center_S&E_Relacion',"id",SortOrder.Descending)).id +1,
-                       id_sede: _varAllSede.id,
-                       id_especialidad: _relacionv.id,
-                       plantilla_hc:rdPlantillasHC.Selected.plantilla_hc
-                    });
-                    Select(iconCloseNewSpecialty)
-                PressedFill: =RGBA(44, 97, 112, 1)
-                RadiusBottomLeft: =8
-                RadiusBottomRight: =8
-                RadiusTopLeft: =8
-                RadiusTopRight: =8
-                Size: =14
-                Text: ="CREAR ESPECIALIDAD"
-                Width: =360
-                X: =20
-                Y: =476
-                ZIndex: =7
-
-        iconCloseNewSpecialty As icon.Cancel:
-            Color: =RGBA(0, 0, 0, 1)
-            Height: =24
-            Icon: =Icon.Cancel
-            OnSelect: |-
-                =UpdateContext({_varNewEspecialidd:false});Reset(tiNewSpecialty);Reset(rdPlantillasHC)
-            Width: =24
-            X: =Container19.X+Container19.Width-2*Self.Width
-            Y: =Container19.Y+Self.Height
-            ZIndex: =3
-
     GroupMSedesDelete As group:
         Height: =5
         Width: =5
@@ -7583,7 +7261,7 @@
                 =UpdateContext({_varDeleteSede: false});
             Visible: =_varDeleteSede
             Width: =1366
-            ZIndex: =155
+            ZIndex: =148
 
         Container17_1 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -7597,7 +7275,7 @@
             Width: =420
             X: =473
             Y: =273
-            ZIndex: =156
+            ZIndex: =149
 
             Button3_2 As button:
                 BorderColor: =RGBA(44, 97, 112, 1)
@@ -7690,7 +7368,7 @@
                 =UpdateContext({_varEditEsp:false})
             Visible: =_varEditEsp
             Width: =1366
-            ZIndex: =159
+            ZIndex: =151
 
         Container7_7 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -7704,7 +7382,7 @@
             Width: =400
             X: =483
             Y: =104
-            ZIndex: =160
+            ZIndex: =152
 
             TextInput47_11 As text:
                 BorderColor: =RGBA(0, 0, 0, 1)
@@ -7845,7 +7523,7 @@
                 =UpdateContext({_varDeleteEs: false});
             Visible: =_varDeleteEs
             Width: =1366
-            ZIndex: =161
+            ZIndex: =153
 
         Container17_2 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -7859,7 +7537,7 @@
             Width: =420
             X: =473
             Y: =273
-            ZIndex: =162
+            ZIndex: =154
 
             Button3_4 As button:
                 BorderColor: =RGBA(44, 97, 112, 1)
@@ -7953,7 +7631,7 @@
                 =UpdateContext({_varNewEUsers:false});
             Visible: =_varNewEUsers
             Width: =1366
-            ZIndex: =178
+            ZIndex: =170
 
         Container7_8 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -7967,7 +7645,7 @@
             Width: =400
             X: =483
             Y: =176
-            ZIndex: =179
+            ZIndex: =171
 
             TextInput47_12 As text:
                 BorderColor: =RGBA(0, 0, 0, 1)
@@ -8177,7 +7855,7 @@
                 =UpdateContext({_varAddUEsp:false});
             Visible: =_varAddUEsp
             Width: =1366
-            ZIndex: =184
+            ZIndex: =176
 
         Container7_9 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -8191,7 +7869,7 @@
             Width: =400
             X: =483
             Y: =176
-            ZIndex: =185
+            ZIndex: =177
 
             TextInput47_15 As text:
                 BorderColor: =RGBA(0, 0, 0, 1)
@@ -8357,7 +8035,7 @@
                 =UpdateContext({_varEliminarU: false});
             Visible: =_varEliminarU
             Width: =1366
-            ZIndex: =186
+            ZIndex: =178
 
         Container17_3 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -8371,7 +8049,7 @@
             Width: =420
             X: =473
             Y: =273
-            ZIndex: =187
+            ZIndex: =179
 
             Button3_6 As button:
                 BorderColor: =RGBA(44, 97, 112, 1)
@@ -8453,7 +8131,7 @@
                 =UpdateContext({_TipoRegistroEdit:false});
             Visible: =_TipoRegistroEdit
             Width: =1366
-            ZIndex: =163
+            ZIndex: =155
 
         Container7_10 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -8466,7 +8144,7 @@
             Visible: =_TipoRegistroEdit
             X: =433
             Y: =272
-            ZIndex: =164
+            ZIndex: =156
 
             TextInput47_18 As text:
                 BorderStyle: =BorderStyle.None
@@ -8544,7 +8222,7 @@
                 =UpdateContext({_MedioPagoEdit:false});
             Visible: =_MedioPagoEdit
             Width: =1366
-            ZIndex: =165
+            ZIndex: =157
 
         Container7_11 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -8557,7 +8235,7 @@
             Visible: =_MedioPagoEdit
             X: =433
             Y: =272
-            ZIndex: =166
+            ZIndex: =158
 
             TextInput47_19 As text:
                 BorderStyle: =BorderStyle.None
@@ -8645,7 +8323,7 @@
             Width: =277
             X: =320
             Y: =72
-            ZIndex: =122
+            ZIndex: =115
 
         ContainerEspecialidad_1 As groupContainer.manualLayoutContainer:
             BorderThickness: =1
@@ -8659,7 +8337,7 @@
             Width: =986
             X: =320
             Y: =154
-            ZIndex: =123
+            ZIndex: =116
 
             Label4_120 As label:
                 Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -8889,7 +8567,7 @@
             Width: =75
             X: =320
             Y: =20
-            ZIndex: =124
+            ZIndex: =117
 
         Label4_6 As label:
             Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -8905,7 +8583,7 @@
             Wrap: =false
             X: =436
             Y: =20
-            ZIndex: =125
+            ZIndex: =118
 
         Icon55_1 As icon.ChevronRight:
             Color: =RGBA(0, 0, 0, 1)
@@ -8916,7 +8594,7 @@
             Width: =20
             X: =406
             Y: =34
-            ZIndex: =126
+            ZIndex: =119
 
         Label4_10 As label:
             Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -8930,7 +8608,7 @@
             Width: =277
             X: =574
             Y: =20
-            ZIndex: =127
+            ZIndex: =120
 
         Icon55_2 As icon.ChevronRight:
             Color: =RGBA(0, 0, 0, 1)
@@ -8941,7 +8619,7 @@
             Width: =20
             X: =546
             Y: =34
-            ZIndex: =128
+            ZIndex: =121
 
         btnAddEspecialidadu_1 As button:
             BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
@@ -8968,7 +8646,7 @@
             Width: =120
             X: =320
             Y: =114
-            ZIndex: =167
+            ZIndex: =159
 
         btnAddEspecialidadServ As button:
             BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
@@ -8995,7 +8673,65 @@
             Width: =120
             X: =440
             Y: =114
-            ZIndex: =168
+            ZIndex: =160
+
+    "galCajaRol_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        Height: =147
+        Items: |-
+            =Table({Name:"Acceso",icon:Icon.CheckBadge},
+            {Name:"Sin acceso",icon:Icon.CancelBadge},
+            {Name:"Limitado",icon:Icon.Blocked})
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =49
+        Visible: =SeleccionarRol_2
+        Width: =150
+        X: =330
+        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,458))
+        ZIndex: =182
+
+        Separator3_8 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =47
+            ZIndex: =5
+
+        Icon32_25 As icon.CancelBadge:
+            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
+            Height: =24
+            Icon: =ThisItem.icon
+            OnSelect: =Select(Parent)
+            Width: =24
+            X: =68
+            Y: =10
+            ZIndex: =7
+
+        Button25_3 As button:
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =
+            OnSelect: |-
+                =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
+                {Caja:ThisItem.Name
+                });
+                Set(SeleccionarRol_2,false);UpdateContext({_FondoPopUp:false})
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: =""
+            Width: =150
+            ZIndex: =8
 
     Group7_1 As group:
         Height: =5
@@ -9091,6 +8827,92 @@
             Y: =392
             ZIndex: =40
 
+    "galTriaje_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        Height: =99
+        Items: |-
+            =Table({Name:"Acceso",icon:Icon.CheckBadge},
+            {Name:"Sin acceso",icon:Icon.CancelBadge})
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
+            {Triaje:ThisItem.Name
+            });Set(SeleccionarRol_3,false);UpdateContext({_FondoPopUp:false})
+        TemplatePadding: =0
+        TemplateSize: =49
+        Visible: =SeleccionarRol_3
+        Width: =150
+        X: =483
+        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
+        ZIndex: =183
+
+        Separator3_9 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =47
+            ZIndex: =5
+
+        Icon32_26 As icon.CancelBadge:
+            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
+            Height: =24
+            Icon: =ThisItem.icon
+            OnSelect: =Select(Parent)
+            Width: =24
+            X: =68
+            Y: =10
+            ZIndex: =7
+
+    "galAtencionMedica_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        Height: =98
+        Items: |-
+            =Table({Name:"Acceso",icon:Icon.CheckBadge},
+            {Name:"Sin acceso",icon:Icon.CancelBadge})
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
+            {Atencion_Medica:ThisItem.Name
+            });Set(SeleccionarRol_4,false);UpdateContext({_FondoPopUp:false})
+        TemplatePadding: =0
+        TemplateSize: =49
+        Visible: =SeleccionarRol_4
+        Width: =150
+        X: =635
+        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
+        ZIndex: =184
+
+        Separator3_10 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =47
+            ZIndex: =5
+
+        Icon32_27 As icon.CancelBadge:
+            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
+            Height: =24
+            Icon: =ThisItem.icon
+            OnSelect: =Select(Parent)
+            Width: =24
+            X: =68
+            Y: =10
+            ZIndex: =7
+
     GroupAddEServicios As group:
         Height: =5
         Width: =5
@@ -9105,7 +8927,7 @@
                 =UpdateContext({_varServiciom:false});
             Visible: =_varServiciom
             Width: =1366
-            ZIndex: =180
+            ZIndex: =172
 
         Container7_12 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -9119,7 +8941,7 @@
             Width: =400
             X: =483
             Y: =176
-            ZIndex: =181
+            ZIndex: =173
 
             TextInput47_20 As text:
                 BorderColor: =RGBA(0, 0, 0, 1)
@@ -9283,6 +9105,49 @@
                 Y: =248
                 ZIndex: =9
 
+    "galSeguridad_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        Height: =99
+        Items: |-
+            =Table({Name:"Acceso",icon:Icon.CheckBadge},
+            {Name:"Sin acceso",icon:Icon.CancelBadge})
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
+            {Seguridad:ThisItem.Name
+            });Set(SeleccionarRol_5,false);UpdateContext({_FondoPopUp:false})
+        TemplatePadding: =0
+        TemplateSize: =49
+        Visible: =SeleccionarRol_5
+        Width: =150
+        X: =785
+        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
+        ZIndex: =185
+
+        Separator3_11 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =47
+            ZIndex: =5
+
+        Icon32_28 As icon.CancelBadge:
+            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
+            Height: =24
+            Icon: =ThisItem.icon
+            OnSelect: =Select(Parent)
+            Width: =24
+            X: =68
+            Y: =10
+            ZIndex: =7
+
     GroupServicios As group:
         Height: =5
         Width: =5
@@ -9303,7 +9168,7 @@
             Width: =277
             X: =316
             Y: =72
-            ZIndex: =169
+            ZIndex: =161
 
         ContainerEspecialidad_2 As groupContainer.manualLayoutContainer:
             BorderThickness: =1
@@ -9317,7 +9182,7 @@
             Width: =986
             X: =316
             Y: =154
-            ZIndex: =170
+            ZIndex: =162
 
             Label4_138 As label:
                 Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -9541,7 +9406,7 @@
             Width: =75
             X: =316
             Y: =20
-            ZIndex: =171
+            ZIndex: =163
 
         Label4_14 As label:
             Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -9557,7 +9422,7 @@
             Wrap: =false
             X: =432
             Y: =20
-            ZIndex: =172
+            ZIndex: =164
 
         Icon55_4 As icon.ChevronRight:
             Color: =RGBA(0, 0, 0, 1)
@@ -9568,7 +9433,7 @@
             Width: =20
             X: =402
             Y: =34
-            ZIndex: =173
+            ZIndex: =165
 
         Label4_13 As label:
             Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -9582,7 +9447,7 @@
             Width: =277
             X: =570
             Y: =20
-            ZIndex: =174
+            ZIndex: =166
 
         Icon55_3 As icon.ChevronRight:
             Color: =RGBA(0, 0, 0, 1)
@@ -9593,7 +9458,7 @@
             Width: =20
             X: =542
             Y: =34
-            ZIndex: =175
+            ZIndex: =167
 
         btnAddEspecialidadu_3 As button:
             BorderColor: =varcolor_ClaroElementoPrimario
@@ -9619,7 +9484,7 @@
             Width: =120
             X: =316
             Y: =114
-            ZIndex: =176
+            ZIndex: =168
 
         btnAddEspecialidadServ_1 As button:
             BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
@@ -9647,7 +9512,93 @@
             Width: =120
             X: =436
             Y: =114
-            ZIndex: =177
+            ZIndex: =169
+
+    "galMaestros_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        Height: =99
+        Items: |-
+            =Table({Name:"Acceso",icon:Icon.CheckBadge},
+            {Name:"Sin acceso",icon:Icon.CancelBadge})
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
+            {Maestros:ThisItem.Name
+            });Set(SeleccionarRol_6,false);UpdateContext({_FondoPopUp:false})
+        TemplatePadding: =0
+        TemplateSize: =49
+        Visible: =SeleccionarRol_6
+        Width: =150
+        X: =935
+        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
+        ZIndex: =186
+
+        Separator3_12 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =47
+            ZIndex: =5
+
+        Icon32_29 As icon.CancelBadge:
+            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
+            Height: =24
+            Icon: =ThisItem.icon
+            OnSelect: =Select(Parent)
+            Width: =24
+            X: =68
+            Y: =10
+            ZIndex: =7
+
+    "galReportes_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        Height: =99
+        Items: |-
+            =Table({Name:"Acceso",icon:Icon.CheckBadge},
+            {Name:"Sin acceso",icon:Icon.CancelBadge})
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
+            {Reportes:ThisItem.Name
+            });Set(SeleccionarRol_7,false);UpdateContext({_FondoPopUp:false})
+        TemplatePadding: =0
+        TemplateSize: =49
+        Visible: =SeleccionarRol_7
+        Width: =150
+        X: =1084
+        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
+        ZIndex: =187
+
+        Separator3_13 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =47
+            ZIndex: =5
+
+        Icon32_30 As icon.CancelBadge:
+            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
+            Height: =24
+            Icon: =ThisItem.icon
+            OnSelect: =Select(Parent)
+            Width: =24
+            X: =68
+            Y: =10
+            ZIndex: =7
 
     GroupEditEServicios As group:
         Height: =5
@@ -9663,7 +9614,7 @@
                 =UpdateContext({_varEditSe:false});
             Visible: =_varEditSe
             Width: =1366
-            ZIndex: =182
+            ZIndex: =174
 
         Container7_13 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -9677,7 +9628,7 @@
             Width: =400
             X: =483
             Y: =176
-            ZIndex: =183
+            ZIndex: =175
 
             TextInput47_23 As text:
                 BorderColor: =RGBA(0, 0, 0, 1)
@@ -9833,6 +9784,64 @@
                 Y: =248
                 ZIndex: =9
 
+    "galCajaAtencion_Cliente_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        Height: =98
+        Items: |-
+            =Table({Name:"Acceso",icon:Icon.CheckBadge},
+            {Name:"Sin acceso",icon:Icon.CancelBadge}
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =49
+        Visible: =SeleccionarRol_1
+        Width: =150
+        X: =180
+        Y: =If(And(Gallery15_1.Selected.id>5 , Gallery15_1.Selected.id<7),605,If(Gallery15_1.Selected.id>6,510))
+        ZIndex: =188
+
+        Separator3_7 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =47
+            ZIndex: =5
+
+        Icon32_24 As icon.CancelBadge:
+            Color: =If(ThisItem.Name="Acceso",RGBA(61, 165, 52, 1),If(ThisItem.Name="Sin acceso",RGBA(225, 26, 26, 1),If(ThisItem.Name="Limitado",RGBA(163, 166, 22, 1))))
+            Height: =24
+            Icon: =ThisItem.icon
+            OnSelect: =Select(Parent)
+            Width: =24
+            X: =68
+            Y: =10
+            ZIndex: =7
+
+        Button25_2 As button:
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =49
+            HoverFill: =
+            OnSelect: |-
+                =Patch('public.Medical_Center_Roles_Maestro',LookUp('public.Medical_Center_Roles_Maestro',id=RolSelected.id),
+                {Atencion_al_Cliente:ThisItem.Name
+                });
+                Set(SeleccionarRol_1,false);UpdateContext({_FondoPopUp:false})
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: =""
+            Width: =150
+            ZIndex: =8
+
     GroupMServiciosDel As group:
         Height: =5
         Width: =5
@@ -9847,7 +9856,7 @@
                 =UpdateContext({_ServicioDlt: false});
             Visible: =_ServicioDlt
             Width: =1366
-            ZIndex: =188
+            ZIndex: =180
 
         Container17_4 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -9861,7 +9870,7 @@
             Width: =420
             X: =473
             Y: =273
-            ZIndex: =189
+            ZIndex: =181
 
             Button3_8 As button:
                 BorderColor: =RGBA(44, 97, 112, 1)
@@ -9990,7 +9999,7 @@
             Width: =986
             X: =320
             Y: =128
-            ZIndex: =114
+            ZIndex: =107
 
             Label4_110 As label:
                 Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -10164,7 +10173,7 @@
             Width: =75
             X: =323
             Y: =22
-            ZIndex: =115
+            ZIndex: =108
 
         Label4_5 As label:
             Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -10178,7 +10187,7 @@
             Width: =277
             X: =433
             Y: =22
-            ZIndex: =116
+            ZIndex: =109
 
         Icon55 As icon.ChevronRight:
             Color: =RGBA(0, 0, 0, 1)
@@ -10189,7 +10198,7 @@
             Width: =20
             X: =403
             Y: =36
-            ZIndex: =117
+            ZIndex: =110
 
     GroupAddSedes As group:
         Height: =5
@@ -10210,7 +10219,7 @@
             Width: =96
             X: =765
             Y: =30
-            ZIndex: =118
+            ZIndex: =111
 
         btnSede As button:
             BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
@@ -10239,7 +10248,7 @@
             Width: =276
             X: =1031
             Y: =64
-            ZIndex: =119
+            ZIndex: =112
 
         ContainerSedes As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -10253,7 +10262,7 @@
             Width: =986
             X: =318
             Y: =128
-            ZIndex: =121
+            ZIndex: =114
 
             Label4_118 As label:
                 Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -10447,7 +10456,7 @@
             Width: =276
             X: =1028
             Y: =36
-            ZIndex: =132
+            ZIndex: =125
 
         ContainerUsuariosV2 As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -10461,7 +10470,7 @@
             Width: =986
             X: =320
             Y: =102
-            ZIndex: =133
+            ZIndex: =126
 
             Label4_113 As label:
                 Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -10680,7 +10689,7 @@
             Width: =141
             X: =742
             Y: =30
-            ZIndex: =134
+            ZIndex: =127
 
     GroupOpciones As group:
         Height: =5
@@ -10780,7 +10789,7 @@
             Width: =986
             X: =320
             Y: =92
-            ZIndex: =129
+            ZIndex: =122
 
             Rectangle49_2 As rectangle:
                 Fill: =RGBA(0, 0, 0, 1)
@@ -10889,7 +10898,7 @@
             Width: =986
             X: =320
             Y: =460
-            ZIndex: =130
+            ZIndex: =123
 
             Rectangle49_3 As rectangle:
                 Fill: =RGBA(0, 0, 0, 1)
@@ -11009,7 +11018,7 @@
             Width: =986
             X: =320
             Y: =102
-            ZIndex: =120
+            ZIndex: =113
 
             Label3_7 As label:
                 Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -11839,5 +11848,5 @@
             Width: =200
             X: =718
             Y: =30
-            ZIndex: =131
+            ZIndex: =124
 
