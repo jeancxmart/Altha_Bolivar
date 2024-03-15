@@ -4034,7 +4034,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_18 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_antecedentes_quirurgicos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4060,7 +4060,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_19 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_habitos_toxicos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4086,7 +4086,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_20 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_habitos_fisiologicos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4151,7 +4151,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_21 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_menarquia
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4177,7 +4177,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_22 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_sexarquia
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4203,7 +4203,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_23 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_nps
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4229,7 +4229,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_24 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_fur
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4254,7 +4254,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_25 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_anticonceptivo
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4279,7 +4279,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_26 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_tiempo
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4304,7 +4304,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_27 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_suspension
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4330,7 +4330,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_28 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_citologia_anterior
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4395,7 +4395,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_29 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_gestas
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4421,7 +4421,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_30 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_deseados
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4447,7 +4447,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_31 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_partos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4473,7 +4473,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_32 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_abortos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4498,7 +4498,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_33 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_motivo
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4523,7 +4523,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_34 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_intergenesia
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4549,7 +4549,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_35 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_malformaciones
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4575,7 +4575,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_36 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_prematuridad
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4601,7 +4601,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_37 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_hta
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4627,7 +4627,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_38 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_diabetes
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4653,7 +4653,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_39 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_infecciones
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4679,7 +4679,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_40 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_otros
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4744,7 +4744,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_41 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_primera_consulta
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4770,7 +4770,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_42 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_tg
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4788,7 +4788,7 @@ scHistoriaMedica As screen:
                                         FontWeight: =FontWeight.Semibold
                                         Height: =24
                                         Size: =14
-                                        Text: ="Contorles Previos"
+                                        Text: ="Controles Previos"
                                         Width: =250
                                         Y: =168
                                         ZIndex: =5
@@ -4796,7 +4796,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_43 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_controles_previos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4822,7 +4822,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_44 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_examen_alterado
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4848,7 +4848,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_45 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_tto_previo
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4913,7 +4913,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_46 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_peso
                                         Format: =TextFormat.Number
                                         Height: =37
                                         RadiusBottomLeft: =4
@@ -4940,7 +4940,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_47 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_pa
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4966,7 +4966,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_48 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_piel
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4992,7 +4992,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_49 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_mamas
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5017,7 +5017,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_50 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_abdomen
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5042,7 +5042,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_51 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_genitales
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5067,7 +5067,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_52 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =""
+                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_neurologico
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
