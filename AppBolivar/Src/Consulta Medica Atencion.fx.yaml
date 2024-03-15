@@ -687,7 +687,7 @@
                         PaddingLeft: =5
                         PaddingRight: =5
                         PaddingTop: =5
-                        Visible: =_detalles="medicamentos"
+                        Visible: =//_detalles="medicamentos"
                         Width: =35
                         X: =523
                         Y: =13
@@ -702,7 +702,7 @@
                             =UpdateContext({varPopupTratamiento:true})
                         Size: =12
                         Text: ="Editar"
-                        Visible: =_detalles="medicamentos"
+                        Visible: =false//_detalles="medicamentos"
                         Width: =86
                         X: =35
                         Y: =8
@@ -15393,7 +15393,7 @@
                     =Table(
                         {value:1,desc:"Tratamiento"},
                         {value:2,desc:"Servicio"}
-                    )
+                    ) 
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
@@ -15452,6 +15452,12 @@
                     Width: =245
                     ZIndex: =1
 
+                Label30 As label:
+                    Text: |-
+                        =ThisItem.Medicamento & ": " & ThisItem.Descripción
+                    Width: =250
+                    ZIndex: =2
+
             Container37 As groupContainer.verticalAutoLayoutContainer:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -15467,12 +15473,6 @@
                     PaddingBottom: =1
                     Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
                     ZIndex: =1
-
-                    Label15 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        FillPortions: =1
-                        Text: ="Text"
-                        ZIndex: =2
 
                     ButtonAtender_27 As button:
                         AlignInContainer: =AlignInContainer.Stretch
