@@ -15453,15 +15453,6 @@
                     Y: =40
                     ZIndex: =3
 
-                Label63 As label:
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =20
-                    Text: ="Nombre del Tratamiento"
-                    Width: =230
-                    X: =10
-                    ZIndex: =4
-
                 Label63_6 As label:
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
