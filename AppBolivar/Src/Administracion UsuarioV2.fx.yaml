@@ -7728,15 +7728,23 @@
                 Height: =44
                 HoverFill: =RGBA(44, 97, 112, 1)
                 OnSelect: |-
-                    =Patch('public.Medical_Center_Especialidad', LookUp('public.Medical_Center_Especialidad', id = varEditEsp.id_especialidad),{
-                     
-                     
-                     Especialidad: TextInput47_11.Text
+                    =Refresh('public.Medical_Center_S&E_Relacion');
+                    If(IsEmpty(Filter('public.Medical_Center_Especialidad',Especialidad=Proper(Trim(TextInput47_11.Text)))),
+                        Set(_relacionv2,
+                            Patch('public.Medical_Center_Especialidad', LookUp('public.Medical_Center_Especialidad', id = varEditEsp.id_especialidad),{
+                               
+                                Especialidad: Proper(Trim(TextInput47_11.Text))
+                            })
+                        ),
+                        Set(_relacionv2,LookUp('public.Medical_Center_Especialidad',Especialidad=Proper(Trim(TextInput47_11.Text))))
+                    );
                     
+                     Patch('public.Medical_Center_S&E_Relacion', LookUp('public.Medical_Center_S&E_Relacion', id = varEditEsp.id ),{
                     
-                    
+                       id_especialidad: _relacionv2.id,
+                       plantilla_hc:rdPlantillasHC_1.Selected.plantilla_hc
                     });
-                    
+                    Select(iconCloseNewSpecialty);
                     
                     UpdateContext({_varEditEsp:false})
                 PressedFill: =RGBA(44, 97, 112, 1)
@@ -7805,6 +7813,22 @@
                 X: =20
                 Y: =160
                 ZIndex: =8
+
+            rdPlantillasHC_1 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Default: |-
+                    = LookUp(varPlantillasHC, plantilla_hc = LookUp('public.Medical_Center_S&E_Relacion', id = varEditEsp.id).plantilla_hc).desc
+                       
+                Height: =289
+                Items: =varPlantillasHC
+                LineHeight: =2
+                RadioBorderColor: =RGBA(0, 0, 0, 1)
+                RadioSize: =30
+                Width: =360
+                X: =20
+                Y: =196
+                ZIndex: =9
 
     GroupMSedesDeleteEsp As group:
         Height: =5
@@ -10064,6 +10088,7 @@
                     OnSelect: |-
                         =UpdateContext({_varEditEsp:true, varEditEsp: ThisItem});
                         Reset(TextInput47_11);
+                        Reset(rdPlantillasHC_1)
                     Width: =24
                     X: =888
                     Y: =20

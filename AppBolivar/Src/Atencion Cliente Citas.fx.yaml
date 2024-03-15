@@ -3633,7 +3633,7 @@
             Height: =30
             HoverBorderColor: =
             HoverFill: =RGBA(255, 255, 255, 1)
-            Items: =AddColumns(Filter('public.Medical_Center_S&E_Relacion', id_sede = _varSede.id),"Especialidad",LookUp('public.Medical_Center_Especialidad',id_sede=_varSede.id && id_especialidad=id,Especialidad))
+            Items: =AddColumns(Filter('public.Medical_Center_S&E_Relacion', id_sede = _varSede.id),"Especialidad",LookUp('public.Medical_Center_Especialidad',id = id_especialidad,Especialidad))
             Size: =12
             Visible: =CitaLlamada
             Width: =350
