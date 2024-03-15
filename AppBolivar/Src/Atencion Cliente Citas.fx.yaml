@@ -3436,6 +3436,8 @@
                             id_Pacientes_DNI: tiDNI_AgendarCita.Text,
                             Estatus: "En Cola",
                             cita_finalizada:false,
+                            caja_finalizada: false,
+                            triaje_finalizada: false,
                             Nombre_Paciente: Upper(TextInput35_1.Text),
                             Servicio: dpServicioNuevoTicket.Selected.Servicio,
                             id_servicio:dpServicioNuevoTicket.Selected.id,
