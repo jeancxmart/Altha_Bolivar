@@ -8529,6 +8529,7 @@
                                 Height: =29
                                 LayoutMinWidth: =50
                                 OnSelect: =
+                                Overflow: =Overflow.Scroll
                                 Size: =10
                                 Text: =LookUp('public.Medical_Center_Examenes',id=ThisItem.id_examen,examen_nombre)
                                 Width: =100
