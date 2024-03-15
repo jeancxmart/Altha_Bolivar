@@ -687,7 +687,7 @@
                         PaddingLeft: =5
                         PaddingRight: =5
                         PaddingTop: =5
-                        Visible: =//_detalles="medicamentos"
+                        Visible: =_detalles="medicamentos"
                         Width: =35
                         X: =523
                         Y: =13
@@ -702,7 +702,7 @@
                             =UpdateContext({varPopupTratamiento:true})
                         Size: =12
                         Text: ="Editar"
-                        Visible: =false//_detalles="medicamentos"
+                        Visible: =_detalles="medicamentos"
                         Width: =86
                         X: =35
                         Y: =8
