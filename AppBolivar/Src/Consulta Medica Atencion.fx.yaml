@@ -8529,10 +8529,10 @@
                                 Height: =29
                                 LayoutMinWidth: =50
                                 OnSelect: =
-                                Overflow: =Overflow.Scroll
                                 Size: =10
                                 Text: =LookUp('public.Medical_Center_Examenes',id=ThisItem.id_examen,examen_nombre)
                                 Width: =100
+                                Wrap: =false
                                 ZIndex: =1
 
                             Radio2_1 As radio:
@@ -9169,8 +9169,9 @@
                                 )
                             );
                             
+                            If(LookUp('public.Medical_Center_Ticket', id = TicketSelected.id_Ticket).caja_finalizada = false,
+                              Navigate(Caja),Navigate('Consulta Medica Dashboard'));
                             
-                            Navigate('Consulta Medica Dashboard');
                             UpdateContext({_varRECETAR:false});
                             
                             Set(Enviar_A,Concatenate(User().Email,";",TextInput40.Text));

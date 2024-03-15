@@ -224,22 +224,25 @@
               etapa:"Triaje",
               usuario:TriajeSelected.usuario,
               Alerta:true
-            })
+            });
             
-            ;
+            Set(_varTriajeticket,
+            Patch('public.Medical_Center_Ticket', LookUp('public.Medical_Center_Ticket', id = TriajeSelected.id_Ticket),{
+            triaje_finalizada: true
+            }));
+            If(_varTriajeticket.cita_finalizada = false,
+               Navigate('Consulta Medica Dashboard'),
+               Navigate(Triaje_Dashboard)
+            );
             
             
-                  Reset( txt_Temperatura);
-                    Reset(  txt_Presion);
-                   
-                    Reset(  txt_Saturacion);
-                 
-                  Reset( txt_Edad);
-                   Reset( txt_Peso);
-                    Reset( txt_Altura);
-              
-            
-                Reset(galTipoTriaje)
+            Reset( txt_Temperatura);
+            Reset(  txt_Presion);     
+            Reset(  txt_Saturacion); 
+            Reset( txt_Edad);
+            Reset( txt_Peso);
+            Reset( txt_Altura);
+            Reset(galTipoTriaje)
         PressedBorderColor: =btn_Pasar_Consultorio.Fill
         PressedColor: =btn_Pasar_Consultorio.Fill
         PressedFill: =btn_Pasar_Consultorio.Color
