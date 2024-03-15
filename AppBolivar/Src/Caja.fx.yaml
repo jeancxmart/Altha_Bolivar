@@ -1978,6 +1978,7 @@ Caja As screen:
                     });
                     
                     Reset(TextInput1_4);
+                    Reset(Adjunto_5);
                     Reset(galItemsPago);
                     UpdateContext({_varCaja:false});
                     UpdateContext({_varRegistrarPago:false});Reset(dpMedioPago);

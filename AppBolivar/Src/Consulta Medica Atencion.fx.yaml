@@ -15066,7 +15066,6 @@
             Label14_4 As label:
                 Color: =RGBA(95, 106, 146, 1)
                 Font: =Font.'Segoe UI'
-                Height: =20
                 OnSelect: =Select(Parent)
                 Overflow: =Overflow.Scroll
                 Size: =9
