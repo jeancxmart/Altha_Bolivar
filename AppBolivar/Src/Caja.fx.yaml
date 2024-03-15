@@ -1323,6 +1323,7 @@ Caja As screen:
                         Text: =LookUp('public.Medical_Center_Examenes',id=ThisItem.id_examen_pago,examen_nombre)
                         Visible: =ThisItem.tipo="Examen"
                         Width: =100
+                        Wrap: =false
                         ZIndex: =4
 
                     Label14_15 As label:
@@ -1559,7 +1560,7 @@ Caja As screen:
                     
                     */
                     Set(CajaSelected,gal_Paciente_Dashboard_Caja.Selected);
-                    
+                    Reset(TextInput1_4);Reset(Adjunto_5);
                     UpdateContext({_varRegistrarPago:true})
                 RadiusBottomLeft: =8
                 RadiusBottomRight: =8
