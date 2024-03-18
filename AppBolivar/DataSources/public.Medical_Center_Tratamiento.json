@@ -15,6 +15,7 @@
       "id": "id",
       "id_Pacientes": "id_Pacientes",
       "id_sede": "id_sede",
+      "id_ticket": "id_ticket",
       "Medicamento": "Medicamento",
       "Nombre_Consultorio": "Nombre_Consultorio",
       "Tratamiento": "Tratamiento"

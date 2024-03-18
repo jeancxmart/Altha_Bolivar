@@ -1272,7 +1272,7 @@ Caja As screen:
                 TemplatePadding: =0
                 TemplateSize: =50
                 Width: =250
-                X: =Gallery6_9.X+Gallery6_9.Width
+                X: =galTratamiento.X+galTratamiento.Width
                 Y: =91
                 ZIndex: =6
 
