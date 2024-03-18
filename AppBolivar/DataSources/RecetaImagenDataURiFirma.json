@@ -1,7 +1,7 @@
 [
   {
     "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
-    "FlowNameId": "f4271985-416b-441d-ad18-409f5fb00d2e",
+    "FlowNameId": "748ea0df-12da-44f6-bb24-2a36fdd56815",
     "Name": "RecetaImagenDataURiFirma",
     "ServiceKind": "ConnectedWadl",
     "Type": "ServiceInfo",
