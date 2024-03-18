@@ -3860,7 +3860,7 @@
             Y: =210
             ZIndex: =89
 
-    Gallery10 As gallery.galleryVertical:
+    galMDiagnosticos As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =173
         Items: =col_Diagnostico
@@ -4026,7 +4026,7 @@
             OnSelect: |-
                 =UpdateContext({_varTratamientoTramiento:true});
                 ClearCollect(ColNuevoTratamiento_DCA,Filter('public.Medical_Center_Tratamiento',Cod_4_Diagnostico=LookUp('public.Medical_Center_Tratamiento_Maestro',Label61_1.Text = Diagnostico,Diagnostico)));
-                Set(TratamientoAtencSelected,Gallery10.Selected)
+                Set(TratamientoAtencSelected,galMDiagnosticos.Selected)
             PressedBorderColor: =ColorFondoBoton
             PressedColor: =ColorFondoBoton
             PressedFill: =RGBA(255, 255, 255, 1)
@@ -6874,8 +6874,8 @@
                     id: varIDTratamiento,
                     fecha: Today(),
                     id_Paciente: TicketSelected.DNI_Paciente,
-                    Diagnostico:Gallery10.Selected.COD_4,
-                    Nombre_Diagnostico:Gallery10.Selected.DESRIPCION_COD_4,
+                    Diagnostico:galMDiagnosticos.Selected.COD_4,
+                    Nombre_Diagnostico:galMDiagnosticos.Selected.DESRIPCION_COD_4,
                     Especialidad: LookUp('public.Medical_Center_Especialidad', id =  LookUp('public.Medical_Center_S&E_Relacion', id = LookUp('public.Medical_Center_R&D_Relacion', id_doctor = getUser.id).id_se_relacion).id_especialidad).Especialidad,
                     id_sede : _varSede.id
                 }
@@ -6899,7 +6899,7 @@
                         Descripción: var.Descripción,
                         fecha: Today(),
                          Especialidad: LookUp('public.Medical_Center_Especialidad', id =  LookUp('public.Medical_Center_S&E_Relacion', id = LookUp('public.Medical_Center_R&D_Relacion', id_doctor = getUser.id And id_sede = _varSede.id).id_se_relacion).id_especialidad).Especialidad,
-                        Cod_4_Diagnostico: Gallery10.Selected.id,
+                        Cod_4_Diagnostico: galMDiagnosticos.Selected.id,
                         id_sede : _varSede.id,
                         Cod_Tratamiento:varIDTratamiento,
                         id_ticket: TicketSelected.id_Ticket }
@@ -7039,7 +7039,7 @@
 
     TextInput19_32 As text:
         BorderColor: =RGBA(0, 0, 0, 1)
-        Default: =Gallery10.Selected.DESRIPCION_COD_4
+        Default: =galMDiagnosticos.Selected.DESRIPCION_COD_4
         DisabledBorderColor: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(255, 255, 255, 1)
@@ -7098,7 +7098,7 @@
         Items: |-
             =//ColNuevoTratamiento_DCA
             /*Filter('public.Medical_Center_Tratamiento';id_Tratamiento=LookUp('public.Medical_Center_Tratamiento_Maestro';Value(Label25.Text)=id;id))*/
-            Filter('public.Medical_Center_Tratamiento',Cod_4_Diagnostico in Gallery10.Selected.COD_4)
+            Filter('public.Medical_Center_Tratamiento',Cod_4_Diagnostico in galMDiagnosticos.Selected.COD_4)
         Layout: =Layout.Vertical
         OnSelect: |-
             =UpdateContext({_varTratamientoMedicamento:true})
@@ -7198,8 +7198,8 @@
                         ).id + 1,
                     
                     Medicamento: MedicamentoEditarSeleccionar.medicamento,
-                    Cod_4_Diagnostico:Gallery10.Selected.COD_4,
-                Cod_Tratamiento:LookUp('public.Medical_Center_Tratamiento',Cod_4_Diagnostico = Gallery10.Selected.COD_4,Cod_Tratamiento),
+                    Cod_4_Diagnostico:galMDiagnosticos.Selected.COD_4,
+                Cod_Tratamiento:LookUp('public.Medical_Center_Tratamiento',Cod_4_Diagnostico = galMDiagnosticos.Selected.COD_4,Cod_Tratamiento),
                     Descripción: TextInput15_11.Text,
                   id_sede : _varSede.id,
                     fecha: Today(),
@@ -7242,7 +7242,7 @@
             );
             Set(
                 var_Tratamiento_Nombre,
-                Gallery10.Selected.DESRIPCION_COD_4
+                galMDiagnosticos.Selected.DESRIPCION_COD_4
             );
             UpdateContext({_varTratamientoTramiento: false});
             UpdateContext({_detalles: "analisis"});
@@ -7365,7 +7365,7 @@
 
     TextInput15_22 As text:
         BorderColor: =RGBA(0, 0, 0, 1)
-        Default: =Gallery10.Selected.DESRIPCION_COD_4
+        Default: =galMDiagnosticos.Selected.DESRIPCION_COD_4
         DisabledBorderColor: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(255, 255, 255, 1)
@@ -15135,8 +15135,7 @@
 
                 Label63_1 As label:
                     Height: =23
-                    OnSelect: =Select(Parent)
-                    Text: =LookUp('public.Medical_Center_Diagnostico',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket).id_especialidad,Especialidad)
+                    Text: =/*LookUp('public.Medical_Center_Diagnostico';id=LookUp('public.Medical_Center_S&E_Relacion';id=EspecialidadTicket).id_especialidad;Especialidad)*/
                     Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
                     X: =461
                     Y: =40
@@ -15158,8 +15157,11 @@
 
                 TextInput51_2 As text:
                     BorderColor: =RGBA(0, 0, 0, 1)
-                    Default: |-
-                        =First(var_Tratamiento_a_Usar).Medicamento & ": " & First(var_Tratamiento_a_Usar).Descripción
+                    Default: =First(galTratamiento.AllItems).Medicamento
+                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
                     Font: =Font.'Segoe UI'
                     Height: =38
                     RadiusBottomLeft: =8
@@ -15188,7 +15190,11 @@
 
                 TextInput51_3 As text:
                     BorderColor: =RGBA(0, 0, 0, 1)
-                    Default: =LookUp('public.Medical_Center_Diagnostico', id = galTratamiento.Selected.Cod_4_Diagnostico).DESRIPCION_COD_4
+                    Default: =galMDiagnosticos.Selected.DESRIPCION_COD_4
+                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
                     Font: =Font.'Segoe UI'
                     Height: =38
                     RadiusBottomLeft: =8
@@ -15204,6 +15210,10 @@
                 TextInput51_4 As text:
                     BorderColor: =RGBA(0, 0, 0, 1)
                     Default: =LookUp('public.Medical_Center_Especialidad',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket).id_especialidad,Especialidad)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
                     Font: =Font.'Segoe UI'
                     Height: =38
                     RadiusBottomLeft: =8
@@ -15261,7 +15271,8 @@
                     HoverColor: =ColorFondoBoton
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: |-
-                        =UpdateContext({_varShowEdit_trata:true})
+                        =UpdateContext({_varShowEdit_trata:true});Clear(ColEditTramiento);
+                        Reset(TextInput19_19);Reset(TextInput19_18);Set(MaestroedicamentoSeleccionar,Blank())
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
                     RadiusTopLeft: =8
@@ -15271,7 +15282,7 @@
                     Visible: =If(IsBlank(galDescansoMedico.Selected) && _detalles="medicamentos",true,false)
                     Width: =232
                     X: =184
-                    Y: =169
+                    Y: =196
                     ZIndex: =4
 
                 "galEditTratamiento As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -15280,6 +15291,7 @@
                     Items: =Filter('public.Medical_Center_Tratamiento', id_Pacientes = TicketSelected.DNI_Paciente, id_ticket = TicketSelected.id_Ticket)
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
+                    ShowScrollbar: =false
                     TemplatePadding: =0
                     TemplateSize: =54
                     Width: =601
@@ -15334,13 +15346,12 @@
 
                 conEditTratamiento As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0
-                    Height: =50
+                    Height: =40
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutJustifyContent: =LayoutJustifyContent.End
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =1
                     Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
                     ZIndex: =1
 
@@ -15349,29 +15360,20 @@
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Fill: =ColorFondoBoton
                         Font: =Font.'Segoe UI'
-                        Height: =44
+                        Height: =35
                         HoverBorderColor: =ColorFondoBoton
                         HoverColor: |-
                             =ColorValue("#26495B")
                         HoverFill: =RGBA(255, 255, 255, 1)
+                        LayoutMinWidth: =150
                         OnSelect: |-
-                            =/*Patch('public.Medical_Center_Counter';LookUp('public.Medical_Center_Counter';id=ThisItem.id);
-                            {   
-                              estado:"En Cola";
-                              etapa:"Triaje";
-                              usuario:User().Email
-                            })
-                            
-                            */
-                            Set(CajaSelected,gal_Paciente_Dashboard_Caja.Selected);
-                            
-                            UpdateContext({_varRegistrarPago:true})
+                            =UpdateContext({varPopupTratamiento:false});
                         RadiusBottomLeft: =8
                         RadiusBottomRight: =8
                         RadiusTopLeft: =8
                         RadiusTopRight: =8
                         Size: =12
-                        Text: ="REGISTRAR"
+                        Text: ="GUARDAR CAMBIOS"
                         Width: =360
                         X: =516
                         Y: =559
@@ -16189,8 +16191,9 @@
 
             Gallery7_4 As gallery.galleryVertical:
                 Height: =99
-                Items: =ColNuevoTratamiento_DCA
+                Items: =ColEditTramiento
                 Layout: =Layout.Vertical
+                ShowScrollbar: =false
                 TemplateSize: =50
                 Width: =543
                 X: =25
@@ -16199,7 +16202,7 @@
 
                 TextInput19_16 As text:
                     BorderColor: =RGBA(0, 0, 0, 1)
-                    Default: =ThisItem.Medicamento
+                    Default: =ThisItem.Medicamentos
                     DisabledColor: =RGBA(0, 0, 0, 1)
                     DisabledFill: =RGBA(255, 255, 255, 1)
                     DisplayMode: =DisplayMode.Disabled
@@ -16217,7 +16220,7 @@
 
                 TextInput19_17 As text:
                     BorderColor: =RGBA(0, 0, 0, 1)
-                    Default: =ThisItem.Descripción
+                    Default: =ThisItem.descrip
                     DisabledColor: =RGBA(0, 0, 0, 1)
                     DisabledFill: =RGBA(255, 255, 255, 1)
                     DisplayMode: =DisplayMode.Disabled
@@ -16237,7 +16240,7 @@
                     BorderColor: =RGBA(232, 17, 17, 1)
                     Fill: =RGBA(255, 255, 255, 1)
                     Height: =36
-                    OnSelect: =Remove(ColNuevoTratamiento_DCA,ThisItem)
+                    OnSelect: =Remove(ColEditTramiento,ThisItem)
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
                     RadiusTopLeft: =8
@@ -16283,29 +16286,9 @@
                 HoverColor: |-
                     =ColorValue("#26495B")
                 HoverFill: =RGBA(255, 255, 255, 1)
-                OnSelect: |+
-                    = Patch(
-                            'public.Medical_Center_Tratamiento',
-                            Defaults('public.Medical_Center_Tratamiento'),
-                            {
-                                id: First(
-                                    SortByColumns(
-                                        'public.Medical_Center_Tratamiento',
-                                        "id",
-                                        SortOrder.Descending
-                                    )
-                                ).id + 1,
-                                id_Pacientes: Value(TicketSelected.DNI_Paciente),       
-                                Medicamento: TextInput19_18.Text ,
-                                Descripción: TextInput19_19.Text ,
-                                fecha: Today(),
-                                 Especialidad: LookUp('public.Medical_Center_Especialidad', id =  LookUp('public.Medical_Center_S&E_Relacion', id = LookUp('public.Medical_Center_R&D_Relacion', id_doctor = getUser.id And id_sede = _varSede.id).id_se_relacion).id_especialidad).Especialidad,
-                                Cod_4_Diagnostico: Gallery10.Selected.COD_4,
-                                id_sede : _varSede.id,
-                                Cod_Tratamiento:varIDTratamiento
-                            }
-                    );
-                    
+                OnSelect: |-
+                    =Collect(ColEditTramiento,{codigo:GUID(),Medicamentos:MaestroedicamentoSeleccionar.medicamento,descrip: TextInput19_19.Text});
+                    Reset(TextInput19_19);Reset(TextInput19_18);
                 RadiusBottomLeft: =8
                 RadiusBottomRight: =8
                 RadiusTopLeft: =8
@@ -16320,7 +16303,7 @@
             Button1_104 As button:
                 BorderColor: =
                 BorderStyle: =BorderStyle.None
-                DisplayMode: =If(IsEmpty(ColNuevoTratamiento_DCA),DisplayMode.Disabled,DisplayMode.Edit)
+                DisplayMode: =If(IsEmpty(ColEditTramiento),DisplayMode.Disabled,DisplayMode.Edit)
                 Fill: =ColorFondoBoton
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
@@ -16329,7 +16312,7 @@
                 HoverFill: =ColorFondoBoton
                 OnSelect: |+
                     =Set(
-                        varIDTratamiento,
+                        varIDTratamientos,
                         First(
                             SortByColumns(
                                 'public.Medical_Center_Tratamiento_Maestro',
@@ -16342,18 +16325,18 @@
                         'public.Medical_Center_Tratamiento_Maestro',
                         Defaults('public.Medical_Center_Tratamiento_Maestro'),
                         {
-                            id: varIDTratamiento,
+                            id: varIDTratamientos,
                             fecha: Today(),
                             id_Paciente: TicketSelected.DNI_Paciente,
-                            Diagnostico:Gallery10.Selected.COD_4,
-                            Nombre_Diagnostico:Gallery10.Selected.DESRIPCION_COD_4,
+                            Diagnostico:galMDiagnosticos.Selected.COD_4,
+                            Nombre_Diagnostico:galMDiagnosticos.Selected.DESRIPCION_COD_4,
                             Especialidad: LookUp('public.Medical_Center_Especialidad', id =  LookUp('public.Medical_Center_S&E_Relacion', id = LookUp('public.Medical_Center_R&D_Relacion', id_doctor = getUser.id).id_se_relacion).id_especialidad).Especialidad,
                             id_sede : _varSede.id
                         }
                     );
-                    ForAll(
-                        ColNuevoTratamiento_DCA As var,
-                        Patch(
+                    
+                    ForAll(ColEditTramiento As temp,
+                     Patch(
                             'public.Medical_Center_Tratamiento',
                             Defaults('public.Medical_Center_Tratamiento'),
                             {
@@ -16364,28 +16347,26 @@
                                         SortOrder.Descending
                                     )
                                 ).id + 1,
-                                id_Pacientes: Value(TicketSelected.DNI_Paciente),
-                                
-                                Medicamento: var.Medicamento,
-                                Descripción: var.Descripción,
+                                id_Pacientes: Value(TicketSelected.DNI_Paciente),       
+                                Medicamento: temp.Medicamentos ,
+                                Descripción: temp.descrip ,
                                 fecha: Today(),
                                  Especialidad: LookUp('public.Medical_Center_Especialidad', id =  LookUp('public.Medical_Center_S&E_Relacion', id = LookUp('public.Medical_Center_R&D_Relacion', id_doctor = getUser.id And id_sede = _varSede.id).id_se_relacion).id_especialidad).Especialidad,
-                                Cod_4_Diagnostico: Gallery10.Selected.id,
+                                Cod_4_Diagnostico: galMDiagnosticos.Selected.COD_4,
                                 id_sede : _varSede.id,
-                                Cod_Tratamiento:varIDTratamiento,
-                                id_ticket: TicketSelected.id_Ticket }
-                        )
-                    );
+                                Cod_Tratamiento:varIDTratamientos,
+                                id_ticket: TicketSelected.id_Ticket
+                            }
+                    ));
                     
                     
-                    Set(var_Tratamiento_a_Usar,ColNuevoTratamiento_DCA);
-                    Set(var_Tratamiento_Nombre,TextInput19_32.Text);
-                    UpdateContext({_detalles:"analisis"});
+                    
+                    
+                    
                     Refresh('public.Medical_Center_Tratamiento_Maestro');
-                    UpdateContext({_varNuevoTratamiento_Tratamiento: false});
-                    Clear(ColNuevoTratamiento_DCA);
-                    
-                    Reset(TextInput19_32)
+                    Refresh('public.Medical_Center_Tratamiento');
+                    Clear(ColEditTramiento);
+                    UpdateContext({_varShowEdit_trata:false});
                     
                     
                 PressedBorderColor: =RGBA(0, 0, 0, 1)
@@ -16501,7 +16482,7 @@
 
             TextInput19_33 As text:
                 BorderColor: =RGBA(0, 0, 0, 1)
-                Default: =Gallery10.Selected.DESRIPCION_COD_4
+                Default: =galMDiagnosticos.Selected.DESRIPCION_COD_4
                 DisabledBorderColor: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(0, 0, 0, 1)
                 DisabledFill: =RGBA(255, 255, 255, 1)
