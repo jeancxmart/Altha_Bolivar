@@ -16288,7 +16288,7 @@
                 HoverFill: =RGBA(255, 255, 255, 1)
                 OnSelect: |-
                     =Collect(ColEditTramiento,{codigo:GUID(),Medicamentos:MaestroedicamentoSeleccionar.medicamento,descrip: TextInput19_19.Text});
-                    Reset(TextInput19_19);Reset(TextInput19_18);
+                    Reset(TextInput19_19);Reset(TextInput19_18);Set(MaestroedicamentoSeleccionar,Blank())
                 RadiusBottomLeft: =8
                 RadiusBottomRight: =8
                 RadiusTopLeft: =8
@@ -16579,6 +16579,7 @@
                 OnSelect: |-
                     =Navigate(scHistoriaMedica,ScreenTransition.None,{varAtencionMedica:true});
                     If(IsBlank(HMSelected.Imagen_Id),Set(imagenHMView,false),Set(imagenHMView,true));
+                    Set(_varPregunta,false);
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
