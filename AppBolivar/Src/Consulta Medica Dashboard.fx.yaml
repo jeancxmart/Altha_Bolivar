@@ -152,7 +152,7 @@
             HoverColor: |-
                 =ColorValue("#26495B")
             HoverFill: =RGBA(255, 255, 255, 1)
-            OnSelect: |+
+            OnSelect: |
                 =Set(varHabilitarAtencionMedica,true);
                 Set(
                     TicketSelected,
@@ -188,7 +188,7 @@
                     StartTime,
                     Now()
                 );
-                
+                Set(_varPregunta,true);
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
             RadiusTopLeft: =8

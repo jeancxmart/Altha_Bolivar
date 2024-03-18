@@ -90,7 +90,7 @@
         Y: =399
         ZIndex: =6
 
-    Container2_4 As groupContainer:
+    ContainerAtencioMedica As groupContainer:
         Height: =672
         Width: =1091
         X: =275
@@ -16521,6 +16521,97 @@
                 X: =200
                 Y: =212
                 ZIndex: =17
+
+    ContainerPregunton As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.25)
+        Height: =768
+        Visible: =_varPregunta
+        Width: =1366
+        ZIndex: =321
+
+        ContainerMsj As groupContainer.manualLayoutContainer:
+            BorderThickness: =4
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =265
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            X: =433
+            Y: =252
+            ZIndex: =1
+
+            Button3_11 As button:
+                BorderColor: =RGBA(44, 97, 112, 1)
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                HoverFill: =RGBA(44, 97, 112, 0.25)
+                OnSelect: =Set(_varPregunta,false);
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Text: ="NO, PASAR A ATENCIÓN"
+                Width: =210
+                X: =20
+                Y: =200
+                ZIndex: =1
+
+            Button3_12 As button:
+                BorderColor: =RGBA(255, 0, 0, 1)
+                Color: =RGBA(255, 0, 0, 1)
+                DisplayMode: |-
+                    =If(
+                        CountRows(
+                            Filter(
+                                'public.Medical_Center_S&E_Relacion',
+                                id_sede = _varDeleteSedes.id
+                            )
+                        ) > 0,
+                        DisplayMode.Disabled,
+                        DisplayMode.Edit
+                    )
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                HoverFill: =RGBA(255, 0, 0, 0.25)
+                OnSelect: |-
+                    =Navigate(scHistoriaMedica,ScreenTransition.None,{varAtencionMedica:true});
+                    If(IsBlank(HMSelected.Imagen_Id),Set(imagenHMView,false),Set(imagenHMView,true));
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Text: ="SI, VER HISTORIA"
+                Width: =210
+                X: =270
+                Y: =200
+                ZIndex: =2
+
+            HtmlText4_5 As htmlViewer:
+                Font: =Font.'Segoe UI'
+                Height: =81
+                HtmlText: |+
+                    ="<center>¿Desea ver la historia del paciente <b><font color=""#4280c2"">" & TicketSelected.Paciente & "</font></b>?"
+                    
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =15
+                Width: =449
+                X: =23
+                Y: =102
+                ZIndex: =3
+
+            Icon26 As icon.Information:
+                Color: =RGBA(255, 255, 0, 1)
+                Icon: =Icon.Information
+                X: =218
+                Y: =21
+                ZIndex: =4
 
     GroupMMedicamentos As group:
         Height: =5
