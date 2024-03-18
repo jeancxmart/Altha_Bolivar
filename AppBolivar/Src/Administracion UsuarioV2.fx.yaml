@@ -3358,7 +3358,9 @@
                         Set(_relacionv,
                             Patch('public.Medical_Center_Especialidad', Defaults('public.Medical_Center_Especialidad'),{
                                 id: First(SortByColumns('public.Medical_Center_Especialidad',"id",SortOrder.Descending)).id +1,
-                                Especialidad: Proper(Trim(tiNewSpecialty.Text))
+                                Especialidad: Proper(Trim(tiNewSpecialty.Text)),
+                                id_sede: _varAllSede.id,
+                                plantilla: rdPlantillasHC.Selected.plantilla_hc
                             })
                         ),
                         Set(_relacionv,LookUp('public.Medical_Center_Especialidad',Especialidad=Proper(Trim(tiNewSpecialty.Text))))
@@ -7415,7 +7417,8 @@
                         Set(_relacionv2,
                             Patch('public.Medical_Center_Especialidad', LookUp('public.Medical_Center_Especialidad', id = varEditEsp.id_especialidad),{
                                
-                                Especialidad: Proper(Trim(TextInput47_11.Text))
+                                Especialidad: Proper(Trim(TextInput47_11.Text)),
+                                plantilla: rdPlantillasHC_1.Selected.plantilla_hc
                             })
                         ),
                         Set(_relacionv2,LookUp('public.Medical_Center_Especialidad',Especialidad=Proper(Trim(TextInput47_11.Text))))

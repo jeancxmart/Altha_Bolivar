@@ -12751,45 +12751,21 @@ scHistoriaMedica As screen:
                     dpEspecialidades As dropdown:
                         BorderStyle: =BorderStyle.None
                         ChevronBackground: =RGBA(255, 255, 255, 1)
-                        ChevronFill: =RGBA(0, 0, 0, 1)
+                        ChevronDisabledBackground: =RGBA(0, 0, 0, 0)
+                        ChevronFill: =RGBA(0, 0, 0, 0)
                         ChevronHoverBackground: =
                         ChevronHoverFill: =RGBA(0, 0, 0, 1)
                         Default: =LookUp('public.Medical_Center_Especialidad',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad),Especialidad)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
                         Font: =Font.'Segoe UI'
                         Height: =36
                         HoverBorderColor: =
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        Items: |-
-                            =/**With({plantillas_x_doctor:AddColumns(Filter('public.Medical_Center_R&D_Relacion',id_doctor=getUser.id),"plantillaDoc",LookUp('public.Medical_Center_S&E_Relacion',id=id_se_relacion,plantilla_hc)).plantillaDoc},
-                            Filter('public.Medical_Center_Especialidad',id_sede=_varSede.id, plantilla in plantillas_x_doctor)
-                            )**/
-                            Filter(
-                                AddColumns(
-                                    AddColumns(
-                                        RenameColumns(
-                                            Filter(
-                                                'public.Medical_Center_Especialidad',
-                                                id_sede = _varSede.id
-                                            ),
-                                            "id",
-                                            "idEsp"
-                                        ),
-                                        "id_relacion",
-                                        LookUp(
-                                            'public.Medical_Center_S&E_Relacion',
-                                            id_sede = _varSede.id && id_especialidad = idEsp,
-                                            id
-                                        )
-                                    ),
-                                    "Atiende",
-                                    LookUp(
-                                        'public.Medical_Center_R&D_Relacion',
-                                        id_doctor = getUser.id && id_se_relacion = id_relacion,
-                                        estado
-                                    )
-                                ),
-                                Atiende = true
-                            )
+                        Items: |+
+                            =Filter(AddColumns(AddColumns(RenameColumns(Filter('public.Medical_Center_Especialidad',id_sede=_varSede.id),"id","idEsp"),"id_relacion",LookUp('public.Medical_Center_S&E_Relacion',id_sede=_varSede.id&&id_especialidad=idEsp,id)),"Atiende",LookUp('public.Medical_Center_R&D_Relacion',id_doctor=getUser.id&&id_se_relacion=id_relacion,estado)),Atiende= true )
+                            
                         Size: =12
                         Width: =Parent.Width-2*Self.X
                         X: =1
@@ -12910,6 +12886,7 @@ scHistoriaMedica As screen:
                         {num:1,plantilla:"nutricion",seccion: "Recordatorio de 24 Horas", pregunta: "Merienda", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
                         {num:1,plantilla:"nutricion",seccion: "Recordatorio de 24 Horas", pregunta: "Cena", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
                         {num:1,plantilla:"nutricion",seccion: "Comentarios adicionales:", pregunta: "Comentarios adicionales", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},**/
+                        
                         
                         {num:1,plantilla:"cirugia_pediatrica", seccion: "Diagnósticos", pregunta: "Diagnósticos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
                         {num:2,plantilla:"cirugia_pediatrica", seccion: "Tratamiento", pregunta: "Tratamiento", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},

@@ -3957,7 +3957,8 @@
             HoverFill: =ColorFondoBoton
             OnSelect: |-
                 =Clear(ColNuevoTratamiento_DCA);
-                UpdateContext({_varNuevoTratamiento_Tratamiento:true})
+                UpdateContext({_varNuevoTratamiento_Tratamiento:true});
+                Reset(TextInput19_13)
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
             RadiusTopLeft: =8
@@ -15369,8 +15370,8 @@
             RadiusTopLeft: =8
             RadiusTopRight: =8
             Width: =649
-            X: =(Parent.Width-Self.Width)/2
-            Y: =(Parent.Height-Self.Height)/2
+            X: =359
+            Y: =23
             ZIndex: =1
 
             Label4_31 As label:
@@ -15430,19 +15431,6 @@
                 Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
                 ZIndex: =4
 
-                Label41_1 As label:
-                    BorderColor: =RGBA(0, 0, 0, 1)
-                    BorderThickness: =2
-                    Fill: =RGBA(255, 255, 255, 1)
-                    Height: =36
-                    OnSelect: =//Select(Parent)
-                    Text: =LookUp('public.Medical_Center_Especialidad',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket).id_especialidad,Especialidad)
-                    Visible: =tabEscogerTratServ.Selected.desc="Tratamiento"
-                    Width: =577
-                    X: =10
-                    Y: =106
-                    ZIndex: =2
-
                 Label63_1 As label:
                     Height: =23
                     OnSelect: =Select(Parent)
@@ -15456,6 +15444,10 @@
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
                     Height: =20
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Text: ="Especialidad"
                     Width: =230
                     X: =10
@@ -15468,20 +15460,24 @@
                         =First(var_Tratamiento_a_Usar).Medicamento & ": " & First(var_Tratamiento_a_Usar).Descripción  
                     Font: =Font.'Segoe UI'
                     Height: =38
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
                     Size: =12
                     Width: =577
                     X: =10
-                    Y: =25
+                    Y: =32
                     ZIndex: =6
 
                 Label63_8 As label:
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
                     Height: =20
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Text: ="Diagnóstico"
                     Width: =230
                     X: =10
@@ -15490,18 +15486,46 @@
 
                 TextInput51_3 As text:
                     BorderColor: =RGBA(0, 0, 0, 1)
-                    Default: =LookUp('public.Medical_Center_Diagnostico',COD_4 = First(var_Tratamiento_a_Usar).Cod_4_Diagnostico).DESRIPCION_COD_4
+                    Default: =LookUp('public.Medical_Center_Diagnostico', COD_4 = First(var_Tratamiento_a_Usar).Cod_4_Diagnostico).DESRIPCION_COD_4
                     Font: =Font.'Segoe UI'
                     Height: =38
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
                     Size: =12
                     Width: =577
                     X: =10
-                    Y: =185
+                    Y: =193
                     ZIndex: =8
+
+                TextInput51_4 As text:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Default: =LookUp('public.Medical_Center_Especialidad',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket).id_especialidad,Especialidad)
+                    Font: =Font.'Segoe UI'
+                    Height: =38
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Size: =12
+                    Width: =577
+                    X: =10
+                    Y: =112
+                    ZIndex: =9
+
+                Label63_9 As label:
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =20
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: ="Nombre del Tratamiento"
+                    Width: =230
+                    X: =10
+                    ZIndex: =10
 
             Container40 As groupContainer.manualLayoutContainer:
                 LayoutMinHeight: =250
@@ -15547,7 +15571,7 @@
                     Y: =196
                     ZIndex: =4
 
-                "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                "galEditTratamiento As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true
                     Height: =175
                     Items: =var_Tratamiento_a_Usar
