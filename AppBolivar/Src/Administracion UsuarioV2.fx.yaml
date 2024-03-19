@@ -2298,7 +2298,7 @@
                     DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
                     DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundApp,varcolor_OscuroBackgroundApp)
                     DisplayMode: =DisplayMode.Disabled
-                    Height: =892
+                    Height: =776
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
                     RadiusTopLeft: =8
@@ -2520,7 +2520,7 @@
                     Visible: =_varNewUsuario
                     Width: =360
                     X: =20
-                    Y: =823
+                    Y: =720
                     ZIndex: =13
 
                 Icon12_7 As icon.Redo:
@@ -2635,7 +2635,7 @@
                     Text: ="CMP"
                     Visible: =_varNewUsuario
                     X: =15
-                    Y: =618
+                    Y: =520
                     ZIndex: =23
 
                 txtCPP_1 As text:
@@ -2662,7 +2662,7 @@
                     Visible: =_varNewUsuario
                     Width: =170
                     X: =15
-                    Y: =654
+                    Y: =556
                     ZIndex: =24
 
                 Label13_52 As label:
@@ -2673,8 +2673,8 @@
                     PaddingLeft: =0
                     Text: ="RNE"
                     Visible: =_varNewUsuario
-                    X: =205
-                    Y: =618
+                    X: =207
+                    Y: =520
                     ZIndex: =25
 
                 txtRNE_2 As text:
@@ -2700,8 +2700,8 @@
                     Size: =12
                     Visible: =_varNewUsuario
                     Width: =170
-                    X: =205
-                    Y: =654
+                    X: =207
+                    Y: =556
                     ZIndex: =26
 
                 Label13_55 As label:
@@ -2713,7 +2713,7 @@
                     Text: ="Meta"
                     Visible: =_varNewUsuario
                     X: =15
-                    Y: =718
+                    Y: =620
                     ZIndex: =27
 
                 txtMeta_1 As text:
@@ -2742,7 +2742,7 @@
                     Visible: =_varNewUsuario
                     Width: =170
                     X: =15
-                    Y: =754
+                    Y: =656
                     ZIndex: =28
 
                 Label13_54 As label:
@@ -2753,8 +2753,8 @@
                     PaddingLeft: =0
                     Text: ="Fecha"
                     Visible: =_varNewUsuario
-                    X: =205
-                    Y: =718
+                    X: =207
+                    Y: =620
                     ZIndex: =29
 
                 txtRNE_3 As text:
@@ -2772,8 +2772,8 @@
                     RadiusTopRight: =8
                     Visible: =_varNewUsuario
                     Width: =170
-                    X: =205
-                    Y: =754
+                    X: =207
+                    Y: =656
                     ZIndex: =30
 
                 Label13_56 As label:
@@ -2786,7 +2786,7 @@
                     Visible: =_varNewUsuario
                     Width: =31
                     X: =17
-                    Y: =754
+                    Y: =657
                     ZIndex: =31
 
                 fechaCuota_1 As datepicker:
@@ -2803,8 +2803,8 @@
                     Size: =12
                     Visible: =_varNewUsuario
                     Width: =160
-                    X: =210
-                    Y: =757
+                    X: =212
+                    Y: =659
                     ZIndex: =32
 
                 Icon5_9 As icon.Help:
@@ -4858,7 +4858,7 @@
                     DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
                     DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundApp,varcolor_OscuroBackgroundApp)
                     DisplayMode: =DisplayMode.Disabled
-                    Height: =892
+                    Height: =780
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -5049,7 +5049,7 @@
                     Visible: =_varEditUser
                     Width: =360
                     X: =20
-                    Y: =823
+                    Y: =720
                     ZIndex: =13
 
                 Icon12_25 As icon.Redo:
@@ -5164,7 +5164,7 @@
                     Text: ="CMP"
                     Visible: =_varEditUser
                     X: =15
-                    Y: =618
+                    Y: =514
                     ZIndex: =23
 
                 txtCPP_2 As text:
@@ -5191,7 +5191,7 @@
                     Visible: =_varEditUser
                     Width: =170
                     X: =15
-                    Y: =654
+                    Y: =550
                     ZIndex: =24
 
                 Label13_73 As label:
@@ -5202,8 +5202,8 @@
                     PaddingLeft: =0
                     Text: ="RNE"
                     Visible: =_varEditUser
-                    X: =205
-                    Y: =618
+                    X: =207
+                    Y: =514
                     ZIndex: =25
 
                 txtRNE_4 As text:
@@ -5229,8 +5229,8 @@
                     Size: =12
                     Visible: =_varEditUser
                     Width: =170
-                    X: =205
-                    Y: =654
+                    X: =207
+                    Y: =550
                     ZIndex: =26
 
                 Label13_74 As label:
@@ -5242,7 +5242,7 @@
                     Text: ="Meta"
                     Visible: =_varEditUser
                     X: =15
-                    Y: =718
+                    Y: =614
                     ZIndex: =27
 
                 txtMeta_3 As text:
@@ -5271,7 +5271,7 @@
                     Visible: =_varEditUser
                     Width: =170
                     X: =15
-                    Y: =754
+                    Y: =650
                     ZIndex: =28
 
                 Label13_75 As label:
@@ -5282,8 +5282,8 @@
                     PaddingLeft: =0
                     Text: ="Fecha"
                     Visible: =_varEditUser
-                    X: =205
-                    Y: =718
+                    X: =207
+                    Y: =614
                     ZIndex: =29
 
                 txtRNE_5 As text:
@@ -5301,8 +5301,8 @@
                     RadiusTopRight: =8
                     Visible: =_varEditUser
                     Width: =170
-                    X: =205
-                    Y: =754
+                    X: =207
+                    Y: =650
                     ZIndex: =30
 
                 Label13_76 As label:
@@ -5315,7 +5315,7 @@
                     Visible: =_varEditUser
                     Width: =31
                     X: =17
-                    Y: =754
+                    Y: =650
                     ZIndex: =31
 
                 fechaCuota_2 As datepicker:
@@ -5332,8 +5332,8 @@
                     Size: =12
                     Visible: =_varEditUser
                     Width: =160
-                    X: =210
-                    Y: =757
+                    X: =212
+                    Y: =653
                     ZIndex: =32
 
                 Icon5_19 As icon.Help:
