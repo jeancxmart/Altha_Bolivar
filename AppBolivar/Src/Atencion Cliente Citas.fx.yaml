@@ -400,8 +400,9 @@
                 ) = Text(
                     Today(),
                     "dd/mm/yyyy"
-                ),  id_especialidad_x_sede = LookUp('public.Medical_Center_S&E_Relacion', id_sede = _varSede.id).id
+                )
             )
+            // id_especialidad_x_sede = LookUp('public.Medical_Center_S&E_Relacion'; id_sede = _varSede.id).id
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplateSize: =160
