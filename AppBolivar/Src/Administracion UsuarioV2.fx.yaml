@@ -7838,7 +7838,7 @@
                 IsSearchable: =false
                 Items: |-
                     =//UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText})
-                    Filter('public.Medical_Center_Usuario', Activo = true,Not(Correo in GalleryUsersE.AllItems.correo))
+                    Filter('public.Medical_Center_Usuario', Activo = true,Not(Correo in GalleryUsersE.AllItems.correo), Rol = "Doctor" || Rol = "Administrador")
                 SearchFields: =["Usuario"]
                 SearchItems: =[]
                 SelectMultiple: =false
