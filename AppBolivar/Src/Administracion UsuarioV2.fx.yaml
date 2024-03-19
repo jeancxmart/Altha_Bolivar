@@ -7697,6 +7697,7 @@
                     id_sede: _varEspV2.id_sede,
                     id_doctor: ComboBox5.Selected.id,
                     correo: LookUp('public.Medical_Center_Usuario', id = ComboBox5.Selected.id).Correo,
+                    disponibilidad: LookUp('public.Medical_Center_Usuario', id = ComboBox5.Selected.id).Disponibilidad,
                     contacto: Value(TextInput47_14.Text)
                     });
                     
