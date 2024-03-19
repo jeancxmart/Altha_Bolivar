@@ -642,7 +642,7 @@
                         HoverColor: =ColorFondoBoton
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |
-                            =
+                            =Reset(TextInput52);
                             UpdateContext({_InformeMedico:true});
                         RadiusBottomLeft: =8
                         RadiusBottomRight: =8

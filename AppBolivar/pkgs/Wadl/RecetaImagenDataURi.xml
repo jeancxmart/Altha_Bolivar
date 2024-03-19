@@ -2,9 +2,9 @@
   <doc title="RecetaImagen DataURi" />
   <grammars>
     <jsonTypes targetNamespace="https://brazil-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
-      <string name="ManualTriggerInput_Obtenercontenidodeblob_ux28_V2_ux29__Blob_def" />
+      <string name="ManualTriggerInput_text_def" />
       <object name="ManualTriggerInput">
-        <property name="Obtenercontenidodeblob(V2)_Blob" type="string" />
+        <property name="text" type="string" />
       </object>
       <string name="ResponseActionOutput_uri_def" />
       <object name="ResponseActionOutput">
@@ -23,7 +23,9 @@
             <doc title="The api version" />
           </param>
           <representation mediaType="application/json">
-            <param style="plain" name="Obtenercontenidodeblob(V2)_Blob" path="/Obtenercontenidodeblob(V2)_Blob" type="xs:string" required="true" />
+            <param style="plain" name="text" path="/text" type="xs:string" required="true">
+              <doc title="blob" />
+            </param>
           </representation>
         </request>
         <response>
