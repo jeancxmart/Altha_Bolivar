@@ -1026,6 +1026,7 @@
         BorderColor: =ColorFondoBoton
         Color: =ColorFondoBoton
         DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        DisplayMode: =If(getUser.Rol = "Asistente" || getUser.Rol = "Administrador" , DisplayMode.Edit, DisplayMode.Disabled)
         Fill: =RGBA(255, 255, 255, 1)
         FocusedBorderColor: =btn_Agendar_Cita.BorderColor
         Font: =Font.'Segoe UI'

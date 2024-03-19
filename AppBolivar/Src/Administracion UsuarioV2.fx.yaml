@@ -3940,7 +3940,7 @@
                 Items: |-
                     =//Filter('public.Medical_Center_Roles_Maestro',id_sede = _varSede.id && Consultorio_Medico  = /*<>*/ "Bolivar")
                     
-                    Filter('public.Medical_Center_Roles_Maestro',Consultorio_Medico=getUser.Nombre_Consultorio)
+                    Filter('public.Medical_Center_Roles_Maestro', id_sede = _varSede.id)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
