@@ -12763,9 +12763,34 @@ scHistoriaMedica As screen:
                         Height: =36
                         HoverBorderColor: =
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        Items: |+
-                            =Filter(AddColumns(AddColumns(RenameColumns(Filter('public.Medical_Center_Especialidad',id_sede=_varSede.id),"id","idEsp"),"id_relacion",LookUp('public.Medical_Center_S&E_Relacion',id_sede=_varSede.id&&id_especialidad=idEsp,id)),"Atiende",LookUp('public.Medical_Center_R&D_Relacion',id_doctor=getUser.id&&id_se_relacion=id_relacion,estado)),Atiende= true )
-                            
+                        Items: |-
+                            =Filter(
+                                AddColumns(
+                                    AddColumns(
+                                        RenameColumns(
+                                            Filter(
+                                                'public.Medical_Center_Especialidad',
+                                                id_sede = _varSede.id
+                                            ),
+                                            "id",
+                                            "idEsp"
+                                        ),
+                                        "id_relacion",
+                                        LookUp(
+                                            'public.Medical_Center_S&E_Relacion',
+                                            id_sede = _varSede.id && id_especialidad = idEsp,
+                                            id
+                                        )
+                                    ),
+                                    "Atiende",
+                                    LookUp(
+                                        'public.Medical_Center_R&D_Relacion',
+                                        id_doctor = getUser.id && id_se_relacion = id_relacion,
+                                        estado
+                                    )
+                                ),
+                                Atiende = true
+                            )
                         Size: =12
                         Width: =Parent.Width-2*Self.X
                         X: =1
