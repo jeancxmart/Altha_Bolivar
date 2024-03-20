@@ -8029,7 +8029,7 @@ scHistoriaMedica As screen:
 
                             Container40 As groupContainer.manualLayoutContainer:
                                 FillPortions: =0
-                                Height: =800
+                                Height: =650
                                 LayoutMinHeight: =200
                                 LayoutMinWidth: =250
                                 ZIndex: =1
@@ -8110,7 +8110,7 @@ scHistoriaMedica As screen:
                                     Text: ="Enfermedad Actual"
                                     Width: =250
                                     X: =1
-                                    Y: =157
+                                    Y: =159
                                     ZIndex: =4
 
                                 RichTextEditor1_21 As richTextEditor:
@@ -8121,133 +8121,670 @@ scHistoriaMedica As screen:
                                     Y: =192
                                     ZIndex: =5
 
-                            galChecklist_1 As gallery.variableTemplateHeightGallery:
-                                BorderColor: =RGBA(245, 245, 245, 1)
-                                Default: =First(formularioCamposLineales)
-                                DelayItemLoading: =true
-                                Fill: =RGBA(245, 245, 245, 1)
-                                FillPortions: =0
-                                Height: =Sum(galChecklist_1.AllItems,altura)+CountRows(Distinct(formularioCamposLineales,seccion))*40//CountRows(GroupBy(formularioCamposLineales,"seccion","otros"))*50+72*Self.AllItemsCount
-                                Items: =AddColumns(formularioCamposLineales,"altura",Switch(tipo_respuesta,"textoLinea",36+34+2.5,"textoMul",72+34+2.5)*openSection)
-                                Layout: =Layout.Vertical
-                                LayoutMinHeight: =200
-                                LayoutMinWidth: =320
-                                LoadingSpinner: =LoadingSpinner.Data
-                                Selectable: =false
-                                ShowNavigation: =true
-                                ShowScrollbar: =false
-                                TemplatePadding: =0
-                                TemplateSize: =100
-                                Width: =100
-                                ZIndex: =2
+                                lbEncabezado_193 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Síntomas y Signos"
+                                    Width: =250
+                                    Y: =406
+                                    ZIndex: =6
 
-                                Container15_67 As groupContainer.horizontalAutoLayoutContainer:
-                                    Height: |-
-                                        =If(ThisItem.itemID=First(Filter(formularioCamposLineales,seccion=ThisItem.seccion)).itemID
-                                            ,40+72*ThisItem.openSection+36*(ThisItem.tipo_respuesta="textoMul")*ThisItem.openSection,If(ThisItem.openSection,72+36*(ThisItem.tipo_respuesta="textoMul"),0))
-                                    LayoutDirection: =LayoutDirection.Vertical
-                                    LayoutGap: =5
-                                    LayoutMode: =LayoutMode.Auto
-                                    PaddingBottom: =1
-                                    PaddingLeft: =1
-                                    PaddingRight: =1
-                                    PaddingTop: =1
-                                    Width: =Parent.Width
+                                RichTextEditor1_22 As richTextEditor:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: =
+                                    Height: =180
+                                    Width: =810
+                                    Y: =440
                                     ZIndex: =7
 
-                                    lbEncabezado_86 As label:
-                                        AlignInContainer: =AlignInContainer.Stretch
-                                        BorderColor: =RGBA(0, 0, 0, 0)
-                                        BorderStyle: =BorderStyle.None
-                                        BorderThickness: =2
-                                        Color: =varcolor_ClaroElementoPrimario
-                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                        DisabledColor: =RGBA(161, 159, 157, 1)
-                                        FocusedBorderThickness: =4
-                                        Font: =Font.'Segoe UI'
-                                        FontWeight: =FontWeight.Semibold
-                                        OnSelect: |-
-                                            =UpdateIf(formularioCamposLineales,seccion=ThisItem.seccion,{openSection:!ThisItem.openSection})
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =18
-                                        Text: =Left(ThisItem.seccion,1)&Lower(Mid(ThisItem.seccion,2))
-                                        Visible: =ThisItem.itemID=First(Filter(formularioCamposLineales,seccion=ThisItem.seccion)).itemID
-                                        Width: =100
-                                        ZIndex: =1
+                            Container40_1 As groupContainer.manualLayoutContainer:
+                                FillPortions: =0
+                                Height: =260
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =250
+                                ZIndex: =2
 
-                                    lbEncabezado_85 As label:
-                                        AlignInContainer: =AlignInContainer.Stretch
-                                        BorderColor: =RGBA(0, 0, 0, 0)
-                                        BorderStyle: =BorderStyle.None
-                                        BorderThickness: =2
-                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                        DisabledColor: =RGBA(161, 159, 157, 1)
-                                        FocusedBorderThickness: =4
-                                        Font: =Font.'Segoe UI'
-                                        FontWeight: =FontWeight.Semibold
-                                        Height: =24
-                                        OnSelect: =
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Size: =14
-                                        Text: =ThisItem.pregunta
-                                        Visible: =ThisItem.openSection
-                                        Width: =100
-                                        Y: =10
-                                        ZIndex: =2
+                                lbEncabezado_194 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =varcolor_ClaroElementoPrimario
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =18
+                                    Text: ="Tratamiento que actualmente recibe"
+                                    Width: =450
+                                    ZIndex: =1
 
-                                    tiScHistoria1_6 As text:
-                                        AlignInContainer: =AlignInContainer.Stretch
-                                        BorderColor: =RGBA(0, 0, 0, 1)
-                                        Default: =ThisItem.respuestaTexto
-                                        Font: =Font.'Segoe UI'
-                                        Height: =Switch(ThisItem.tipo_respuesta,"textoLinea",36,"textoMul",72)
-                                        Mode: =Switch(ThisItem.tipo_respuesta,"textoLinea",TextMode.SingleLine,"textoMul",TextMode.MultiLine)
-                                        OnChange: |-
-                                            =Patch(formularioCamposLineales,LookUp(formularioCamposLineales,itemID=ThisItem.itemID),{respuestaTexto: Trim(Self.Text)})
-                                        RadiusBottomLeft: =4
-                                        RadiusBottomRight: =4
-                                        RadiusTopLeft: =4
-                                        RadiusTopRight: =4
-                                        Reset: =resetear
-                                        Size: =12
-                                        Visible: =ThisItem.openSection&&Or(ThisItem.tipo_respuesta="textoLinea",ThisItem.tipo_respuesta="textoMul")
-                                        Width: =0
-                                        X: =10
-                                        ZIndex: =3
+                                lbEncabezado_195 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Farmacológico"
+                                    Width: =250
+                                    Y: =53
+                                    ZIndex: =2
 
-                                    Container26_8 As groupContainer.manualLayoutContainer:
-                                        BorderThickness: =2
-                                        FillPortions: =0
-                                        Height: =36
-                                        LayoutMinHeight: =100
-                                        LayoutMinWidth: =50
-                                        RadiusBottomLeft: =5
-                                        RadiusBottomRight: =5
-                                        RadiusTopLeft: =5
-                                        RadiusTopRight: =5
-                                        Visible: =ThisItem.tipo_respuesta="fecha"
-                                        ZIndex: =4
+                                tiScHistoria1_8 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =86
+                                    ZIndex: =3
 
-                                        dpScHistoriaFecha1_3 As datepicker:
-                                            BorderStyle: =BorderStyle.None
-                                            DefaultDate: =
-                                            Font: =Font.'Segoe UI'
-                                            Height: =Parent.Height
-                                            IconBackground: =RGBA(255, 255, 255, 1)
-                                            IconFill: =RGBA(0, 0, 0, 1)
-                                            InputTextPlaceholder: =
-                                            OnSelect: |-
-                                                =Patch(formularioCamposLineales,LookUp(formularioCamposLineales,itemID=ThisItem.itemID),{respuestaDate:Self.SelectedDate})
-                                            Reset: =resetear
-                                            Size: =13
-                                            Width: =Parent.Width
-                                            ZIndex: =1
+                                lbEncabezado_196 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Nutriciónal"
+                                    Width: =250
+                                    X: =1
+                                    Y: =159
+                                    ZIndex: =4
+
+                                tiScHistoria1_9 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =190
+                                    ZIndex: =5
+
+                            Container40_2 As groupContainer.manualLayoutContainer:
+                                FillPortions: =0
+                                Height: =530
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =250
+                                ZIndex: =3
+
+                                lbEncabezado_197 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =varcolor_ClaroElementoPrimario
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =18
+                                    Text: ="Antecedentes"
+                                    Width: =200
+                                    ZIndex: =1
+
+                                lbEncabezado_198 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Personales"
+                                    Width: =250
+                                    Y: =53
+                                    ZIndex: =2
+
+                                lbEncabezado_206 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Familiares"
+                                    Width: =250
+                                    X: =1
+                                    Y: =293
+                                    ZIndex: =4
+
+                                RichTextEditor1_23 As richTextEditor:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: =
+                                    Height: =180
+                                    Width: =810
+                                    Y: =326
+                                    ZIndex: =5
+
+                                RichTextEditor1_24 As richTextEditor:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: =
+                                    Height: =180
+                                    Width: =810
+                                    Y: =83
+                                    ZIndex: =7
+
+                            Container40_3 As groupContainer.manualLayoutContainer:
+                                FillPortions: =0
+                                Height: =1600
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =250
+                                ZIndex: =4
+
+                                lbEncabezado_207 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =varcolor_ClaroElementoPrimario
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =18
+                                    Text: ="Hábitos Psico-biológicos"
+                                    Width: =300
+                                    ZIndex: =1
+
+                                lbEncabezado_208 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Apetito"
+                                    Width: =250
+                                    Y: =53
+                                    ZIndex: =2
+
+                                tiScHistoria1_10 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =86
+                                    ZIndex: =3
+
+                                lbEncabezado_209 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Cigarrillo"
+                                    Width: =250
+                                    X: =1
+                                    Y: =159
+                                    ZIndex: =4
+
+                                tiScHistoria1_11 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =191
+                                    ZIndex: =8
+
+                                lbEncabezado_211 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Alcohol"
+                                    Width: =250
+                                    Y: =257
+                                    ZIndex: =9
+
+                                tiScHistoria1_12 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =290
+                                    ZIndex: =10
+
+                                lbEncabezado_212 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Actividad Física"
+                                    Width: =250
+                                    X: =1
+                                    Y: =363
+                                    ZIndex: =11
+
+                                tiScHistoria1_13 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =395
+                                    ZIndex: =12
+
+                                lbEncabezado_213 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Sueño"
+                                    Width: =250
+                                    Y: =461
+                                    ZIndex: =13
+
+                                tiScHistoria1_14 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =494
+                                    ZIndex: =14
+
+                                lbEncabezado_214 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Menstruación"
+                                    Width: =250
+                                    X: =1
+                                    Y: =567
+                                    ZIndex: =15
+
+                                tiScHistoria1_15 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =599
+                                    ZIndex: =16
+
+                                lbEncabezado_215 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Síntomas Gastrointestinales"
+                                    Width: =250
+                                    Y: =660
+                                    ZIndex: =17
+
+                                tiScHistoria1_16 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =693
+                                    ZIndex: =18
+
+                                lbEncabezado_216 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Náuseas"
+                                    Width: =250
+                                    X: =1
+                                    Y: =766
+                                    ZIndex: =19
+
+                                tiScHistoria1_17 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =798
+                                    ZIndex: =20
+
+                                lbEncabezado_217 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Vómitos"
+                                    Width: =250
+                                    Y: =864
+                                    ZIndex: =21
+
+                                tiScHistoria1_18 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =897
+                                    ZIndex: =22
+
+                                lbEncabezado_218 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Flatulencia"
+                                    Width: =250
+                                    X: =1
+                                    Y: =970
+                                    ZIndex: =23
+
+                                tiScHistoria1_19 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =1002
+                                    ZIndex: =24
+
+                                lbEncabezado_219 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Diarrea"
+                                    Width: =250
+                                    Y: =1067
+                                    ZIndex: =25
+
+                                tiScHistoria1_20 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    Y: =1103
+                                    ZIndex: =26
 
                             Container15_65 As groupContainer.horizontalAutoLayoutContainer:
                                 FillPortions: =0
@@ -8258,7 +8795,7 @@ scHistoriaMedica As screen:
                                 LayoutMode: =LayoutMode.Auto
                                 Width: =Parent.Width
                                 Y: =20
-                                ZIndex: =3
+                                ZIndex: =5
 
                                 lbEncabezado_83 As label:
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -8295,7 +8832,7 @@ scHistoriaMedica As screen:
                                 PaddingTop: =1
                                 Width: =Parent.Width
                                 Y: =40
-                                ZIndex: =4
+                                ZIndex: =6
 
                                 lbEncabezado_84 As label:
                                     AlignInContainer: =AlignInContainer.Stretch
@@ -8342,7 +8879,7 @@ scHistoriaMedica As screen:
                                 PaddingTop: =1
                                 Width: =Parent.Width
                                 Y: =40
-                                ZIndex: =5
+                                ZIndex: =7
 
                                 lbEncabezado_87 As label:
                                     AlignInContainer: =AlignInContainer.Stretch
@@ -8387,7 +8924,7 @@ scHistoriaMedica As screen:
                                 PaddingTop: =1
                                 Width: =Parent.Width
                                 Y: =40
-                                ZIndex: =6
+                                ZIndex: =8
 
                                 lbEncabezado_89 As label:
                                     AlignInContainer: =AlignInContainer.Stretch
@@ -8432,7 +8969,7 @@ scHistoriaMedica As screen:
                                 PaddingTop: =1
                                 Width: =Parent.Width
                                 Y: =40
-                                ZIndex: =7
+                                ZIndex: =9
 
                                 lbEncabezado_90 As label:
                                     AlignInContainer: =AlignInContainer.Stretch
@@ -8477,7 +9014,7 @@ scHistoriaMedica As screen:
                                 PaddingTop: =1
                                 Width: =Parent.Width
                                 Y: =40
-                                ZIndex: =8
+                                ZIndex: =10
 
                                 lbEncabezado_91 As label:
                                     AlignInContainer: =AlignInContainer.Stretch
@@ -8522,7 +9059,7 @@ scHistoriaMedica As screen:
                                 PaddingTop: =1
                                 Width: =Parent.Width
                                 Y: =40
-                                ZIndex: =9
+                                ZIndex: =11
 
                                 lbEncabezado_92 As label:
                                     AlignInContainer: =AlignInContainer.Stretch
@@ -8564,7 +9101,7 @@ scHistoriaMedica As screen:
                                 LayoutMode: =LayoutMode.Auto
                                 Width: =Parent.Width
                                 Y: =60
-                                ZIndex: =10
+                                ZIndex: =12
 
                                 lbEncabezado_78 As label:
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -8623,7 +9160,7 @@ scHistoriaMedica As screen:
                                 LayoutMode: =LayoutMode.Auto
                                 Width: =Parent.Width
                                 Y: =60
-                                ZIndex: =11
+                                ZIndex: =13
 
                                 htmlNutriTabla_1 As htmlViewer:
                                     AlignInContainer: =AlignInContainer.Stretch
@@ -9017,7 +9554,7 @@ scHistoriaMedica As screen:
                                 PaddingTop: =1
                                 Width: =Parent.Width
                                 Y: =40
-                                ZIndex: =12
+                                ZIndex: =14
 
                                 lbEncabezado_93 As label:
                                     AlignInContainer: =AlignInContainer.Stretch
@@ -9048,6 +9585,134 @@ scHistoriaMedica As screen:
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
+
+                            galChecklist_1 As gallery.variableTemplateHeightGallery:
+                                BorderColor: =RGBA(245, 245, 245, 1)
+                                Default: =First(formularioCamposLineales)
+                                DelayItemLoading: =true
+                                Fill: =RGBA(245, 245, 245, 1)
+                                FillPortions: =0
+                                Height: =Sum(galChecklist_1.AllItems,altura)+CountRows(Distinct(formularioCamposLineales,seccion))*40//CountRows(GroupBy(formularioCamposLineales,"seccion","otros"))*50+72*Self.AllItemsCount
+                                Items: =AddColumns(formularioCamposLineales,"altura",Switch(tipo_respuesta,"textoLinea",36+34+2.5,"textoMul",72+34+2.5)*openSection)
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =320
+                                LoadingSpinner: =LoadingSpinner.Data
+                                Selectable: =false
+                                ShowNavigation: =true
+                                ShowScrollbar: =false
+                                TemplatePadding: =0
+                                TemplateSize: =100
+                                Width: =100
+                                ZIndex: =15
+
+                                Container15_67 As groupContainer.horizontalAutoLayoutContainer:
+                                    Height: |-
+                                        =If(ThisItem.itemID=First(Filter(formularioCamposLineales,seccion=ThisItem.seccion)).itemID
+                                            ,40+72*ThisItem.openSection+36*(ThisItem.tipo_respuesta="textoMul")*ThisItem.openSection,If(ThisItem.openSection,72+36*(ThisItem.tipo_respuesta="textoMul"),0))
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutGap: =5
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =1
+                                    PaddingLeft: =1
+                                    PaddingRight: =1
+                                    PaddingTop: =1
+                                    Width: =Parent.Width
+                                    ZIndex: =7
+
+                                    lbEncabezado_86 As label:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =varcolor_ClaroElementoPrimario
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        OnSelect: |-
+                                            =UpdateIf(formularioCamposLineales,seccion=ThisItem.seccion,{openSection:!ThisItem.openSection})
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =18
+                                        Text: =Left(ThisItem.seccion,1)&Lower(Mid(ThisItem.seccion,2))
+                                        Visible: =ThisItem.itemID=First(Filter(formularioCamposLineales,seccion=ThisItem.seccion)).itemID
+                                        Width: =100
+                                        ZIndex: =1
+
+                                    lbEncabezado_85 As label:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        BorderColor: =RGBA(0, 0, 0, 0)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                        DisabledColor: =RGBA(161, 159, 157, 1)
+                                        FocusedBorderThickness: =4
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =24
+                                        OnSelect: =
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =14
+                                        Text: =ThisItem.pregunta
+                                        Visible: =ThisItem.openSection
+                                        Width: =100
+                                        Y: =10
+                                        ZIndex: =2
+
+                                    tiScHistoria1_6 As text:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        BorderColor: =RGBA(0, 0, 0, 1)
+                                        Default: =ThisItem.respuestaTexto
+                                        Font: =Font.'Segoe UI'
+                                        Height: =Switch(ThisItem.tipo_respuesta,"textoLinea",36,"textoMul",72)
+                                        Mode: =Switch(ThisItem.tipo_respuesta,"textoLinea",TextMode.SingleLine,"textoMul",TextMode.MultiLine)
+                                        OnChange: |-
+                                            =Patch(formularioCamposLineales,LookUp(formularioCamposLineales,itemID=ThisItem.itemID),{respuestaTexto: Trim(Self.Text)})
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Reset: =resetear
+                                        Size: =12
+                                        Visible: =ThisItem.openSection&&Or(ThisItem.tipo_respuesta="textoLinea",ThisItem.tipo_respuesta="textoMul")
+                                        Width: =0
+                                        X: =10
+                                        ZIndex: =3
+
+                                    Container26_8 As groupContainer.manualLayoutContainer:
+                                        BorderThickness: =2
+                                        FillPortions: =0
+                                        Height: =36
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =50
+                                        RadiusBottomLeft: =5
+                                        RadiusBottomRight: =5
+                                        RadiusTopLeft: =5
+                                        RadiusTopRight: =5
+                                        Visible: =ThisItem.tipo_respuesta="fecha"
+                                        ZIndex: =4
+
+                                        dpScHistoriaFecha1_3 As datepicker:
+                                            BorderStyle: =BorderStyle.None
+                                            DefaultDate: =
+                                            Font: =Font.'Segoe UI'
+                                            Height: =Parent.Height
+                                            IconBackground: =RGBA(255, 255, 255, 1)
+                                            IconFill: =RGBA(0, 0, 0, 1)
+                                            InputTextPlaceholder: =
+                                            OnSelect: |-
+                                                =Patch(formularioCamposLineales,LookUp(formularioCamposLineales,itemID=ThisItem.itemID),{respuestaDate:Self.SelectedDate})
+                                            Reset: =resetear
+                                            Size: =13
+                                            Width: =Parent.Width
+                                            ZIndex: =1
 
                     DC_Cirugia_Pediatrica As dataCard.blankCard:
                         BorderColor: =RGBA(0, 0, 0, 1)
