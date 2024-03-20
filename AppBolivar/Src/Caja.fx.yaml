@@ -1601,6 +1601,7 @@ Caja As screen:
                     
                     */
                     Set(CajaSelected,gal_Paciente_Dashboard_Caja.Selected);
+                    Set(_varPagos, galItemsPago.Selected);
                     Reset(TextInput1_4);Reset(Adjunto_5);
                     UpdateContext({_varRegistrarPago:true})
                 RadiusBottomLeft: =8
@@ -1747,7 +1748,11 @@ Caja As screen:
                     TextInput1_4 As text:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =Value(tiPendientePago.Text)
+                        Default: =Text(Sum(Filter(itemsPago, Pago = false), Monto))
+                        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(241, 242, 246, 1)
+                        DisplayMode: =DisplayMode.Disabled
                         Font: =Font.'Segoe UI'
                         Format: =TextFormat.Number
                         LayoutMinWidth: =40

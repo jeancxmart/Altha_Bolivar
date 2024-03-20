@@ -8331,7 +8331,7 @@
 
                     Gallery6_16 As gallery.galleryVertical:
                         Height: =113
-                        Items: =Sort(Filter('public.MC_Servicios_Paciente',id_ticket=TicketSelected.id_Ticket),id_serial,SortOrder.Ascending)
+                        Items: =Sort(Filter('public.MC_Servicios_Paciente',id_ticket=TicketSelected.id_Ticket, id_especialidad = LookUp('public.Medical_Center_Especialidad',id= LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)).id),id_serial,SortOrder.Ascending)
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =100
                         LayoutMinWidth: =320
@@ -12593,7 +12593,7 @@
             IsSearchable: =false
             Items: =Filter('public.Medical_Center_Tests',id_sede = _varSede.id,tipo=ComboBox3_4.Selected.Value)
             SearchFields: =["nombre"]
-            SearchItems: =[]
+            SearchItems: =Search(Filter('public.Medical_Center_Tests',id_sede = _varSede.id,tipo=ComboBox3_4.Selected.Value),ComboBox3_5.SearchText,"nombre")
             SelectMultiple: =false
             Size: =12
             Width: =350
