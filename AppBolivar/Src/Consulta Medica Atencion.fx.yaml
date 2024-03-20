@@ -7095,10 +7095,7 @@
 
     Gallery6_8 As gallery.galleryVertical:
         Height: =164
-        Items: |-
-            =//ColNuevoTratamiento_DCA
-            /*Filter('public.Medical_Center_Tratamiento';id_Tratamiento=LookUp('public.Medical_Center_Tratamiento_Maestro';Value(Label25.Text)=id;id))*/
-            Filter('public.Medical_Center_Tratamiento',Cod_4_Diagnostico in galMDiagnosticos.Selected.COD_4)
+        Items: =Filter('public.Medical_Center_Tratamiento',Cod_4_Diagnostico in galMDiagnosticos.Selected.COD_4, id_ticket = TicketSelected.id_Ticket)
         Layout: =Layout.Vertical
         OnSelect: |-
             =UpdateContext({_varTratamientoMedicamento:true})
