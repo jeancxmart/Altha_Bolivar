@@ -1447,7 +1447,53 @@ Caja As screen:
                     Height: =24
                     Size: =12
                     Text: |-
-                        =varSimboloMaestros & Text(Sum(Round(Value(Label40_20.Text)/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%))+1),2),Round(Value(Label40_20.Text)/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%))+1),2)*Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%))),"#,#0.00")
+                        =varSimboloMaestros & Text(
+                            Sum(
+                                Round(
+                                    Value(Label40_20.Text) / Value(
+                                        Value(
+                                            If(
+                                                LookUp(
+                                                    'public.Medical_Center_Consultorio_Medico',
+                                                    id_sede = _varSede.id,
+                                                    Moneda
+                                                ) = "SOLES",
+                                                18%,
+                                                16%
+                                            )
+                                        ) + 1
+                                    ),
+                                    2
+                                ),
+                                Round(
+                                    Value(Label40_20.Text) / Value(
+                                        Value(
+                                            If(
+                                                LookUp(
+                                                    'public.Medical_Center_Consultorio_Medico',
+                                                    id_sede = _varSede.id,
+                                                    Moneda
+                                                ) = "SOLES",
+                                                18%,
+                                                16%
+                                            )
+                                        ) + 1
+                                    ),
+                                    2
+                                ) * Value(
+                                    If(
+                                        LookUp(
+                                            'public.Medical_Center_Consultorio_Medico',
+                                            id_sede = _varSede.id,
+                                            Moneda
+                                        ) = "SOLES",
+                                        18%,
+                                        16%
+                                    )
+                                )
+                            ),
+                            "#,#0.00"
+                        )
                     Visible: =_varCaja
                     Width: =76
                     X: =113
@@ -1487,7 +1533,8 @@ Caja As screen:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: |-
                             =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=true),Monto)),"#,#0.00")// CORREGIR VALOR
-                        DisabledColor: =RGBA(116, 116, 116, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
                         DisplayMode: =DisplayMode.Disabled
                         Font: =Font.'Segoe UI'
                         Format: =TextFormat.Number
@@ -1521,7 +1568,8 @@ Caja As screen:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: |-
                             =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=false),Monto)),"#,#0.00")
-                        DisabledColor: =RGBA(116, 116, 116, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
                         DisplayMode: =DisplayMode.Disabled
                         Font: =Font.'Segoe UI'
                         Format: =TextFormat.Number
