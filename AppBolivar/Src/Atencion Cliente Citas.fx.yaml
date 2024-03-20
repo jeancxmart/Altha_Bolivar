@@ -3148,11 +3148,21 @@
             Font: =Font.'Segoe UI'
             Height: =36
             OnChange: |-
-                =
-                If(dpEstadoCivil_DCA_17.Selected.Value="Peruano(a)",
-                IfError(ClearCollect(colDatosDNI,Api_DNI.DNI(tiDNI_AgendarCita.Text)),Notify( "No se encontro el Doc. de identidad" ),If(IsBlank(Api_DNI.DNI(tiDNI_AgendarCita.Text)),false,false))
-                /*UpdateContext({TipoDoc:Api_DNI.DNI(TextInput35.Text)})*/
-                ,"")
+                =If(
+                    dpEstadoCivil_DCA_17.Selected.Value = "Peruano(a)",
+                    IfError(
+                        ClearCollect(
+                            colDatosDNI,
+                            Api_DNI.DNI(tiDNI_AgendarCita.Text)
+                        ),
+                        Notify("No se encontro el Doc. de identidad"),
+                        If(
+                            IsBlank(Api_DNI.DNI(tiDNI_AgendarCita.Text)),
+                            false,
+                            false
+                        )
+                    ), UpdateContext({_varDNI: LookUp('public.Medical_Center_Historial_Principal', DNI_CI = tiDNI_AgendarCita.Text)})
+                )
             Size: =12
             Visible: =CitaLlamada
             Width: =360
@@ -3169,9 +3179,7 @@
                 /*TipoDoc.nombres &" "&TipoDoc.apellidoPaterno &" "&TipoDoc.apellidoMaterno*/
                 
                 LookUp(colDatosDNI,numeroDocumento=tiDNI_AgendarCita.Text,nombres) &" "& LookUp(colDatosDNI,numeroDocumento=tiDNI_AgendarCita.Text,apellidoPaterno) &" "& LookUp(colDatosDNI,numeroDocumento=tiDNI_AgendarCita.Text,apellidoMaterno)
-                ,
-                
-                ""),
+                , _varDNI.Nombres & " " & _varDNI.Apellidos),
                 
                 gal_Citas_Pendientes.Selected.Nombre_Paciente)
             Font: =Font.'Segoe UI'

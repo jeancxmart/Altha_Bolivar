@@ -198,7 +198,7 @@
 
                 galTratamiento As gallery.galleryVertical:
                     Height: =113
-                    Items: =Filter('public.Medical_Center_Tratamiento', id_Pacientes = TicketSelected.DNI_Paciente, id_ticket = TicketSelected.id_Ticket)
+                    Items: =Filter('public.Medical_Center_Tratamiento', id_ticket = TicketSelected.id_Ticket)
                     Layout: =Layout.Vertical
                     OnSelect: |-
                         =/*UpdateContext({_varTratamientoMedicamento:true})*/

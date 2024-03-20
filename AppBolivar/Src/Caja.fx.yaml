@@ -482,14 +482,7 @@ Caja As screen:
                 =ColorValue("#26495B")
             HoverFill: =RGBA(255, 255, 255, 1)
             OnSelect: |-
-                =/*Patch('public.Medical_Center_Counter';LookUp('public.Medical_Center_Counter';id=ThisItem.id);
-                {   
-                  estado:"En Cola";
-                  etapa:"Triaje";
-                  usuario:User().Email
-                })
-                
-                */
+                =Set(CajaSelected,gal_Paciente_Dashboard_Caja.Selected);
                 Clear(itemsPago);
                 ForAll(
                 AddColumns(RenameColumns(Sort(Filter('public.MC_Servicios_Paciente',id_ticket=CajaSelected.id_Ticket),id_serial,SortOrder.Ascending),"id_servicio","id_servicio_pago"),"Pago",If(!IsEmpty(Filter('public.Medical_Center_Pagos',id_ticket=CajaSelected.id_Ticket,id_servicio=id_servicio_pago)),true,false),"Monto",LookUp('public.Medical_Center_Servicios',id=id_servicio_pago,Costo),"NomServ",LookUp('public.Medical_Center_Servicios',id=id_servicio_pago,Servicio)) As temp,
@@ -518,7 +511,6 @@ Caja As screen:
                 
                 );
                 
-                Set(CajaSelected,gal_Paciente_Dashboard_Caja.Selected);
                 UpdateContext({_varCaja:true});
             RadiusBottomLeft: =8
             RadiusBottomRight: =8
