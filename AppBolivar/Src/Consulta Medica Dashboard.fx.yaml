@@ -107,7 +107,7 @@
                             etapa = "Atención Medica"
                         ),
                         fecha_texto=Text(Today(),"yymmdd"),
-                       usuario = User().Email
+                       usuario = User().Email, id_sede = _varSede.id
                     ),
                     "fecha",
                     SortOrder.Ascending
@@ -129,7 +129,7 @@
                             etapa = "Atención Medica"
                         ),
                         fecha_texto=Text(Today(),"yymmdd"),
-                        usuario = User().Email  
+                        usuario = User().Email, id_sede = _varSede.id
                     ),
                     "fecha",
                     SortOrder.Ascending

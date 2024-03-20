@@ -12185,7 +12185,7 @@
                 },
                 "region": {
                   "charLength": 78,
-                  "charOffset": 1079,
+                  "charOffset": 465,
                   "snippet": {
                     "text": "Text(\n                fecha_receta;\n                \"dd/mm/yyyy\"\n            )"
                   }
@@ -12225,7 +12225,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1158,
+                  "charOffset": 544,
                   "snippet": {
                     "text": "="
                   }

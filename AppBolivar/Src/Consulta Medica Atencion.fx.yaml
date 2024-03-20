@@ -1169,40 +1169,10 @@
             AnterioresGallery_7 As gallery.variableTemplateHeightGallery:
                 Height: =476
                 Items: |-
-                    =/*If(
-                        IsBlank(AnterioresDatePicker_7);
-                        Filter(
-                            'public.Medical_Center_Tratamiento_Maestro';
-                            id_Paciente = If(
-                                IsBlank(TicketSelected.DNI_Paciente);
-                                0;
-                                TicketSelected.DNI_Paciente
-                            )
-                        );
-                        Search(
-                            Filter(
-                                'public.Medical_Center_Tratamiento_Maestro';
-                                id_Paciente = If(
-                                    IsBlank(TicketSelected.DNI_Paciente);
-                                    0;
-                                    TicketSelected.DNI_Paciente
-                                );
-                                Text(
-                                    fecha;
-                                    "dd/mm/yyyy"
-                                ) = Text(
-                                    AnterioresDatePicker_7.SelectedDate;
-                                    "dd/mm/yyyy"
-                                )
-                            );
-                            AnterioresTextSearchBox_11.Text;
-                            "Tratamiento"
-                        )
-                    )*/
-                    If(
+                    =If(
                         IsBlank(AnterioresDatePicker_7.SelectedDate),
                     
-                    Search(Filter('public.Medical_Center_Receta_Paciente',DNI_Paciente=TicketSelected.DNI_Paciente),Proper(AnterioresTextSearchBox_11.Text),"Tratamiento"),
+                    Search(Filter('public.Medical_Center_Receta_Paciente',DNI_Paciente=TicketSelected.DNI_Paciente, Especialidad = LookUp('public.Medical_Center_Especialidad',id= LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)).Especialidad),Proper(AnterioresTextSearchBox_11.Text),"Tratamiento"),
                     
                     Search(Filter('public.Medical_Center_Receta_Paciente',DNI_Paciente=TicketSelected.DNI_Paciente, Text(
                                     fecha_receta,
@@ -10455,19 +10425,6 @@
                     
                         ;
                     
-                      /*  ForAll(colLaboratorioReceta As Exam;
-                        Patch('public.Medical_Center_Examen_Paciente';Defaults('public.Medical_Center_Examen_Paciente');
-                        {id:First(
-                            SortByColumns(
-                               'public.Medical_Center_Examen_Paciente';
-                                "id";
-                                SortOrder.Descending
-                            )
-                        ).id + 1;
-                        Examen:Exam.'Nombre del examen';
-                        id_Receta:varIDRecetaPaciente;
-                        DNI_Paciente:TicketSelected.DNI_Paciente}));;*/
-                    
                         Patch('public.Medical_Center_Receta_Paciente',Defaults('public.Medical_Center_Receta_Paciente'),
                         {id:varIDRecetaPaciente,
                        fecha_receta:Today(),
@@ -10512,7 +10469,7 @@
                         ) - 1
                     ),
                         Doctor:User().FullName,
-                        Especialidad:Label1_66.Text,
+                        Especialidad: LookUp('public.Medical_Center_Especialidad',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad),Especialidad),
                         id_sede : _varSede.id,
                         DNI_Paciente:TicketSelected.DNI_Paciente,
                         Indicaciones_Generales:TextInput23.Text,
