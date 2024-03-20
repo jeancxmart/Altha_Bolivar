@@ -1,7 +1,7 @@
 [
   {
     "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
-    "FlowNameId": "219442b6-5636-45fa-b88e-2581cf1b8425",
+    "FlowNameId": "f01cd0d7-0df2-4834-8434-864d7d81d773",
     "Name": "RecetaMedica",
     "ServiceKind": "ConnectedWadl",
     "Type": "ServiceInfo",
