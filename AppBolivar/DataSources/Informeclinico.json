@@ -1,7 +1,7 @@
 [
   {
     "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
-    "FlowNameId": "b9abb71c-509b-473e-a52b-01be1434a7b3",
+    "FlowNameId": "9fab14db-d8c3-433f-89c0-d892b5bdd898",
     "Name": "Informeclinico",
     "ServiceKind": "ConnectedWadl",
     "Type": "ServiceInfo",
