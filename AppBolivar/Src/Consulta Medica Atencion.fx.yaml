@@ -680,8 +680,9 @@
                     Image38 As image:
                         Height: =30
                         Image: =Edit
-                        OnSelect: |
+                        OnSelect: |-
                             =UpdateContext({varPopupTratamiento:true});
+                            Reset(TextInput51_3)
                         PaddingBottom: =5
                         PaddingLeft: =5
                         PaddingRight: =5
@@ -698,7 +699,7 @@
                         FontWeight: =FontWeight.Semibold
                         Height: =20
                         OnSelect: |-
-                            =UpdateContext({varPopupTratamiento:true})
+                            =UpdateContext({varPopupTratamiento:true}); Reset(TextInput51_3)
                         Size: =12
                         Text: ="Editar"
                         Visible: =_detalles="medicamentos"
@@ -9036,7 +9037,7 @@
                                 ) - 1
                             ),
                                 Doctor:User().FullName,
-                                Especialidad:Label1_66.Text,
+                                Especialidad: LookUp('public.Medical_Center_Especialidad',id= LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)).Especialidad,
                                 id_sede : _varSede.id,
                                 DNI_Paciente:TicketSelected.DNI_Paciente,
                                 Indicaciones_Generales:TextInput23.Text,
@@ -9095,11 +9096,8 @@
                                 Nombre_Doctor:User().FullName,
                                 Correo_Doctor:User().Email,
                                 Motivo:Upper(LookUp(colDescansoMedico,Diagnostico=var_Tratamiento_Nombre,Motivo)),
-                                id_Receta:varIDRecetaPaciente})),false)
-                                
-                                
+                                id_Receta:varIDRecetaPaciente})),false);
                             
-                            ;
                             With({
                                 pagos:Filter('public.Medical_Center_Pagos',id_ticket=TicketSelected.id_Ticket),
                                 servicios:Filter('public.MC_Servicios_Paciente',id_ticket=TicketSelected.id_Ticket,req_cobro=true),
@@ -9130,7 +9128,8 @@
                                     Patch('public.Medical_Center_Ticket',
                                         LookUp('public.Medical_Center_Ticket',id= TicketSelected.id_Ticket),{
                                             Estatus:"En Cola",
-                                            cita_finalizada:true
+                                            cita_finalizada:true,
+                                            caja_finalizada: false
                                             }
                                     );
                                 )
