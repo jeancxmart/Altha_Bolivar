@@ -730,7 +730,7 @@
                                 lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
                             },
                             If(
-                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || lookupResult="Caja",
+                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || lookupResult="Caja" || ThisItem.caja_finalizada = true,
                                 DisplayMode.Disabled,
                                 DisplayMode.Edit
                             )
@@ -833,7 +833,7 @@
                                 lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
                             },
                             If(
-                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || lookupResult="Triaje",
+                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || lookupResult="Triaje" || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true,
                                 DisplayMode.Disabled,
                                 DisplayMode.Edit
                             )
@@ -919,7 +919,7 @@
                                 lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
                             },
                             If(
-                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || lookupResult="Atención Medica",
+                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || lookupResult="Atención Medica" || ThisItem.cita_finalizada = true,
                                 DisplayMode.Disabled,
                                 DisplayMode.Edit
                             )
