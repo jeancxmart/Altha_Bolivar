@@ -474,6 +474,7 @@ Caja As screen:
 
         ButtonAtender_12 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =If(lbEstatusPacCaja.Text = "Caja - Pagado",DisplayMode.Disabled, DisplayMode.Edit)
             Fill: =ColorFondoBoton
             Font: =Font.'Segoe UI'
             Height: =44

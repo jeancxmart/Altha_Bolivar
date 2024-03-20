@@ -10266,7 +10266,7 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 9550,
+                  "charOffset": 9710,
                   "snippet": {
                     "text": "Text(fecha;\"dd/mm/yyyy\")"
                   }
@@ -10306,7 +10306,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 9574,
+                  "charOffset": 9734,
                   "snippet": {
                     "text": "="
                   }
@@ -10346,7 +10346,7 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 9511,
+                  "charOffset": 9671,
                   "snippet": {
                     "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
                   }
@@ -10386,7 +10386,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 10738,
+                  "charOffset": 10898,
                   "snippet": {
                     "text": "Consultorio"
                   }
@@ -10426,7 +10426,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 10730,
+                  "charOffset": 10890,
                   "snippet": {
                     "text": "IsBlank(Consultorio)"
                   }
@@ -10466,7 +10466,7 @@
                 },
                 "region": {
                   "charLength": 46,
-                  "charOffset": 10705,
+                  "charOffset": 10865,
                   "snippet": {
                     "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
                   }
@@ -10506,7 +10506,7 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 15823,
+                  "charOffset": 15983,
                   "snippet": {
                     "text": "Text(fecha;\"dd/mm/yyyy\")"
                   }
@@ -10546,7 +10546,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 15847,
+                  "charOffset": 16007,
                   "snippet": {
                     "text": "="
                   }
@@ -10586,7 +10586,7 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 15784,
+                  "charOffset": 15944,
                   "snippet": {
                     "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
                   }
@@ -10626,7 +10626,7 @@
                 },
                 "region": {
                   "charLength": 41,
-                  "charOffset": 16354,
+                  "charOffset": 16514,
                   "snippet": {
                     "text": "Date(Year(fecha);Month(fecha);Day(fecha))"
                   }
@@ -10666,7 +10666,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 16396,
+                  "charOffset": 16556,
                   "snippet": {
                     "text": "="
                   }
@@ -10706,7 +10706,7 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 21018,
+                  "charOffset": 21178,
                   "snippet": {
                     "text": "Text(fecha;\"dd/mm/yyyy\")"
                   }
@@ -10746,7 +10746,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 21042,
+                  "charOffset": 21202,
                   "snippet": {
                     "text": "="
                   }
@@ -10786,7 +10786,7 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 20979,
+                  "charOffset": 21139,
                   "snippet": {
                     "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
                   }
@@ -10826,7 +10826,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 27136,
+                  "charOffset": 27296,
                   "snippet": {
                     "text": "Consultorio"
                   }
@@ -10866,7 +10866,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 27128,
+                  "charOffset": 27288,
                   "snippet": {
                     "text": "IsBlank(Consultorio)"
                   }
@@ -10906,7 +10906,7 @@
                 },
                 "region": {
                   "charLength": 46,
-                  "charOffset": 27103,
+                  "charOffset": 27263,
                   "snippet": {
                     "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
                   }
@@ -10946,7 +10946,7 @@
                 },
                 "region": {
                   "charLength": 71,
-                  "charOffset": 27764,
+                  "charOffset": 27924,
                   "snippet": {
                     "text": "Text(\n                fecha;\n                \"dd/mm/yyyy\"\n            )"
                   }
@@ -10986,7 +10986,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 27836,
+                  "charOffset": 27996,
                   "snippet": {
                     "text": "="
                   }
