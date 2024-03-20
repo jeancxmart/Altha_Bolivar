@@ -1538,6 +1538,8 @@ Caja As screen:
                         DisplayMode: =DisplayMode.Disabled
                         Font: =Font.'Segoe UI'
                         Format: =TextFormat.Number
+                        HintText: |-
+                            =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=true),Monto)),"#,#0.00")// CORREGIR VALOR
                         LayoutMinWidth: =40
                         Size: =12
                         X: =501
@@ -1573,6 +1575,8 @@ Caja As screen:
                         DisplayMode: =DisplayMode.Disabled
                         Font: =Font.'Segoe UI'
                         Format: =TextFormat.Number
+                        HintText: |-
+                            =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=false),Monto)),"#,#0.00")
                         LayoutMinWidth: =40
                         Size: =12
                         X: =501

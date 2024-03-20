@@ -1274,7 +1274,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Agendar_Cita",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 35,
+      "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2531,7 +2531,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Dashboard_AC_Citas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 36,
+      "ParentIndex": 35,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2868,7 +2868,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Emergencia_AC_Citas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 18,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3715,7 +3715,7 @@
       "MetaDataIDKey": "",
       "Name": "BtnCancelarFormDCA_7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 21,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4590,7 +4590,7 @@
       "MetaDataIDKey": "",
       "Name": "BtnGuardarForm_DCA_8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 20,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8036,7 +8036,7 @@
       "MetaDataIDKey": "",
       "Name": "Canvas1_13",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 34,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8284,7 +8284,7 @@
       "MetaDataIDKey": "",
       "Name": "cb_User_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 30,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13323,7 +13323,14 @@
       "ControlPropertyState": [
         "BorderColor",
         "BorderStyle",
-        "Fill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Fill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -13429,7 +13436,7 @@
       "MetaDataIDKey": "",
       "Name": "Container23",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15963,7 +15970,7 @@
       "MetaDataIDKey": "",
       "Name": "dpEstadoCivil_DCA_17",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 42,
+      "ParentIndex": 41,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20596,7 +20603,7 @@
       "MetaDataIDKey": "",
       "Name": "Group3_19",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 96,
+      "ParentIndex": 95,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20648,7 +20655,7 @@
       "MetaDataIDKey": "",
       "Name": "Group6_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 95,
+      "ParentIndex": 96,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20976,7 +20983,7 @@
       "MetaDataIDKey": "",
       "Name": "icon_Left_Calendario_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 45,
+      "ParentIndex": 44,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21233,7 +21240,7 @@
       "MetaDataIDKey": "",
       "Name": "icon_Right_Calendario_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 46,
+      "ParentIndex": 45,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21757,7 +21764,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon22",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21964,7 +21971,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon23",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 24,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22178,7 +22185,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon23_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 25,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24011,7 +24018,7 @@
       "MetaDataIDKey": "",
       "Name": "Image18_11",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 22,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25304,7 +25311,7 @@
       "MetaDataIDKey": "",
       "Name": "img_Agendar_Cita",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 37,
+      "ParentIndex": 36,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25547,7 +25554,7 @@
       "MetaDataIDKey": "",
       "Name": "img_btn_Emergencia_AC_Citas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 47,
+      "ParentIndex": 46,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26297,7 +26304,7 @@
       "MetaDataIDKey": "",
       "Name": "img_Dashboard_AC_Citas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 40,
+      "ParentIndex": 39,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27062,7 +27069,7 @@
       "MetaDataIDKey": "",
       "Name": "img_Perfil__AC_Citas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 16,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34914,7 +34921,7 @@
       "MetaDataIDKey": "",
       "Name": "Label51_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 26,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -35232,7 +35239,7 @@
       "MetaDataIDKey": "",
       "Name": "Label51_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 32,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -35868,7 +35875,7 @@
       "MetaDataIDKey": "",
       "Name": "Label51_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 31,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -37451,7 +37458,7 @@
       "MetaDataIDKey": "",
       "Name": "Label56",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 23,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38073,7 +38080,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_Citas_Reservadas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 33,
+      "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38702,7 +38709,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_Emergencia_AC_Citas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 48,
+      "ParentIndex": 47,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39004,7 +39011,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_Fecha_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 44,
+      "ParentIndex": 43,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39298,7 +39305,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_Perfil_AC_Citas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 17,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -49614,7 +49621,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle_Separador_AC_Citas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 29,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -50322,7 +50329,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle5_30",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 28,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -51617,7 +51624,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput35_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 39,
+      "ParentIndex": 38,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -54281,7 +54288,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput36",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 19,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -54658,7 +54665,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput5_41",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 48,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -54870,6 +54877,325 @@
       "StyleName": "defaultTextStyle",
       "Type": "ControlInfo"
     },
+    "TextInput6": {
+      "AllowAccessToGlobals": true,
+      "ControlPropertyState": [
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Default",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "Mode",
+        "Format",
+        "VirtualKeyboardMode",
+        "DelayOutput",
+        "BorderColor",
+        "DisabledBorderColor",
+        "PressedBorderColor",
+        "HoverBorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BorderStyle",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "FocusedBorderColor",
+        "Color",
+        "DisabledColor",
+        "PressedColor",
+        "HoverColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Fill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DisabledFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "PressedFill",
+        "HoverFill",
+        "Font",
+        "FontWeight",
+        "Align",
+        "X",
+        "Y",
+        "Width",
+        "Height",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "OnSelect",
+        "ZIndex",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "RadiusTopLeft",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "RadiusTopRight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "RadiusBottomLeft",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "RadiusBottomRight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "BorderThickness",
+        "FocusedBorderThickness",
+        "Size",
+        "Italic",
+        "Underline",
+        "Strikethrough"
+      ],
+      "HasDynamicProperties": false,
+      "IsAutoGenerated": false,
+      "IsComponentDefinition": false,
+      "IsDataControl": false,
+      "IsFromScreenLayout": false,
+      "IsGroupControl": false,
+      "IsLocked": false,
+      "LayoutName": "",
+      "MetaDataIDKey": "",
+      "Name": "TextInput6",
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 1,
+      "PersistMetaDataIDKey": false,
+      "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "Default",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "DelayOutput",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Mode",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Format",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "VirtualKeyboardMode",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "BorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DisabledBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PressedBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "HoverBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "FocusedBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Color",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DisabledColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PressedColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "HoverColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Fill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DisabledFill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PressedFill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "HoverFill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Font",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "FontWeight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Align",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DisplayMode",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ZIndex",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "BorderThickness",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "FocusedBorderThickness",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Size",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Italic",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Underline",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Strikethrough",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnSelect",
+          "RuleProviderType": "Unknown"
+        }
+      ],
+      "StyleName": "defaultTextStyle",
+      "Type": "ControlInfo"
+    },
     "tiDNI_AgendarCita": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
@@ -54995,7 +55321,7 @@
       "MetaDataIDKey": "",
       "Name": "tiDNI_AgendarCita",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 41,
+      "ParentIndex": 40,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -57664,7 +57990,7 @@
       "MetaDataIDKey": "",
       "Name": "txt_Calendario_Paciente_por_Atender_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 43,
+      "ParentIndex": 42,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -57997,7 +58323,7 @@
       "MetaDataIDKey": "",
       "Name": "txt_Fondo_Emergencia_AC_Citas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 38,
+      "ParentIndex": 37,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -58365,7 +58691,7 @@
       "MetaDataIDKey": "",
       "Name": "txt_User_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 27,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
