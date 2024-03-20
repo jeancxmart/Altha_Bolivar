@@ -8010,7 +8010,7 @@ scHistoriaMedica As screen:
                         BorderStyle: =BorderStyle.Solid
                         DisplayMode: =DisplayMode.Edit
                         Fill: =RGBA(0, 0, 0, 0)
-                        Height: =100
+                        Height: =3500
                         Visible: =varEspecialidadSelected.plantilla="nutricion"
                         Width: =Parent.Width-20
                         X: =0
@@ -8018,7 +8018,7 @@ scHistoriaMedica As screen:
                         ZIndex: =3
 
                         Container18_1 As groupContainer.verticalAutoLayoutContainer:
-                            Height: =2600+galChecklist_1.Height
+                            Height: =4000+galChecklist_1.Height
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutGap: =5
                             LayoutMode: =LayoutMode.Auto
@@ -8340,7 +8340,7 @@ scHistoriaMedica As screen:
 
                             Container40_3 As groupContainer.manualLayoutContainer:
                                 FillPortions: =0
-                                Height: =1600
+                                Height: =2010
                                 LayoutMinHeight: =200
                                 LayoutMinWidth: =250
                                 ZIndex: =4
@@ -8785,6 +8785,388 @@ scHistoriaMedica As screen:
                                     Width: =810
                                     Y: =1103
                                     ZIndex: =26
+
+                                lbEncabezado_220 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Estreñimiento"
+                                    Width: =250
+                                    X: =1
+                                    Y: =1176
+                                    ZIndex: =27
+
+                                tiScHistoria1_21 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    Y: =1206
+                                    ZIndex: =28
+
+                                lbEncabezado_221 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Micción"
+                                    Width: =250
+                                    Y: =1279
+                                    ZIndex: =29
+
+                                tiScHistoria1_22 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    Y: =1309
+                                    ZIndex: =30
+
+                                lbEncabezado_222 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Masticación"
+                                    Width: =250
+                                    Y: =1383
+                                    ZIndex: =31
+
+                                tiScHistoria1_23 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    Y: =1415
+                                    ZIndex: =32
+
+                                lbEncabezado_223 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Alergias o Intolerancias Alimentarias"
+                                    Width: =330
+                                    X: =1
+                                    Y: =1485
+                                    ZIndex: =33
+
+                                tiScHistoria1_24 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =1519
+                                    ZIndex: =34
+
+                                lbEncabezado_224 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Números de Comidas al día"
+                                    Width: =330
+                                    Y: =1590
+                                    ZIndex: =35
+
+                                tiScHistoria1_25 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =397
+                                    X: =1
+                                    Y: =1622
+                                    ZIndex: =36
+
+                                lbEncabezado_225 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Cantidad de Vasos de agua al día"
+                                    Width: =330
+                                    X: =413
+                                    Y: =1590
+                                    ZIndex: =37
+
+                                tiScHistoria1_26 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =397
+                                    X: =413
+                                    Y: =1622
+                                    ZIndex: =38
+
+                                lbEncabezado_226 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Prepara sus alimentos"
+                                    Width: =330
+                                    X: =1
+                                    Y: =1700
+                                    ZIndex: =39
+
+                                tiScHistoria1_27 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =397
+                                    X: =1
+                                    Y: =1736
+                                    ZIndex: =40
+
+                                lbEncabezado_227 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Come Rápido"
+                                    Width: =330
+                                    X: =414
+                                    Y: =1700
+                                    ZIndex: =41
+
+                                tiScHistoria1_28 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =397
+                                    X: =415
+                                    Y: =1736
+                                    ZIndex: =42
+
+                                lbEncabezado_228 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Alimentos/Preparaciones que no le agradan"
+                                    Width: =390
+                                    X: =1
+                                    Y: =1917
+                                    ZIndex: =43
+
+                                tiScHistoria1_30 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    X: =1
+                                    Y: =1947
+                                    ZIndex: =46
+
+                                lbEncabezado_230 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =24
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: ="Alimentos que más le gustan"
+                                    Width: =330
+                                    Y: =1813
+                                    ZIndex: =47
+
+                                tiScHistoria1_31 As text:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Default: ="|"
+                                    Font: =Font.'Segoe UI'
+                                    Height: =36
+                                    Mode: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Reset: =resetear
+                                    Size: =12
+                                    Width: =810
+                                    Y: =1845
+                                    ZIndex: =48
 
                             Container15_65 As groupContainer.horizontalAutoLayoutContainer:
                                 FillPortions: =0
