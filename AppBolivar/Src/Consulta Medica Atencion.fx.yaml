@@ -8890,7 +8890,7 @@
                             Y: =83
                             ZIndex: =1
 
-                        TextInput40 As text:
+                        TextInputAtencioMedicaCorreo As text:
                             AlignInContainer: =AlignInContainer.Stretch
                             BorderColor: =RGBA(0, 0, 0, 1)
                             Default: |-
@@ -9157,7 +9157,7 @@
                             
                             UpdateContext({_varRECETAR:false});
                             
-                            Set(Enviar_A,Concatenate(User().Email,";",TextInput40.Text));
+                            Set(Enviar_A,Concatenate(User().Email,";",TextInputAtencioMedicaCorreo.Text));
                             
                             Notify("En unos minutos se le enviara los documentos al paciente",NotificationType.Success,2000);
                             
@@ -10057,19 +10057,20 @@
                             );
                             
                             
-                            Set(varCorreoReceta,Concatenate(User().Email,";",TextInput40.Text));
+                            Set(varCorreoReceta,Concatenate(User().Email,";",TextInputAtencioMedicaCorreo.Text));
                             Set(NombrePaciente,LookUp('public.Medical_Center_Historial_Principal',DNI_CI=TicketSelected.DNI_Paciente,Nombres)&" " &LookUp('public.Medical_Center_Historial_Principal',DNI_CI=TicketSelected.DNI_Paciente,Apellidos));
                             
                             If(CheckboxRecetaMedica.Value=true,
-                            RecetaMedica.Run(HTML_Converter_PDF,varCorreoReceta,TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
+                            RecetaMedica.Run(HTML_Converter_PDF, Concatenate(User().Email,";",TextInputAtencioMedicaCorreo.Text),TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
                             
                             If(CheckboxExamenesSolicitados.Value=true,
-                            PDF_Laboratorio.Run(varPDFLaboratorio,varCorreoReceta,TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
+                            PDF_Laboratorio.Run(varPDFLaboratorio,Concatenate(User().Email,";",TextInputAtencioMedicaCorreo.Text),TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
                             
                             If(CheckboxDescansoMedico.Value=true,
-                            PDF_Descanso_Medico.Run(varPDFDescansoMedico,varCorreoReceta,TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
+                            PDF_Descanso_Medico.Run(varPDFDescansoMedico,Concatenate(User().Email,";",TextInputAtencioMedicaCorreo.Text),TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
+                            
                             If(CheckboxInformeMedico.Value=true,
-                            Informeclinico.Run(_html_InformeMedico,TextInputAtencionMedica_Celular.Text,varCorreoReceta,Concatenate("Sr(a). ",NombrePaciente)),false);
+                            Informeclinico.Run(_html_InformeMedico,TextInputAtencionMedica_Celular.Text,Concatenate(User().Email,";",TextInputAtencioMedicaCorreo.Text),Concatenate("Sr(a). ",NombrePaciente)),false);
                             
                             
                             Notify("Se le acaba de enviar los documentos al paciente con copia al doctor que atendio",NotificationType.Success,2000);
@@ -10150,7 +10151,7 @@
                             
                              ;   
                             Encuesta_Enviar_al_Paciente.Run(
-                            TextInput40.Text,
+                            TextInputAtencioMedicaCorreo.Text,
                             
                             "https://forms.office.com/Pages/ResponsePage.aspx?id=ZdiClAbiUUuNzYlJ2XC1Gfx5lMe-vaxEpGW8d8OZnJxUNFFPR0E1NjZJTUhNM1BZQ1hKN1ZSWTdDVC4u",
                             
@@ -14353,7 +14354,7 @@
                 "galEditTratamiento As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true
                     Height: =126
-                    Items: =Filter('public.Medical_Center_Tratamiento', id_Pacientes = TicketSelected.DNI_Paciente, id_ticket = TicketSelected.id_Ticket)
+                    Items: =Filter('public.Medical_Center_Tratamiento', id_ticket = TicketSelected.id_Ticket)
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
