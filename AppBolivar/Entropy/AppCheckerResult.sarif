@@ -96165,6 +96165,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorialSec.CanvasHCTodas.DC_Nutricion.Container18_1.Container40_3.tiScHistoria1_38.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorialSec.CanvasHCTodas.DC_Nutricion.Container18_1.Container40_3.tiScHistoria1_38.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorialSec.CanvasHCTodas.DC_Nutricion.Container18_1.Container40_3.tiScHistoria1_38"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.getEspecialidad"
                 }
               ],
