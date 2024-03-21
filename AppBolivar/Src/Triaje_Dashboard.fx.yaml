@@ -373,6 +373,28 @@ Triaje_Dashboard As screen:
         Y: =208
         ZIndex: =19
 
+        TextInput14 As text:
+            BorderStyle: =BorderStyle.None
+            Default: =""
+            DisabledFill: |-
+                =Switch(ThisItem.etapa,
+                "Triaje", RGBA(180, 130, 0 , 1),
+                "Caja", RGBA(0, 73, 135, 1),
+                "Atención Medica", RGBA(8, 136, 49,1),
+                RGBA(234,76,83, 1)
+                )
+            DisplayMode: =DisplayMode.Disabled
+            Height: =104
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Width: =54
+            X: =20
+            Y: =16
+            ZIndex: =1
+
         TextInput12_1 As text:
             Default: =""
             DisabledBorderColor: =RGBA(0, 0, 0, 1)
@@ -388,10 +410,13 @@ Triaje_Dashboard As screen:
             Width: =1030
             X: =30
             Y: =16
-            ZIndex: =1
+            ZIndex: =2
 
         ButtonAtender_13 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: |-
+                =If(LookUp('public.Medical_Center_Ticket', id = ThisItem.id_Ticket).cita_finalizada = true , DisplayMode.Disabled,
+                DisplayMode.Edit)
             Fill: =ColorFondoBoton
             Font: =Font.'Segoe UI'
             Height: =44
@@ -416,7 +441,7 @@ Triaje_Dashboard As screen:
             Width: =187
             X: =841
             Y: =45
-            ZIndex: =2
+            ZIndex: =3
 
         num_ticket_record_40 As label:
             Font: =Font.'Segoe UI'
@@ -428,7 +453,7 @@ Triaje_Dashboard As screen:
             Width: =81
             X: =50
             Y: =40
-            ZIndex: =3
+            ZIndex: =4
 
         num_ticket_record_41 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -442,7 +467,7 @@ Triaje_Dashboard As screen:
             Width: =197
             X: =123
             Y: =40
-            ZIndex: =4
+            ZIndex: =5
 
         num_ticket_record_42 As label:
             Font: =Font.'Segoe UI'
@@ -454,7 +479,7 @@ Triaje_Dashboard As screen:
             Width: =81
             X: =50
             Y: =72
-            ZIndex: =5
+            ZIndex: =6
 
         num_ticket_record_43 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -469,7 +494,7 @@ Triaje_Dashboard As screen:
             Wrap: =false
             X: =123
             Y: =72
-            ZIndex: =6
+            ZIndex: =7
 
         num_ticket_record_44 As label:
             Font: =Font.'Segoe UI'
@@ -481,7 +506,7 @@ Triaje_Dashboard As screen:
             Width: =81
             X: =335
             Y: =41
-            ZIndex: =7
+            ZIndex: =8
 
         num_ticket_record_45 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -493,7 +518,7 @@ Triaje_Dashboard As screen:
             Width: =167
             X: =402
             Y: =41
-            ZIndex: =8
+            ZIndex: =9
 
         num_ticket_record_46 As label:
             Font: =Font.'Segoe UI'
@@ -505,7 +530,7 @@ Triaje_Dashboard As screen:
             Width: =81
             X: =335
             Y: =73
-            ZIndex: =9
+            ZIndex: =10
 
         num_ticket_record_47 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -517,7 +542,7 @@ Triaje_Dashboard As screen:
             Width: =167
             X: =402
             Y: =73
-            ZIndex: =10
+            ZIndex: =11
 
         num_ticket_record_48 As label:
             Font: =Font.'Segoe UI'
@@ -530,7 +555,7 @@ Triaje_Dashboard As screen:
             Width: =81
             X: =583
             Y: =41
-            ZIndex: =11
+            ZIndex: =12
 
         num_ticket_record_49 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -542,7 +567,7 @@ Triaje_Dashboard As screen:
             Width: =173
             X: =652
             Y: =41
-            ZIndex: =12
+            ZIndex: =13
 
         num_ticket_record_50 As label:
             Font: =Font.'Segoe UI'
@@ -554,7 +579,7 @@ Triaje_Dashboard As screen:
             Width: =81
             X: =583
             Y: =73
-            ZIndex: =13
+            ZIndex: =14
 
         num_ticket_record_51 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -567,7 +592,7 @@ Triaje_Dashboard As screen:
             Width: =117
             X: =652
             Y: =73
-            ZIndex: =14
+            ZIndex: =15
 
         Label17_37 As label:
             Font: =Font.'Segoe UI'
@@ -580,7 +605,7 @@ Triaje_Dashboard As screen:
             Width: =220
             X: =790
             Y: =89
-            ZIndex: =15
+            ZIndex: =16
 
     Group3_13 As group:
         Height: =5

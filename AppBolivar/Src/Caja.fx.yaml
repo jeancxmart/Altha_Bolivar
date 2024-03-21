@@ -455,6 +455,28 @@ Caja As screen:
         Y: =219
         ZIndex: =27
 
+        TextInput13 As text:
+            BorderStyle: =BorderStyle.None
+            Default: =""
+            DisabledFill: |-
+                =Switch( ThisItem.etapa,
+                "Triaje", RGBA(180, 130, 0 , 1),
+                "Caja", RGBA(0, 73, 135, 1),
+                "Atención Medica", RGBA(8, 136, 49,1),
+                RGBA(234,76,83, 1)
+                )
+            DisplayMode: =DisplayMode.Disabled
+            Height: =104
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Width: =39
+            X: =20
+            Y: =16
+            ZIndex: =1
+
         TextInput12 As text:
             Default: =""
             DisabledBorderColor: =RGBA(0, 0, 0, 1)
@@ -470,7 +492,7 @@ Caja As screen:
             Width: =1030
             X: =30
             Y: =16
-            ZIndex: =1
+            ZIndex: =2
 
         ButtonAtender_12 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -524,7 +546,7 @@ Caja As screen:
             Width: =185
             X: =824
             Y: =45
-            ZIndex: =2
+            ZIndex: =3
 
         num_ticket_record_30 As label:
             Font: =Font.'Segoe UI'
@@ -537,7 +559,7 @@ Caja As screen:
             Width: =81
             X: =50
             Y: =40
-            ZIndex: =3
+            ZIndex: =4
 
         num_ticket_record_24 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -551,7 +573,7 @@ Caja As screen:
             Width: =204
             X: =123
             Y: =40
-            ZIndex: =4
+            ZIndex: =5
 
         num_ticket_record_31 As label:
             Font: =Font.'Segoe UI'
@@ -564,7 +586,7 @@ Caja As screen:
             Width: =81
             X: =50
             Y: =72
-            ZIndex: =5
+            ZIndex: =6
 
         num_ticket_record_25 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -581,7 +603,7 @@ Caja As screen:
             Width: =182
             X: =123
             Y: =72
-            ZIndex: =6
+            ZIndex: =7
 
         num_ticket_record_32 As label:
             Font: =Font.'Segoe UI'
@@ -594,7 +616,7 @@ Caja As screen:
             Width: =81
             X: =327
             Y: =40
-            ZIndex: =7
+            ZIndex: =8
 
         num_ticket_record_33 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -606,7 +628,7 @@ Caja As screen:
             Width: =167
             X: =394
             Y: =40
-            ZIndex: =8
+            ZIndex: =9
 
         num_ticket_record_34 As label:
             Font: =Font.'Segoe UI'
@@ -619,7 +641,7 @@ Caja As screen:
             Width: =81
             X: =327
             Y: =72
-            ZIndex: =9
+            ZIndex: =10
 
         num_ticket_record_35 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -631,7 +653,7 @@ Caja As screen:
             Width: =167
             X: =394
             Y: =72
-            ZIndex: =10
+            ZIndex: =11
 
         num_ticket_record_36 As label:
             Font: =Font.'Segoe UI'
@@ -644,7 +666,7 @@ Caja As screen:
             Width: =81
             X: =569
             Y: =41
-            ZIndex: =11
+            ZIndex: =12
 
         lbEstatusPacCaja As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -658,7 +680,7 @@ Caja As screen:
             Width: =166
             X: =638
             Y: =41
-            ZIndex: =12
+            ZIndex: =13
 
         num_ticket_record_38 As label:
             Font: =Font.'Segoe UI'
@@ -671,7 +693,7 @@ Caja As screen:
             Width: =81
             X: =569
             Y: =73
-            ZIndex: =13
+            ZIndex: =14
 
         num_ticket_record_39 As label:
             Color: =RGBA(95, 106, 146, 1)
@@ -684,7 +706,7 @@ Caja As screen:
             Width: =117
             X: =638
             Y: =73
-            ZIndex: =14
+            ZIndex: =15
 
     lbl_Paciente_Caja As label:
         Font: =Font.'Segoe UI'
