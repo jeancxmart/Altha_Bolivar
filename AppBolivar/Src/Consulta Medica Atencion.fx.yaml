@@ -10061,16 +10061,16 @@
                             Set(NombrePaciente,LookUp('public.Medical_Center_Historial_Principal',DNI_CI=TicketSelected.DNI_Paciente,Nombres)&" " &LookUp('public.Medical_Center_Historial_Principal',DNI_CI=TicketSelected.DNI_Paciente,Apellidos));
                             
                             If(CheckboxRecetaMedica.Value=true,
-                            RecetaMedica.Run(HTML_Converter_PDF, Concatenate(User().Email,";",TextInputAtencioMedicaCorreo.Text),TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
+                            RecetaMedica.Run(HTML_Converter_PDF, varCorreoReceta,TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
                             
                             If(CheckboxExamenesSolicitados.Value=true,
-                            PDF_Laboratorio.Run(varPDFLaboratorio,Concatenate(User().Email,";",TextInputAtencioMedicaCorreo.Text),TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
+                            PDF_Laboratorio.Run(varPDFLaboratorio,varCorreoReceta,TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
                             
                             If(CheckboxDescansoMedico.Value=true,
-                            PDF_Descanso_Medico.Run(varPDFDescansoMedico,Concatenate(User().Email,";",TextInputAtencioMedicaCorreo.Text),TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
+                            PDF_Descanso_Medico.Run(varPDFDescansoMedico,varCorreoReceta,TextInputAtencionMedica_Celular.Text,Concatenate("Sr(a). ",NombrePaciente)),false);
                             
                             If(CheckboxInformeMedico.Value=true,
-                            Informeclinico.Run(_html_InformeMedico,TextInputAtencionMedica_Celular.Text,Concatenate(User().Email,";",TextInputAtencioMedicaCorreo.Text),Concatenate("Sr(a). ",NombrePaciente)),false);
+                            Informeclinico.Run(_html_InformeMedico,TextInputAtencionMedica_Celular.Text,varCorreoReceta,Concatenate("Sr(a). ",NombrePaciente)),false);
                             
                             
                             Notify("Se le acaba de enviar los documentos al paciente con copia al doctor que atendio",NotificationType.Success,2000);

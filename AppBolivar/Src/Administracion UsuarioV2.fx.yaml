@@ -4907,8 +4907,8 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Image: |
                         =//User().Image
-                        If(IsBlank(LookUp(UsuariosdeOffice365.SearchUser(),Mail=TextInput9_31.Text,Id)),SampleImage,
-                        UsuariosdeOffice365.UserPhotoV2(LookUp(UsuariosdeOffice365.SearchUser(),Mail=TextInput9_31.Text,Id)))
+                        IfError(
+                        AzureBlobStorage.GetFileContent(_varEditUserV2.NombreImage), SampleImage)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     RadiusBottomLeft: =8
@@ -5030,7 +5030,9 @@
                     HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
                     HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
                     OnSelect: |-
-                        =
+                        =If(CountRows(Adjunto_27.Attachments)=0,false,
+                         Set(varAzureFileUsuarioEdit,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_27.Attachments).Name,Last(Adjunto_27.Attachments).Value)));
+                        
                         
                         Patch('public.Medical_Center_Usuario',LookUp('public.Medical_Center_Usuario', id = _varEditUserV2.id),{
                            
@@ -5038,7 +5040,10 @@
                         CPP:txtCPP_2.Text,
                         RNE: txtRNE_4.Text,
                         Meta:txtMeta_3.Text, 
-                        fechaCuota: fechaCuota_2.SelectedDate
+                        fechaCuota: fechaCuota_2.SelectedDate,
+                        NombreImage: varAzureFileUsuarioEdit.Id,
+                        url:"https://blobauroranuevo.blob.core.windows.net"&varAzureFileUsuarioEdit.Path
+                        
                         });
                         UpdateContext({_varEditUser:false})
                     PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
