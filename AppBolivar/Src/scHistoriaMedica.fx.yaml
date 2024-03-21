@@ -151,7 +151,8 @@ scHistoriaMedica As screen:
                                 
                                 
                                 Reset(RichTextEditor1_6);Reset(RichTextEditor1_7);Reset(RichTextEditor1_8);Reset(RichTextEditor1_9);Reset(RichTextEditor1_10);Reset(RichTextEditor1_11);Reset(RichTextEditor1_12);Reset(RichTextEditor1_5);Reset(RichTextEditor1_13);Reset(RichTextEditor1_14);Reset(RichTextEditor1_15);Reset(RichTextEditor1_16);Reset(RichTextEditor1_17);Reset(RichTextEditor1_18);Reset(RichTextEditor1_19);Reset(RichTextEditor1_20);Reset(inputPedriatria_1); Reset(inputPedriatria_12); Reset(inputPedriatria_13);Reset(input_HistGeneral_1);
-                                Reset(input_HistGeneral_25);Reset(input_HistGeneral_26);Reset(input_HistGeneral_27);
+                                Reset(input_HistGeneral_25);Reset(input_HistGeneral_26);Reset(input_HistGeneral_27);Reset(RichTextEditor1_21);
+                                Reset(RichTextEditor1_22); Reset(RichTextEditor1_24); Reset(RichTextEditor1_23);
                             PressedBorderColor: =ColorFondoBoton
                             PressedColor: =ColorFondoBoton
                             PressedFill: =RGBA(255, 255, 255, 1)
@@ -674,7 +675,8 @@ scHistoriaMedica As screen:
                                 
                                 
                                 Reset(RichTextEditor1_6);Reset(RichTextEditor1_7);Reset(RichTextEditor1_8);Reset(RichTextEditor1_9);Reset(RichTextEditor1_10);Reset(RichTextEditor1_11);Reset(RichTextEditor1_12);Reset(RichTextEditor1_5);Reset(RichTextEditor1_13);Reset(RichTextEditor1_14);Reset(RichTextEditor1_15);Reset(RichTextEditor1_16); Reset(RichTextEditor1_17);Reset(RichTextEditor1_18);Reset(RichTextEditor1_19);Reset(RichTextEditor1_20);Reset(inputPedriatria_1); Reset(inputPedriatria_12); Reset(inputPedriatria_13);Reset(input_HistGeneral_1);
-                                Reset(input_HistGeneral_25);Reset(input_HistGeneral_26);Reset(input_HistGeneral_27);
+                                Reset(input_HistGeneral_25);Reset(input_HistGeneral_26);Reset(input_HistGeneral_27);Reset(RichTextEditor1_21);
+                                Reset(RichTextEditor1_22); Reset(RichTextEditor1_24); Reset(RichTextEditor1_23);
                             RadiusBottomLeft: =8
                             RadiusBottomRight: =8
                             RadiusTopLeft: =8
@@ -8076,7 +8078,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_7 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8199,7 +8201,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_8 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8238,7 +8240,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_9 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8387,7 +8389,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_10 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8426,7 +8428,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_11 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8464,7 +8466,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_12 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8503,7 +8505,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_13 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8541,7 +8543,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_14 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8580,7 +8582,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_15 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8618,7 +8620,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_16 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8657,7 +8659,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_17 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8695,7 +8697,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_18 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8734,7 +8736,8 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_19 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: |
+                                        =
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8772,7 +8775,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_20 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8810,7 +8813,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_21 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8847,7 +8850,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_22 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8884,7 +8887,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_23 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8922,7 +8925,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_24 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8960,7 +8963,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_25 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8999,7 +9002,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_26 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9038,7 +9041,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_27 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9077,7 +9080,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_28 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9116,7 +9119,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_30 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9154,7 +9157,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_31 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9217,7 +9220,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_29 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9256,7 +9259,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_32 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9294,7 +9297,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_33 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9333,7 +9336,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_34 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9372,7 +9375,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_35 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9410,7 +9413,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_36 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9449,7 +9452,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_37 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: ="|"
+                                    Default: =""
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =

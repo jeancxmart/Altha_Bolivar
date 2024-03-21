@@ -753,7 +753,8 @@
                                 lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
                             },
                             If(
-                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") ||  lookupResult="Caja" ||ThisItem.caja_finalizada = true,
+                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.caja_finalizada = true
+                                || lookupResult = "Caja",
                                 DisplayMode.Disabled,
                                 DisplayMode.Edit
                             )
@@ -856,7 +857,7 @@
                                 lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
                             },
                             If(
-                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || lookupResult="Triaje" || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true,
+                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true || lookupResult = "Triaje",
                                 DisplayMode.Disabled,
                                 DisplayMode.Edit
                             )
@@ -942,7 +943,7 @@
                                 lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
                             },
                             If(
-                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || lookupResult="Atención Medica" || ThisItem.cita_finalizada = true,
+                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || lookupResult = "Atención Medica",
                                 DisplayMode.Disabled,
                                 DisplayMode.Edit
                             )
