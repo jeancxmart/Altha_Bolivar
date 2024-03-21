@@ -3144,7 +3144,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 817,
+                  "charOffset": 826,
                   "snippet": {
                     "text": "Consultorio"
                   }
@@ -3184,7 +3184,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 809,
+                  "charOffset": 818,
                   "snippet": {
                     "text": "IsBlank(Consultorio)"
                   }
@@ -3224,7 +3224,7 @@
                 },
                 "region": {
                   "charLength": 46,
-                  "charOffset": 784,
+                  "charOffset": 793,
                   "snippet": {
                     "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
                   }
@@ -3264,7 +3264,7 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 9710,
+                  "charOffset": 9746,
                   "snippet": {
                     "text": "Text(fecha;\"dd/mm/yyyy\")"
                   }
@@ -3304,7 +3304,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 9734,
+                  "charOffset": 9770,
                   "snippet": {
                     "text": "="
                   }
@@ -3344,7 +3344,7 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 9671,
+                  "charOffset": 9707,
                   "snippet": {
                     "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
                   }
@@ -3384,7 +3384,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 10898,
+                  "charOffset": 10934,
                   "snippet": {
                     "text": "Consultorio"
                   }
@@ -3424,7 +3424,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 10890,
+                  "charOffset": 10926,
                   "snippet": {
                     "text": "IsBlank(Consultorio)"
                   }
@@ -3464,7 +3464,7 @@
                 },
                 "region": {
                   "charLength": 46,
-                  "charOffset": 10865,
+                  "charOffset": 10901,
                   "snippet": {
                     "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
                   }
@@ -3504,7 +3504,7 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 15983,
+                  "charOffset": 16019,
                   "snippet": {
                     "text": "Text(fecha;\"dd/mm/yyyy\")"
                   }
@@ -3544,7 +3544,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 16007,
+                  "charOffset": 16043,
                   "snippet": {
                     "text": "="
                   }
@@ -3584,7 +3584,7 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 15944,
+                  "charOffset": 15980,
                   "snippet": {
                     "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
                   }
@@ -3624,7 +3624,7 @@
                 },
                 "region": {
                   "charLength": 41,
-                  "charOffset": 16514,
+                  "charOffset": 16550,
                   "snippet": {
                     "text": "Date(Year(fecha);Month(fecha);Day(fecha))"
                   }
@@ -3664,7 +3664,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 16556,
+                  "charOffset": 16592,
                   "snippet": {
                     "text": "="
                   }
@@ -3704,7 +3704,7 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 21178,
+                  "charOffset": 21214,
                   "snippet": {
                     "text": "Text(fecha;\"dd/mm/yyyy\")"
                   }
@@ -3744,7 +3744,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 21202,
+                  "charOffset": 21238,
                   "snippet": {
                     "text": "="
                   }
@@ -3784,7 +3784,7 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 21139,
+                  "charOffset": 21175,
                   "snippet": {
                     "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
                   }
@@ -3824,7 +3824,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 27296,
+                  "charOffset": 27332,
                   "snippet": {
                     "text": "Consultorio"
                   }
@@ -3864,7 +3864,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 27288,
+                  "charOffset": 27324,
                   "snippet": {
                     "text": "IsBlank(Consultorio)"
                   }
@@ -3904,7 +3904,7 @@
                 },
                 "region": {
                   "charLength": 46,
-                  "charOffset": 27263,
+                  "charOffset": 27299,
                   "snippet": {
                     "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
                   }
@@ -3944,7 +3944,7 @@
                 },
                 "region": {
                   "charLength": 71,
-                  "charOffset": 27924,
+                  "charOffset": 27960,
                   "snippet": {
                     "text": "Text(\n                fecha;\n                \"dd/mm/yyyy\"\n            )"
                   }
@@ -3984,7 +3984,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 27996,
+                  "charOffset": 28032,
                   "snippet": {
                     "text": "="
                   }
@@ -5262,10 +5262,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 41,
-                  "charOffset": 1465,
+                  "charLength": 89,
+                  "charOffset": 1746,
                   "snippet": {
-                    "text": "Date(Year(fecha);Month(fecha);Day(fecha))"
+                    "text": "Date(\n            Year(fecha);\n            Month(fecha);\n            Day(fecha)\n        )"
                   }
                 }
               },
@@ -5303,7 +5303,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1507,
+                  "charOffset": 1836,
                   "snippet": {
                     "text": "="
                   }
@@ -34336,19 +34336,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conGenerarDoc.conAgregarServicio_1.conAgrServicioContenido_1.conEditTratamiento_4.conEditTratamiento_6.TextInput40_2.AccessibleLabel"
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conGenerarDoc.conAgregarServicio_1.conAgrServicioContenido_1.conEditTratamiento_4.conEditTratamiento_6.TextInputAtencionMedica_Celular.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Consulta Medica Atencion'.conGenerarDoc.conAgregarServicio_1.conAgrServicioContenido_1.conEditTratamiento_4.conEditTratamiento_6.TextInput40_2.AccessibleLabel",
+                  "fullyQualifiedName": "'Consulta Medica Atencion'.conGenerarDoc.conAgregarServicio_1.conAgrServicioContenido_1.conEditTratamiento_4.conEditTratamiento_6.TextInputAtencionMedica_Celular.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Consulta Medica Atencion",
-                "type": "'Consulta Medica Atencion'.conGenerarDoc.conAgregarServicio_1.conAgrServicioContenido_1.conEditTratamiento_4.conEditTratamiento_6.TextInput40_2"
+                "type": "'Consulta Medica Atencion'.conGenerarDoc.conAgregarServicio_1.conAgrServicioContenido_1.conEditTratamiento_4.conEditTratamiento_6.TextInputAtencionMedica_Celular"
               }
             }
           ],

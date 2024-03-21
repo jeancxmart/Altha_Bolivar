@@ -2085,9 +2085,9 @@ Caja As screen:
                     ));
                     
                     If(
-                        _varticketcaja.triaje_finalizada = false And  _varticketcaja.cita_finalizada = false ,
-                        Navigate(Triaje_Dashboard),
-                        If( _varticketcaja.cita_finalizada = false,
+                        If(_varticketcaja.triaje_finalizada = false And  _varticketcaja.cita_finalizada = false || getUser.Rol="Triaje" || getUser.Rol= "Administrador" ,
+                        Navigate(Triaje_Dashboard),Navigate(Caja)) ,
+                        If( _varticketcaja.cita_finalizada = false And getUser.Rol="Doctor" || getUser.Rol= "Administrador",
                         Navigate('Consulta Medica Dashboard'),Navigate(Caja)
                     ));
                     
