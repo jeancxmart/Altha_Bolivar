@@ -1034,6 +1034,37 @@
                             AtencionSelected,
                             gal_Citas_Pendientes.Selected
                         );
+                        
+                        
+                        Reset( TxtNombreDCA_8);
+                                Reset(TxtApellidoDCA_6);
+                                Reset( TxtdniDCA_6);
+                                Reset( dpSexo_DCA_12);
+                                Reset( TxtocupacionDCA_6);
+                                Reset( TxtfechanacimientoDCA_7);
+                                Reset(dpEstadoCivil_DCA_12);
+                              Reset( dpgrado_DCA_4);
+                                Reset( dpNacionalidad_DCA_6);
+                              Reset( TxtresidenciaDCA_6);
+                                Reset( TxtMotivoDCA_16);
+                               Reset( TxtEnfermedadDCA_38);
+                              Reset(TxtMotivoDCA_17);
+                               Reset(ProblemaPadre); 
+                                Reset(TxtPadreDCA_40);
+                         Reset(ProblemasMadre);
+                                Reset(TxtMadreDCA_41);
+                                Reset( TxtEnfermedadDCA_39);
+                                Reset( TxtMotivoDCA_18);
+                                Reset( TxtEnfermedadDCA_42);
+                                Reset( TxtEnfermedadDCA_44);
+                                Reset( TxtEnfermedadDCA_45);
+                                Reset(DatePicker1);
+                                Reset(ComboBox1);
+                                 Reset(ComboBox1_12);
+                                  Reset(ComboBox1_13);
+                                   Reset(ComboBox1_14);
+                                    Reset(ComboBox1_15);
+                                Reset(ComboBox1_16);
                     PressedBorderColor: =ColorFondoBoton
                     PressedColor: =ColorFondoBoton
                     PressedFill: =RGBA(255, 255, 255, 1)
@@ -1132,7 +1163,8 @@
                 BorderColor: =RGBA(0, 0, 0, 1)
                 Default: |
                     =/*If(LookUp(col_citas;id_Pacientes_DNI=DNITextInput.Text;Nacionalidad)="Extranjero(a)";First(ForAll(Split(AtencionSelected.Nombre_Paciente;" "); {Result: ThisRecord.Value})).Result;Proper(TipoDoc.nombres))*/
-                    First(ForAll(Split(AtencionSelected.Nombre_Paciente," "), {Result: ThisRecord.Value})).Result
+                    
+                    First(Split(AtencionSelected.Nombre_Paciente, " ")).Value
                 Font: =Font.'Segoe UI'
                 Height: =36
                 RadiusBottomLeft: =4
@@ -2719,10 +2751,13 @@
 
             TxtApellidoDCA_6 As text:
                 BorderColor: =RGBA(0, 0, 0, 1)
-                Default: |-
+                Default: |+
                     =/*If(LookUp(col_citas;id_Pacientes_DNI=DNITextInput.Text;Nacionalidad)="Extranjero(a)";Concat(LastN(ForAll(Split(AtencionSelected.Nombre_Paciente;" "); {Result: ThisRecord.Value});CountRows(ForAll(Split(AtencionSelected.Nombre_Paciente;" "); {Result: ThisRecord.Value}))-1);Result;" ");
                     Proper(TipoDoc.apellidoPaterno & " " &TipoDoc.apellidoMaterno))*/
-                    Concat(LastN(ForAll(Split(AtencionSelected.Nombre_Paciente," "), {Result: ThisRecord.Value}),CountRows(ForAll(Split(AtencionSelected.Nombre_Paciente," "), {Result: ThisRecord.Value}))-1),Result," ")
+                    
+                    Concat(LastN(ForAll(Split(AtencionSelected.Nombre_Paciente," "), {Result: ThisRecord.Value}),CountRows(ForAll(Split(AtencionSelected.Nombre_Paciente," "), {Result: ThisRecord.Value}))-2),Result," ")
+                    
+                    
                 Font: =Font.'Segoe UI'
                 Height: =36
                 RadiusBottomLeft: =4
@@ -2888,6 +2923,7 @@
             =Set(_varCrearHistoriaMedica,false);
             If(CountRows(Adjunto_13.Attachments)=0,false,
              Set(varAzureFileUsuarioNewCita,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_13.Attachments).Name,Last(Adjunto_13.Attachments).Value)));
+            Set(_varnewPaciente,
             Patch(
                 'public.Medical_Center_Historial_Principal',
                 Defaults('public.Medical_Center_Historial_Principal'),
@@ -2924,36 +2960,26 @@
                     correo:AtencionSelected.Correo,
                     telefono:AtencionSelected.Telefono_Celular
                 }
-            );
-            Reset( TxtNombreDCA_8);
-                    Reset(TxtApellidoDCA_6);
-                    Reset( TxtdniDCA_6);
-                    Reset( dpSexo_DCA_12);
-                    Reset( TxtocupacionDCA_6);
-                    Reset( TxtfechanacimientoDCA_7);
-                    Reset(dpEstadoCivil_DCA_12);
-                  Reset( dpgrado_DCA_4);
-                    Reset( dpNacionalidad_DCA_6);
-                  Reset( TxtresidenciaDCA_6);
-                    Reset( TxtMotivoDCA_16);
-                   Reset( TxtEnfermedadDCA_38);
-                  Reset(TxtMotivoDCA_17);
-                   Reset(ProblemaPadre); 
-                    Reset(TxtPadreDCA_40);
-             Reset(ProblemasMadre);
-                    Reset(TxtMadreDCA_41);
-                    Reset( TxtEnfermedadDCA_39);
-                    Reset( TxtMotivoDCA_18);
-                    Reset( TxtEnfermedadDCA_42);
-                    Reset( TxtEnfermedadDCA_44);
-                    Reset( TxtEnfermedadDCA_45);
-                    Reset(DatePicker1);
-                    Reset(ComboBox1);
-                     Reset(ComboBox1_12);
-                      Reset(ComboBox1_13);
-                       Reset(ComboBox1_14);
-                        Reset(ComboBox1_15);
-                    Reset(ComboBox1_16);
+            ));
+            
+            
+            Patch('public.Medical_Center_Pacientes', Defaults('public.Medical_Center_Pacientes'),{
+            
+            id: GUID(),
+            Nombres: _varnewPaciente.Nombres,
+            Apellidos: _varnewPaciente.Apellidos,
+            DNI_CI: _varnewPaciente.DNI_CI,
+            Sexo: _varnewPaciente.Sexo,
+            fecha_nacimiento: _varnewPaciente.Fecha_Nacimiento,
+            fecha_creacion: Now(),
+            Domicilio: _varnewPaciente.Direccion,
+            NombreMadre: _varnewPaciente.Nombre_Madre,
+            NombrePadre: _varnewPaciente.Nombre_Padre,
+            Telefono: AtencionSelected.Telefono_Celular,
+            Correo: AtencionSelected.Correo,
+            id_sede: _varSede.id,
+            nacionalidad: _varnewPaciente.Nacionalidad})
+            
             
         RadiusBottomLeft: =8
         RadiusBottomRight: =8
@@ -3778,7 +3804,7 @@
         Image: =Microsoft_Bookings_logo
         OnSelect: |-
             =//Launch("https://outlook.office365.com/owa/calendar/Solicituddecitas@cxmart.ml/bookings/")
-            Launch(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Url_Bookings))
+            Launch(LookUp('public.medical_center_sedes', id = _varSede.id,booking))
         PaddingBottom: =5
         PaddingLeft: =5
         PaddingRight: =5
