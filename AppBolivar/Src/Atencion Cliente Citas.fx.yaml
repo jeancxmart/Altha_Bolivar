@@ -712,6 +712,7 @@
                         ZIndex: =2
 
                     Image34_2 As image:
+                        DisplayMode: =If(getUser.Rol = "Administrador" || getUser.Rol = "Asistente", DisplayMode.Edit, DisplayMode.Disabled)
                         Height: =24
                         Image: ='Shape - 2023-04-21T124119.492'
                         OnSelect: |-
@@ -753,8 +754,7 @@
                                 lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
                             },
                             If(
-                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.caja_finalizada = true
-                                || lookupResult = "Caja",
+                                getUser.Rol = "Caja" ||  getUser.Rol = "Triaje" ||  getUser.Rol = "Doctor" || ThisItem.caja_finalizada = true || lookupResult = "Caja" || Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") ,
                                 DisplayMode.Disabled,
                                 DisplayMode.Edit
                             )
@@ -783,7 +783,7 @@
                                 DNI_CI = AtencionSelected.id_Pacientes_DNI,
                                 DNI_CI
                             ) = AtencionSelected.id_Pacientes_DNI,
-                          If(getUser.Rol="Doctor" || getUser.Rol= "Administrador",  Navigate(Caja) & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
+                          If(getUser.Rol= "Administrador",  Navigate(Caja) & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
                           
                             Set(
                                 varCaja,
@@ -857,7 +857,7 @@
                                 lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
                             },
                             If(
-                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true || lookupResult = "Triaje",
+                               getUser.Rol = "Triaje" ||getUser.Rol = "Caja" ||  getUser.Rol = "Doctor" And Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true || lookupResult = "Triaje",
                                 DisplayMode.Disabled,
                                 DisplayMode.Edit
                             )
@@ -896,7 +896,16 @@
                         
                         Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=ThisItem.id_Pacientes_DNI),{Estatus:"En Atención"});
                         
-                        If(getUser.Rol="Doctor" || getUser.Rol= "Administrador",  Navigate(Triaje_Dashboard) & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
+                        
+                        
+                        If(
+                            LookUp(
+                                'public.Medical_Center_Historial_Principal',
+                                DNI_CI = AtencionSelected.id_Pacientes_DNI,
+                                DNI_CI
+                            ) = AtencionSelected.id_Pacientes_DNI,
+                          If(getUser.Rol= "Administrador",   Navigate(Triaje_Dashboard) & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard')) , ""  
+                        );
                     PressedBorderColor: =ColorFondoBoton
                     PressedColor: =ColorFondoBoton
                     PressedFill: =RGBA(255, 255, 255, 1)
@@ -914,6 +923,7 @@
                 btnReagendar As button:
                     BorderColor: =ColorFondoBoton
                     Color: =ColorFondoBoton
+                    DisplayMode: =If(getUser.Rol = "Asistente" || getUser.Rol = "Administrador", DisplayMode.Disabled, DisplayMode.Edit)
                     Fill: =RGBA(255, 255, 255, 1)
                     Font: =Font.'Segoe UI'
                     HoverColor: =ColorFondoBoton
@@ -942,8 +952,9 @@
                             {
                                 lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
                             },
-                            If(
-                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || lookupResult = "Atención Medica",
+                            If( getUser.Rol = "Caja" || 
+                                getUser.Rol = "Triaje" || getUser.Rol = "Doctor" And
+                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true And lookupResult = "Atención Medica",
                                 DisplayMode.Disabled,
                                 DisplayMode.Edit
                             )
@@ -983,7 +994,17 @@
                         
                         Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=ThisItem.id_Pacientes_DNI),{Estatus:"En Atención"});
                         
-                        If(getUser.Rol="Doctor" || getUser.Rol= "Administrador",  Navigate('Consulta Medica Dashboard') & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
+                        
+                        
+                        If(
+                            LookUp(
+                                'public.Medical_Center_Historial_Principal',
+                                DNI_CI = AtencionSelected.id_Pacientes_DNI,
+                                DNI_CI
+                            ) = AtencionSelected.id_Pacientes_DNI,
+                          If(getUser.Rol= "Administrador",  Navigate('Consulta Medica Dashboard') & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
+                          ""    
+                        );
                     PressedBorderColor: =ColorFondoBoton
                     PressedColor: =ColorFondoBoton
                     PressedFill: =RGBA(255, 255, 255, 1)
@@ -1017,6 +1038,7 @@
                     BorderColor: =ColorFondoBoton
                     Color: =ColorFondoBoton
                     DisabledBorderColor: =RGBA(116, 116, 116, 1)
+                    DisplayMode: =If(getUser.Rol = "Asistente" || getUser.Rol = "Administrador" , DisplayMode.Edit, DisplayMode.Disabled)
                     Fill: =RGBA(255, 255, 255, 1)
                     FocusedBorderColor: =btnCrearHistoriaP.BorderColor
                     Font: =Font.'Segoe UI'

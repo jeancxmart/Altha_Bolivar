@@ -12364,7 +12364,7 @@
             IsSearchable: =false
             Items: =Filter('public.Medical_Center_Tests',id_sede = _varSede.id,tipo=ComboBox3_4.Selected.Value)
             SearchFields: =["nombre"]
-            SearchItems: =Search(Filter('public.Medical_Center_Tests',id_sede = _varSede.id,tipo=ComboBox3_4.Selected.Value),ComboBox3_5.SearchText,"nombre")
+            SearchItems: =[]
             SelectMultiple: =false
             Size: =12
             Width: =350

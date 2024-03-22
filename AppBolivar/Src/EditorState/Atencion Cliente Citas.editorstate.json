@@ -3993,7 +3993,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "DisplayMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DisplayMode.Edit",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6274,7 +6281,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "DisplayMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DisplayMode.Edit",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -8829,7 +8843,7 @@
       "MetaDataIDKey": "",
       "Name": "ComboBox1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 51,
+      "ParentIndex": 62,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9205,7 +9219,7 @@
       "MetaDataIDKey": "",
       "Name": "ComboBox1_12",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 57,
+      "ParentIndex": 64,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22792,7 +22806,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon4_25",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 63,
+      "ParentIndex": 59,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23006,7 +23020,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon4_26",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 64,
+      "ParentIndex": 60,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24725,7 +24739,14 @@
         "HoverBorderColor",
         "FocusedBorderColor",
         "BorderStyle",
-        "DisplayMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DisplayMode.Edit",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -27884,7 +27905,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10_24",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 62,
+      "ParentIndex": 58,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41806,7 +41827,7 @@
       "MetaDataIDKey": "",
       "Name": "lblEnfermedadDCA_39",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 46,
+      "ParentIndex": 50,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -42138,7 +42159,7 @@
       "MetaDataIDKey": "",
       "Name": "lblEnfermedadDCA_51",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 59,
+      "ParentIndex": 52,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -42470,7 +42491,7 @@
       "MetaDataIDKey": "",
       "Name": "lblEnfermedadDCA_52",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 47,
+      "ParentIndex": 44,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -42802,7 +42823,7 @@
       "MetaDataIDKey": "",
       "Name": "lblEnfermedadDCA_53",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 53,
+      "ParentIndex": 45,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -44130,7 +44151,7 @@
       "MetaDataIDKey": "",
       "Name": "lblEnfermedadDCA_58",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 49,
+      "ParentIndex": 46,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -44462,7 +44483,7 @@
       "MetaDataIDKey": "",
       "Name": "lblEnfermedadDCA_59",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 55,
+      "ParentIndex": 47,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46332,7 +46353,7 @@
       "MetaDataIDKey": "",
       "Name": "lblMotiviDCA_19",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 44,
+      "ParentIndex": 49,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -48629,7 +48650,7 @@
       "MetaDataIDKey": "",
       "Name": "LineaFondoFormulario_DCA_16",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 61,
+      "ParentIndex": 57,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -48868,7 +48889,7 @@
       "MetaDataIDKey": "",
       "Name": "ProblemaPadre",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 52,
+      "ParentIndex": 53,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -49222,7 +49243,7 @@
       "MetaDataIDKey": "",
       "Name": "ProblemasMadre",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 58,
+      "ParentIndex": 54,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -60722,7 +60743,7 @@
       "MetaDataIDKey": "",
       "Name": "TxtEnfermedadDCA_39",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 60,
+      "ParentIndex": 51,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -63203,7 +63224,7 @@
       "MetaDataIDKey": "",
       "Name": "TxtMadreDCA_41",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 54,
+      "ParentIndex": 56,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -63898,7 +63919,7 @@
       "MetaDataIDKey": "",
       "Name": "TxtMotivoDCA_17",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 45,
+      "ParentIndex": 48,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -66747,7 +66768,7 @@
       "MetaDataIDKey": "",
       "Name": "TxtocupacionDCA_7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 50,
+      "ParentIndex": 61,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -67115,7 +67136,7 @@
       "MetaDataIDKey": "",
       "Name": "TxtocupacionDCA_8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 56,
+      "ParentIndex": 63,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -67837,7 +67858,7 @@
       "MetaDataIDKey": "",
       "Name": "TxtPadreDCA_40",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 48,
+      "ParentIndex": 55,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

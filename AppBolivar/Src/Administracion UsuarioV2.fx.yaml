@@ -2293,727 +2293,773 @@
                 Y: =0
                 ZIndex: =1
 
-                TextInput7_3 As text:
-                    Default: =""
-                    DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundApp,varcolor_OscuroBackgroundApp)
-                    DisplayMode: =DisplayMode.Disabled
-                    Height: =776
+                ContainerAddUsers As groupContainer.manualLayoutContainer:
+                    BorderThickness: =2
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =880
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
                     RadiusTopLeft: =8
                     RadiusTopRight: =8
                     Visible: =_varNewUsuario
                     Width: =400
-                    Y: =11
                     ZIndex: =1
 
-                Label12_13 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =28
-                    HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    PaddingLeft: =0
-                    Size: =18
-                    Text: ="Nuevo Usuario"
-                    Visible: =_varNewUsuario
-                    Width: =197
-                    X: =17
-                    Y: =20
-                    ZIndex: =2
+                    Label12_13 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =28
+                        HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        PaddingLeft: =0
+                        Size: =18
+                        Text: ="Nuevo Usuario"
+                        Visible: =_varNewUsuario
+                        Width: =197
+                        X: =17
+                        Y: =12
+                        ZIndex: =2
 
-                Label12_14 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =24
-                    PaddingLeft: =0
-                    Text: ="Imagen"
-                    Visible: =_varNewUsuario
-                    X: =14
-                    Y: =72
-                    ZIndex: =3
-
-                Image3_28 As image:
-                    BorderColor: =RGBA(0, 0, 0, 1)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderThickness: =4
-                    Height: =88
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Image: |
-                        =//User().Image
-                        If(IsBlank(LookUp(UsuariosdeOffice365.SearchUser(),Mail=TextInput9_22.Text,Id)),SampleImage,
-                        UsuariosdeOffice365.UserPhotoV2(LookUp(UsuariosdeOffice365.SearchUser(),Mail=TextInput9_22.Text,Id)))
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
-                    Visible: =_varNewUsuario
-                    Width: =90
-                    X: =20
-                    Y: =104
-                    ZIndex: =4
-
-                Label13_47 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =28
-                    PaddingLeft: =0
-                    Text: ="Usuario"
-                    Visible: =_varNewUsuario
-                    X: =20
-                    Y: =218
-                    ZIndex: =5
-
-                Label13_49 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =28
-                    PaddingLeft: =0
-                    Text: ="Correo"
-                    Visible: =_varNewUsuario
-                    X: =20
-                    Y: =318
-                    ZIndex: =6
-
-                TextInput9_22 As text:
-                    BorderColor: =RGBA(0, 0, 0, 1)
-                    BorderStyle: =BorderStyle.None
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Default: =ComboBox4.Selected.Mail
-                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.'Segoe UI'
-                    Height: =36
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
-                    Visible: =_varNewUsuario
-                    Width: =360
-                    X: =20
-                    Y: =354
-                    ZIndex: =7
-
-                Label13_50 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =28
-                    PaddingLeft: =0
-                    Text: ="Rol"
-                    Visible: =_varNewUsuario
-                    X: =15
-                    Y: =418
-                    ZIndex: =8
-
-                TextInput9_23 As text:
-                    BorderColor: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.'Segoe UI'
-                    Height: =36
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
-                    Visible: =_varNewUsuario
-                    Width: =360
-                    X: =15
-                    Y: =454
-                    ZIndex: =9
-
-                dpEstadoCivil_DCA_23 As dropdown:
-                    BorderStyle: =BorderStyle.None
-                    ChevronBackground: =RGBA(0, 0, 0, 0)
-                    ChevronFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    ChevronHoverBackground: =
-                    ChevronHoverFill: =RGBA(0, 0, 0, 1)
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    Font: =Font.'Segoe UI'
-                    Height: =30
-                    HoverBorderColor: =
-                    HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    Items: |-
-                        =//["Doctor";"Atención al Cliente";"Cajas";"Triaje";"Administrador"]
-                        Filter('public.Medical_Center_Roles_Maestro',Or(id_sede = _varSede.id,Consultorio_Medico=""))
-                    Size: =12
-                    Visible: =_varNewUsuario
-                    Width: =350
-                    X: =21
-                    Y: =457
-                    ZIndex: =12
-
-                Button1_15 As button:
-                    BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
-                    DisplayMode: =If(Label13_48.Text="*El usuario ya existe" || IsBlank(TextInput9_22.Text) ,DisplayMode.Disabled,DisplayMode.Edit)
-                    Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =44
-                    HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
-                    HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
-                    HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
-                    OnSelect: |-
-                        =UpdateContext({_varNewUsuario:false});
-                        If(CountRows(Adjunto_20.Attachments)=0,false,
-                         Set(varAzureFileUsuarioNew,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_20.Attachments).Name,Last(Adjunto_20.Attachments).Value)));
-                        
-                        Patch('public.Medical_Center_Usuario',Defaults('public.Medical_Center_Usuario'),{
-                         id:First(SortByColumns('public.Medical_Center_Usuario',"id",SortOrder.Descending)).id+1,   
-                        Usuario:ComboBox4.Selected.DisplayName,
-                        Correo:TextInput9_22.Text,
-                        Rol:dpEstadoCivil_DCA_23.Selected.rol,
-                        CPP:txtCPP_1.Text,
-                        RNE:txtRNE_2.Text,
-                        fechaCuota:fechaCuota_1.SelectedDate,
-                        Meta:txtMeta_1.Text,
-                        Disponibilidad:true,
-                        Activo: true,
-                        NombreImage:varAzureFileUsuarioNew.Id,
-                                url:"https://blobauroranuevo.blob.core.windows.net"&varAzureFileUsuarioNew.Path
-                        
-                        })
-                        
-                        
-                        ;Remove(colMiUsuario, LookUp(colMiUsuario,Mail=_selectedUser.Mail));Reset(TextInput9);
-                        Reset(TextInput9_1);
-                        Reset(dpEstadoCivil_DCA_10);
-                        Reset(TextInput9_5);
-                        Reset(Adjunto_11);
-                        Reset(txtMeta);
-                        Reset(fechaCuota);
-                        If(And(LookUp('public.Medical_Center_Usuario',Correo=User().Email,Rol)="Administrador",LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,fase)="Incompleto"),
-                        
-                        Patch('public.Medical_Center_VerificacionApp',LookUp('public.Medical_Center_VerificacionApp',correo=User().Email),
-                        {configuracion_usuario:true});
-                        
-                        If(And(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,
-                        LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,
-                        LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,
-                        LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,
-                        LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,
-                        LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,
-                        LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true),Set(varViewPopUpVerificacionCompletado,true),false),
-                        false)
-                    PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
-                    PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
-                    PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
-                    Size: =12
-                    Text: ="CREAR USUARIO"
-                    Visible: =_varNewUsuario
-                    Width: =360
-                    X: =20
-                    Y: =720
-                    ZIndex: =13
-
-                Icon12_7 As icon.Redo:
-                    BorderColor: =RGBA(166, 166, 166, 1)
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(220, 220, 220, 1)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderThickness: =4
-                    Height: =34
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =Icon.Cancel
-                    OnSelect: |-
-                        =UpdateContext({_varNewUsuario:false});Remove(colMiUsuario, LookUp(colMiUsuario,Mail=_selectedUser.Mail));Reset(TextInput9_4);
-                        Reset(TextInput9_22);
-                        Reset(dpEstadoCivil_DCA_23);
-                        Reset(Adjunto_20);
-                        Reset(txtMeta_1);
-                        Reset(fechaCuota_1)
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(73, 130, 5, 1), -30%)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    Visible: =_varNewUsuario
-                    Width: =34
-                    X: =349
-                    Y: =20
-                    ZIndex: =14
-
-                Label13_48 As label:
-                    Color: =RGBA(255, 0, 0, 1)
-                    Font: =Font.'Segoe UI'
-                    Height: =25
-                    Size: =10
-                    Text: =If(LookUp('public.Medical_Center_Usuario',Correo=TextInput9_22.Text,Correo),"*El usuario ya existe","")
-                    Visible: = _varNewUsuario
-                    Width: =258
-                    X: =115
-                    Y: =277
-                    ZIndex: =16
-
-                Label12_15 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =24
-                    PaddingLeft: =0
-                    Text: ="Firma"
-                    Visible: =_varNewUsuario
-                    X: =164
-                    Y: =72
-                    ZIndex: =17
-
-                Image3_27 As image:
-                    BorderColor: =RGBA(0, 0, 0, 1)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderThickness: =4
-                    Height: =90
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Image: =First(Adjunto_20.Attachments).Value
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
-                    Visible: =!IsEmpty(Adjunto_20.Attachments) &&_varNewUsuario
-                    Width: =90
-                    X: =164
-                    Y: =96
-                    ZIndex: =18
-
-                Icon12_18 As icon.Redo:
-                    BorderColor: =RGBA(0, 0, 0, 1)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(220, 220, 220, 1)
-                    DisabledFill: =RGBA(0, 0, 0, 0)
-                    FocusedBorderThickness: =4
-                    Height: =66
-                    HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
-                    HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =Icon.Cancel
-                    OnSelect: =Reset(Adjunto_20)
-                    PaddingBottom: =12
-                    PaddingLeft: =12
-                    PaddingRight: =12
-                    PaddingTop: =12
-                    PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(73, 130, 5, 1), -30%)
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    Visible: =!IsEmpty(Adjunto_20.Attachments) &&_varNewUsuario
-                    Width: =69
-                    X: =280
-                    Y: =104
-                    ZIndex: =19
-
-                Label13_53 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =28
-                    PaddingLeft: =0
-                    Text: ="CMP"
-                    Visible: =_varNewUsuario
-                    X: =15
-                    Y: =520
-                    ZIndex: =23
-
-                txtCPP_1 As text:
-                    BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,Mail)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    Font: =Font.'Segoe UI'
-                    Height: =36
-                    HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
-                    Size: =12
-                    Visible: =_varNewUsuario
-                    Width: =170
-                    X: =15
-                    Y: =556
-                    ZIndex: =24
-
-                Label13_52 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =28
-                    PaddingLeft: =0
-                    Text: ="RNE"
-                    Visible: =_varNewUsuario
-                    X: =207
-                    Y: =520
-                    ZIndex: =25
-
-                txtRNE_2 As text:
-                    BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,Mail)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    Font: =Font.'Segoe UI'
-                    Height: =36
-                    HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
-                    Size: =12
-                    Visible: =_varNewUsuario
-                    Width: =170
-                    X: =207
-                    Y: =556
-                    ZIndex: =26
-
-                Label13_55 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =28
-                    PaddingLeft: =0
-                    Text: ="Meta"
-                    Visible: =_varNewUsuario
-                    X: =15
-                    Y: =620
-                    ZIndex: =27
-
-                txtMeta_1 As text:
-                    BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,Mail)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    Font: =Font.'Segoe UI'
-                    Format: =TextFormat.Number
-                    Height: =36
-                    HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    PaddingLeft: =30
-                    PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
-                    Size: =12
-                    Visible: =_varNewUsuario
-                    Width: =170
-                    X: =15
-                    Y: =656
-                    ZIndex: =28
-
-                Label13_54 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =28
-                    PaddingLeft: =0
-                    Text: ="Fecha"
-                    Visible: =_varNewUsuario
-                    X: =207
-                    Y: =620
-                    ZIndex: =29
-
-                txtRNE_3 As text:
-                    BorderColor: =RGBA(0, 0, 0, 1)
-                    Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,Mail)
-                    DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.'Segoe UI'
-                    Height: =36
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
-                    Visible: =_varNewUsuario
-                    Width: =170
-                    X: =207
-                    Y: =656
-                    ZIndex: =30
-
-                Label13_56 As label:
-                    Align: =Align.Center
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    Height: =36
-                    Size: =12
-                    Text: =varSimboloMaestros
-                    Visible: =_varNewUsuario
-                    Width: =31
-                    X: =17
-                    Y: =657
-                    ZIndex: =31
-
-                fechaCuota_1 As datepicker:
-                    BorderStyle: =BorderStyle.None
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    DefaultDate: =
-                    Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    Font: =Font.'Segoe UI'
-                    Height: =30
-                    IconBackground: =RGBA(0, 0,0, 0)
-                    IconFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    InputTextPlaceholder: ="--/--/--"
-                    PaddingLeft: =5
-                    Size: =12
-                    Visible: =_varNewUsuario
-                    Width: =160
-                    X: =212
-                    Y: =659
-                    ZIndex: =32
-
-                Icon5_9 As icon.Help:
-                    Color: =RGBA(254, 109, 59, 1)
-                    Height: =15
-                    Icon: =Icon.Help
-                    OnSelect: |-
-                        =UpdateContext({_varAddRol:true})
-                    Visible: =_varNewUsuario
-                    Width: =15
-                    X: =356
-                    Y: =422
-                    ZIndex: =33
-
-                PeopleBrowseGallery1_2 As gallery.PeoplePickerGallerySmallTablet:
-                    AccessibleLabel: ="Resultados de la búsqueda de usuarios"
-                    BorderColor: =RGBA(0, 0, 0, 1)
-                    BorderThickness: =2
-                    Fill: =RGBA(255, 255, 255, 1)
-                    Height: =275
-                    Items: |-
-                        =/*Only use Office 365 Users operation if user has started searching Department=getUser.Nombre_Consultorio*/
-                        If(!IsBlank(Trim(TextInput9_4.Text)),Filter(UsuariosdeOffice365.SearchUser({searchTerm: Trim(TextInput9_4.Text), top: 15}),OfficeLocation=getUser.Nombre_Consultorio Or Department=getUser.Nombre_Consultorio ))
-                    Layout: =Layout.Vertical
-                    TemplatePadding: =0
-                    TemplateSize: =72
-                    Visible: |-
-                        =//IsBlank(colMiUsuario) && _varNewUsuario
-                        IsBlank(Trim(LookUp(colMiUsuario,Mail=_selectedUser.Mail,DisplayName))) && _varNewUsuario && !IsBlank(Trim(TextInput9_4.Text))
-                    Width: =360
-                    X: =20
-                    Y: =286
-                    ZIndex: =34
-
-                    Rectangle2_4 As rectangle:
-                        BorderColor: =Title5_5.Color
-                        Fill: =RGBA(0,0,0,0)
-                        Height: =68
-                        HoverFill: =RGBA(0,0,0,0)
-                        OnSelect: =Select(Title5_5)
-                        Width: =Parent.TemplateWidth
-                        ZIndex: =1
-
-                    Title5_5 As label:
-                        BorderColor: =Self.Color
-                        FocusedBorderThickness: =2
+                    Label12_14 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
                         Height: =24
-                        OnSelect: |
-                            =/*Select user, clear search contents and if this user hasn't been added to MyPeople collection, add them*/
-                            
-                            Concurrent(
-                            Set(_selectedUser, ThisItem),
-                            If(Not(ThisItem.UserPrincipalName in colMiUsuario.UserPrincipalName), Collect(colMiUsuario, ThisItem)))
-                        Size: =10
-                        TabIndex: =0
-                        Text: =ThisItem.DisplayName
-                        Width: =PeopleBrowseGallery1_2.TemplateWidth - 2 * Self.X
-                        Wrap: =false
-                        Y: =8
-                        ZIndex: =2
-
-                    Subtitle1_7 As label:
-                        Color: =ColorFade(Title5_5.Color, 0.20)
-                        FocusedBorderThickness: =2
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        OnSelect: =Select(Title5_5)
-                        Size: =10
-                        Text: =ThisItem.UserPrincipalName
-                        Width: =PeopleBrowseGallery1_2.TemplateWidth - 2 * Self.X
-                        Wrap: =false
-                        Y: =35
+                        PaddingLeft: =0
+                        Text: ="Imagen"
+                        Visible: =_varNewUsuario
+                        X: =14
+                        Y: =64
                         ZIndex: =3
 
-                    Separator2_7 As rectangle:
+                    Image3_28 As image:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        BorderThickness: =1
-                        Fill: =RGBA(0, 0, 0, 1)
-                        Height: =1
-                        OnSelect: =Select(Parent)
-                        Width: =Parent.TemplateWidth
-                        Y: =67
-                        ZIndex: =4
-
-                TextInput9_4 As text:
-                    BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,DisplayName)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    DisplayMode: =DisplayMode.Disabled
-                    Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                    Font: =Font.'Segoe UI'
-                    Height: =36
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
-                    Visible: =_varNewUsuario
-                    Width: =360
-                    X: =20
-                    Y: =254
-                    ZIndex: =35
-
-                Icon1_8 As icon.Cancel:
-                    Color: =RGBA(0, 0, 0, 1)
-                    Height: =35
-                    Icon: =Icon.Cancel
-                    OnSelect: =Remove(colMiUsuario, LookUp(colMiUsuario,Mail=_selectedUser.Mail));Reset(TextInput9_4)
-                    Visible: =If(!IsBlank(TextInput9_4.Text) && _varNewUsuario,true,false)
-                    Width: =25
-                    X: =342
-                    Y: =312
-                    ZIndex: =36
-
-                ComboBox4 As combobox:
-                    BorderStyle: =BorderStyle.None
-                    ChevronBackground: =RGBA(0, 0, 0, 0)
-                    ChevronFill: =RGBA(0, 0, 0, 1)
-                    DisplayFields: =["DisplayName"]
-                    Height: =30
-                    InputTextPlaceholder: ="Seleccione una opción"
-                    Items: |-
-                        =UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText})
-                    SearchFields: =["DisplayName"]
-                    SearchItems: |-
-                        =Search(UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText}),ComboBox4.SearchText,"DisplayName")
-                    SelectMultiple: =false
-                    Width: =350
-                    X: =25
-                    Y: =257
-                    ZIndex: =37
-
-                Group46Firma As group:
-                    Height: =5
-                    Width: =5
-                    X: =40
-                    Y: =40
-                    ZIndex: =37
-
-                    Button2_28 As button:
-                        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Font: =Font.'Segoe UI'
-                        Height: =90
-                        HoverBorderColor: =RGBA(0, 0, 0, 1)
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        PaddingTop: =50
-                        PressedBorderColor: =RGBA(0, 0, 0, 1)
-                        PressedColor: =RGBA(0, 0, 0, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =88
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: |
+                            =//User().Image
+                            If(IsBlank(LookUp(UsuariosdeOffice365.SearchUser(),Mail=TextInput9_22.Text,Id)),SampleImage,
+                            UsuariosdeOffice365.UserPhotoV2(LookUp(UsuariosdeOffice365.SearchUser(),Mail=TextInput9_22.Text,Id)))
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
                         RadiusBottomLeft: =8
                         RadiusBottomRight: =8
                         RadiusTopLeft: =8
                         RadiusTopRight: =8
-                        Size: =7
-                        Text: ="Agregar imagen"
-                        Visible: =IsEmpty(Adjunto_20.Attachments) &&_varNewUsuario
+                        Visible: =_varNewUsuario
                         Width: =90
-                        X: =165
-                        Y: =102
+                        X: =20
+                        Y: =96
+                        ZIndex: =4
+
+                    Label13_47 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        PaddingLeft: =0
+                        Text: ="Usuario"
+                        Visible: =_varNewUsuario
+                        X: =20
+                        Y: =210
+                        ZIndex: =5
+
+                    Label13_49 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        PaddingLeft: =0
+                        Text: ="Correo"
+                        Visible: =_varNewUsuario
+                        X: =20
+                        Y: =310
+                        ZIndex: =6
+
+                    TextInput9_22 As text:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.None
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Default: =ComboBox4.Selected.Mail
+                        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Visible: =_varNewUsuario
+                        Width: =360
+                        X: =20
+                        Y: =346
+                        ZIndex: =7
+
+                    Label13_50 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        PaddingLeft: =0
+                        Text: ="Rol"
+                        Visible: =_varNewUsuario
+                        X: =15
+                        Y: =410
+                        ZIndex: =8
+
+                    TextInput9_23 As text:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =""
+                        DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Visible: =_varNewUsuario
+                        Width: =360
+                        X: =15
+                        Y: =446
+                        ZIndex: =9
+
+                    dpEstadoCivil_DCA_23 As dropdown:
+                        BorderStyle: =BorderStyle.None
+                        ChevronBackground: =RGBA(0, 0, 0, 0)
+                        ChevronFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        ChevronHoverBackground: =
+                        ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Default: =""
+                        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        Font: =Font.'Segoe UI'
+                        Height: =30
+                        HoverBorderColor: =
+                        HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        Items: |-
+                            =//["Doctor";"Atención al Cliente";"Cajas";"Triaje";"Administrador"]
+                            Filter('public.Medical_Center_Roles_Maestro',Or(id_sede = _varSede.id,Consultorio_Medico=""))
+                        Size: =12
+                        Visible: =_varNewUsuario
+                        Width: =350
+                        X: =21
+                        Y: =449
+                        ZIndex: =10
+
+                    Button1_15 As button:
+                        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
+                        DisplayMode: =If(Label13_48.Text="*El usuario ya existe" || IsBlank(TextInput9_22.Text) ,DisplayMode.Disabled,DisplayMode.Edit)
+                        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =44
+                        HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
+                        HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
+                        HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+                        OnSelect: |-
+                            =UpdateContext({_varNewUsuario:false});
+                            If(CountRows(Adjunto_20.Attachments)=0,false,
+                             Set(varAzureFileUsuarioNew,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_20.Attachments).Name,Last(Adjunto_20.Attachments).Value)));
+                            
+                            Patch('public.Medical_Center_Usuario',Defaults('public.Medical_Center_Usuario'),{
+                             id:First(SortByColumns('public.Medical_Center_Usuario',"id",SortOrder.Descending)).id+1,   
+                            Usuario:ComboBox4.Selected.DisplayName,
+                            Correo:TextInput9_22.Text,
+                            Rol:dpEstadoCivil_DCA_23.Selected.rol,
+                            CPP:txtCPP_1.Text,
+                            RNE:txtRNE_2.Text,
+                            fechaCuota:fechaCuota_1.SelectedDate,
+                            Meta:txtMeta_1.Text,
+                            Disponibilidad:true,
+                            Activo: true,
+                            NombreImage:varAzureFileUsuarioNew.Id,
+                            url:"https://blobauroranuevo.blob.core.windows.net"&varAzureFileUsuarioNew.Path,
+                            id_sede: ComboBoxSedeUser.Selected.id
+                            })
+                            
+                            
+                            ;Remove(colMiUsuario, LookUp(colMiUsuario,Mail=_selectedUser.Mail));Reset(TextInput9);
+                            Reset(TextInput9_1);
+                            Reset(dpEstadoCivil_DCA_10);
+                            Reset(TextInput9_5);
+                            Reset(Adjunto_11);
+                            Reset(txtMeta);
+                            Reset(fechaCuota);
+                            If(And(LookUp('public.Medical_Center_Usuario',Correo=User().Email,Rol)="Administrador",LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,fase)="Incompleto"),
+                            
+                            Patch('public.Medical_Center_VerificacionApp',LookUp('public.Medical_Center_VerificacionApp',correo=User().Email),
+                            {configuracion_usuario:true});
+                            
+                            If(And(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,
+                            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,
+                            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,
+                            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,
+                            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,
+                            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,
+                            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true),Set(varViewPopUpVerificacionCompletado,true),false),
+                            false)
+                        PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
+                        PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
+                        PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+                        Size: =12
+                        Text: ="CREAR USUARIO"
+                        Visible: =_varNewUsuario
+                        Width: =360
+                        X: =20
+                        Y: =812
+                        ZIndex: =11
+
+                    Icon12_7 As icon.Redo:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =34
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Cancel
+                        OnSelect: |-
+                            =UpdateContext({_varNewUsuario:false});Remove(colMiUsuario, LookUp(colMiUsuario,Mail=_selectedUser.Mail));Reset(TextInput9_4);
+                            Reset(TextInput9_22);
+                            Reset(dpEstadoCivil_DCA_23);
+                            Reset(Adjunto_20);
+                            Reset(txtMeta_1);
+                            Reset(fechaCuota_1)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(73, 130, 5, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =_varNewUsuario
+                        Width: =34
+                        X: =349
+                        Y: =12
+                        ZIndex: =12
+
+                    Label13_48 As label:
+                        Color: =RGBA(255, 0, 0, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =25
+                        Size: =10
+                        Text: =If(LookUp('public.Medical_Center_Usuario',Correo=TextInput9_22.Text,Correo),"*El usuario ya existe","")
+                        Visible: = _varNewUsuario
+                        Width: =258
+                        X: =115
+                        Y: =269
+                        ZIndex: =13
+
+                    Label12_15 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        PaddingLeft: =0
+                        Text: ="Firma"
+                        Visible: =_varNewUsuario
+                        X: =164
+                        Y: =64
+                        ZIndex: =14
+
+                    Image3_27 As image:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =90
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =First(Adjunto_20.Attachments).Value
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Visible: =!IsEmpty(Adjunto_20.Attachments) &&_varNewUsuario
+                        Width: =90
+                        X: =164
+                        Y: =88
+                        ZIndex: =15
+
+                    Icon12_18 As icon.Redo:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =66
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Cancel
+                        OnSelect: =Reset(Adjunto_20)
+                        PaddingBottom: =12
+                        PaddingLeft: =12
+                        PaddingRight: =12
+                        PaddingTop: =12
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(73, 130, 5, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =!IsEmpty(Adjunto_20.Attachments) &&_varNewUsuario
+                        Width: =69
+                        X: =280
+                        Y: =96
+                        ZIndex: =16
+
+                    Label13_53 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        PaddingLeft: =0
+                        Text: ="CMP"
+                        Visible: =_varNewUsuario
+                        X: =20
+                        Y: =616
                         ZIndex: =20
 
-                    Image28_13 As image:
-                        Height: =24
-                        Image: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),'Shape (65)','Shape - 2023-06-08T154347.125')
-                        Visible: =IsEmpty(Adjunto_20.Attachments) &&_varNewUsuario
-                        Width: =34
-                        X: =193
-                        Y: =120
+                    txtCPP_1 As text:
+                        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,Mail)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Visible: =_varNewUsuario
+                        Width: =170
+                        X: =20
+                        Y: =652
                         ZIndex: =21
 
-                    Adjunto_20 As attachments:
-                        AddAttachmentText: =
-                        BorderColor: |-
-                            =ColorValue("#A0835C")
-                        BorderStyle: =BorderStyle.None
-                        Color: =RGBA(0, 0, 0, 0)
-                        DropTargetBorderStyle: =BorderStyle.None
-                        Fill: =RGBA(0, 0, 0, 0)
+                    Label13_52 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
                         Font: =Font.'Segoe UI'
-                        Height: =216
-                        HoverColor: =RGBA(0, 0, 0, 0)
-                        HoverFill: =RGBA(0, 0, 0, 0.1)
-                        IsInDataCard: =true
-                        ItemFill: =
-                        Items: =
-                        MaxAttachments: =1
-                        MaxAttachmentSize: =20
-                        MaxAttachmentsText: =
-                        NoAttachmentsText: =
-                        PaddingBottom: =5
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5.0)
-                        PaddingRight: =5
-                        PaddingTop: =5
-                        PressedColor: =RGBA(0, 0, 0, 0)
-                        PressedFill: =RGBA(0, 0, 0, 0.02)
-                        Reset: =true
-                        Size: =26
-                        Tooltip: =
-                        Visible: =IsEmpty(Adjunto_20.Attachments)  && _varNewUsuario
-                        Width: =90
-                        X: =165
-                        Y: =8
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        PaddingLeft: =0
+                        Text: ="RNE"
+                        Visible: =_varNewUsuario
+                        X: =210
+                        Y: =616
                         ZIndex: =22
+
+                    txtRNE_2 As text:
+                        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,Mail)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Visible: =_varNewUsuario
+                        Width: =170
+                        X: =210
+                        Y: =652
+                        ZIndex: =23
+
+                    Label13_55 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        PaddingLeft: =0
+                        Text: ="Meta"
+                        Visible: =_varNewUsuario
+                        X: =20
+                        Y: =716
+                        ZIndex: =24
+
+                    txtMeta_1 As text:
+                        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,Mail)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        Font: =Font.'Segoe UI'
+                        Format: =TextFormat.Number
+                        Height: =36
+                        HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        PaddingLeft: =30
+                        PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Visible: =_varNewUsuario
+                        Width: =170
+                        X: =20
+                        Y: =752
+                        ZIndex: =25
+
+                    Label13_54 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        PaddingLeft: =0
+                        Text: ="Fecha"
+                        Visible: =_varNewUsuario
+                        X: =210
+                        Y: =716
+                        ZIndex: =26
+
+                    txtRNE_3 As text:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,Mail)
+                        DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Visible: =_varNewUsuario
+                        Width: =170
+                        X: =210
+                        Y: =752
+                        ZIndex: =27
+
+                    Label13_56 As label:
+                        Align: =Align.Center
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        Size: =12
+                        Text: =varSimboloMaestros
+                        Visible: =_varNewUsuario
+                        Width: =31
+                        X: =21
+                        Y: =751
+                        ZIndex: =28
+
+                    fechaCuota_1 As datepicker:
+                        BorderStyle: =BorderStyle.None
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        DefaultDate: =
+                        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        Font: =Font.'Segoe UI'
+                        Height: =30
+                        IconBackground: =RGBA(0, 0,0, 0)
+                        IconFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        InputTextPlaceholder: ="--/--/--"
+                        PaddingLeft: =5
+                        Size: =12
+                        Visible: =_varNewUsuario
+                        Width: =160
+                        X: =215
+                        Y: =755
+                        ZIndex: =29
+
+                    Icon5_9 As icon.Help:
+                        Color: =RGBA(254, 109, 59, 1)
+                        Height: =15
+                        Icon: =Icon.Help
+                        OnSelect: |-
+                            =UpdateContext({_varAddRol:true})
+                        Visible: =_varNewUsuario
+                        Width: =15
+                        X: =356
+                        Y: =414
+                        ZIndex: =30
+
+                    PeopleBrowseGallery1_2 As gallery.PeoplePickerGallerySmallTablet:
+                        AccessibleLabel: ="Resultados de la búsqueda de usuarios"
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderThickness: =2
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =275
+                        Items: |-
+                            =/*Only use Office 365 Users operation if user has started searching Department=getUser.Nombre_Consultorio*/
+                            If(!IsBlank(Trim(TextInput9_4.Text)),Filter(UsuariosdeOffice365.SearchUser({searchTerm: Trim(TextInput9_4.Text), top: 15}),OfficeLocation=getUser.Nombre_Consultorio Or Department=getUser.Nombre_Consultorio ))
+                        Layout: =Layout.Vertical
+                        TemplatePadding: =0
+                        TemplateSize: =72
+                        Visible: |-
+                            =//IsBlank(colMiUsuario) && _varNewUsuario
+                            IsBlank(Trim(LookUp(colMiUsuario,Mail=_selectedUser.Mail,DisplayName))) && _varNewUsuario && !IsBlank(Trim(TextInput9_4.Text))
+                        Width: =360
+                        X: =20
+                        Y: =278
+                        ZIndex: =31
+
+                        Rectangle2_4 As rectangle:
+                            BorderColor: =Title5_5.Color
+                            Fill: =RGBA(0,0,0,0)
+                            Height: =68
+                            HoverFill: =RGBA(0,0,0,0)
+                            OnSelect: =Select(Title5_5)
+                            Width: =Parent.TemplateWidth
+                            ZIndex: =1
+
+                        Title5_5 As label:
+                            BorderColor: =Self.Color
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            OnSelect: |
+                                =/*Select user, clear search contents and if this user hasn't been added to MyPeople collection, add them*/
+                                
+                                Concurrent(
+                                Set(_selectedUser, ThisItem),
+                                If(Not(ThisItem.UserPrincipalName in colMiUsuario.UserPrincipalName), Collect(colMiUsuario, ThisItem)))
+                            Size: =10
+                            TabIndex: =0
+                            Text: =ThisItem.DisplayName
+                            Width: =PeopleBrowseGallery1_2.TemplateWidth - 2 * Self.X
+                            Wrap: =false
+                            Y: =8
+                            ZIndex: =2
+
+                        Subtitle1_7 As label:
+                            Color: =ColorFade(Title5_5.Color, 0.20)
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            OnSelect: =Select(Title5_5)
+                            Size: =10
+                            Text: =ThisItem.UserPrincipalName
+                            Width: =PeopleBrowseGallery1_2.TemplateWidth - 2 * Self.X
+                            Wrap: =false
+                            Y: =35
+                            ZIndex: =3
+
+                        Separator2_7 As rectangle:
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            BorderThickness: =1
+                            Fill: =RGBA(0, 0, 0, 1)
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =67
+                            ZIndex: =4
+
+                    TextInput9_4 As text:
+                        BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,DisplayName)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Visible: =_varNewUsuario
+                        Width: =360
+                        X: =20
+                        Y: =246
+                        ZIndex: =32
+
+                    Icon1_8 As icon.Cancel:
+                        Color: =RGBA(0, 0, 0, 1)
+                        Height: =35
+                        Icon: =Icon.Cancel
+                        OnSelect: =Remove(colMiUsuario, LookUp(colMiUsuario,Mail=_selectedUser.Mail));Reset(TextInput9_4)
+                        Visible: =If(!IsBlank(TextInput9_4.Text) && _varNewUsuario,true,false)
+                        Width: =25
+                        X: =342
+                        Y: =304
+                        ZIndex: =33
+
+                    ComboBox4 As combobox:
+                        BorderStyle: =BorderStyle.None
+                        ChevronBackground: =RGBA(0, 0, 0, 0)
+                        ChevronFill: =RGBA(0, 0, 0, 1)
+                        DisplayFields: =["DisplayName"]
+                        Height: =30
+                        InputTextPlaceholder: ="Seleccione una opción"
+                        Items: |-
+                            =UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText})
+                        SearchFields: =["DisplayName"]
+                        SearchItems: |-
+                            =Search(UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText}),ComboBox4.SearchText,"DisplayName")
+                        SelectMultiple: =false
+                        Width: =350
+                        X: =25
+                        Y: =249
+                        ZIndex: =34
+
+                    TextInput9_24 As text:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =""
+                        DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Visible: =_varNewUsuario
+                        Width: =360
+                        X: =20
+                        Y: =551
+                        ZIndex: =35
+
+                    Group46Firma As group:
+                        Height: =5
+                        Width: =5
+                        X: =40
+                        Y: =-8
+                        ZIndex: =35
+
+                        Button2_28 As button:
+                            BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                            Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Font: =Font.'Segoe UI'
+                            Height: =90
+                            HoverBorderColor: =RGBA(0, 0, 0, 1)
+                            HoverColor: =RGBA(0, 0, 0, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PaddingTop: =50
+                            PressedBorderColor: =RGBA(0, 0, 0, 1)
+                            PressedColor: =RGBA(0, 0, 0, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Size: =7
+                            Text: ="Agregar imagen"
+                            Visible: =IsEmpty(Adjunto_20.Attachments) &&_varNewUsuario
+                            Width: =90
+                            X: =165
+                            Y: =94
+                            ZIndex: =17
+
+                        Image28_13 As image:
+                            Height: =24
+                            Image: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),'Shape (65)','Shape - 2023-06-08T154347.125')
+                            Visible: =IsEmpty(Adjunto_20.Attachments) &&_varNewUsuario
+                            Width: =34
+                            X: =193
+                            Y: =112
+                            ZIndex: =18
+
+                        Adjunto_20 As attachments:
+                            AddAttachmentText: =
+                            BorderColor: |-
+                                =ColorValue("#A0835C")
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(0, 0, 0, 0)
+                            DropTargetBorderStyle: =BorderStyle.None
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Font: =Font.'Segoe UI'
+                            Height: =216
+                            HoverColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0.1)
+                            IsInDataCard: =true
+                            ItemFill: =
+                            Items: =
+                            MaxAttachments: =1
+                            MaxAttachmentSize: =20
+                            MaxAttachmentsText: =
+                            NoAttachmentsText: =
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5.0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0.02)
+                            Reset: =true
+                            Size: =26
+                            Tooltip: =
+                            Visible: =IsEmpty(Adjunto_20.Attachments)  && _varNewUsuario
+                            Width: =90
+                            X: =165
+                            Y: =8
+                            ZIndex: =19
+
+                    Label13_51 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        PaddingLeft: =0
+                        Text: ="Sede"
+                        Visible: =_varNewUsuario
+                        X: =20
+                        Y: =505
+                        ZIndex: =37
+
+                    ComboBoxSedeUser As combobox:
+                        BorderStyle: =BorderStyle.None
+                        ChevronBackground: =RGBA(0, 0, 0, 0)
+                        ChevronFill: =RGBA(0, 0, 0, 1)
+                        DisplayFields: =["sede"]
+                        DisplayMode: =If(dpEstadoCivil_DCA_23.Selected.rol = "Doctor", DisplayMode.Disabled,DisplayMode.Edit)
+                        Height: =30
+                        InputTextPlaceholder: ="Seleccione una sede"
+                        IsSearchable: =false
+                        Items: ='public.medical_center_sedes'
+                        SearchFields: =["sede"]
+                        SearchItems: =[]
+                        SelectMultiple: =false
+                        Width: =350
+                        X: =25
+                        Y: =554
+                        ZIndex: =38
 
     GroupAddTipoRegistro As group:
         Height: =5
@@ -10464,7 +10510,7 @@
                 Reset(txtCPP_1);
                 Reset(txtRNE_2);
                 Reset(fechaCuota_1);
-                Reset(txtMeta_1);
+                Reset(txtMeta_1);Reset(ComboBoxSedeUser)
             PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
             PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
             PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
@@ -10504,7 +10550,7 @@
                 Text: ="Usuario"
                 Visible: =varUsuarioView
                 Width: =94
-                X: =59
+                X: =33
                 Y: =20
                 ZIndex: =2
 
@@ -10518,7 +10564,7 @@
                 Text: ="Correo"
                 Visible: =varUsuarioView
                 Width: =87
-                X: =245
+                X: =208
                 Y: =20
                 ZIndex: =3
 
@@ -10532,7 +10578,7 @@
                 Text: ="Rol"
                 Visible: =varUsuarioView
                 Width: =40
-                X: =561
+                X: =485
                 Y: =20
                 ZIndex: =4
 
@@ -10546,7 +10592,7 @@
                 Text: ="Estado"
                 Visible: =varUsuarioView
                 Width: =90
-                X: =766
+                X: =800
                 Y: =20
                 ZIndex: =5
 
@@ -10591,8 +10637,9 @@
                     Size: =11.5
                     Text: =ThisItem.Usuario
                     Width: =147
-                    X: =63
-                    Y: =3
+                    Wrap: =false
+                    X: =29
+                    Y: =4
                     ZIndex: =2
 
                 Separator1_1 As rectangle:
@@ -10616,7 +10663,8 @@
                     Size: =11.5
                     Text: =ThisItem.Correo
                     Width: =240
-                    X: =248
+                    Wrap: =false
+                    X: =205
                     Y: =3
                     ZIndex: =6
 
@@ -10632,7 +10680,8 @@
                     Size: =11.5
                     Text: =ThisItem.Rol
                     Width: =151
-                    X: =564
+                    Wrap: =false
+                    X: =482
                     Y: =3
                     ZIndex: =7
 
@@ -10674,9 +10723,26 @@
                     ShowLabel: =false
                     TrueText: =
                     Width: =48
-                    X: =774
+                    X: =802
                     Y: =20
                     ZIndex: =12
+
+                Title3_8 As label:
+                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                    Font: =Font.'Segoe UI'
+                    Height: =58
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =11.5
+                    Text: =LookUp('public.medical_center_sedes', id = ThisItem.id_sede).sede
+                    Width: =147
+                    Wrap: =false
+                    X: =633
+                    Y: =5
+                    ZIndex: =13
 
             Rectangle18_1 As rectangle:
                 Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -10695,9 +10761,23 @@
                     =UpdateContext({_varAddRol:true})
                 Visible: =varUsuarioView
                 Width: =15
-                X: =601
+                X: =520
                 Y: =24
                 ZIndex: =8
+
+            Label4_126 As label:
+                Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                PaddingLeft: =0
+                Size: =14
+                Text: ="Sede"
+                Visible: =varUsuarioView
+                Width: =90
+                X: =633
+                Y: =20
+                ZIndex: =9
 
         Label4_11 As label:
             Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
