@@ -2948,18 +2948,6 @@
                         Y: =249
                         ZIndex: =34
 
-                    Label13_51 As label:
-                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =28
-                        PaddingLeft: =0
-                        Text: ="Sedes"
-                        Visible: =_varNewUsuario
-                        X: =17
-                        Y: =500
-                        ZIndex: =35
-
                     Group46Firma As group:
                         Height: =5
                         Width: =5
@@ -3034,6 +3022,18 @@
                             X: =165
                             Y: =8
                             ZIndex: =19
+
+                    Label13_51 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        PaddingLeft: =0
+                        Text: ="Sedes"
+                        Visible: =_varNewUsuario
+                        X: =17
+                        Y: =500
+                        ZIndex: =35
 
                     TextInput9_24 As text:
                         BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
