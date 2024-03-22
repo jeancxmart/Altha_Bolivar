@@ -2085,11 +2085,16 @@ Caja As screen:
                     ));
                     
                     If(
-                        If(_varticketcaja.triaje_finalizada = false And  _varticketcaja.cita_finalizada = false || getUser.Rol="Triaje" || getUser.Rol= "Administrador" ,
-                        Navigate(Triaje_Dashboard),Navigate(Caja)) ,
-                        If( _varticketcaja.cita_finalizada = false And getUser.Rol="Doctor" || getUser.Rol= "Administrador",
-                        Navigate('Consulta Medica Dashboard'),Navigate(Caja)
-                    ));
+                        LookUp(
+                            'public.Medical_Center_Historial_Principal',
+                            DNI_CI = CajaSelected.DNI_Paciente,
+                            DNI_CI
+                        ) = CajaSelected.DNI_Paciente,
+                      If(getUser.Rol= "Administrador" And _varticketcaja.cita_finalizada = false And _varticketcaja.triaje_finalizada = false,  Navigate('Triaje_Dashboard') & Refresh('public.Medical_Center_Counter'),Navigate('Caja'));
+                         Set(
+                            varCaja,
+                            false)
+                    );
                     
                     Reset(TextInput1_4);
                     Reset(galItemsPago);

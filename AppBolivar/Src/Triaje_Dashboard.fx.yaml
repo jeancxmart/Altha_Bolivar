@@ -295,77 +295,9 @@ Triaje_Dashboard As screen:
 
     gal_Triaje_Dashboard_Triaje As gallery.galleryVertical:
         Height: =559
-        Items: |-
-            =Search(SortByColumns(  Filter('public.Medical_Center_Counter',And(estado="Pagado",etapa="Caja") Or And(estado="En Atención",etapa="Triaje")Or And(estado="En Cola",etapa="Triaje"),Text(fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy")),"Paciente",SortOrder.Ascending),txt_Buscador_Dashboard__Triaje.Text,"Paciente","Servicio","usuario","estado")
+        Items: |+
+            =Search(SortByColumns(  Filter('public.Medical_Center_Counter',And(estado="Pagado",etapa="Caja") Or And(estado="En Atención",etapa="Triaje")Or And(estado="En Cola",etapa="Triaje"),Text(fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy"), id_sede = _varSede.id),"Paciente",SortOrder.Ascending),txt_Buscador_Dashboard__Triaje.Text,"Paciente","Servicio","usuario","estado")
             
-            /*If(
-                (filter_status = "En Cola" Or filter_status = "Transferido");
-                
-                Sort(
-                        Filter(
-                            
-                                //qcts_dispenser_client_ticket;
-                                
-                                Filter( 
-                                        qcts_dispenser_client_ticket;
-                                        'Codigo del Servicio' in Filter(qcts_dispenser_desks_services; Desk = desk_user).Service
-            
-                                );
-                                
-            
-                                ((Estatus.Value = "En Cola") Or (Estatus.Value = "Transferido")) 
-                                && Text(Creado;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy")
-                                && (Desk = desk_user Or IsBlank(Desk) Or IsEmpty(Desk))
-                        )
-            
-                ; Creado; Ascending);
-            
-                filter_status = "En Atención";
-                
-                Sort(
-                    Filter(
-                        //qcts_dispenser_client_ticket;
-                        Filter( 
-                                        qcts_dispenser_client_ticket;
-                                        'Codigo del Servicio' in Filter(qcts_dispenser_desks_services; Desk = desk_user).Service
-            
-                                );
-                        ((Estatus.Value = "En Atención") Or 
-                        (Estatus.Value = "Atendido") Or 
-                        (Estatus.Value = "Cancelado") Or 
-                        (Estatus.Value = "Rellamado"))  && 
-                        Text(Creado;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy") &&
-                        Desk = desk_user
-                    )
-            
-                ; Creado; Descending)
-            )
-            */
-            
-                /*antiguo codigo
-                Sort(
-                        Filter(
-                            
-                                //qcts_dispenser_client_ticket;
-                                
-                                Filter( 
-                                        qcts_dispenser_client_ticket;
-                                        'Codigo del Servicio' in Filter(qcts_dispenser_desks_services; Desk = desk_user).Service
-            
-                                );
-                                
-            
-                                ((Estatus.Value = "En Cola") Or (Estatus.Value = "Transferido")) 
-                                && Text(Creado;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy")
-                                && (Desk = desk_user Or IsBlank(Desk) Or IsEmpty(Desk))
-                        )
-            
-                ; Creado; Descending)*/
-            
-                
-            
-            
-                                
         Layout: =Layout.Vertical
         TemplateSize: =128
         Width: =1088
