@@ -2296,7 +2296,7 @@
                 ContainerAddUsers As groupContainer.manualLayoutContainer:
                     BorderThickness: =2
                     Fill: =RGBA(255, 255, 255, 1)
-                    Height: =880
+                    Height: =800
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
                     RadiusTopLeft: =8
@@ -2485,8 +2485,7 @@
                             Disponibilidad:true,
                             Activo: true,
                             NombreImage:varAzureFileUsuarioNew.Id,
-                            url:"https://blobauroranuevo.blob.core.windows.net"&varAzureFileUsuarioNew.Path,
-                            id_sede: ComboBoxSedeUser.Selected.id
+                            url:"https://blobauroranuevo.blob.core.windows.net"&varAzureFileUsuarioNew.Path
                             })
                             
                             
@@ -2518,7 +2517,7 @@
                         Visible: =_varNewUsuario
                         Width: =360
                         X: =20
-                        Y: =812
+                        Y: =710
                         ZIndex: =11
 
                     Icon12_7 As icon.Redo:
@@ -2633,7 +2632,7 @@
                         Text: ="CMP"
                         Visible: =_varNewUsuario
                         X: =20
-                        Y: =616
+                        Y: =514
                         ZIndex: =20
 
                     txtCPP_1 As text:
@@ -2660,7 +2659,7 @@
                         Visible: =_varNewUsuario
                         Width: =170
                         X: =20
-                        Y: =652
+                        Y: =550
                         ZIndex: =21
 
                     Label13_52 As label:
@@ -2671,8 +2670,8 @@
                         PaddingLeft: =0
                         Text: ="RNE"
                         Visible: =_varNewUsuario
-                        X: =210
-                        Y: =616
+                        X: =206
+                        Y: =514
                         ZIndex: =22
 
                     txtRNE_2 As text:
@@ -2698,8 +2697,8 @@
                         Size: =12
                         Visible: =_varNewUsuario
                         Width: =170
-                        X: =210
-                        Y: =652
+                        X: =206
+                        Y: =550
                         ZIndex: =23
 
                     Label13_55 As label:
@@ -2711,7 +2710,7 @@
                         Text: ="Meta"
                         Visible: =_varNewUsuario
                         X: =20
-                        Y: =716
+                        Y: =614
                         ZIndex: =24
 
                     txtMeta_1 As text:
@@ -2740,7 +2739,7 @@
                         Visible: =_varNewUsuario
                         Width: =170
                         X: =20
-                        Y: =752
+                        Y: =650
                         ZIndex: =25
 
                     Label13_54 As label:
@@ -2751,8 +2750,8 @@
                         PaddingLeft: =0
                         Text: ="Fecha"
                         Visible: =_varNewUsuario
-                        X: =210
-                        Y: =716
+                        X: =206
+                        Y: =614
                         ZIndex: =26
 
                     txtRNE_3 As text:
@@ -2770,8 +2769,8 @@
                         RadiusTopRight: =8
                         Visible: =_varNewUsuario
                         Width: =170
-                        X: =210
-                        Y: =752
+                        X: =206
+                        Y: =650
                         ZIndex: =27
 
                     Label13_56 As label:
@@ -2783,8 +2782,8 @@
                         Text: =varSimboloMaestros
                         Visible: =_varNewUsuario
                         Width: =31
-                        X: =21
-                        Y: =751
+                        X: =17
+                        Y: =649
                         ZIndex: =28
 
                     fechaCuota_1 As datepicker:
@@ -2801,8 +2800,8 @@
                         Size: =12
                         Visible: =_varNewUsuario
                         Width: =160
-                        X: =215
-                        Y: =755
+                        X: =211
+                        Y: =653
                         ZIndex: =29
 
                     Icon5_9 As icon.Help:
@@ -2938,24 +2937,6 @@
                         Y: =249
                         ZIndex: =34
 
-                    TextInput9_24 As text:
-                        BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =""
-                        DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                        DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                        DisplayMode: =DisplayMode.Disabled
-                        Font: =Font.'Segoe UI'
-                        Height: =36
-                        RadiusBottomLeft: =8
-                        RadiusBottomRight: =8
-                        RadiusTopLeft: =8
-                        RadiusTopRight: =8
-                        Visible: =_varNewUsuario
-                        Width: =360
-                        X: =20
-                        Y: =551
-                        ZIndex: =35
-
                     Group46Firma As group:
                         Height: =5
                         Width: =5
@@ -3030,36 +3011,6 @@
                             X: =165
                             Y: =8
                             ZIndex: =19
-
-                    Label13_51 As label:
-                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =28
-                        PaddingLeft: =0
-                        Text: ="Sede"
-                        Visible: =_varNewUsuario
-                        X: =20
-                        Y: =505
-                        ZIndex: =37
-
-                    ComboBoxSedeUser As combobox:
-                        BorderStyle: =BorderStyle.None
-                        ChevronBackground: =RGBA(0, 0, 0, 0)
-                        ChevronFill: =RGBA(0, 0, 0, 1)
-                        DisplayFields: =["sede"]
-                        DisplayMode: =If(dpEstadoCivil_DCA_23.Selected.rol = "Doctor", DisplayMode.Disabled,DisplayMode.Edit)
-                        Height: =30
-                        InputTextPlaceholder: ="Seleccione una sede"
-                        IsSearchable: =false
-                        Items: ='public.medical_center_sedes'
-                        SearchFields: =["sede"]
-                        SearchItems: =[]
-                        SelectMultiple: =false
-                        Width: =350
-                        X: =25
-                        Y: =554
-                        ZIndex: =38
 
     GroupAddTipoRegistro As group:
         Height: =5
@@ -10510,7 +10461,7 @@
                 Reset(txtCPP_1);
                 Reset(txtRNE_2);
                 Reset(fechaCuota_1);
-                Reset(txtMeta_1);Reset(ComboBoxSedeUser)
+                Reset(txtMeta_1);
             PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
             PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
             PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
@@ -10727,23 +10678,6 @@
                     Y: =20
                     ZIndex: =12
 
-                Title3_8 As label:
-                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                    Font: =Font.'Segoe UI'
-                    Height: =58
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =11.5
-                    Text: =LookUp('public.medical_center_sedes', id = ThisItem.id_sede).sede
-                    Width: =147
-                    Wrap: =false
-                    X: =633
-                    Y: =5
-                    ZIndex: =13
-
             Rectangle18_1 As rectangle:
                 Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
                 Height: =2
@@ -10764,20 +10698,6 @@
                 X: =520
                 Y: =24
                 ZIndex: =8
-
-            Label4_126 As label:
-                Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =24
-                PaddingLeft: =0
-                Size: =14
-                Text: ="Sede"
-                Visible: =varUsuarioView
-                Width: =90
-                X: =633
-                Y: =20
-                ZIndex: =9
 
         Label4_11 As label:
             Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)

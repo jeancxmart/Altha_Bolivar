@@ -954,7 +954,7 @@
                             },
                             If( getUser.Rol = "Caja" || 
                                 getUser.Rol = "Triaje" || getUser.Rol = "Doctor" And
-                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true And lookupResult = "Atención Medica",
+                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true || lookupResult = "Atención Medica",
                                 DisplayMode.Disabled,
                                 DisplayMode.Edit
                             )

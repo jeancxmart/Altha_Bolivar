@@ -230,9 +230,17 @@
             Patch('public.Medical_Center_Ticket', LookUp('public.Medical_Center_Ticket', id = TriajeSelected.id_Ticket),{
             triaje_finalizada: true
             }));
-            If(_varTriajeticket.cita_finalizada = false,
-               Navigate('Consulta Medica Dashboard'),
-               Navigate(Triaje_Dashboard)
+            
+            
+            If(
+                LookUp(
+                    'public.Medical_Center_Historial_Principal',
+                    DNI_CI = TriajeSelected.DNI_Paciente,
+                    DNI_CI
+                ) = TriajeSelected.DNI_Paciente,
+              If(getUser.Rol= "Administrador" And _varTriajeticket.cita_finalizada = false,  Navigate('Consulta Medica Dashboard') & Refresh('public.Medical_Center_Counter'),Navigate(Triaje_Dashboard)
+            );
+              ""
             );
             
             

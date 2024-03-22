@@ -1624,7 +1624,7 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 9763,
+                  "charOffset": 9610,
                   "snippet": {
                     "text": "Text(fecha;\"dd/mm/yyyy\")"
                   }
@@ -1664,7 +1664,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 9787,
+                  "charOffset": 9634,
                   "snippet": {
                     "text": "="
                   }
@@ -1704,7 +1704,7 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 9724,
+                  "charOffset": 9571,
                   "snippet": {
                     "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
                   }
@@ -1744,7 +1744,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 10951,
+                  "charOffset": 10798,
                   "snippet": {
                     "text": "Consultorio"
                   }
@@ -1784,7 +1784,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 10943,
+                  "charOffset": 10790,
                   "snippet": {
                     "text": "IsBlank(Consultorio)"
                   }
@@ -1824,7 +1824,7 @@
                 },
                 "region": {
                   "charLength": 46,
-                  "charOffset": 10918,
+                  "charOffset": 10765,
                   "snippet": {
                     "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
                   }
@@ -1864,7 +1864,7 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 16036,
+                  "charOffset": 15883,
                   "snippet": {
                     "text": "Text(fecha;\"dd/mm/yyyy\")"
                   }
@@ -1904,7 +1904,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 16060,
+                  "charOffset": 15907,
                   "snippet": {
                     "text": "="
                   }
@@ -1944,7 +1944,7 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 15997,
+                  "charOffset": 15844,
                   "snippet": {
                     "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
                   }
@@ -1984,7 +1984,7 @@
                 },
                 "region": {
                   "charLength": 41,
-                  "charOffset": 16567,
+                  "charOffset": 16414,
                   "snippet": {
                     "text": "Date(Year(fecha);Month(fecha);Day(fecha))"
                   }
@@ -2024,7 +2024,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 16609,
+                  "charOffset": 16456,
                   "snippet": {
                     "text": "="
                   }
@@ -2064,7 +2064,7 @@
                 },
                 "region": {
                   "charLength": 24,
-                  "charOffset": 21231,
+                  "charOffset": 21078,
                   "snippet": {
                     "text": "Text(fecha;\"dd/mm/yyyy\")"
                   }
@@ -2104,7 +2104,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 21255,
+                  "charOffset": 21102,
                   "snippet": {
                     "text": "="
                   }
@@ -2144,7 +2144,7 @@
                 },
                 "region": {
                   "charLength": 104,
-                  "charOffset": 21192,
+                  "charOffset": 21039,
                   "snippet": {
                     "text": "And(DNI_CI=TicketSelected.DNI_Paciente;Text(fecha;\"dd/mm/yyyy\")=Text(TicketSelected.fecha;\"dd/mm/yyyy\"))"
                   }
@@ -2184,7 +2184,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 27349,
+                  "charOffset": 27196,
                   "snippet": {
                     "text": "Consultorio"
                   }
@@ -2224,7 +2224,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 27341,
+                  "charOffset": 27188,
                   "snippet": {
                     "text": "IsBlank(Consultorio)"
                   }
@@ -2264,7 +2264,7 @@
                 },
                 "region": {
                   "charLength": 46,
-                  "charOffset": 27316,
+                  "charOffset": 27163,
                   "snippet": {
                     "text": "Or(id_sede = _varSede.id;IsBlank(Consultorio))"
                   }
@@ -2304,7 +2304,7 @@
                 },
                 "region": {
                   "charLength": 71,
-                  "charOffset": 27977,
+                  "charOffset": 27824,
                   "snippet": {
                     "text": "Text(\n                fecha;\n                \"dd/mm/yyyy\"\n            )"
                   }
@@ -2344,7 +2344,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 28049,
+                  "charOffset": 27896,
                   "snippet": {
                     "text": "="
                   }
@@ -56874,36 +56874,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Administracion UsuarioV2'.Canvas1_8.DataCard1_11.ContainerAddUsers.TextInput9_24.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Administracion UsuarioV2'.Canvas1_8.DataCard1_11.ContainerAddUsers.TextInput9_24.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Administracion UsuarioV2",
-                "type": "'Administracion UsuarioV2'.Canvas1_8.DataCard1_11.ContainerAddUsers.TextInput9_24"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Administracion UsuarioV2'.Canvas1_8.DataCard1_11.ContainerAddUsers.Icon12_7.AccessibleLabel"
                 }
               ],
@@ -96097,36 +96067,6 @@
                 "member": "AccessibleLabel",
                 "module": "scHistoriaMedica",
                 "type": "scHistoriaMedica.conExportar.Container8_1.TxtdniDCA_13"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Administracion UsuarioV2'.Canvas1_8.DataCard1_11.ContainerAddUsers.ComboBoxSedeUser.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Administracion UsuarioV2'.Canvas1_8.DataCard1_11.ContainerAddUsers.ComboBoxSedeUser.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Administracion UsuarioV2",
-                "type": "'Administracion UsuarioV2'.Canvas1_8.DataCard1_11.ContainerAddUsers.ComboBoxSedeUser"
               }
             }
           ],
