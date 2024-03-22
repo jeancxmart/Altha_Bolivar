@@ -1,0 +1,22 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "correo": "correo",
+      "id_sede": "id_sede",
+      "id_us_relacion": "id_us_relacion",
+      "id_usuario": "id_usuario"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.medical_center_users_relacion",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

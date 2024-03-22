@@ -2090,7 +2090,7 @@ Caja As screen:
                             DNI_CI = CajaSelected.DNI_Paciente,
                             DNI_CI
                         ) = CajaSelected.DNI_Paciente,
-                      If(getUser.Rol= "Administrador" And _varticketcaja.cita_finalizada = false And _varticketcaja.triaje_finalizada = false,  Navigate('Triaje_Dashboard') & Refresh('public.Medical_Center_Counter'),Navigate('Caja'));
+                      If(getUser.Rol= "Administrador" And _varticketcaja.cita_finalizada = false And _varticketcaja.triaje_finalizada = false,  Navigate(Triaje_Dashboard) & Refresh('public.Medical_Center_Counter'),Navigate(Caja));
                          Set(
                             varCaja,
                             false)
