@@ -3018,7 +3018,7 @@ scHistoriaMedica As screen:
                             "galHTML As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                                 DelayItemLoading: =true
                                 Items: |-
-                                    =Filter(SortByColumns('public.mc_historias_especialidad',"id_serial",SortOrder.Descending),cod_hm=HMSelected.cod_hm)
+                                    =SortByColumns(Filter('public.mc_historias_especialidad',cod_hm=HMSelected.cod_hm),"id_serial",SortOrder.Descending)
                                     //FILTRAR POR ESPECIALIDAD - MISSING
                                 Layout: =Layout.Vertical
                                 LayoutMinHeight: =287
@@ -14246,7 +14246,8 @@ scHistoriaMedica As screen:
                         
                         
                         UpdateContext({_viewNewRecord:false});
-                        UpdateContext({varEspecialidadSelected:LookUp('public.Medical_Center_Especialidad',Especialidad=dpEspecialidades.Selected.Especialidad)});
+                        //UpdateContext({varEspecialidadSelected:LookUp('public.Medical_Center_Especialidad',Especialidad=dpEspecialidades.Selected.Especialidad)});
+                        Set(varEspecialidadSelected,LookUp('public.Medical_Center_Especialidad',Especialidad=dpEspecialidades.Selected.Especialidad));
                         
                         ClearCollect(formularioCamposLineales,Filter(AddColumns(
                             Table(
