@@ -10743,6 +10743,23 @@
                     Y: =20
                     ZIndex: =12
 
+                Title3_8 As label:
+                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoSecundario,varcolor_OscuroTextoSecundario)
+                    Font: =Font.'Segoe UI'
+                    Height: =58
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =LookUp('public.medical_center_sedes', id = LookUp('public.medical_center_users_relacion', id_usuario = ThisItem.id).id_sede).sede
+                    Width: =151
+                    Wrap: =false
+                    X: =617
+                    Y: =3
+                    ZIndex: =13
+
             Rectangle18_1 As rectangle:
                 Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
                 Height: =2

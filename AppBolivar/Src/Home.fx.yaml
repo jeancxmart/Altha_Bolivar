@@ -3438,7 +3438,7 @@ Home As screen:
         Items: ='public.medical_center_sedes'
         OnChange: =Set(_varSede, Self.Selected);
         SearchFields: =["sede"]
-        SearchItems: =[]
+        SearchItems: =Search('public.medical_center_sedes',DropdownSedes.SearchText,"sede")
         SelectMultiple: =false
         Size: =12
         Width: =230
