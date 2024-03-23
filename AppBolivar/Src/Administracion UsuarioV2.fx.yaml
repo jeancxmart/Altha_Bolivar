@@ -2470,7 +2470,7 @@
                         HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
                         OnSelect: |-
                             =UpdateContext({_varNewUsuario:false});
-                            Set(_varUSedes, ComboBox4_SedesU.Selected);
+                            
                             If(CountRows(Adjunto_20.Attachments)=0,false,
                              Set(varAzureFileUsuarioNew,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_20.Attachments).Name,Last(Adjunto_20.Attachments).Value)));
                             
@@ -2490,12 +2490,15 @@
                             url:"https://blobauroranuevo.blob.core.windows.net"&varAzureFileUsuarioNew.Path
                             }));
                             
-                            
+                            ForAll(_varUSedes As  temp, 
                             Patch('public.medical_center_users_relacion', Defaults('public.medical_center_users_relacion'),{
-                             id:First(SortByColumns('public.medical_center_users_relacion',"id",SortOrder.Descending)).id+1,
-                             id_usuario: _varUserRel.id,
-                             correo: _varUserRel.Correo
-                            });
+                            
+                             id_us_relacion :First(SortByColumns('public.medical_center_users_relacion',"id_us_relacion",SortOrder.Descending)).id_us_relacion +1,
+                             id_sede: temp.id,
+                             correo: _varUserRel.Correo,
+                             id_usuario: _varUserRel.id
+                            
+                            }));
                             
                             Remove(colMiUsuario, LookUp(colMiUsuario,Mail=_selectedUser.Mail));
                             Reset(TextInput9);
@@ -2520,6 +2523,7 @@
                             LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true),
                             Set(varViewPopUpVerificacionCompletado,true),false),
                             false);
+                            Set(_varUserRel, Blank())
                         PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
                         PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
                         PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
@@ -2948,6 +2952,18 @@
                         Y: =249
                         ZIndex: =34
 
+                    Label13_51 As label:
+                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        PaddingLeft: =0
+                        Text: ="Sedes"
+                        Visible: =_varNewUsuario
+                        X: =17
+                        Y: =500
+                        ZIndex: =35
+
                     Group46Firma As group:
                         Height: =5
                         Width: =5
@@ -3023,18 +3039,6 @@
                             Y: =8
                             ZIndex: =19
 
-                    Label13_51 As label:
-                        Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =28
-                        PaddingLeft: =0
-                        Text: ="Sedes"
-                        Visible: =_varNewUsuario
-                        X: =17
-                        Y: =500
-                        ZIndex: =35
-
                     TextInput9_24 As text:
                         BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
                         Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
@@ -3065,6 +3069,7 @@
                         InputTextPlaceholder: ="Seleccione una opción"
                         IsSearchable: =false
                         Items: ='public.medical_center_sedes'
+                        OnChange: =Set(_varUSedes, Self.SelectedItems);
                         SearchFields: =["sede"]
                         SearchItems: =[]
                         Width: =350
