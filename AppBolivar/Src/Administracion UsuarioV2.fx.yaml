@@ -5107,6 +5107,17 @@
                         url:"https://blobauroranuevo.blob.core.windows.net"&varAzureFileUsuarioEdit.Path
                         
                         });
+                        
+                        /*
+                        ForAll(_varUSedes As  temp; 
+                        Patch('public.medical_center_users_relacion'; Defaults('public.medical_center_users_relacion');{
+                        
+                         id_sede: temp.id;
+                         correo: _varUserRel.Correo;
+                         id_usuario: _varUserRel.id
+                        
+                        }));;*/
+                        
                         UpdateContext({_varEditUser:false})
                     PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
                     PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)

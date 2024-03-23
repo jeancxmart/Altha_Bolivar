@@ -3435,10 +3435,15 @@ Home As screen:
         Height: =30
         InputTextPlaceholder: ="Seleccione una Sede"
         IsSearchable: =false
-        Items: ='public.medical_center_sedes'
+        Items: |-
+            =With({
+              temp : Filter('public.medical_center_users_relacion', correo = User().Email)
+            },
+              Filter('public.medical_center_sedes', id in temp.id_sede)
+            )
         OnChange: =Set(_varSede, Self.Selected);
         SearchFields: =["sede"]
-        SearchItems: =Search('public.medical_center_sedes',DropdownSedes.SearchText,"sede")
+        SearchItems: =[]
         SelectMultiple: =false
         Size: =12
         Width: =230
