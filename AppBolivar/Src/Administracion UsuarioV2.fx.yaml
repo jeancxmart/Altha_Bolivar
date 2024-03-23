@@ -2449,7 +2449,8 @@
                         HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
                         Items: |-
                             =//["Doctor";"Atención al Cliente";"Cajas";"Triaje";"Administrador"]
-                            Filter('public.Medical_Center_Roles_Maestro',Or(id_sede = _varSede.id,Consultorio_Medico=""))
+                            //Filter('public.Medical_Center_Roles_Maestro';Or(id_sede = _varSede.id;Consultorio_Medico=""))
+                            'public.Medical_Center_Roles_Maestro'
                         Size: =12
                         Visible: =_varNewUsuario
                         Width: =350
@@ -2938,14 +2939,15 @@
                         BorderStyle: =BorderStyle.None
                         ChevronBackground: =RGBA(0, 0, 0, 0)
                         ChevronFill: =RGBA(0, 0, 0, 1)
-                        DisplayFields: =["DisplayName"]
+                        DisplayFields: =["City"]
                         Height: =30
                         InputTextPlaceholder: ="Seleccione una opción"
+                        IsSearchable: =false
                         Items: |-
                             =UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText})
-                        SearchFields: =["DisplayName"]
+                        SearchFields: =["City"]
                         SearchItems: |-
-                            =Search(UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText}),ComboBox4.SearchText,"DisplayName")
+                            =Search(UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText}),ComboBox4.SearchText,"City")
                         SelectMultiple: =false
                         Width: =350
                         X: =25
@@ -4605,6 +4607,7 @@
                 HoverFill: =RGBA(255, 0, 0, 0.25)
                 OnSelect: |-
                     =Remove('public.Medical_Center_Usuario', GalleryUsuariosV3.Selected);
+                    RemoveIf('public.medical_center_users_relacion', id_usuario = _varDUser.id);
                     UpdateContext({_varDUsers: false});
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
@@ -4920,14 +4923,13 @@
                     DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
                     DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundApp,varcolor_OscuroBackgroundApp)
                     DisplayMode: =DisplayMode.Disabled
-                    Height: =780
+                    Height: =850
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Visible: =_varEditUser
                     Width: =400
-                    Y: =11
                     ZIndex: =1
 
                 Label12_30 As label:
@@ -5108,15 +5110,13 @@
                         
                         });
                         
-                        /*
-                        ForAll(_varUSedes As  temp; 
-                        Patch('public.medical_center_users_relacion'; Defaults('public.medical_center_users_relacion');{
                         
-                         id_sede: temp.id;
-                         correo: _varUserRel.Correo;
-                         id_usuario: _varUserRel.id
+                        ForAll(_varUSedesEdit As  temp, 
+                        Patch('public.medical_center_users_relacion', LookUp('public.medical_center_users_relacion', id_usuario = _varEditUserV2.id),{
                         
-                        }));;*/
+                         id_sede: temp.id
+                         
+                        }));
                         
                         UpdateContext({_varEditUser:false})
                     PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
@@ -5126,8 +5126,8 @@
                     Text: ="GUARDAR CAMBIOS"
                     Visible: =_varEditUser
                     Width: =360
-                    X: =20
-                    Y: =720
+                    X: =23
+                    Y: =787
                     ZIndex: =13
 
                 Icon12_25 As icon.Redo:
@@ -5241,8 +5241,8 @@
                     PaddingLeft: =0
                     Text: ="CMP"
                     Visible: =_varEditUser
-                    X: =15
-                    Y: =514
+                    X: =18
+                    Y: =581
                     ZIndex: =23
 
                 txtCPP_2 As text:
@@ -5268,8 +5268,8 @@
                     Size: =12
                     Visible: =_varEditUser
                     Width: =170
-                    X: =15
-                    Y: =550
+                    X: =18
+                    Y: =617
                     ZIndex: =24
 
                 Label13_73 As label:
@@ -5280,8 +5280,8 @@
                     PaddingLeft: =0
                     Text: ="RNE"
                     Visible: =_varEditUser
-                    X: =207
-                    Y: =514
+                    X: =210
+                    Y: =581
                     ZIndex: =25
 
                 txtRNE_4 As text:
@@ -5307,8 +5307,8 @@
                     Size: =12
                     Visible: =_varEditUser
                     Width: =170
-                    X: =207
-                    Y: =550
+                    X: =210
+                    Y: =617
                     ZIndex: =26
 
                 Label13_74 As label:
@@ -5319,8 +5319,8 @@
                     PaddingLeft: =0
                     Text: ="Meta"
                     Visible: =_varEditUser
-                    X: =15
-                    Y: =614
+                    X: =18
+                    Y: =681
                     ZIndex: =27
 
                 txtMeta_3 As text:
@@ -5348,8 +5348,8 @@
                     Size: =12
                     Visible: =_varEditUser
                     Width: =170
-                    X: =15
-                    Y: =650
+                    X: =18
+                    Y: =717
                     ZIndex: =28
 
                 Label13_75 As label:
@@ -5360,8 +5360,8 @@
                     PaddingLeft: =0
                     Text: ="Fecha"
                     Visible: =_varEditUser
-                    X: =207
-                    Y: =614
+                    X: =210
+                    Y: =681
                     ZIndex: =29
 
                 txtRNE_5 As text:
@@ -5379,8 +5379,8 @@
                     RadiusTopRight: =8
                     Visible: =_varEditUser
                     Width: =170
-                    X: =207
-                    Y: =650
+                    X: =210
+                    Y: =717
                     ZIndex: =30
 
                 Label13_76 As label:
@@ -5392,8 +5392,8 @@
                     Text: =varSimboloMaestros
                     Visible: =_varEditUser
                     Width: =31
-                    X: =17
-                    Y: =650
+                    X: =20
+                    Y: =717
                     ZIndex: =31
 
                 fechaCuota_2 As datepicker:
@@ -5410,8 +5410,8 @@
                     Size: =12
                     Visible: =_varEditUser
                     Width: =160
-                    X: =212
-                    Y: =653
+                    X: =215
+                    Y: =720
                     ZIndex: =32
 
                 Icon5_19 As icon.Help:
@@ -5448,6 +5448,38 @@
                     X: =20
                     Y: =254
                     ZIndex: =35
+
+                Label13_59 As label:
+                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =28
+                    PaddingLeft: =0
+                    Text: ="Sedes"
+                    Visible: =_varEditUser
+                    X: =18
+                    Y: =502
+                    ZIndex: =36
+
+                TextInput9_29 As text:
+                    BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                    Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
+                    Default: =LookUp(colMiUsuario,Mail=_selectedUser.Mail,DisplayName)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+                    Font: =Font.'Segoe UI'
+                    Height: =36
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Visible: =_varEditUser
+                    Width: =360
+                    X: =18
+                    Y: =538
+                    ZIndex: =37
 
                 Group46Firma_1 As group:
                     Height: =5
@@ -5523,6 +5555,26 @@
                         X: =165
                         Y: =8
                         ZIndex: =22
+
+                ComboBox4_SedesU_1 As combobox:
+                    BorderStyle: =BorderStyle.None
+                    ChevronBackground: =RGBA(0, 0, 0, 0)
+                    ChevronFill: =RGBA(0, 0, 0, 1)
+                    DefaultSelectedItems: =Filter('public.medical_center_users_relacion', id_usuario = _varEditUserV2.id )
+                    DisplayFields: =["sede"]
+                    DisplayMode: =If(dpEstadoCivil_DCA_39.Selected.rol = "Doctor",DisplayMode.Disabled,DisplayMode.Edit)
+                    Height: =30
+                    InputTextPlaceholder: ="Seleccione una opción"
+                    IsSearchable: =false
+                    Items: ='public.medical_center_sedes'
+                    OnChange: =Set(_varUSedesEdit, Self.SelectedItems);
+                    SearchFields: =["sede"]
+                    SearchItems: =[]
+                    Visible: =_varEditUser
+                    Width: =350
+                    X: =23
+                    Y: =541
+                    ZIndex: =38
 
     GroupChecklistVerificación_9 As group:
         Height: =5
@@ -7776,20 +7828,16 @@
                     id_doctor: ComboBox5.Selected.id,
                     correo: LookUp('public.Medical_Center_Usuario', id = ComboBox5.Selected.id).Correo,
                     disponibilidad: LookUp('public.Medical_Center_Usuario', id = ComboBox5.Selected.id).Disponibilidad,
-                    contacto: Value(TextInput47_14.Text)
+                    contacto: Value(TextInput47_14.Text),
+                    estado: true
                     });
                     
-                    Patch(
-                        'public.Medical_Center_R&D_Relacion',
-                        LookUp(
-                            'public.Medical_Center_R&D_Relacion',
-                            id = _varID_RD
-                        ),
-                        {
-                            estado: true
-                        }
-                    );
-                    
+                    Patch('public.medical_center_users_relacion', Defaults('public.medical_center_users_relacion'),{
+                    id_us_relacion: First(SortByColumns('public.medical_center_users_relacion',"id_us_relacion",SortOrder.Descending)).id_us_relacion +1,
+                    id_sede : _varEspV2.id_sede,
+                    id_usuario: ComboBox5.Selected.id,
+                    correo: ComboBox5.Selected.Correo
+                    });
                     UpdateContext({_varNewEUsers:false});
                 PressedFill: =RGBA(44, 97, 112, 1)
                 RadiusBottomLeft: =8

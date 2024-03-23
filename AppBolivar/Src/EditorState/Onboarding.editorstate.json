@@ -944,7 +944,7 @@
       "MetaDataIDKey": "",
       "Name": "circuloOnboarding2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1085,7 +1085,7 @@
       "MetaDataIDKey": "",
       "Name": "circuloOnboarding3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4108,7 +4108,7 @@
       "MetaDataIDKey": "",
       "Name": "txtCirculoOnboarding",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
