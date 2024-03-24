@@ -3428,7 +3428,7 @@ Home As screen:
         BorderStyle: =BorderStyle.None
         ChevronBackground: =RGBA(0, 0, 0, 0)
         ChevronFill: =RGBA(0, 0, 0, 1)
-        DefaultSelectedItems: =First('public.medical_center_sedes')
+        DefaultSelectedItems: =//Debe aparecer la primer sede que estoy en la relacion
         DisplayFields: =["sede"]
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold

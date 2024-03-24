@@ -4608,6 +4608,7 @@
                 OnSelect: |-
                     =Remove('public.Medical_Center_Usuario', GalleryUsuariosV3.Selected);
                     RemoveIf('public.medical_center_users_relacion', id_usuario = _varDUser.id);
+                    //REMOVER IF DOCTOR A LA TABLA RELACION DOCTOR
                     UpdateContext({_varDUsers: false});
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
@@ -5110,13 +5111,19 @@
                         
                         });
                         
-                        
+                        If(dpEstadoCivil_DCA_39.Selected.rol = "Doctor", "",
                         ForAll(_varUSedesEdit As  temp, 
                         Patch('public.medical_center_users_relacion', LookUp('public.medical_center_users_relacion', id_usuario = _varEditUserV2.id),{
                         
                          id_sede: temp.id
                          
-                        }));
+                        })
+                        ));
+                        
+                        
+                        
+                        
+                        
                         
                         UpdateContext({_varEditUser:false})
                     PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
