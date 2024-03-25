@@ -83,7 +83,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_39 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_consulta
+                        Default: =varDatosHistoriaNutricion.motivo_consulta
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -122,7 +122,7 @@ scHistoriaMedicaNutricion As screen:
 
                     RichTextEditor1_30 As richTextEditor:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
+                        Default: =varDatosHistoriaNutricion.enfermedad_actual
                         Height: =180
                         Width: =810
                         Y: =192
@@ -151,7 +151,7 @@ scHistoriaMedicaNutricion As screen:
 
                     RichTextEditor1_31 As richTextEditor:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).síntomas_signos
+                        Default: =varDatosHistoriaNutricion.síntomas_signos
                         Height: =180
                         Width: =810
                         Y: =440
@@ -206,7 +206,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_40 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento_farmacológico
+                        Default: =varDatosHistoriaNutricion.tratamiento_farmacológico
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -245,7 +245,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_41 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento_nutricional
+                        Default: =varDatosHistoriaNutricion.tratamiento_nutricional
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -331,7 +331,7 @@ scHistoriaMedicaNutricion As screen:
 
                     RichTextEditor1_33 As richTextEditor:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares
+                        Default: =varDatosHistoriaNutricion.antecedentes_familiares
                         Height: =180
                         Width: =810
                         Y: =326
@@ -339,7 +339,7 @@ scHistoriaMedicaNutricion As screen:
 
                     RichTextEditor1_32 As richTextEditor:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales
+                        Default: =varDatosHistoriaNutricion.antecedentes_personales
                         Height: =180
                         Width: =810
                         Y: =83
@@ -394,7 +394,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_42 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).apetito
+                        Default: =varDatosHistoriaNutricion.apetito
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -433,7 +433,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_43 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cigarrillo
+                        Default: =varDatosHistoriaNutricion.cigarrillo
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -471,7 +471,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_44 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alcohol
+                        Default: =varDatosHistoriaNutricion.alcohol
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -510,7 +510,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_45 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).actividad_física
+                        Default: =varDatosHistoriaNutricion.actividad_física
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -548,7 +548,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_46 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).sueño
+                        Default: =varDatosHistoriaNutricion.sueño
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -587,7 +587,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_47 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).menstruación
+                        Default: =varDatosHistoriaNutricion.menstruación
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -625,7 +625,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_48 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).síntomas_gastrointestinales
+                        Default: =varDatosHistoriaNutricion.síntomas_gastrointestinales
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -664,7 +664,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_49 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).nauseas
+                        Default: =varDatosHistoriaNutricion.nauseas
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -702,7 +702,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_50 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vómitos
+                        Default: =varDatosHistoriaNutricion.vómitos
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -741,7 +741,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_51 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).flatulencia
+                        Default: =varDatosHistoriaNutricion.flatulencia
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -779,7 +779,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_52 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diarrea
+                        Default: =varDatosHistoriaNutricion.diarrea
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -817,7 +817,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_53 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).estreñimiento
+                        Default: =varDatosHistoriaNutricion.estreñimiento
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -854,7 +854,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_54 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).micción
+                        Default: =varDatosHistoriaNutricion.micción
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -891,7 +891,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_55 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).masticación
+                        Default: =varDatosHistoriaNutricion.masticación
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -929,7 +929,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_56 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alergias_intolerancias_alimentarias
+                        Default: =varDatosHistoriaNutricion.alergias_intolerancias_alimentarias
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -967,7 +967,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_58 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).número_comidas_dia
+                        Default: =varDatosHistoriaNutricion.número_comidas_dia
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1006,7 +1006,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_59 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vasos_dia
+                        Default: =varDatosHistoriaNutricion.vasos_dia
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1045,7 +1045,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_60 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).prepara_alimento
+                        Default: =varDatosHistoriaNutricion.prepara_alimento
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1084,7 +1084,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_61 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).come_rápido
+                        Default: =varDatosHistoriaNutricion.come_rápido
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1123,7 +1123,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_63 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alimentos_desagrado
+                        Default: =varDatosHistoriaNutricion.alimentos_desagrado
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1161,7 +1161,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_62 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alimentos_gustan
+                        Default: =varDatosHistoriaNutricion.alimentos_gustan
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1199,7 +1199,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_57 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).acidez
+                        Default: =varDatosHistoriaNutricion.acidez
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1262,7 +1262,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_64 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).lácteos
+                        Default: =varDatosHistoriaNutricion.lácteos
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1301,7 +1301,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_65 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vegetales
+                        Default: =varDatosHistoriaNutricion.vegetales
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1339,7 +1339,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_66 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).frutas
+                        Default: =varDatosHistoriaNutricion.frutas
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1378,7 +1378,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_67 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cereales
+                        Default: =varDatosHistoriaNutricion.cereales
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1417,7 +1417,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_68 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).carnes
+                        Default: =varDatosHistoriaNutricion.carnes
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1455,7 +1455,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_69 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).grasas
+                        Default: =varDatosHistoriaNutricion.grasas
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1494,7 +1494,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_70 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).azúcar
+                        Default: =varDatosHistoriaNutricion.azúcar
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1584,7 +1584,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_34 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).desayuno
+                        Default: =varDatosHistoriaNutricion.desayuno
                         Height: =170
                         Width: =100
                         ZIndex: =6
@@ -1629,7 +1629,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_35 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda
+                        Default: =varDatosHistoriaNutricion.merienda
                         Height: =170
                         Width: =100
                         ZIndex: =6
@@ -1674,7 +1674,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_36 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).almuerzo
+                        Default: =varDatosHistoriaNutricion.almuerzo
                         Height: =170
                         Width: =100
                         ZIndex: =3
@@ -1719,7 +1719,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_37 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda2
+                        Default: =varDatosHistoriaNutricion.merienda2
                         Height: =170
                         Width: =100
                         ZIndex: =3
@@ -1764,7 +1764,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_38 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cena
+                        Default: =varDatosHistoriaNutricion.cena
                         Height: =170
                         Width: =100
                         ZIndex: =3
@@ -1809,7 +1809,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_39 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda3
+                        Default: =varDatosHistoriaNutricion.merienda3
                         Height: =170
                         Width: =100
                         ZIndex: =3
@@ -2303,7 +2303,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_40 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).comentarios_adicionales
+                        Default: =varDatosHistoriaNutricion.comentarios_adicionales
                         Height: =170
                         Width: =100
                         ZIndex: =3
