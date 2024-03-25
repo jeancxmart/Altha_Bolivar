@@ -9153,7 +9153,16 @@
                             );
                             
                             
-                            
+                            //NAVIGATE
+                            If(
+                                LookUp(
+                                    'public.Medical_Center_Historial_Principal',
+                                    DNI_CI = TicketSelected.DNI_Paciente,
+                                    DNI_CI
+                                ) = TicketSelected.DNI_Paciente,
+                              If(getUser.Rol= "Administrador" And  LookUp('public.Medical_Center_Ticket', id =  TicketSelected.id_Ticket).caja_finalizada = false ,  Navigate(Caja) & Refresh('public.Medical_Center_Counter'),Navigate('Consulta Medica Dashboard'));
+                              ""
+                            );
                             
                             
                             UpdateContext({_varRECETAR:false});
@@ -10158,16 +10167,7 @@
                             
                             LookUp('public.Medical_Center_Historial_Principal',DNI_CI=TicketSelected.DNI_Paciente,Nombres)&" " &LookUp('public.Medical_Center_Historial_Principal',DNI_CI=TicketSelected.DNI_Paciente,Apellidos)));
                             
-                            //NAVIGATE
-                            If(
-                                LookUp(
-                                    'public.Medical_Center_Historial_Principal',
-                                    DNI_CI = TicketSelected.DNI_Paciente,
-                                    DNI_CI
-                                ) = TicketSelected.DNI_Paciente,
-                              If(getUser.Rol= "Administrador" And  LookUp('public.Medical_Center_Ticket', id =  TicketSelected.id_Ticket).caja_finalizada = false ,  Navigate(Caja) & Refresh('public.Medical_Center_Counter'),Navigate('Consulta Medica Dashboard'));
-                              ""
-                            );
+                            
                             
                             Clear(colDescansoMedico);
                             Reset(CheckboxRecetaMedica);Reset(CheckboxDescansoMedico);Reset(CheckboxExamenesSolicitados);Set(SolicitarExamenSelected,Blank())

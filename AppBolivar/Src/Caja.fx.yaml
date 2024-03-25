@@ -1233,53 +1233,7 @@ Caja As screen:
                     Size: =12
                     Text: |-
                         =/*varSimboloMaestros & Text(Round(Value(Sum(galItemsPago.AllItems;Monto))/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico'; id_sede = _varSede.id;Moneda)="SOLES";18%;16%))+1);2);"#,#0.00")*/
-                        varSimboloMaestros & Text(
-                            Sum(
-                                Round(
-                                    Value(Label40_20.Text) / Value(
-                                        Value(
-                                            If(
-                                                LookUp(
-                                                    'public.Medical_Center_Consultorio_Medico',
-                                                    id_sede = _varSede.id,
-                                                    Moneda
-                                                ) = "SOLES",
-                                                18%,
-                                                16%
-                                            )
-                                        ) + 1
-                                    ),
-                                    2
-                                ),
-                                Round(
-                                    Value(Label40_20.Text) / Value(
-                                        Value(
-                                            If(
-                                                LookUp(
-                                                    'public.Medical_Center_Consultorio_Medico',
-                                                    id_sede = _varSede.id,
-                                                    Moneda
-                                                ) = "SOLES",
-                                                18%,
-                                                16%
-                                            )
-                                        ) + 1
-                                    ),
-                                    2
-                                ) * Value(
-                                    If(
-                                        LookUp(
-                                            'public.Medical_Center_Consultorio_Medico',
-                                            id_sede = _varSede.id,
-                                            Moneda
-                                        ) = "SOLES",
-                                        18%,
-                                        16%
-                                    )
-                                )
-                            ),
-                            "#,#0.00"
-                        )
+                        varSimboloMaestros & Text(Sum(Filter(itemsPago, Pago = false) , Monto), "#,#0.00")
                     Visible: =_varCaja
                     Width: =76
                     X: =564
@@ -1317,9 +1271,8 @@ Caja As screen:
                     Height: =24
                     Size: =12
                     Text: |-
-                        =/*varSimboloMaestros&Text(Round(Value(Label40_20.Text)/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico';id_sede=_varSede.id;Moneda)="SOLES";18%;16%))+1);2)*Value(If(LookUp('public.Medical_Center_Consultorio_Medico';id_sede=_varSede.id;Moneda)="SOLES";18%;16%));"#,#0.00")*/
-                        varSimboloMaestros & Text(
-                           Value(Label40_20.Text) * 0.18, "#,#0.00"
+                        =varSimboloMaestros & Text(
+                          Sum(Filter(itemsPago, Pago = false) , Monto) * 0.18, "#,#0.00"
                         )
                     Visible: =_varCaja
                     Width: =76
@@ -1358,7 +1311,7 @@ Caja As screen:
                     Height: =24
                     Size: =12
                     Text: |-
-                        =varSimboloMaestros& Text(Value(Label40_20.Text) + lblIGV.Text, "#,#0.00")
+                        =varSimboloMaestros& Text(Sum(Filter(itemsPago, Pago = false) , Monto) + Sum(Filter(itemsPago, Pago = false) , Monto) * 0.18 , "#,#0.00")
                     Visible: =_varCaja
                     Width: =76
                     X: =113
@@ -1397,14 +1350,14 @@ Caja As screen:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: |-
-                            =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=true),Monto)),"#,#0.00")// CORREGIR VALOR
+                            =varSimboloMaestros& Text(Sum(Filter(itemsPago, Pago = true) , Monto) + Sum(Filter(itemsPago, Pago = true) , Monto) * 0.18 , "#,#0.00")
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         DisplayMode: =DisplayMode.Disabled
                         Font: =Font.'Segoe UI'
                         Format: =TextFormat.Number
                         HintText: |-
-                            =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=true),Monto)),"#,#0.00")// CORREGIR VALOR
+                            =varSimboloMaestros& Text(Sum(Filter(itemsPago, Pago = true) , Monto) + Sum(Filter(itemsPago, Pago = true) , Monto) * 0.18 , "#,#0.00")
                         LayoutMinWidth: =40
                         Size: =12
                         X: =501
@@ -1441,7 +1394,7 @@ Caja As screen:
                         Font: =Font.'Segoe UI'
                         Format: =TextFormat.Number
                         HintText: |-
-                            =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=false),Monto)  + lblIGV.Text),"#,#0.00")
+                            =varSimboloMaestros& Text(Sum(Filter(itemsPago, Pago = false) , Monto) + Sum(Filter(itemsPago, Pago = false) , Monto) * 0.18 , "#,#0.00")
                         LayoutMinWidth: =40
                         Size: =12
                         X: =501
@@ -1628,7 +1581,7 @@ Caja As screen:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: |-
-                            =Text(Sum(Filter(itemsPago, Pago = false), Monto) + lblIGV.Text, "#,#0.00")
+                            =Text(Sum(Filter(itemsPago, Pago = false) , Monto) + Sum(Filter(itemsPago, Pago = false) , Monto) * 0.18 , "#,#0.00")
                         DisabledBorderColor: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(241, 242, 246, 1)
@@ -1885,7 +1838,7 @@ Caja As screen:
                                 ).id + ItemsPendientePago.valor,
                                 Tipo_Pago: dpMedioPago.Selected.Nombre,
                                 Usuario: User().Email,
-                                Monto: ItemsPendientePago.Monto,
+                                Monto: ItemsPendientePago.Monto + Value(ItemsPendientePago.Monto * 0.18),
                                 id_sede: _varSede.id,
                                 id_servicio: ItemsPendientePago.id_servicio_pago,
                                 Paciente: LookUp(
