@@ -10,7 +10,7 @@ Caja As screen:
         Width: =39
         X: =814
         Y: =401
-        ZIndex: =1
+        ZIndex: =3
 
     Button9_4 As button:
         BorderColor: =ColorFondoBoton
@@ -25,7 +25,7 @@ Caja As screen:
         Width: =49
         X: =1057
         Y: =119
-        ZIndex: =2
+        ZIndex: =4
 
     Icon_Refresh_2 As icon.Reload:
         Color: =ColorFondoBoton
@@ -41,13 +41,13 @@ Caja As screen:
         Width: =49
         X: =1057
         Y: =119
-        ZIndex: =3
+        ZIndex: =5
 
     Rectangle3_11 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =96
         Width: =1366
-        ZIndex: =4
+        ZIndex: =6
 
     img_Logo_Dashboard_Caja As image:
         Height: =80
@@ -56,25 +56,7 @@ Caja As screen:
         Width: =118
         X: =30
         Y: =8
-        ZIndex: =5
-
-    btn_Emergencia_Dashboard_Caja As button:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Fill: =RGBA(232, 17, 17, 1)
-        Font: =Font.'Segoe UI'
-        Height: =44
-        OnSelect: |-
-            =UpdateContext({_varEmergenciaAtencionCliente:true})
-        RadiusBottomLeft: =8
-        RadiusBottomRight: =8
-        RadiusTopLeft: =8
-        RadiusTopRight: =8
-        Size: =14
-        Text: ="EMERGENCIA"
-        Width: =280
-        X: =835
-        Y: =26
-        ZIndex: =13
+        ZIndex: =7
 
     Group12 As group:
         Height: =5
@@ -95,7 +77,7 @@ Caja As screen:
             Width: =48
             X: =980
             Y: =44
-            ZIndex: =6
+            ZIndex: =8
 
         Button2_46 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -109,7 +91,7 @@ Caja As screen:
             Width: =48
             X: =902
             Y: =48
-            ZIndex: =7
+            ZIndex: =9
 
         Button2_47 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -126,7 +108,7 @@ Caja As screen:
             Width: =280
             X: =830
             Y: =26
-            ZIndex: =8
+            ZIndex: =10
 
         TextInput5_51 As text:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -145,7 +127,7 @@ Caja As screen:
             Width: =500
             X: =309
             Y: =24
-            ZIndex: =9
+            ZIndex: =11
 
         Image18_15 As image:
             Height: =27
@@ -154,7 +136,7 @@ Caja As screen:
             Width: =29
             X: =762
             Y: =34
-            ZIndex: =10
+            ZIndex: =12
 
         lbl_Perfil_Dashboard_Caja As label:
             BorderColor: =RGBA(32, 54, 71, 1)
@@ -174,7 +156,7 @@ Caja As screen:
             Width: =142
             X: =1224
             Y: =24
-            ZIndex: =11
+            ZIndex: =13
 
         img_Perfil_Dashboard_Caja As image:
             BorderColor: =RGBA(32, 54, 71, 1)
@@ -192,14 +174,32 @@ Caja As screen:
             Width: =48
             X: =1164
             Y: =24
-            ZIndex: =12
+            ZIndex: =14
+
+    btn_Emergencia_Dashboard_Caja As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(232, 17, 17, 1)
+        Font: =Font.'Segoe UI'
+        Height: =44
+        OnSelect: |-
+            =UpdateContext({_varEmergenciaAtencionCliente:true})
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="EMERGENCIA"
+        Width: =280
+        X: =835
+        Y: =26
+        ZIndex: =15
 
     Rectangle5_31 As rectangle:
         Fill: =ColorFondoBoton
         Height: =2
         Width: =1366
         Y: =96
-        ZIndex: =14
+        ZIndex: =16
 
     Image12_30 As image:
         Height: =80
@@ -213,7 +213,7 @@ Caja As screen:
         Width: =119
         X: =631
         Y: =8
-        ZIndex: =15
+        ZIndex: =17
 
     btn_Registro_Caja_1 As button:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -238,7 +238,7 @@ Caja As screen:
         Width: =216
         X: =30
         Y: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Reportes)="Limitado",202,367)
-        ZIndex: =16
+        ZIndex: =18
 
     img_Registro_Caja_1 As image:
         BorderColor: =RGBA(32, 54, 71, 1)
@@ -255,7 +255,7 @@ Caja As screen:
         Y: |-
             =//382
             btn_Registro_Caja_1.Y +15
-        ZIndex: =17
+        ZIndex: =19
 
     btn__Dashboard_Caja_1 As button:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -281,7 +281,7 @@ Caja As screen:
         Width: =216
         X: =30
         Y: =285
-        ZIndex: =18
+        ZIndex: =20
 
     img_Dashboard_Caja_1 As image:
         BorderColor: =RGBA(32, 54, 71, 1)
@@ -297,7 +297,7 @@ Caja As screen:
         Width: =25
         X: =53
         Y: =302
-        ZIndex: =19
+        ZIndex: =21
 
     btn_Registro_Caja As button:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -323,7 +323,7 @@ Caja As screen:
         Width: =216
         X: =30
         Y: =202
-        ZIndex: =20
+        ZIndex: =22
 
     img_Registro_Caja As image:
         BorderColor: =RGBA(32, 54, 71, 1)
@@ -339,7 +339,7 @@ Caja As screen:
         Width: =25
         X: =53
         Y: =217
-        ZIndex: =21
+        ZIndex: =23
 
     btn__Dashboard_Caja As button:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -362,7 +362,7 @@ Caja As screen:
         Width: =216
         X: =30
         Y: =120
-        ZIndex: =22
+        ZIndex: =24
 
     img_Dashboard_Caja As image:
         BorderColor: =RGBA(32, 54, 71, 1)
@@ -377,7 +377,7 @@ Caja As screen:
         Width: =25
         X: =53
         Y: =137
-        ZIndex: =23
+        ZIndex: =25
 
     btn_Salir_Caja As button:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -403,7 +403,7 @@ Caja As screen:
         Width: =216
         X: =30
         Y: =676
-        ZIndex: =24
+        ZIndex: =26
 
     img_Salir_Caja As image:
         BorderColor: =RGBA(32, 54, 71, 1)
@@ -418,7 +418,7 @@ Caja As screen:
         Width: =25
         X: =53
         Y: =693
-        ZIndex: =25
+        ZIndex: =27
 
     Rectangle_Separador_Dashboard_Caja As rectangle:
         BorderColor: =RGBA(32, 54, 71, 1)
@@ -431,29 +431,42 @@ Caja As screen:
         Width: =1
         X: =276
         Y: =96
-        ZIndex: =26
+        ZIndex: =28
 
     gal_Paciente_Dashboard_Caja As gallery.galleryVertical:
         Height: =548
-        Items: |-
-            =   Search( SortByColumns(  Filter('public.Medical_Center_Counter',id_sede = _varSede.id,estado="En Cola" Or estado="Pagado",etapa="Caja",Text(fecha,"dd/mm/yyyy") = Text(Today(),"dd/mm/yyyy")),"id",SortOrder.Descending),Proper(txt_Buscador_Dashboard_Caja.Text), "Paciente","usuario","Servicio")
-              
-               
-                 
-            
-                                
-            
-            
-            
-            
-            
-                                
+        Items: |
+            =Search(
+                SortByColumns(
+                    Filter(
+                        AddColumns('public.Medical_Center_Counter', "fecha_format",
+                        Text(
+                            fecha,
+                            "dd/mm/yyyy"
+                        )),
+                        id_sede = _varSede.id,
+                        estado = "En Cola" Or estado = "Pagado",
+                        etapa = "Caja",
+                        If(
+                            IsBlank(DatePickerCitas_1.SelectedDate),
+                            fecha_format = Text(Today(),"dd/mm/yyyy"),
+                            fecha_format = Text(DatePickerCitas_1.SelectedDate,"dd/mm/yyyy")
+                        )
+                    ),
+                    "id",
+                    SortOrder.Descending
+                ),
+                Proper(txt_Buscador_Dashboard_Caja.Text),
+                "Paciente",
+                "usuario",
+                "Servicio", "etapa", "estado"
+            )
         Layout: =Layout.Vertical
         TemplateSize: =128
         Width: =1088
         X: =277
         Y: =219
-        ZIndex: =27
+        ZIndex: =29
 
         TextInput13 As text:
             BorderStyle: =BorderStyle.None
@@ -718,7 +731,7 @@ Caja As screen:
         Width: =532
         X: =306
         Y: =120
-        ZIndex: =28
+        ZIndex: =30
 
     txt_Buscador_Dashboard_Caja As text:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -741,7 +754,7 @@ Caja As screen:
         Width: =380
         X: =306
         Y: =172
-        ZIndex: =29
+        ZIndex: =31
 
     img_Lupa_Dashboard_Caja As image:
         Height: =14
@@ -749,7 +762,7 @@ Caja As screen:
         Width: =19
         X: =322
         Y: =183
-        ZIndex: =30
+        ZIndex: =32
 
     btn_Reporte_Caja As button:
         BorderColor: =ColorFondoBoton
@@ -775,7 +788,7 @@ Caja As screen:
         Width: =200
         X: =1136
         Y: =120
-        ZIndex: =31
+        ZIndex: =33
 
     img_Reporte_Caja As image:
         BorderColor: =RGBA(32, 54, 71, 1)
@@ -791,7 +804,7 @@ Caja As screen:
         Width: =20
         X: =1158
         Y: =133
-        ZIndex: =32
+        ZIndex: =34
 
     Label40_10 As label:
         Font: =Font.'Segoe UI'
@@ -802,7 +815,7 @@ Caja As screen:
         Width: =89
         X: =63
         Y: =253
-        ZIndex: =47
+        ZIndex: =35
 
     Label40_20 As label:
         Font: =Font.'Segoe UI'
@@ -815,7 +828,7 @@ Caja As screen:
         Width: =76
         X: =364
         Y: =257
-        ZIndex: =58
+        ZIndex: =36
 
     iconCerrarRevision As icon.Cancel:
         Color: =RGBA(0, 0, 0, 1)
@@ -828,54 +841,7 @@ Caja As screen:
         Width: =38
         X: =912
         Y: =120
-        ZIndex: =60
-
-    Calendario_34 As group:
-        Height: =5
-        Width: =5
-        X: =20
-        Y: =20
-        ZIndex: =64
-
-        Button2_114 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.None
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =48
-            Text: =""
-            Visible: =
-            Width: =48
-            X: =836
-            Y: =116
-            ZIndex: =61
-
-        Icon3_50 As icon.Bell:
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(0, 0, 0, 1)
-            Height: =40
-            Icon: =Icon.Print
-            PaddingBottom: =7
-            PaddingLeft: =7
-            PaddingRight: =7
-            PaddingTop: =7
-            Visible: =
-            Width: =40
-            X: =840
-            Y: =120
-            ZIndex: =62
-
-        Button2_115 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =48
-            HoverFill: =RGBA(0, 0, 0, 0.1)
-            PressedFill: =RGBA(0, 0, 0, 0.15)
-            Text: =""
-            Visible: =
-            Width: =48
-            X: =836
-            Y: =116
-            ZIndex: =63
+        ZIndex: =37
 
     lbl_Sin_Pacientes_Dashboard_Caja As label:
         Align: =Align.Center
@@ -889,7 +855,7 @@ Caja As screen:
         Width: =1042
         X: =316
         Y: =460
-        ZIndex: =68
+        ZIndex: =45
 
     Rectangle27 As rectangle:
         Fill: =RGBA(0, 0, 0, 0.29)
@@ -898,141 +864,14 @@ Caja As screen:
             =UpdateContext({_varReporteCaja:false})
         Visible: =_varReporteCaja
         Width: =1366
-        ZIndex: =69
-
-    Group16 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =75
-
-        TextInput16 As text:
-            BorderStyle: =BorderStyle.None
-            Default: =""
-            DisabledFill: =RGBA(241, 242, 246, 1)
-            DisplayMode: =DisplayMode.Disabled
-            Height: =386
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Visible: =_varReporteCaja
-            Width: =400
-            X: =535
-            Y: =160
-            ZIndex: =70
-
-        Label42 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =24
-            Size: =18
-            Text: ="Reporte del día"
-            Visible: =_varReporteCaja
-            Width: =246
-            X: =555
-            Y: =180
-            ZIndex: =71
-
-        Gallery3 As gallery.galleryVertical:
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DelayItemLoading: =true
-            Height: =155
-            Items: =Filter('public.Medical_Center_Pagos',Text(Fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy"),Usuario=User().Email, id_sede = _varSede.id,Estatus="Pagado")
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            TemplateSize: =41
-            Visible: =_varReporteCaja
-            Width: =400
-            X: =535
-            Y: =236
-            ZIndex: =72
-
-            Label43 As label:
-                Height: =24
-                OnSelect: =Select(Parent)
-                Text: =ThisItem.Tipo_Pago
-                Width: =216
-                X: =20
-                ZIndex: =1
-
-            Label44 As label:
-                Height: =24
-                OnSelect: =Select(Parent)
-                Text: |-
-                    =varSimboloMaestros & Text(ThisItem.Monto,"# ###.00")
-                Width: =100
-                X: =290
-                ZIndex: =2
-
-        Rectangle28 As rectangle:
-            Fill: =RGBA(0, 0, 0, 1)
-            Height: =2
-            Visible: =_varReporteCaja
-            Width: =360
-            X: =555
-            Y: =396
-            ZIndex: =73
-
-        Label45 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Size: =14
-            Text: ="Total"
-            Visible: =_varReporteCaja
-            X: =555
-            Y: =402
-            ZIndex: =74
-
-        Label45_1 As label:
-            Height: =24
-            Text: |-
-                =varSimboloMaestros & Text(Sum(Filter('public.Medical_Center_Pagos',Text(Fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy"),Usuario=User().Email, id_sede = _varSede.id,Estatus="Pagado"),Monto),"# ###.00")
-            Visible: =_varReporteCaja
-            Width: =100
-            X: =825
-            Y: =402
-            ZIndex: =75
-
-        ButtonAtender_17 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Fill: =ColorFondoBoton
-            Font: =Font.'Segoe UI'
-            Height: =44
-            HoverBorderColor: =ColorFondoBoton
-            HoverColor: |-
-                =ColorValue("#26495B")
-            HoverFill: =RGBA(255, 255, 255, 1)
-            OnSelect: |-
-                =/*Patch('public.Medical_Center_Counter';LookUp('public.Medical_Center_Counter';id=ThisItem.id);
-                {   
-                  estado:"En Cola";
-                  etapa:"Triaje";
-                  usuario:User().Email
-                })
-                
-                */
-                UpdateContext({_varReporteCaja:false})
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Size: =12
-            Text: ="SALIR"
-            Visible: =_varReporteCaja
-            Width: =360
-            X: =555
-            Y: =472
-            ZIndex: =76
+        ZIndex: =46
 
     conCaja As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.28)
         Height: =Parent.Height
         Visible: =_varCaja
         Width: =Parent.Width
-        ZIndex: =77
+        ZIndex: =54
 
         Container21_2 As groupContainer.verticalAutoLayoutContainer:
             BorderStyle: =BorderStyle.None
@@ -1478,34 +1317,9 @@ Caja As screen:
                     Height: =24
                     Size: =12
                     Text: |-
-                        =varSimboloMaestros & Text(
-                            Round(
-                                Value(Label40_20.Text) / Value(
-                                    Value(
-                                        If(
-                                            LookUp(
-                                                'public.Medical_Center_Consultorio_Medico',
-                                                id_sede = _varSede.id,
-                                                Moneda
-                                            ) = "SOLES",
-                                            18%,
-                                            16%
-                                        )
-                                    ) + 1
-                                ),
-                                2
-                            ) * Value(
-                                If(
-                                    LookUp(
-                                        'public.Medical_Center_Consultorio_Medico',
-                                        id_sede = _varSede.id,
-                                        Moneda
-                                    ) = "SOLES",
-                                    18%,
-                                    16%
-                                )
-                            ),
-                            "#,#0.00"
+                        =/*varSimboloMaestros&Text(Round(Value(Label40_20.Text)/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico';id_sede=_varSede.id;Moneda)="SOLES";18%;16%))+1);2)*Value(If(LookUp('public.Medical_Center_Consultorio_Medico';id_sede=_varSede.id;Moneda)="SOLES";18%;16%));"#,#0.00")*/
+                        varSimboloMaestros & Text(
+                           Value(Label40_20.Text) * 0.18, "#,#0.00"
                         )
                     Visible: =_varCaja
                     Width: =76
@@ -1544,53 +1358,7 @@ Caja As screen:
                     Height: =24
                     Size: =12
                     Text: |-
-                        =varSimboloMaestros & Text(
-                            Sum(
-                                Round(
-                                    Value(Label40_20.Text) / Value(
-                                        Value(
-                                            If(
-                                                LookUp(
-                                                    'public.Medical_Center_Consultorio_Medico',
-                                                    id_sede = _varSede.id,
-                                                    Moneda
-                                                ) = "SOLES",
-                                                18%,
-                                                16%
-                                            )
-                                        ) + 1
-                                    ),
-                                    2
-                                ),
-                                Round(
-                                    Value(Label40_20.Text) / Value(
-                                        Value(
-                                            If(
-                                                LookUp(
-                                                    'public.Medical_Center_Consultorio_Medico',
-                                                    id_sede = _varSede.id,
-                                                    Moneda
-                                                ) = "SOLES",
-                                                18%,
-                                                16%
-                                            )
-                                        ) + 1
-                                    ),
-                                    2
-                                ) * Value(
-                                    If(
-                                        LookUp(
-                                            'public.Medical_Center_Consultorio_Medico',
-                                            id_sede = _varSede.id,
-                                            Moneda
-                                        ) = "SOLES",
-                                        18%,
-                                        16%
-                                    )
-                                )
-                            ) + lblIGV.Text,
-                            "#,#0.00"
-                        )
+                        =varSimboloMaestros& Text(Value(Label40_20.Text) + lblIGV.Text, "#,#0.00")
                     Visible: =_varCaja
                     Width: =76
                     X: =113
@@ -1673,7 +1441,7 @@ Caja As screen:
                         Font: =Font.'Segoe UI'
                         Format: =TextFormat.Number
                         HintText: |-
-                            =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=false),Monto)),"#,#0.00")
+                            =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=false),Monto)  + lblIGV.Text),"#,#0.00")
                         LayoutMinWidth: =40
                         Size: =12
                         X: =501
@@ -1732,32 +1500,7 @@ Caja As screen:
 
         lblIGV As label:
             Text: |
-                =Round(
-                        Value(Label40_20.Text) / Value(
-                            Value(
-                                If(
-                                    LookUp(
-                                        'public.Medical_Center_Consultorio_Medico',
-                                        id_sede = _varSede.id,
-                                        Moneda
-                                    ) = "SOLES",
-                                    18%,
-                                    16%
-                                )
-                            ) + 1
-                        ),
-                        2
-                    ) * Value(
-                        If(
-                            LookUp(
-                                'public.Medical_Center_Consultorio_Medico',
-                                id_sede = _varSede.id,
-                                Moneda
-                            ) = "SOLES",
-                            18%,
-                            16%
-                        )
-                )
+                =Value(Label40_20.Text) * 0.18
                   
             Visible: =false
             Width: =40
@@ -1770,7 +1513,7 @@ Caja As screen:
         Height: =Parent.Height
         Visible: =_varRegistrarPago
         Width: =Parent.Width
-        ZIndex: =78
+        ZIndex: =55
 
         Container21 As groupContainer.verticalAutoLayoutContainer:
             BorderStyle: =BorderStyle.None
@@ -1912,7 +1655,7 @@ Caja As screen:
                         AlignInContainer: =AlignInContainer.Stretch
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
-                        Text: =If(dpTipoPago.Selected.id=1,"DNI","RUC")
+                        Text: =If(dpTipoPago.Selected.id=1,"RUC","DNI")
                         X: =501
                         Y: =67
                         ZIndex: =1
@@ -2241,7 +1984,7 @@ Caja As screen:
         Height: =Parent.Height
         Visible: =_ViewBoletaPago
         Width: =Parent.Width
-        ZIndex: =79
+        ZIndex: =56
 
         Container21_1 As groupContainer.verticalAutoLayoutContainer:
             BorderStyle: =BorderStyle.None
@@ -2627,6 +2370,180 @@ Caja As screen:
             Y: =Container21_1.Y+0.5*Self.Height
             ZIndex: =2
 
+    Calendario_34 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =64
+
+        Button2_114 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =48
+            Text: =""
+            Visible: =
+            Width: =48
+            X: =836
+            Y: =116
+            ZIndex: =38
+
+        Icon3_50 As icon.Bell:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Print
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            Visible: =
+            Width: =40
+            X: =840
+            Y: =120
+            ZIndex: =39
+
+        Button2_115 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =48
+            HoverFill: =RGBA(0, 0, 0, 0.1)
+            PressedFill: =RGBA(0, 0, 0, 0.15)
+            Text: =""
+            Visible: =
+            Width: =48
+            X: =836
+            Y: =116
+            ZIndex: =40
+
+    Group16 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =75
+
+        TextInput16 As text:
+            BorderStyle: =BorderStyle.None
+            Default: =""
+            DisabledFill: =RGBA(241, 242, 246, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =386
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varReporteCaja
+            Width: =400
+            X: =535
+            Y: =160
+            ZIndex: =47
+
+        Label42 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =18
+            Text: ="Reporte del día"
+            Visible: =_varReporteCaja
+            Width: =246
+            X: =555
+            Y: =180
+            ZIndex: =48
+
+        Gallery3 As gallery.galleryVertical:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DelayItemLoading: =true
+            Height: =155
+            Items: =Filter('public.Medical_Center_Pagos',Text(Fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy"),Usuario=User().Email, id_sede = _varSede.id,Estatus="Pagado")
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =41
+            Visible: =_varReporteCaja
+            Width: =400
+            X: =535
+            Y: =236
+            ZIndex: =49
+
+            Label43 As label:
+                Height: =24
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Tipo_Pago
+                Width: =216
+                X: =20
+                ZIndex: =1
+
+            Label44 As label:
+                Height: =24
+                OnSelect: =Select(Parent)
+                Text: |-
+                    =varSimboloMaestros & Text(ThisItem.Monto,"# ###.00")
+                Width: =100
+                X: =290
+                ZIndex: =2
+
+        Rectangle28 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =2
+            Visible: =_varReporteCaja
+            Width: =360
+            X: =555
+            Y: =396
+            ZIndex: =50
+
+        Label45 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =14
+            Text: ="Total"
+            Visible: =_varReporteCaja
+            X: =555
+            Y: =402
+            ZIndex: =51
+
+        Label45_1 As label:
+            Height: =24
+            Text: |-
+                =varSimboloMaestros & Text(Sum(Filter('public.Medical_Center_Pagos',Text(Fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy"),Usuario=User().Email, id_sede = _varSede.id,Estatus="Pagado"),Monto),"# ###.00")
+            Visible: =_varReporteCaja
+            Width: =100
+            X: =825
+            Y: =402
+            ZIndex: =52
+
+        ButtonAtender_17 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =ColorFondoBoton
+            Font: =Font.'Segoe UI'
+            Height: =44
+            HoverBorderColor: =ColorFondoBoton
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =/*Patch('public.Medical_Center_Counter';LookUp('public.Medical_Center_Counter';id=ThisItem.id);
+                {   
+                  estado:"En Cola";
+                  etapa:"Triaje";
+                  usuario:User().Email
+                })
+                
+                */
+                UpdateContext({_varReporteCaja:false})
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="SALIR"
+            Visible: =_varReporteCaja
+            Width: =360
+            X: =555
+            Y: =472
+            ZIndex: =53
+
     Group_Emeregencia_Dashboard_Caja As group:
         Height: =5
         Width: =5
@@ -2641,7 +2558,7 @@ Caja As screen:
                 =UpdateContext({_varEmergenciaAtencionCliente:false})
             Visible: =_varEmergenciaAtencionCliente
             Width: =1366
-            ZIndex: =64
+            ZIndex: =41
 
         txt_Fondo_Emergencia_Dashboard_Caja As text:
             Default: =""
@@ -2657,7 +2574,7 @@ Caja As screen:
             Width: =404
             X: =513
             Y: =138
-            ZIndex: =65
+            ZIndex: =42
 
         lbl_Emergencia_Dashboard_Caja As label:
             Align: =Align.Center
@@ -2670,7 +2587,7 @@ Caja As screen:
             Width: =400
             X: =513
             Y: =162
-            ZIndex: =66
+            ZIndex: =43
 
         img_btn_Emergencia_Dashboard_Caja As image:
             Height: =376
@@ -2681,5 +2598,37 @@ Caja As screen:
             Width: =361
             X: =513
             Y: =156
-            ZIndex: =67
+            ZIndex: =44
+
+    GroupSearchFecha_1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =82
+
+        TextInput26_1 As text:
+            Default: =""
+            DisabledBorderColor: |-
+                =ColorValue("#26495B")
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =36
+            Width: =200
+            X: =713
+            Y: =172
+            ZIndex: =1
+
+        DatePickerCitas_1 As datepicker:
+            BorderStyle: =BorderStyle.None
+            DefaultDate: =
+            Height: =30
+            IconBackground: =
+            IconFill: =RGBA(0, 0, 0, 1)
+            InputTextPlaceholder: ="--/--/--"
+            PaddingBottom: =0
+            Width: =190
+            X: =718
+            Y: =175
+            ZIndex: =2
 
