@@ -5108,8 +5108,8 @@
                         RNE: txtRNE_4.Text,
                         Meta:txtMeta_3.Text, 
                         fechaCuota: fechaCuota_2.SelectedDate,
-                        NombreImage: varAzureFileUsuarioEdit.Id,
-                        url:"https://blobauroranuevo.blob.core.windows.net"&varAzureFileUsuarioEdit.Path
+                        NombreImage: If(CountRows(Adjunto_27.Attachments)>0, varAzureFileUsuarioEdit.Id, _varEditUserV2.NombreImage),
+                        url: If(CountRows(Adjunto_27.Attachments)>0,"https://blobauroranuevo.blob.core.windows.net"&varAzureFileUsuarioEdit.Path, _varEditUserV2.url)
                         
                         });
                         
