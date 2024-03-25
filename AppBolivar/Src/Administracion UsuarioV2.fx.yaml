@@ -2939,15 +2939,14 @@
                         BorderStyle: =BorderStyle.None
                         ChevronBackground: =RGBA(0, 0, 0, 0)
                         ChevronFill: =RGBA(0, 0, 0, 1)
-                        DisplayFields: =["City"]
+                        DisplayFields: =["DisplayName"]
                         Height: =30
                         InputTextPlaceholder: ="Seleccione una opción"
-                        IsSearchable: =false
                         Items: |-
                             =UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText})
-                        SearchFields: =["City"]
+                        SearchFields: =["DisplayName"]
                         SearchItems: |-
-                            =Search(UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText}),ComboBox4.SearchText,"City")
+                            =Search(UsuariosdeOffice365.SearchUser({searchTerm:Self.SearchText}),ComboBox4.SearchText,"DisplayName")
                         SelectMultiple: =false
                         Width: =350
                         X: =25
@@ -5567,7 +5566,7 @@
                     BorderStyle: =BorderStyle.None
                     ChevronBackground: =RGBA(0, 0, 0, 0)
                     ChevronFill: =RGBA(0, 0, 0, 1)
-                    DefaultSelectedItems: =Filter('public.medical_center_users_relacion', id_usuario = _varEditUserV2.id )
+                    DefaultSelectedItems: =Filter(AddColumns('public.medical_center_sedes' As temp , "id_relacion", LookUp('public.medical_center_users_relacion', correo = TextInput9_31.Text).id_sede), id = id_relacion)
                     DisplayFields: =["sede"]
                     DisplayMode: =If(dpEstadoCivil_DCA_39.Selected.rol = "Doctor",DisplayMode.Disabled,DisplayMode.Edit)
                     Height: =30
