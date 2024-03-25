@@ -1393,7 +1393,54 @@ Caja As screen:
                     Height: =24
                     Size: =12
                     Text: |-
-                        =varSimboloMaestros & Text(Round(Value(Sum(galItemsPago.AllItems,Monto))/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%))+1),2),"#,#0.00")
+                        =/*varSimboloMaestros & Text(Round(Value(Sum(galItemsPago.AllItems;Monto))/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico'; id_sede = _varSede.id;Moneda)="SOLES";18%;16%))+1);2);"#,#0.00")*/
+                        varSimboloMaestros & Text(
+                            Sum(
+                                Round(
+                                    Value(Label40_20.Text) / Value(
+                                        Value(
+                                            If(
+                                                LookUp(
+                                                    'public.Medical_Center_Consultorio_Medico',
+                                                    id_sede = _varSede.id,
+                                                    Moneda
+                                                ) = "SOLES",
+                                                18%,
+                                                16%
+                                            )
+                                        ) + 1
+                                    ),
+                                    2
+                                ),
+                                Round(
+                                    Value(Label40_20.Text) / Value(
+                                        Value(
+                                            If(
+                                                LookUp(
+                                                    'public.Medical_Center_Consultorio_Medico',
+                                                    id_sede = _varSede.id,
+                                                    Moneda
+                                                ) = "SOLES",
+                                                18%,
+                                                16%
+                                            )
+                                        ) + 1
+                                    ),
+                                    2
+                                ) * Value(
+                                    If(
+                                        LookUp(
+                                            'public.Medical_Center_Consultorio_Medico',
+                                            id_sede = _varSede.id,
+                                            Moneda
+                                        ) = "SOLES",
+                                        18%,
+                                        16%
+                                    )
+                                )
+                            ),
+                            "#,#0.00"
+                        )
                     Visible: =_varCaja
                     Width: =76
                     X: =564
@@ -1431,7 +1478,35 @@ Caja As screen:
                     Height: =24
                     Size: =12
                     Text: |-
-                        =varSimboloMaestros & Text(Round(Value(Label40_20.Text)/Value(Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%))+1),2)*Value(If(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda)="SOLES",18%,16%)),"#,#0.00")
+                        =varSimboloMaestros & Text(
+                            Round(
+                                Value(Label40_20.Text) / Value(
+                                    Value(
+                                        If(
+                                            LookUp(
+                                                'public.Medical_Center_Consultorio_Medico',
+                                                id_sede = _varSede.id,
+                                                Moneda
+                                            ) = "SOLES",
+                                            18%,
+                                            16%
+                                        )
+                                    ) + 1
+                                ),
+                                2
+                            ) * Value(
+                                If(
+                                    LookUp(
+                                        'public.Medical_Center_Consultorio_Medico',
+                                        id_sede = _varSede.id,
+                                        Moneda
+                                    ) = "SOLES",
+                                    18%,
+                                    16%
+                                )
+                            ),
+                            "#,#0.00"
+                        )
                     Visible: =_varCaja
                     Width: =76
                     X: =113
@@ -1513,7 +1588,7 @@ Caja As screen:
                                         16%
                                     )
                                 )
-                            ),
+                            ) + lblIGV.Text,
                             "#,#0.00"
                         )
                     Visible: =_varCaja
@@ -1591,7 +1666,7 @@ Caja As screen:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: |-
-                            =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=false),Monto)),"#,#0.00")
+                            =varSimboloMaestros & Text(Value(Sum(Filter(itemsPago,Pago=false),Monto)) + lblIGV.Text,"#,#0.00")
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         DisplayMode: =DisplayMode.Disabled
@@ -1654,6 +1729,41 @@ Caja As screen:
             X: =Container21_2.X+Container21_2.Width-1.5*Self.Width
             Y: =Container21_2.Y+0.5*Self.Height
             ZIndex: =2
+
+        lblIGV As label:
+            Text: |
+                =Round(
+                        Value(Label40_20.Text) / Value(
+                            Value(
+                                If(
+                                    LookUp(
+                                        'public.Medical_Center_Consultorio_Medico',
+                                        id_sede = _varSede.id,
+                                        Moneda
+                                    ) = "SOLES",
+                                    18%,
+                                    16%
+                                )
+                            ) + 1
+                        ),
+                        2
+                    ) * Value(
+                        If(
+                            LookUp(
+                                'public.Medical_Center_Consultorio_Medico',
+                                id_sede = _varSede.id,
+                                Moneda
+                            ) = "SOLES",
+                            18%,
+                            16%
+                        )
+                )
+                  
+            Visible: =false
+            Width: =40
+            X: =783
+            Y: =507
+            ZIndex: =3
 
     conRegistroPago As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.28)
@@ -1774,7 +1884,8 @@ Caja As screen:
                     TextInput1_4 As text:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =Text(Sum(Filter(itemsPago, Pago = false), Monto))
+                        Default: |-
+                            =Text(Sum(Filter(itemsPago, Pago = false), Monto) + lblIGV.Text, "#,#0.00")
                         DisabledBorderColor: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(241, 242, 246, 1)
