@@ -793,7 +793,7 @@ scHistoriaMedica As screen:
                             Color: =RGBA(0, 0, 0, 1)
                             Height: =40
                             Icon: =Icon.Cancel
-                            OnSelect: =Back()
+                            OnSelect: =Navigate('Consulta Medica Atencion')
                             Visible: =If(_ViewFormularioDCA||_viewHistoriaSec,false,true)
                             Width: =42
                             X: =156
