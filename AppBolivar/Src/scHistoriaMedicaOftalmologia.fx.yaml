@@ -1,4 +1,4 @@
-scHistoriaMedicaNutricion_1 As screen:
+scHistoriaMedicaOftalmologia As screen:
 
     CanvasHCTodas_2 As fluidGrid.fluidGridWithBlankCard:
         BorderStyle: =BorderStyle.None
@@ -2983,7 +2983,8 @@ scHistoriaMedicaNutricion_1 As screen:
                 Size: =28
                 Text: |-
                     =//If(_viewHistoriaSec,varEspecialidadSelected.Especialidad,"Historia Médica" )
-                    varEspecialidadSelected.Especialidad
+                    //varEspecialidadSelected.Especialidad
+                    "Oftalmología"
                 Visible: |-
                     =//_ViewFormularioDCA||_viewHistoriaSec
                     true

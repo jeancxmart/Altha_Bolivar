@@ -2460,7 +2460,8 @@ scHistoriaMedicaNutricion As screen:
                 Size: =28
                 Text: |-
                     =//If(_viewHistoriaSec,varEspecialidadSelected.Especialidad,"Historia Médica" )
-                    varEspecialidadSelected.Especialidad
+                    //varEspecialidadSelected.Especialidad
+                    "Nutrición"
                 Visible: |-
                     =//_ViewFormularioDCA||_viewHistoriaSec
                     true

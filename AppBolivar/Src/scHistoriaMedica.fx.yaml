@@ -2927,8 +2927,192 @@ scHistoriaMedica As screen:
                                     HoverColor: |-
                                         =ColorValue("#26495B")
                                     HoverFill: =RGBA(255, 255, 255, 1)
-                                    OnSelect: |-
-                                        =UpdateContext({_viewNewRecord:true});Reset(dpEspecialidades)
+                                    OnSelect: |+
+                                        =//UpdateContext({_viewNewRecord:true});Reset(dpEspecialidades)
+                                        
+                                        ClearCollect(colOftalLejosCerca, 
+                                        {tipo: 1, des: "Lejos OD", avsc: "", esf: "", cyl: "", eje: "", avcc: "", dip: ""},
+                                        {tipo: 2, des: "Lejos OI", avsc: "", esf: "", cyl: "", eje: "", avcc: "", dip: ""},
+                                        {tipo: 3, des: "Cerca OD", avsc: "", esf: "", cyl: "", eje: "", avcc: "", dip: ""},
+                                        {tipo: 4, des: "Cerca OI", avsc: "", esf: "", cyl: "", eje: "", avcc: "", dip: ""}
+                                        );
+                                        
+                                        ClearCollect(colNutricionMedida,
+                                        {peso:0,talla:0,pctg_grasa:0,pctg_agua:0,pt:0,cmb:0,cintura:0,peso_ideal:0,peso_usual:0,peso_max:0,peso_min:0,dx_nutr:""}
+                                        );
+                                        
+                                        
+                                        UpdateContext({_viewNewRecord:false});
+                                        //UpdateContext({varEspecialidadSelected:LookUp('public.Medical_Center_Especialidad',Especialidad=dpEspecialidades.Selected.Especialidad)});
+                                        Set(varEspecialidadSelected,LookUp('public.Medical_Center_Especialidad',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)));
+                                        
+                                        Switch(
+                                            varEspecialidadSelected.plantilla,
+                                            //Si es NUTRICION
+                                            "nutricion",
+                                            ClearCollect(formularioCamposLineales,Filter(AddColumns(
+                                            Table(
+                                                {num:1,plantilla:"nutricion",seccion: "Datos", pregunta: "Motivo de Consulta", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:2,plantilla:"nutricion",seccion: "Datos", pregunta: "Enfermedad Actual", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoMul"},
+                                                {num:3,plantilla:"nutricion",seccion: "Datos", pregunta: "Síntomas y Signos", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoMul"},
+                                                {num:4,plantilla:"nutricion",seccion: "Tratamientos que actualmente recibe", pregunta: "Farmacológico", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:5,plantilla:"nutricion",seccion: "Tratamientos que actualmente recibe", pregunta: "Nutricional", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:6,plantilla:"nutricion",seccion: "Antecedentes", pregunta: "Personales", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoMul"},
+                                                {num:7,plantilla:"nutricion",seccion: "Antecedentes", pregunta: "Familiares", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoMul"},
+                                                {num:8,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Apetito", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:9,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Cigarrillo", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:10,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Alcohol", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:11,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Actividad Física", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:12,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Sueño", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:13,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Menstruación", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:14,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Síntomas Gastrointestinales", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:15,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Náuseas", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:16,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Vómitos", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:17,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Acidez", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:18,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Flatulencia", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:19,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Diarrea", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:20,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Estreñimiento", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:21,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Micción", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:22,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Masticación", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:23,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Alergias o Intolerancias Alimentarias", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:24,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Número de Comidas al dia", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:25,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Cantidad de Vasos de agua al dia", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:26,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Prepara sus Alimentos", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:27,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Come Rápido", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:28,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Alimentos que mas le gustan", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:29,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Alimentos/Preparaciones que no le agradan", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:30,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Lácteos", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:31,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Vegetales", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:32,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Frutas", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:33,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Cereales", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:34,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Carnes", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:35,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Grasas", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                                {num:36,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Azúcar", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"}
+                                                ),"itemID",Text(GUID()),"openSection",false),plantilla=varEspecialidadSelected.plantilla));
+                                                Navigate(scHistoriaMedicaNutricion),
+                                                
+                                                //Si es OFTALMOLOGIA
+                                                "oftalmologia",
+                                                Navigate(scHistoriaMedicaOftalmologia),
+                                        
+                                                //Si es PEDIATRIA
+                                                "pediatria",
+                                                Blank(),
+                                        
+                                                //Si es OTORRINORALINGOLOGIA
+                                                "otorrinolaringologia",
+                                                Blank(),
+                                        
+                                                //Si es GENERAL
+                                                "generica",
+                                                Blank(),
+                                        
+                                                //Si es GIRUGIA PEDIATRICA
+                                                "cirugia_pediatrica",
+                                                Blank(),
+                                        
+                                                //Si es GINECOLOGIA
+                                                "ginecologia",
+                                                Blank()
+                                        )
+                                        /*
+                                        ClearCollect(formularioCamposLineales,Filter(AddColumns(
+                                            Table(
+                                            {num:1,plantilla:"ginecologia",seccion: "Antecedentes Familiares", pregunta: "Padre", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:2,plantilla:"ginecologia",seccion: "Antecedentes Familiares", pregunta: "Madre", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:3,plantilla:"ginecologia",seccion: "Antecedentes Familiares", pregunta: "Hermanos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:4,plantilla:"ginecologia",seccion: "Antecedentes Familiares", pregunta: "Hijos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:5,plantilla:"ginecologia",seccion: "Antecedentes de la Pareja", pregunta: "Enfermedades crónicas", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:6,plantilla:"ginecologia",seccion: "Antecedentes de la Pareja", pregunta: "Tipeaje", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:7,plantilla:"ginecologia",seccion: "Antecedentes de la Pareja", pregunta: "ETS", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:8,plantilla:"ginecologia",seccion: "Antecedentes Personales", pregunta: "Patología de Base", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:9,plantilla:"ginecologia",seccion: "Antecedentes Personales", pregunta: "Alergía de Medicantos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:10,plantilla:"ginecologia",seccion: "Antecedentes Personales", pregunta: "Antecedentes Quirugicos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:11,plantilla:"ginecologia",seccion: "Antecedentes Personales", pregunta: "Hábitos Tóxicos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:12,plantilla:"ginecologia",seccion: "Antecedentes Personales", pregunta: "Hábitos Fisiológicos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:13,plantilla:"ginecologia",seccion: "Antecedentes Ginecológicos", pregunta: "Menarquía", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "fecha"},
+                                            {num:14,plantilla:"ginecologia",seccion: "Antecedentes Ginecológicos", pregunta: "Sexarquía", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "fecha"},
+                                            {num:15,plantilla:"ginecologia",seccion: "Antecedentes Ginecológicos", pregunta: "NPS", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "numero"},
+                                            {num:16,plantilla:"ginecologia",seccion: "Antecedentes Ginecológicos", pregunta: "FUR", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "fecha"},
+                                            {num:17,plantilla:"ginecologia",seccion: "Antecedentes Ginecológicos", pregunta: "Anticonceptivo", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:18,plantilla:"ginecologia",seccion: "Antecedentes Ginecológicos", pregunta: "Tiempo", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:19,plantilla:"ginecologia",seccion: "Antecedentes Ginecológicos", pregunta: "Suspensión", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:20,plantilla:"ginecologia",seccion: "Antecedentes Ginecológicos", pregunta: "Citología Anterior", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:21,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Gestas", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "numero"},
+                                            {num:22,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Deseados", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "numero"},
+                                            {num:23,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Partos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "numero"},
+                                            {num:24,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Abortos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "numero"},
+                                            {num:25,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Motivo", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:26,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Intergenesia", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:27,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Malformaciones", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:28,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Prematuridad", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:29,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "HTA", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:30,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Diabetes", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:31,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Infecciones", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:32,plantilla:"ginecologia",seccion: "Antecedentes Obstétricos", pregunta: "Otros", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:33,plantilla:"ginecologia",seccion: "Atención Prenatal", pregunta: "1ra Consulta", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "fecha"},
+                                            {num:34,plantilla:"ginecologia",seccion: "Atención Prenatal", pregunta: "TG", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "numero"},
+                                            {num:35,plantilla:"ginecologia",seccion: "Atención Prenatal", pregunta: "Controles Previos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:36,plantilla:"ginecologia",seccion: "Atención Prenatal", pregunta: "Examen Alterado", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:37,plantilla:"ginecologia",seccion: "Atención Prenatal", pregunta: "TTO Previo", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:38,plantilla:"ginecologia",seccion: "Examen Físico", pregunta: "Peso", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:39,plantilla:"ginecologia",seccion: "Examen Físico", pregunta: "PA", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:40,plantilla:"ginecologia",seccion: "Examen Físico", pregunta: "Piel", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:41,plantilla:"ginecologia",seccion: "Examen Físico", pregunta: "Mamas", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:42,plantilla:"ginecologia",seccion: "Examen Físico", pregunta: "Abdomen", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:43,plantilla:"ginecologia",seccion: "Examen Físico", pregunta: "Genitales", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                            {num:44,plantilla:"ginecologia",seccion: "Examen Físico", pregunta: "Neurológico", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                        
+                                        {num:1,plantilla:"nutricion",seccion: "Datos", pregunta: "Motivo de Consulta", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:2,plantilla:"nutricion",seccion: "Datos", pregunta: "Enfermedad Actual", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoMul"},
+                                        {num:3,plantilla:"nutricion",seccion: "Datos", pregunta: "Síntomas y Signos", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoMul"},
+                                        {num:4,plantilla:"nutricion",seccion: "Tratamientos que actualmente recibe", pregunta: "Farmacológico", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:5,plantilla:"nutricion",seccion: "Tratamientos que actualmente recibe", pregunta: "Nutricional", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:6,plantilla:"nutricion",seccion: "Antecedentes", pregunta: "Personales", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoMul"},
+                                        {num:7,plantilla:"nutricion",seccion: "Antecedentes", pregunta: "Familiares", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoMul"},
+                                        {num:8,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Apetito", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:9,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Cigarrillo", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:10,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Alcohol", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:11,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Actividad Física", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:12,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Sueño", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:13,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Menstruación", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:14,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Síntomas Gastrointestinales", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:15,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Náuseas", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:16,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Vómitos", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:17,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Acidez", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:18,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Flatulencia", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:19,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Diarrea", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:20,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Estreñimiento", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:21,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Micción", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:22,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Masticación", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:23,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Alergias o Intolerancias Alimentarias", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:24,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Número de Comidas al dia", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:25,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Cantidad de Vasos de agua al dia", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:26,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Prepara sus Alimentos", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:27,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Come Rápido", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:28,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Alimentos que mas le gustan", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:29,plantilla:"nutricion",seccion: "Hábitos Psico-biológicos", pregunta: "Alimentos/Preparaciones que no le agradan", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:30,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Lácteos", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:31,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Vegetales", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:32,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Frutas", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:33,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Cereales", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:34,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Carnes", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:35,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Grasas", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        {num:36,plantilla:"nutricion",seccion: "Frecuencia de Consumo de Alimentos", pregunta: "Azúcar", respuestaTexto: "", respuestaDate: Today(), respuestaValue: 0, tipo_respuesta: "textoLinea"},
+                                        
+                                        
+                                        {num:1,plantilla:"cirugia_pediatrica", seccion: "Diagnósticos", pregunta: "Diagnósticos", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                        {num:2,plantilla:"cirugia_pediatrica", seccion: "Tratamiento", pregunta: "Tratamiento", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                        {num:3,plantilla:"cirugia_pediatrica", seccion: "Paraclínico", pregunta: "Paraclínico", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                        {num:4,plantilla:"cirugia_pediatrica", seccion: "Recomendaciones", pregunta: "Recomendaciones", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "textoLinea"},
+                                        {num:5,plantilla:"cirugia_pediatrica", seccion: "Próxima cita", pregunta: "Próxima cita", respuestaTexto: "", respuestaDate: Blank(), respuestaValue: Blank(), tipo_respuesta: "fecha"}
+                                        ),"itemID",Text(GUID()),"openSection",false),plantilla=varEspecialidadSelected.plantilla)
+                                        );
+                                        */
+                                        //UpdateContext({_viewHistoriaSec:true})
+                                        
+                                        
+                                        
                                     RadiusBottomLeft: =8
                                     RadiusBottomRight: =8
                                     RadiusTopLeft: =8
@@ -14209,7 +14393,8 @@ scHistoriaMedica As screen:
                         ChevronFill: =RGBA(0, 0, 0, 0)
                         ChevronHoverBackground: =
                         ChevronHoverFill: =RGBA(0, 0, 0, 1)
-                        Default: =LookUp('public.Medical_Center_Especialidad',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad),Especialidad)
+                        Default: |
+                            =LookUp('public.Medical_Center_Especialidad',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad),Especialidad)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(255, 255, 255, 1)
                         DisplayMode: =DisplayMode.Disabled
@@ -14217,7 +14402,8 @@ scHistoriaMedica As screen:
                         Height: =36
                         HoverBorderColor: =
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        Items: =Filter(AddColumns(AddColumns(RenameColumns(Filter('public.Medical_Center_Especialidad',id_sede=_varSede.id),"id","idEsp"),"id_relacion",LookUp('public.Medical_Center_S&E_Relacion',id_sede=_varSede.id&&id_especialidad=idEsp,id)),"Atiende",LookUp('public.Medical_Center_R&D_Relacion',id_doctor=getUser.id&&id_se_relacion=id_relacion,estado)),Atiende= true )
+                        Items: |
+                            =//Filter(AddColumns(AddColumns(RenameColumns(Filter('public.Medical_Center_Especialidad',id_sede=_varSede.id),"id","idEsp"),"id_relacion",LookUp('public.Medical_Center_S&E_Relacion',id_sede=_varSede.id&&id_especialidad=idEsp,id)),"Atiende",LookUp('public.Medical_Center_R&D_Relacion',id_doctor=getUser.id&&id_se_relacion=id_relacion,estado)),Atiende= true )
                         Size: =12
                         Width: =Parent.Width-2*Self.X
                         X: =1
@@ -14247,7 +14433,7 @@ scHistoriaMedica As screen:
                         
                         UpdateContext({_viewNewRecord:false});
                         //UpdateContext({varEspecialidadSelected:LookUp('public.Medical_Center_Especialidad',Especialidad=dpEspecialidades.Selected.Especialidad)});
-                        Set(varEspecialidadSelected,LookUp('public.Medical_Center_Especialidad',Especialidad=dpEspecialidades.Selected.Especialidad));
+                        Set(varEspecialidadSelected,LookUp('public.Medical_Center_Especialidad',id=LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)));
                         
                         ClearCollect(formularioCamposLineales,Filter(AddColumns(
                             Table(
