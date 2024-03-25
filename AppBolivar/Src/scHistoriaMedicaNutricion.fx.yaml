@@ -2783,8 +2783,22 @@ scHistoriaMedicaNutricion As screen:
                         Reset(tiScHistoria1_60),
                         Reset(tiScHistoria1_61),
                         Reset(tiScHistoria1_62),
-                        Reset(tiScHistoria1_63)
-                        )
+                        Reset(tiScHistoria1_63),
+                        Reset(tiScHistoria1_64),
+                        Reset(tiScHistoria1_65),
+                        Reset(tiScHistoria1_66),
+                        Reset(tiScHistoria1_67),
+                        Reset(tiScHistoria1_68),
+                        Reset(tiScHistoria1_69),
+                        Reset(tiScHistoria1_70),
+                        Reset(RichTextEditor1_34),
+                        Reset(RichTextEditor1_35),
+                        Reset(RichTextEditor1_36),
+                        Reset(RichTextEditor1_37),
+                        Reset(RichTextEditor1_38),
+                        Reset(RichTextEditor1_39)
+                        );
+                        Navigate(scHistoriaMedica)
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
                     RadiusTopLeft: =8

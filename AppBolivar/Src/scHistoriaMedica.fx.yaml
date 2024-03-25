@@ -14349,7 +14349,7 @@ scHistoriaMedica As screen:
                         ),"itemID",Text(GUID()),"openSection",false),plantilla=varEspecialidadSelected.plantilla)
                         );
                         
-                        UpdateContext({_viewHistoriaSec:true})
+                        //UpdateContext({_viewHistoriaSec:true})
                         
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
