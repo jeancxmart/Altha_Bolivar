@@ -83,7 +83,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_39 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_consulta
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_consulta
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -122,7 +122,7 @@ scHistoriaMedicaNutricion As screen:
 
                     RichTextEditor1_30 As richTextEditor:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
                         Height: =180
                         Width: =810
                         Y: =192
@@ -151,7 +151,7 @@ scHistoriaMedicaNutricion As screen:
 
                     RichTextEditor1_31 As richTextEditor:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).síntomas_signos
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).síntomas_signos
                         Height: =180
                         Width: =810
                         Y: =440
@@ -206,7 +206,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_40 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento_farmacológico
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento_farmacológico
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -245,7 +245,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_41 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento_nutricional
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento_nutricional
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -331,7 +331,7 @@ scHistoriaMedicaNutricion As screen:
 
                     RichTextEditor1_33 As richTextEditor:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares
                         Height: =180
                         Width: =810
                         Y: =326
@@ -339,7 +339,7 @@ scHistoriaMedicaNutricion As screen:
 
                     RichTextEditor1_32 As richTextEditor:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales
                         Height: =180
                         Width: =810
                         Y: =83
@@ -394,7 +394,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_42 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).apetito
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).apetito
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -433,7 +433,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_43 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cigarrillo
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cigarrillo
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -471,7 +471,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_44 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alcohol
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alcohol
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -510,7 +510,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_45 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).actividad_física
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).actividad_física
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -548,7 +548,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_46 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).sueño
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).sueño
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -587,7 +587,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_47 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).menstruación
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).menstruación
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -625,7 +625,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_48 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).síntomas_gastrointestinales
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).síntomas_gastrointestinales
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -664,7 +664,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_49 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).nauseas
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).nauseas
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -702,7 +702,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_50 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vómitos
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vómitos
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -741,7 +741,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_51 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).flatulencia
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).flatulencia
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -779,7 +779,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_52 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diarrea
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diarrea
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -817,7 +817,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_53 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).estreñimiento
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).estreñimiento
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -854,7 +854,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_54 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).micción
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).micción
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -891,7 +891,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_55 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).masticación
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).masticación
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -929,7 +929,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_56 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alergias_intolerancias_alimentarias
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alergias_intolerancias_alimentarias
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -967,7 +967,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_58 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).número_comidas_dia
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).número_comidas_dia
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1006,7 +1006,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_59 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vasos_dia
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vasos_dia
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1045,7 +1045,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_60 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).prepara_alimento
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).prepara_alimento
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1084,7 +1084,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_61 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).come_rápido
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).come_rápido
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1123,7 +1123,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_63 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alimentos_desagrado
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alimentos_desagrado
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1161,7 +1161,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_62 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alimentos_gustan
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alimentos_gustan
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1199,7 +1199,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_57 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).acidez
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).acidez
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1262,7 +1262,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_64 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).lácteos
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).lácteos
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1301,7 +1301,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_65 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vegetales
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vegetales
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1339,7 +1339,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_66 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).frutas
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).frutas
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1378,7 +1378,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_67 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cereales
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cereales
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1417,7 +1417,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_68 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).carnes
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).carnes
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1455,7 +1455,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_69 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).grasas
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).grasas
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1494,7 +1494,7 @@ scHistoriaMedicaNutricion As screen:
 
                     tiScHistoria1_70 As text:
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).azúcar
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).azúcar
                         Font: =Font.'Segoe UI'
                         Height: =36
                         Mode: =
@@ -1584,7 +1584,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_34 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).desayuno
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).desayuno
                         Height: =170
                         Width: =100
                         ZIndex: =6
@@ -1629,7 +1629,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_35 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda
                         Height: =170
                         Width: =100
                         ZIndex: =6
@@ -1674,7 +1674,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_36 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).almuerzo
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).almuerzo
                         Height: =170
                         Width: =100
                         ZIndex: =3
@@ -1719,7 +1719,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_37 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda2
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda2
                         Height: =170
                         Width: =100
                         ZIndex: =3
@@ -1764,7 +1764,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_38 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cena
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cena
                         Height: =170
                         Width: =100
                         ZIndex: =3
@@ -1809,7 +1809,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_39 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda3
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda3
                         Height: =170
                         Width: =100
                         ZIndex: =3
@@ -1869,7 +1869,6 @@ scHistoriaMedicaNutricion As screen:
                         RadiusTopRight: =8
                         Size: =12
                         Text: ="Editar Medidas"
-                        Visible: =_viewHistoriaSec
                         X: =201
                         Y: =31
                         ZIndex: =3
@@ -2304,7 +2303,7 @@ scHistoriaMedicaNutricion As screen:
                     RichTextEditor1_40 As richTextEditor:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
-                        Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).comentarios_adicionales
+                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).comentarios_adicionales
                         Height: =170
                         Width: =100
                         ZIndex: =3
@@ -2511,6 +2510,7 @@ scHistoriaMedicaNutricion As screen:
                         Reset(RichTextEditor1_6);Reset(RichTextEditor1_7);Reset(RichTextEditor1_8);Reset(RichTextEditor1_9);Reset(RichTextEditor1_10);Reset(RichTextEditor1_11);Reset(RichTextEditor1_12);Reset(RichTextEditor1_5);Reset(RichTextEditor1_13);Reset(RichTextEditor1_14);Reset(RichTextEditor1_15);Reset(RichTextEditor1_16);Reset(RichTextEditor1_17);Reset(RichTextEditor1_18);Reset(RichTextEditor1_19);Reset(RichTextEditor1_20);Reset(inputPedriatria_1); Reset(inputPedriatria_12); Reset(inputPedriatria_13);Reset(input_HistGeneral_1);
                         Reset(input_HistGeneral_25);Reset(input_HistGeneral_26);Reset(input_HistGeneral_27);Reset(RichTextEditor1_21);
                         Reset(RichTextEditor1_22); Reset(RichTextEditor1_24); Reset(RichTextEditor1_23);
+                        Navigate(scHistoriaMedica)
                     PressedBorderColor: =ColorFondoBoton
                     PressedColor: =ColorFondoBoton
                     PressedFill: =RGBA(255, 255, 255, 1)
@@ -2939,4 +2939,680 @@ scHistoriaMedicaNutricion As screen:
             PaddingRight: =40
             Width: =100
             ZIndex: =4
+
+    ContainerPopUpNutri_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.25)
+        Height: =Parent.Height
+        Visible: =_varPopUpNutri
+        Width: =Parent.Width
+        ZIndex: =3
+
+        ContainerPopUpSon_2 As groupContainer.verticalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height-200
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =15
+            PaddingLeft: =15
+            PaddingRight: =15
+            PaddingTop: =15
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =700
+            X: =(Parent.Width - Self.Width) / 2
+            Y: =(Parent.Height - Self.Height) / 2
+            ZIndex: =1
+
+            lbEncabezado_86 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =35
+                OnSelect: =
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =15
+                Text: ="Nueva medida"
+                Width: =100
+                Y: =10
+                ZIndex: =1
+
+            Container23_4 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =78
+                LayoutGap: =15
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                Container25_26 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =1
+
+                    lbEncabezado_238 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Peso (kg)"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida1_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).peso
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+                Container25_32 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    lbEncabezado_239 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Talla (m)"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida2_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).talla
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+                Container25_33 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =3
+
+                    lbEncabezado_240 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="IMC"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida1_3 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =IfError(Round(tiNutriMedida1_1.Text/(tiNutriMedida2_1.Text^2),1),Blank())
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+            Container23_8 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =78
+                LayoutGap: =15
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                Container25_35 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =1
+
+                    lbEncabezado_241 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="% Grasa"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida3_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).pctg_grasa
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+                Container25_39 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    lbEncabezado_242 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="% Agua"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida4_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).pctg_agua
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+            Container23_10 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =78
+                LayoutGap: =15
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =4
+
+                Container25_40 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =1
+
+                    lbEncabezado_243 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="PT"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida5_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).pt
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+                Container25_41 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    lbEncabezado_244 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="CMB"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida6_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).cmb
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+                Container25_42 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =3
+
+                    lbEncabezado_245 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="C. Cintura"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida7_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).cintura
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+            Container23_11 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =78
+                LayoutGap: =15
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =5
+
+                Container25_43 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    ZIndex: =1
+
+                    lbEncabezado_246 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Peso Ideal"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida8_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).peso_ideal
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+                Container25_44 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    ZIndex: =2
+
+                    lbEncabezado_247 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Peso Usual"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida9_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).peso_usual
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+                Container25_45 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    ZIndex: =3
+
+                    lbEncabezado_248 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Peso Max"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida10_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).peso_max
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+                Container25_46 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    ZIndex: =4
+
+                    lbEncabezado_249 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Peso Min"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =1
+
+                    tiNutriMedida11_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).peso_min
+                        Format: =TextFormat.Number
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =2
+
+            Container23_12 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =78
+                LayoutGap: =15
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =7
+
+                Container25_47 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =1
+
+                    lbEncabezado_250 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        LayoutMinWidth: =50
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Dx Nutricional"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =3
+
+                    tiNutriMedida12_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(44, 46, 53, 1)
+                        Default: =First(colNutricionMedida).dx_nutr
+                        Height: =36
+                        LayoutMinWidth: =50
+                        Width: =388
+                        ZIndex: =4
+
+            btnGuardarOftal_2 As button:
+                AlignInContainer: =AlignInContainer.Stretch
+                BorderColor: |-
+                    =ColorValue("#26495B")
+                Fill: =ColorFondoBoton
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                HoverBorderColor: |-
+                    =ColorValue("#26495B")
+                HoverColor: |-
+                    =ColorValue("#26495B")
+                HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: |
+                    =UpdateIf(colNutricionMedida,true,
+                        {
+                            peso: Value(tiNutriMedida1_1.Text),
+                            talla: Value(tiNutriMedida2_1.Text),
+                            pctg_grasa: Value(tiNutriMedida3_1.Text),
+                            pctg_agua: Value(tiNutriMedida4_1.Text),
+                            pt: Value(tiNutriMedida5_1.Text),
+                            cmb: Value(tiNutriMedida6_1.Text),
+                            cintura: Value(tiNutriMedida7_1.Text),
+                            peso_ideal: Value(tiNutriMedida8_1.Text),
+                            peso_usual: Value(tiNutriMedida9_1.Text),
+                            peso_max: Value(tiNutriMedida10_1.Text),
+                            peso_min: Value(tiNutriMedida11_1.Text),
+                            dx_nutr: tiNutriMedida12_1.Text
+                        }
+                    );
+                    UpdateContext({_varPopUpNutri: false});
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Size: =12
+                Text: ="GUARDAR DATOS"
+                Visible: |-
+                    =//_viewHistoriaSec
+                    true
+                X: =201
+                Y: =31
+                ZIndex: =8
+
+        iconCerrarRegistroPago_10 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =37
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({_varPopUpNutri: false});
+            Width: =38
+            X: =ContainerPopUpSon_2.X+ContainerPopUpSon_2.Width-1.5*Self.Width
+            Y: =ContainerPopUpSon_2.Y+0.5*Self.Height
+            ZIndex: =2
 

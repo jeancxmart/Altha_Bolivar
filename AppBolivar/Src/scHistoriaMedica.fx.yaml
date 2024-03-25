@@ -3475,7 +3475,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).lugar_de_nacimiento
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).lugar_de_nacimiento
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -3554,7 +3554,7 @@ scHistoriaMedica As screen:
                                             ChevronFill: =RGBA(0, 0, 0, 1)
                                             ChevronHoverBackground: =
                                             ChevronHoverFill: =RGBA(0, 0, 0, 1)
-                                            Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).estado_civil
+                                            Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).estado_civil
                                             Font: =Font.'Segoe UI'
                                             Height: =36
                                             HoverBorderColor: =
@@ -3619,7 +3619,7 @@ scHistoriaMedica As screen:
                                             ChevronFill: =RGBA(0, 0, 0, 1)
                                             ChevronHoverBackground: =
                                             ChevronHoverFill: =RGBA(0, 0, 0, 1)
-                                            Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).nacionalidad
+                                            Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).nacionalidad
                                             Font: =Font.'Segoe UI'
                                             Height: =36
                                             HoverBorderColor: =
@@ -3680,7 +3680,7 @@ scHistoriaMedica As screen:
 
                                         dpScHistoriaFecha1 As datepicker:
                                             BorderStyle: =BorderStyle.None
-                                            DefaultDate: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fecha_probable_de_parto
+                                            DefaultDate: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fecha_probable_de_parto
                                             Font: =Font.'Segoe UI'
                                             Height: =Parent.Height
                                             IconBackground: =RGBA(255, 255, 255, 1)
@@ -3766,7 +3766,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_de_consulta
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_de_consulta
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -3846,7 +3846,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_1 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -3912,7 +3912,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_7 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_madre
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_madre
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -3937,7 +3937,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_8 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_padre
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_padre
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -3962,7 +3962,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_9 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_hermanos
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_hermanos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -3987,7 +3987,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_10 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_hijos
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares_hijos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4052,7 +4052,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_13 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_de_la_pareja_enfermedades_cronicas
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_de_la_pareja_enfermedades_cronicas
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4078,7 +4078,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_14 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_de_la_pareja_tipeaje
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_de_la_pareja_tipeaje
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4103,7 +4103,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_15 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_de_la_pareja_ets
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_de_la_pareja_ets
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4168,7 +4168,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_16 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_patologia_de_base
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_patologia_de_base
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4194,7 +4194,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_17 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_alergia_de_medicamentos
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_alergia_de_medicamentos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4220,7 +4220,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_18 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_antecedentes_quirurgicos
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_antecedentes_quirurgicos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4246,7 +4246,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_19 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_habitos_toxicos
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_habitos_toxicos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4272,7 +4272,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_20 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_habitos_fisiologicos
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales_habitos_fisiologicos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4337,7 +4337,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_21 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_menarquia
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_menarquia
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4363,7 +4363,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_22 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_sexarquia
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_sexarquia
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4389,7 +4389,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_23 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_nps
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_nps
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4415,7 +4415,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_24 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_fur
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_fur
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4440,7 +4440,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_25 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_anticonceptivo
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_anticonceptivo
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4465,7 +4465,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_26 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_tiempo
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_tiempo
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4490,7 +4490,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_27 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_suspension
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_suspension
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4516,7 +4516,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_28 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_citologia_anterior
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_ginecologicos_citologia_anterior
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4581,7 +4581,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_29 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_gestas
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_gestas
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4607,7 +4607,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_30 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_deseados
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_deseados
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4633,7 +4633,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_31 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_partos
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_partos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4659,7 +4659,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_32 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_abortos
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_abortos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4684,7 +4684,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_33 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_motivo
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_motivo
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4709,7 +4709,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_34 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_intergenesia
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_intergenesia
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4735,7 +4735,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_35 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_malformaciones
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_malformaciones
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4761,7 +4761,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_36 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_prematuridad
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_prematuridad
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4787,7 +4787,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_37 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_hta
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_hta
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4813,7 +4813,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_38 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_diabetes
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_diabetes
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4839,7 +4839,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_39 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_infecciones
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_infecciones
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4865,7 +4865,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_40 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_otros
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_obstetricos_otros
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4930,7 +4930,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_41 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_primera_consulta
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_primera_consulta
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4956,7 +4956,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_42 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_tg
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_tg
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -4982,7 +4982,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_43 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_controles_previos
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_controles_previos
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5008,7 +5008,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_44 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_examen_alterado
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_examen_alterado
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5034,7 +5034,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_45 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_tto_previo
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).atencion_prenatal_tto_previo
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5099,7 +5099,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_46 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_peso
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_peso
                                         Format: =TextFormat.Number
                                         Height: =37
                                         RadiusBottomLeft: =4
@@ -5126,7 +5126,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_47 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_pa
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_pa
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5152,7 +5152,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_48 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_piel
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_piel
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5178,7 +5178,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_49 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_mamas
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_mamas
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5203,7 +5203,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_50 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_abdomen
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_abdomen
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5228,7 +5228,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_51 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_genitales
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_genitales
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5253,7 +5253,7 @@ scHistoriaMedica As screen:
                                     txtinput_Gineco_52 As text:
                                         BorderColor: =RGBA(0, 0, 0, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_neurologico
+                                        Default: =//First(Filter(SortByColumns('public.MC_Historia_Ginecologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_neurologico
                                         Height: =37
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -5371,7 +5371,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).filiacion_ocupacion
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).filiacion_ocupacion
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5414,7 +5414,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_1 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).filiacion_procedencia
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).filiacion_procedencia
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5501,7 +5501,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_2 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_motivo
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_motivo
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5544,7 +5544,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_3 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_relato_enf
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_relato_enf
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5623,7 +5623,7 @@ scHistoriaMedica As screen:
 
                                 tiGinecoLugNacimieto_4 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_generales
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_generales
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -5678,7 +5678,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_3 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_familiares
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_familiares
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -5733,7 +5733,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_1 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_oftalmicas
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_oftalmicas
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -5788,7 +5788,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_2 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_alergias
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_alergias
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -5919,7 +5919,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_4 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_lensometria_od
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_lensometria_od
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -5962,7 +5962,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_5 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_lensometria_oi
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_lensometria_oi
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -6050,7 +6050,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_6 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_autorefracto_od
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_autorefracto_od
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -6093,7 +6093,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_7 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_autorefracto_oi
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_autorefracto_oi
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -6518,7 +6518,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_5 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_parpados_pestanas
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_parpados_pestanas
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6573,7 +6573,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_6 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_conjuntiva
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_conjuntiva
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6628,7 +6628,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_7 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_esclera
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_esclera
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6683,7 +6683,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_8 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_cornea
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_cornea
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6738,7 +6738,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_9 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_camara_anterior
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_camara_anterior
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6793,7 +6793,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_10 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_vh
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_vh
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6848,7 +6848,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_11 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_iris_pupila
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_iris_pupila
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -6945,7 +6945,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_8 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_pio_od
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_pio_od
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -6988,7 +6988,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_9 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_pio_oi
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_pio_oi
                                         Height: =36
                                         Reset: =resetear
                                         Width: =388
@@ -7077,7 +7077,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_16 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_arriba
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_arriba
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7119,7 +7119,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_17 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_izquierda
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_izquierda
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7161,7 +7161,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_18 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_abajo
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_abajo
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7203,7 +7203,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_19 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_derecha
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_derecha
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7292,7 +7292,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_20 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_arriba
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_arriba
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7334,7 +7334,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_21 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_izquierda
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_izquierda
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7376,7 +7376,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_23 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_abajo
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_abajo
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7418,7 +7418,7 @@ scHistoriaMedica As screen:
 
                                     TextInput15_24 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_derecha
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_derecha
                                         Height: =36
                                         Reset: =resetear
                                         Width: =160
@@ -7499,7 +7499,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_12 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_papila
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_papila
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -7554,7 +7554,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_13 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_excavacion
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_excavacion
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -7609,7 +7609,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_14 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_radio
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_radio
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -7664,7 +7664,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_15 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_vaso
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_vaso
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -7719,7 +7719,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_16 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_rav
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_rav
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -7774,7 +7774,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_17 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_macula
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_macula
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -7829,7 +7829,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_18 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_reflejo
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_reflejo
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -7884,7 +7884,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_19 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_retina
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_retina
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -7939,7 +7939,7 @@ scHistoriaMedica As screen:
                                 tiGinecoLugNacimieto_20 As text:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_dilatado_bal_muscular
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_dilatado_bal_muscular
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     OnChange: =
@@ -8028,7 +8028,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_2 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).impresion_diagnostica
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).impresion_diagnostica
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -8108,7 +8108,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_3 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -8186,7 +8186,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_4 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_complementarios
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_complementarios
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -8262,7 +8262,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_7 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_consulta
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_consulta
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8301,7 +8301,7 @@ scHistoriaMedica As screen:
 
                                 RichTextEditor1_21 As richTextEditor:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
                                     Height: =180
                                     Width: =810
                                     Y: =192
@@ -8330,7 +8330,7 @@ scHistoriaMedica As screen:
 
                                 RichTextEditor1_22 As richTextEditor:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).síntomas_signos
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).síntomas_signos
                                     Height: =180
                                     Width: =810
                                     Y: =440
@@ -8385,7 +8385,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_8 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento_farmacológico
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento_farmacológico
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8424,7 +8424,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_9 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento_nutricional
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento_nutricional
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8510,7 +8510,7 @@ scHistoriaMedica As screen:
 
                                 RichTextEditor1_23 As richTextEditor:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_familiares
                                     Height: =180
                                     Width: =810
                                     Y: =326
@@ -8518,7 +8518,7 @@ scHistoriaMedica As screen:
 
                                 RichTextEditor1_24 As richTextEditor:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecedentes_personales
                                     Height: =180
                                     Width: =810
                                     Y: =83
@@ -8573,7 +8573,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_10 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).apetito
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).apetito
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8612,7 +8612,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_11 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cigarrillo
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cigarrillo
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8650,7 +8650,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_12 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alcohol
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alcohol
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8689,7 +8689,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_13 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).actividad_física
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).actividad_física
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8727,7 +8727,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_14 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).sueño
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).sueño
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8766,7 +8766,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_15 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).menstruación
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).menstruación
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8804,7 +8804,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_16 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).síntomas_gastrointestinales
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).síntomas_gastrointestinales
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8843,7 +8843,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_17 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).nauseas
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).nauseas
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8881,7 +8881,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_18 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vómitos
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vómitos
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8920,7 +8920,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_19 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).flatulencia
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).flatulencia
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8958,7 +8958,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_20 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diarrea
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diarrea
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -8996,7 +8996,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_21 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).estreñimiento
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).estreñimiento
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9033,7 +9033,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_22 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).micción
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).micción
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9070,7 +9070,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_23 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).masticación
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).masticación
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9108,7 +9108,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_24 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alergias_intolerancias_alimentarias
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alergias_intolerancias_alimentarias
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9146,7 +9146,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_25 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).número_comidas_dia
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).número_comidas_dia
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9185,7 +9185,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_26 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vasos_dia
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vasos_dia
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9224,7 +9224,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_27 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).prepara_alimento
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).prepara_alimento
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9263,7 +9263,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_28 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).come_rápido
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).come_rápido
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9302,7 +9302,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_30 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alimentos_desagrado
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alimentos_desagrado
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9340,7 +9340,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_31 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alimentos_gustan
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).alimentos_gustan
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9378,7 +9378,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_38 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).acidez
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).acidez
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9441,7 +9441,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_29 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).lácteos
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).lácteos
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9480,7 +9480,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_32 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vegetales
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).vegetales
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9518,7 +9518,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_33 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).frutas
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).frutas
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9557,7 +9557,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_34 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cereales
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cereales
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9596,7 +9596,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_35 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).carnes
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).carnes
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9634,7 +9634,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_36 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).grasas
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).grasas
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9673,7 +9673,7 @@ scHistoriaMedica As screen:
 
                                 tiScHistoria1_37 As text:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).azúcar
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).azúcar
                                     Font: =Font.'Segoe UI'
                                     Height: =36
                                     Mode: =
@@ -9763,7 +9763,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_6 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).desayuno
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).desayuno
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -9808,7 +9808,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_7 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -9853,7 +9853,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_8 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).almuerzo
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).almuerzo
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
@@ -9898,7 +9898,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_9 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda2
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda2
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
@@ -9943,7 +9943,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_10 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cena
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).cena
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
@@ -9988,7 +9988,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_11 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda3
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).merienda3
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
@@ -10483,7 +10483,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_12 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).comentarios_adicionales
+                                    Default: =//First(Filter(SortByColumns('public.MC_Historia_Nutricion',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).comentarios_adicionales
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
@@ -10690,7 +10690,7 @@ scHistoriaMedica As screen:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: |
-                                        =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecendentes
+                                        =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).antecendentes
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
@@ -10769,7 +10769,7 @@ scHistoriaMedica As screen:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: |
-                                        =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
+                                        =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).enfermedad_actual
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -10839,7 +10839,7 @@ scHistoriaMedica As screen:
                                 TextInput6_2 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_peso
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_peso
                                     Format: =TextFormat.Number
                                     Height: =36
                                     RadiusBottomLeft: =4
@@ -10855,7 +10855,7 @@ scHistoriaMedica As screen:
                                 TextInput6_4 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_talla
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_talla
                                     Format: =TextFormat.Number
                                     Height: =36
                                     RadiusBottomLeft: =4
@@ -10871,7 +10871,7 @@ scHistoriaMedica As screen:
                                 TextInput6_5 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).signos_vitales_fc
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).signos_vitales_fc
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -10886,7 +10886,7 @@ scHistoriaMedica As screen:
                                 TextInput6_7 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).signos_vitales_fr
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).signos_vitales_fr
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -10901,7 +10901,7 @@ scHistoriaMedica As screen:
                                 TextInput6_8 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).signos_vitales_temp
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).signos_vitales_temp
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -10916,7 +10916,7 @@ scHistoriaMedica As screen:
                                 TextInput6_9 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).signos_vitales_sat02
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).signos_vitales_sat02
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -11111,7 +11111,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_14 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diagnosticos
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diagnosticos
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -11191,7 +11191,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_15 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -11269,7 +11269,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_17 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).paraclinico
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).paraclinico
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -11349,7 +11349,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_16 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).recomendaciones
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_cirugia_pediatrica',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).recomendaciones
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -11532,7 +11532,7 @@ scHistoriaMedica As screen:
 
                                 input_HistGeneral_1 As richTextEditor:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_consulta
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_consulta
                                     FillPortions: =1
                                     Height: =170
                                     Width: =100
@@ -11570,7 +11570,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_2 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_personales
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_personales
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -11585,7 +11585,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_3 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_familiares
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_familiares
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -11623,7 +11623,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_4 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_ram
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_ram
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -11718,7 +11718,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_5 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_pa
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_pa
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -11733,7 +11733,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_8 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_t
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_t
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -11792,7 +11792,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_6 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_fr
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_fr
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -11829,7 +11829,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_7 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_fr2
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_fr2
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -11866,7 +11866,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_10 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_peso
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_peso
                                     Format: =TextFormat.Number
                                     Height: =36
                                     RadiusBottomLeft: =4
@@ -11882,7 +11882,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_13 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_imc
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_imc
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -11941,7 +11941,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_11 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_talla
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_talla
                                     Format: =TextFormat.Number
                                     Height: =36
                                     RadiusBottomLeft: =4
@@ -11979,7 +11979,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_12 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_saturacion
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_triaje_saturacion
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -12056,7 +12056,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_14 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_cabeza_cuello
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_cabeza_cuello
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -12071,7 +12071,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_15 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_orl
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_orl
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -12109,7 +12109,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_16 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_torax
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_torax
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -12147,7 +12147,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_17 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_abdomen
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_abdomen
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -12185,7 +12185,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_18 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_urologico
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_urologico
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -12223,7 +12223,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_19 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_extremidades
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_extremidades
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -12261,7 +12261,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_20 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_neurologico
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_neurologico
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -12299,7 +12299,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_21 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_genitales
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_genitales
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -12337,7 +12337,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_22 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_piel
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_piel
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -12375,7 +12375,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_23 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_otros
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_otros
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -12413,7 +12413,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_24 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_diagnosticos
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).exam_fisico_diagnosticos
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -12534,7 +12534,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_25 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
                                     Height: =180
                                     Width: =100
                                     ZIndex: =1
@@ -12625,7 +12625,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_26 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).interconsulta
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).interconsulta
                                     Height: =180
                                     Width: =100
                                     ZIndex: =1
@@ -12702,7 +12702,7 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_27 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).recomendaciones
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_medicina_general',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).recomendaciones
                                     Height: =170
                                     Width: =100
                                     ZIndex: =6
@@ -12803,7 +12803,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_18 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).inicio_enferm_actual
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).inicio_enferm_actual
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
@@ -12849,7 +12849,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_19 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_personales_patologicos
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ant_personales_patologicos
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
@@ -12886,7 +12886,7 @@ scHistoriaMedica As screen:
                                 TextInput6_10 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).qx
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).qx
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -12901,7 +12901,7 @@ scHistoriaMedica As screen:
                                 TextInput6_11 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ram
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ram
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -13001,7 +13001,7 @@ scHistoriaMedica As screen:
                                 TextInput6_12 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).habitos_tabaco
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).habitos_tabaco
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13016,7 +13016,7 @@ scHistoriaMedica As screen:
                                 TextInput6_14 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).habitos_audifonos
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).habitos_audifonos
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13075,7 +13075,7 @@ scHistoriaMedica As screen:
                                 TextInput6_13 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).habitos_hisopo
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).habitos_hisopo
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13112,7 +13112,7 @@ scHistoriaMedica As screen:
                                 TextInput6_15 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).habitos_ocupacion
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).habitos_ocupacion
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13149,7 +13149,7 @@ scHistoriaMedica As screen:
                                 TextInput6_16 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).habitos_ambiente_ruidoso
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).habitos_ambiente_ruidoso
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13236,7 +13236,7 @@ scHistoriaMedica As screen:
                                 TextInput6_17 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_orl_oido
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_orl_oido
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13288,7 +13288,7 @@ scHistoriaMedica As screen:
                                     TextInput6_18 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_orl_nariz
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_orl_nariz
                                         Height: =36
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -13340,7 +13340,7 @@ scHistoriaMedica As screen:
                                     TextInput6_19 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_orl_boca_orofaringe
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_orl_boca_orofaringe
                                         Height: =36
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -13439,7 +13439,7 @@ scHistoriaMedica As screen:
                                     TextInput6_20 As text:
                                         BorderColor: =RGBA(44, 46, 53, 1)
                                         BorderThickness: =1
-                                        Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diagnosticos
+                                        Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diagnosticos
                                         Height: =36
                                         RadiusBottomLeft: =4
                                         RadiusBottomRight: =4
@@ -13504,7 +13504,7 @@ scHistoriaMedica As screen:
                                 RichTextEditor1_20 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_otorrinolaringologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
                                     Height: =180
                                     Width: =100
                                     ZIndex: =1
@@ -13604,7 +13604,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_1 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_consulta
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).motivo_consulta
                                     Height: =180
                                     ZIndex: =3
 
@@ -13641,7 +13641,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_2 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13655,7 +13655,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_3 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_ant_neonatales
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_ant_neonatales
                                     Height: =36
                                     PaddingTop: =8
                                     RadiusBottomLeft: =4
@@ -13712,7 +13712,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_4 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_ant_personales
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_ant_personales
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13747,7 +13747,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_5 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_ant_familiares
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_ant_familiares
                                     Height: =37
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13782,7 +13782,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_6 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_alimentacion
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_alimentacion
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13817,7 +13817,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_7 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_vacunas
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_vacunas
                                     Height: =37
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13852,7 +13852,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_8 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_epidemiologo
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_funcional_epidemiologo
                                     Height: =37
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -13927,7 +13927,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_9 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_peso
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_peso
                                     Format: =TextFormat.Number
                                     Height: =36
                                     RadiusBottomLeft: =4
@@ -13964,7 +13964,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_10 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_talla
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_talla
                                     Format: =TextFormat.Number
                                     Height: =36
                                     RadiusBottomLeft: =4
@@ -14002,7 +14002,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_11 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_sato2
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).examen_fisico_sato2
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
@@ -14073,7 +14073,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_12 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diagnostico
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).diagnostico
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
@@ -14135,7 +14135,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_13 As richTextEditor:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
                                     Height: =170
                                     Width: =100
                                     ZIndex: =4
@@ -14171,7 +14171,7 @@ scHistoriaMedica As screen:
                                 inputPedriatria_14 As text:
                                     BorderColor: =RGBA(44, 46, 53, 1)
                                     BorderThickness: =1
-                                    Default: =First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).paraclinicos
+                                    Default: =//First(Filter(SortByColumns('public.mc_historia_pediatria',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).paraclinicos
                                     Height: =36
                                     RadiusBottomLeft: =4
                                     RadiusBottomRight: =4
