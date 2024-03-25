@@ -132,7 +132,7 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "es-ES"
+    "UserLocale": "en-US"
   },
   "ScreenOrder": [
     "Home",
@@ -164,6 +164,7 @@
     "Onboarding",
     "Test_Maestro",
     "Screen2",
-    "scHistoriaMedicaNutricion"
+    "scHistoriaMedicaNutricion",
+    "scHistoriaMedicaNutricion_1"
   ]
 }
