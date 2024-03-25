@@ -428,7 +428,7 @@
         TemplateSize: =160
         Width: =1034
         X: =302
-        Y: =231
+        Y: =216
         ZIndex: =25
 
         TextInput6 As text:
@@ -1119,6 +1119,30 @@
                     X: =1136
                     Y: =120
                     ZIndex: =2
+
+        IconAtencion As icon.Hospital:
+            Height: =32
+            Icon: =Icon.Hospital
+            OnSelect: =Select(Parent)
+            Width: =32
+            X: =646
+            ZIndex: =4
+
+        IconCaja As icon.Money:
+            Height: =32
+            Icon: =Icon.Money
+            OnSelect: =Select(Parent)
+            Width: =32
+            X: =742
+            ZIndex: =5
+
+        IconTriaje As icon.Health:
+            Height: =32
+            Icon: =Icon.Health
+            OnSelect: =Select(Parent)
+            Width: =32
+            X: =692
+            ZIndex: =6
 
     btn_Agendar_Cita As button:
         BorderColor: =ColorFondoBoton

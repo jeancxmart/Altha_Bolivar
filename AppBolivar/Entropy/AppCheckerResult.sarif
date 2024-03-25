@@ -11532,86 +11532,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 24,
-                  "charOffset": 179,
-                  "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Triaje_Dashboard",
-                "type": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 203,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Triaje_Dashboard",
-                "type": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Administracion UsuarioV2'.Canvas1_12.DataCard1_18.ComboBox4_SedesU_1.DefaultSelectedItems"
                 }
               ],
@@ -103845,6 +103765,66 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Triaje_Dashboard.TextInput26_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Triaje_Dashboard.TextInput26_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Triaje_Dashboard",
+                "type": "Triaje_Dashboard.TextInput26_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Triaje_Dashboard.DatePickerCitas_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Triaje_Dashboard.DatePickerCitas_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Triaje_Dashboard",
+                "type": "Triaje_Dashboard.DatePickerCitas_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
         },
         {
           "locations": [

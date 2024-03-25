@@ -296,7 +296,39 @@ Triaje_Dashboard As screen:
     gal_Triaje_Dashboard_Triaje As gallery.galleryVertical:
         Height: =559
         Items: |+
-            =Search(SortByColumns(  Filter('public.Medical_Center_Counter',And(estado="Pagado",etapa="Caja") Or And(estado="En Atención",etapa="Triaje")Or And(estado="En Cola",etapa="Triaje"),Text(fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy"), id_sede = _varSede.id),"Paciente",SortOrder.Ascending),txt_Buscador_Dashboard__Triaje.Text,"Paciente","Servicio","usuario","estado")
+            =Search(
+                SortByColumns(
+                    Filter(AddColumns(
+                        'public.Medical_Center_Counter', "fecha_format",Text(
+                            fecha,
+                            "dd/mm/yyyy"
+                        )),
+                        And(
+                            estado = "Pagado",
+                            etapa = "Caja"
+                        ) Or And(
+                            estado = "En Atención",
+                            etapa = "Triaje"
+                        ) Or And(
+                            estado = "En Cola",
+                            etapa = "Triaje"
+                        ),
+                        If(
+                            IsBlank(DatePickerCitas_2.SelectedDate),
+                            fecha_format = Text(Today(),"dd/mm/yyyy"),
+                            fecha_format = Text(DatePickerCitas_2.SelectedDate,"dd/mm/yyyy")
+                        ),
+                        id_sede = _varSede.id
+                    ),
+                    "Paciente",
+                    SortOrder.Ascending
+                ),
+                txt_Buscador_Dashboard__Triaje.Text,
+                "Paciente",
+                "Servicio",
+                "usuario",
+                "estado"
+            )
             
         Layout: =Layout.Vertical
         TemplateSize: =128
@@ -736,4 +768,36 @@ Triaje_Dashboard As screen:
         X: =787
         Y: =410
         ZIndex: =30
+
+    GroupSearchFecha_2 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =33
+
+        TextInput26_2 As text:
+            Default: =""
+            DisabledBorderColor: |-
+                =ColorValue("#26495B")
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =36
+            Width: =200
+            X: =728
+            Y: =172
+            ZIndex: =31
+
+        DatePickerCitas_2 As datepicker:
+            BorderStyle: =BorderStyle.None
+            DefaultDate: =
+            Height: =30
+            IconBackground: =
+            IconFill: =RGBA(0, 0, 0, 1)
+            InputTextPlaceholder: ="--/--/--"
+            PaddingBottom: =0
+            Width: =190
+            X: =733
+            Y: =175
+            ZIndex: =32
 
