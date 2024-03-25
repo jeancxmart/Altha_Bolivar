@@ -4605,8 +4605,11 @@
                 Font: =Font.'Segoe UI'
                 HoverFill: =RGBA(255, 0, 0, 0.25)
                 OnSelect: |-
-                    =Remove('public.Medical_Center_Usuario', GalleryUsuariosV3.Selected);
+                    =If(_varDUser.Rol = "Doctor" || "Administrador",
+                    RemoveIf('public.Medical_Center_R&D_Relacion', correo = _varDUser.Correo), "");
+                    Remove('public.Medical_Center_Usuario', GalleryUsuariosV3.Selected);
                     RemoveIf('public.medical_center_users_relacion', id_usuario = _varDUser.id);
+                    
                     //REMOVER IF DOCTOR A LA TABLA RELACION DOCTOR
                     UpdateContext({_varDUsers: false});
                 RadiusBottomLeft: =4
@@ -5110,17 +5113,21 @@
                         
                         });
                         
+                        
+                        If(dpEstadoCivil_DCA_39.Selected.rol = "Doctor", "",
+                        RemoveIf('public.medical_center_users_relacion', id_usuario = _varEditUserV2.id)
+                        );
+                        
                         If(dpEstadoCivil_DCA_39.Selected.rol = "Doctor", "",
                         ForAll(_varUSedesEdit As  temp, 
-                        Patch('public.medical_center_users_relacion', LookUp('public.medical_center_users_relacion', id_usuario = _varEditUserV2.id),{
+                        Patch('public.medical_center_users_relacion', Defaults('public.medical_center_users_relacion'),{
                         
-                         id_sede: temp.id
-                         
-                        })
-                        ));
+                         id_us_relacion :First(SortByColumns('public.medical_center_users_relacion',"id_us_relacion",SortOrder.Descending)).id_us_relacion +1,
+                         id_sede: temp.id,
+                         correo: _varEditUserV2.Correo,
+                         id_usuario: _varEditUserV2.id
                         
-                        
-                        
+                        })));
                         
                         
                         
@@ -5566,7 +5573,15 @@
                     BorderStyle: =BorderStyle.None
                     ChevronBackground: =RGBA(0, 0, 0, 0)
                     ChevronFill: =RGBA(0, 0, 0, 1)
-                    DefaultSelectedItems: =Filter(AddColumns('public.medical_center_sedes' As temp , "id_relacion", LookUp('public.medical_center_users_relacion', correo = TextInput9_31.Text).id_sede), id = id_relacion)
+                    DefaultSelectedItems: |-
+                        =//Filter('public.medical_center_sedes'; id in _varRelacionEdit.id_sede)
+                        With({
+                           temp: Filter('public.medical_center_users_relacion', id_usuario = _varEditUserV2.id)
+                        
+                        },
+                        
+                          Filter('public.medical_center_sedes', id in temp.id_sede)
+                        )
                     DisplayFields: =["sede"]
                     DisplayMode: =If(dpEstadoCivil_DCA_39.Selected.rol = "Doctor",DisplayMode.Disabled,DisplayMode.Edit)
                     Height: =30
@@ -10783,6 +10798,7 @@
                     OnSelect: |-
                         =UpdateContext({_varEditUser:true});
                         UpdateContext({_varEditUserV2: ThisItem});
+                        Set(_varRelacionEdit, Filter('public.medical_center_users_relacion', id_usuario = ThisItem.id));
                         Reset(dpEstadoCivil_DCA_39);
                         Reset(txtCPP_2);
                         Reset(txtRNE_4);
