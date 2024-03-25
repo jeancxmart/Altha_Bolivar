@@ -1,0 +1,1154 @@
+scHistoriaMedicaPediatria As screen:
+
+    Container44 As groupContainer.verticalAutoLayoutContainer:
+        Height: =768
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =1366
+        ZIndex: =1
+
+        conHeaderHistorial_3 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =1
+
+            conHiistorialFondo_19 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =200
+                LayoutMode: =LayoutMode.Auto
+                Width: =100
+                ZIndex: =1
+
+            conHiistorialFondo_20 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =If(_ViewFormularioDCA||_viewHistoriaSec,1,3)
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =890
+                LayoutMode: =LayoutMode.Auto
+                Width: =100
+                ZIndex: =3
+
+                conHiistorialFondo_21 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: |-
+                        =//If(_ViewFormularioDCA||_viewHistoriaSec,false,true)
+                        false
+                    Width: =100
+                    ZIndex: =1
+
+                lblHistoriaMedica_DCA_11 As label:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =1
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =80
+                    PaddingLeft: =35
+                    Size: =28
+                    Text: |-
+                        =//If(_viewHistoriaSec,varEspecialidadSelected.Especialidad,"Historia Médica" )
+                        "Pediatría"
+                    Width: =850
+                    X: =301
+                    ZIndex: =3
+
+                conHiistorialFondo_22 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =15
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =200
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =100
+                    ZIndex: =4
+
+                    btnCancelarSec_3 As button:
+                        BorderColor: |-
+                            =ColorValue("#26495B")
+                        Color: |-
+                            =ColorValue("#26495B")
+                        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderColor: =btnCancelarSec_3.BorderColor
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =44
+                        HoverBorderColor: =ColorFade(btnCancelarSec_3.BorderColor, 20%)
+                        HoverColor: |-
+                            =ColorValue("#26495B")
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |-
+                            =//UpdateContext({_viewHistoriaSec:false});
+                            UpdateContext({resetear:true});UpdateContext({resetear:false});
+                            Reset(inputPedriatria_16); Reset(inputPedriatria_27); Reset(inputPedriatria_28);
+                            
+                            Navigate(scHistoriaMedica)
+                        PressedBorderColor: =ColorFondoBoton
+                        PressedColor: =ColorFondoBoton
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Text: ="CANCELAR"
+                        X: =769
+                        Y: =1
+                        ZIndex: =1
+
+                    btnCancelarPrincipal_4 As button:
+                        BorderColor: |-
+                            =ColorValue("#26495B")
+                        Color: |-
+                            =ColorValue("#26495B")
+                        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderColor: =btnCancelarPrincipal_4.BorderColor
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =44
+                        HoverBorderColor: =ColorFade(btnCancelarPrincipal_4.BorderColor, 20%)
+                        HoverColor: |-
+                            =ColorValue("#26495B")
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |
+                            =UpdateContext({_ViewFormularioDCA:false});
+                            Reset(TxtNombreDCA_00);Reset(TxtApellidoDCA_00);Reset(tiDNI_00);Reset(dpSexo_00);
+                            Reset(dpOcupacion_00);Reset(dpFechaNac_00);Reset(dpEstadoCivil_DCA_00);Reset(dpgrado_DCA_00);Reset(dpNacionalidad_DCA_00);Reset(TxtresidenciaDCA_00);Reset(TxtCorreo_00);Reset(TxtTelefono_00);Reset(tiMotivoConsulta_00);Reset(TxtEnfermedadDCA_00);Reset(TxtAntecedenetMADCA_00);Reset(TxtPadreDCA_00);Reset(TxtMadreDCA_00);Reset(cbProbMadre);Reset(cbProbPadre);
+                            Reset(ProblemaPadre_5);Reset(ProblemaMadre_5);Reset(cbAlimentacion00);Reset(cbSueno00);Reset(cbEjercicios00);Reset(cbAlergias00);Reset(txtOtroAlimentacion);Reset(txtOtroEjercicios);Reset(txtOtroSueno);Reset(txtOtroAlergias);
+                        PressedBorderColor: =ColorFondoBoton
+                        PressedColor: =ColorFondoBoton
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Text: ="CANCELAR"
+                        Visible: =_ViewFormularioDCA
+                        X: =769
+                        Y: =1
+                        ZIndex: =2
+
+                    btnGuardarPrincipal_3 As button:
+                        BorderColor: |-
+                            =ColorValue("#26495B")
+                        Fill: =ColorFondoBoton
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =44
+                        HoverBorderColor: |-
+                            =ColorValue("#26495B")
+                        HoverColor: |-
+                            =ColorValue("#26495B")
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |-
+                            =Refresh('public.Medical_Center_Historial_Principal');
+                            
+                            UpdateContext({_ViewFormularioDCA:false});
+                            If(CountRows(Adjunto_14.Attachments)=0,false,
+                             Set(varAzureFileUsuarioNewHM,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_14.Attachments).Name,Last(Adjunto_14.Attachments).Value)));
+                            
+                            
+                            Patch(
+                                'public.Medical_Center_Historial_Principal',
+                                LookUp('public.Medical_Center_Historial_Principal',id=HMSelected.id),
+                                {activo:false});
+                            Set(HMSelected,    
+                            Patch(
+                                'public.Medical_Center_Historial_Principal',
+                                Defaults('public.Medical_Center_Historial_Principal'),
+                                {
+                                    version:First(Sort(Filter('public.Medical_Center_Historial_Principal',DNI_CI=HMSelected.DNI_CI),version,SortOrder.Descending)).version+1,
+                                    id:Concat(FirstN(Split(HMSelected.id,"-"),2),Value,"-")&"-"&Upper(Right(GUID(),6)),
+                                    cod_hm:Text(dpFechaNac_00.SelectedDate,"yyyymmdd")&"-"&HMSelected.DNI_CI,//GENERAR SEMANTICA HC PRINCIPAL
+                                    activo:true,
+                                    fecha_creacion:Now(),
+                                    Nombres: TxtNombreDCA_00.Text,
+                                    Apellidos: TxtApellidoDCA_00.Text,
+                                    DNI_CI: tiDNI_00.Text,
+                                    correo:TxtCorreo_00.Text,
+                                    telefono:TxtTelefono_00.Text,
+                                    Sexo: dpSexo_00.Selected.Value,
+                                    Ocupacion: dpgrado_DCA_8.Selected.Value,
+                                    Fecha_Nacimiento:dpFechaNac_00.SelectedDate,
+                                    Estado_Civil:dpEstadoCivil_DCA_00.Selected.Value,
+                                    Grado_Instruccion: dpOcupacion_00.Selected.Value,
+                                    Nacionalidad: dpNacionalidad_DCA_00.Selected.Value,
+                                    Direccion: TxtresidenciaDCA_00.Text,
+                                    Motivo: tiMotivoConsulta_00.Text,
+                                    Enfermedad_Actual: TxtEnfermedadDCA_00.Text,
+                                    Antecedentes_Malestar_Actual: TxtAntecedenetMADCA_00.Text,
+                                    Nombre_Padre:TxtPadreDCA_00.Text,
+                                    Antecedentes_Padre: If(cbProbPadre.Selected.Value="Otro",ProblemaPadre_5.Text,cbProbPadre.Selected.Value) ,
+                                    Nombre_Madre:TxtMadreDCA_00.Text,
+                                    Antecedentes_Madre:If(cbProbMadre.Selected.Value="Otro",ProblemaMadre_5.Text,cbProbMadre.Selected.Value) ,
+                                    Antecedentes_Personales: TxtAntecedentesPersonales.Text,
+                                    Alimentacion: If(cbAlimentacion00.Selected.Value="Otro",txtOtroAlimentacion.Text,cbAlimentacion00.Selected.Value)  ,
+                                    Sueño:If(cbSueno00.Selected.Value="Otro",txtOtroSueno.Text,cbSueno00.Selected.Value)   ,
+                                    Imagen_Id:If(CountRows(Adjunto_28.Attachments)=0,HMSelected.Imagen_Id,varAzureFileUsuarioNewHM.Id),
+                                    Ejercicios: If(cbEjercicios00.Selected.Value="Otro",txtOtroEjercicios.Text,cbEjercicios00.Selected.Value)  ,
+                                    Alergias: If(cbAlergias00.Selected.Value="Otro",txtOtroAlergias.Text,cbAlergias00.Selected.Value),
+                                    id_sede:_varSede.id
+                                }
+                            ));
+                            Reset(Adjunto_14)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Text: ="GUARDAR"
+                        Visible: =_ViewFormularioDCA
+                        X: =201
+                        Y: =31
+                        ZIndex: =3
+
+                    btnGuardarSec_3 As button:
+                        BorderColor: |-
+                            =ColorValue("#26495B")
+                        Fill: =ColorFondoBoton
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =44
+                        HoverBorderColor: |-
+                            =ColorValue("#26495B")
+                        HoverColor: |-
+                            =ColorValue("#26495B")
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |-
+                            =Refresh('public.Medical_Center_Historial_Principal');
+                            
+                            UpdateContext({_varHistoriaSec_id:Text(Now(),"yymmdd")&"_"&Substitute(Upper(Text(GUID())),"-","")});
+                            //REVISAR LOS PATCH LOOKUP
+                            
+                            Refresh('public.mc_historia_pediatria');
+                            Patch('public.mc_historia_pediatria',Defaults('public.mc_historia_pediatria'),{
+                                
+                                version:First(Sort(Filter('public.mc_historia_pediatria',cod_hc_principal=HMSelected.cod_hm),          version,SortOrder.Descending)).version+1,
+                                activo:true,
+                                cod_hc_principal:HMSelected.cod_hm,
+                                id:_varHistoriaSec_id,
+                                id_paciente:0,
+                                id_sede: _varSede.id,
+                                id_especialidad:varEspecialidadSelected.id,
+                                id_doctor:getUser.id,
+                                fecha_registro: Now(),
+                                motivo_consulta: inputPedriatria_16.HtmlText,
+                            examen_funcional_ant_neonatales: inputPedriatria_18.Text,
+                            examen_funcional_ant_personales: inputPedriatria_19.Text,
+                            examen_funcional_ant_familiares: inputPedriatria_20.Text,
+                            examen_funcional_alimentacion: inputPedriatria_21.Text,
+                            examen_funcional_vacunas: inputPedriatria_22.Text,
+                            examen_funcional_epidemiologo: inputPedriatria_23.Text,
+                            examen_fisico_peso: Value(inputPedriatria_24.Text),
+                            examen_fisico_talla: Value(inputPedriatria_25.Text),
+                            examen_fisico_sato2: inputPedriatria_26.Text,
+                            diagnostico: inputPedriatria_27.HtmlText,
+                            tratamiento: inputPedriatria_28.HtmlText,
+                            paraclinicos: inputPedriatria_29.Text,
+                            proxima_cita_pro_cita: DatePicker7_1.SelectedDate,
+                            examen_funcional: inputPedriatria_17.Text
+                            });
+                            
+                            
+                            
+                            Patch('public.mc_historias_especialidad',Defaults('public.mc_historias_especialidad'),{
+                            id:HMSelected.cod_hm&"-"&Text(Now(),"yymmdd-hhmm")&"-"&varEspecialidadSelected.id,
+                            cod_hm:HMSelected.cod_hm, //hm refiere a principal y hc a especialidad
+                            cod_hc:_varHistoriaSec_id,
+                            id_especialidad:varEspecialidadSelected.id,
+                            plantilla_hc:varEspecialidadSelected.plantilla
+                            });
+                            
+                            
+                            
+                            
+                            UpdateContext({resetear:true});UpdateContext({resetear:false});
+                            Set(varNutriHC,First('public.MC_Historia_Nutricion'));
+                            Set(varGinecoHC,First('public.MC_Historia_Ginecologia'));
+                            Set(varOftalmoHC,First('public.mc_historia_oftalmologia'));
+                            Set(varCPediatricaHC,First('public.mc_historia_cirugia_pediatrica'));
+                            
+                            Clear(colOftalLejosCerca);
+                            Clear(colNutricionMedida);
+                            
+                            
+                            UpdateContext({_viewHistoriaSec:false});
+                            UpdateContext({resetear:true});UpdateContext({resetear:false});
+                            Reset(inputPedriatria_16); Reset(inputPedriatria_27); Reset(inputPedriatria_28);
+                            Navigate(scHistoriaMedica)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Text: ="GUARDAR"
+                        X: =201
+                        Y: =31
+                        ZIndex: =4
+
+            conHiistorialFondo_24 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                LayoutMinHeight: =100
+                LayoutMinWidth: =200
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =40
+                PaddingRight: =40
+                Width: =100
+                ZIndex: =4
+
+        conEdicionHistorialSec_1 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =1
+            Width: =880
+            ZIndex: =2
+
+            CanvasHCTodas_3 As fluidGrid.fluidGridWithBlankCard:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =0
+                Fill: =RGBA(245, 245, 245, 1)
+                Height: =660
+                LayoutMinHeight: =250
+                LayoutMinWidth: =100
+                Width: =852
+                X: =301
+                Y: =108
+                ZIndex: =2
+
+                DC_Pediatria_1 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =100
+                    Visible: |-
+                        =//varEspecialidadSelected.plantilla="pediatria"
+                        true
+                    Width: =852
+                    X: =0
+                    Y: =6
+                    ZIndex: =7
+
+                    Container18_14 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =1750
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =5
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Container15_287 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width
+                            Y: =60
+                            ZIndex: =1
+
+                            lbEncabezado_562 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =varcolor_ClaroElementoPrimario
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FillPortions: =1
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =18
+                                Text: ="Historia Clínica"
+                                Width: =100
+                                Y: =10
+                                ZIndex: =2
+
+                        Container15_288 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =220
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =1
+                            PaddingRight: =1
+                            PaddingTop: =1
+                            Width: =Parent.Width
+                            Y: =40
+                            ZIndex: =2
+
+                            lbEncabezado_563 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =1
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =10
+                                Size: =14
+                                Text: ="Motivo de Consulta"
+                                Width: =100
+                                Y: =10
+                                ZIndex: =2
+
+                            inputPedriatria_16 As richTextEditor:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Default: =varDatosHistoriaPediatra.motivo_consulta
+                                Height: =180
+                                ZIndex: =3
+
+                        examenFuncional_1 As groupContainer.manualLayoutContainer:
+                            FillPortions: =0
+                            Height: =645
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            ZIndex: =3
+
+                            lbEncabezado_564 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: |-
+                                    ="Examen Funcional
+                                    "
+                                Width: =500
+                                Y: =12
+                                ZIndex: =1
+
+                            inputPedriatria_17 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.examen_funcional
+                                Height: =36
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =812
+                                Y: =36
+                                ZIndex: =2
+
+                            inputPedriatria_18 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.examen_funcional_ant_neonatales
+                                Height: =36
+                                PaddingTop: =8
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =812
+                                Y: =133
+                                ZIndex: =4
+
+                            lbEncabezado_565 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Antecedentes Neonatales"
+                                Width: =500
+                                Y: =103
+                                ZIndex: =8
+
+                            lbEncabezado_566 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Antecedentes Personales"
+                                Width: =500
+                                Y: =200
+                                ZIndex: =9
+
+                            inputPedriatria_19 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.examen_funcional_ant_personales
+                                Height: =36
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =812
+                                Y: =224
+                                ZIndex: =10
+
+                            lbEncabezado_567 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Antecedentes Familiares"
+                                Width: =500
+                                Y: =294
+                                ZIndex: =11
+
+                            inputPedriatria_20 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.examen_funcional_ant_familiares
+                                Height: =37
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =812
+                                Y: =318
+                                ZIndex: =12
+
+                            lbEncabezado_568 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Alimentación"
+                                Width: =500
+                                Y: =385
+                                ZIndex: =13
+
+                            inputPedriatria_21 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.examen_funcional_alimentacion
+                                Height: =36
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =812
+                                Y: =409
+                                ZIndex: =14
+
+                            lbEncabezado_569 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Vacunas"
+                                Width: =500
+                                Y: =478
+                                ZIndex: =15
+
+                            inputPedriatria_22 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.examen_funcional_vacunas
+                                Height: =37
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =812
+                                Y: =502
+                                ZIndex: =16
+
+                            lbEncabezado_570 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Epidemiólogo"
+                                Width: =500
+                                Y: =566
+                                ZIndex: =17
+
+                            inputPedriatria_23 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.examen_funcional_epidemiologo
+                                Height: =37
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =812
+                                Y: =590
+                                ZIndex: =18
+
+                        Container15_289 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width
+                            Y: =60
+                            ZIndex: =4
+
+                            lbEncabezado_571 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =//varcolor_ClaroElementoPrimario
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FillPortions: =1
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =16
+                                Text: ="Examen Físico"
+                                Width: =100
+                                Y: =10
+                                ZIndex: =2
+
+                        Container39_14 As groupContainer.manualLayoutContainer:
+                            FillPortions: =0
+                            Height: =100
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            ZIndex: =5
+
+                            lbEncabezado_572 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Peso"
+                                Width: =100
+                                Y: =4
+                                ZIndex: =1
+
+                            inputPedriatria_24 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.examen_fisico_peso
+                                Format: =TextFormat.Number
+                                Height: =36
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =252
+                                Y: =35
+                                ZIndex: =2
+
+                            lbEncabezado_573 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Talla"
+                                Width: =100
+                                X: =282
+                                Y: =4
+                                ZIndex: =9
+
+                            inputPedriatria_25 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.examen_fisico_talla
+                                Format: =TextFormat.Number
+                                Height: =36
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =252
+                                X: =282
+                                Y: =35
+                                ZIndex: =10
+
+                            lbEncabezado_574 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="SATO2"
+                                Width: =100
+                                X: =562
+                                Y: =4
+                                ZIndex: =15
+
+                            inputPedriatria_26 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.examen_fisico_sato2
+                                Height: =36
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =252
+                                X: =562
+                                Y: =35
+                                ZIndex: =16
+
+                        Container15_290 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =36
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =1
+                            PaddingLeft: =1
+                            PaddingRight: =1
+                            PaddingTop: =1
+                            Width: =Parent.Width
+                            Y: =40
+                            ZIndex: =6
+
+                            lbEncabezado_575 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =1
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: |-
+                                    ="Diagnóstico
+                                    "
+                                Width: =100
+                                Y: =10
+                                ZIndex: =2
+
+                        Container15_291 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =170
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =1
+                            PaddingLeft: =1
+                            PaddingRight: =1
+                            PaddingTop: =1
+                            Width: =Parent.Width
+                            Y: =40
+                            ZIndex: =7
+
+                            inputPedriatria_27 As richTextEditor:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Default: =varDatosHistoriaPediatra.diagnostico
+                                Height: =170
+                                Width: =100
+                                ZIndex: =3
+
+                        Container15_292 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =36
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =1
+                            PaddingLeft: =1
+                            PaddingRight: =1
+                            PaddingTop: =1
+                            Width: =Parent.Width
+                            Y: =40
+                            ZIndex: =8
+
+                            lbEncabezado_576 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =1
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Tratamientos"
+                                Width: =100
+                                Y: =10
+                                ZIndex: =2
+
+                        Container15_293 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =170
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =1
+                            PaddingRight: =1
+                            PaddingTop: =1
+                            Width: =Parent.Width
+                            Y: =40
+                            ZIndex: =9
+
+                            inputPedriatria_28 As richTextEditor:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Default: =varDatosHistoriaPediatra.tratamiento
+                                Height: =170
+                                Width: =100
+                                ZIndex: =4
+
+                        Container39_15 As groupContainer.manualLayoutContainer:
+                            FillPortions: =0
+                            Height: =220
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            ZIndex: =10
+
+                            lbEncabezado_577 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =""
+                                Width: =850
+                                Y: =4
+                                ZIndex: =1
+
+                            inputPedriatria_29 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =varDatosHistoriaPediatra.paraclinicos
+                                Height: =36
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =812
+                                Y: =80
+                                ZIndex: =2
+
+                            lbEncabezado_578 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Paraclínicos e Interconsultas"
+                                Width: =500
+                                Y: =42
+                                ZIndex: =15
+
+                            inputPedriatria_30 As text:
+                                BorderColor: =RGBA(44, 46, 53, 1)
+                                BorderThickness: =1
+                                Default: =
+                                DisabledBorderColor: =RGBA(44, 46, 53, 1)
+                                DisabledFill: =RGBA(255, 255, 255, 1)
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =36
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Reset: =resetear
+                                Width: =812
+                                Y: =172
+                                ZIndex: =16
+
+                            lbEncabezado_579 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(161, 159, 157, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =24
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: ="Próxima Cita"
+                                Width: =500
+                                Y: =132
+                                ZIndex: =17
+
+                            DatePicker7_1 As datepicker:
+                                BorderStyle: =BorderStyle.None
+                                DefaultDate: =
+                                Height: =30
+                                IconBackground: =
+                                IconFill: =
+                                InputTextPlaceholder: ="--/--/--"
+                                Reset: =resetear
+                                Width: =800
+                                X: =6
+                                Y: =175
+                                ZIndex: =18
+
+                        Container15_294 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =1
+                            PaddingLeft: =1
+                            PaddingRight: =1
+                            Width: =Parent.Width
+                            Y: =40
+                            ZIndex: =17
+
+                        Container15_295 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width
+                            Y: =20
+                            ZIndex: =18
+
+                        Container15_296 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width
+                            Y: =20
+                            ZIndex: =19
+
+                        galChecklist_5 As gallery.variableTemplateHeightGallery:
+                            BorderColor: =RGBA(245, 245, 245, 1)
+                            Default: =First(formularioCamposLineales)
+                            DelayItemLoading: =true
+                            Fill: =RGBA(245, 245, 245, 1)
+                            FillPortions: =0
+                            Height: =CountRows(GroupBy(formularioCamposLineales,"seccion","otros"))*50+72*Self.AllItemsCount
+                            Items: =formularioCamposLineales
+                            Layout: =Layout.Vertical
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =320
+                            LoadingSpinner: =LoadingSpinner.Data
+                            Selectable: =false
+                            ShowNavigation: =true
+                            ShowScrollbar: =false
+                            TemplatePadding: =0
+                            TemplateSize: =100
+                            Width: =100
+                            ZIndex: =20
+

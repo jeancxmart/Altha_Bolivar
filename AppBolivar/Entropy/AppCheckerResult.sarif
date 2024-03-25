@@ -100241,6 +100241,3636 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_328.Container15_330.TextInput6_53.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_328.Container15_330.TextInput6_53.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_328.Container15_330.TextInput6_53"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_328.Container15_329.TextInput6_52.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_328.Container15_329.TextInput6_52.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_328.Container15_329.TextInput6_52"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_328.TextInput6_51.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_328.TextInput6_51.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_328.TextInput6_51"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_50.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_50.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_50"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_49.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_49.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_49"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_48.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_48.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_48"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_47.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_47.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_47"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_46.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_46.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_21.TextInput6_46"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_20.TextInput6_45.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_20.TextInput6_45.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_20.TextInput6_45"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_20.TextInput6_44.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_20.TextInput6_44.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container39_20.TextInput6_44"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_325.RichTextEditor1_71.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_325.RichTextEditor1_71.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_325.RichTextEditor1_71"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_324.RichTextEditor1_70.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_324.RichTextEditor1_70.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_324.RichTextEditor1_70"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container15_288.inputPedriatria_16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container15_288.inputPedriatria_16.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container15_288.inputPedriatria_16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_17.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_17.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_17"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_18.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_18.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_18"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_19.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_19.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_19"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_20.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_20.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_20"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_21.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_21.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_21"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_22.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_22.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_22"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_23.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_23.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.examenFuncional_1.inputPedriatria_23"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_14.inputPedriatria_24.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_14.inputPedriatria_24.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_14.inputPedriatria_24"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_14.inputPedriatria_25.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_14.inputPedriatria_25.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_14.inputPedriatria_25"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_14.inputPedriatria_26.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_14.inputPedriatria_26.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_14.inputPedriatria_26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container15_291.inputPedriatria_27.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container15_291.inputPedriatria_27.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container15_291.inputPedriatria_27"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container15_293.inputPedriatria_28.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container15_293.inputPedriatria_28.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container15_293.inputPedriatria_28"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_15.inputPedriatria_29.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_15.inputPedriatria_29.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_15.inputPedriatria_29"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_15.inputPedriatria_30.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_15.inputPedriatria_30.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_15.inputPedriatria_30"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_15.DatePicker7_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_15.DatePicker7_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.Container39_15.DatePicker7_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.galChecklist_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.galChecklist_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.galChecklist_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.galChecklist_5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.galChecklist_5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scHistoriaMedicaPediatria",
+                "type": "scHistoriaMedicaPediatria.Container44.conEdicionHistorialSec_1.CanvasHCTodas_3.DC_Pediatria_1.Container18_14.galChecklist_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_332.Container15_333.TextInput6_54.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_332.Container15_333.TextInput6_54.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_332.Container15_333.TextInput6_54"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_335.RichTextEditor1_72.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_335.RichTextEditor1_72.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaOtorrinolaringologia",
+                "type": "scHistoriaMedicaOtorrinolaringologia.Container44_1.conEdicionHistorialSec_2.CanvasHCTodas_4.DC_Otorrinolaringologia_2.Container18_18.Container15_335.RichTextEditor1_72"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_352.input_HistGeneral_79.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_352.input_HistGeneral_79.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_352.input_HistGeneral_79"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_23.input_HistGeneral_80.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_23.input_HistGeneral_80.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_23.input_HistGeneral_80"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_23.input_HistGeneral_81.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_23.input_HistGeneral_81.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_23.input_HistGeneral_81"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_23.input_HistGeneral_82.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_23.input_HistGeneral_82.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_23.input_HistGeneral_82"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_83.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_83.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_83"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_84.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_84.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_84"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_85.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_85.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_85"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_86.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_86.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_86"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_87.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_87.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_87"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_88.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_88.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_88"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_89.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_89.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_89"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_90.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_90.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_24.input_HistGeneral_90"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_91.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_91.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_91"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_92.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_92.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_92"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_93.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_93.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_93"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_94.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_94.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_94"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_95.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_95.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_95"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_96.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_96.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_96"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_97.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_97.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_97"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_98.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_98.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_98"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_99.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_99.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_99"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_100.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_100.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_100"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_101.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_101.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container39_25.input_HistGeneral_101"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_356.input_HistGeneral_102.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_356.input_HistGeneral_102.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_356.input_HistGeneral_102"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_359.input_HistGeneral_103.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_359.input_HistGeneral_103.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_359.input_HistGeneral_103"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_361.input_HistGeneral_104.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_361.input_HistGeneral_104.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedicaMedicinaGeneral",
+                "type": "scHistoriaMedicaMedicinaGeneral.Container44_2.conEdicionHistorialSec_3.CanvasHCTodas_5.DC_Medicina_General_3.Container18_22.Container15_361.input_HistGeneral_104"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_363.RichTextEditor1_79.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_363.RichTextEditor1_79.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_363.RichTextEditor1_79"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_365.RichTextEditor1_80.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_365.RichTextEditor1_80.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_365.RichTextEditor1_80"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_61.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_61.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_61"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_62.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_62.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_62"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_63.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_63.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_63"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_64.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_64.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_64"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_65.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_65.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_65"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_66.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_66.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container39_26.TextInput6_66"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_368.RichTextEditor1_81.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_368.RichTextEditor1_81.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_368.RichTextEditor1_81"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_370.RichTextEditor1_82.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_370.RichTextEditor1_82.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_370.RichTextEditor1_82"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_372.RichTextEditor1_83.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_372.RichTextEditor1_83.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_372.RichTextEditor1_83"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_374.RichTextEditor1_84.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_374.RichTextEditor1_84.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_374.RichTextEditor1_84"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_376.DatePicker5_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_376.DatePicker5_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaCirugiaPediatrica",
+                "type": "scHistoriaCirugiaPediatrica.Container44_3.conEdicionHistorialSec_4.CanvasHCTodas_6.DC_Cirugia_Pediatrica_4.Container18_25.Container15_376.DatePicker5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_246.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_246.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_246"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_245.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_245.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_245"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_244.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_244.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_244"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_243.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_243.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_243"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_242.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_242.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_242"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_241.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_241.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_241"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_240.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_240.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_240"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_239.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_239.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_38.txtinput_Gineco_239"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_238.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_238.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_238"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_237.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_237.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_237"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_236.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_236.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_236"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_235.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_235.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_235"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_234.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_234.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_37.txtinput_Gineco_234"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_36.txtinput_Gineco_233.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_36.txtinput_Gineco_233.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_36.txtinput_Gineco_233"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_36.txtinput_Gineco_232.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_36.txtinput_Gineco_232.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_36.txtinput_Gineco_232"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_36.txtinput_Gineco_231.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_36.txtinput_Gineco_231.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_36.txtinput_Gineco_231"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_230.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_230.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_230"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_229.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_229.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_229"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_228.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_228.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_228"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_227.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_227.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_35.txtinput_Gineco_227"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_382.RichTextEditor1_48.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_382.RichTextEditor1_48.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_382.RichTextEditor1_48"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_380.RichTextEditor1_47.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_380.RichTextEditor1_47.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_380.RichTextEditor1_47"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_246.Container15_378.Container26_24.dpScHistoriaFecha1_7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_246.Container15_378.Container26_24.dpScHistoriaFecha1_7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_246.Container15_378.Container26_24.dpScHistoriaFecha1_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_246.Container15_377.Container26_23.dpScHistoria_12.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_246.Container15_377.Container26_23.dpScHistoria_12.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_246.Container15_377.Container26_23.dpScHistoria_12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_246.Container15_247.Container26_22.dpScHistoria_11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_246.Container15_247.Container26_22.dpScHistoria_11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_246.Container15_247.Container26_22.dpScHistoria_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_245.tiGinecoLugNacimieto_25.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_245.tiGinecoLugNacimieto_25.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container15_245.tiGinecoLugNacimieto_25"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_247.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_247.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_247"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_248.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_248.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_248"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_249.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_249.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_249"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_250.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_250.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_250"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_251.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_251.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_251"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_252.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_252.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_252"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_253.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_253.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_253"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_254.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_254.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_254"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_255.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_255.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_255"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_256.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_256.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_256"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_257.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_257.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_257"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_258.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_258.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_39.txtinput_Gineco_258"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_259.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_259.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_259"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_260.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_260.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_260"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_261.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_261.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_261"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_262.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_262.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_262"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_263.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_263.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_40.txtinput_Gineco_263"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_264.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_264.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_264"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_265.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_265.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_265"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_266.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_266.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_266"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_267.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_267.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_267"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_268.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_268.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_268"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_269.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_269.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_269"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_270.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_270.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaGinecologia",
+                "type": "scHistoriaGinecologia.Container44_4.conEdicionHistorialSec_5.CanvasHCTodas_7.DC_Ginecologia_5.Container18_26.Container18_27.Container42_41.txtinput_Gineco_270"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.getEspecialidad"
                 }
               ],

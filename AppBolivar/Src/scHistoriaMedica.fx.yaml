@@ -3008,27 +3008,27 @@ scHistoriaMedica As screen:
                                                 //Si es PEDIATRIA
                                                 "pediatria",
                                                 Set(varDatosHistoriaPediatra,First(SortByColumns(Filter('public.mc_historia_pediatria',cod_hc_principal =HMSelected.cod_hm),"id_serial",SortOrder.Descending)));
-                                                Blank(),
+                                                Navigate(scHistoriaMedicaPediatria),
                                         
                                                 //Si es OTORRINORALINGOLOGIA
                                                 "otorrinolaringologia",
                                                 Set(varDatosHistoriaOtorrino,First(SortByColumns(Filter('public.mc_historia_otorrinolaringologia',cod_hc_principal =HMSelected.cod_hm),"id_serial",SortOrder.Descending)));
-                                                Blank(),
+                                                Navigate(scHistoriaMedicaOtorrinolaringologia),
                                         
                                                 //Si es GENERAL
                                                 "generica",
                                                 Set(varDatosHistoriaGenerica,First(SortByColumns(Filter('public.mc_historia_medicina_general',cod_hc_principal =HMSelected.cod_hm),"id_serial",SortOrder.Descending)));
-                                                Blank(),
+                                                Navigate(scHistoriaMedicaMedicinaGeneral),
                                         
                                                 //Si es GIRUGIA PEDIATRICA
                                                 "cirugia_pediatrica",
                                                 Set(varDatosHistoriaCirugiaPediatrica,First(SortByColumns(Filter('public.mc_historia_cirugia_pediatrica',cod_hc_principal =HMSelected.cod_hm),"id_serial",SortOrder.Descending)));
-                                                Blank(),
+                                                Navigate(scHistoriaCirugiaPediatrica),
                                         
                                                 //Si es GINECOLOGIA
                                                 "ginecologia",
                                                 Set(varDatosHistoriaGineco,First(SortByColumns(Filter('public.MC_Historia_Ginecologia',cod_hc_principal =HMSelected.cod_hm),"id_serial",SortOrder.Descending)));
-                                                Blank()
+                                                Navigate(scHistoriaGinecologia)
                                         )
                                         /*
                                         ClearCollect(formularioCamposLineales,Filter(AddColumns(
