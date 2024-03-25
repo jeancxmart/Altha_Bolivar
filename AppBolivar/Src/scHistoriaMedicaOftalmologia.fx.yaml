@@ -1,0 +1,3702 @@
+scHistoriaMedicaOftalmologia As screen:
+
+    CanvasHCTodas_2 As fluidGrid.fluidGridWithBlankCard:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =660
+        Width: =852
+        X: =235
+        Y: =108
+        ZIndex: =1
+
+        DC_Oftalmologia_2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =3700
+            Visible: |-
+                =//varEspecialidadSelected.plantilla="oftalmologia"
+                true
+            Width: =Parent.Width-20
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            ContainerOftaMain_2 As groupContainer.verticalAutoLayoutContainer:
+                Height: =3900
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =5
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =10
+                PaddingRight: =10
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Container15_132 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =1
+
+                    lbEncabezado_361 As label:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =varcolor_ClaroElementoPrimario
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =18
+                        Text: ="Filiación"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                ContainerFiliacion_12 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =30
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =2
+
+                    Container15_193 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =1
+
+                        lbEncabezado_362 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Ocupación"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_43 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).filiacion_ocupacion
+                            Height: =36
+                            Reset: =resetear
+                            Width: =388
+                            ZIndex: =3
+
+                    Container15_194 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =2
+
+                        lbEncabezado_363 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Procedencia"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_44 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).filiacion_procedencia
+                            Height: =36
+                            Reset: =resetear
+                            Width: =388
+                            ZIndex: =3
+
+                Container15_195 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =3
+
+                    lbEncabezado_364 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =varcolor_ClaroElementoPrimario
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =18
+                        Text: ="Anamnesis"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                ContainerAnamnesis_2 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =30
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =4
+
+                    Container15_196 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =1
+
+                        lbEncabezado_365 As label:
+                            AlignInContainer: =AlignInContainer.Start
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Motivo Consulta"
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_45 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_motivo
+                            Height: =36
+                            Reset: =resetear
+                            Width: =388
+                            ZIndex: =3
+
+                    Container15_197 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =2
+
+                        lbEncabezado_366 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Relato de la Enfermedad"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_46 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_relato_enf
+                            Height: =36
+                            Reset: =resetear
+                            Width: =388
+                            ZIndex: =3
+
+                ContainerAntecentesAnamnesis_16 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =5
+
+                    lbEncabezado_367 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Antecedentes"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                Container15_198 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =6
+
+                    lbEncabezado_368 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Generales"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_42 As text:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_generales
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_199 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =7
+
+                    lbEncabezado_369 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Familiares"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_43 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_familiares
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_200 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =8
+
+                    lbEncabezado_370 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Oftalmológicas"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_44 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_oftalmicas
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_201 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =9
+
+                    lbEncabezado_371 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Alergias"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_45 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).anamnesis_alergias
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                ContainerExamenOftalmológico_2 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =10
+
+                    lbEncabezado_372 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =varcolor_ClaroElementoPrimario
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =18
+                        Text: ="Examen Oftalmológico"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                ContainerAntecentesAnamnesis_17 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =11
+
+                    lbEncabezado_373 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Lensometría"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                ContainerFiliacion_13 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =30
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =12
+
+                    Container15_202 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =1
+
+                        lbEncabezado_374 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="OD"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_47 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_lensometria_od
+                            Height: =36
+                            Reset: =resetear
+                            Width: =388
+                            ZIndex: =3
+
+                    Container15_203 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =2
+
+                        lbEncabezado_375 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="OI"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_48 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_lensometria_oi
+                            Height: =36
+                            Reset: =resetear
+                            Width: =388
+                            ZIndex: =3
+
+                ContainerAntecentesAnamnesis_18 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =13
+
+                    lbEncabezado_376 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Autorefracto"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                ContainerFiliacion_14 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =30
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =14
+
+                    Container15_204 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =1
+
+                        lbEncabezado_377 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="OD"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_49 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_autorefracto_od
+                            Height: =36
+                            Reset: =resetear
+                            Width: =388
+                            ZIndex: =3
+
+                    Container15_205 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =2
+
+                        lbEncabezado_378 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="OI"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_50 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_autorefracto_oi
+                            Height: =36
+                            Reset: =resetear
+                            Width: =388
+                            ZIndex: =3
+
+                ContainerAgudezaVisual_12 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutGap: =15
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =15
+
+                    lbEncabezado_379 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Agudeza Visual y Refracción"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                ContainerAgudezaVisual_13 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutGap: =15
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =16
+
+                    lbEncabezado_380 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Lejos"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    btnEditarOD_7 As button:
+                        BorderColor: |-
+                            =ColorValue("#26495B")
+                        Fill: =ColorFondoBoton
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =20
+                        HoverBorderColor: |-
+                            =ColorValue("#26495B")
+                        HoverColor: |-
+                            =ColorValue("#26495B")
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        LayoutMinHeight: =20
+                        OnSelect: |
+                            =UpdateContext({_varPopUpOftal: true});
+                            UpdateContext({_varOftalTipo: 1});
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Text: ="Editar OD"
+                        Visible: =_viewHistoriaSec
+                        X: =201
+                        Y: =31
+                        ZIndex: =3
+
+                    btnEditarOI_5 As button:
+                        BorderColor: |-
+                            =ColorValue("#26495B")
+                        Fill: =ColorFondoBoton
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =20
+                        HoverBorderColor: |-
+                            =ColorValue("#26495B")
+                        HoverColor: |-
+                            =ColorValue("#26495B")
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        LayoutMinHeight: =20
+                        OnSelect: |
+                            =UpdateContext({_varPopUpOftal: true});
+                            UpdateContext({_varOftalTipo: 2});
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Text: ="Editar OI"
+                        Visible: =_viewHistoriaSec
+                        X: =201
+                        Y: =31
+                        ZIndex: =4
+
+                ContainerAgudezaVisual_14 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =210
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutGap: =15
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =17
+
+                    htmlOftalmo_5 As htmlViewer:
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =1
+                        Height: =645
+                        HtmlText: |-
+                            ="<!DOCTYPE html>
+                            <html>
+                            <body style='margin:20px; font-size:14px'>
+                             
+                                    <table style='margin:5px ;table-layout: fixed;width:99%; height: 100%; text-align: center;  border-collapse: collapse;'>
+                                                <tr>
+                                        <td style='width:12.5%'> </td>
+                                        <td style='width:12.5%'> </td>
+                                        <td style='width:12.5%'> </td>
+                            <td style='width:12.5%'> </td>
+                            <td style='width:12.5%'> </td>
+                            <td style='width:12.5%'> </td>
+                            <td style='width:12.5%'> </td>
+                            <td style='width:12.5%'> </td>
+                                                </tr>
+                                        <tr style='height:60px'>
+                                            <td colspan='2'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'></td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>AVSC</td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>ESF</td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>CYL</td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>EJE</td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>AVCC</td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>DIP</td>
+                                        </tr>
+                             
+                                        <tr style='height:60px'>
+                                            <td colspan='2'  style='background-color:#E2E2E2; height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>OD</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=1,avsc) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=1,esf) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=1,cyl) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=1,eje) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=1,avcc) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=1,dip) & "</td>
+                                        </tr>
+                                        <tr style='height:60px'>
+                                            <td colspan='2'  style='background-color:#E2E2E2; height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>OI</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=2,avsc) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=2,esf) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=2,cyl) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=2,eje) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=2,avcc) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=2,dip) & "</td>
+                                        </tr>
+                            </table>
+                            </html>"
+                        Width: =1076
+                        X: =147
+                        Y: =123
+                        ZIndex: =1
+
+                ContainerAgudezaVisual_15 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutGap: =15
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =18
+
+                    lbEncabezado_381 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Cerca"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    btnEditarOD_8 As button:
+                        BorderColor: |-
+                            =ColorValue("#26495B")
+                        Fill: =ColorFondoBoton
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =20
+                        HoverBorderColor: |-
+                            =ColorValue("#26495B")
+                        HoverColor: |-
+                            =ColorValue("#26495B")
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        LayoutMinHeight: =20
+                        OnSelect: |
+                            =UpdateContext({_varPopUpOftal: true});
+                            UpdateContext({_varOftalTipo: 3});
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Text: ="Editar OD"
+                        Visible: =_viewHistoriaSec
+                        X: =201
+                        Y: =31
+                        ZIndex: =3
+
+                    btnEditarOI_6 As button:
+                        BorderColor: |-
+                            =ColorValue("#26495B")
+                        Fill: =ColorFondoBoton
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =20
+                        HoverBorderColor: |-
+                            =ColorValue("#26495B")
+                        HoverColor: |-
+                            =ColorValue("#26495B")
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        LayoutMinHeight: =20
+                        OnSelect: |
+                            =UpdateContext({_varPopUpOftal: true});
+                            UpdateContext({_varOftalTipo: 4});
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Text: ="Editar OI"
+                        Visible: =_viewHistoriaSec
+                        X: =201
+                        Y: =31
+                        ZIndex: =4
+
+                ContainerAgudezaVisual_16 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =210
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutGap: =15
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =19
+
+                    htmlOftalmo_6 As htmlViewer:
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =1
+                        Height: =645
+                        HtmlText: |-
+                            ="<!DOCTYPE html>
+                            <html>
+                            <body style='margin:20px; font-size:14px'>
+                             
+                                    <table style='margin:5px ;table-layout: fixed;width:99%; height: 100%; text-align: center;  border-collapse: collapse;'>
+                                                <tr>
+                                        <td style='width:12.5%'> </td>
+                                        <td style='width:12.5%'> </td>
+                                        <td style='width:12.5%'> </td>
+                            <td style='width:12.5%'> </td>
+                            <td style='width:12.5%'> </td>
+                            <td style='width:12.5%'> </td>
+                            <td style='width:12.5%'> </td>
+                            <td style='width:12.5%'> </td>
+                                                </tr>
+                                        <tr style='height:60px'>
+                                            <td colspan='2'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'></td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>AVSC</td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>ESF</td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>CYL</td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>EJE</td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>AVCC</td>
+                                            <td colspan='1'  style='background-color:#E2E2E2;height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>DIP</td>
+                                        </tr>
+                             
+                                        <tr style='height:60px'>
+                                            <td colspan='2'  style='background-color:#E2E2E2; height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>OD</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=3,avsc) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=3,esf) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=3,cyl) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=3,eje) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=3,avcc) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=3,dip) & "</td>
+                                        </tr>
+                                        <tr style='height:60px'>
+                                            <td colspan='2'  style='background-color:#E2E2E2; height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>OI</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=4,avsc) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=4,esf) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=4,cyl) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=4,eje) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=4,avcc) & "</td>
+                                            <td colspan='1'  style='height:30px; border: 1px solid #dee2e6; border-collapse: collapse; border-color: #343a40; font-weight: 700'>" & LookUp(colOftalLejosCerca,tipo=4,dip) & "</td>
+                                        </tr>
+                            </table>
+                            </html>"
+                        Width: =1076
+                        X: =147
+                        Y: =123
+                        ZIndex: =1
+
+                ContainerAntecentesAnamnesis_19 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =20
+
+                    lbEncabezado_382 As label:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Biomicroscopia"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                Container15_206 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =21
+
+                    lbEncabezado_383 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Párpados y Pestañas"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_46 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_parpados_pestanas
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_207 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =22
+
+                    lbEncabezado_384 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Conjuntiva"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_47 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_conjuntiva
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_208 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =23
+
+                    lbEncabezado_385 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Esclera"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_48 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_esclera
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_209 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =24
+
+                    lbEncabezado_386 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Cornea"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_49 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_cornea
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_210 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =25
+
+                    lbEncabezado_387 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Cámara Anterior"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_50 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_camara_anterior
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_211 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =26
+
+                    lbEncabezado_388 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="VH"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_51 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_vh
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_212 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =27
+
+                    lbEncabezado_389 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Iris pupila"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_52 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_bio_iris_pupila
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                ContainerAntecentesAnamnesis_20 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =28
+
+                    lbEncabezado_390 As label:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="PIO"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                ContainerFiliacion_15 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =30
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =29
+
+                    Container15_213 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =1
+
+                        lbEncabezado_391 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="OD"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_51 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_pio_od
+                            Height: =36
+                            Reset: =resetear
+                            Width: =388
+                            ZIndex: =3
+
+                    Container15_214 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =2
+
+                        lbEncabezado_392 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="OI"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_52 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_pio_oi
+                            Height: =36
+                            Reset: =resetear
+                            Width: =388
+                            ZIndex: =3
+
+                ContainerAntecentesAnamnesis_21 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =30
+
+                    lbEncabezado_393 As label:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Gonicopia OI"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                ContainerFiliacion_16 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =30
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =31
+
+                    Container15_215 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: |
+                            =100
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =1
+
+                        lbEncabezado_394 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Arriba"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_53 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_arriba
+                            Height: =36
+                            Reset: =resetear
+                            Width: =160
+                            ZIndex: =3
+
+                    Container15_216 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =2
+
+                        lbEncabezado_395 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Izquierda"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_54 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_izquierda
+                            Height: =36
+                            Reset: =resetear
+                            Width: =160
+                            ZIndex: =3
+
+                    Container15_217 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =3
+
+                        lbEncabezado_396 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Abajo"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_55 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_abajo
+                            Height: =36
+                            Reset: =resetear
+                            Width: =160
+                            ZIndex: =3
+
+                    Container15_218 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =4
+
+                        lbEncabezado_397 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Derecha"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_56 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_oi_derecha
+                            Height: =36
+                            Reset: =resetear
+                            Width: =160
+                            ZIndex: =3
+
+                ContainerAntecentesAnamnesis_22 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =32
+
+                    lbEncabezado_398 As label:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Gonicopia OD"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                ContainerFiliacion_17 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =30
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =33
+
+                    Container15_219 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: |
+                            =100
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =1
+
+                        lbEncabezado_399 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Arriba"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_57 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_arriba
+                            Height: =36
+                            Reset: =resetear
+                            Width: =160
+                            ZIndex: =3
+
+                    Container15_220 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =2
+
+                        lbEncabezado_400 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Izquierda"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_58 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_izquierda
+                            Height: =36
+                            Reset: =resetear
+                            Width: =160
+                            ZIndex: =3
+
+                    Container15_221 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =3
+
+                        lbEncabezado_401 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Abajo"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_59 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_abajo
+                            Height: =36
+                            Reset: =resetear
+                            Width: =160
+                            ZIndex: =3
+
+                    Container15_222 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =68
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Width: =100
+                        Y: =40
+                        ZIndex: =4
+
+                        lbEncabezado_402 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            LayoutMinWidth: =50
+                            OnSelect: =
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: ="Derecha"
+                            Width: =100
+                            Y: =10
+                            ZIndex: =2
+
+                        TextInput15_60 As text:
+                            BorderColor: =RGBA(44, 46, 53, 1)
+                            Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_gonicopia_od_derecha
+                            Height: =36
+                            Reset: =resetear
+                            Width: =160
+                            ZIndex: =3
+
+                ContainerAntecentesAnamnesis_23 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =34
+
+                    lbEncabezado_403 As label:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =35
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =15
+                        Text: ="Fondo de Ojo Dilatado"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                Container15_223 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =35
+
+                    lbEncabezado_404 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Papila"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_53 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_papila
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_224 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =36
+
+                    lbEncabezado_405 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Excavación"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_54 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_excavacion
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_225 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =37
+
+                    lbEncabezado_406 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Radio"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_55 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_radio
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_226 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =38
+
+                    lbEncabezado_407 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Vaso"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_56 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_vaso
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_227 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =39
+
+                    lbEncabezado_408 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="RAV"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_57 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_rav
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_228 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =40
+
+                    lbEncabezado_409 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Macula"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_58 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_macula
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_229 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =41
+
+                    lbEncabezado_410 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Reflejo"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_59 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_reflejo
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_230 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =42
+
+                    lbEncabezado_411 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Retina"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_60 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_ojo_dil_retina
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_231 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =43
+
+                    lbEncabezado_412 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Balance Muscular"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    tiGinecoLugNacimieto_61 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).fondo_dilatado_bal_muscular
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        OnChange: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Reset: =resetear
+                        Size: =12
+                        Width: =0
+                        X: =10
+                        ZIndex: =3
+
+                Container15_232 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =45
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =60
+                    ZIndex: =44
+
+                    lbEncabezado_413 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =varcolor_ClaroElementoPrimario
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =18
+                        Text: ="Impresión Diagnóstica"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                Container15_233 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =195
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =45
+
+                    lbEncabezado_414 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: |-
+                            ="Impresión Diagnóstica
+                            "
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    RichTextEditor1_41 As richTextEditor:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).impresion_diagnostica
+                        Height: =170
+                        Width: =100
+                        ZIndex: =6
+
+                Container15_234 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =45
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =20
+                    ZIndex: =46
+
+                    lbEncabezado_415 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =varcolor_ClaroElementoPrimario
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =18
+                        Text: ="Tratamiento"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                Container15_235 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =195
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =47
+
+                    lbEncabezado_416 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: |-
+                            ="Tratamiento
+                            "
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    RichTextEditor1_42 As richTextEditor:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).tratamiento
+                        Height: =170
+                        Width: =100
+                        ZIndex: =6
+
+                Container15_236 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =45
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    Y: =20
+                    ZIndex: =48
+
+                    lbEncabezado_417 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =varcolor_ClaroElementoPrimario
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FillPortions: =1
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =18
+                        Text: ="Exámenes Complementarios"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                Container15_237 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =195
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    Width: =Parent.Width
+                    Y: =40
+                    ZIndex: =49
+
+                    lbEncabezado_418 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: ="Exámenes Complementarios"
+                        Width: =100
+                        Y: =10
+                        ZIndex: =2
+
+                    RichTextEditor1_43 As richTextEditor:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Default: =First(Filter(SortByColumns('public.mc_historia_oftalmologia',"id_serial",SortOrder.Descending),cod_hc_principal =HMSelected.cod_hm)).ex_complementarios
+                        Height: =170
+                        Width: =100
+                        ZIndex: =6
+
+    conHeaderHistorial_2 As groupContainer.verticalAutoLayoutContainer:
+        Height: =100
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =Parent.Width
+        ZIndex: =2
+
+        conHiistorialFondo_11 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =100
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =200
+            LayoutMode: =LayoutMode.Auto
+            Width: =100
+            ZIndex: =1
+
+        conHiistorialFondo_15 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =If(_ViewFormularioDCA||_viewHistoriaSec,1,3)
+            Height: =100
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =890
+            LayoutMode: =LayoutMode.Auto
+            Width: =100
+            ZIndex: =3
+
+            lblHistoriaMedica_DCA_10 As label:
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =1
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =80
+                PaddingLeft: =35
+                Size: =28
+                Text: |-
+                    =//If(_viewHistoriaSec,varEspecialidadSelected.Especialidad,"Historia Médica" )
+                    //varEspecialidadSelected.Especialidad
+                    "Oftalmología"
+                Visible: |-
+                    =//_ViewFormularioDCA||_viewHistoriaSec
+                    true
+                Width: =850
+                X: =301
+                ZIndex: =2
+
+            conHiistorialFondo_16 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =15
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =200
+                LayoutMode: =LayoutMode.Auto
+                Visible: |-
+                    =//_ViewFormularioDCA||_viewHistoriaSec
+                    true
+                Width: =100
+                ZIndex: =4
+
+                btnCancelarSec_2 As button:
+                    BorderColor: |-
+                        =ColorValue("#26495B")
+                    Color: |-
+                        =ColorValue("#26495B")
+                    DisabledBorderColor: =RGBA(116, 116, 116, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FocusedBorderColor: =btnCancelarSec_2.BorderColor
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    HoverBorderColor: =ColorFade(btnCancelarSec_2.BorderColor, 20%)
+                    HoverColor: |-
+                        =ColorValue("#26495B")
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: |-
+                        =UpdateContext({_viewHistoriaSec:false});
+                        UpdateContext({resetear:true});UpdateContext({resetear:false});
+                        Reset(RichTextEditor1);Reset(RichTextEditor1_1);
+                        
+                        Reset(RichTextEditor1_2);Reset(RichTextEditor1_3);Reset(RichTextEditor1_4);
+                        
+                        
+                        Reset(RichTextEditor1_6);Reset(RichTextEditor1_7);Reset(RichTextEditor1_8);Reset(RichTextEditor1_9);Reset(RichTextEditor1_10);Reset(RichTextEditor1_11);Reset(RichTextEditor1_12);Reset(RichTextEditor1_5);Reset(RichTextEditor1_13);Reset(RichTextEditor1_14);Reset(RichTextEditor1_15);Reset(RichTextEditor1_16);Reset(RichTextEditor1_17);Reset(RichTextEditor1_18);Reset(RichTextEditor1_19);Reset(RichTextEditor1_20);Reset(inputPedriatria_1); Reset(inputPedriatria_12); Reset(inputPedriatria_13);Reset(input_HistGeneral_1);
+                        Reset(input_HistGeneral_25);Reset(input_HistGeneral_26);Reset(input_HistGeneral_27);Reset(RichTextEditor1_21);
+                        Reset(RichTextEditor1_22); Reset(RichTextEditor1_24); Reset(RichTextEditor1_23);
+                    PressedBorderColor: =ColorFondoBoton
+                    PressedColor: =ColorFondoBoton
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Size: =12
+                    Text: ="CANCELAR"
+                    Visible: |-
+                        =//_viewHistoriaSec
+                        true
+                    X: =769
+                    Y: =1
+                    ZIndex: =1
+
+                btnCancelarPrincipal_3 As button:
+                    BorderColor: |-
+                        =ColorValue("#26495B")
+                    Color: |-
+                        =ColorValue("#26495B")
+                    DisabledBorderColor: =RGBA(116, 116, 116, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FocusedBorderColor: =btnCancelarPrincipal_3.BorderColor
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    HoverBorderColor: =ColorFade(btnCancelarPrincipal_3.BorderColor, 20%)
+                    HoverColor: |-
+                        =ColorValue("#26495B")
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: |
+                        =UpdateContext({_ViewFormularioDCA:false});
+                        Reset(TxtNombreDCA_00);Reset(TxtApellidoDCA_00);Reset(tiDNI_00);Reset(dpSexo_00);
+                        Reset(dpOcupacion_00);Reset(dpFechaNac_00);Reset(dpEstadoCivil_DCA_00);Reset(dpgrado_DCA_00);Reset(dpNacionalidad_DCA_00);Reset(TxtresidenciaDCA_00);Reset(TxtCorreo_00);Reset(TxtTelefono_00);Reset(tiMotivoConsulta_00);Reset(TxtEnfermedadDCA_00);Reset(TxtAntecedenetMADCA_00);Reset(TxtPadreDCA_00);Reset(TxtMadreDCA_00);Reset(cbProbMadre);Reset(cbProbPadre);
+                        Reset(ProblemaPadre_5);Reset(ProblemaMadre_5);Reset(cbAlimentacion00);Reset(cbSueno00);Reset(cbEjercicios00);Reset(cbAlergias00);Reset(txtOtroAlimentacion);Reset(txtOtroEjercicios);Reset(txtOtroSueno);Reset(txtOtroAlergias);
+                    PressedBorderColor: =ColorFondoBoton
+                    PressedColor: =ColorFondoBoton
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Size: =12
+                    Text: ="CANCELAR"
+                    Visible: =_ViewFormularioDCA
+                    X: =769
+                    Y: =1
+                    ZIndex: =2
+
+                btnGuardarPrincipal_2 As button:
+                    BorderColor: |-
+                        =ColorValue("#26495B")
+                    Fill: =ColorFondoBoton
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    HoverBorderColor: |-
+                        =ColorValue("#26495B")
+                    HoverColor: |-
+                        =ColorValue("#26495B")
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: |-
+                        =Refresh('public.Medical_Center_Historial_Principal');
+                        
+                        UpdateContext({_ViewFormularioDCA:false});
+                        If(CountRows(Adjunto_14.Attachments)=0,false,
+                         Set(varAzureFileUsuarioNewHM,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_14.Attachments).Name,Last(Adjunto_14.Attachments).Value)));
+                        
+                        
+                        Patch(
+                            'public.Medical_Center_Historial_Principal',
+                            LookUp('public.Medical_Center_Historial_Principal',id=HMSelected.id),
+                            {activo:false});
+                        Set(HMSelected,    
+                        Patch(
+                            'public.Medical_Center_Historial_Principal',
+                            Defaults('public.Medical_Center_Historial_Principal'),
+                            {
+                                version:First(Sort(Filter('public.Medical_Center_Historial_Principal',DNI_CI=HMSelected.DNI_CI),version,SortOrder.Descending)).version+1,
+                                id:Concat(FirstN(Split(HMSelected.id,"-"),2),Value,"-")&"-"&Upper(Right(GUID(),6)),
+                                cod_hm:Text(dpFechaNac_00.SelectedDate,"yyyymmdd")&"-"&HMSelected.DNI_CI,//GENERAR SEMANTICA HC PRINCIPAL
+                                activo:true,
+                                fecha_creacion:Now(),
+                                Nombres: TxtNombreDCA_00.Text,
+                                Apellidos: TxtApellidoDCA_00.Text,
+                                DNI_CI: tiDNI_00.Text,
+                                correo:TxtCorreo_00.Text,
+                                telefono:TxtTelefono_00.Text,
+                                Sexo: dpSexo_00.Selected.Value,
+                                Ocupacion: dpgrado_DCA_8.Selected.Value,
+                                Fecha_Nacimiento:dpFechaNac_00.SelectedDate,
+                                Estado_Civil:dpEstadoCivil_DCA_00.Selected.Value,
+                                Grado_Instruccion: dpOcupacion_00.Selected.Value,
+                                Nacionalidad: dpNacionalidad_DCA_00.Selected.Value,
+                                Direccion: TxtresidenciaDCA_00.Text,
+                                Motivo: tiMotivoConsulta_00.Text,
+                                Enfermedad_Actual: TxtEnfermedadDCA_00.Text,
+                                Antecedentes_Malestar_Actual: TxtAntecedenetMADCA_00.Text,
+                                Nombre_Padre:TxtPadreDCA_00.Text,
+                                Antecedentes_Padre: If(cbProbPadre.Selected.Value="Otro",ProblemaPadre_5.Text,cbProbPadre.Selected.Value) ,
+                                Nombre_Madre:TxtMadreDCA_00.Text,
+                                Antecedentes_Madre:If(cbProbMadre.Selected.Value="Otro",ProblemaMadre_5.Text,cbProbMadre.Selected.Value) ,
+                                Antecedentes_Personales: TxtAntecedentesPersonales.Text,
+                                Alimentacion: If(cbAlimentacion00.Selected.Value="Otro",txtOtroAlimentacion.Text,cbAlimentacion00.Selected.Value)  ,
+                                Sueño:If(cbSueno00.Selected.Value="Otro",txtOtroSueno.Text,cbSueno00.Selected.Value)   ,
+                                Imagen_Id:If(CountRows(Adjunto_28.Attachments)=0,HMSelected.Imagen_Id,varAzureFileUsuarioNewHM.Id),
+                                Ejercicios: If(cbEjercicios00.Selected.Value="Otro",txtOtroEjercicios.Text,cbEjercicios00.Selected.Value)  ,
+                                Alergias: If(cbAlergias00.Selected.Value="Otro",txtOtroAlergias.Text,cbAlergias00.Selected.Value),
+                                id_sede:_varSede.id
+                            }
+                        ));
+                        Reset(Adjunto_14)
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Size: =12
+                    Text: ="GUARDAR"
+                    Visible: =_ViewFormularioDCA
+                    X: =201
+                    Y: =31
+                    ZIndex: =3
+
+                btnGuardarSec_2 As button:
+                    BorderColor: |-
+                        =ColorValue("#26495B")
+                    Fill: =ColorFondoBoton
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    HoverBorderColor: |-
+                        =ColorValue("#26495B")
+                    HoverColor: |-
+                        =ColorValue("#26495B")
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: |-
+                        =Refresh('public.Medical_Center_Historial_Principal');
+                        
+                        UpdateContext({_varHistoriaSec_id:Text(Now(),"yymmdd")&"_"&Substitute(Upper(Text(GUID())),"-","")});
+                        //REVISAR LOS PATCH LOOKUP
+                        
+                        Switch(varEspecialidadSelected.plantilla,
+                        "oftalmologia",
+                        Patch('public.mc_historia_oftalmologia', Defaults('public.mc_historia_oftalmologia'),{
+                        id: _varHistoriaSec_id,
+                        id_sede: _varSede.id,
+                        cod_hc_principal:HMSelected.cod_hm,
+                        id_especialidad:varEspecialidadSelected.id,
+                        id_doctor:getUser.id,
+                        id_paciente:0,
+                        fecha_registro:Now(),
+                        activo:true,
+                        version:First(Sort(Filter('public.mc_historia_oftalmologia',cod_hc_principal=HMSelected.cod_hm),version,SortOrder.Descending)).version+1,
+                        filiacion_ocupacion:  TextInput15.Text,
+                        filiacion_procedencia: TextInput15_1.Text,
+                        anamnesis_motivo: TextInput15_2.Text,
+                        anamnesis_relato_enf: TextInput15_3.Text,
+                        anamnesis_generales: tiGinecoLugNacimieto_4.Text,
+                        anamnesis_familiares: tiGinecoLugNacimieto_3.Text,
+                        anamnesis_oftalmicas: tiGinecoLugNacimieto_1.Text,
+                        anamnesis_alergias: tiGinecoLugNacimieto_2.Text,
+                        ex_lensometria_od: TextInput15_4.Text,
+                        ex_lensometria_oi:  TextInput15_5.Text,
+                        ex_autorefracto_od: TextInput15_6.Text,
+                        ex_autorefracto_oi:TextInput15_7.Text,
+                        /**
+                        {tipo: 1, des: "Lejos OD", avsc: "", esf: "", cyl: "", eje: "", avcc: "", dip: ""},
+                        {tipo: 2, des: "Lejos OI", avsc: "", esf: "", cyl: "", eje: "", avcc: "", dip: ""},
+                        {tipo: 3, des: "Cerca OD", avsc: "", esf: "", cyl: "", eje: "", avcc: "", dip: ""},
+                        {tipo: 4, des: "Cerca OI", avsc: "", esf: "", cyl: "", eje: "", avcc: "", dip: ""}
+                        **/
+                        ex_lejos_avsc_od:LookUp(colOftalLejosCerca,tipo=1,avsc),
+                        ex_lejos_esf_od:LookUp(colOftalLejosCerca,tipo=1,esf),
+                        ex_lejos_cyl_od:LookUp(colOftalLejosCerca,tipo=1,cyl),
+                        ex_lejos_eje_od:LookUp(colOftalLejosCerca,tipo=1,eje),
+                        ex_lejos_avcc_od:LookUp(colOftalLejosCerca,tipo=1,avcc),
+                        ex_lejos_dip_od:LookUp(colOftalLejosCerca,tipo=1,dip),
+                        
+                        ex_lejos_avsc_oi:LookUp(colOftalLejosCerca,tipo=2,avsc),
+                        ex_lejos_esf_oi:LookUp(colOftalLejosCerca,tipo=2,esf),
+                        ex_lejos_cyl_oi:LookUp(colOftalLejosCerca,tipo=2,cyl),
+                        ex_lejos_eje_oi:LookUp(colOftalLejosCerca,tipo=2,eje),
+                        ex_lejos_avcc_oi:LookUp(colOftalLejosCerca,tipo=2,avcc),
+                        ex_lejos_dip_oi:LookUp(colOftalLejosCerca,tipo=2,dip),
+                        
+                        ex_cerca_avsc_od:LookUp(colOftalLejosCerca,tipo=3,avsc),
+                        ex_cerca_esf_od:LookUp(colOftalLejosCerca,tipo=3,esf),
+                        ex_cerca_cyl_od:LookUp(colOftalLejosCerca,tipo=3,cyl),
+                        ex_cerca_eje_od:LookUp(colOftalLejosCerca,tipo=3,eje),
+                        ex_cerca_avcc_od:LookUp(colOftalLejosCerca,tipo=3,avcc),
+                        ex_cerca_dip_od:LookUp(colOftalLejosCerca,tipo=3,dip),
+                        
+                        ex_cerca_avsc_oi:LookUp(colOftalLejosCerca,tipo=4,avsc),
+                        ex_cerca_esf_oi:LookUp(colOftalLejosCerca,tipo=4,esf),
+                        ex_cerca_cyl_oi:LookUp(colOftalLejosCerca,tipo=4,cyl),
+                        ex_cerca_eje_oi:LookUp(colOftalLejosCerca,tipo=4,eje),
+                        ex_cerca_avcc_oi:LookUp(colOftalLejosCerca,tipo=4,avcc),
+                        ex_cerca_dip_oi:LookUp(colOftalLejosCerca,tipo=4,dip),
+                        
+                        ex_bio_parpados_pestanas: tiGinecoLugNacimieto_5.Text,
+                        ex_bio_conjuntiva: tiGinecoLugNacimieto_6.Text,
+                        ex_bio_esclera: tiGinecoLugNacimieto_7.Text,
+                        ex_bio_cornea: tiGinecoLugNacimieto_8.Text,
+                        ex_bio_camara_anterior: tiGinecoLugNacimieto_9.Text,
+                        ex_bio_vh: tiGinecoLugNacimieto_10.Text,
+                        ex_bio_iris_pupila: tiGinecoLugNacimieto_11.Text,
+                        ex_pio_od: TextInput15_8.Text,
+                        ex_pio_oi:TextInput15_9.Text,
+                        ex_gonicopia_oi_arriba: TextInput15_16.Text,
+                        ex_gonicopia_oi_izquierda: TextInput15_17.Text,
+                        ex_gonicopia_oi_abajo: TextInput15_18.Text,
+                        ex_gonicopia_oi_derecha: TextInput15_19.Text,
+                        ex_gonicopia_od_arriba: TextInput15_20.Text,
+                        ex_gonicopia_od_izquierda: TextInput15_21.Text,
+                        ex_gonicopia_od_abajo: TextInput15_23.Text,
+                        ex_gonicopia_od_derecha: TextInput15_24.Text,
+                        fondo_ojo_dil_papila: tiGinecoLugNacimieto_12.Text,
+                        fondo_ojo_dil_excavacion: tiGinecoLugNacimieto_13.Text,
+                        fondo_ojo_dil_radio: tiGinecoLugNacimieto_14.Text,
+                        fondo_ojo_dil_vaso: tiGinecoLugNacimieto_15.Text,
+                        fondo_ojo_dil_rav: tiGinecoLugNacimieto_16.Text,
+                        fondo_ojo_dil_macula: tiGinecoLugNacimieto_17.Text,
+                        fondo_ojo_dil_reflejo: tiGinecoLugNacimieto_18.Text,
+                        fondo_ojo_dil_retina: tiGinecoLugNacimieto_19.Text,
+                        fondo_dilatado_bal_muscular: tiGinecoLugNacimieto_20.Text,
+                        impresion_diagnostica: RichTextEditor1_2.HtmlText,
+                        tratamiento: RichTextEditor1_3.HtmlText,
+                        ex_complementarios: RichTextEditor1_4.HtmlText
+                        
+                        })
+                        ,
+                        "ginecologia",
+                        Patch('public.MC_Historia_Ginecologia',Defaults('public.MC_Historia_Ginecologia'),
+                            {
+                                id:_varHistoriaSec_id,
+                            id_sede: _varSede.id,
+                            id_especialidad:varEspecialidadSelected.id,
+                            id_doctor:getUser.id,
+                            id_paciente:0,
+                            cod_hc_principal:HMSelected.cod_hm,
+                            fecha_registro:Now(),
+                            activo:true,
+                            version:First(Sort(Filter('public.MC_Historia_Ginecologia',cod_hc_principal=HMSelected.cod_hm),version,SortOrder.Descending)).version+1,
+                            lugar_de_nacimiento:tiGinecoLugNacimieto.Text,
+                            estado_civil:dpScHistoria_1.SelectedText.Value,
+                            nacionalidad:dpScHistoria_2.SelectedText.Value,
+                            fecha_probable_de_parto: dpScHistoriaFecha1.SelectedDate,
+                            motivo_de_consulta: RichTextEditor1.HtmlText,
+                            enfermedad_actual :RichTextEditor1_1.HtmlText,
+                            antecedentes_familiares_madre : txtinput_Gineco_7.Text,
+                            antecedentes_familiares_padre :  txtinput_Gineco_8.Text,
+                            antecedentes_familiares_hermanos :  txtinput_Gineco_9.Text,
+                            antecedentes_familiares_hijos :  txtinput_Gineco_10.Text,
+                            antecedentes_de_la_pareja_enfermedades_cronicas : txtinput_Gineco_13.Text,
+                            antecedentes_de_la_pareja_tipeaje : txtinput_Gineco_14.Text,
+                            antecedentes_de_la_pareja_ets : txtinput_Gineco_15.Text,
+                            antecedentes_personales_patologia_de_base : txtinput_Gineco_16.Text,
+                            antecedentes_personales_alergia_de_medicamentos : txtinput_Gineco_17.Text,
+                            antecedentes_personales_antecedentes_quirurgicos : txtinput_Gineco_18.Text,
+                            antecedentes_personales_habitos_toxicos : txtinput_Gineco_19.Text,
+                            antecedentes_personales_habitos_fisiologicos : txtinput_Gineco_20.Text,
+                            antecedentes_ginecologicos_menarquia : txtinput_Gineco_21.Text ,
+                            antecedentes_ginecologicos_sexarquia: txtinput_Gineco_22.Text,
+                            antecedentes_ginecologicos_nps :txtinput_Gineco_23.Text,
+                            antecedentes_ginecologicos_fur : txtinput_Gineco_24.Text,
+                            antecedentes_ginecologicos_anticonceptivo : txtinput_Gineco_25.Text,
+                            antecedentes_ginecologicos_tiempo : txtinput_Gineco_26.Text,
+                            antecedentes_ginecologicos_suspension : txtinput_Gineco_27.Text,
+                            antecedentes_ginecologicos_citologia_anterior : txtinput_Gineco_28.Text,
+                            antecedentes_obstetricos_gestas : txtinput_Gineco_29.Text,
+                            antecedentes_obstetricos_deseados : txtinput_Gineco_30.Text,
+                            antecedentes_obstetricos_partos : txtinput_Gineco_31.Text,
+                            antecedentes_obstetricos_abortos : txtinput_Gineco_32.Text,
+                            antecedentes_obstetricos_motivo : txtinput_Gineco_33.Text,
+                            antecedentes_obstetricos_intergenesia : txtinput_Gineco_34.Text,
+                            antecedentes_obstetricos_malformaciones : txtinput_Gineco_35.Text,
+                            antecedentes_obstetricos_prematuridad : txtinput_Gineco_36.Text,
+                            antecedentes_obstetricos_hta : txtinput_Gineco_37.Text,
+                            antecedentes_obstetricos_diabetes : txtinput_Gineco_38.Text,
+                            antecedentes_obstetricos_infecciones : txtinput_Gineco_39.Text,
+                            antecedentes_obstetricos_otros : txtinput_Gineco_40.Text,
+                            atencion_prenatal_primera_consulta : txtinput_Gineco_41.Text,
+                            atencion_prenatal_tg : txtinput_Gineco_42.Text,
+                            atencion_prenatal_controles_previos : txtinput_Gineco_43.Text,
+                            atencion_prenatal_examen_alterado : txtinput_Gineco_44.Text,
+                            atencion_prenatal_tto_previo : txtinput_Gineco_45.Text,
+                            examen_fisico_peso: Value(txtinput_Gineco_46.Text),
+                            examen_fisico_pa: txtinput_Gineco_47.Text,
+                            examen_fisico_piel : txtinput_Gineco_48.Text,
+                            examen_fisico_mamas : txtinput_Gineco_49.Text,
+                            examen_fisico_abdomen : txtinput_Gineco_50.Text,
+                            examen_fisico_genitales : txtinput_Gineco_51.Text,
+                            examen_fisico_neurologico : txtinput_Gineco_52.Text
+                            }
+                        ),
+                        "nutricion",
+                        Refresh('public.MC_Historia_Nutricion');
+                        Patch(
+                            'public.MC_Historia_Nutricion',
+                            Defaults('public.MC_Historia_Nutricion'),
+                            {
+                        version:First(Sort(Filter('public.MC_Historia_Nutricion',cod_hc_principal=HMSelected.cod_hm),version,SortOrder.Descending)).version+1,
+                            activo:true,
+                            cod_hc_principal:HMSelected.cod_hm,
+                            id:_varHistoriaSec_id,
+                            id_paciente:0,
+                            id_sede: _varSede.id,
+                            id_especialidad:varEspecialidadSelected.id,
+                            id_doctor:getUser.id,
+                            fecha_registro: Now(),
+                            motivo_consulta: tiScHistoria1_7.Text,
+                            enfermedad_actual: RichTextEditor1_21.HtmlText,
+                            síntomas_signos: RichTextEditor1_22.HtmlText,
+                            tratamiento_farmacológico: tiScHistoria1_8.Text,
+                            tratamiento_nutricional: tiScHistoria1_9.Text,
+                            antecedentes_personales:  RichTextEditor1_24.HtmlText,
+                            antecedentes_familiares:  RichTextEditor1_23.HtmlText,
+                            apetito:  tiScHistoria1_10.Text,
+                            cigarrillo:  tiScHistoria1_11.Text,
+                            alcohol: tiScHistoria1_12.Text,
+                            actividad_física: tiScHistoria1_13.Text,
+                            sueño: tiScHistoria1_14.Text,
+                            menstruación: tiScHistoria1_15.Text,
+                            síntomas_gastrointestinales: tiScHistoria1_16.Text,
+                            nauseas:tiScHistoria1_17.Text,
+                            vómitos: tiScHistoria1_18.Text,
+                            acidez: tiScHistoria1_38.Text,
+                            flatulencia: tiScHistoria1_19.Text,
+                            diarrea: tiScHistoria1_20.Text,
+                            estreñimiento: tiScHistoria1_21.Text,
+                            micción:tiScHistoria1_22.Text,
+                            masticación: tiScHistoria1_23.Text,
+                            alergias_intolerancias_alimentarias: tiScHistoria1_24.Text,
+                            número_comidas_dia: tiScHistoria1_25.Text,
+                            vasos_dia: tiScHistoria1_26.Text,
+                            prepara_alimento: tiScHistoria1_27.Text,
+                            come_rápido: tiScHistoria1_28.Text,
+                            alimentos_gustan: tiScHistoria1_29.Text,
+                            alimentos_desagrado: tiScHistoria1_30.Text,
+                            lácteos: tiScHistoria1_31.Text,
+                            vegetales: tiScHistoria1_32.Text,
+                            frutas: tiScHistoria1_33.Text,
+                            cereales: tiScHistoria1_34.Text,
+                            carnes: tiScHistoria1_35.Text,
+                            grasas: tiScHistoria1_36.Text,
+                            azúcar: tiScHistoria1_37.Text,
+                            desayuno: RichTextEditor1_6.HtmlText,
+                            merienda: RichTextEditor1_7.HtmlText,
+                            almuerzo: RichTextEditor1_8.HtmlText,
+                            merienda2:RichTextEditor1_9.HtmlText,
+                            cena: RichTextEditor1_10.HtmlText,
+                            merienda3:RichTextEditor1_11.HtmlText,
+                            peso: First(colNutricionMedida).peso,
+                            talla: First(colNutricionMedida).talla,
+                            pct_grasa: First(colNutricionMedida).pctg_grasa,
+                            pct_agua: First(colNutricionMedida).pctg_agua,
+                            pt: First(colNutricionMedida).pt,
+                            cmb: First(colNutricionMedida).cmb,
+                            cintura: First(colNutricionMedida).cintura,
+                            peso_ideal: First(colNutricionMedida).peso_ideal,
+                            peso_usual: First(colNutricionMedida).peso_usual,
+                            peso_max: First(colNutricionMedida).peso_max,
+                            peso_min: First(colNutricionMedida).peso_min,
+                            dx_nutricional: First(colNutricionMedida).dx_nutr,
+                            comentarios_adicionales: RichTextEditor1_12.HtmlText
+                            }
+                        ),"cirugia_pediatrica",
+                        Refresh('public.mc_historia_cirugia_pediatrica');
+                        Patch('public.mc_historia_cirugia_pediatrica',Defaults('public.mc_historia_cirugia_pediatrica'),{
+                            
+                        version:First(Sort(Filter('public.mc_historia_cirugia_pediatrica',cod_hc_principal=HMSelected.cod_hm),version,SortOrder.Descending)).version+1,
+                            activo:true,
+                            cod_hc_principal:HMSelected.cod_hm,
+                            id:_varHistoriaSec_id,
+                            id_paciente:0,
+                            id_sede: _varSede.id,
+                            id_especialidad:varEspecialidadSelected.id,
+                            id_doctor:getUser.id,
+                            fecha_del_registro_historia: Now(),
+                            antecendentes: RichTextEditor1_5.HtmlText,
+                            enfermedad_actual: RichTextEditor1_13.HtmlText,
+                            examen_fisico_peso: Value(TextInput6_2.Text),
+                            examen_fisico_talla: Value(TextInput6_4.Text),
+                            signos_vitales_fc: TextInput6_5.Text,
+                            signos_vitales_fr: TextInput6_7.Text,
+                            signos_vitales_sat02: TextInput6_9.Text,
+                            signos_vitales_temp: TextInput6_8.Text,
+                            diagnosticos: RichTextEditor1_14.HtmlText,
+                            tratamiento: RichTextEditor1_15.HtmlText,
+                            recomendaciones: RichTextEditor1_16.HtmlText,
+                            proxima_cita: DatePicker5.SelectedDate,
+                            paraclinico: RichTextEditor1_17.HtmlText
+                            }),
+                        "otorrinolaringologia",
+                        Refresh('public.mc_historia_otorrinolaringologia');
+                        Patch('public.mc_historia_otorrinolaringologia',Defaults('public.mc_historia_otorrinolaringologia'),{
+                            
+                            version:First(Sort(Filter('public.mc_historia_otorrinolaringologia',cod_hc_principal=HMSelected.cod_hm),          version,SortOrder.Descending)).version+1,
+                            activo:true,
+                            cod_hc_principal:HMSelected.cod_hm,
+                            id:_varHistoriaSec_id,
+                            id_paciente:0,
+                            id_sede: _varSede.id,
+                            id_especialidad:varEspecialidadSelected.id,
+                            id_doctor:getUser.id,
+                            fecha_registro: Now(),
+                              inicio_enferm_actual: RichTextEditor1_18.HtmlText,
+                            ant_personales_patologicos: RichTextEditor1_19.HtmlText,
+                        qx :  TextInput6_10.Text,
+                        ram : TextInput6_11.Text, 
+                        habitos_tabaco : TextInput6_12.Text,
+                        habitos_hisopo :  TextInput6_13.Text,
+                        habitos_audifonos : TextInput6_14.Text,
+                        habitos_ocupacion : TextInput6_15.Text,
+                        habitos_ambiente_ruidoso : TextInput6_16.Text,
+                        examen_orl_oido : TextInput6_17.Text,
+                        examen_orl_nariz : TextInput6_18.Text,
+                        examen_orl_boca_orofaringe : TextInput6_19.Text,
+                        diagnosticos :  TextInput6_20.Text,
+                        tratamiento: RichTextEditor1_20.HtmlText
+                        }),
+                        "pediatria",
+                        Refresh('public.mc_historia_pediatria');
+                        Patch('public.mc_historia_pediatria',Defaults('public.mc_historia_pediatria'),{
+                            
+                            version:First(Sort(Filter('public.mc_historia_pediatria',cod_hc_principal=HMSelected.cod_hm),          version,SortOrder.Descending)).version+1,
+                            activo:true,
+                            cod_hc_principal:HMSelected.cod_hm,
+                            id:_varHistoriaSec_id,
+                            id_paciente:0,
+                            id_sede: _varSede.id,
+                            id_especialidad:varEspecialidadSelected.id,
+                            id_doctor:getUser.id,
+                            fecha_registro: Now(),
+                            motivo_consulta: inputPedriatria_1.HtmlText,
+                        examen_funcional_ant_neonatales: inputPedriatria_3.Text,
+                        examen_funcional_ant_personales: inputPedriatria_4.Text,
+                        examen_funcional_ant_familiares: inputPedriatria_5.Text,
+                        examen_funcional_alimentacion: inputPedriatria_6.Text,
+                        examen_funcional_vacunas: inputPedriatria_7.Text,
+                        examen_funcional_epidemiologo: inputPedriatria_8.Text,
+                        examen_fisico_peso: Value(inputPedriatria_9.Text),
+                        examen_fisico_talla: Value(inputPedriatria_10.Text),
+                        examen_fisico_sato2: inputPedriatria_11.Text,
+                        diagnostico: inputPedriatria_12.HtmlText,
+                        tratamiento: inputPedriatria_13.HtmlText,
+                        paraclinicos: inputPedriatria_14.Text,
+                        proxima_cita_pro_cita: DatePicker7.SelectedDate,
+                        examen_funcional: inputPedriatria_2.Text
+                        }),
+                        "generica",
+                        Refresh('public.mc_historia_medicina_general');
+                        Patch('public.mc_historia_medicina_general',Defaults('public.mc_historia_medicina_general'),{
+                            
+                            version:First(Sort(Filter('public.mc_historia_medicina_general',cod_hc_principal=HMSelected.cod_hm),          version,SortOrder.Descending)).version+1,
+                            activo:true,
+                            cod_hc_principal:HMSelected.cod_hm,
+                            id:_varHistoriaSec_id,
+                            id_paciente:0,
+                            id_sede: _varSede.id,
+                            id_especialidad:varEspecialidadSelected.id,
+                            id_doctor:getUser.id,
+                            fecha_registro: Now(),
+                            motivo_consulta: input_HistGeneral_1.HtmlText,
+                        ant_personales: input_HistGeneral_2.Text,
+                        ant_familiares : input_HistGeneral_3.Text,
+                        ant_ram: input_HistGeneral_4.Text,
+                        ant_triaje_pa: input_HistGeneral_5.Text,
+                        ant_triaje_fr:  input_HistGeneral_6.Text,
+                        ant_triaje_fr2: input_HistGeneral_7.Text,
+                        ant_triaje_t: input_HistGeneral_8.Text,
+                        ant_triaje_peso: Value(input_HistGeneral_10.Text),
+                        ant_triaje_talla: Value(input_HistGeneral_11.Text),
+                        ant_triaje_saturacion: input_HistGeneral_12.Text,
+                        ant_triaje_imc: input_HistGeneral_13.Text,
+                        exam_fisico_cabeza_cuello: input_HistGeneral_14.Text,
+                        exam_fisico_orl: input_HistGeneral_15.Text,
+                        exam_fisico_torax:  input_HistGeneral_16.Text,
+                        exam_fisico_urologico:  input_HistGeneral_18.Text,
+                        exam_fisico_abdomen:  input_HistGeneral_17.Text,
+                        exam_fisico_extremidades:  input_HistGeneral_19.Text,
+                        exam_fisico_neurologico:  input_HistGeneral_20.Text,
+                        exam_fisico_genitales: input_HistGeneral_21.Text,
+                        exam_fisico_piel:  input_HistGeneral_22.Text,
+                        exam_fisico_otros:  input_HistGeneral_23.Text,
+                        exam_fisico_diagnosticos:  input_HistGeneral_24.Text,
+                        tratamiento:  input_HistGeneral_25.HtmlText,
+                        interconsulta: input_HistGeneral_26.HtmlText,
+                        recomendaciones:input_HistGeneral_27.HtmlText
+                        })
+                        );
+                        
+                        
+                        
+                        Patch('public.mc_historias_especialidad',Defaults('public.mc_historias_especialidad'),{
+                        id:HMSelected.cod_hm&"-"&Text(Now(),"yymmdd-hhmm")&"-"&varEspecialidadSelected.id,
+                        cod_hm:HMSelected.cod_hm, //hm refiere a principal y hc a especialidad
+                        cod_hc:_varHistoriaSec_id,
+                        id_especialidad:varEspecialidadSelected.id,
+                        plantilla_hc:varEspecialidadSelected.plantilla
+                        });
+                        
+                        
+                        
+                        
+                        UpdateContext({resetear:true});UpdateContext({resetear:false});
+                        Set(varNutriHC,First('public.MC_Historia_Nutricion'));
+                        Set(varGinecoHC,First('public.MC_Historia_Ginecologia'));
+                        Set(varOftalmoHC,First('public.mc_historia_oftalmologia'));
+                        Set(varCPediatricaHC,First('public.mc_historia_cirugia_pediatrica'));
+                        
+                        Clear(colOftalLejosCerca);
+                        Clear(colNutricionMedida);
+                        
+                        
+                        UpdateContext({_viewHistoriaSec:false});
+                        UpdateContext({resetear:true});UpdateContext({resetear:false});
+                        Reset(RichTextEditor1);Reset(RichTextEditor1_1);
+                        
+                        Reset(RichTextEditor1_2);Reset(RichTextEditor1_3);Reset(RichTextEditor1_4);
+                        
+                        
+                        Reset(RichTextEditor1_6);Reset(RichTextEditor1_7);Reset(RichTextEditor1_8);Reset(RichTextEditor1_9);Reset(RichTextEditor1_10);Reset(RichTextEditor1_11);Reset(RichTextEditor1_12);Reset(RichTextEditor1_5);Reset(RichTextEditor1_13);Reset(RichTextEditor1_14);Reset(RichTextEditor1_15);Reset(RichTextEditor1_16); Reset(RichTextEditor1_17);Reset(RichTextEditor1_18);Reset(RichTextEditor1_19);Reset(RichTextEditor1_20);Reset(inputPedriatria_1); Reset(inputPedriatria_12); Reset(inputPedriatria_13);Reset(input_HistGeneral_1);
+                        Reset(input_HistGeneral_25);Reset(input_HistGeneral_26);Reset(input_HistGeneral_27);Reset(RichTextEditor1_21);
+                        Reset(RichTextEditor1_22); Reset(RichTextEditor1_24); Reset(RichTextEditor1_23);
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Size: =12
+                    Text: ="GUARDAR"
+                    Visible: |-
+                        =//_viewHistoriaSec
+                        true
+                    X: =201
+                    Y: =31
+                    ZIndex: =4
+
+            conHiistorialFondo_17 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                LayoutMinHeight: =100
+                LayoutMinWidth: =50
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =180
+                PaddingRight: =40
+                Visible: |-
+                    =//If(_ViewFormularioDCA||_viewHistoriaSec,false,true)
+                    false
+                Width: =100
+                ZIndex: =5
+
+                Container20_8 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =ColorFondoBoton
+                    BorderThickness: =2
+                    FillPortions: =0
+                    Height: =48
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Visible: =If(_ViewFormularioDCA||_viewHistoriaSec,false,true)
+                    Width: =48
+                    X: =40
+                    Y: =40
+                    ZIndex: =3
+
+                    iconEditHistorial_4 As image:
+                        Height: =48
+                        Image: ='Shape - 2023-04-21T124119.492'
+                        OnSelect: =
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Width: =48
+                        ZIndex: =1
+
+                    Button13_6 As button:
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =0
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =48
+                        HoverFill: =
+                        OnSelect: |-
+                            =UpdateContext({_ViewFormularioDCA:true});UpdateContext({_ViewHHistorialMedico:false});
+                            /**REVISAR
+                            
+                            
+                            UpdateContext({_RellenarFormularioDCA:false});
+                            UpdateContext({_CrearFormularioDCA:true});
+                            UpdateContext({_varAbajo2:true});
+                            UpdateContext({_varArriba2:false});
+                            UpdateContext({_varAbajo1:true});
+                            UpdateContext({_varArriba1:false});
+                            If(IsBlank(LookUp('public.Medical_Center_Historial_Principal',DNI_CI=TicketSelected.DNI_Paciente,Imagen_Id)),Set(varimagenPacienteView,false),Set(varimagenPacienteView,true));**/
+                        PressedFill: =
+                        Text: =""
+                        Width: =48
+                        ZIndex: =2
+
+                Container20_9 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =ColorFondoBoton
+                    BorderThickness: =2
+                    FillPortions: =0
+                    Height: =48
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Visible: =If(_ViewFormularioDCA||_viewHistoriaSec,false,true)
+                    Width: =48
+                    X: =40
+                    Y: =40
+                    ZIndex: =4
+
+                    iconDownloadHistorial_6 As icon.Download:
+                        Color: =ColorFondoBoton
+                        Height: =48
+                        Icon: =Icon.Download
+                        OnSelect: |-
+                            =UpdateContext({_DescargaHM:true});
+                            
+                            UpdateContext({_varHTML_Export:htmlHistorialPrincipal.HtmlText})
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Width: =48
+                        ZIndex: =1
+
+                iconCloseHistorial_4 As icon.Cancel:
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =40
+                    Icon: =Icon.Cancel
+                    OnSelect: =Back()
+                    Visible: =If(_ViewFormularioDCA||_viewHistoriaSec,false,true)
+                    Width: =42
+                    X: =156
+                    Y: =8
+                    ZIndex: =5
+
+        conHiistorialFondo_18 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =100
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =200
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =40
+            PaddingRight: =40
+            Width: =100
+            ZIndex: =4
+

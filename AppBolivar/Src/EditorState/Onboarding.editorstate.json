@@ -542,7 +542,7 @@
       "MetaDataIDKey": "",
       "Name": "btnOmitir",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -803,7 +803,7 @@
       "MetaDataIDKey": "",
       "Name": "circuloOnboarding1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -944,7 +944,7 @@
       "MetaDataIDKey": "",
       "Name": "circuloOnboarding2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1085,7 +1085,7 @@
       "MetaDataIDKey": "",
       "Name": "circuloOnboarding3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2244,7 +2244,7 @@
       "MetaDataIDKey": "",
       "Name": "imgContenido",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3680,7 +3680,7 @@
       "MetaDataIDKey": "",
       "Name": "lblTitulo",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4108,7 +4108,7 @@
       "MetaDataIDKey": "",
       "Name": "txtCirculoOnboarding",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
