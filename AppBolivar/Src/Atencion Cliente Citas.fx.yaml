@@ -18,7 +18,8 @@
         Set(_minDate3, DateAdd(_firstDayOfMonth3, -(Weekday(_firstDayOfMonth3) - 2 + 1), TimeUnit.Days));         
         Set(_maxDate3, DateAdd(DateAdd(_firstDayOfMonth3, -(Weekday(_firstDayOfMonth3) - 2 + 1), TimeUnit.Days), 40, TimeUnit.Days));         
         ClearCollect(MyCalendarEvents3, Office365Outlook.GetEventsCalendarViewV2("Calendar", Text(_minDate3, DateTimeFormat.UTC), Text(_maxDate3, DateTimeFormat.UTC)).value);         
-        UpdateContext({_showLoading: false});     
+        UpdateContext({_showLoading: false});
+        UpdateContext({_ResponsiveM: true});
 
     ContainerAMMenu As groupContainer.manualLayoutContainer:
         Height: =642
@@ -928,15 +929,6 @@
         Height: =96
         Width: =1366
         ZIndex: =6
-
-    img_Logo_AC_Citas As image:
-        Height: =80
-        Image: =getLogo
-        OnSelect: =Navigate(Home)
-        Width: =119
-        X: =30
-        Y: =8
-        ZIndex: =7
 
     Group6_5 As group:
         Height: =5
@@ -3911,26 +3903,26 @@
 
     Icon53 As icon.OptionsList:
         Color: =RGBA(0, 0, 0, 1)
-        Height: =32
+        Height: =40
         Icon: =Icon.OptionsList
         OnSelect: |-
             =UpdateContext({_ResponsiveM: true});
         Visible: =If(_ResponsiveM = false, true, false)
-        Width: =32
-        X: =203
-        Y: =26
+        Width: =40
+        X: =40
+        Y: =24
         ZIndex: =90
 
     Icon58 As icon.DetailList:
         Color: =RGBA(0, 0, 0, 1)
-        Height: =32
+        Height: =40
         Icon: =Icon.DetailList
         OnSelect: |-
             =UpdateContext({_ResponsiveM: false});
         Visible: =If(_ResponsiveM = false, false, true)
-        Width: =32
-        X: =304
-        Y: =26
+        Width: =40
+        X: =40
+        Y: =24
         ZIndex: =91
 
     Group29 As group:

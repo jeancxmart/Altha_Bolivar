@@ -99856,66 +99856,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.img_Logo_AC_Citas.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.img_Logo_AC_Citas.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.img_Logo_AC_Citas"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.img_Logo_AC_Citas.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.img_Logo_AC_Citas.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.img_Logo_AC_Citas"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Atencion Cliente Citas'.TextInput35_4.AccessibleLabel"
                 }
               ],
