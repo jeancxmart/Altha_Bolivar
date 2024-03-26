@@ -11608,7 +11608,6 @@
                 DisabledBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
                 DisabledColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
                 DisabledFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-                DisplayMode: =DisplayMode.Disabled
                 Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
                 Font: =Font.'Segoe UI'
                 Height: =36
