@@ -510,7 +510,10 @@ Caja As screen:
 
         ButtonAtender_12 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
-            DisplayMode: =If(lbEstatusPacCaja.Text = "Caja - Pagado",DisplayMode.Disabled, DisplayMode.Edit)
+            DisplayMode: |-
+                =If(LookUp('public.Medical_Center_Ticket', id = ThisItem.id_Ticket, caja_finalizada = true),DisplayMode.Disabled, DisplayMode.Edit)
+                
+                //lbEstatusPacCaja.Text = "Caja - Pagado" || lbEstatusPacCaja.Text = "Triaje - Atendido"
             Fill: =ColorFondoBoton
             Font: =Font.'Segoe UI'
             Height: =44

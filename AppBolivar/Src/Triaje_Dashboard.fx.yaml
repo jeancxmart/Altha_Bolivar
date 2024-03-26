@@ -373,7 +373,7 @@ Triaje_Dashboard As screen:
         ButtonAtender_13 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
             DisplayMode: |-
-                =If(LookUp('public.Medical_Center_Ticket', id = ThisItem.id_Ticket).cita_finalizada = true , DisplayMode.Disabled,
+                =If(LookUp('public.Medical_Center_Ticket', id = ThisItem.id_Ticket, cita_finalizada = true || triaje_finalizada = true) , DisplayMode.Disabled,
                 DisplayMode.Edit)
             Fill: =ColorFondoBoton
             Font: =Font.'Segoe UI'
