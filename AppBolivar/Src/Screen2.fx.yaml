@@ -254,3 +254,296 @@ Screen2 As screen:
             Y: =51
             ZIndex: =2
 
+    conAction_1 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =24
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =5
+        PaddingRight: =5
+        Visible: |-
+            =//!conCrearHistoriaP.Visible
+            true
+        Width: =200
+        X: =815
+        Y: =20
+        ZIndex: =25
+
+        btnPasarCaja_1 As button:
+            BorderColor: =ColorFondoBoton
+            Color: =ColorFondoBoton
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisplayMode: |+
+                =/**If(Text(Today(),"dd/mm/yyyy")<>Text(ThisItem.fecha_cita,"dd/mm/yyyy") Or LookUp('public.Medical_Center_Counter',id_Ticket=ThisItem.id,etapa)="Atención Medica" || LookUp('public.Medical_Center_Counter',id_Ticket=ThisItem.id,etapa)="Caja" || LookUp('public.Medical_Center_Counter',id_Ticket=ThisItem.id,etapa)="Triaje" ,DisplayMode.Disabled,DisplayMode.Edit)**/
+                With(
+                    {
+                        lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
+                    },
+                    If(
+                        getUser.Rol = "Caja" ||  getUser.Rol = "Triaje" ||  getUser.Rol = "Doctor" || ThisItem.caja_finalizada = true || lookupResult = "Caja" || Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") ,
+                        DisplayMode.Disabled,
+                        DisplayMode.Edit
+                    )
+                )
+                
+                
+                
+                
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =btnPasarCaja_1.BorderColor
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =ColorFade(btnPasarCaja_1.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |+
+                =
+                Set(
+                    AtencionSelected,
+                    gal_Citas_Pendientes.Selected
+                );
+                If(
+                    LookUp(
+                        'public.Medical_Center_Historial_Principal',
+                        DNI_CI = AtencionSelected.id_Pacientes_DNI,
+                        DNI_CI
+                    ) = AtencionSelected.id_Pacientes_DNI,
+                  If(getUser.Rol= "Administrador",  Navigate(Caja) & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
+                  
+                    Set(
+                        varCaja,
+                        false
+                    )
+                    
+                    
+                );
+                If(IsEmpty(Filter('public.Medical_Center_Counter',id_Ticket=AtencionSelected.id)),
+                Patch('public.Medical_Center_Counter',Defaults('public.Medical_Center_Counter'),
+                {
+                id_Ticket:AtencionSelected.id,  
+                  estado:"En Cola",
+                  etapa:"Caja",
+                  usuario:ThisItem.Doctor,
+                   id_sede : _varSede.id  ,
+                  fecha:gal_Citas_Pendientes.Selected.fecha_cita,
+                  fecha_texto:Text(gal_Citas_Pendientes.Selected.fecha_cita,"yymmdd"),
+                  Paciente:gal_Citas_Pendientes.Selected.Nombre_Paciente,
+                  DNI_Paciente:gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
+                  Servicio:gal_Citas_Pendientes.Selected.Servicio,
+                  Alerta:true
+                }),
+                Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=AtencionSelected.id),
+                {
+                  estado:"En Cola",
+                  etapa:"Caja"
+                })
+                );
+                
+                
+                
+                If(IsEmpty(Filter('public.MC_Servicios_Paciente',id_ticket=ThisItem.id,id_servicio=ThisItem.id_servicio)),
+                Patch('public.MC_Servicios_Paciente',Defaults('public.MC_Servicios_Paciente'),{
+                    id:GUID(),
+                    id_ticket:ThisItem.id,
+                    id_dni_paciente:ThisItem.id_Pacientes_DNI,
+                    id_sede:_varSede.id,
+                    id_especialidad:LookUp('public.Medical_Center_S&E_Relacion',id=ThisItem.id_especialidad_x_sede,id_especialidad),
+                    id_servicio:ThisItem.id_servicio,
+                    id_doctor:getUser.id,
+                    fecha_registro:Now()
+                })
+                );
+                
+                Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=AtencionSelected.id_Pacientes_DNI),{Estatus:"En Atención"})
+                
+                
+                
+            PressedBorderColor: =ColorFondoBoton
+            PressedColor: =ColorFondoBoton
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="PASAR A CAJA"
+            Width: =190
+            X: =1136
+            Y: =120
+            ZIndex: =1
+
+        btnPasarAtencion_2 As button:
+            BorderColor: =ColorFondoBoton
+            Color: =ColorFondoBoton
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisplayMode: |-
+                =
+                With(
+                    {
+                        lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
+                    },
+                    If(
+                       getUser.Rol = "Triaje" ||getUser.Rol = "Caja" ||  getUser.Rol = "Doctor" And Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true || lookupResult = "Triaje",
+                        DisplayMode.Disabled,
+                        DisplayMode.Edit
+                    )
+                )
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =btnPasarAtencion_2.BorderColor
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =ColorFade(btnPasarAtencion_2.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =
+                If(IsEmpty(Filter('public.Medical_Center_Counter',id_Ticket=ThisItem.id)),
+                Patch('public.Medical_Center_Counter',Defaults('public.Medical_Center_Counter'),
+                { 
+                id_Ticket:ThisItem.id,  
+                  estado:"En Cola",
+                  etapa:"Triaje",
+                  usuario:ThisItem.Doctor,
+                    id_sede : _varSede.id  ,
+                  fecha:gal_Citas_Pendientes.Selected.fecha_cita,
+                  fecha_texto:Text(ThisItem.fecha_cita,"yymmdd"),
+                  Paciente:gal_Citas_Pendientes.Selected.Nombre_Paciente,
+                  DNI_Paciente:gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
+                  Servicio:gal_Citas_Pendientes.Selected.Servicio,
+                  Alerta:true
+                }),
+                Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=ThisItem.id),
+                {  
+                  estado:"En Cola",
+                  etapa:"Triaje"
+                })
+                );
+                
+                Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=ThisItem.id_Pacientes_DNI),{Estatus:"En Atención"});
+                
+                
+                
+                If(
+                    LookUp(
+                        'public.Medical_Center_Historial_Principal',
+                        DNI_CI = AtencionSelected.id_Pacientes_DNI,
+                        DNI_CI
+                    ) = AtencionSelected.id_Pacientes_DNI,
+                  If(getUser.Rol= "Administrador",   Navigate(Triaje_Dashboard) & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard')) , ""  
+                );
+            PressedBorderColor: =ColorFondoBoton
+            PressedColor: =ColorFondoBoton
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="PASAR A TRIAJE"
+            Width: =190
+            X: =1136
+            Y: =120
+            ZIndex: =2
+
+        btnReagendar_1 As button:
+            BorderColor: =ColorFondoBoton
+            Color: =ColorFondoBoton
+            DisplayMode: =If(getUser.Rol = "Asistente" || getUser.Rol = "Administrador", DisplayMode.Disabled, DisplayMode.Edit)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            HoverColor: =ColorFondoBoton
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =UpdateContext({CitaLlamada:true});
+                Set(varAgendarCitaNew,false);
+                Set(varAgendarCitaEdit,true);
+            PressedBorderColor: =ColorFondoBoton
+            PressedColor: =ColorFondoBoton
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Size: =12
+            Text: ="REAGENDAR CITA"
+            Visible: =false//REVISAR OCULTAR REAGENDAMIENTO
+            Width: =190
+            X: =805
+            Y: =53
+            ZIndex: =3
+
+        btnPasarAtencion_3 As button:
+            BorderColor: =ColorFondoBoton
+            Color: =ColorFondoBoton
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisplayMode: |-
+                =With(
+                    {
+                        lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
+                    },
+                    If( getUser.Rol = "Caja" || 
+                        getUser.Rol = "Triaje" || getUser.Rol = "Doctor" And
+                        Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true || lookupResult = "Atención Medica",
+                        DisplayMode.Disabled,
+                        DisplayMode.Edit
+                    )
+                )
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =btnPasarAtencion_3.BorderColor
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            HoverBorderColor: =ColorFade(btnPasarAtencion_3.BorderColor, 20%)
+            HoverColor: |-
+                =ColorValue("#26495B")
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =
+                
+                If(IsEmpty(Filter('public.Medical_Center_Counter',id_Ticket=ThisItem.id)),
+                Patch('public.Medical_Center_Counter',Defaults('public.Medical_Center_Counter'),
+                { 
+                id_Ticket:ThisItem.id,  
+                  estado:"En Cola",
+                  etapa:"Atención Medica",
+                  usuario:ThisItem.Doctor,
+                    id_sede : _varSede.id  ,
+                  fecha:gal_Citas_Pendientes.Selected.fecha_cita,
+                  fecha_texto:Text(ThisItem.fecha_cita,"yymmdd"),
+                  Paciente:gal_Citas_Pendientes.Selected.Nombre_Paciente,
+                  DNI_Paciente:gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
+                  Servicio:gal_Citas_Pendientes.Selected.Servicio,
+                  Alerta:true
+                }),
+                Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=ThisItem.id),
+                { 
+                  estado:"En Cola",
+                  etapa:"Atención Medica"
+                })
+                );
+                
+                Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=ThisItem.id_Pacientes_DNI),{Estatus:"En Atención"});
+                
+                
+                
+                If(
+                    LookUp(
+                        'public.Medical_Center_Historial_Principal',
+                        DNI_CI = AtencionSelected.id_Pacientes_DNI,
+                        DNI_CI
+                    ) = AtencionSelected.id_Pacientes_DNI,
+                  If(getUser.Rol= "Administrador",  Navigate('Consulta Medica Dashboard') & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
+                  ""    
+                );
+            PressedBorderColor: =ColorFondoBoton
+            PressedColor: =ColorFondoBoton
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="PASAR ATENCIÓN"
+            Width: =190
+            X: =1136
+            Y: =120
+            ZIndex: =4
+
