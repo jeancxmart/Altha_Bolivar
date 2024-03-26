@@ -11532,86 +11532,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 24,
-                  "charOffset": 179,
-                  "snippet": {
-                    "text": "Text(fecha;\"dd/mm/yyyy\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Triaje_Dashboard",
-                "type": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 203,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Triaje_Dashboard",
-                "type": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Administracion UsuarioV2'.Canvas1_12.DataCard1_18.ComboBox4_SedesU_1.DefaultSelectedItems"
                 }
               ],
@@ -49132,1656 +49052,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Adjunto_28.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Adjunto_28.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Adjunto_28"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtNombreDCA_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtNombreDCA_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtNombreDCA_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtApellidoDCA_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtApellidoDCA_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtApellidoDCA_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_41.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_41.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_41"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiDNI_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiDNI_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiDNI_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtSexoDCA_16.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtSexoDCA_16.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtSexoDCA_16"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpSexo_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpSexo_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpSexo_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpOcupacion_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpOcupacion_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpOcupacion_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtgrado_DCA_9.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtgrado_DCA_9.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtgrado_DCA_9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtfechanacimientoDCA_12.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtfechanacimientoDCA_12.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtfechanacimientoDCA_12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtEstadoCivil_DCA_18.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtEstadoCivil_DCA_18.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtEstadoCivil_DCA_18"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpgrado_DCA_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpgrado_DCA_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpgrado_DCA_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpFechaNac_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpFechaNac_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpFechaNac_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpEstadoCivil_DCA_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpEstadoCivil_DCA_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpEstadoCivil_DCA_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtNacionalidad_DCA_11.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtNacionalidad_DCA_11.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtNacionalidad_DCA_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtresidenciaDCA_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtresidenciaDCA_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtresidenciaDCA_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpNacionalidad_DCA_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpNacionalidad_DCA_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpNacionalidad_DCA_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtCorreo_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtCorreo_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtCorreo_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtTelefono_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtTelefono_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtTelefono_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiMotivoConsulta_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiMotivoConsulta_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiMotivoConsulta_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtEnfermedadDCA_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtEnfermedadDCA_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtEnfermedadDCA_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedenetMADCA_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedenetMADCA_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedenetMADCA_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedentesPersonales.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedentesPersonales.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedentesPersonales"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtPadreDCA_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtPadreDCA_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtPadreDCA_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtMadreDCA_00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtMadreDCA_00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtMadreDCA_00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaPadre_5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaPadre_5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaPadre_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaMadre_5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaMadre_5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaMadre_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_42.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_42.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_42"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbPadre.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbPadre.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbPadre"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_43.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_43.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_43"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbMadre.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbMadre.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbMadre"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_44.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_44.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_44"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlimentacion00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlimentacion00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlimentacion00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlimentacion.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlimentacion.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlimentacion"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_45.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_45.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_45"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbSueno00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbSueno00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbSueno00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroSueno.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroSueno.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroSueno"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_46.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_46.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_46"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbEjercicios00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbEjercicios00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbEjercicios00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroEjercicios.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroEjercicios.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroEjercicios"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_47.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_47.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_47"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlergias00.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlergias00.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlergias00"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlergias.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlergias.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scHistoriaMedica",
-                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlergias"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorialSec.CanvasHCTodas.DC_Ginecologia.Container18.Container15_1.tiGinecoLugNacimieto.AccessibleLabel"
                 }
               ],
@@ -57316,6 +55586,1656 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Adjunto_28.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Adjunto_28.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Adjunto_28"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon17_8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon12_27"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtNombreDCA_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtNombreDCA_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtNombreDCA_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtApellidoDCA_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtApellidoDCA_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtApellidoDCA_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_41.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_41.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_41"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiDNI_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiDNI_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiDNI_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtSexoDCA_16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtSexoDCA_16.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtSexoDCA_16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpSexo_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpSexo_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpSexo_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpOcupacion_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpOcupacion_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpOcupacion_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtgrado_DCA_9.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtgrado_DCA_9.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtgrado_DCA_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtfechanacimientoDCA_12.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtfechanacimientoDCA_12.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtfechanacimientoDCA_12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtEstadoCivil_DCA_18.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtEstadoCivil_DCA_18.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtEstadoCivil_DCA_18"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpgrado_DCA_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpgrado_DCA_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpgrado_DCA_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpFechaNac_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpFechaNac_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpFechaNac_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpEstadoCivil_DCA_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpEstadoCivil_DCA_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpEstadoCivil_DCA_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtNacionalidad_DCA_11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtNacionalidad_DCA_11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtNacionalidad_DCA_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtresidenciaDCA_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtresidenciaDCA_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtresidenciaDCA_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpNacionalidad_DCA_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpNacionalidad_DCA_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.dpNacionalidad_DCA_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtCorreo_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtCorreo_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtCorreo_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtTelefono_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtTelefono_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtTelefono_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiMotivoConsulta_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiMotivoConsulta_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.tiMotivoConsulta_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtEnfermedadDCA_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtEnfermedadDCA_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtEnfermedadDCA_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_43"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_44"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedenetMADCA_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedenetMADCA_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedenetMADCA_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedentesPersonales.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedentesPersonales.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtAntecedentesPersonales"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtPadreDCA_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtPadreDCA_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtPadreDCA_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtMadreDCA_00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtMadreDCA_00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtMadreDCA_00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaPadre_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaPadre_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaPadre_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaMadre_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaMadre_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.ProblemaMadre_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_45"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.Icon4_46"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_42.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_42.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_42"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbPadre.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbPadre.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbPadre"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_43.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_43.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_43"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbMadre.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbMadre.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbProbMadre"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_44.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_44.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_44"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlimentacion00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlimentacion00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlimentacion00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlimentacion.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlimentacion.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlimentacion"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_45.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_45.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_45"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbSueno00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbSueno00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbSueno00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroSueno.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroSueno.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroSueno"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_46.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_46.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_46"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbEjercicios00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbEjercicios00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbEjercicios00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroEjercicios.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroEjercicios.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroEjercicios"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_47.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_47.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.TxtocupacionDCA_47"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlergias00.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlergias00.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.cbAlergias00"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlergias.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlergias.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scHistoriaMedica",
+                "type": "scHistoriaMedica.conHiistorialFondo.conHiistorialFondo_1.conEdicionHistorial.Canvas1_18.DataCard1_19.txtOtroAlergias"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -81621,6 +81541,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Triaje_Dashboard.TextInput26_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Triaje_Dashboard.TextInput26_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Triaje_Dashboard",
+                "type": "Triaje_Dashboard.TextInput26_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje.AccessibleLabel"
                 }
               ],
@@ -81724,6 +81674,36 @@
                 "member": "AccessibleLabel",
                 "module": "Triaje_Dashboard",
                 "type": "Triaje_Dashboard.gal_Triaje_Dashboard_Triaje.TextInput12_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Triaje_Dashboard.DatePickerCitas_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Triaje_Dashboard.DatePickerCitas_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Triaje_Dashboard",
+                "type": "Triaje_Dashboard.DatePickerCitas_2"
               }
             }
           ],
@@ -93651,306 +93631,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon12_13.AccessibleLabel"
                 }
               ],
@@ -94011,96 +93691,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtNombreDCA_8.AccessibleLabel"
                 }
               ],
@@ -94144,96 +93734,6 @@
                 "member": "AccessibleLabel",
                 "module": "Atencion Cliente Citas",
                 "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtApellidoDCA_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42"
               }
             }
           ],
@@ -94384,96 +93884,6 @@
                 "member": "AccessibleLabel",
                 "module": "Atencion Cliente Citas",
                 "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.dpgrado_DCA_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44"
               }
             }
           ],
@@ -94654,96 +94064,6 @@
                 "member": "AccessibleLabel",
                 "module": "Atencion Cliente Citas",
                 "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.dpEstadoCivil_DCA_12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45"
               }
             }
           ],
@@ -95091,6 +94411,306 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_17"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_39"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemaPadre"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ProblemasMadre"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtPadreDCA_40"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMadreDCA_41"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_25"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.Icon4_26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_7.AccessibleLabel"
                 }
               ],
@@ -95194,6 +94814,366 @@
                 "member": "AccessibleLabel",
                 "module": "Atencion Cliente Citas",
                 "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtMotivoDCA_18"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_42"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_44"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtocupacionDCA_12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.ComboBox1_16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.Canvas1_13.DataCard1_13.TxtEnfermedadDCA_45"
               }
             }
           ],
@@ -102081,36 +102061,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Caja.TextInput26_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Caja.TextInput26_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Caja",
-                "type": "Caja.TextInput26_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Caja.Rectangle_Emergencia_Dashboard_Caja.AccessibleLabel"
                 }
               ],
@@ -102165,36 +102115,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Caja.DatePickerCitas_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Caja.DatePickerCitas_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Caja",
-                "type": "Caja.DatePickerCitas_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
         },
         {
           "locations": [
@@ -103071,66 +102991,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Caja",
-                "type": "Caja.img_Registro_Caja_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Caja",
-                "type": "Caja.img_Registro_Caja_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Caja.TextInput5_51.AccessibleLabel"
                 }
               ],
@@ -103491,6 +103351,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Caja.TextInput26_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.TextInput26_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Caja",
+                "type": "Caja.TextInput26_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Caja.DatePickerCitas_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.DatePickerCitas_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Caja",
+                "type": "Caja.DatePickerCitas_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Caja.img_Registro_Caja.AccessibleLabel"
                 }
               ],
@@ -103774,6 +103694,66 @@
                 "member": "TabIndex",
                 "module": "Caja",
                 "type": "Caja.img_Dashboard_Caja_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Caja",
+                "type": "Caja.img_Registro_Caja_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.img_Registro_Caja_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Caja",
+                "type": "Caja.img_Registro_Caja_1"
               }
             }
           ],

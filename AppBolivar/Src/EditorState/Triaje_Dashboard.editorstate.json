@@ -215,7 +215,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Atencion_Dashboard_Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 22,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1386,7 +1386,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Salir_Dashboard_Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 28,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1802,7 +1802,7 @@
       "MetaDataIDKey": "",
       "Name": "Button3_77",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 24,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3113,7 +3113,7 @@
       "MetaDataIDKey": "",
       "Name": "gal_Triaje_Dashboard_Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 21,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3298,7 +3298,7 @@
       "MetaDataIDKey": "",
       "Name": "Group13_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 30,
+      "ParentIndex": 36,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3350,7 +3350,7 @@
       "MetaDataIDKey": "",
       "Name": "Group2_8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 33,
+      "ParentIndex": 35,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3402,7 +3402,7 @@
       "MetaDataIDKey": "",
       "Name": "Group3_13",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 31,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3506,7 +3506,7 @@
       "MetaDataIDKey": "",
       "Name": "GroupSearchFecha_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 36,
+      "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3616,7 +3616,7 @@
       "MetaDataIDKey": "",
       "Name": "icon_Lupa_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 20,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4374,7 +4374,7 @@
       "MetaDataIDKey": "",
       "Name": "Image15",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 26,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4843,7 +4843,7 @@
       "MetaDataIDKey": "",
       "Name": "Image4_77",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 25,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5105,7 +5105,7 @@
       "MetaDataIDKey": "",
       "Name": "img_Atencion_Dashboard_Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 23,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6405,7 +6405,7 @@
       "MetaDataIDKey": "",
       "Name": "img_Salir_Dashboard_Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 29,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7666,7 +7666,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_SIn_Paciente_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 27,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
