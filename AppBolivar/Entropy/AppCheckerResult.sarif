@@ -107866,19 +107866,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.Gallery6.TabIndex"
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.GalleryFiltro.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.Gallery6.TabIndex",
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.GalleryFiltro.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.ContainerFiltro.Gallery6"
+                "type": "'Atencion Cliente Citas'.ContainerFiltro.GalleryFiltro"
               }
             }
           ],
@@ -107896,19 +107896,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.Gallery6.AccessibleLabel"
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.GalleryFiltro.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.Gallery6.AccessibleLabel",
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.GalleryFiltro.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.ContainerFiltro.Gallery6"
+                "type": "'Atencion Cliente Citas'.ContainerFiltro.GalleryFiltro"
               }
             }
           ],
@@ -107986,19 +107986,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Rectangle67.AccessibleLabel"
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.Icon61.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Rectangle67.AccessibleLabel",
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.Icon61.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.ContainerFiltro.Icon61"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.Icon61.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerFiltro.Icon61.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Rectangle67"
+                "type": "'Atencion Cliente Citas'.ContainerFiltro.Icon61"
               }
             }
           ],
@@ -108016,19 +108046,349 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Rectangle67.TabIndex"
+                  "fullyQualifiedName": "Caja.IconEstados_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.Rectangle67.TabIndex",
+                  "fullyQualifiedName": "Caja.IconEstados_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Caja",
+                "type": "Caja.IconEstados_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Caja.IconEstados_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.IconEstados_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.Rectangle67"
+                "module": "Caja",
+                "type": "Caja.IconEstados_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Caja.ContainerFiltro_1.GalleryFiltro_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.ContainerFiltro_1.GalleryFiltro_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Caja",
+                "type": "Caja.ContainerFiltro_1.GalleryFiltro_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Caja.ContainerFiltro_1.GalleryFiltro_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.ContainerFiltro_1.GalleryFiltro_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Caja",
+                "type": "Caja.ContainerFiltro_1.GalleryFiltro_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Caja.ContainerFiltro_1.Icon61_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.ContainerFiltro_1.Icon61_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Caja",
+                "type": "Caja.ContainerFiltro_1.Icon61_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Caja.ContainerFiltro_1.Icon61_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Caja.ContainerFiltro_1.Icon61_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Caja",
+                "type": "Caja.ContainerFiltro_1.Icon61_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Triaje_Dashboard.ContainerFiltro_2.GalleryFiltro_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Triaje_Dashboard.ContainerFiltro_2.GalleryFiltro_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Triaje_Dashboard",
+                "type": "Triaje_Dashboard.ContainerFiltro_2.GalleryFiltro_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Triaje_Dashboard.ContainerFiltro_2.GalleryFiltro_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Triaje_Dashboard.ContainerFiltro_2.GalleryFiltro_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Triaje_Dashboard",
+                "type": "Triaje_Dashboard.ContainerFiltro_2.GalleryFiltro_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Triaje_Dashboard.ContainerFiltro_2.Icon61_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Triaje_Dashboard.ContainerFiltro_2.Icon61_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Triaje_Dashboard",
+                "type": "Triaje_Dashboard.ContainerFiltro_2.Icon61_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Triaje_Dashboard.ContainerFiltro_2.Icon61_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Triaje_Dashboard.ContainerFiltro_2.Icon61_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Triaje_Dashboard",
+                "type": "Triaje_Dashboard.ContainerFiltro_2.Icon61_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Triaje_Dashboard.IconEstados_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Triaje_Dashboard.IconEstados_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Triaje_Dashboard",
+                "type": "Triaje_Dashboard.IconEstados_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Triaje_Dashboard.IconEstados_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Triaje_Dashboard.IconEstados_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Triaje_Dashboard",
+                "type": "Triaje_Dashboard.IconEstados_2"
               }
             }
           ],
