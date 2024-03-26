@@ -236,7 +236,7 @@
                 },
                 
                 Search(
-                    Filter(
+                    Filter(AddColumns(
                         AddColumns(
                             'public.Medical_Center_Ticket',
                             "fecha_format",
@@ -244,12 +244,12 @@
                                 fecha_cita,
                                 "dd/mm/yyyy"
                             )
-                        ),
+                        ) As temp, "estad", LookUp('public.Medical_Center_Counter', id_Ticket = temp.id).estado),
                             If(
                                 IsBlank(DatePickerCitas.SelectedDate),
                                 fecha_format = Text(Today(),"dd/mm/yyyy"),
                                 fecha_format = Text(DatePickerCitas.SelectedDate,"dd/mm/yyyy")
-                            ),id_sede = _varSede.id, If(IsEmpty(colEstatus), Estatus = "En Cola",Estatus in temp.estatu)),
+                            ),id_sede = _varSede.id, If(IsEmpty(colEstatus), Estatus = "En Cola", estad in temp.estatu)),
                     DNITextInput.Text,"Correo","id_Pacientes_DNI","Nombre_Paciente","Estatus"
                 ))
                 
@@ -3974,7 +3974,7 @@
         GalleryFiltro As gallery.galleryVertical:
             DelayItemLoading: =true
             Height: =259
-            Items: =["En cola","En Atención", "Atendido"]
+            Items: =["En cola","En Atención", "Atendido","Pagado"]
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
@@ -3989,7 +3989,10 @@
                 OnCheck: |-
                     =Collect(colEstatus, { estatu: ThisItem.Value})
                 OnSelect: =Select(Parent)
-                OnUncheck: =RemoveIf(colEstatus, "estatu" = ThisItem.Value)
+                OnUncheck: |-
+                    =ForAll(Filter(GalleryFiltro.AllItems,  GalleryFiltro.Selected.Value) As temp,
+                    RemoveIf(colEstatus, estatu = temp.Value)
+                    )
                 Reset: =_varCheckbox
                 Size: =12
                 Text: =ThisItem.Value

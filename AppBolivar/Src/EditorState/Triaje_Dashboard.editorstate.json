@@ -632,7 +632,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 16,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -983,7 +983,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Emergencia_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2130,7 +2130,7 @@
       "MetaDataIDKey": "",
       "Name": "Button9_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3133,7 +3133,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerFiltro_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3382,7 +3382,7 @@
       "MetaDataIDKey": "",
       "Name": "DatePickerCitas_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 24,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4417,7 +4417,7 @@
       "MetaDataIDKey": "",
       "Name": "icon_Lupa_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 23,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4656,7 +4656,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon_Refresh_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5092,7 +5092,7 @@
       "MetaDataIDKey": "",
       "Name": "IconEstados_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5349,7 +5349,7 @@
       "MetaDataIDKey": "",
       "Name": "Image12_34",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5807,7 +5807,7 @@
       "MetaDataIDKey": "",
       "Name": "Image18_17",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6565,7 +6565,7 @@
       "MetaDataIDKey": "",
       "Name": "img_btn_Emregencia_Dashboard_Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 19,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6815,7 +6815,7 @@
       "MetaDataIDKey": "",
       "Name": "img_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 18,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7107,7 +7107,7 @@
       "MetaDataIDKey": "",
       "Name": "img_Logo_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7377,7 +7377,7 @@
       "MetaDataIDKey": "",
       "Name": "img_Perfil_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8219,7 +8219,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_Emregencia_Dashboard_Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 20,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8558,7 +8558,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_Perfil_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9193,7 +9193,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_Triaje_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13387,7 +13387,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle_Barra_Superior_Dashboard_Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13522,7 +13522,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle_Emregencia_Dashboard_Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13666,7 +13666,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle2_26",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13818,7 +13818,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle5_32",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14681,7 +14681,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput26_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 22,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15053,7 +15053,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput5_53",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15537,7 +15537,7 @@
       "MetaDataIDKey": "",
       "Name": "txt_Buscador_Dashboard__Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 21,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15885,7 +15885,7 @@
       "MetaDataIDKey": "",
       "Name": "txt_Fondo_Emergencia_Dashboard_Triaje",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 17,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

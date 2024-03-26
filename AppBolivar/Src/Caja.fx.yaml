@@ -436,22 +436,23 @@ Caja As screen:
     gal_Paciente_Dashboard_Caja As gallery.galleryVertical:
         Height: =548
         Items: |
-            =Search(
+            =With({
+              temp: ShowColumns(colEstatusCaja, "estatu")
+            },
+            Search(
                 SortByColumns(
                     Filter(
                         AddColumns('public.Medical_Center_Counter', "fecha_format",
                         Text(
                             fecha,
                             "dd/mm/yyyy"
-                        )),
+                        )), 
                         id_sede = _varSede.id,
-                        estado = "En Cola" Or estado = "Pagado",
-                        etapa = "Caja",
                         If(
                             IsBlank(DatePickerCitas_1.SelectedDate),
                             fecha_format = Text(Today(),"dd/mm/yyyy"),
                             fecha_format = Text(DatePickerCitas_1.SelectedDate,"dd/mm/yyyy")
-                        )
+                        ), If(IsEmpty(colEstatusCaja), etapa = "Triaje" || etapa = "Caja" || etapa = "Atención Medica", estado in temp.estatu)
                     ),
                     "id",
                     SortOrder.Descending
@@ -460,7 +461,7 @@ Caja As screen:
                 "Paciente",
                 "usuario",
                 "Servicio", "etapa", "estado"
-            )
+            ))
         Layout: =Layout.Vertical
         TemplateSize: =128
         Width: =1088
@@ -2328,7 +2329,7 @@ Caja As screen:
         Height: =32
         Icon: =Icon.FilterFlat
         OnSelect: |-
-            =UpdateContext({_varFiltroe:true});Clear(colEstatus);UpdateContext({_varCheckbox:false});
+            =UpdateContext({_varFiltroe:true});Clear(colEstatusCaja);UpdateContext({_varCheckbox:false});
             UpdateContext({_varCheckbox:true});
         Width: =32
         X: =1304
@@ -2345,14 +2346,14 @@ Caja As screen:
         RadiusTopRight: =12
         Visible: =_varFiltroe
         Width: =397
-        X: =907
-        Y: =187
+        X: =909
+        Y: =185
         ZIndex: =58
 
         GalleryFiltro_1 As gallery.galleryVertical:
             DelayItemLoading: =true
             Height: =259
-            Items: =["En cola","En Atención", "Atendido"]
+            Items: =["En cola","En Atención", "Atendido","Pagado"]
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
@@ -2365,9 +2366,12 @@ Caja As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =40
                 OnCheck: |-
-                    =Collect(colEstatus, { estatu: ThisItem.Value})
+                    =Collect(colEstatusCaja, { estatu: ThisItem.Value})
                 OnSelect: =Select(Parent)
-                OnUncheck: =
+                OnUncheck: |-
+                    =ForAll(Filter(GalleryFiltro_1.AllItems,  GalleryFiltro_1.Selected.Value) As temp,
+                    RemoveIf(colEstatusCaja, estatu = temp.Value)
+                    )
                 Reset: =_varCheckbox
                 Size: =12
                 Text: =ThisItem.Value
@@ -2380,7 +2384,7 @@ Caja As screen:
             Height: =32
             Icon: =Icon.Cancel
             OnSelect: |-
-                =UpdateContext({_varFiltroe: false})
+                =UpdateContext({_varFiltroe: false});Clear(colEstatusCaja)
             Width: =32
             X: =351
             Y: =10

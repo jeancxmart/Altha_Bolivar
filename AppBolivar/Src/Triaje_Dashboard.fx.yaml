@@ -296,29 +296,23 @@ Triaje_Dashboard As screen:
     gal_Triaje_Dashboard_Triaje As gallery.galleryVertical:
         Height: =559
         Items: |+
-            =Search(
+            =With({
+            
+            temp: ShowColumns(colEstatusTriaje, "estatu")
+            
+            },Search(
                 SortByColumns(
                     Filter(AddColumns(
                         'public.Medical_Center_Counter', "fecha_format",Text(
                             fecha,
                             "dd/mm/yyyy"
                         )),
-                        And(
-                            estado = "Pagado",
-                            etapa = "Caja"
-                        ) Or And(
-                            estado = "En Atención",
-                            etapa = "Triaje"
-                        ) Or And(
-                            estado = "En Cola",
-                            etapa = "Triaje"
-                        ),
                         If(
                             IsBlank(DatePickerCitas_2.SelectedDate),
                             fecha_format = Text(Today(),"dd/mm/yyyy"),
                             fecha_format = Text(DatePickerCitas_2.SelectedDate,"dd/mm/yyyy")
                         ),
-                        id_sede = _varSede.id
+                        id_sede = _varSede.id, If(IsEmpty(colEstatusTriaje), etapa = "Triaje" || etapa = "Caja" || etapa = "Atención Medica", estado in temp.estatu)
                     ),
                     "Paciente",
                     SortOrder.Ascending
@@ -328,7 +322,7 @@ Triaje_Dashboard As screen:
                 "Servicio",
                 "usuario",
                 "estado"
-            )
+            ))
             
         Layout: =Layout.Vertical
         TemplateSize: =128
@@ -779,14 +773,14 @@ Triaje_Dashboard As screen:
         RadiusTopRight: =12
         Visible: =_varFiltroe
         Width: =397
-        X: =872
-        Y: =190
+        X: =906
+        Y: =178
         ZIndex: =33
 
         GalleryFiltro_2 As gallery.galleryVertical:
             DelayItemLoading: =true
             Height: =259
-            Items: =["En cola","En Atención", "Atendido"]
+            Items: =["En cola","En Atención", "Atendido","Pagado"]
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
@@ -799,9 +793,12 @@ Triaje_Dashboard As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =40
                 OnCheck: |-
-                    =Collect(colEstatus, { estatu: ThisItem.Value})
+                    =Collect(colEstatusTriaje, { estatu: ThisItem.Value})
                 OnSelect: =Select(Parent)
-                OnUncheck: =RemoveIf(colEstatus, "estatu" = ThisItem.Value)
+                OnUncheck: |-
+                    =ForAll(Filter(GalleryFiltro_2.AllItems,  GalleryFiltro_2.Selected.Value) As temp,
+                    RemoveIf(colEstatusTriaje, estatu = temp.Value)
+                    )
                 Reset: =_varCheckbox
                 Size: =12
                 Text: =ThisItem.Value
@@ -814,7 +811,7 @@ Triaje_Dashboard As screen:
             Height: =32
             Icon: =Icon.Cancel
             OnSelect: |-
-                =UpdateContext({_varFiltroe: false})
+                =UpdateContext({_varFiltroe: false});Clear(colEstatusTriaje)
             Width: =32
             X: =351
             Y: =10
