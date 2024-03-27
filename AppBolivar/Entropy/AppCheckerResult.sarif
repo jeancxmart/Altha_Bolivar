@@ -8900,7 +8900,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 290,
+                  "charOffset": 414,
                   "snippet": {
                     "text": "="
                   }
@@ -8941,7 +8941,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 530,
+                  "charOffset": 871,
                   "snippet": {
                     "text": "in"
                   }
@@ -8980,10 +8980,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 168,
-                  "charOffset": 501,
+                  "charLength": 230,
+                  "charOffset": 825,
                   "snippet": {
-                    "text": "Or(Upper(TextInput5_48.Text) in Upper(examen_nombre);Upper(TextInput5_48.Text) in Upper(muestra_preferida);Upper(TextInput5_48.Text) in Upper(protocolo_toma_muestra)  )"
+                    "text": "Or(\n                Upper(TextInput5_48.Text) in Upper(examen_nombre);\n                Upper(TextInput5_48.Text) in Upper(muestra_preferida);\n                Upper(TextInput5_48.Text) in Upper(protocolo_toma_muestra)\n            )"
                   }
                 }
               },
@@ -108400,6 +108400,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Laboratorio Maestro'.TextInputExamenEditPrecio.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Laboratorio Maestro'.TextInputExamenEditPrecio.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Laboratorio Maestro",
+                "type": "'Laboratorio Maestro'.TextInputExamenEditPrecio"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
         },
         {
           "locations": [

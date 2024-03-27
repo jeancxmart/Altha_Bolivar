@@ -117,23 +117,44 @@
     Gallery5_9 As gallery.variableTemplateHeightGallery:
         DelayItemLoading: =true
         Height: =315
-        Items: |
-            =If(Radio1.Selected.Value="Exámenes Agregados",
-            
-            SortByColumns(Filter('public.Medical_Center_Examenes',id_sede = _varSede.id,
-            Or(Upper(TextInput5_48.Text) in examen_nombre,Upper(TextInput5_48.Text) in muestra_preferida,Upper(TextInput5_48.Text) in protocolo_toma_muestra, TextInput5_48.Text = precio,If(Proper(TextInput5_48.Text)="Si",true,false) = ayunas )
-            
-            
-            
-            ),"id",SortOrder.Descending)
-            
-            ,
-            
-            If(Radio1.Selected.Value="Exámenes ROE",
-            Filter('public.Medical_Center_Examenes',consultorio_medico=Blank(),Or(Upper(TextInput5_48.Text) in Upper(examen_nombre),Upper(TextInput5_48.Text) in Upper(muestra_preferida),Upper(TextInput5_48.Text) in Upper(protocolo_toma_muestra)  ))
-            ))
+        Items: |-
+            =If(
+                Radio1.Selected.Value = "Exámenes Agregados",
+                SortByColumns(
+                    Filter(
+                        'public.Medical_Center_Examenes',
+                        id_sede = _varSede.id,
+                        Or(
+                            Upper(TextInput5_48.Text) in examen_nombre,
+                            Upper(TextInput5_48.Text) in muestra_preferida,
+                            Upper(TextInput5_48.Text) in protocolo_toma_muestra,
+                            TextInput5_48.Text = precio,
+                            If(
+                                Proper(TextInput5_48.Text) = "Si",
+                                true,
+                                false
+                            ) = ayunas
+                        )
+                    ),
+                    "id",
+                    SortOrder.Descending
+                ),
+                If(
+                    Radio1.Selected.Value = "Exámenes ROE",
+                    Filter(
+                        'public.Medical_Center_Examenes',
+                        consultorio_medico = Blank(),
+                        Or(
+                            Upper(TextInput5_48.Text) in Upper(examen_nombre),
+                            Upper(TextInput5_48.Text) in Upper(muestra_preferida),
+                            Upper(TextInput5_48.Text) in Upper(protocolo_toma_muestra)
+                        )
+                    )
+                )
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =If(Label94_6.Y + Label94_6.Height +10 >=Label94_9.Y + Label94_9.Height +10,Label94_6.Y + Label94_6.Height +10 ,Label94_9.Y + Label94_9.Height +10)
         Width: =784
@@ -511,7 +532,7 @@
                     true
                 ),
                 false
-            )
+            ); Reset(TextInput4_45)
         RadiusBottomLeft: =8
         RadiusBottomRight: =8
         RadiusTopLeft: =8
@@ -1542,7 +1563,7 @@
             Visible: =_varMenuMedicamentoEditar
             Width: =360
             X: =542
-            Y: =426
+            Y: =397
             ZIndex: =106
 
         dpEstadoCivil_DCA_8 As dropdown:
@@ -1560,7 +1581,7 @@
             Visible: =_varMenuMedicamentoEditar
             Width: =352
             X: =546
-            Y: =428
+            Y: =399
             ZIndex: =107
 
     Group10_3 As group:
@@ -1850,7 +1871,7 @@
         DisabledBorderColor: =RGBA(0, 0, 0, 1)
         DisabledFill: =RGBA(241, 242, 246, 1)
         DisplayMode: =DisplayMode.Disabled
-        Height: =530
+        Height: =600
         RadiusBottomLeft: =8
         RadiusBottomRight: =8
         RadiusTopLeft: =8
@@ -1858,7 +1879,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =400
         X: =520
-        Y: =120
+        Y: =84
         ZIndex: =102
 
     TextInput4_18 As text:
@@ -1874,7 +1895,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =360
         X: =540
-        Y: =240
+        Y: =210
         ZIndex: =103
 
     TextInput4_20 As text:
@@ -1890,7 +1911,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =360
         X: =540
-        Y: =328
+        Y: =298
         ZIndex: =104
 
     TextInput4_22 As text:
@@ -1906,7 +1927,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =360
         X: =543
-        Y: =518
+        Y: =488
         ZIndex: =105
 
     Label4_72 As label:
@@ -1918,7 +1939,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =277
         X: =543
-        Y: =482
+        Y: =453
         ZIndex: =108
 
     Label4_70 As label:
@@ -1930,7 +1951,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =277
         X: =540
-        Y: =292
+        Y: =262
         ZIndex: =109
 
     Label4_67 As label:
@@ -1942,7 +1963,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =277
         X: =540
-        Y: =202
+        Y: =172
         ZIndex: =110
 
     Label4_66 As label:
@@ -1954,7 +1975,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =177
         X: =540
-        Y: =139
+        Y: =110
         ZIndex: =111
 
     ButtonAtender_10 As button:
@@ -1968,22 +1989,20 @@
             =ColorValue("#26495B")
         HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: |-
-            =
-            
-            
-            Patch('public.Medical_Center_Examenes',LookUp('public.Medical_Center_Examenes',id=ExamenSelected.id),{
+            =Patch('public.Medical_Center_Examenes',LookUp('public.Medical_Center_Examenes',id=ExamenSelected.id),{
             
             
             examen_nombre:   Upper(TextInput4_18.Text),
              muestra_preferida:Upper(TextInput4_20.Text),
              protocolo_toma_muestra:Upper(TextInput4_22.Text),
             consultorio_medico:If(Radio1.Selected.Value="Exámenes ROE","",    getUser.Nombre_Consultorio),
-             ayunas:If(dpEstadoCivil_DCA_8.Selected.Value="Si",true,false)})
+             ayunas:If(dpEstadoCivil_DCA_8.Selected.Value="Si",true,false),
+             precio: Value(TextInputExamenEditPrecio.Text)
+             
+             });
             
-            
-            
-            
-            ;UpdateContext({_varMenuMedicamentoEditar:false})
+            Refresh('public.Medical_Center_Examenes');
+            UpdateContext({_varMenuMedicamentoEditar:false})
         RadiusBottomLeft: =8
         RadiusBottomRight: =8
         RadiusTopLeft: =8
@@ -1993,7 +2012,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =360
         X: =543
-        Y: =590
+        Y: =625
         ZIndex: =112
 
     Icon5_4 As icon.Cancel:
@@ -2005,7 +2024,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =32
         X: =858
-        Y: =138
+        Y: =110
         ZIndex: =113
 
     Label4_97 As label:
@@ -2017,7 +2036,7 @@
         Visible: =_varMenuMedicamentoEditar
         Width: =277
         X: =540
-        Y: =387
+        Y: =357
         ZIndex: =122
 
     Icon2_8 As icon.More:
@@ -3567,4 +3586,33 @@
             X: =156
             Y: =122
             ZIndex: =3
+
+    TextInputExamenEditPrecio As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =ExamenSelected.precio
+        Font: =Font.'Segoe UI'
+        Format: =TextFormat.Number
+        Height: =36
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =12
+        Visible: =_varMenuMedicamentoEditar
+        Width: =360
+        X: =542
+        Y: =567
+        ZIndex: =134
+
+    Label4_106 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =12
+        Text: ="Precio"
+        Visible: =_varMenuMedicamentoEditar
+        Width: =277
+        X: =542
+        Y: =532
+        ZIndex: =135
 
