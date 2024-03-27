@@ -249,7 +249,7 @@
                                 IsBlank(DatePickerCitas.SelectedDate),
                                 fecha_format = Text(Today(),"dd/mm/yyyy"),
                                 fecha_format = Text(DatePickerCitas.SelectedDate,"dd/mm/yyyy")
-                            ),id_sede = _varSede.id, If(IsEmpty(colEstatus), Estatus = "En Cola", estad in temp.estatu)),
+                            ),id_sede = _varSede.id, If(IsEmpty(colEstatus), cita_finalizada = false And caja_finalizada = false, estad in temp.estatu)),
                     DNITextInput.Text,"Correo","id_Pacientes_DNI","Nombre_Paciente","Estatus"
                 ))
                 
