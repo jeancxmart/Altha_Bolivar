@@ -460,7 +460,6 @@ scHistoriaMedicaMedicinaGeneral As screen:
                             input_HistGeneral_79 As richTextEditor:
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaGenerica.motivo_consulta
-                                FillPortions: =1
                                 Height: =170
                                 Width: =100
                                 ZIndex: =3
@@ -1459,7 +1458,6 @@ scHistoriaMedicaMedicinaGeneral As screen:
                             ZIndex: =10
 
                             input_HistGeneral_102 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaGenerica.tratamiento
                                 Height: =180
@@ -1550,7 +1548,6 @@ scHistoriaMedicaMedicinaGeneral As screen:
                             ZIndex: =13
 
                             input_HistGeneral_103 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaGenerica.interconsulta
                                 Height: =180
@@ -1627,7 +1624,6 @@ scHistoriaMedicaMedicinaGeneral As screen:
                                 ZIndex: =2
 
                             input_HistGeneral_104 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaGenerica.recomendaciones
                                 Height: =170

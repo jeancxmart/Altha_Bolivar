@@ -1582,7 +1582,6 @@ scHistoriaMedicaNutricion As screen:
                         ZIndex: =2
 
                     RichTextEditor1_34 As richTextEditor:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: =varDatosHistoriaNutricion.desayuno
                         Height: =170
@@ -1627,7 +1626,6 @@ scHistoriaMedicaNutricion As screen:
                         ZIndex: =2
 
                     RichTextEditor1_35 As richTextEditor:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: =varDatosHistoriaNutricion.merienda
                         Height: =170
@@ -1672,7 +1670,6 @@ scHistoriaMedicaNutricion As screen:
                         ZIndex: =2
 
                     RichTextEditor1_36 As richTextEditor:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: =varDatosHistoriaNutricion.almuerzo
                         Height: =170
@@ -1717,7 +1714,6 @@ scHistoriaMedicaNutricion As screen:
                         ZIndex: =2
 
                     RichTextEditor1_37 As richTextEditor:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: =varDatosHistoriaNutricion.merienda2
                         Height: =170
@@ -1762,7 +1758,6 @@ scHistoriaMedicaNutricion As screen:
                         ZIndex: =2
 
                     RichTextEditor1_38 As richTextEditor:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: =varDatosHistoriaNutricion.cena
                         Height: =170
@@ -1807,7 +1802,6 @@ scHistoriaMedicaNutricion As screen:
                         ZIndex: =2
 
                     RichTextEditor1_39 As richTextEditor:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: =varDatosHistoriaNutricion.merienda3
                         Height: =170
@@ -2301,7 +2295,6 @@ scHistoriaMedicaNutricion As screen:
                         ZIndex: =2
 
                     RichTextEditor1_40 As richTextEditor:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: =varDatosHistoriaNutricion.comentarios_adicionales
                         Height: =170

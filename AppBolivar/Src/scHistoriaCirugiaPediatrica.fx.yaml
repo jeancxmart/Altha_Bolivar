@@ -449,7 +449,6 @@ scHistoriaCirugiaPediatrica As screen:
                                 ZIndex: =2
 
                             RichTextEditor1_79 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: |
                                     =varDatosHistoriaCirugiaPediatrica.antecendentes
@@ -528,7 +527,6 @@ scHistoriaCirugiaPediatrica As screen:
                                 ZIndex: =2
 
                             RichTextEditor1_80 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: |
                                     =varDatosHistoriaCirugiaPediatrica.enfermedad_actual
@@ -871,7 +869,6 @@ scHistoriaCirugiaPediatrica As screen:
                                 ZIndex: =2
 
                             RichTextEditor1_81 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaCirugiaPediatrica.diagnosticos
                                 Height: =170
@@ -951,7 +948,6 @@ scHistoriaCirugiaPediatrica As screen:
                                 ZIndex: =2
 
                             RichTextEditor1_82 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaCirugiaPediatrica.tratamiento
                                 Height: =170
@@ -1029,7 +1025,6 @@ scHistoriaCirugiaPediatrica As screen:
                                 ZIndex: =2
 
                             RichTextEditor1_83 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaCirugiaPediatrica.paraclinico
                                 Height: =170
@@ -1109,7 +1104,6 @@ scHistoriaCirugiaPediatrica As screen:
                                 ZIndex: =2
 
                             RichTextEditor1_84 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaCirugiaPediatrica.recomendaciones
                                 Height: =170

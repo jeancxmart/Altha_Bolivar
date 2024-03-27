@@ -3937,7 +3937,7 @@
             HoverBorderColor: =
             HoverFill: =RGBA(255, 255, 255, 1)
             Items: |-
-                =["09:00 AM","09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","13:00 PM","13:30 PM","14:00 PM","14:30 PM","15:00 PM","15:30 PM","16:00 PM","16:30 PM","17:00 PM","17:30 PM", "18:00 PM","18:30 PM", "19:00 PM"]
+                =["09:00 AM","09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","13:00 PM","13:30 PM","14:00 PM","14:30 PM","15:00 PM","15:30 PM","16:00 PM","16:30 PM","17:00 PM","17:30 PM", "18:00 PM","18:30 PM", "19:00 PM","20:00 PM","21:00 PM","22:00 PM","23:00 PM","23:30 PM"]
             Size: =12
             Visible: =CitaLlamada
             Width: =350
@@ -4010,6 +4010,87 @@
             X: =351
             Y: =10
             ZIndex: =2
+
+    ContainerExiste As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.25)
+        Height: =768
+        Width: =false
+        ZIndex: =84
+
+        ContainerOpci As groupContainer.manualLayoutContainer:
+            BorderThickness: =2
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =220
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =374
+            X: =496
+            Y: =274
+            ZIndex: =1
+
+            btnNewUser As button:
+                BorderColor: =RGBA(44, 97, 112, 1)
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                Height: =108
+                PaddingLeft: =37
+                PaddingRight: =37
+                PaddingTop: =54
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Text: ="USUARIO NUEVO"
+                Width: =145
+                X: =30
+                Y: =82
+                ZIndex: =1
+
+            Image5 As image:
+                Height: =32
+                Image: ='Person Add'
+                Width: =32
+                X: =86.5
+                Y: =96
+                ZIndex: =2
+
+            btnNewExistente As button:
+                BorderColor: =RGBA(44, 97, 112, 1)
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                Height: =108
+                PaddingLeft: =31.5
+                PaddingRight: =31.5
+                PaddingTop: =54
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Size: =12
+                Text: ="USUARIO EXISTENTE"
+                Width: =145
+                X: =199
+                Y: =82
+                ZIndex: =3
+
+            Image43 As image:
+                Height: =32
+                Image: ='Person Tag'
+                Width: =32
+                X: =255.5
+                Y: =96
+                ZIndex: =4
+
+            Label30 As label:
+                Text: ="Texto"
+                X: =105
+                Y: =16
+                ZIndex: =5
 
     Group29 As group:
         Height: =5

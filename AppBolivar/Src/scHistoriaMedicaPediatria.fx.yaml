@@ -445,7 +445,6 @@ scHistoriaMedicaPediatria As screen:
                                 ZIndex: =2
 
                             inputPedriatria_16 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaPediatra.motivo_consulta
                                 Height: =180
@@ -914,7 +913,6 @@ scHistoriaMedicaPediatria As screen:
                             ZIndex: =7
 
                             inputPedriatria_27 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaPediatra.diagnostico
                                 Height: =170
@@ -976,7 +974,6 @@ scHistoriaMedicaPediatria As screen:
                             ZIndex: =9
 
                             inputPedriatria_28 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaPediatra.tratamiento
                                 Height: =170

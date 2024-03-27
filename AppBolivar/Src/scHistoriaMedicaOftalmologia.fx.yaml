@@ -2780,7 +2780,6 @@ scHistoriaMedicaOftalmologia As screen:
                         ZIndex: =2
 
                     RichTextEditor1_41 As richTextEditor:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: =varDatosHistoriaOftalmo.impresion_diagnostica
                         Height: =170
@@ -2860,7 +2859,6 @@ scHistoriaMedicaOftalmologia As screen:
                         ZIndex: =2
 
                     RichTextEditor1_42 As richTextEditor:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: =varDatosHistoriaOftalmo.tratamiento
                         Height: =170
@@ -2938,7 +2936,6 @@ scHistoriaMedicaOftalmologia As screen:
                         ZIndex: =2
 
                     RichTextEditor1_43 As richTextEditor:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 1)
                         Default: =varDatosHistoriaOftalmo.ex_complementarios
                         Height: =170

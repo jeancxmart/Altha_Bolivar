@@ -278,7 +278,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "image",
     "OverridableProperties": {},
-    "Version": "2.2.3"
+    "Version": "2.2.2"
   },
   "label": {
     "CustomGroupControlTemplateName": "",
@@ -348,7 +348,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "richTextEditor",
     "OverridableProperties": {},
-    "Version": "2.7.0"
+    "Version": "2.6.0"
   },
   "screen": {
     "CustomGroupControlTemplateName": "",

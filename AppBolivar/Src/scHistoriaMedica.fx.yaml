@@ -3779,7 +3779,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaGineco.motivo_de_consulta
                                     Height: =170
@@ -3859,7 +3858,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_1 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaGineco.enfermedad_actual
                                     Height: =170
@@ -8041,7 +8039,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_2 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaOftalmo.impresion_diagnostica
                                     Height: =170
@@ -8121,7 +8118,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_3 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaOftalmo.tratamiento
                                     Height: =170
@@ -8199,7 +8195,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_4 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaOftalmo.ex_complementarios
                                     Height: =170
@@ -9776,7 +9771,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_6 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaNutricion.desayuno
                                     Height: =170
@@ -9821,7 +9815,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_7 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaNutricion.merienda
                                     Height: =170
@@ -9866,7 +9859,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_8 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaNutricion.almuerzo
                                     Height: =170
@@ -9911,7 +9903,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_9 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaNutricion.merienda2
                                     Height: =170
@@ -9956,7 +9947,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_10 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaNutricion.cena
                                     Height: =170
@@ -10001,7 +9991,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_11 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaNutricion.merienda3
                                     Height: =170
@@ -10496,7 +10485,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_12 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaNutricion.comentarios_adicionales
                                     Height: =170
@@ -10702,7 +10690,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_5 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: |
                                         =varDatosHistoriaCirugiaPediatrica.antecendentes
@@ -10781,7 +10768,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_13 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: |
                                         =varDatosHistoriaCirugiaPediatrica.enfermedad_actual
@@ -11124,7 +11110,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_14 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaCirugiaPediatrica.diagnosticos
                                     Height: =170
@@ -11204,7 +11189,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_15 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaCirugiaPediatrica.tratamiento
                                     Height: =170
@@ -11282,7 +11266,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_17 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaCirugiaPediatrica.paraclinico
                                     Height: =170
@@ -11362,7 +11345,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_16 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaCirugiaPediatrica.recomendaciones
                                     Height: =170
@@ -11548,7 +11530,6 @@ scHistoriaMedica As screen:
                                 input_HistGeneral_1 As richTextEditor:
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaGenerica.motivo_consulta
-                                    FillPortions: =1
                                     Height: =170
                                     Width: =100
                                     ZIndex: =3
@@ -12547,7 +12528,6 @@ scHistoriaMedica As screen:
                                 ZIndex: =10
 
                                 input_HistGeneral_25 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaGenerica.tratamiento
                                     Height: =180
@@ -12638,7 +12618,6 @@ scHistoriaMedica As screen:
                                 ZIndex: =13
 
                                 input_HistGeneral_26 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaGenerica.interconsulta
                                     Height: =180
@@ -12715,7 +12694,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 input_HistGeneral_27 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaGenerica.recomendaciones
                                     Height: =170
@@ -12816,7 +12794,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_18 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaOtorrino.inicio_enferm_actual
                                     Height: =170
@@ -12862,7 +12839,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 RichTextEditor1_19 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaOtorrino.ant_personales_patologicos
                                     Height: =170
@@ -13517,7 +13493,6 @@ scHistoriaMedica As screen:
                                 ZIndex: =12
 
                                 RichTextEditor1_20 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaOtorrino.tratamiento
                                     Height: =180
@@ -13617,7 +13592,6 @@ scHistoriaMedica As screen:
                                     ZIndex: =2
 
                                 inputPedriatria_1 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaPediatra.motivo_consulta
                                     Height: =180
@@ -14086,7 +14060,6 @@ scHistoriaMedica As screen:
                                 ZIndex: =7
 
                                 inputPedriatria_12 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaPediatra.diagnostico
                                     Height: =170
@@ -14148,7 +14121,6 @@ scHistoriaMedica As screen:
                                 ZIndex: =9
 
                                 inputPedriatria_13 As richTextEditor:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Default: =varDatosHistoriaPediatra.tratamiento
                                     Height: =170

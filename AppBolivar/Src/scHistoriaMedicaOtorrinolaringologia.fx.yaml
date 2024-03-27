@@ -443,7 +443,6 @@ scHistoriaMedicaOtorrinolaringologia As screen:
                                 ZIndex: =2
 
                             RichTextEditor1_70 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaOtorrino.inicio_enferm_actual
                                 Height: =170
@@ -489,7 +488,6 @@ scHistoriaMedicaOtorrinolaringologia As screen:
                                 ZIndex: =2
 
                             RichTextEditor1_71 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaOtorrino.ant_personales_patologicos
                                 Height: =170
@@ -1144,7 +1142,6 @@ scHistoriaMedicaOtorrinolaringologia As screen:
                             ZIndex: =12
 
                             RichTextEditor1_72 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaOtorrino.tratamiento
                                 Height: =180

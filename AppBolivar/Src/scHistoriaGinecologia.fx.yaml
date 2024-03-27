@@ -773,7 +773,6 @@ scHistoriaGinecologia As screen:
                                 ZIndex: =2
 
                             RichTextEditor1_47 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaGineco.motivo_de_consulta
                                 Height: =170
@@ -853,7 +852,6 @@ scHistoriaGinecologia As screen:
                                 ZIndex: =2
 
                             RichTextEditor1_48 As richTextEditor:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 1)
                                 Default: =varDatosHistoriaGineco.enfermedad_actual
                                 Height: =170
