@@ -303,16 +303,17 @@ Triaje_Dashboard As screen:
             },Search(
                 SortByColumns(
                     Filter(AddColumns(
+                        AddColumns(
                         'public.Medical_Center_Counter', "fecha_format",Text(
                             fecha,
                             "dd/mm/yyyy"
-                        )),
+                        )), "estatu", LookUp('public.Medical_Center_Ticket', id = id_Ticket).Estatus),
                         If(
                             IsBlank(DatePickerCitas_2.SelectedDate),
                             fecha_format = Text(Today(),"dd/mm/yyyy"),
                             fecha_format = Text(DatePickerCitas_2.SelectedDate,"dd/mm/yyyy")
                         ),
-                        id_sede = _varSede.id, If(IsEmpty(colEstatusTriaje), etapa = "Triaje", estado in temp.estatu)
+                        id_sede = _varSede.id, If(IsEmpty(colEstatusTriaje), etapa = "Caja" || etapa = "Triaje" || etapa = "Atención Medica", estatu in temp.estatu)
                     ),
                     "Paciente",
                     SortOrder.Ascending
@@ -523,6 +524,7 @@ Triaje_Dashboard As screen:
             Size: =12
             Text: =If(Label17_37.Text="Caja - Pagado","Triaje - En Cola",If(IsBlank(LookUp('public.Medical_Center_Ticket',id_Pacientes_DNI=ThisItem.DNI_Paciente,Estatus)),"Atención Paciente - "& LookUp('public.Medical_Center_Ticket',id_Pacientes_DNI=ThisItem.DNI_Paciente,Estatus),ThisItem.etapa& " - " & ThisItem.estado))
             Width: =173
+            Wrap: =false
             X: =652
             Y: =41
             ZIndex: =13
@@ -780,7 +782,7 @@ Triaje_Dashboard As screen:
         GalleryFiltro_2 As gallery.galleryVertical:
             DelayItemLoading: =true
             Height: =259
-            Items: =["En cola","En Atención", "Atendido","Pagado"]
+            Items: =["En cola","En Atención", "Atendido"]
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false

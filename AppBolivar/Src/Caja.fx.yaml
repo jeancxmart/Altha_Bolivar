@@ -441,18 +441,18 @@ Caja As screen:
             },
             Search(
                 SortByColumns(
-                    Filter(
+                    Filter(AddColumns(
                         AddColumns('public.Medical_Center_Counter', "fecha_format",
                         Text(
                             fecha,
                             "dd/mm/yyyy"
-                        )), 
+                        )), "estatu", LookUp('public.Medical_Center_Ticket', id = id_Ticket).Estatus), 
                         id_sede = _varSede.id,
                         If(
                             IsBlank(DatePickerCitas_1.SelectedDate),
                             fecha_format = Text(Today(),"dd/mm/yyyy"),
                             fecha_format = Text(DatePickerCitas_1.SelectedDate,"dd/mm/yyyy")
-                        ), If(IsEmpty(colEstatusCaja),etapa = "Caja", estado in temp.estatu)
+                        ), If(IsEmpty(colEstatusCaja),etapa = "Caja" || etapa = "Triaje" || etapa = "Atención Medica", estatu in temp.estatu)
                     ),
                     "id",
                     SortOrder.Descending
@@ -2356,7 +2356,7 @@ Caja As screen:
         GalleryFiltro_1 As gallery.galleryVertical:
             DelayItemLoading: =true
             Height: =259
-            Items: =["En cola","En Atención", "Atendido","Pagado"]
+            Items: =["En cola","En Atención", "Atendido"]
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false

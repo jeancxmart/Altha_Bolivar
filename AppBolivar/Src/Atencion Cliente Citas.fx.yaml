@@ -249,7 +249,7 @@
                                 IsBlank(DatePickerCitas.SelectedDate),
                                 fecha_format = Text(Today(),"dd/mm/yyyy"),
                                 fecha_format = Text(DatePickerCitas.SelectedDate,"dd/mm/yyyy")
-                            ),id_sede = _varSede.id, If(IsEmpty(colEstatus), cita_finalizada = false And caja_finalizada = false, estad in temp.estatu)),
+                            ),id_sede = _varSede.id, If(IsEmpty(colEstatus), Estatus = "En Cola", Estatus in temp.estatu)),
                     DNITextInput.Text,"Correo","id_Pacientes_DNI","Nombre_Paciente","Estatus"
                 ))
                 
@@ -3974,7 +3974,7 @@
         GalleryFiltro As gallery.galleryVertical:
             DelayItemLoading: =true
             Height: =259
-            Items: =["En cola","En Atención", "Atendido","Pagado"]
+            Items: =["En cola","En Atención", "Atendido"]
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
