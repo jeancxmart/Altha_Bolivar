@@ -1170,16 +1170,38 @@
                 Items: |-
                     =If(
                         IsBlank(AnterioresDatePicker_7.SelectedDate),
-                    
-                    Search(Filter('public.Medical_Center_Receta_Paciente',DNI_Paciente=TicketSelected.DNI_Paciente, Especialidad = LookUp('public.Medical_Center_Especialidad',id= LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)).Especialidad),Proper(AnterioresTextSearchBox_11.Text),"Tratamiento"),
-                    
-                    Search(Filter('public.Medical_Center_Receta_Paciente',DNI_Paciente=TicketSelected.DNI_Paciente, Text(
+                        Search(
+                            Filter(
+                                'public.Medical_Center_Receta_Paciente',
+                                DNI_Paciente = TicketSelected.DNI_Paciente,
+                                Especialidad = LookUp(
+                                    'public.Medical_Center_Especialidad',
+                                    id = LookUp(
+                                        'public.Medical_Center_S&E_Relacion',
+                                        id = EspecialidadTicket,
+                                        id_especialidad
+                                    )
+                                ).Especialidad
+                            ),
+                            Proper(AnterioresTextSearchBox_11.Text),
+                            "Tratamiento"
+                        ),
+                        Search(
+                            Filter(
+                                'public.Medical_Center_Receta_Paciente',
+                                DNI_Paciente = TicketSelected.DNI_Paciente,
+                                Text(
                                     fecha_receta,
                                     "dd/mm/yyyy"
                                 ) = Text(
                                     AnterioresDatePicker_7.SelectedDate,
                                     "dd/mm/yyyy"
-                                )),Proper(AnterioresTextSearchBox_11.Text),"Tratamiento"))
+                                )
+                            ),
+                            Proper(AnterioresTextSearchBox_11.Text),
+                            "Tratamiento"
+                        )
+                    )
                 Layout: =Layout.Vertical
                 TemplateSize: =102
                 Width: =If(varAnchoInfPac,646,913)

@@ -11433,7 +11433,6 @@
                             Telefono: TextInput27_11.Text,
                             RUC: TextInput27_10.Text,
                             triaje: Toggle2_2.Value,
-                            test: Toggle2_3.Value,
                             Direccion: TextInput27_12.Text,
                             Moneda: dp_Moneda_Consultorio_DCA_19.Selected.Value,
                             Nombre_Contacto_Principal: TextInput27_13.Text,
@@ -11825,7 +11824,9 @@
                 FalseText: ="No"
                 TrueFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
                 TrueText: ="Si"
-                Visible: =varCompañiaView
+                Visible: |-
+                    =//varCompañiaView
+                    false
                 X: =818
                 Y: =254
                 ZIndex: =33
@@ -11838,7 +11839,9 @@
                 PaddingLeft: =0
                 Size: =12
                 Text: ="Test"
-                Visible: =varCompañiaView
+                Visible: |-
+                    =//varCompañiaView
+                    false
                 Width: =56
                 X: =818
                 Y: =212

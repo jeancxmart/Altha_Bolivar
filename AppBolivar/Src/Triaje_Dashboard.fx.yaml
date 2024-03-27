@@ -312,7 +312,7 @@ Triaje_Dashboard As screen:
                             fecha_format = Text(Today(),"dd/mm/yyyy"),
                             fecha_format = Text(DatePickerCitas_2.SelectedDate,"dd/mm/yyyy")
                         ),
-                        id_sede = _varSede.id, If(IsEmpty(colEstatusTriaje), etapa = "Triaje" || etapa = "Caja" || etapa = "Atención Medica", estado in temp.estatu)
+                        id_sede = _varSede.id, If(IsEmpty(colEstatusTriaje), etapa = "Triaje", estado in temp.estatu)
                     ),
                     "Paciente",
                     SortOrder.Ascending

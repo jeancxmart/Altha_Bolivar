@@ -452,7 +452,7 @@ Caja As screen:
                             IsBlank(DatePickerCitas_1.SelectedDate),
                             fecha_format = Text(Today(),"dd/mm/yyyy"),
                             fecha_format = Text(DatePickerCitas_1.SelectedDate,"dd/mm/yyyy")
-                        ), If(IsEmpty(colEstatusCaja), etapa = "Triaje" || etapa = "Caja" || etapa = "Atención Medica", estado in temp.estatu)
+                        ), If(IsEmpty(colEstatusCaja),etapa = "Caja", estado in temp.estatu)
                     ),
                     "id",
                     SortOrder.Descending
@@ -1409,7 +1409,7 @@ Caja As screen:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(0, 0, 0, 1)
                 DisplayMode: |
-                    =If(lbEstatusPacCaja.Text="Caja - En Cola"&&Sum(Filter(itemsPago,Pago=false),Monto)>0,DisplayMode.Edit,DisplayMode.Disabled)
+                    =If(LookUp('public.Medical_Center_Ticket', id = CajaSelected.id_Ticket, caja_finalizada = false) &&Sum(Filter(itemsPago,Pago=false),Monto)>0,DisplayMode.Edit,DisplayMode.Disabled)
                 Fill: =ColorFondoBoton
                 Font: =Font.'Segoe UI'
                 Height: =44
