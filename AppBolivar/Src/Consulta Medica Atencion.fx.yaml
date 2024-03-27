@@ -939,9 +939,7 @@
                         IsBlank(EvidenciasDatePicker_4.SelectedDate),
                         Search(
                            SortByColumns( Filter(
-                                'public.Medical_Center_Evidencias',
-                                id_Paciente in TicketSelected.DNI_Paciente
-                            ),"fecha",SortOrder.Descending),
+                                'public.Medical_Center_Evidencias', especialidad = LookUp('public.Medical_Center_Especialidad',id= LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)).Especialidad,id_Paciente in TicketSelected.DNI_Paciente),"fecha",SortOrder.Descending),
                             Proper(EvidenciasTextSearchBox_7.Text),
                             "Descripcion",
                             "Evidencia"
@@ -1448,13 +1446,13 @@
                         IsBlank(AnterioresDatePicker_8.SelectedDate),
                         Filter(
                             'public.Medical_Center_Examenes_Laboratorio_Paciente',
-                            id_sede = _varSede.id,
-                            dni_paciente = TicketSelected.DNI_Paciente, id_especialidad = LookUp('public.Medical_Center_S&E_Relacion', id =  EspecialidadTicket).id_especialidad
+                            id_sede = _varSede.id, especialidad = LookUp('public.Medical_Center_Especialidad', id = LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)).Especialidad,
+                            dni_paciente = TicketSelected.DNI_Paciente
                         ),
                         Filter(
                             'public.Medical_Center_Examenes_Laboratorio_Paciente',
                             id_sede = _varSede.id,
-                            dni_paciente = TicketSelected.DNI_Paciente, id_especialidad = LookUp('public.Medical_Center_S&E_Relacion', id =  EspecialidadTicket).id_especialidad,     
+                            dni_paciente = TicketSelected.DNI_Paciente, especialidad = LookUp('public.Medical_Center_Especialidad', id = LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)).Especialidad,   
                             Date(
                                 Year(fecha),
                                 Month(fecha),
@@ -1464,6 +1462,7 @@
                                 Month(AnterioresDatePicker_8.SelectedDate),
                                 Day(AnterioresDatePicker_8.SelectedDate)
                             )
+                            
                         )
                     )
                 Layout: =Layout.Vertical
@@ -7501,7 +7500,8 @@
              id_sede : _varSede.id,
             fecha:Today(),
             id_examen:SolicitarExamenSelected.id,
-            doctor:User().FullName
+            doctor:User().FullName, 
+            especialidad: LookUp('public.Medical_Center_Especialidad',id= LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)).Especialidad
             
             })
             //)
@@ -15258,6 +15258,7 @@
                  id_sede : _varSede.id,
                 id_Image:If(CountRows(DataCardValue5_3.Attachments)>0,Last(CollectRecepcionEvidencia).FID,If(CountRows(DataCardValue5_3.Attachments)=0,"")),
                 fecha:Today(),
+                especialidad: LookUp('public.Medical_Center_Especialidad',id= LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad)).Especialidad,
                 url_Image:Last(CollectRecepcionEvidencia).FL
                 
                 });

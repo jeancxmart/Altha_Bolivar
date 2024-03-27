@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2024-02-08T17:52:01.1830000Z",
+      "LastChangedTimeString": "2024-03-26T19:47:09.1200000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -13,6 +13,7 @@
       "Especialidad": "Especialidad",
       "fecha_receta": "fecha_receta",
       "id": "id",
+      "id_especialidad": "id_especialidad",
       "id_sede": "id_sede",
       "Indicaciones_Generales": "Indicaciones_Generales",
       "Nombre_Consultorio": "Nombre_Consultorio",
