@@ -275,7 +275,7 @@
       "MetaDataIDKey": "",
       "Name": "btnCancelarPrincipal_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -757,7 +757,7 @@
       "MetaDataIDKey": "",
       "Name": "btnCancelarSec_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2052,7 +2052,7 @@
       "MetaDataIDKey": "",
       "Name": "btnGuardarPrincipal_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4294,7 +4294,7 @@
       "MetaDataIDKey": "",
       "Name": "conHiistorialFondo_13",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15034,7 +15034,7 @@
       "MetaDataIDKey": "",
       "Name": "Gallery4_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15702,7 +15702,7 @@
       "MetaDataIDKey": "",
       "Name": "htmlNutriTabla_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16220,7 +16220,7 @@
       "MetaDataIDKey": "",
       "Name": "htmlNutriTabla_7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -43434,7 +43434,7 @@
       "MetaDataIDKey": "",
       "Name": "lblHistoriaMedica_DCA_9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

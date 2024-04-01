@@ -338,7 +338,7 @@
                             Font: =Font.'Segoe UI'
                             Height: =24
                             OnSelect: =
-                            PaddingTop: =3
+                            PaddingTop: =0
                             Size: =12
                             Text: |-
                                 =/*If(LookUp(col_citas;id_Pacientes_DNI=DNITextInput.Text;Nacionalidad)="Extranjero(a)";ThisItem.Nombre_Paciente;
@@ -850,9 +850,10 @@
                 =ColorValue("#26495B")
             HoverFill: =RGBA(255, 255, 255, 1)
             OnSelect: |-
-                =UpdateContext({CitaLlamada:true});
-                Set(varAgendarCitaNew,true);
-                Set(varAgendarCitaEdit,false);
+                =/*UpdateContext({CitaLlamada:true});;
+                Set(varAgendarCitaNew;true);;
+                Set(varAgendarCitaEdit;false);;*/
+                UpdateContext({_newDesignCita:true});
             PaddingLeft: =25
             PressedBorderColor: =ColorFondoBoton
             PressedColor: =ColorFondoBoton
@@ -3060,13 +3061,6 @@
         Y: =16
         ZIndex: =59
 
-    Rectangle30 As rectangle:
-        Fill: =RGBA(0, 0, 0, 0.27)
-        Height: =768
-        Visible: =_varViewDoctor
-        Width: =1366
-        ZIndex: =60
-
     gal_Paciente_por_Atender_2 As gallery.CalendarEventsGallery:
         AccessibleLabel: ="Eventos del calendario del día seleccionado"
         Fill: =RGBA(255, 255, 255, 1)
@@ -3087,7 +3081,7 @@
         Width: =380
         X: =527
         Y: =553
-        ZIndex: =77
+        ZIndex: =60
 
         Title8_14 As label:
             BorderColor: =Self.Color
@@ -3214,7 +3208,7 @@
         Width: =30
         X: =835
         Y: =43
-        ZIndex: =78
+        ZIndex: =61
 
     Label51_14 As label:
         Color: =RGBA(255, 0, 0, 1)
@@ -3230,7 +3224,7 @@
         Width: =278
         X: =822
         Y: =502
-        ZIndex: =79
+        ZIndex: =62
 
     Icon53 As icon.OptionsList:
         Color: =RGBA(0, 0, 0, 1)
@@ -3242,7 +3236,80 @@
         Width: =40
         X: =40
         Y: =24
-        ZIndex: =80
+        ZIndex: =63
+
+    Icon58 As icon.DetailList:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.DetailList
+        OnSelect: |-
+            =UpdateContext({_ResponsiveM: false});
+        Visible: =If(_ResponsiveM = false, false, true)
+        Width: =40
+        X: =40
+        Y: =24
+        ZIndex: =64
+
+    ContainerFiltro As groupContainer.manualLayoutContainer:
+        BorderThickness: =2
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =259
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Visible: =_varFiltroe
+        Width: =397
+        X: =872
+        Y: =190
+        ZIndex: =65
+
+        GalleryFiltro As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Height: =259
+            Items: =["En cola","En Atención", "Atendido"]
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TemplatePadding: =10
+            TemplateSize: =50
+            Width: =397
+            ZIndex: =1
+
+            Checkbox2 As checkbox:
+                FontWeight: =FontWeight.Semibold
+                Height: =40
+                OnCheck: |-
+                    =Collect(colEstatus, { estatu: ThisItem.Value})
+                OnSelect: =Select(Parent)
+                OnUncheck: |-
+                    =ForAll(Filter(GalleryFiltro.AllItems,  GalleryFiltro.Selected.Value) As temp,
+                    RemoveIf(colEstatus, estatu = temp.Value)
+                    )
+                Reset: =_varCheckbox
+                Size: =12
+                Text: =ThisItem.Value
+                X: =17
+                Y: =5
+                ZIndex: =1
+
+        Icon61 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =32
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({_varFiltroe: false})
+            Width: =32
+            X: =351
+            Y: =10
+            ZIndex: =2
+
+    Rectangle30 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.27)
+        Height: =768
+        Visible: =_varViewDoctor
+        Width: =1366
+        ZIndex: =72
 
     Group28 As group:
         Height: =5
@@ -3918,6 +3985,7 @@
             Height: =30
             IconBackground: =RGBA(0, 0, 0, 0)
             IconFill: =RGBA(0, 0, 0, 1)
+            PaddingBottom: =0
             Size: =12
             Visible: =CitaLlamada
             Width: =350
@@ -3945,77 +4013,21 @@
             Y: =637
             ZIndex: =56
 
-    Icon58 As icon.DetailList:
-        Color: =RGBA(0, 0, 0, 1)
-        Height: =40
-        Icon: =Icon.DetailList
-        OnSelect: |-
-            =UpdateContext({_ResponsiveM: false});
-        Visible: =If(_ResponsiveM = false, false, true)
-        Width: =40
-        X: =40
-        Y: =24
-        ZIndex: =81
+    GroupAgendarCita As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =85
 
-    ContainerFiltro As groupContainer.manualLayoutContainer:
-        BorderThickness: =2
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =259
-        RadiusBottomLeft: =12
-        RadiusBottomRight: =12
-        RadiusTopLeft: =12
-        RadiusTopRight: =12
-        Visible: =_varFiltroe
-        Width: =397
-        X: =872
-        Y: =190
-        ZIndex: =83
-
-        GalleryFiltro As gallery.galleryVertical:
-            DelayItemLoading: =true
-            Height: =259
-            Items: =["En cola","En Atención", "Atendido"]
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            ShowScrollbar: =false
-            TemplatePadding: =10
-            TemplateSize: =50
-            Width: =397
-            ZIndex: =1
-
-            Checkbox2 As checkbox:
-                FontWeight: =FontWeight.Semibold
-                Height: =40
-                OnCheck: |-
-                    =Collect(colEstatus, { estatu: ThisItem.Value})
-                OnSelect: =Select(Parent)
-                OnUncheck: |-
-                    =ForAll(Filter(GalleryFiltro.AllItems,  GalleryFiltro.Selected.Value) As temp,
-                    RemoveIf(colEstatus, estatu = temp.Value)
-                    )
-                Reset: =_varCheckbox
-                Size: =12
-                Text: =ThisItem.Value
-                X: =17
-                Y: =5
-                ZIndex: =1
-
-        Icon61 As icon.Cancel:
-            Color: =RGBA(0, 0, 0, 1)
-            Height: =32
-            Icon: =Icon.Cancel
+        Rectangle65 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.25)
+            Height: =768
             OnSelect: |-
-                =UpdateContext({_varFiltroe: false})
-            Width: =32
-            X: =351
-            Y: =10
-            ZIndex: =2
-
-    ContainerExiste As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(0, 0, 0, 0.25)
-        Height: =768
-        Width: =false
-        ZIndex: =84
+                =UpdateContext({_newDesignCita:false});
+            Visible: =_newDesignCita
+            Width: =1366
+            ZIndex: =66
 
         ContainerOpci As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -4025,10 +4037,11 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
+            Visible: =_newDesignCita
             Width: =374
             X: =496
             Y: =274
-            ZIndex: =1
+            ZIndex: =67
 
             btnNewUser As button:
                 BorderColor: =RGBA(44, 97, 112, 1)
@@ -4036,6 +4049,11 @@
                 Fill: =RGBA(255, 255, 255, 1)
                 Font: =Font.'Segoe UI'
                 Height: =108
+                OnSelect: |
+                    =UpdateContext({_newDesignCita:false});
+                    UpdateContext({CitaLlamada:true});
+                    Set(varAgendarCitaNew,true);
+                    Set(varAgendarCitaEdit,false);
                 PaddingLeft: =37
                 PaddingRight: =37
                 PaddingTop: =54
@@ -4064,6 +4082,9 @@
                 Fill: =RGBA(255, 255, 255, 1)
                 Font: =Font.'Segoe UI'
                 Height: =108
+                OnSelect: |-
+                    =UpdateContext({_newDesignCita:false});
+                    UpdateContext({_varSelectUser:true});
                 PaddingLeft: =31.5
                 PaddingRight: =31.5
                 PaddingTop: =54
@@ -4087,10 +4108,998 @@
                 ZIndex: =4
 
             Label30 As label:
-                Text: ="Texto"
-                X: =105
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: ="Agendar Cita"
+                Width: =143
+                X: =116
                 Y: =16
                 ZIndex: =5
+
+    GroupUsuarioExistente As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =87
+
+        Rectangle67 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.25)
+            Height: =768
+            OnSelect: |-
+                =UpdateContext({_varSelectUser:false});
+            Visible: =_varSelectUser
+            Width: =1366
+            ZIndex: =68
+
+        ContainerExistUser As groupContainer.manualLayoutContainer:
+            BorderThickness: =2
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =700
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varSelectUser
+            Width: =1200
+            X: =83
+            Y: =34
+            ZIndex: =69
+
+            Label30_4 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: ="Usuario Existente"
+                Width: =188
+                X: =20
+                Y: =20
+                ZIndex: =1
+
+            IconCancelarSeleccion As icon.Cancel:
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =24
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({_varSelectUser:false});
+                Width: =24
+                X: =1156
+                Y: =22
+                ZIndex: =2
+
+            galUsuariosExis As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =472
+                Items: ='public.Medical_Center_Historial_Principal'
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TemplateSize: =50
+                Width: =1160
+                X: =20
+                Y: =207
+                ZIndex: =3
+
+                ContainerUno As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =50
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Container47 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        Label41 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =50
+                            Size: =12
+                            Text: =ThisItem.Nombres
+                            Wrap: =false
+                            ZIndex: =1
+
+                    Container48 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        Label41_1 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =50
+                            Size: =12
+                            Text: =ThisItem.Apellidos
+                            Wrap: =false
+                            ZIndex: =1
+
+                    Container49 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =3
+
+                        Label41_2 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =50
+                            LayoutMinWidth: =100
+                            Size: =12
+                            Text: =ThisItem.DNI_CI
+                            Wrap: =false
+                            ZIndex: =1
+
+                    Container50 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =4
+
+                        Label41_3 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =50
+                            Size: =12
+                            Text: =ThisItem.telefono
+                            Wrap: =false
+                            ZIndex: =1
+
+                    Container51 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =5
+
+                        Label41_5 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =50
+                            Size: =12
+                            Text: =ThisItem.correo
+                            Wrap: =false
+                            ZIndex: =1
+
+                    Container53 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =4
+                        ZIndex: =6
+
+                        btnSeleccionar As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(44, 97, 112, 1)
+                            Color: =RGBA(44, 97, 112, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Font: =Font.'Segoe UI'
+                            OnSelect: |
+                                =UpdateContext({CitaLlamadaExistente:true});
+                                Set(varAgendarCitaNew,false);
+                                Set(varAgendarCitaEdit,true);
+                                UpdateContext({_varSelectUser:false});
+                                Reset(tiDNI_AgendarCita_1);
+                                Reset(dpEspecialidadNewAppointment_1);
+                                Reset(TextInput35_10);
+                                Reset(dpServicioNuevoTicket_1);
+                                Reset(DatePicker3_1);
+                                Clear(colDatosDNI);
+                                Reset(dpHora_1);
+                                Reset(TextInput35_12);
+                                Reset(TextInput35_18);
+                                Reset(dpEstadoCivil_DCA_30);
+                                Reset(dpEstadoCivil_DCA_18);
+                            Size: =12
+                            Text: ="Seleccionar"
+                            Width: =140
+                            ZIndex: =1
+
+            Label30_5 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Nombre"
+                Width: =80
+                X: =20
+                Y: =148
+                ZIndex: =4
+
+            Label30_6 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Apellido"
+                Width: =80
+                X: =220
+                Y: =148
+                ZIndex: =5
+
+            Label30_7 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Documento de Identidad"
+                Width: =108
+                X: =396
+                Y: =128
+                ZIndex: =6
+
+            Label30_8 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Celular"
+                Width: =80
+                X: =614
+                Y: =138
+                ZIndex: =7
+
+            Label30_9 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: ="Correo"
+                Width: =80
+                X: =804
+                Y: =138
+                ZIndex: =8
+
+            Rectangle70 As rectangle:
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =2
+                Width: =1140
+                X: =20
+                Y: =186
+                ZIndex: =9
+
+    GroupAgendarEUser As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =89
+
+        Rectangle71 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.25)
+            Height: =768
+            Visible: =CitaLlamadaExistente
+            Width: =1366
+            ZIndex: =70
+
+        Container54 As groupContainer.manualLayoutContainer:
+            BorderThickness: =2
+            Fill: =RGBA(241, 242, 246, 1)
+            Height: =768
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =CitaLlamadaExistente
+            Width: =784
+            X: =291
+            ZIndex: =71
+
+            Label51_1 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =32
+                Size: =18
+                Text: ="Agendar Cita"
+                Width: =198
+                X: =20
+                Y: =20
+                ZIndex: =1
+
+            Label51_15 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =16
+                Text: ="Datos del paciente"
+                Width: =241
+                X: =20
+                Y: =70
+                ZIndex: =2
+
+            Label51_16 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =12
+                Text: ="Doc. de Identidad"
+                Width: =241
+                X: =404
+                Y: =107
+                ZIndex: =3
+
+            Label51_17 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =12
+                Text: ="Nombre"
+                Width: =241
+                X: =20
+                Y: =195
+                ZIndex: =4
+
+            Label51_18 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =12
+                Text: ="Nacionalidad"
+                Width: =241
+                X: =20
+                Y: =107
+                ZIndex: =5
+
+            Label51_19 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =12
+                Text: ="Correo"
+                Width: =241
+                X: =404
+                Y: =195
+                ZIndex: =6
+
+            tiDNI_AgendarCita_1 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =If(varAgendarCitaNew,"",galUsuariosExis.Selected.DNI_CI)
+                Font: =Font.'Segoe UI'
+                Height: =36
+                OnChange: |-
+                    =If(
+                        dpEstadoCivil_DCA_18.Selected.Value = "Peruano(a)",
+                        IfError(
+                            ClearCollect(
+                                colDatosDNI,
+                                Api_DNI.DNI(tiDNI_AgendarCita_1.Text)
+                            ),
+                            Notify("No se encontro el Doc. de identidad"),
+                            If(
+                                IsBlank(Api_DNI.DNI(tiDNI_AgendarCita_1.Text)),
+                                false,
+                                false
+                            )
+                        ), UpdateContext({_varDNI: LookUp('public.Medical_Center_Historial_Principal', DNI_CI = tiDNI_AgendarCita_1.Text)})
+                    )
+                Size: =12
+                Width: =360
+                X: =404
+                Y: =143
+                ZIndex: =7
+
+            TextInput35_10 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: |-
+                    =If(varAgendarCitaNew,
+                    If(dpEstadoCivil_DCA_18.Selected.Value="Peruano(a)",
+                    
+                    /*TipoDoc.nombres &" "&TipoDoc.apellidoPaterno &" "&TipoDoc.apellidoMaterno*/
+                    
+                    LookUp(colDatosDNI,numeroDocumento=tiDNI_AgendarCita_1.Text,nombres) &" "& LookUp(colDatosDNI,numeroDocumento=tiDNI_AgendarCita_1.Text,apellidoPaterno) &" "& LookUp(colDatosDNI,numeroDocumento=tiDNI_AgendarCita_1.Text,apellidoMaterno)
+                    , _varDNI.Nombres & " " & _varDNI.Apellidos),
+                    
+                    galUsuariosExis.Selected.Nombres & " " & galUsuariosExis.Selected.Apellidos)
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Size: =12
+                Width: =360
+                X: =20
+                Y: =231
+                ZIndex: =8
+
+            TextInput35_11 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Size: =12
+                Width: =360
+                X: =20
+                Y: =142
+                ZIndex: =9
+
+            TextInput35_12 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: |
+                    =If(varAgendarCitaNew,
+                    LookUp(Sort('public.Medical_Center_Ticket',fecha_creacion,SortOrder.Descending),id_Pacientes_DNI=tiDNI_AgendarCita_1.Text,Correo),
+                    galUsuariosExis.Selected.correo)
+                    //ALTERNATIVAS
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Size: =12
+                Width: =360
+                X: =404
+                Y: =231
+                ZIndex: =10
+
+            Label51_20 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =16
+                Text: ="Datos del servicio"
+                Width: =241
+                X: =20
+                Y: =380
+                ZIndex: =11
+
+            Label51_21 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =12
+                Text: ="Especialidad"
+                Width: =241
+                X: =20
+                Y: =422
+                ZIndex: =12
+
+            TextInput35_13 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Size: =12
+                Width: =360
+                X: =20
+                Y: =458
+                ZIndex: =13
+
+            Label51_22 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =12
+                Text: ="Servicio" 
+                Width: =241
+                X: =404
+                Y: =422
+                ZIndex: =14
+
+            TextInput35_14 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Size: =12
+                Width: =360
+                X: =404
+                Y: =458
+                ZIndex: =15
+
+            Label51_23 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =12
+                Text: ="Doctor"
+                Width: =241
+                X: =20
+                Y: =510
+                ZIndex: =16
+
+            TextInput35_15 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Size: =12
+                Width: =360
+                X: =20
+                Y: =546
+                ZIndex: =17
+
+            Label51_24 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =12
+                Text: ="Fecha" 
+                Width: =241
+                X: =406
+                Y: =510
+                ZIndex: =18
+
+            TextInput35_16 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Size: =12
+                Width: =360
+                X: =406
+                Y: =546
+                ZIndex: =19
+
+            Label51_25 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =12
+                Text: ="Horario"
+                Width: =241
+                X: =20
+                Y: =598
+                ZIndex: =20
+
+            TextInput35_17 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Size: =12
+                Width: =360
+                X: =20
+                Y: =634
+                ZIndex: =21
+
+            Button15_1 As button:
+                BorderStyle: =BorderStyle.None
+                DisplayMode: =If(lblDisponibilidad.Text="No Disponible",DisplayMode.Disabled,DisplayMode.Edit)
+                Fill: =ColorFondoBoton
+                Height: =44
+                HoverFill: =ColorFondoBoton
+                OnSelect: |+
+                    =UpdateContext({CitaLlamadaExistente: false});
+                    //DEPURAR, NO SE USA EN OTROS LADOS
+                    /**
+                    Set(
+                        varParticipantes,
+                        Concatenate(
+                            TextInput35_3.Text,
+                            ";",
+                            LookUp(
+                                'public.medical_center_sedes_users',
+                               e_usuario = dpEstadoCivil_DCA_20.Selected.e_usuario,
+                                correo
+                            )
+                        )
+                    );**/
+                    
+                    /* LookUp(
+                                'public.Medical_Center_Usuario';
+                                Usuario = dpEstadoCivil_DCA_20.Selected.Usuario;
+                                Correo
+                            )*/
+                    
+                    
+                    //Este flujo no está corriendo correctamente - Observación
+                    
+                    /*
+                    Calendario_Compartir.Run(
+                        varParticipantes;
+                        Text(
+                            DateTimeValue(
+                                DatePicker3.SelectedDate & " " & Left(
+                                    dpHora.Selected.Value;
+                                    5
+                                )
+                            );
+                            "yyyy-mm-ddThh:mm:ss"
+                        );
+                        Text(
+                            DateTimeValue(
+                                DatePicker3.SelectedDate & " " & DateAdd(
+                                    TimeValue(dpHora.Selected.Value);
+                                    1;
+                                    TimeUnit.Hours
+                                )
+                            );
+                            "yyyy-mm-ddThh:mm:ss"
+                        );
+                        TextInput35_1.Text;
+                        dpEstadoCivil_DCA_19.Selected.Servicio;
+                        DatePicker3.SelectedDate;
+                        dpEstadoCivil_DCA_20.Selected.Usuario;
+                        LookUp(
+                            'public.Medical_Center_Consultorio_Medico';
+                            id_sede = _varSede.id;
+                            url_Logo
+                        );
+                        varSimboloMaestros & " " & LookUp(
+                            'public.Medical_Center_Servicios';
+                            Servicio = dpEstadoCivil_DCA_19.Selected.Servicio;
+                            Costo
+                        );
+                        LookUp(
+                            'public.Medical_Center_Consultorio_Medico';
+                            id_sede = _varSede.id;
+                            Direccion
+                        );
+                        LookUp(
+                            'public.Medical_Center_Consultorio_Medico';
+                            id_sede = _varSede.id;
+                            Telefono
+                        );
+                         _varSede.id
+                    );;
+                    */
+                    
+                        Patch(
+                            'public.Medical_Center_Ticket',
+                            Defaults('public.Medical_Center_Ticket'),
+                            {
+                                id: GUID(),
+                                id_Pacientes_DNI: tiDNI_AgendarCita_1.Text,
+                                Estatus: "En Cola",
+                                cita_finalizada:false,
+                                caja_finalizada: false,
+                                triaje_finalizada: false,
+                                Nombre_Paciente: Upper(TextInput35_10.Text),
+                                Servicio: dpServicioNuevoTicket_1.Selected.Servicio,
+                                id_servicio:dpServicioNuevoTicket_1.Selected.id,
+                                fecha_cita: DateTimeValue(
+                                    DatePicker3_1.SelectedDate & " " & Left(
+                                        dpHora_1.Selected.Value,
+                                        5
+                                    )
+                                ),
+                                Correo: TextInput35_12.Text,
+                                Telefono_Celular: TextInput35_18.Text,
+                                Doctor: dpEstadoCivil_DCA_30.Selected.correo,
+                                Nacionalidad: dpEstadoCivil_DCA_18.Selected.Value,
+                                id_especialidad_x_sede:dpEspecialidadNewAppointment_1.Selected.id,//refiere al id de la relacion
+                                fecha_creacion:Now(),
+                                id_sede: dpEspecialidadNewAppointment_1.Selected.id_sede
+                            }
+                        );
+                     
+                    /**
+                        ClearCollect(
+                            col_citas,
+                            Filter(
+                                'public.Medical_Center_Ticket',
+                                id_Pacientes_DNI = gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
+                                Estatus = "En Cola",
+                                Text(
+                                    fecha_cita,
+                                    "dd/mm/yyyy"
+                                ) = Text(
+                                    Today(),
+                                    "dd/mm/yyyy"
+                                )
+                            )
+                        )
+                    **/
+                    
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Text: =If(varAgendarCitaNew,"Agendar Cita","Guardar Cambios")
+                Width: =744
+                X: =20
+                Y: =696
+                ZIndex: =22
+
+            Label51_26 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =28
+                Size: =12
+                Text: ="Telefono/Celular"
+                Width: =241
+                X: =20
+                Y: =279
+                ZIndex: =23
+
+            TextInput35_18 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: |-
+                    =If(varAgendarCitaNew,LookUp(Sort('public.Medical_Center_Ticket',fecha_creacion,SortOrder.Descending),id_Pacientes_DNI=tiDNI_AgendarCita_1.Text,Telefono_Celular),
+                    galUsuariosExis.Selected.telefono)
+                    //ALTERNATIVAS
+                Font: =Font.'Segoe UI'
+                Height: =36
+                Size: =12
+                Width: =360
+                X: =20
+                Y: =315
+                ZIndex: =24
+
+            Icon22_1 As icon.Cancel:
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =34
+                Icon: =Icon.Cancel
+                OnSelect: |
+                    =UpdateContext({CitaLlamadaExistente:false});
+                    Reset(tiDNI_AgendarCita_1);
+                    Reset(dpEspecialidadNewAppointment_1);
+                    Reset(TextInput35_10);
+                    Reset(dpServicioNuevoTicket_1);
+                    Reset(DatePicker3_1);
+                    Clear(colDatosDNI);
+                    Reset(dpHora_1);
+                    Reset(TextInput35_12);
+                    Reset(TextInput35_18);
+                    Reset(dpEstadoCivil_DCA_30);
+                    Reset(dpEstadoCivil_DCA_18);
+                Width: =34
+                X: =736
+                Y: =24
+                ZIndex: =25
+
+            Button16_2 As button:
+                BorderColor: =ColorFondoBoton
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =48
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Text: =""
+                Width: =48
+                X: =661
+                Y: =16
+                ZIndex: =26
+
+            Image6_1 As image:
+                Height: =48
+                Image: ='Shape (92)'
+                OnSelect: |-
+                    =UpdateContext({_varViewDoctor:true});
+                    Set(varBloqueo,Filter('public.Medical_Center_Calendario_Bloquear',id_sede = _varSede.id))
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =48
+                X: =661
+                Y: =17
+                ZIndex: =27
+
+            dpEstadoCivil_DCA_18 As dropdown:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 0, 0, 1)
+                ChevronHoverBackground: =
+                ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                Default: =If(varAgendarCitaNew,"",gal_Citas_Pendientes.Selected.Nacionalidad)
+                Font: =Font.'Segoe UI'
+                Height: =30
+                HoverBorderColor: =
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Items: =["Peruano(a)","Extranjero(a)"]
+                Size: =12
+                Width: =350
+                X: =23
+                Y: =145
+                ZIndex: =28
+
+            dpEspecialidadNewAppointment_1 As dropdown:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 0, 0, 1)
+                ChevronHoverBackground: =
+                ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                Default: =
+                Font: =Font.'Segoe UI'
+                Height: =30
+                HoverBorderColor: =
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Items: =AddColumns(Filter('public.Medical_Center_S&E_Relacion', id_sede = _varSede.id),"Especialidad",LookUp('public.Medical_Center_Especialidad',id = id_especialidad,Especialidad))
+                Size: =12
+                Width: =350
+                X: =23
+                Y: =461
+                ZIndex: =29
+
+            dpServicioNuevoTicket_1 As dropdown:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 0, 0, 1)
+                ChevronHoverBackground: =
+                ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                Default: =
+                Font: =Font.'Segoe UI'
+                Height: =30
+                HoverBorderColor: =
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Items: =Filter('public.Medical_Center_Servicios', id_sede = _varSede.id,activo=true,especialidad=dpEspecialidadNewAppointment_1.Selected.id_especialidad)
+                Size: =12
+                Width: =350
+                X: =407
+                Y: =461
+                ZIndex: =30
+
+            dpEstadoCivil_DCA_30 As dropdown:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 0, 0, 1)
+                ChevronHoverBackground: =
+                ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                Default: =
+                Font: =Font.'Segoe UI'
+                Height: =30
+                HoverBorderColor: =
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Items: |-
+                    =//Filter('public.Medical_Center_Usuario'; id_sede = _varSede.id; Activo = true)
+                    //Filter('public.medical_center_sedes_users', id_especialidad = dpEspecialidadNewAppointment.Selected.id_especialidad, estado = "Activo")
+                    //DEPURAR
+                    AddColumns(Filter('public.Medical_Center_R&D_Relacion', id_se_relacion = dpEspecialidadNewAppointment_1.Selected.id, estado = true),"Doctor",LookUp('public.Medical_Center_Usuario',id=id_doctor,Usuario))
+                Size: =12
+                Width: =350
+                X: =23
+                Y: =549
+                ZIndex: =31
+
+            DatePicker3_1 As datepicker:
+                BorderStyle: =BorderStyle.None
+                DefaultDate: =Today()//If(varAgendarCitaNew,Text(Today(),"dd/mm/yyyy"),Left(Text(gal_Citas_Pendientes.Selected.fecha_cita,"dd/mm/yyyy"),10))
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Lighter
+                Height: =30
+                IconBackground: =RGBA(0, 0, 0, 0)
+                IconFill: =RGBA(0, 0, 0, 1)
+                PaddingBottom: =0
+                Size: =12
+                Width: =350
+                X: =409
+                Y: =549
+                ZIndex: =32
+
+            dpHora_1 As dropdown:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 0, 0, 1)
+                ChevronHoverBackground: =
+                ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                Default: =
+                Font: =Font.'Segoe UI'
+                Height: =30
+                HoverBorderColor: =
+                HoverFill: =RGBA(255, 255, 255, 1)
+                Items: |-
+                    =["09:00 AM","09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","13:00 PM","13:30 PM","14:00 PM","14:30 PM","15:00 PM","15:30 PM","16:00 PM","16:30 PM","17:00 PM","17:30 PM", "18:00 PM","18:30 PM", "19:00 PM","20:00 PM","21:00 PM","22:00 PM","23:00 PM","23:30 PM"]
+                Size: =12
+                Width: =350
+                X: =23
+                Y: =637
+                ZIndex: =33
+
+            lblDisponibilidad As label:
+                Color: |-
+                    =If(lblDisponibilidad.Text="No Disponible",RGBA(255, 0, 0, 1),If(lblDisponibilidad.Text="Disponible" || lblDisponibilidad.Text="Se puede Cambiar",ColorValue("
+                    #3DA534")))
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =36
+                Size: =12
+                Text: |-
+                    =If(And(IsEmpty(Filter('public.Medical_Center_Ticket',Doctor=dpEstadoCivil_DCA_30.Selected.correo,DateTimeValue(fecha_cita) = DateTimeValue(DatePicker3_1.SelectedDate &" " & Left(dpHora_1.Selected.Value,5)),Estatus="En Cola")
+                    ),DateTimeValue(Now())<=DateTimeValue(DatePicker3_1.SelectedDate&" "& Left(dpHora_1.Selected.Value,5))),"Disponible","No Disponible")
+                    
+                    
+                    /*If(varAgendarCitaNew;
+                    
+                    If(And(IsEmpty(Filter('public.Medical_Center_Ticket';Doctor=dpEstadoCivil_DCA_30.Selected.correo;DateTimeValue(fecha_cita) = DateTimeValue(DatePicker3_1.SelectedDate &" " & Left(dpHora_1.Selected.Value;5));Estatus="En Cola")
+                    );DateTimeValue(Now())<=DateTimeValue(DatePicker3_1.SelectedDate&" "& Left(dpHora_1.Selected.Value;5)));"Disponible";"No Disponible");
+                    
+                    If(varAgendarCitaEdit;
+                          If(And(IsEmpty(Filter('public.Medical_Center_Ticket';Doctor=dpEstadoCivil_DCA_30.Selected.correo;DateTimeValue(fecha_cita) = DateTimeValue(DatePicker3_1.SelectedDate &" " & Left(dpHora_1.Selected.Value;5));Estatus="En Cola")
+                    );DateTimeValue(Now())<=DateTimeValue(DatePicker3_1.SelectedDate&" "& Left(dpHora_1.Selected.Value;5)))
+                     
+                    
+                        ;"Se puede Cambiar"
+                    
+                    ;"No Disponible")))*/
+                Visible: =CitaLlamadaExistente
+                Width: =245
+                X: =416
+                Y: =634
+                ZIndex: =34
+
+            Button16_3 As button:
+                BorderColor: =ColorFondoBoton
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =48
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Text: =""
+                Width: =48
+                X: =599
+                Y: =16
+                ZIndex: =35
+
+            Image10_1 As image:
+                Height: =50
+                Image: =Microsoft_Bookings_logo
+                OnSelect: |-
+                    =//Launch("https://outlook.office365.com/owa/calendar/Solicituddecitas@cxmart.ml/bookings/")
+                    Launch(LookUp('public.medical_center_sedes', id = _varSede.id,booking))
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =50
+                X: =598
+                Y: =15
+                ZIndex: =36
 
     Group29 As group:
         Height: =5
@@ -4112,7 +5121,7 @@
             Width: =448
             X: =493
             Y: =28
-            ZIndex: =61
+            ZIndex: =73
 
         txt_Calendario_Paciente_por_Atender_1 As text:
             Default: =""
@@ -4128,7 +5137,7 @@
             Width: =400
             X: =517
             Y: =146
-            ZIndex: =62
+            ZIndex: =74
 
         lbl_Fecha_1 As label:
             Align: =Align.Center
@@ -4140,7 +5149,7 @@
             Wrap: =false
             X: =517
             Y: =153
-            ZIndex: =63
+            ZIndex: =75
 
         icon_Left_Calendario_1 As icon.ChevronLeft:
             Color: =RGBA(0, 0, 0, 1)
@@ -4163,7 +5172,7 @@
             Width: =40
             X: =543
             Y: =153
-            ZIndex: =64
+            ZIndex: =76
 
         icon_Right_Calendario_1 As icon.ChevronRight:
             Color: =RGBA(0, 0, 0, 1)
@@ -4186,7 +5195,7 @@
             Width: =40
             X: =856
             Y: =153
-            ZIndex: =65
+            ZIndex: =77
 
         gal_Dias_Calendario_1 As gallery.WeekdayGallery:
             AccessibleLabel: ="Días de la semana"
@@ -4199,7 +5208,7 @@
             Width: =360
             X: =537
             Y: =216
-            ZIndex: =66
+            ZIndex: =78
 
             Title1_12 As label:
                 Align: =Align.Center
@@ -4227,7 +5236,7 @@
             WrapCount: =7
             X: =541
             Y: =262
-            ZIndex: =67
+            ZIndex: =79
 
             Circle1_73 As circle:
                 Height: =4
@@ -4299,7 +5308,7 @@
             Width: =380
             X: =526
             Y: =553
-            ZIndex: =68
+            ZIndex: =80
 
             Title8_12 As label:
                 BorderColor: =Self.Color
@@ -4375,7 +5384,7 @@
             Width: =226
             X: =587
             Y: =502
-            ZIndex: =69
+            ZIndex: =81
 
         img_Pacientes_1 As image:
             Height: =28
@@ -4384,7 +5393,7 @@
             Width: =22
             X: =552
             Y: =498
-            ZIndex: =70
+            ZIndex: =82
 
         Rectangle_Separador_Calendario_1 As rectangle:
             Fill: =RGBA(0, 0, 0, 1)
@@ -4393,7 +5402,7 @@
             Width: =400
             X: =517
             Y: =457
-            ZIndex: =71
+            ZIndex: =83
 
         Rectangle_Separador_Paciente_1 As rectangle:
             Fill: =RGBA(0, 0, 0, 1)
@@ -4402,7 +5411,7 @@
             Width: =340
             X: =547
             Y: =548
-            ZIndex: =72
+            ZIndex: =84
 
         txt_User_1 As text:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -4421,7 +5430,7 @@
             Width: =400
             X: =517
             Y: =94
-            ZIndex: =73
+            ZIndex: =85
 
         cb_User_2 As combobox:
             BorderStyle: =BorderStyle.None
@@ -4445,7 +5454,7 @@
             Width: =392
             X: =521
             Y: =96
-            ZIndex: =74
+            ZIndex: =86
 
         Label56 As label:
             Font: =Font.'Segoe UI'
@@ -4457,7 +5466,7 @@
             Width: =282
             X: =514
             Y: =40
-            ZIndex: =75
+            ZIndex: =87
 
         Icon23 As icon.Cancel:
             Color: =RGBA(0, 0, 0, 1)
@@ -4469,5 +5478,5 @@
             Width: =30
             X: =887
             Y: =42
-            ZIndex: =76
+            ZIndex: =88
 
