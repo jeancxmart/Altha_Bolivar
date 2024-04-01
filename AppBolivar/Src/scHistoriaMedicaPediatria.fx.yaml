@@ -899,6 +899,7 @@ scHistoriaMedicaPediatria As screen:
                         Container15_291 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =170
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center
                             LayoutMinHeight: =100

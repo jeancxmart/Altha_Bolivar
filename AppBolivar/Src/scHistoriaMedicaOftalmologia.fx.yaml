@@ -2743,6 +2743,7 @@ scHistoriaMedicaOftalmologia As screen:
                 Container15_233 As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
                     Height: =195
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -2756,7 +2757,6 @@ scHistoriaMedicaOftalmologia As screen:
                     ZIndex: =45
 
                     lbEncabezado_414 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -2822,6 +2822,7 @@ scHistoriaMedicaOftalmologia As screen:
                 Container15_235 As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
                     Height: =195
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -2835,7 +2836,6 @@ scHistoriaMedicaOftalmologia As screen:
                     ZIndex: =47
 
                     lbEncabezado_416 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -2901,6 +2901,7 @@ scHistoriaMedicaOftalmologia As screen:
                 Container15_237 As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
                     Height: =195
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -2914,7 +2915,6 @@ scHistoriaMedicaOftalmologia As screen:
                     ZIndex: =49
 
                     lbEncabezado_418 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2

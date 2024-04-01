@@ -736,6 +736,7 @@ scHistoriaGinecologia As screen:
                         Container15_380 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =195
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -749,7 +750,6 @@ scHistoriaGinecologia As screen:
                             ZIndex: =5
 
                             lbEncabezado_436 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2
@@ -815,6 +815,7 @@ scHistoriaGinecologia As screen:
                         Container15_382 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =195
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -828,7 +829,6 @@ scHistoriaGinecologia As screen:
                             ZIndex: =7
 
                             lbEncabezado_438 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2

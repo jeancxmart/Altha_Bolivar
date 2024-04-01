@@ -1446,6 +1446,7 @@ scHistoriaMedicaMedicinaGeneral As screen:
 
                         Container15_356 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -1536,6 +1537,7 @@ scHistoriaMedicaMedicinaGeneral As screen:
 
                         Container15_359 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -1589,6 +1591,7 @@ scHistoriaMedicaMedicinaGeneral As screen:
 
                         Container15_361 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -1602,7 +1605,6 @@ scHistoriaMedicaMedicinaGeneral As screen:
                             ZIndex: =15
 
                             lbEncabezado_703 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2

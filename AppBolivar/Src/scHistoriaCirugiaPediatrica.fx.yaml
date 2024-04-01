@@ -413,6 +413,7 @@ scHistoriaCirugiaPediatrica As screen:
                         Container15_363 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =195
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center
                             LayoutMinHeight: =100
@@ -427,7 +428,6 @@ scHistoriaCirugiaPediatrica As screen:
                             ZIndex: =2
 
                             lbEncabezado_705 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2
@@ -492,6 +492,7 @@ scHistoriaCirugiaPediatrica As screen:
                         Container15_365 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =195
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -505,7 +506,6 @@ scHistoriaCirugiaPediatrica As screen:
                             ZIndex: =4
 
                             lbEncabezado_707 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2
@@ -834,6 +834,7 @@ scHistoriaCirugiaPediatrica As screen:
                         Container15_368 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =195
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -847,7 +848,6 @@ scHistoriaCirugiaPediatrica As screen:
                             ZIndex: =8
 
                             lbEncabezado_716 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2
@@ -911,6 +911,7 @@ scHistoriaCirugiaPediatrica As screen:
                         Container15_370 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =195
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -924,7 +925,6 @@ scHistoriaCirugiaPediatrica As screen:
                             ZIndex: =10
 
                             lbEncabezado_718 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2
@@ -990,6 +990,7 @@ scHistoriaCirugiaPediatrica As screen:
                         Container15_372 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =195
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -1003,7 +1004,6 @@ scHistoriaCirugiaPediatrica As screen:
                             ZIndex: =12
 
                             lbEncabezado_720 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2
@@ -1067,6 +1067,7 @@ scHistoriaCirugiaPediatrica As screen:
                         Container15_374 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =195
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
@@ -1080,7 +1081,6 @@ scHistoriaCirugiaPediatrica As screen:
                             ZIndex: =14
 
                             lbEncabezado_722 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2

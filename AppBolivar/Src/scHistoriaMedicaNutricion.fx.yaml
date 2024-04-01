@@ -1545,6 +1545,7 @@ scHistoriaMedicaNutricion As screen:
                 Container15_185 As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
                     Height: =210
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -1558,7 +1559,6 @@ scHistoriaMedicaNutricion As screen:
                     ZIndex: =7
 
                     lbEncabezado_352 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1591,6 +1591,7 @@ scHistoriaMedicaNutricion As screen:
                 Container15_186 As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
                     Height: =210
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -1604,7 +1605,6 @@ scHistoriaMedicaNutricion As screen:
                     ZIndex: =8
 
                     lbEncabezado_353 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1635,6 +1635,7 @@ scHistoriaMedicaNutricion As screen:
                 Container15_187 As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
                     Height: =210
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -1648,7 +1649,6 @@ scHistoriaMedicaNutricion As screen:
                     ZIndex: =9
 
                     lbEncabezado_354 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1679,6 +1679,7 @@ scHistoriaMedicaNutricion As screen:
                 Container15_188 As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
                     Height: =210
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -1692,7 +1693,6 @@ scHistoriaMedicaNutricion As screen:
                     ZIndex: =10
 
                     lbEncabezado_355 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1723,6 +1723,7 @@ scHistoriaMedicaNutricion As screen:
                 Container15_189 As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
                     Height: =210
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -1736,7 +1737,6 @@ scHistoriaMedicaNutricion As screen:
                     ZIndex: =11
 
                     lbEncabezado_356 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1767,6 +1767,7 @@ scHistoriaMedicaNutricion As screen:
                 Container15_190 As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
                     Height: =210
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -1780,7 +1781,6 @@ scHistoriaMedicaNutricion As screen:
                     ZIndex: =12
 
                     lbEncabezado_357 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -2260,6 +2260,7 @@ scHistoriaMedicaNutricion As screen:
                 Container15_191 As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
                     Height: =195
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -2273,7 +2274,6 @@ scHistoriaMedicaNutricion As screen:
                     ZIndex: =15
 
                     lbEncabezado_359 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2

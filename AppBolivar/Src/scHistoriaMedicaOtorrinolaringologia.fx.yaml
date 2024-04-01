@@ -407,6 +407,7 @@ scHistoriaMedicaOtorrinolaringologia As screen:
                         Container15_324 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =220
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center
                             LayoutMinHeight: =100
@@ -421,7 +422,6 @@ scHistoriaMedicaOtorrinolaringologia As screen:
                             ZIndex: =2
 
                             lbEncabezado_634 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2
@@ -452,6 +452,7 @@ scHistoriaMedicaOtorrinolaringologia As screen:
                         Container15_325 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
                             Height: =215
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutJustifyContent: =LayoutJustifyContent.Center
                             LayoutMinHeight: =100
@@ -466,7 +467,6 @@ scHistoriaMedicaOtorrinolaringologia As screen:
                             ZIndex: =3
 
                             lbEncabezado_635 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =RGBA(0, 0, 0, 0)
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =2
@@ -1130,6 +1130,7 @@ scHistoriaMedicaOtorrinolaringologia As screen:
 
                         Container15_335 As groupContainer.horizontalAutoLayoutContainer:
                             FillPortions: =0
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
                             LayoutDirection: =LayoutDirection.Vertical
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
