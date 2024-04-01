@@ -109476,6 +109476,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerExistUser.TextInputSearchPacientes.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Atencion Cliente Citas'.ContainerExistUser.TextInputSearchPacientes.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atencion Cliente Citas",
+                "type": "'Atencion Cliente Citas'.ContainerExistUser.TextInputSearchPacientes"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Consulta Medica Atencion'.addService.Container21_6.Container37_3.conEditServicio_10.conEditServicio_12.galAddServicios.conEditServicio_14.Image36_2.AccessibleLabel"
                 }
               ],
