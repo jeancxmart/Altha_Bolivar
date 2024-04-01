@@ -1907,6 +1907,29 @@
                     Y: =123
                     ZIndex: =20
 
+                btnAddServicio As button:
+                    BorderColor: =ColorFondoBoton
+                    Color: =ColorFondoBoton
+                    Fill: =Color.Transparent
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =36
+                    HoverBorderColor: =ColorFondoBoton
+                    HoverColor: =ColorFondoBoton
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: |-
+                        =UpdateContext({_varAddServicio:true})
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Size: =12
+                    Text: ="+  AGREGAR SERVICIO"
+                    Width: =250
+                    X: =350
+                    Y: =286
+                    ZIndex: =21
+
         Label4_20 As label:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
@@ -13514,7 +13537,7 @@
             Width: =1000
             X: =212
             Y: =59
-            ZIndex: =304
+            ZIndex: =303
 
         Label1_5 As label:
             Align: =Align.Center
@@ -13528,7 +13551,7 @@
             Width: =381
             X: =514
             Y: =76
-            ZIndex: =305
+            ZIndex: =304
 
         HtmlText1_17 As htmlViewer:
             Font: =Font.'Segoe UI'
@@ -13540,7 +13563,7 @@
             Width: =443
             X: =262
             Y: =188
-            ZIndex: =306
+            ZIndex: =305
 
         Image12_16 As image:
             Height: =80
@@ -13554,7 +13577,7 @@
             Width: =119
             X: =232
             Y: =76
-            ZIndex: =307
+            ZIndex: =306
 
         Label1_80 As label:
             Align: =Align.Center
@@ -13568,7 +13591,7 @@
             Width: =381
             X: =514
             Y: =118
-            ZIndex: =308
+            ZIndex: =307
 
         HtmlText1_18 As htmlViewer:
             Font: =Font.'Segoe UI'
@@ -13580,7 +13603,7 @@
             Width: =383
             X: =819
             Y: =188
-            ZIndex: =309
+            ZIndex: =308
 
         Rectangle1_5 As rectangle:
             Fill: =RGBA(0, 0, 0, 1)
@@ -13589,7 +13612,7 @@
             Width: =1000
             X: =212
             Y: =181
-            ZIndex: =310
+            ZIndex: =309
 
         Image32_4 As image:
             Height: =54
@@ -13598,7 +13621,7 @@
             Width: =151
             X: =630
             Y: =549
-            ZIndex: =311
+            ZIndex: =310
 
         Label1_89 As label:
             Align: =Align.Center
@@ -13613,7 +13636,7 @@
             Width: =381
             X: =514
             Y: =148
-            ZIndex: =312
+            ZIndex: =311
 
         HtmlText1_19 As htmlViewer:
             Font: =Font.'Segoe UI'
@@ -13625,7 +13648,7 @@
             Width: =443
             X: =262
             Y: =221
-            ZIndex: =313
+            ZIndex: =312
 
         HtmlText1_20 As htmlViewer:
             Font: =Font.'Segoe UI'
@@ -13639,7 +13662,7 @@
             Width: =383
             X: =819
             Y: =221
-            ZIndex: =314
+            ZIndex: =313
 
         Label1_6 As label:
             Align: =Align.Center
@@ -13653,7 +13676,7 @@
             Width: =281
             X: =562
             Y: =602
-            ZIndex: =315
+            ZIndex: =314
 
         Label1_90 As label:
             Align: =Align.Center
@@ -13667,7 +13690,7 @@
             Width: =281
             X: =562
             Y: =622
-            ZIndex: =316
+            ZIndex: =315
 
         Label1_91 As label:
             Align: =Align.Center
@@ -13682,7 +13705,7 @@
             Width: =281
             X: =562
             Y: =644
-            ZIndex: =317
+            ZIndex: =316
 
         Rectangle1_10 As rectangle:
             Fill: =RGBA(0, 0, 0, 1)
@@ -13691,7 +13714,7 @@
             Width: =1000
             X: =212
             Y: =263
-            ZIndex: =318
+            ZIndex: =317
 
         Icon24_1 As icon.Cancel:
             Color: =RGBA(0, 0, 0, 1)
@@ -13702,7 +13725,7 @@
             Width: =34
             X: =1146
             Y: =74
-            ZIndex: =319
+            ZIndex: =318
 
         HtmlText8 As htmlViewer:
             Font: =Font.'Segoe UI'
@@ -13725,7 +13748,7 @@
             Width: =891
             X: =262
             Y: =319
-            ZIndex: =320
+            ZIndex: =319
 
         Label59 As label:
             Font: =Font.'Segoe UI'
@@ -13738,7 +13761,7 @@
             Width: =257
             X: =613
             Y: =274
-            ZIndex: =321
+            ZIndex: =320
 
     Rectangle56 As rectangle:
         Fill: =RGBA(0, 0, 0, 0.24)
@@ -14752,208 +14775,303 @@
                         Y: =398
                         ZIndex: =5
 
-    conTratamientoServ_son As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(0, 0, 0, 0.28)
-        Height: =Parent.Height
-        Visible: =varPopupTratamiento2
-        Width: =Parent.Width
-        ZIndex: =296
-
-        conAgregarServicio As groupContainer.verticalAutoLayoutContainer:
-            BorderThickness: =2
-            Fill: =RGBA(241, 242, 246, 1)
-            Height: =Parent.Height-440
-            LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutGap: =15
-            LayoutMode: =LayoutMode.Auto
-            PaddingBottom: =25
-            PaddingLeft: =25
-            PaddingRight: =25
-            PaddingTop: =25
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Width: =400
-            X: =(Parent.Width-Self.Width)/2
-            Y: =(Parent.Height-Self.Height)/2
-            ZIndex: =1
-
-            Label4_36 As label:
-                AlignInContainer: =AlignInContainer.Stretch
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =32
-                PaddingLeft: =0
-                Size: =18
-                Text: ="Agregar Servicio"
-                Visible: =varAnchoInfPac
-                Width: =272
-                X: =50
-                Y: =88
-                ZIndex: =1
-
-            conAgrServicioContenido As groupContainer.verticalAutoLayoutContainer:
-                LayoutDirection: =LayoutDirection.Vertical
-                LayoutMinHeight: =100
-                LayoutMinWidth: =100
-                LayoutMode: =LayoutMode.Auto
-                Width: =100
-                ZIndex: =3
-
-                conEditTratamiento_1 As groupContainer.verticalAutoLayoutContainer:
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutGap: =15
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =100
-                    ZIndex: =1
-
-                    conEditTratamiento_2 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        Height: =67
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        PaddingLeft: =1
-                        PaddingRight: =1
-                        ZIndex: =1
-
-                        Label60_8 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Semibold
-                            Height: =30
-                            Size: =12
-                            Text: ="Servicio"
-                            Width: =259
-                            X: =20
-                            Y: =83
-                            ZIndex: =1
-
-                        Container26_6 As groupContainer.manualLayoutContainer:
-                            BorderThickness: =2
-                            FillPortions: =0
-                            Height: =35
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =250
-                            RadiusBottomLeft: =5
-                            RadiusBottomRight: =5
-                            RadiusTopLeft: =5
-                            RadiusTopRight: =5
-                            ZIndex: =2
-
-                            dpServiciosEscoger As dropdown:
-                                BorderStyle: =BorderStyle.None
-                                ChevronBackground: =RGBA(255, 255, 255, 1)
-                                ChevronFill: =RGBA(0, 0, 0, 1)
-                                ChevronHoverBackground: =
-                                ChevronHoverFill: =RGBA(0, 0, 0, 1)
-                                Default: =
-                                Font: =Font.'Segoe UI'
-                                Height: =36
-                                HoverBorderColor: =
-                                HoverFill: =RGBA(255, 255, 255, 1)
-                                Items: =Filter('public.Medical_Center_Servicios',id_sede=_varSede.id)
-                                Size: =12
-                                Width: =Parent.Width-2*Self.X
-                                X: =1
-                                ZIndex: =2
-
-                    conEditTratamiento_3 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        Height: =67
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        PaddingLeft: =1
-                        PaddingRight: =1
-                        ZIndex: =2
-
-                        Label60_9 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Semibold
-                            Height: =30
-                            Size: =12
-                            Text: ="Costo"
-                            Width: =259
-                            X: =20
-                            Y: =83
-                            ZIndex: =1
-
-                        TextInput38_7 As text:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =RGBA(0, 0, 0, 1)
-                            Default: =dpServiciosEscoger.Selected.Costo
-                            DisabledBorderColor: =RGBA(116, 116, 116, 1)
-                            DisabledColor: =RGBA(0, 0, 0, 1)
-                            DisabledFill: =RGBA(237, 237, 237, 1)
-                            DisplayMode: =DisplayMode.Disabled
-                            Font: =Font.'Segoe UI'
-                            Height: =35
-                            Size: =12
-                            Width: =360
-                            X: =20
-                            Y: =36
-                            ZIndex: =2
-
-            ButtonAtender_28 As button:
-                BorderColor: =RGBA(0, 0, 0, 1)
-                Fill: =ColorFondoBoton
-                Font: =Font.'Segoe UI'
-                Height: =44
-                HoverBorderColor: =ColorFondoBoton
-                HoverColor: |-
-                    =ColorValue("#26495B")
-                HoverFill: =RGBA(255, 255, 255, 1)
-                OnSelect: |-
-                    =
-                    If(IsEmpty(Filter('public.MC_Servicios_Paciente',id_ticket=TicketSelected.id_Ticket,id_servicio=dpServiciosEscoger.Selected.id)),
-                    Patch('public.MC_Servicios_Paciente',Defaults('public.MC_Servicios_Paciente'),{
-                        id:GUID(),
-                        id_ticket:TicketSelected.id_Ticket,
-                        id_dni_paciente:TicketSelected.DNI_Paciente,
-                        id_sede:_varSede.id,
-                        id_especialidad:LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad),
-                        id_servicio:dpServiciosEscoger.Selected.id,
-                        id_doctor:getUser.id,
-                        fecha_registro:Now()
-                    })
-                    );
-                    UpdateContext({varPopupTratamiento2:false});
-                RadiusBottomLeft: =8
-                RadiusBottomRight: =8
-                RadiusTopLeft: =8
-                RadiusTopRight: =8
-                Size: =12
-                Text: ="REGISTRAR"
-                Width: =360
-                X: =516
-                Y: =559
-                ZIndex: =4
-
-        iconCerrarRegistroPago_7 As icon.Cancel:
-            Color: =RGBA(0, 0, 0, 1)
-            Height: =37
-            Icon: =Icon.Cancel
-            OnSelect: |-
-                =UpdateContext({varPopupTratamiento2:false});
-            Width: =38
-            X: =conAgregarServicio.X+conAgregarServicio.Width-1.5*Self.Width
-            Y: =conAgregarServicio.Y+0.5*Self.Height
-            ZIndex: =2
-
     Rectangle45 As rectangle:
         Fill: =RGBA(0, 0, 0, 0.19)
         Height: =768
         Visible: =_PopUpMedicamento
         Width: =1366
+        ZIndex: =298
+
+    Container5 As groupContainer.manualLayoutContainer:
+        BorderThickness: =1
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =719
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: =_PopUpMedicamento
+        Width: =1305
+        X: =30
+        Y: =30
         ZIndex: =299
+
+        TextInput5_16 As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =543
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =1270
+            X: =12
+            Y: =153
+            ZIndex: =1
+
+        Label6_27 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Size: =12
+            Text: ="Composición"
+            Width: =124
+            X: =297
+            Y: =171
+            ZIndex: =2
+
+        Label6_28 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            Size: =12
+            Text: ="Unidad de Manejo"
+            Width: =160
+            X: =427
+            Y: =171
+            ZIndex: =3
+
+        Label6_29 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: ="Acción Terapéutica"
+            Width: =170
+            X: =769
+            Y: =171
+            ZIndex: =4
+
+        Label6_31 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: ="Medicamento"
+            Width: =130
+            X: =12
+            Y: =171
+            ZIndex: =6
+
+        Label6_32 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: ="Sustancia Activa"
+            Width: =140
+            X: =146
+            Y: =171
+            ZIndex: =7
+
+        Label6_33 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: ="Indicaciones y Observaciones"
+            Width: =247
+            X: =952
+            Y: =171
+            ZIndex: =8
+
+        Gallery12_2 As gallery.variableTemplateHeightGallery:
+            DelayItemLoading: =true
+            Height: =454
+            Items: |+
+                =Filter(Filter('public.Medical_Center_Medicamentos',Or(id_sede = _varSede.id,IsBlank(Consultorio))),Or(
+                 Upper(TextInput5_39.Text) in Upper(medicamento) , 
+                 Upper(TextInput5_39.Text) in Upper(sustanciaActiva) ,
+                 Upper(TextInput5_39.Text) in Upper(composicion) ,
+                 Upper(TextInput5_39.Text) in Upper(unidad_manejo) , 
+                 Upper(TextInput5_39.Text) in Upper(restriccion_de_uso) , 
+                 Upper(TextInput5_39.Text) in Upper(accion_terapeutica) , 
+                 Upper(TextInput5_39.Text) in Upper(indicaciones_y_observaciones)  
+                ))
+                
+                
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =71
+            Width: =1290
+            X: =12
+            Y: =227
+            ZIndex: =9
+
+            Label6_35 As label:
+                AutoHeight: =true
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.medicamento
+                Width: =113
+                ZIndex: =2
+
+            Label6_36 As label:
+                AutoHeight: =true
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.sustanciaActiva
+                Width: =139
+                X: =123
+                ZIndex: =3
+
+            Label6_37 As label:
+                AutoHeight: =true
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                Height: =27
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.composicion
+                Width: =107
+                X: =282
+                ZIndex: =4
+
+            Label6_38 As label:
+                AutoHeight: =true
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.unidad_manejo
+                Width: =99
+                X: =444
+                ZIndex: =5
+
+            Label6_40 As label:
+                AutoHeight: =true
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.accion_terapeutica
+                Width: =168
+                X: =761
+                ZIndex: =6
+
+            Label6_41 As label:
+                AutoHeight: =true
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                Height: =14
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.indicaciones_y_observaciones
+                Width: =256
+                X: =931
+                ZIndex: =7
+
+            Label6_39 As label:
+                AutoHeight: =true
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.restriccion_de_uso
+                Width: =99
+                X: =606
+                ZIndex: =8
+
+            Rectangle9_1 As rectangle:
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =2
+                OnSelect: =Select(Parent)
+                Width: =1240
+                X: =10
+                Y: =Max(Label6_41.Y + Label6_41.Height +10 ,Label6_40.Y + Label6_40.Height +10 ,Label6_39.Y + Label6_39.Height +10,Label6_38.Y + Label6_38.Height +10,Label6_37.Y + Label6_37.Height +10 ,Label6_36.Y + Label6_36.Height +10, Label6_35.Y + Label6_35.Height +10)
+                ZIndex: =10
+
+            Icon31 As icon.CancelBadge:
+                Color: =RGBA(44, 97, 112, 1)
+                Height: =27
+                Icon: =Icon.CheckBadge
+                OnSelect: |-
+                    =Set(MedicamentoSeleccionar,Gallery12_2.Selected);UpdateContext({_PopUpMedicamento:false})
+                Tooltip: ="Seleccionar medicamento"
+                Width: =39
+                X: =1216
+                Y: =8
+                ZIndex: =11
+
+        Label6_42 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            Size: =12
+            Text: ="Restricción de uso"
+            Width: =159
+            X: =593
+            Y: =171
+            ZIndex: =10
+
+        Rectangle5_1 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =2
+            Width: =1264
+            X: =12
+            Y: =213
+            ZIndex: =11
+
+        TextInput5_39 As text:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Clear: =true
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(237, 237, 237, 1)
+            DisplayMode: =If(Or(!IsBlank(ComboBox2.SelectedItems), !IsBlank(ComboBox2_1.SelectedItems), !IsBlank(ComboBox2_2.SelectedItems)),DisplayMode.Disabled, DisplayMode.Edit)
+            Font: =Font.'Segoe UI'
+            Height: =36
+            HintText: ="Buscar"
+            OnChange: =Reset(ComboBox2);Reset(ComboBox2_1);Reset(ComboBox2_2)
+            PaddingLeft: =50
+            PaddingRight: =64
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Width: =480
+            X: =12
+            Y: =90
+            ZIndex: =12
+
+        Image18_4 As image:
+            Height: =14
+            Image: ='Shape (53)'
+            Width: =19
+            X: =26
+            Y: =101
+            ZIndex: =13
+
+        Label72 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =49
+            Size: =18
+            Text: ="Medicamento"
+            Width: =1305
+            Y: =25
+            ZIndex: =14
+
+        Icon33 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({_PopUpMedicamento:false})
+            Width: =40
+            X: =1236
+            Y: =29
+            ZIndex: =15
 
     Group36 As group:
         Height: =5
@@ -15301,303 +15419,12 @@
             Y: =628
             ZIndex: =152
 
-    Container5 As groupContainer.manualLayoutContainer:
-        BorderThickness: =1
-        Fill: =RGBA(245, 245, 245, 1)
-        Height: =719
-        RadiusBottomLeft: =8
-        RadiusBottomRight: =8
-        RadiusTopLeft: =8
-        RadiusTopRight: =8
-        Visible: =_PopUpMedicamento
-        Width: =1305
-        X: =30
-        Y: =30
-        ZIndex: =300
-
-        TextInput5_16 As text:
-            Default: =""
-            DisabledBorderColor: =RGBA(0, 0, 0, 1)
-            DisabledFill: =RGBA(255, 255, 255, 1)
-            DisplayMode: =DisplayMode.Disabled
-            Height: =543
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Width: =1270
-            X: =12
-            Y: =153
-            ZIndex: =1
-
-        Label6_27 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =25
-            Size: =12
-            Text: ="Composición"
-            Width: =124
-            X: =297
-            Y: =171
-            ZIndex: =2
-
-        Label6_28 As label:
-            Align: =Align.Center
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =28
-            Size: =12
-            Text: ="Unidad de Manejo"
-            Width: =160
-            X: =427
-            Y: =171
-            ZIndex: =3
-
-        Label6_29 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =24
-            Size: =12
-            Text: ="Acción Terapéutica"
-            Width: =170
-            X: =769
-            Y: =171
-            ZIndex: =4
-
-        Label6_31 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =24
-            Size: =12
-            Text: ="Medicamento"
-            Width: =130
-            X: =12
-            Y: =171
-            ZIndex: =6
-
-        Label6_32 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =24
-            Size: =12
-            Text: ="Sustancia Activa"
-            Width: =140
-            X: =146
-            Y: =171
-            ZIndex: =7
-
-        Label6_33 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =24
-            Size: =12
-            Text: ="Indicaciones y Observaciones"
-            Width: =247
-            X: =952
-            Y: =171
-            ZIndex: =8
-
-        Gallery12_2 As gallery.variableTemplateHeightGallery:
-            DelayItemLoading: =true
-            Height: =454
-            Items: |+
-                =Filter(Filter('public.Medical_Center_Medicamentos',Or(id_sede = _varSede.id,IsBlank(Consultorio))),Or(
-                 Upper(TextInput5_39.Text) in Upper(medicamento) , 
-                 Upper(TextInput5_39.Text) in Upper(sustanciaActiva) ,
-                 Upper(TextInput5_39.Text) in Upper(composicion) ,
-                 Upper(TextInput5_39.Text) in Upper(unidad_manejo) , 
-                 Upper(TextInput5_39.Text) in Upper(restriccion_de_uso) , 
-                 Upper(TextInput5_39.Text) in Upper(accion_terapeutica) , 
-                 Upper(TextInput5_39.Text) in Upper(indicaciones_y_observaciones)  
-                ))
-                
-                
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            TemplateSize: =71
-            Width: =1290
-            X: =12
-            Y: =227
-            ZIndex: =9
-
-            Label6_35 As label:
-                AutoHeight: =true
-                Color: =RGBA(95, 106, 146, 1)
-                Font: =Font.'Segoe UI'
-                OnSelect: =Select(Parent)
-                Size: =10
-                Text: =ThisItem.medicamento
-                Width: =113
-                ZIndex: =2
-
-            Label6_36 As label:
-                AutoHeight: =true
-                Color: =RGBA(95, 106, 146, 1)
-                Font: =Font.'Segoe UI'
-                OnSelect: =Select(Parent)
-                Size: =10
-                Text: =ThisItem.sustanciaActiva
-                Width: =139
-                X: =123
-                ZIndex: =3
-
-            Label6_37 As label:
-                AutoHeight: =true
-                Color: =RGBA(95, 106, 146, 1)
-                Font: =Font.'Segoe UI'
-                Height: =27
-                OnSelect: =Select(Parent)
-                Size: =10
-                Text: =ThisItem.composicion
-                Width: =107
-                X: =282
-                ZIndex: =4
-
-            Label6_38 As label:
-                AutoHeight: =true
-                Color: =RGBA(95, 106, 146, 1)
-                Font: =Font.'Segoe UI'
-                OnSelect: =Select(Parent)
-                Size: =10
-                Text: =ThisItem.unidad_manejo
-                Width: =99
-                X: =444
-                ZIndex: =5
-
-            Label6_40 As label:
-                AutoHeight: =true
-                Color: =RGBA(95, 106, 146, 1)
-                Font: =Font.'Segoe UI'
-                OnSelect: =Select(Parent)
-                Size: =10
-                Text: =ThisItem.accion_terapeutica
-                Width: =168
-                X: =761
-                ZIndex: =6
-
-            Label6_41 As label:
-                AutoHeight: =true
-                Color: =RGBA(95, 106, 146, 1)
-                Font: =Font.'Segoe UI'
-                Height: =14
-                OnSelect: =Select(Parent)
-                Size: =10
-                Text: =ThisItem.indicaciones_y_observaciones
-                Width: =256
-                X: =931
-                ZIndex: =7
-
-            Label6_39 As label:
-                AutoHeight: =true
-                Color: =RGBA(95, 106, 146, 1)
-                Font: =Font.'Segoe UI'
-                OnSelect: =Select(Parent)
-                Size: =10
-                Text: =ThisItem.restriccion_de_uso
-                Width: =99
-                X: =606
-                ZIndex: =8
-
-            Rectangle9_1 As rectangle:
-                Fill: =RGBA(0, 0, 0, 1)
-                Height: =2
-                OnSelect: =Select(Parent)
-                Width: =1240
-                X: =10
-                Y: =Max(Label6_41.Y + Label6_41.Height +10 ,Label6_40.Y + Label6_40.Height +10 ,Label6_39.Y + Label6_39.Height +10,Label6_38.Y + Label6_38.Height +10,Label6_37.Y + Label6_37.Height +10 ,Label6_36.Y + Label6_36.Height +10, Label6_35.Y + Label6_35.Height +10)
-                ZIndex: =10
-
-            Icon31 As icon.CancelBadge:
-                Color: =RGBA(44, 97, 112, 1)
-                Height: =27
-                Icon: =Icon.CheckBadge
-                OnSelect: |-
-                    =Set(MedicamentoSeleccionar,Gallery12_2.Selected);UpdateContext({_PopUpMedicamento:false})
-                Tooltip: ="Seleccionar medicamento"
-                Width: =39
-                X: =1216
-                Y: =8
-                ZIndex: =11
-
-        Label6_42 As label:
-            Align: =Align.Center
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =24
-            Size: =12
-            Text: ="Restricción de uso"
-            Width: =159
-            X: =593
-            Y: =171
-            ZIndex: =10
-
-        Rectangle5_1 As rectangle:
-            Fill: =RGBA(0, 0, 0, 1)
-            Height: =2
-            Width: =1264
-            X: =12
-            Y: =213
-            ZIndex: =11
-
-        TextInput5_39 As text:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Clear: =true
-            Default: =""
-            DisabledBorderColor: =RGBA(0, 0, 0, 1)
-            DisabledFill: =RGBA(237, 237, 237, 1)
-            DisplayMode: =If(Or(!IsBlank(ComboBox2.SelectedItems), !IsBlank(ComboBox2_1.SelectedItems), !IsBlank(ComboBox2_2.SelectedItems)),DisplayMode.Disabled, DisplayMode.Edit)
-            Font: =Font.'Segoe UI'
-            Height: =36
-            HintText: ="Buscar"
-            OnChange: =Reset(ComboBox2);Reset(ComboBox2_1);Reset(ComboBox2_2)
-            PaddingLeft: =50
-            PaddingRight: =64
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Size: =12
-            Width: =480
-            X: =12
-            Y: =90
-            ZIndex: =12
-
-        Image18_4 As image:
-            Height: =14
-            Image: ='Shape (53)'
-            Width: =19
-            X: =26
-            Y: =101
-            ZIndex: =13
-
-        Label72 As label:
-            Align: =Align.Center
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =49
-            Size: =18
-            Text: ="Medicamento"
-            Width: =1305
-            Y: =25
-            ZIndex: =14
-
-        Icon33 As icon.Cancel:
-            Color: =RGBA(0, 0, 0, 1)
-            Height: =40
-            Icon: =Icon.Cancel
-            OnSelect: |-
-                =UpdateContext({_PopUpMedicamento:false})
-            Width: =40
-            X: =1236
-            Y: =29
-            ZIndex: =15
-
     ContainerPregunton As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.25)
         Height: =768
         Visible: =_varPregunta
         Width: =1366
-        ZIndex: =303
+        ZIndex: =302
 
         ContainerMsj As groupContainer.manualLayoutContainer:
             BorderThickness: =4
@@ -16258,7 +16085,7 @@
                 =UpdateContext({_varShowEdit_trata:false})
             Visible: =_varShowEdit_trata
             Width: =1366
-            ZIndex: =297
+            ZIndex: =296
 
         ContainerEditMedicamento As groupContainer.manualLayoutContainer:
             BorderThickness: =2
@@ -16272,7 +16099,7 @@
             Width: =600
             X: =383
             Y: =57
-            ZIndex: =298
+            ZIndex: =297
 
             Label17_78 As label:
                 Font: =Font.'Segoe UI'
@@ -16619,6 +16446,333 @@
                 Y: =212
                 ZIndex: =17
 
+    addService As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.28)
+        Height: =Parent.Height
+        Visible: =_varAddServicio
+        Width: =Parent.Width
+        ZIndex: =321
+
+        Container21_6 As groupContainer.verticalAutoLayoutContainer:
+            BorderThickness: =2
+            Fill: =RGBA(241, 242, 246, 1)
+            Height: =672
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =15
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =25
+            PaddingLeft: =25
+            PaddingRight: =25
+            PaddingTop: =25
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =649
+            X: =359
+            Y: =48
+            ZIndex: =1
+
+            Label4_127 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                PaddingLeft: =0
+                Size: =18
+                Text: ="Nuevo Servicio"
+                Width: =272
+                X: =50
+                Y: =88
+                ZIndex: =1
+
+            Container37_3 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =6
+
+                conEditServicio_10 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    conEditServicio_11 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =0
+                        Height: =30
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =600
+                        ZIndex: =1
+
+                        Label4_128 As label:
+                            Color: =Color.Black
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =20
+                            OnSelect: |-
+                                =UpdateContext({varPopupTratamiento:true})
+                            Size: =12
+                            Text: ="Lista de Servicios"
+                            X: =35
+                            Y: =8
+                            ZIndex: =1
+
+                        Label4_129 As label:
+                            Color: =ColorFondoBoton
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =20
+                            OnSelect: |-
+                                =UpdateContext({varPopupTratamiento2:true})
+                            Size: =12
+                            Text: ="Agregar Servicio"
+                            X: =35
+                            Y: =8
+                            ZIndex: =2
+
+                    conEditServicio_12 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =600
+                        ZIndex: =2
+
+                        conEditServicio_13 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =50
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =15
+                            PaddingRight: =15
+                            ZIndex: =1
+
+                            Label4_130 As label:
+                                Color: =Color.Black
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                OnSelect: |-
+                                    =UpdateContext({varPopupTratamiento:true})
+                                Size: =12
+                                Text: ="Servicio"
+                                X: =35
+                                Y: =8
+                                ZIndex: =1
+
+                            Label4_131 As label:
+                                Color: =Color.Black
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                OnSelect: |-
+                                    =UpdateContext({varPopupTratamiento:true})
+                                Size: =12
+                                Text: ="Precio"
+                                X: =35
+                                Y: =8
+                                ZIndex: =3
+
+                            Label14_18 As label:
+                                Color: =RGBA(95, 106, 146, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =29
+                                OnSelect: =
+                                Size: =10
+                                Text: =
+                                Width: =30
+                                ZIndex: =4
+
+                        galAddServicios As gallery.galleryVertical:
+                            Height: =113
+                            Items: =Sort(Filter('public.MC_Servicios_Paciente',id_ticket=TicketSelected.id_Ticket),id_serial,SortOrder.Ascending)
+                            Layout: =Layout.Vertical
+                            LayoutMinHeight: =287
+                            LayoutMinWidth: =320
+                            OnSelect: |-
+                                =/*UpdateContext({_varTratamientoMedicamento:true})*/
+                            TemplatePadding: =0
+                            TemplateSize: =50
+                            Width: =250
+                            X: =galTratamiento.X+galTratamiento.Width
+                            Y: =91
+                            ZIndex: =2
+
+                            conEditServicio_14 As groupContainer.verticalAutoLayoutContainer:
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =50
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =15
+                                PaddingRight: =15
+                                Width: =Parent.TemplateWidth
+                                ZIndex: =1
+
+                                Label14_19 As label:
+                                    Color: =RGBA(95, 106, 146, 1)
+                                    FillPortions: =1
+                                    Font: =Font.'Segoe UI'
+                                    Height: =29
+                                    OnSelect: =
+                                    Size: =10
+                                    Text: =LookUp('public.Medical_Center_Servicios',id=ThisItem.id_servicio,Servicio)
+                                    Width: =100
+                                    ZIndex: =1
+
+                                Label14_20 As label:
+                                    Color: =RGBA(95, 106, 146, 1)
+                                    FillPortions: =1
+                                    Font: =Font.'Segoe UI'
+                                    Height: =29
+                                    OnSelect: =
+                                    Size: =10
+                                    Text: =LookUp('public.Medical_Center_Servicios',id=ThisItem.id_servicio,Costo)
+                                    Width: =100
+                                    ZIndex: =2
+
+                                Image36_2 As image:
+                                    DisplayMode: =If(ThisItem.id_servicio=LookUp('public.Medical_Center_Ticket',id=TicketSelected.id_Ticket,id_servicio),DisplayMode.Disabled,DisplayMode.Edit)
+                                    Height: =24
+                                    Image: =Delete
+                                    OnSelect: |-
+                                        =UpdateContext({varDeleteServTicket:ThisItem.id})
+                                    Transparency: =If(ThisItem.id_servicio=LookUp('public.Medical_Center_Ticket',id=TicketSelected.id_Ticket,id_servicio),1,0)
+                                    Width: =30
+                                    X: =930
+                                    Y: =20
+                                    ZIndex: =3
+
+                            Rectangle73 As rectangle:
+                                Fill: =RGBA(0, 0, 0, 1)
+                                Height: =1
+                                OnSelect: =Select(Parent)
+                                Width: =Parent.Width
+                                Y: =50
+                                ZIndex: =2
+
+        iconCerrarRegistroPago_12 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =37
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({_varAddServicio:false});
+            Width: =38
+            X: =Container21_6.X+Container21_6.Width-1.5*Self.Width
+            Y: =Container21_6.Y+0.5*Self.Height
+            ZIndex: =2
+
+        Container38_1 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(0, 0, 0, 0.28)
+            Height: =Parent.Height
+            Visible: =!IsBlank(varDeleteServTicket)
+            Width: =Parent.Width
+            ZIndex: =4
+
+            Container21_5 As groupContainer.verticalAutoLayoutContainer:
+                BorderThickness: =2
+                Fill: =RGBA(241, 242, 246, 1)
+                Height: =150
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =15
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =25
+                PaddingLeft: =25
+                PaddingRight: =25
+                PaddingTop: =25
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =450
+                X: =(Parent.Width-Self.Width)/2
+                Y: =(Parent.Height-Self.Height)/2
+                ZIndex: =1
+
+                Label4_126 As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =32
+                    PaddingLeft: =0
+                    Size: =14
+                    Text: ="¿Esta seguro de remover el servicio?"
+                    Visible: =varAnchoInfPac
+                    Width: =272
+                    X: =50
+                    Y: =88
+                    ZIndex: =1
+
+                Container37_2 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =50
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =15
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =3
+
+                    Button19_6 As button:
+                        BorderColor: =ColorFondoBoton
+                        Color: =ColorFondoBoton
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =44
+                        HoverColor: =ColorFondoBoton
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |-
+                            =UpdateContext({varDeleteServTicket:Blank()});
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Text: ="NO, VOLVER"
+                        Width: =180
+                        X: =520
+                        Y: =398
+                        ZIndex: =4
+
+                    Button19_7 As button:
+                        BorderColor: =RGBA(232, 17, 17, 1)
+                        Color: =RGBA(232, 17, 17, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =44
+                        HoverColor: =RGBA(232, 17, 17, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |-
+                            =RemoveIf('public.MC_Servicios_Paciente',id=varDeleteServTicket);
+                            
+                            UpdateContext({varDeleteServTicket:Blank()});
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Size: =12
+                        Text: ="SI, CANCELAR"
+                        Width: =180
+                        X: =200
+                        Y: =398
+                        ZIndex: =5
+
     GroupMMedicamentos As group:
         Height: =5
         Width: =5
@@ -16631,7 +16785,7 @@
             Height: =768
             Visible: =_PopUpMMedicamentos
             Width: =1366
-            ZIndex: =301
+            ZIndex: =300
 
         Container5_4 As groupContainer.manualLayoutContainer:
             BorderThickness: =1
@@ -16645,7 +16799,7 @@
             Width: =1305
             X: =30
             Y: =30
-            ZIndex: =302
+            ZIndex: =301
 
             TextInput5_75 As text:
                 Default: =""
@@ -16923,4 +17077,200 @@
                 X: =1236
                 Y: =29
                 ZIndex: =15
+
+    conTratamientoServ_son As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.28)
+        Height: =Parent.Height
+        Visible: =varPopupTratamiento2
+        Width: =Parent.Width
+        ZIndex: =322
+
+        conAgregarServicio As groupContainer.verticalAutoLayoutContainer:
+            BorderThickness: =2
+            Fill: =RGBA(241, 242, 246, 1)
+            Height: =Parent.Height-440
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =15
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =25
+            PaddingLeft: =25
+            PaddingRight: =25
+            PaddingTop: =25
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =400
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            Label4_36 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                PaddingLeft: =0
+                Size: =18
+                Text: ="Agregar Servicio"
+                Visible: =varAnchoInfPac
+                Width: =272
+                X: =50
+                Y: =88
+                ZIndex: =1
+
+            conAgrServicioContenido As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =100
+                LayoutMode: =LayoutMode.Auto
+                Width: =100
+                ZIndex: =3
+
+                conEditTratamiento_1 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =15
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =100
+                    ZIndex: =1
+
+                    conEditTratamiento_2 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =67
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =1
+                        PaddingRight: =1
+                        ZIndex: =1
+
+                        Label60_8 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            Size: =12
+                            Text: ="Servicio"
+                            Width: =259
+                            X: =20
+                            Y: =83
+                            ZIndex: =1
+
+                        Container26_6 As groupContainer.manualLayoutContainer:
+                            BorderThickness: =2
+                            FillPortions: =0
+                            Height: =35
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            ZIndex: =2
+
+                            dpServiciosEscoger As dropdown:
+                                BorderStyle: =BorderStyle.None
+                                ChevronBackground: =RGBA(255, 255, 255, 1)
+                                ChevronFill: =RGBA(0, 0, 0, 1)
+                                ChevronHoverBackground: =
+                                ChevronHoverFill: =RGBA(0, 0, 0, 1)
+                                Default: =
+                                Font: =Font.'Segoe UI'
+                                Height: =36
+                                HoverBorderColor: =
+                                HoverFill: =RGBA(255, 255, 255, 1)
+                                Items: =Filter('public.Medical_Center_Servicios',id_sede=_varSede.id)
+                                Size: =12
+                                Width: =Parent.Width-2*Self.X
+                                X: =1
+                                ZIndex: =2
+
+                    conEditTratamiento_3 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =67
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =1
+                        PaddingRight: =1
+                        ZIndex: =2
+
+                        Label60_9 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            Size: =12
+                            Text: ="Costo"
+                            Width: =259
+                            X: =20
+                            Y: =83
+                            ZIndex: =1
+
+                        TextInput38_7 As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            Default: =dpServiciosEscoger.Selected.Costo
+                            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+                            DisabledColor: =RGBA(0, 0, 0, 1)
+                            DisabledFill: =RGBA(237, 237, 237, 1)
+                            DisplayMode: =DisplayMode.Disabled
+                            Font: =Font.'Segoe UI'
+                            Height: =35
+                            Size: =12
+                            Width: =360
+                            X: =20
+                            Y: =36
+                            ZIndex: =2
+
+            ButtonAtender_28 As button:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Fill: =ColorFondoBoton
+                Font: =Font.'Segoe UI'
+                Height: =44
+                HoverBorderColor: =ColorFondoBoton
+                HoverColor: |-
+                    =ColorValue("#26495B")
+                HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: |-
+                    =
+                    If(IsEmpty(Filter('public.MC_Servicios_Paciente',id_ticket=TicketSelected.id_Ticket,id_servicio=dpServiciosEscoger.Selected.id)),
+                    Patch('public.MC_Servicios_Paciente',Defaults('public.MC_Servicios_Paciente'),{
+                        id:GUID(),
+                        id_ticket:TicketSelected.id_Ticket,
+                        id_dni_paciente:TicketSelected.DNI_Paciente,
+                        id_sede:_varSede.id,
+                        id_especialidad:LookUp('public.Medical_Center_S&E_Relacion',id=EspecialidadTicket,id_especialidad),
+                        id_servicio:dpServiciosEscoger.Selected.id,
+                        id_doctor:getUser.id,
+                        fecha_registro:Now()
+                    })
+                    );
+                    UpdateContext({varPopupTratamiento2:false});
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Size: =12
+                Text: ="REGISTRAR"
+                Width: =360
+                X: =516
+                Y: =559
+                ZIndex: =4
+
+        iconCerrarRegistroPago_7 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =37
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({varPopupTratamiento2:false});
+            Width: =38
+            X: =conAgregarServicio.X+conAgregarServicio.Width-1.5*Self.Width
+            Y: =conAgregarServicio.Y+0.5*Self.Height
+            ZIndex: =2
 
