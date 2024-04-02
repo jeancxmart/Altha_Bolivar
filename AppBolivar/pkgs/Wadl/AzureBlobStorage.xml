@@ -2,7 +2,7 @@
   <doc title="Azure Blob Storage">Microsoft Azure Storage proporciona un almacenamiento masivamente escalable, duradero y altamente disponible para datos en la nube y sirve como una solución de almacenamiento de datos para aplicaciones modernas. Conéctese a Blob Storage para realizar varias operaciones como crear, actualizar, obtener y eliminar blobs en su cuenta de Azure Storage.</doc>
   <grammars>
     <jsonTypes targetNamespace="https://brazil-001.azure-apim.net/apim/azureblob" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
-      <object name="Object" />
+      <untypedObject name="Object" />
       <string name="BlobMetadata_Id_def" />
       <string name="BlobMetadata_Name_def" />
       <string name="BlobMetadata_DisplayName_def" />
