@@ -160,9 +160,10 @@
       "displayName": "PostgreSQL",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+        "apiVer": 1,
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-02 01:08:55",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-02 14:38:07",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[public].[mc_historias_especialidad]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_cirugia_pediatrica]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_ginecologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_medicina_general]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_nutricion]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_oftalmologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_otorrinolaringologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_pediatria]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_servicios_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_analisis]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_calendario_bloquear]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_consultorio_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_counter]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_descanso_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_diagnostico]\":[\"get\"],\"[public].[medical_center_encuesta]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_especialidad]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_evidencias]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_examenes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examenes_laboratorio_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examen_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_historial_principal]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_informe_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medicamentos]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_medicamento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medios_pago]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_odontologia]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pacientes]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pagos]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_r\\u0026d_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_r\\u0026s_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_receta_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_roles_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_s\\u0026e_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_sedes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_servicios]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tests]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_test_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_ticket]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_time_log]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tipo_registro]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tratamiento]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_triaje]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_users_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_usuario]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_verificacionapp]\":[\"post\",\"patch\",\"get\"]}}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/postgresql/icon.png",
@@ -344,7 +345,7 @@
     "dependencies": {},
     "dependents": [
       "20c189dc-0cf2-4cbb-bdb5-cb6d8175aa38",
-      "4de17859-ab07-490a-bfbd-08a78757e0d6"
+      "89d20b8f-8c32-40af-bf3d-c8560b04007c"
     ],
     "id": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
   },
@@ -622,9 +623,10 @@
       "displayName": "PostgreSQL",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+        "apiVer": 1,
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-02 01:08:55",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-02 14:38:07",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[public].[mc_historias_especialidad]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_cirugia_pediatrica]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_ginecologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_medicina_general]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_nutricion]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_oftalmologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_otorrinolaringologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_pediatria]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_servicios_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_analisis]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_calendario_bloquear]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_consultorio_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_counter]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_descanso_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_diagnostico]\":[\"get\"],\"[public].[medical_center_encuesta]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_especialidad]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_evidencias]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_examenes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examenes_laboratorio_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examen_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_historial_principal]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_informe_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medicamentos]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_medicamento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medios_pago]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_odontologia]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pacientes]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pagos]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_r\\u0026d_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_r\\u0026s_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_receta_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_roles_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_s\\u0026e_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_sedes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_servicios]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tests]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_test_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_ticket]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_time_log]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tipo_registro]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tratamiento]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_triaje]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_users_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_usuario]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_verificacionapp]\":[\"post\",\"patch\",\"get\"]}}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/postgresql/icon.png",
@@ -803,53 +805,6 @@
       "e1a09e2e-4042-46c8-bff3-d9af77c253b5"
     ],
     "id": "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8"
-  },
-  "4de17859-ab07-490a-bfbd-08a78757e0d6": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "10228439-87b6-4f4a-927b-bf3bfa2f8d91": {
-          "value": "shared_teams"
-        },
-        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
-          "value": "shared_office365"
-        },
-        "workflowDisplayName": {
-          "value": "Calendario_Compartir"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "35c31a67-2bda-4b8d-8879-7947024604b6"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_office365": {
-          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
-        },
-        "shared_teams": {
-          "value": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
-        },
-        "workflowDisplayName": {
-          "value": "Calendario_Compartir"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "35c31a67-2bda-4b8d-8879-7947024604b6"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Calendario_Compartir_1"
-    ],
-    "dependencies": {
-      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
-      "shared_teams": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
-    },
-    "dependents": [],
-    "id": "4de17859-ab07-490a-bfbd-08a78757e0d6"
   },
   "56b7ad31-9eff-488c-9e5d-e23652722ec2": {
     "appActions": [
@@ -1109,6 +1064,53 @@
     "dependents": [],
     "id": "83c7a93b-a006-4186-87e2-e6282a169136"
   },
+  "89d20b8f-8c32-40af-bf3d-c8560b04007c": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "10228439-87b6-4f4a-927b-bf3bfa2f8d91": {
+          "value": "shared_teams"
+        },
+        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
+          "value": "shared_office365"
+        },
+        "workflowDisplayName": {
+          "value": "Calendario_Compartir"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "35c31a67-2bda-4b8d-8879-7947024604b6"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365": {
+          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
+        },
+        "shared_teams": {
+          "value": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
+        },
+        "workflowDisplayName": {
+          "value": "Calendario_Compartir"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "35c31a67-2bda-4b8d-8879-7947024604b6"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Calendario_Compartir_1"
+    ],
+    "dependencies": {
+      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
+      "shared_teams": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
+    },
+    "dependents": [],
+    "id": "89d20b8f-8c32-40af-bf3d-c8560b04007c"
+  },
   "8c321e1d-3411-4f02-92fb-284295d644c4": {
     "appActions": [
       "Run"
@@ -1285,8 +1287,8 @@
       "executionRestrictions": {
         "apiId": "unknown",
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-02 01:08:55",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-02 14:38:07",
+        "policy": "{\"type\":\"invalid\"}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1674/1.0.1674.3602/azureblob/icon.png",
@@ -1359,9 +1361,10 @@
       "displayName": "PostgreSQL",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+        "apiVer": 1,
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-02 01:08:55",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-02 14:38:07",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[public].[mc_historias_especialidad]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_cirugia_pediatrica]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_ginecologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_medicina_general]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_nutricion]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_oftalmologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_otorrinolaringologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_pediatria]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_servicios_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_analisis]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_calendario_bloquear]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_consultorio_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_counter]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_descanso_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_diagnostico]\":[\"get\"],\"[public].[medical_center_encuesta]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_especialidad]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_evidencias]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_examenes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examenes_laboratorio_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examen_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_historial_principal]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_informe_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medicamentos]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_medicamento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medios_pago]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_odontologia]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pacientes]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pagos]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_r\\u0026d_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_r\\u0026s_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_receta_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_roles_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_s\\u0026e_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_sedes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_servicios]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tests]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_test_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_ticket]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_time_log]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tipo_registro]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tratamiento]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_triaje]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_users_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_usuario]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_verificacionapp]\":[\"post\",\"patch\",\"get\"]}}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/postgresql/icon.png",
@@ -1405,9 +1408,10 @@
       "displayName": "PostgreSQL",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+        "apiVer": 1,
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-02 01:08:55",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-02 14:38:07",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[public].[mc_historias_especialidad]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_cirugia_pediatrica]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_ginecologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_medicina_general]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_nutricion]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_oftalmologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_otorrinolaringologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_pediatria]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_servicios_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_analisis]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_calendario_bloquear]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_consultorio_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_counter]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_descanso_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_diagnostico]\":[\"get\"],\"[public].[medical_center_encuesta]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_especialidad]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_evidencias]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_examenes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examenes_laboratorio_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examen_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_historial_principal]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_informe_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medicamentos]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_medicamento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medios_pago]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_odontologia]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pacientes]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pagos]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_r\\u0026d_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_r\\u0026s_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_receta_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_roles_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_s\\u0026e_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_sedes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_servicios]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tests]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_test_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_ticket]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_time_log]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tipo_registro]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tratamiento]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_triaje]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_users_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_usuario]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_verificacionapp]\":[\"post\",\"patch\",\"get\"]}}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/postgresql/icon.png",
@@ -1443,10 +1447,10 @@
       "authenticationType": "keyBasedAuth",
       "displayName": "Azure Blob Storage",
       "executionRestrictions": {
-        "apiId": "/providers/microsoft.powerapps/apis/shared_azureblob",
+        "apiId": "unknown",
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-02 01:08:55",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-02 14:38:07",
+        "policy": "{\"type\":\"invalid\"}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1674/1.0.1674.3602/azureblob/icon.png",
@@ -1553,7 +1557,7 @@
       "bd658123-e3c6-42a2-869a-e35ab4cc4e94",
       "b00a8d73-ba7d-4b16-bc1f-58b639e4bb74",
       "83c7a93b-a006-4186-87e2-e6282a169136",
-      "4de17859-ab07-490a-bfbd-08a78757e0d6"
+      "89d20b8f-8c32-40af-bf3d-c8560b04007c"
     ],
     "id": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
   },

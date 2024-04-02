@@ -4724,6 +4724,51 @@
                 OnSelect: |+
                     =UpdateContext({CitaLlamadaExistente: false});
                     
+                    Set(
+                        varParticipantes,
+                        Concatenate(
+                            TextInput35_12.Text,
+                            ";",
+                            LookUp(
+                                'public.Medical_Center_Usuario',
+                                id = dpEstadoCivil_DCA_30.Selected.id_doctor,
+                                Correo
+                            )
+                        )
+                    );
+                    Calendario_Compartir_1.Run(
+                        varParticipantes,
+                        Text(
+                            DateTimeValue(
+                                DatePicker3_1.SelectedDate & " " & Left(
+                                    dpHora_1.Selected.Value,
+                                    5
+                                )
+                            ),
+                            "yyyy-mm-ddThh:mm:ss"
+                        ),
+                        Text(
+                            DateTimeValue(
+                                DatePicker3_1.SelectedDate & " " & DateAdd(
+                                    TimeValue(dpHora_1.Selected.Value),
+                                    1,
+                                    TimeUnit.Hours
+                                )
+                            ),
+                            "yyyy-mm-ddThh:mm:ss"
+                        ),
+                        TextInput35_10.Text,
+                        dpServicioNuevoTicket_1.Selected.Servicio,
+                        DatePicker3_1.SelectedDate,
+                        dpEstadoCivil_DCA_30.Selected.Doctor,
+                        varSimboloMaestros & " " & LookUp(
+                            'public.Medical_Center_Servicios',
+                            Servicio = dpServicioNuevoTicket_1.Selected.Servicio,
+                            Costo
+                        )
+                    );
+                    
+                    
                     Concurrent(
                         Patch(
                             'public.Medical_Center_Ticket',
