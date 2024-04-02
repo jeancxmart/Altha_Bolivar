@@ -262,6 +262,360 @@ scDataAntigua As screen:
         Y: =96
         ZIndex: =15
 
+    Rectangle_Correo_AM_1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =768
+        OnSelect: |-
+            =UpdateContext({_varCorreo_DCA:false})
+        Visible: =_varCorreo_DCA
+        Width: =1366
+        ZIndex: =35
+
+    txt_Fondo_Correo_AM_1 As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =156
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: =_varCorreo_DCA
+        Width: =426
+        X: =547
+        Y: =80
+        ZIndex: =36
+
+    gal_Correo_AM_1 As gallery.galleryVertical:
+        Height: =133
+        Items: |-
+            =//Filter(Office365Outlook.GetEmails();Text(DateTimeReceived;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy"))
+            Filter(Office365Outlook.GetEmails(),Text(DateValue(DateTimeReceived),"dd/mm/yyyy") in Text(Today(),"dd/mm/yyyy"))
+        Layout: =Layout.Vertical
+        TemplateSize: =68
+        Visible: =_varCorreo_DCA
+        Width: =427
+        X: =544
+        Y: =83
+        ZIndex: =37
+
+        Image4_58 As image:
+            Height: =37
+            Image: ='Shape (8)'
+            OnSelect: =Select(Parent)
+            Width: =48
+            X: =12
+            Y: =15
+            ZIndex: =1
+
+        Label1_52 As label:
+            Font: =Font.'Segoe UI'
+            Height: =42
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: =ThisItem.Subject
+            Width: =227
+            X: =73
+            Y: =10
+            ZIndex: =2
+
+        Rectangle22_27 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =417
+            Y: =65
+            ZIndex: =4
+
+        Label1_53 As label:
+            Font: =Font.'Segoe UI'
+            Height: =42
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: =ThisItem.DateTimeReceived
+            Width: =105
+            X: =312
+            Y: =10
+            ZIndex: =5
+
+    RectangleNotificacion_AM_1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =768
+        OnSelect: |-
+            =UpdateContext({_varNotificacion:false})
+        Visible: =_varNotificacion
+        Width: =1366
+        ZIndex: =38
+
+    txt_Fondo_Notificacion_AM_1 As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =156
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: =_varNotificacion
+        Width: =426
+        X: =628
+        Y: =80
+        ZIndex: =39
+
+    gal_Notificacion_AM_1 As gallery.galleryVertical:
+        Height: =134
+        Items: =SortByColumns(colAlerta,"id",SortOrder.Descending)
+        Layout: =Layout.Vertical
+        TemplateSize: =68
+        Visible: =_varNotificacion
+        Width: =424
+        X: =628
+        Y: =80
+        ZIndex: =40
+
+        Label1_30 As label:
+            Font: =Font.'Segoe UI'
+            Height: =65
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: ="El paciente " &ThisItem.DNI_Paciente & " a cambiado el estado a "& ThisItem.etapa &" - " & ThisItem.estado
+            Width: =360
+            X: =12
+            ZIndex: =2
+
+        Rectangle22_26 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =414
+            Y: =65
+            ZIndex: =4
+
+    Label46_3 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =132
+        Size: =15
+        Text: ="No hay ninguna notificación"
+        Visible: =If(false && _varCorreo_DCA,true,false)
+        Width: =405
+        X: =554
+        Y: =82
+        ZIndex: =41
+
+    lbl_SIn_Notificacion_AM_1 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =132
+        Size: =15
+        Text: ="No hay ninguna notificación"
+        Visible: |
+            =If(IsEmpty(colAlerta) && _varNotificacion,true,false)
+        Width: =409
+        X: =634
+        Y: =92
+        ZIndex: =42
+
+    Button3_69 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: |-
+            =ColorValue("#6DE8D2")
+        FocusedBorderColor: =Button3_69.BorderColor
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(Button3_69.BorderColor, 20%)
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: |-
+            =ColorValue("#6DE8D2")
+        OnSelect: |-
+            =UpdateContext({_varReporte:false})
+        PressedBorderColor: |-
+            =ColorValue("#6DE8D2")
+        PressedColor: |-
+            =ColorValue("#6DE8D2")
+        PressedFill: =Button3_69.Color
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="DESCARGAR REPORTE"
+        Visible: |-
+            =//_varReporte
+            false
+        Width: =252
+        X: =549
+        Y: =530
+        ZIndex: =43
+
+    Circle2_7 As circle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =20
+        Visible: |
+            =//If(varContador2<>varContador1;true;false)
+            If(Last(colAlertaNotificacion).Alerta=true,true,false)
+        Width: =20
+        X: =1045
+        Y: =18
+        ZIndex: =44
+
+    Image12_39 As image:
+        Height: =80
+        Image: ='Transparente Original'
+        OnSelect: =
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Visible: =Not(Parent.Printing)
+        Width: =119
+        X: =631
+        Y: =8
+        ZIndex: =45
+
+    Rectangle_Reporte_AM_1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.28)
+        Height: =768
+        Visible: =_varReporte
+        Width: =1366
+        ZIndex: =46
+
+    txt_Fondo_Reporte_AM_1 As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =RGBA(241, 242, 246, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =442
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Visible: =_varReporte
+        Width: =484
+        X: =435
+        Y: =158
+        ZIndex: =47
+
+    lbl_FechaReporte_AM_1 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        Size: =16
+        Text: ="Reporte  " & Text(Today(),"dd/mm/yyyy")
+        Visible: =_varReporte
+        Width: =292
+        X: =455
+        Y: =178
+        ZIndex: =48
+
+    gal_Reporte_AM_1 As gallery.galleryVertical:
+        Height: =186
+        Items: =Filter('public.Medical_Center_Counter',estado="Atendido",etapa="Atención Medica",usuario=User().Email,Text(fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy"))
+        Layout: =Layout.Vertical
+        TemplateSize: =56
+        Visible: =_varReporte
+        Width: =474
+        X: =435
+        Y: =254
+        ZIndex: =49
+
+        Label19_4 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            OnSelect: =Select(Parent)
+            Text: |-
+                =Proper(Substitute(ThisItem.Servicio,"Cita: ",""))
+            Width: =262
+            X: =14
+            ZIndex: =1
+
+        Label19_7 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =21
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =LookUp('public.Medical_Center_Historial_Principal',DNI_CI=ThisItem.DNI_Paciente,Nombres) & " " & LookUp('public.Medical_Center_Historial_Principal',DNI_CI=ThisItem.DNI_Paciente,Apellidos)
+            Width: =287
+            X: =14
+            Y: =30
+            ZIndex: =2
+
+        Label19_6 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                =varSimboloMaestros & Text(LookUp('public.Medical_Center_Servicios',Servicio=Proper(Substitute(ThisItem.Servicio,"Cita: ","")),Costo),"# ##.00")
+            X: =301
+            ZIndex: =3
+
+        Label19_8 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =21
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                =LookUp('public.Medical_Center_Servicios',Servicio=Proper(Substitute(ThisItem.Servicio,"Cita: ","")),Costo)
+            Visible: =false
+            X: =301
+            Y: =30
+            ZIndex: =4
+
+    lbl_Reporte_Total_1 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Size: =12
+        Text: ="Total"
+        Visible: =_varReporte
+        X: =463
+        Y: =458
+        ZIndex: =50
+
+    lbl_Monto_Reporte_AM_1 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Size: =12
+        Text: |-
+            =varSimboloMaestros & Text(Sum(gal_Reporte_AM_1.AllItems,Label19_8.Text),"# ###.00")
+        Visible: =_varReporte
+        X: =747
+        Y: =458
+        ZIndex: =51
+
+    Rectangle_Separador_Reporte_1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =2
+        Visible: =_varReporte
+        Width: =428
+        X: =460
+        Y: =451
+        ZIndex: =52
+
+    icon_Cerrar_Reporte_AM_1 As icon.Cancel:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({_varReporte:false})
+        Visible: =_varReporte
+        Width: =40
+        X: =849
+        Y: =172
+        ZIndex: =53
+
     Group3_4 As group:
         Height: =5
         Width: =5
@@ -276,7 +630,7 @@ scDataAntigua As screen:
                 =UpdateContext({_varMenuDesplegable:!_varMenuDesplegable})
             Visible: =_varMenuDesplegable
             Width: =1366
-            ZIndex: =52
+            ZIndex: =27
 
         txt_Fondo_Menu_AM_1 As text:
             Default: =""
@@ -293,7 +647,7 @@ scDataAntigua As screen:
             Width: =267
             X: =1086
             Y: =19
-            ZIndex: =53
+            ZIndex: =28
 
         lbl_Perfil_AM_1 As label:
             BorderColor: =RGBA(32, 54, 71, 1)
@@ -313,7 +667,7 @@ scDataAntigua As screen:
             Width: =196
             X: =1158
             Y: =26
-            ZIndex: =54
+            ZIndex: =29
 
         img_Perfil_AM_1 As image:
             BorderColor: =RGBA(32, 54, 71, 1)
@@ -333,7 +687,7 @@ scDataAntigua As screen:
             Width: =48
             X: =1098
             Y: =28
-            ZIndex: =55
+            ZIndex: =30
 
         icon_Flecha_Abajo_AM_1 As icon.ChevronUp:
             Color: =RGBA(0, 0, 0, 1)
@@ -345,7 +699,7 @@ scDataAntigua As screen:
             Width: =20
             X: =1316
             Y: =57
-            ZIndex: =56
+            ZIndex: =31
 
         lbl_Especialidad_AM_1 As label:
             BorderColor: =RGBA(32, 54, 71, 1)
@@ -366,7 +720,7 @@ scDataAntigua As screen:
             Width: =148
             X: =1158
             Y: =60
-            ZIndex: =57
+            ZIndex: =32
 
         "gal_Menu_AM_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             Height: =If(LookUp('public.Medical_Center_Roles_Maestro',rol=getUser.Rol,Caja)="Acceso",170,60)
@@ -439,7 +793,7 @@ scDataAntigua As screen:
             Width: =267
             X: =1086
             Y: =97
-            ZIndex: =58
+            ZIndex: =33
 
             Image19_4 As image:
                 Height: =18
@@ -487,7 +841,7 @@ scDataAntigua As screen:
             Width: =208
             X: =1158
             Y: =19
-            ZIndex: =59
+            ZIndex: =34
 
     Group6_12 As group:
         Height: =5
@@ -507,7 +861,7 @@ scDataAntigua As screen:
             Width: =48
             X: =1008
             Y: =25
-            ZIndex: =41
+            ZIndex: =16
 
         Icon3_27 As icon.Bell:
             BorderStyle: =BorderStyle.None
@@ -523,7 +877,7 @@ scDataAntigua As screen:
             Width: =40
             X: =1012
             Y: =29
-            ZIndex: =42
+            ZIndex: =17
 
         btn_Notificacion_AM_1 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -543,7 +897,7 @@ scDataAntigua As screen:
             Width: =48
             X: =1008
             Y: =26
-            ZIndex: =43
+            ZIndex: =18
 
         Button2_62 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -556,7 +910,7 @@ scDataAntigua As screen:
             Width: =48
             X: =931
             Y: =26
-            ZIndex: =44
+            ZIndex: =19
 
         Icon3_28 As icon.Bell:
             BorderStyle: =BorderStyle.None
@@ -572,7 +926,7 @@ scDataAntigua As screen:
             Width: =40
             X: =934
             Y: =30
-            ZIndex: =45
+            ZIndex: =20
 
         btn_Correo_AM_1 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -586,7 +940,7 @@ scDataAntigua As screen:
             Width: =48
             X: =930
             Y: =26
-            ZIndex: =46
+            ZIndex: =21
 
         btn_ICE_AM_1 As button:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -600,7 +954,7 @@ scDataAntigua As screen:
             Width: =48
             X: =857
             Y: =26
-            ZIndex: =47
+            ZIndex: =22
 
         img_ICE_AM_1 As image:
             Height: =34
@@ -610,7 +964,7 @@ scDataAntigua As screen:
             Width: =31
             X: =866
             Y: =33
-            ZIndex: =48
+            ZIndex: =23
 
         lbl_ICE_AM_1 As label:
             Align: =Align.Center
@@ -625,7 +979,7 @@ scDataAntigua As screen:
             Width: =48
             X: =857
             Y: =39
-            ZIndex: =49
+            ZIndex: =24
 
         TextInput5_10 As text:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -644,7 +998,7 @@ scDataAntigua As screen:
             Width: =457
             X: =325
             Y: =26
-            ZIndex: =50
+            ZIndex: =25
 
         Image18_28 As image:
             Height: =27
@@ -653,210 +1007,14 @@ scDataAntigua As screen:
             Width: =29
             X: =778
             Y: =36
-            ZIndex: =51
+            ZIndex: =26
 
-    Rectangle_Correo_AM_1 As rectangle:
-        Fill: =RGBA(0, 0, 0, 0)
+    Rectangle37_3 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.28)
         Height: =768
-        OnSelect: |-
-            =UpdateContext({_varCorreo_DCA:false})
-        Visible: =_varCorreo_DCA
+        Visible: =_varViewDoctor
         Width: =1366
-        ZIndex: =60
-
-    txt_Fondo_Correo_AM_1 As text:
-        Default: =""
-        DisabledBorderColor: =RGBA(0, 0, 0, 1)
-        DisabledFill: =RGBA(255, 255, 255, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Height: =156
-        RadiusBottomLeft: =8
-        RadiusBottomRight: =8
-        RadiusTopLeft: =8
-        RadiusTopRight: =8
-        Visible: =_varCorreo_DCA
-        Width: =426
-        X: =547
-        Y: =80
-        ZIndex: =61
-
-    gal_Correo_AM_1 As gallery.galleryVertical:
-        Height: =133
-        Items: |-
-            =//Filter(Office365Outlook.GetEmails();Text(DateTimeReceived;"dd/mm/yyyy")=Text(Today();"dd/mm/yyyy"))
-            Filter(Office365Outlook.GetEmails(),Text(DateValue(DateTimeReceived),"dd/mm/yyyy") in Text(Today(),"dd/mm/yyyy"))
-        Layout: =Layout.Vertical
-        TemplateSize: =68
-        Visible: =_varCorreo_DCA
-        Width: =427
-        X: =544
-        Y: =83
-        ZIndex: =62
-
-        Image4_58 As image:
-            Height: =37
-            Image: ='Shape (8)'
-            OnSelect: =Select(Parent)
-            Width: =48
-            X: =12
-            Y: =15
-            ZIndex: =1
-
-        Label1_52 As label:
-            Font: =Font.'Segoe UI'
-            Height: =42
-            OnSelect: =Select(Parent)
-            Size: =11
-            Text: =ThisItem.Subject
-            Width: =227
-            X: =73
-            Y: =10
-            ZIndex: =2
-
-        Rectangle22_27 As rectangle:
-            Fill: =RGBA(0, 0, 0, 1)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =417
-            Y: =65
-            ZIndex: =4
-
-        Label1_53 As label:
-            Font: =Font.'Segoe UI'
-            Height: =42
-            OnSelect: =Select(Parent)
-            Size: =11
-            Text: =ThisItem.DateTimeReceived
-            Width: =105
-            X: =312
-            Y: =10
-            ZIndex: =5
-
-    RectangleNotificacion_AM_1 As rectangle:
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =768
-        OnSelect: |-
-            =UpdateContext({_varNotificacion:false})
-        Visible: =_varNotificacion
-        Width: =1366
-        ZIndex: =64
-
-    txt_Fondo_Notificacion_AM_1 As text:
-        Default: =""
-        DisabledBorderColor: =RGBA(0, 0, 0, 1)
-        DisabledFill: =RGBA(255, 255, 255, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Height: =156
-        RadiusBottomLeft: =8
-        RadiusBottomRight: =8
-        RadiusTopLeft: =8
-        RadiusTopRight: =8
-        Visible: =_varNotificacion
-        Width: =426
-        X: =628
-        Y: =80
-        ZIndex: =65
-
-    gal_Notificacion_AM_1 As gallery.galleryVertical:
-        Height: =134
-        Items: =SortByColumns(colAlerta,"id",SortOrder.Descending)
-        Layout: =Layout.Vertical
-        TemplateSize: =68
-        Visible: =_varNotificacion
-        Width: =424
-        X: =628
-        Y: =80
-        ZIndex: =66
-
-        Label1_30 As label:
-            Font: =Font.'Segoe UI'
-            Height: =65
-            OnSelect: =Select(Parent)
-            Size: =11
-            Text: ="El paciente " &ThisItem.DNI_Paciente & " a cambiado el estado a "& ThisItem.etapa &" - " & ThisItem.estado
-            Width: =360
-            X: =12
-            ZIndex: =2
-
-        Rectangle22_26 As rectangle:
-            Fill: =RGBA(0, 0, 0, 1)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =414
-            Y: =65
-            ZIndex: =4
-
-    Label46_3 As label:
-        Align: =Align.Center
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =132
-        Size: =15
-        Text: ="No hay ninguna notificación"
-        Visible: =If(false && _varCorreo_DCA,true,false)
-        Width: =405
-        X: =554
-        Y: =82
-        ZIndex: =67
-
-    lbl_SIn_Notificacion_AM_1 As label:
-        Align: =Align.Center
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =132
-        Size: =15
-        Text: ="No hay ninguna notificación"
-        Visible: |
-            =If(IsEmpty(colAlerta) && _varNotificacion,true,false)
-        Width: =409
-        X: =634
-        Y: =92
-        ZIndex: =68
-
-    Button3_69 As button:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(116, 116, 116, 1)
-        Fill: |-
-            =ColorValue("#6DE8D2")
-        FocusedBorderColor: =Button3_69.BorderColor
-        Font: =Font.'Segoe UI'
-        HoverBorderColor: =ColorFade(Button3_69.BorderColor, 20%)
-        HoverColor: |-
-            =ColorValue("#26495B")
-        HoverFill: |-
-            =ColorValue("#6DE8D2")
-        OnSelect: |-
-            =UpdateContext({_varReporte:false})
-        PressedBorderColor: |-
-            =ColorValue("#6DE8D2")
-        PressedColor: |-
-            =ColorValue("#6DE8D2")
-        PressedFill: =Button3_69.Color
-        RadiusBottomLeft: =8
-        RadiusBottomRight: =8
-        RadiusTopLeft: =8
-        RadiusTopRight: =8
-        Size: =14
-        Text: ="DESCARGAR REPORTE"
-        Visible: |-
-            =//_varReporte
-            false
-        Width: =252
-        X: =549
-        Y: =530
-        ZIndex: =69
-
-    Circle2_7 As circle:
-        Fill: =RGBA(255, 0, 0, 1)
-        Height: =20
-        Visible: |
-            =//If(varContador2<>varContador1;true;false)
-            If(Last(colAlertaNotificacion).Alerta=true,true,false)
-        Width: =20
-        X: =1045
-        Y: =18
-        ZIndex: =70
+        ZIndex: =58
 
     Group13_1 As group:
         Height: =5
@@ -872,7 +1030,7 @@ scDataAntigua As screen:
                 =UpdateContext({_Emergencia_DCA:false})
             Visible: =_Emergencia_DCA
             Width: =1366
-            ZIndex: =81
+            ZIndex: =54
 
         txt_Fondo_Emergencia_AM_1 As text:
             Default: =""
@@ -888,7 +1046,7 @@ scDataAntigua As screen:
             Width: =404
             X: =513
             Y: =138
-            ZIndex: =82
+            ZIndex: =55
 
         lbl_Emergencia_AM_1 As label:
             Align: =Align.Center
@@ -901,7 +1059,7 @@ scDataAntigua As screen:
             Width: =400
             X: =513
             Y: =162
-            ZIndex: =83
+            ZIndex: =56
 
         img_Emergencia_AM_1 As image:
             Height: =376
@@ -912,165 +1070,7 @@ scDataAntigua As screen:
             Width: =361
             X: =513
             Y: =156
-            ZIndex: =84
-
-    Image12_39 As image:
-        Height: =80
-        Image: ='Transparente Original'
-        OnSelect: =
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        Visible: =Not(Parent.Printing)
-        Width: =119
-        X: =631
-        Y: =8
-        ZIndex: =71
-
-    Rectangle_Reporte_AM_1 As rectangle:
-        Fill: =RGBA(0, 0, 0, 0.28)
-        Height: =768
-        Visible: =_varReporte
-        Width: =1366
-        ZIndex: =73
-
-    txt_Fondo_Reporte_AM_1 As text:
-        Default: =""
-        DisabledBorderColor: =RGBA(0, 0, 0, 1)
-        DisabledFill: =RGBA(241, 242, 246, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Height: =442
-        RadiusBottomLeft: =8
-        RadiusBottomRight: =8
-        RadiusTopLeft: =8
-        RadiusTopRight: =8
-        Visible: =_varReporte
-        Width: =484
-        X: =435
-        Y: =158
-        ZIndex: =74
-
-    lbl_FechaReporte_AM_1 As label:
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =41
-        Size: =16
-        Text: ="Reporte  " & Text(Today(),"dd/mm/yyyy")
-        Visible: =_varReporte
-        Width: =292
-        X: =455
-        Y: =178
-        ZIndex: =75
-
-    gal_Reporte_AM_1 As gallery.galleryVertical:
-        Height: =186
-        Items: =Filter('public.Medical_Center_Counter',estado="Atendido",etapa="Atención Medica",usuario=User().Email,Text(fecha,"dd/mm/yyyy")=Text(Today(),"dd/mm/yyyy"))
-        Layout: =Layout.Vertical
-        TemplateSize: =56
-        Visible: =_varReporte
-        Width: =474
-        X: =435
-        Y: =254
-        ZIndex: =76
-
-        Label19_4 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =24
-            OnSelect: =Select(Parent)
-            Text: |-
-                =Proper(Substitute(ThisItem.Servicio,"Cita: ",""))
-            Width: =262
-            X: =14
-            ZIndex: =1
-
-        Label19_7 As label:
-            Color: =RGBA(95, 106, 146, 1)
-            Font: =Font.'Segoe UI'
-            Height: =21
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: =LookUp('public.Medical_Center_Historial_Principal',DNI_CI=ThisItem.DNI_Paciente,Nombres) & " " & LookUp('public.Medical_Center_Historial_Principal',DNI_CI=ThisItem.DNI_Paciente,Apellidos)
-            Width: =287
-            X: =14
-            Y: =30
-            ZIndex: =2
-
-        Label19_6 As label:
-            Align: =Align.Center
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =24
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: |-
-                =varSimboloMaestros & Text(LookUp('public.Medical_Center_Servicios',Servicio=Proper(Substitute(ThisItem.Servicio,"Cita: ","")),Costo),"# ##.00")
-            X: =301
-            ZIndex: =3
-
-        Label19_8 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =21
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: |-
-                =LookUp('public.Medical_Center_Servicios',Servicio=Proper(Substitute(ThisItem.Servicio,"Cita: ","")),Costo)
-            Visible: =false
-            X: =301
-            Y: =30
-            ZIndex: =4
-
-    lbl_Reporte_Total_1 As label:
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Size: =12
-        Text: ="Total"
-        Visible: =_varReporte
-        X: =463
-        Y: =458
-        ZIndex: =77
-
-    lbl_Monto_Reporte_AM_1 As label:
-        Align: =Align.Center
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Size: =12
-        Text: |-
-            =varSimboloMaestros & Text(Sum(gal_Reporte_AM_1.AllItems,Label19_8.Text),"# ###.00")
-        Visible: =_varReporte
-        X: =747
-        Y: =458
-        ZIndex: =78
-
-    Rectangle_Separador_Reporte_1 As rectangle:
-        Fill: =RGBA(0, 0, 0, 1)
-        Height: =2
-        Visible: =_varReporte
-        Width: =428
-        X: =460
-        Y: =451
-        ZIndex: =79
-
-    icon_Cerrar_Reporte_AM_1 As icon.Cancel:
-        Color: =RGBA(0, 0, 0, 1)
-        Height: =40
-        Icon: =Icon.Cancel
-        OnSelect: |-
-            =UpdateContext({_varReporte:false})
-        Visible: =_varReporte
-        Width: =40
-        X: =849
-        Y: =172
-        ZIndex: =80
-
-    Rectangle37_3 As rectangle:
-        Fill: =RGBA(0, 0, 0, 0.28)
-        Height: =768
-        Visible: =_varViewDoctor
-        Width: =1366
-        ZIndex: =85
+            ZIndex: =57
 
     TextInput3_9 As text:
         Default: =Date(Year(_firstDayOfMonth4),Month(_firstDayOfMonth4),gal_Calendario_2.Selected.Title2_11.Text)
@@ -1088,7 +1088,7 @@ scDataAntigua As screen:
         Width: =207
         X: =636
         Y: =423
-        ZIndex: =102
+        ZIndex: =75
 
     TextInput3_10 As text:
         Default: =""
@@ -1103,7 +1103,7 @@ scDataAntigua As screen:
         Width: =207
         X: =635
         Y: =477
-        ZIndex: =103
+        ZIndex: =76
 
     TextInput3_11 As text:
         Default: =""
@@ -1118,403 +1118,14 @@ scDataAntigua As screen:
         Width: =207
         X: =635
         Y: =531
-        ZIndex: =104
-
-    Group39_3 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =105
-
-        TextInput36_4 As text:
-            Default: =""
-            DisabledBorderColor: =RGBA(0, 0, 0, 1)
-            DisplayMode: =DisplayMode.Disabled
-            Height: =736
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Visible: =_varViewDoctor
-            Width: =448
-            X: =500
-            Y: =14
-            ZIndex: =86
-
-        txt_Calendario_Paciente_por_Atender_5 As text:
-            Default: =""
-            DisabledBorderColor: =RGBA(0, 0, 0, 1)
-            DisabledFill: =RGBA(255, 255, 255, 1)
-            DisplayMode: =DisplayMode.Disabled
-            Height: =649
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Visible: =_varViewDoctor
-            Width: =400
-            X: =524
-            Y: =79
-            ZIndex: =87
-
-        lbl_Fecha_5 As label:
-            Align: =Align.Center
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Text: =Text(_firstDayOfMonth4, "mmmm yyyy")
-            Visible: =_varViewDoctor
-            Width: =400
-            Wrap: =false
-            X: =524
-            Y: =91
-            ZIndex: =88
-
-        icon_Left_Calendario_5 As icon.ChevronLeft:
-            Color: =RGBA(0, 0, 0, 1)
-            Height: =40
-            Icon: =Icon.ChevronLeft
-            OnSelect: |-
-                =/*changes month view to previous month*/
-                Set(_firstDayOfMonth4, DateAdd(_firstDayOfMonth4, -1, TimeUnit.Months));
-                Set(_firstDayInView4, DateAdd(_firstDayOfMonth4, -(Weekday(_firstDayOfMonth4) - 2 + 1), TimeUnit.Days));
-                Set(_lastDayOfMonth4, DateAdd(DateAdd(_firstDayOfMonth4, 1, TimeUnit.Months), -1, TimeUnit.Days));
-                /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
-                If(_minDate4 > _firstDayOfMonth4, Set(_minDate4, _firstDayOfMonth4); Collect(MyCalendarEvents4, Office365Outlook.GetEventsCalendarViewV2("Calendar", Text(_minDate4, DateTimeFormat.UTC), Text(_lastDayOfMonth4, DateTimeFormat.UTC)).value))
-            PaddingBottom: =7
-            PaddingLeft: =7
-            PaddingRight: =7
-            PaddingTop: =7
-            TabIndex: =0
-            Tooltip: ="Ver el mes anterior"
-            Visible: =_varViewDoctor
-            Width: =40
-            X: =550
-            Y: =91
-            ZIndex: =89
-
-        icon_Right_Calendario_5 As icon.ChevronRight:
-            Color: =RGBA(0, 0, 0, 1)
-            Height: =40
-            Icon: =Icon.ChevronRight
-            OnSelect: |-
-                =/*changes month view to next month*/
-                Set(_firstDayOfMonth4, DateAdd(_firstDayOfMonth4, 1, TimeUnit.Months));
-                Set(_firstDayInView4, DateAdd(_firstDayOfMonth4, -(Weekday(_firstDayOfMonth4) - 2 + 1), TimeUnit.Days));
-                /*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/
-                Set(_lastDayOfMonth4, DateAdd(DateAdd(_firstDayOfMonth4, 1, TimeUnit.Months), -1, TimeUnit.Days));
-                If(_lastDayOfMonth4 > _maxDate4, Set(_maxDate4, _lastDayOfMonth4); Collect(MyCalendarEvents4, Office365Outlook.GetEventsCalendarViewV2("Calendar", Text(_firstDayOfMonth4, DateTimeFormat.UTC), Text(_maxDate4, DateTimeFormat.UTC)).value))
-            PaddingBottom: =7
-            PaddingLeft: =7
-            PaddingRight: =7
-            PaddingTop: =7
-            TabIndex: =0
-            Tooltip: ="Ver el mes siguiente"
-            Visible: =_varViewDoctor
-            Width: =40
-            X: =863
-            Y: =91
-            ZIndex: =90
-
-        gal_Dias_Calendario_5 As gallery.WeekdayGallery:
-            AccessibleLabel: ="Días de la semana"
-            Height: =46
-            Items: =Calendar.WeekdaysShort()
-            ShowScrollbar: =false
-            TemplatePadding: =0
-            TemplateSize: =50
-            Visible: =_varViewDoctor
-            Width: =360
-            X: =544
-            Y: =154
-            ZIndex: =91
-
-            Title1_17 As label:
-                Align: =Align.Center
-                Font: =Font.'Segoe UI'
-                Height: =46
-                OnSelect: =Select(Parent)
-                Size: =10
-                Text: =ThisItem.Value
-                Width: =46
-                Wrap: =false
-                X: =4
-                Y: =gal_Dias_Calendario_5.TemplateHeight / 2 - Self.Height / 2
-                ZIndex: =1
-
-        gal_Calendario_5 As gallery.MonthDayGallery:
-            AccessibleLabel: ="Días del mes seleccionado"
-            Height: =194
-            Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
-            Layout: =Layout.Vertical
-            ShowScrollbar: =false
-            TemplatePadding: =0
-            TemplateSize: =37
-            Visible: =_varViewDoctor
-            Width: =350
-            WrapCount: =7
-            X: =548
-            Y: =200
-            ZIndex: =92
-
-            Circle1_77 As circle:
-                Height: =4
-                OnSelect: =Select(Parent)
-                Visible: |-
-                    =/*Visible if calendar events are found on this day*/               
-                    CountRows(Filter(MyCalendarEvents4, DateValue(Text(Start)) = DateAdd(_firstDayInView4,ThisItem.Value,TimeUnit.Days))) > 0 && !Subcircle1_14.Visible && Title2_14.Visible
-                Width: =4
-                X: =23
-                Y: =29
-                ZIndex: =1
-
-            Subcircle1_14 As circle:
-                Fill: =ColorFondoBoton
-                Height: =3 * Title2_14.Size
-                OnSelect: =Select(Parent)
-                Visible: =And(DateAdd(_firstDayInView4, ThisItem.Value) = _dateSelected4, Title2_14.Visible)
-                Width: =Self.Height
-                X: =10
-                Y: =3
-                ZIndex: =2
-
-            Title2_14 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                Color: =If(ThisItem.IsSelected,RGBA(255,255,255,1),RGBA(0,0,0,1))
-                Fill: |-
-                    =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
-                    If(
-                        /*Date selected is today*/
-                        DateAdd(_firstDayInView4, ThisItem.Value) = Today() && DateAdd(_firstDayInView4, ThisItem.Value) = _dateSelected3, RGBA(0,0,0,0),
-                        /*Today when it is not selected*/
-                        DateAdd(_firstDayInView4, ThisItem.Value) = Today(), ColorFade(Subcircle1_14.Fill, 0.67), 
-                        /*The day is outside the range of the currently selected month*/
-                        Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
-                FocusedBorderColor: =Self.Color
-                FocusedBorderThickness: =2
-                Font: =Font.'Segoe UI'
-                Height: =37
-                OnSelect: =Set(_dateSelected4, DateAdd(_firstDayInView4, ThisItem.Value, TimeUnit.Days))
-                Size: =10
-                TabIndex: =0
-                Text: =Day(DateAdd(_firstDayInView4,ThisItem.Value,TimeUnit.Days))
-                Visible: |-
-                    =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
-                     !(DateAdd(_firstDayInView3,ThisItem.Value,TimeUnit.Days) - Weekday(DateAdd(_firstDayInView3,ThisItem.Value,TimeUnit.Days)) + 1 > _lastDayOfMonth3)
-                Width: =50
-                Wrap: =false
-                ZIndex: =3
-
-        lbl_Count_Pacientes_11 As label:
-            Color: =RGBA(95, 106, 146, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =27
-            Text: |
-                ="Fecha :  "
-            Visible: =_varViewDoctor
-            Width: =78
-            X: =552
-            Y: =428
-            ZIndex: =93
-
-        Rectangle_Separador_Calendario_5 As rectangle:
-            Fill: =RGBA(0, 0, 0, 1)
-            Height: =2
-            Visible: =_varViewDoctor
-            Width: =400
-            X: =524
-            Y: =398
-            ZIndex: =94
-
-        Label56_4 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =32
-            Size: =16
-            Text: ="Calendario"
-            Visible: =_varViewDoctor
-            Width: =273
-            X: =522
-            Y: =27
-            ZIndex: =95
-
-        Icon23_5 As icon.Cancel:
-            Color: =RGBA(0, 0, 0, 1)
-            Height: =30
-            Icon: =Icon.Cancel
-            OnSelect: |-
-                =UpdateContext({_varViewDoctor:false})
-            Visible: =_varViewDoctor
-            Width: =35
-            X: =889
-            Y: =30
-            ZIndex: =96
-
-        lbl_Count_Pacientes_12 As label:
-            Color: =RGBA(95, 106, 146, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =27
-            Text: |-
-                ="De : "
-            Visible: =_varViewDoctor
-            Width: =67
-            X: =552
-            Y: =486
-            ZIndex: =97
-
-        lbl_Count_Pacientes_13 As label:
-            Color: =RGBA(95, 106, 146, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =27
-            Text: |-
-                ="Hasta : "
-            Visible: =_varViewDoctor
-            Width: =67
-            X: =549
-            Y: =539
-            ZIndex: =98
-
-        Button13_7 As button:
-            BorderColor: =ColorFondoBoton
-            Color: =ColorFondoBoton
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.'Segoe UI'
-            HoverFill: =ColorFondoBoton
-            OnSelect: |-
-                =Collect(
-                    colBloqueos,
-                    {
-                        Fecha: Date(
-                            Year(_firstDayOfMonth4),
-                            Month(_firstDayOfMonth4),
-                            gal_Calendario_5.Selected.Title2_14.Text
-                        ),
-                        HoraInicio: DateTimeValue(
-                            Date(
-                                Year(_firstDayOfMonth4),
-                                Month(_firstDayOfMonth4),
-                                gal_Calendario_2.Selected.Title2_11.Text
-                            ) & " " & dpEstadoCivil_DCA_24.Selected.Value
-                        ),
-                        HoraFin: DateTimeValue(
-                            Date(
-                                Year(_firstDayOfMonth4),
-                                Month(_firstDayOfMonth4),
-                                gal_Calendario_2.Selected.Title2_11.Text
-                            ) & " " & dpEstadoCivil_DCA_25.Selected.Value
-                        ),
-                        Usuario1: User().Email
-                    }
-                );Notify("Se agrego un nuevo elemento",NotificationType.Success,2000)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Size: =12
-            Text: ="Agregar"
-            Visible: =_varViewDoctor
-            X: =740
-            Y: =599
-            ZIndex: =99
-
-        Button18_4 As button:
-            BorderColor: =ColorCuarto
-            Color: =ColorCuarto
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.'Segoe UI'
-            HoverFill: =ColorCuarto
-            OnSelect: =Clear(colBloqueos)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Size: =12
-            Text: ="Limpiar"
-            Visible: =_varViewDoctor
-            X: =551
-            Y: =599
-            ZIndex: =100
-
-        Button20_7 As button:
-            DisplayMode: =If(IsEmpty(colBloqueos),DisplayMode.Disabled,DisplayMode.Edit)
-            Fill: =ColorFondoBoton
-            Font: =Font.'Segoe UI'
-            Height: =43
-            HoverFill: =ColorFondoBoton
-            OnSelect: |-
-                =/*Patch('public.Medical_Center_Usuario';LookUp('public.Medical_Center_Usuario';Correo=User().Email);{Disponibilidad:false});;
-                ForAll(colBloqueos As AsColBloqueo;
-                Patch('public.Medical_Center_Calendario_Bloquear';Defaults('public.Medical_Center_Calendario_Bloquear');
-                {id:First(SortByColumns('public.Medical_Center_Calendario_Bloquear';"id";SortOrder.Descending)).id+1;   
-                HoraInicial:AsColBloqueo.HoraInicio;
-                HoraFinal:AsColBloqueo.HoraFin;
-                fecha_Bloqueo:AsColBloqueo.Fecha;
-                 id_sede : _varSede.id;
-                Activo:true;
-                UsuarioCorreo:AsColBloqueo.Usuario1}));;
-                UpdateContext({_varViewDoctor:false});;
-                Clear(colBloqueos)*/
-                UpdateContext({_varViewBloqueoCalendario:true})
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Size: =12
-            Text: ="VISUALIZAR"
-            Visible: =_varViewDoctor
-            Width: =351
-            X: =551
-            Y: =664
-            ZIndex: =101
-
-        dpEstadoCivil_DCA_31 As dropdown:
-            BorderStyle: =BorderStyle.None
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronFill: =RGBA(0, 0, 0, 1)
-            ChevronHoverBackground: =
-            ChevronHoverFill: =RGBA(0, 0, 0, 1)
-            Font: =Font.'Segoe UI'
-            Height: =30
-            HoverBorderColor: =
-            HoverFill: =RGBA(255, 255, 255, 1)
-            Items: |-
-                =["09:00 AM","09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","13:00 PM","13:30 PM","14:00 PM","14:30 PM","15:00 PM","15:30 PM","16:00 PM","16:30 PM","17:00 PM","17:30 PM"]
-            Size: =12
-            Visible: =_varViewDoctor
-            Width: =200
-            X: =639
-            Y: =483
-            ZIndex: =106
-
-        dpEstadoCivil_DCA_32 As dropdown:
-            BorderStyle: =BorderStyle.None
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronFill: =RGBA(0, 0, 0, 1)
-            ChevronHoverBackground: =
-            ChevronHoverFill: =RGBA(0, 0, 0, 1)
-            Font: =Font.'Segoe UI'
-            Height: =30
-            HoverBorderColor: =
-            HoverFill: =RGBA(255, 255, 255, 1)
-            Items: |-
-                =["09:00 AM","09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","13:00 PM","13:30 PM","14:00 PM","14:30 PM","15:00 PM","15:30 PM","16:00 PM","16:30 PM","17:00 PM","19:30 PM"]
-            Size: =12
-            Visible: =_varViewDoctor
-            Width: =200
-            X: =639
-            Y: =537
-            ZIndex: =107
+        ZIndex: =77
 
     Rectangle4_3 As rectangle:
         Fill: =RGBA(0, 0, 0, 0.29)
         Height: =768
         Visible: =_varViewBloqueoCalendario
         Width: =1366
-        ZIndex: =108
+        ZIndex: =80
 
     TextInput43_3 As text:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1531,7 +1142,7 @@ scDataAntigua As screen:
         Width: =1266
         X: =40
         Y: =40
-        ZIndex: =109
+        ZIndex: =81
 
     DataTable1_3 As dataTable.datatable:
         BorderColor: =ColorFondoBoton
@@ -1550,7 +1161,7 @@ scDataAntigua As screen:
         Width: =1086
         X: =160
         Y: =138
-        ZIndex: =110
+        ZIndex: =82
 
         HoraFin_Columna1_3 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -1624,7 +1235,7 @@ scDataAntigua As screen:
         Width: =351
         X: =541
         Y: =636
-        ZIndex: =111
+        ZIndex: =83
 
     Icon28_3 As icon.Cancel:
         Color: =RGBA(0, 0, 0, 1)
@@ -1636,7 +1247,7 @@ scDataAntigua As screen:
         Width: =40
         X: =1206
         Y: =59
-        ZIndex: =112
+        ZIndex: =84
 
     btnDataAntiguaCm_1 As button:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -1664,7 +1275,7 @@ scDataAntigua As screen:
         Width: =216
         X: =30
         Y: =376
-        ZIndex: =113
+        ZIndex: =85
 
     Image45 As image:
         Height: =24
@@ -1672,7 +1283,7 @@ scDataAntigua As screen:
         Width: =24
         X: =50
         Y: =393
-        ZIndex: =114
+        ZIndex: =86
 
     Image46 As image:
         Height: =24
@@ -1680,7 +1291,7 @@ scDataAntigua As screen:
         Width: =24
         X: =50
         Y: =137
-        ZIndex: =115
+        ZIndex: =87
 
     ContainerPacientesAnt As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
@@ -1689,7 +1300,7 @@ scDataAntigua As screen:
         Width: =1030
         X: =306
         Y: =130
-        ZIndex: =117
+        ZIndex: =88
 
         Label30_10 As label:
             Align: =Align.Center
@@ -1832,6 +1443,8 @@ scDataAntigua As screen:
                         Color: =RGBA(44, 97, 112, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         Font: =Font.'Segoe UI'
+                        OnSelect: |-
+                            =UpdateContext({_varpoRecords: true, recordsvalue:ThisItem})
                         Size: =12
                         Text: ="Revisar"
                         Width: =140
@@ -1947,747 +1560,1249 @@ scDataAntigua As screen:
             Y: =76
             ZIndex: =11
 
-    ContainerRecords As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(241, 242, 246,1)
-        Height: =740
-        Width: =1200
-        X: =83
-        Y: =14
-        ZIndex: =118
+    GroupRecords As group:
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =100
+        ZIndex: =91
 
-        btnCitas As button:
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(44, 97, 112, 1)
-            Fill: =RGBA(0, 0, 0, 0)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(_varData =  "citas", FontWeight.Semibold , FontWeight.Normal)
-            HoverColor: =RGBA(44, 97, 112, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
+        Rectangle76 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.25)
+            Height: =768
             OnSelect: |-
-                =UpdateContext({_varData: "citas"});
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            PressedColor: =RGBA(44, 97, 112, 1)
-            PressedFill: =
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =18
-            Text: ="Citas"
-            Width: =140
-            X: =20
-            Y: =100
-            ZIndex: =1
+                =UpdateContext({_varpoRecords: false})
+            Visible: =_varpoRecords
+            Width: =1366
+            ZIndex: =89
 
-        btnHistorias As button:
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(44, 97, 112, 1)
-            Fill: =RGBA(0, 0, 0, 0)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(_varData =  "historia", FontWeight.Semibold , FontWeight.Normal)
-            HoverColor: =RGBA(44, 97, 112, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            OnSelect: |-
-                =UpdateContext({_varData: "historia"});
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            PressedColor: =RGBA(44, 97, 112, 1)
-            PressedFill: =
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =18
-            Text: ="Historias"
-            Width: =140
-            X: =160
-            Y: =100
-            ZIndex: =2
+        ContainerRecords As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(241, 242, 246,1)
+            Height: =740
+            Visible: =_varpoRecords
+            Width: =1200
+            X: =83
+            Y: =14
+            ZIndex: =90
 
-        btnImg As button:
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(44, 97, 112, 1)
-            Fill: =RGBA(0, 0, 0, 0)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(_varData =  "img", FontWeight.Semibold , FontWeight.Normal)
-            HoverColor: =RGBA(44, 97, 112, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            OnSelect: |-
-                =UpdateContext({_varData: "img"});
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            PressedColor: =RGBA(44, 97, 112, 1)
-            PressedFill: =
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =18
-            Text: ="Imágenes"
-            Width: =140
-            X: =300
-            Y: =100
-            ZIndex: =3
-
-        Icon59 As icon.Cancel:
-            Color: =RGBA(0, 0, 0, 1)
-            Height: =24
-            Icon: =Icon.Cancel
-            Width: =24
-            X: =1156
-            Y: =20
-            ZIndex: =4
-
-        Rectangle72 As rectangle:
-            Fill: =RGBA(44, 97, 112, 1)
-            Height: =3
-            Visible: =If(_varData =  "citas", true,false)
-            Width: =140
-            X: =20
-            Y: =140
-            ZIndex: =5
-
-        Rectangle72_1 As rectangle:
-            Fill: =RGBA(44, 97, 112, 1)
-            Height: =3
-            Visible: =If(_varData =  "historia", true,false)
-            Width: =140
-            X: =160
-            Y: =140
-            ZIndex: =6
-
-        Rectangle72_2 As rectangle:
-            Fill: =RGBA(44, 97, 112, 1)
-            Height: =3
-            Visible: =If(_varData =  "img", true,false)
-            Width: =140
-            X: =300
-            Y: =140
-            ZIndex: =7
-
-        ContainerCitas As groupContainer.manualLayoutContainer:
-            DropShadow: =DropShadow.Regular
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =576
-            Visible: =_varData = "citas"
-            Width: =1160
-            X: =20
-            Y: =144
-            ZIndex: =8
-
-            galCitas As gallery.galleryVertical:
-                DelayItemLoading: =true
-                Height: =517
-                Items: ='public.medical_center_anteriores_visits'
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                ShowScrollbar: =false
-                TemplateSize: =60
-                Width: =1160
-                Y: =60
+            btnCitas As button:
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                Font: =Font.'Segoe UI'
+                FontWeight: =If(_varData =  "citas", FontWeight.Semibold , FontWeight.Normal)
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: |-
+                    =UpdateContext({_varData: "citas"});
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =18
+                Text: ="Citas"
+                Width: =140
+                X: =20
+                Y: =100
                 ZIndex: =1
 
-                Container52 As groupContainer.horizontalAutoLayoutContainer:
-                    Height: =60
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =Parent.Width
-                    ZIndex: =1
-
-                    Container55 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =165
-                        ZIndex: =1
-
-                        Label95 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.Start
-                            Wrap: =false
-                            ZIndex: =1
-
-                    Container56 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =165
-                        ZIndex: =2
-
-                        Label95_1 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.End
-                            Wrap: =false
-                            ZIndex: =1
-
-                    Container57 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =165
-                        ZIndex: =3
-
-                        Label95_2 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.Status
-                            Wrap: =false
-                            ZIndex: =1
-
-                    Container60 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =165
-                        ZIndex: =4
-
-                        Label95_3 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.Cabinet
-                            Wrap: =false
-                            ZIndex: =1
-
-                    Container61 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =165
-                        ZIndex: =5
-
-                        Label95_4 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.Doctor
-                            Wrap: =false
-                            ZIndex: =1
-
-                    Container62 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =165
-                        ZIndex: =6
-
-                        Label95_5 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.'Service Names'
-                            Wrap: =false
-                            ZIndex: =1
-
-                    Container63 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =165
-                        ZIndex: =7
-
-                        Label95_6 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.Comment
-                            Wrap: =false
-                            ZIndex: =1
-
-            Label95_7 As label:
-                Align: =Align.Center
+            btnHistorias As button:
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(0, 0, 0, 0)
                 Font: =Font.'Segoe UI'
-                Height: =24
+                FontWeight: =If(_varData =  "historia", FontWeight.Semibold , FontWeight.Normal)
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: |-
+                    =UpdateContext({_varData: "historia"});
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
                 Size: =18
-                Text: ="Inicio"
-                Width: =80
-                Wrap: =false
-                X: =44
-                Y: =20
+                Text: ="Historias"
+                Width: =140
+                X: =160
+                Y: =100
                 ZIndex: =2
 
-            Label95_8 As label:
-                Align: =Align.Center
+            btnImg As button:
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(44, 97, 112, 1)
+                Fill: =RGBA(0, 0, 0, 0)
                 Font: =Font.'Segoe UI'
-                Height: =24
+                FontWeight: =If(_varData =  "img", FontWeight.Semibold , FontWeight.Normal)
+                HoverColor: =RGBA(44, 97, 112, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: |-
+                    =UpdateContext({_varData: "img"});
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
+                PressedColor: =RGBA(44, 97, 112, 1)
+                PressedFill: =
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
                 Size: =18
-                Text: ="Fin"
-                Width: =80
-                Wrap: =false
-                X: =172
-                Y: =20
+                Text: ="Imágenes"
+                Width: =140
+                X: =300
+                Y: =100
                 ZIndex: =3
 
-            Label95_9 As label:
-                Align: =Align.Center
-                Font: =Font.'Segoe UI'
+            Icon59 As icon.Cancel:
+                Color: =RGBA(0, 0, 0, 1)
                 Height: =24
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =18
-                Text: ="Estado"
-                Width: =80
-                Wrap: =false
-                X: =278
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({_varpoRecords: false})
+                Width: =24
+                X: =1156
                 Y: =20
                 ZIndex: =4
 
-            Label95_10 As label:
-                Align: =Align.Center
-                Font: =Font.'Segoe UI'
-                Height: =24
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =18
-                Text: ="Consultorio"
-                Wrap: =false
-                X: =406
-                Y: =20
+            Rectangle72 As rectangle:
+                Fill: =RGBA(44, 97, 112, 1)
+                Height: =3
+                Visible: =If(_varData =  "citas", true,false)
+                Width: =140
+                X: =20
+                Y: =140
                 ZIndex: =5
 
-            Label95_11 As label:
-                Align: =Align.Center
-                Font: =Font.'Segoe UI'
-                Height: =24
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =18
-                Text: ="Doctor"
-                Width: =80
-                Wrap: =false
-                X: =610
-                Y: =20
+            Rectangle72_1 As rectangle:
+                Fill: =RGBA(44, 97, 112, 1)
+                Height: =3
+                Visible: =If(_varData =  "historia", true,false)
+                Width: =140
+                X: =160
+                Y: =140
                 ZIndex: =6
 
-            Label95_12 As label:
-                Align: =Align.Center
-                Font: =Font.'Segoe UI'
-                Height: =24
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =18
-                Text: ="Servicio"
-                Width: =100
-                Wrap: =false
-                X: =752
-                Y: =20
+            Rectangle72_2 As rectangle:
+                Fill: =RGBA(44, 97, 112, 1)
+                Height: =3
+                Visible: =If(_varData =  "img", true,false)
+                Width: =140
+                X: =300
+                Y: =140
                 ZIndex: =7
 
-            Label95_13 As label:
-                Align: =Align.Center
-                Font: =Font.'Segoe UI'
-                Height: =24
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =18
-                Text: ="Comentario"
-                Width: =140
-                Wrap: =false
-                X: =993
-                Y: =20
+            ContainerCitas As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Regular
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =576
+                Visible: =_varData = "citas"
+                Width: =1160
+                X: =20
+                Y: =144
                 ZIndex: =8
 
-            Rectangle74 As rectangle:
-                Fill: =RGBA(0, 0, 0, 1)
-                Height: =2
-                Width: =1128
-                X: =16
-                Y: =58
-                ZIndex: =9
-
-        Rectangle75 As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =60
-            Width: =1054
-            X: =20
-            Y: =20
-            ZIndex: =9
-
-        Label95_14 As label:
-            Align: =Align.Center
-            Font: =Font.'Segoe UI'
-            Height: =28
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: |-
-                ="Paciente:"
-            Width: =65
-            Wrap: =false
-            X: =40
-            Y: =36
-            ZIndex: =10
-
-        Label95_15 As label:
-            Align: =Align.Center
-            Font: =Font.'Segoe UI'
-            Height: =28
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: |-
-                ="Documento Identidad:"
-            Width: =164
-            Wrap: =false
-            X: =426
-            Y: =36
-            ZIndex: =11
-
-        Label95_16 As label:
-            Align: =Align.Center
-            Font: =Font.'Segoe UI'
-            Height: =28
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: |-
-                ="Celular:"
-            Width: =55
-            Wrap: =false
-            X: =824
-            Y: =36
-            ZIndex: =12
-
-        Label95_17 As label:
-            Color: =RGBA(95, 106, 146, 1)
-            Font: =Font.'Segoe UI'
-            Height: =28
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: |-
-                ="Celular:"
-            Width: =250
-            Wrap: =false
-            X: =109
-            Y: =36
-            ZIndex: =13
-
-        Label95_18 As label:
-            Color: =RGBA(95, 106, 146, 1)
-            Font: =Font.'Segoe UI'
-            Height: =28
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: |-
-                ="Celular:"
-            Width: =200
-            Wrap: =false
-            X: =598
-            Y: =36
-            ZIndex: =14
-
-        Label95_19 As label:
-            Color: =RGBA(95, 106, 146, 1)
-            Font: =Font.'Segoe UI'
-            Height: =28
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: |-
-                ="Celular:"
-            Wrap: =false
-            X: =887
-            Y: =36
-            ZIndex: =15
-
-        ContainerHistoria As groupContainer.manualLayoutContainer:
-            DropShadow: =DropShadow.Regular
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =576
-            Visible: =_varData = "historia"
-            Width: =1160
-            X: =20
-            Y: =144
-            ZIndex: =16
-
-            galRecords As gallery.galleryVertical:
-                DelayItemLoading: =true
-                Height: =517
-                Items: ='public.medical_center_anteriores_records'
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                ShowScrollbar: =false
-                TemplateSize: =60
-                Width: =1160
-                Y: =59
-                ZIndex: =1
-
-                Container52_1 As groupContainer.horizontalAutoLayoutContainer:
-                    Height: =60
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =1150
+                galCitas As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    Height: =517
+                    Items: ='public.medical_center_anteriores_visits'
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowScrollbar: =false
+                    TemplateSize: =60
+                    Width: =1160
+                    Y: =60
                     ZIndex: =1
 
-                    Container55_1 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
+                    Container52 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =60
                         LayoutMode: =LayoutMode.Auto
-                        Width: =285
+                        Width: =Parent.Width
                         ZIndex: =1
 
-                        Label95_20 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.'Protocol Name'
-                            Wrap: =false
+                        Container55 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =165
                             ZIndex: =1
 
-                    Container56_1 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =285
-                        ZIndex: =2
+                            Label95 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.Start
+                                Wrap: =false
+                                ZIndex: =1
 
-                        Label95_21 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.'Group Name'
-                            Wrap: =false
-                            ZIndex: =1
+                        Container56 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =165
+                            ZIndex: =2
 
-                    Container57_1 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =285
-                        ZIndex: =3
+                            Label95_1 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.End
+                                Wrap: =false
+                                ZIndex: =1
 
-                        Label95_22 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.'Element Name'
-                            Wrap: =false
-                            ZIndex: =1
+                        Container57 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =165
+                            ZIndex: =3
 
-                    Container60_1 As groupContainer.verticalAutoLayoutContainer:
-                        FillPortions: =0
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =60
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =285
-                        ZIndex: =4
+                            Label95_2 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.Status
+                                Wrap: =false
+                                ZIndex: =1
 
-                        Label95_23 As label:
-                            Align: =Align.Center
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            Size: =15
-                            Text: =ThisItem.'Element Value'
-                            Wrap: =false
-                            ZIndex: =1
+                        Container60 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =165
+                            ZIndex: =4
 
-            Label95_27 As label:
-                Align: =Align.Center
-                Font: =Font.'Segoe UI'
-                Height: =24
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =18
-                Text: ="Nombre"
-                Width: =100
-                Wrap: =false
-                X: =92
+                            Label95_3 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.Cabinet
+                                Wrap: =false
+                                ZIndex: =1
+
+                        Container61 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =165
+                            ZIndex: =5
+
+                            Label95_4 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.Doctor
+                                Wrap: =false
+                                ZIndex: =1
+
+                        Container62 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =165
+                            ZIndex: =6
+
+                            Label95_5 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.'Service Names'
+                                Wrap: =false
+                                ZIndex: =1
+
+                        Container63 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =165
+                            ZIndex: =7
+
+                            Label95_6 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.Comment
+                                Wrap: =false
+                                ZIndex: =1
+
+                Label95_7 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Inicio"
+                    Width: =80
+                    Wrap: =false
+                    X: =44
+                    Y: =20
+                    ZIndex: =2
+
+                Label95_8 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Fin"
+                    Width: =80
+                    Wrap: =false
+                    X: =212
+                    Y: =20
+                    ZIndex: =3
+
+                Label95_9 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Estado"
+                    Width: =80
+                    Wrap: =false
+                    X: =381
+                    Y: =20
+                    ZIndex: =4
+
+                Label95_10 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Consultorio"
+                    Wrap: =false
+                    X: =505
+                    Y: =20
+                    ZIndex: =5
+
+                Label95_11 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Doctor"
+                    Width: =80
+                    Wrap: =false
+                    X: =719
+                    Y: =20
+                    ZIndex: =6
+
+                Label95_12 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Servicio"
+                    Width: =100
+                    Wrap: =false
+                    X: =872
+                    Y: =20
+                    ZIndex: =7
+
+                Label95_13 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Comentario"
+                    Width: =140
+                    Wrap: =false
+                    X: =1000
+                    Y: =20
+                    ZIndex: =8
+
+                Rectangle74 As rectangle:
+                    Fill: =RGBA(0, 0, 0, 1)
+                    Height: =2
+                    Width: =1128
+                    X: =16
+                    Y: =58
+                    ZIndex: =9
+
+            Rectangle75 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =60
+                Width: =1054
+                X: =20
                 Y: =20
-                ZIndex: =2
+                ZIndex: =9
 
-            Label95_28 As label:
+            Label95_14 As label:
                 Align: =Align.Center
                 Font: =Font.'Segoe UI'
-                Height: =24
+                Height: =28
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =18
-                Text: ="Grupo"
-                Width: =80
+                Size: =12
+                Text: |-
+                    ="Paciente:"
+                Width: =65
                 Wrap: =false
-                X: =379
-                Y: =20
-                ZIndex: =3
+                X: =40
+                Y: =36
+                ZIndex: =10
 
-            Label95_29 As label:
+            Label95_15 As label:
                 Align: =Align.Center
                 Font: =Font.'Segoe UI'
-                Height: =24
+                Height: =28
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =18
-                Text: ="Elemento"
+                Size: =12
+                Text: |-
+                    ="Documento Identidad:"
+                Width: =164
                 Wrap: =false
-                X: =637
-                Y: =20
-                ZIndex: =4
+                X: =426
+                Y: =36
+                ZIndex: =11
 
-            Label95_30 As label:
+            Label95_16 As label:
                 Align: =Align.Center
                 Font: =Font.'Segoe UI'
-                Height: =24
+                Height: =28
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =18
-                Text: ="Valor de Elemento"
+                Size: =12
+                Text: |-
+                    ="Celular:"
+                Width: =55
+                Wrap: =false
+                X: =824
+                Y: =36
+                ZIndex: =12
+
+            Label95_17 As label:
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                Height: =28
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: =recordsvalue.Nombres & " " & recordsvalue.Apellidos
                 Width: =250
                 Wrap: =false
-                X: =857
-                Y: =20
-                ZIndex: =5
+                X: =109
+                Y: =36
+                ZIndex: =13
 
-            Rectangle74_1 As rectangle:
-                Fill: =RGBA(0, 0, 0, 1)
-                Height: =2
-                Width: =1128
-                X: =16
-                Y: =58
-                ZIndex: =9
+            Label95_18 As label:
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                Height: =28
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: =recordsvalue.DNI_CI
+                Width: =200
+                Wrap: =false
+                X: =598
+                Y: =36
+                ZIndex: =14
+
+            Label95_19 As label:
+                Color: =RGBA(95, 106, 146, 1)
+                Font: =Font.'Segoe UI'
+                Height: =28
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: =recordsvalue.Telefono
+                Wrap: =false
+                X: =887
+                Y: =36
+                ZIndex: =15
+
+            ContainerHistoria As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Regular
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =576
+                Visible: =_varData = "historia"
+                Width: =1160
+                X: =20
+                Y: =144
+                ZIndex: =16
+
+                galRecords As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    Height: =517
+                    Items: ='public.medical_center_anteriores_records'
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowScrollbar: =false
+                    TemplateSize: =60
+                    Width: =1160
+                    Y: =59
+                    ZIndex: =1
+
+                    Container52_1 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =60
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =1150
+                        ZIndex: =1
+
+                        Container55_1 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =285
+                            ZIndex: =1
+
+                            Label95_20 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.'Protocol Name'
+                                Wrap: =false
+                                ZIndex: =1
+
+                        Container56_1 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =285
+                            ZIndex: =2
+
+                            Label95_21 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.'Group Name'
+                                Wrap: =false
+                                ZIndex: =1
+
+                        Container57_1 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =285
+                            ZIndex: =3
+
+                            Label95_22 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.'Element Name'
+                                Wrap: =false
+                                ZIndex: =1
+
+                        Container60_1 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =285
+                            ZIndex: =4
+
+                            Label95_23 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.'Element Value'
+                                Wrap: =false
+                                ZIndex: =1
+
+                Label95_27 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Nombre"
+                    Width: =100
+                    Wrap: =false
+                    X: =92
+                    Y: =20
+                    ZIndex: =2
+
+                Label95_28 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Grupo"
+                    Width: =80
+                    Wrap: =false
+                    X: =379
+                    Y: =20
+                    ZIndex: =3
+
+                Label95_29 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Elemento"
+                    Wrap: =false
+                    X: =637
+                    Y: =20
+                    ZIndex: =4
+
+                Label95_30 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Valor de Elemento"
+                    Width: =250
+                    Wrap: =false
+                    X: =857
+                    Y: =20
+                    ZIndex: =5
+
+                Rectangle74_1 As rectangle:
+                    Fill: =RGBA(0, 0, 0, 1)
+                    Height: =2
+                    Width: =1128
+                    X: =16
+                    Y: =58
+                    ZIndex: =9
+
+            ContainerImg As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Regular
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =576
+                Visible: =_varData = "img"
+                Width: =1160
+                X: =20
+                Y: =144
+                ZIndex: =17
+
+                galCitas_1 As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    Height: =517
+                    Items: ='public.medical_center_anteriores_visits'
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowScrollbar: =false
+                    TemplateSize: =60
+                    Width: =1160
+                    Y: =59
+                    ZIndex: =1
+
+                    Container52_2 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =60
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =1150
+                        ZIndex: =1
+
+                        Container55_2 As groupContainer.verticalAutoLayoutContainer:
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =165
+                            ZIndex: =1
+
+                            Label95_24 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.Start
+                                Wrap: =false
+                                ZIndex: =1
+
+                        Container56_2 As groupContainer.verticalAutoLayoutContainer:
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =60
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =165
+                            ZIndex: =2
+
+                            Label95_25 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =RGBA(95, 106, 146, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =15
+                                Text: =ThisItem.End
+                                Wrap: =false
+                                ZIndex: =1
+
+                Label95_35 As label:
+                    Font: =Font.'Segoe UI'
+                    Height: =24
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: ="Documentos"
+                    Width: =180
+                    Wrap: =false
+                    X: =44
+                    Y: =20
+                    ZIndex: =2
+
+                Rectangle74_2 As rectangle:
+                    Fill: =RGBA(0, 0, 0, 1)
+                    Height: =2
+                    Width: =1128
+                    X: =16
+                    Y: =58
+                    ZIndex: =9
+
+    Group39_3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =105
+
+        TextInput36_4 As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =736
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varViewDoctor
+            Width: =448
+            X: =500
+            Y: =14
+            ZIndex: =59
+
+        txt_Calendario_Paciente_por_Atender_5 As text:
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =649
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Visible: =_varViewDoctor
+            Width: =400
+            X: =524
+            Y: =79
+            ZIndex: =60
+
+        lbl_Fecha_5 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Text: =Text(_firstDayOfMonth4, "mmmm yyyy")
+            Visible: =_varViewDoctor
+            Width: =400
+            Wrap: =false
+            X: =524
+            Y: =91
+            ZIndex: =61
+
+        icon_Left_Calendario_5 As icon.ChevronLeft:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.ChevronLeft
+            OnSelect: |-
+                =/*changes month view to previous month*/
+                Set(_firstDayOfMonth4, DateAdd(_firstDayOfMonth4, -1, TimeUnit.Months));
+                Set(_firstDayInView4, DateAdd(_firstDayOfMonth4, -(Weekday(_firstDayOfMonth4) - 2 + 1), TimeUnit.Days));
+                Set(_lastDayOfMonth4, DateAdd(DateAdd(_firstDayOfMonth4, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                /*collects calendar events for all days in current month view. Updates _minDate to prevent duplicate data collection if user returns to this month view*/
+                If(_minDate4 > _firstDayOfMonth4, Set(_minDate4, _firstDayOfMonth4); Collect(MyCalendarEvents4, Office365Outlook.GetEventsCalendarViewV2("Calendar", Text(_minDate4, DateTimeFormat.UTC), Text(_lastDayOfMonth4, DateTimeFormat.UTC)).value))
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            TabIndex: =0
+            Tooltip: ="Ver el mes anterior"
+            Visible: =_varViewDoctor
+            Width: =40
+            X: =550
+            Y: =91
+            ZIndex: =62
+
+        icon_Right_Calendario_5 As icon.ChevronRight:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =/*changes month view to next month*/
+                Set(_firstDayOfMonth4, DateAdd(_firstDayOfMonth4, 1, TimeUnit.Months));
+                Set(_firstDayInView4, DateAdd(_firstDayOfMonth4, -(Weekday(_firstDayOfMonth4) - 2 + 1), TimeUnit.Days));
+                /*collects calendar events for all days in current month view. Updates _maxDate to prevent duplicate data collection if user returns to this month view*/
+                Set(_lastDayOfMonth4, DateAdd(DateAdd(_firstDayOfMonth4, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                If(_lastDayOfMonth4 > _maxDate4, Set(_maxDate4, _lastDayOfMonth4); Collect(MyCalendarEvents4, Office365Outlook.GetEventsCalendarViewV2("Calendar", Text(_firstDayOfMonth4, DateTimeFormat.UTC), Text(_maxDate4, DateTimeFormat.UTC)).value))
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            TabIndex: =0
+            Tooltip: ="Ver el mes siguiente"
+            Visible: =_varViewDoctor
+            Width: =40
+            X: =863
+            Y: =91
+            ZIndex: =63
+
+        gal_Dias_Calendario_5 As gallery.WeekdayGallery:
+            AccessibleLabel: ="Días de la semana"
+            Height: =46
+            Items: =Calendar.WeekdaysShort()
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =50
+            Visible: =_varViewDoctor
+            Width: =360
+            X: =544
+            Y: =154
+            ZIndex: =64
+
+            Title1_17 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Height: =46
+                OnSelect: =Select(Parent)
+                Size: =10
+                Text: =ThisItem.Value
+                Width: =46
+                Wrap: =false
+                X: =4
+                Y: =gal_Dias_Calendario_5.TemplateHeight / 2 - Self.Height / 2
+                ZIndex: =1
+
+        gal_Calendario_5 As gallery.MonthDayGallery:
+            AccessibleLabel: ="Días del mes seleccionado"
+            Height: =194
+            Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
+            Layout: =Layout.Vertical
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =37
+            Visible: =_varViewDoctor
+            Width: =350
+            WrapCount: =7
+            X: =548
+            Y: =200
+            ZIndex: =65
+
+            Circle1_77 As circle:
+                Height: =4
+                OnSelect: =Select(Parent)
+                Visible: |-
+                    =/*Visible if calendar events are found on this day*/               
+                    CountRows(Filter(MyCalendarEvents4, DateValue(Text(Start)) = DateAdd(_firstDayInView4,ThisItem.Value,TimeUnit.Days))) > 0 && !Subcircle1_14.Visible && Title2_14.Visible
+                Width: =4
+                X: =23
+                Y: =29
+                ZIndex: =1
+
+            Subcircle1_14 As circle:
+                Fill: =ColorFondoBoton
+                Height: =3 * Title2_14.Size
+                OnSelect: =Select(Parent)
+                Visible: =And(DateAdd(_firstDayInView4, ThisItem.Value) = _dateSelected4, Title2_14.Visible)
+                Width: =Self.Height
+                X: =10
+                Y: =3
+                ZIndex: =2
+
+            Title2_14 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =If(ThisItem.IsSelected,RGBA(255,255,255,1),RGBA(0,0,0,1))
+                Fill: |-
+                    =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
+                    If(
+                        /*Date selected is today*/
+                        DateAdd(_firstDayInView4, ThisItem.Value) = Today() && DateAdd(_firstDayInView4, ThisItem.Value) = _dateSelected3, RGBA(0,0,0,0),
+                        /*Today when it is not selected*/
+                        DateAdd(_firstDayInView4, ThisItem.Value) = Today(), ColorFade(Subcircle1_14.Fill, 0.67), 
+                        /*The day is outside the range of the currently selected month*/
+                        Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
+                FocusedBorderColor: =Self.Color
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                Height: =37
+                OnSelect: =Set(_dateSelected4, DateAdd(_firstDayInView4, ThisItem.Value, TimeUnit.Days))
+                Size: =10
+                TabIndex: =0
+                Text: =Day(DateAdd(_firstDayInView4,ThisItem.Value,TimeUnit.Days))
+                Visible: |-
+                    =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
+                     !(DateAdd(_firstDayInView3,ThisItem.Value,TimeUnit.Days) - Weekday(DateAdd(_firstDayInView3,ThisItem.Value,TimeUnit.Days)) + 1 > _lastDayOfMonth3)
+                Width: =50
+                Wrap: =false
+                ZIndex: =3
+
+        lbl_Count_Pacientes_11 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            Text: |
+                ="Fecha :  "
+            Visible: =_varViewDoctor
+            Width: =78
+            X: =552
+            Y: =428
+            ZIndex: =66
+
+        Rectangle_Separador_Calendario_5 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =2
+            Visible: =_varViewDoctor
+            Width: =400
+            X: =524
+            Y: =398
+            ZIndex: =67
+
+        Label56_4 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =32
+            Size: =16
+            Text: ="Calendario"
+            Visible: =_varViewDoctor
+            Width: =273
+            X: =522
+            Y: =27
+            ZIndex: =68
+
+        Icon23_5 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =30
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({_varViewDoctor:false})
+            Visible: =_varViewDoctor
+            Width: =35
+            X: =889
+            Y: =30
+            ZIndex: =69
+
+        lbl_Count_Pacientes_12 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            Text: |-
+                ="De : "
+            Visible: =_varViewDoctor
+            Width: =67
+            X: =552
+            Y: =486
+            ZIndex: =70
+
+        lbl_Count_Pacientes_13 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            Text: |-
+                ="Hasta : "
+            Visible: =_varViewDoctor
+            Width: =67
+            X: =549
+            Y: =539
+            ZIndex: =71
+
+        Button13_7 As button:
+            BorderColor: =ColorFondoBoton
+            Color: =ColorFondoBoton
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            HoverFill: =ColorFondoBoton
+            OnSelect: |-
+                =Collect(
+                    colBloqueos,
+                    {
+                        Fecha: Date(
+                            Year(_firstDayOfMonth4),
+                            Month(_firstDayOfMonth4),
+                            gal_Calendario_5.Selected.Title2_14.Text
+                        ),
+                        HoraInicio: DateTimeValue(
+                            Date(
+                                Year(_firstDayOfMonth4),
+                                Month(_firstDayOfMonth4),
+                                gal_Calendario_2.Selected.Title2_11.Text
+                            ) & " " & dpEstadoCivil_DCA_24.Selected.Value
+                        ),
+                        HoraFin: DateTimeValue(
+                            Date(
+                                Year(_firstDayOfMonth4),
+                                Month(_firstDayOfMonth4),
+                                gal_Calendario_2.Selected.Title2_11.Text
+                            ) & " " & dpEstadoCivil_DCA_25.Selected.Value
+                        ),
+                        Usuario1: User().Email
+                    }
+                );Notify("Se agrego un nuevo elemento",NotificationType.Success,2000)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="Agregar"
+            Visible: =_varViewDoctor
+            X: =740
+            Y: =599
+            ZIndex: =72
+
+        Button18_4 As button:
+            BorderColor: =ColorCuarto
+            Color: =ColorCuarto
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            HoverFill: =ColorCuarto
+            OnSelect: =Clear(colBloqueos)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="Limpiar"
+            Visible: =_varViewDoctor
+            X: =551
+            Y: =599
+            ZIndex: =73
+
+        Button20_7 As button:
+            DisplayMode: =If(IsEmpty(colBloqueos),DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =ColorFondoBoton
+            Font: =Font.'Segoe UI'
+            Height: =43
+            HoverFill: =ColorFondoBoton
+            OnSelect: |-
+                =/*Patch('public.Medical_Center_Usuario';LookUp('public.Medical_Center_Usuario';Correo=User().Email);{Disponibilidad:false});;
+                ForAll(colBloqueos As AsColBloqueo;
+                Patch('public.Medical_Center_Calendario_Bloquear';Defaults('public.Medical_Center_Calendario_Bloquear');
+                {id:First(SortByColumns('public.Medical_Center_Calendario_Bloquear';"id";SortOrder.Descending)).id+1;   
+                HoraInicial:AsColBloqueo.HoraInicio;
+                HoraFinal:AsColBloqueo.HoraFin;
+                fecha_Bloqueo:AsColBloqueo.Fecha;
+                 id_sede : _varSede.id;
+                Activo:true;
+                UsuarioCorreo:AsColBloqueo.Usuario1}));;
+                UpdateContext({_varViewDoctor:false});;
+                Clear(colBloqueos)*/
+                UpdateContext({_varViewBloqueoCalendario:true})
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Size: =12
+            Text: ="VISUALIZAR"
+            Visible: =_varViewDoctor
+            Width: =351
+            X: =551
+            Y: =664
+            ZIndex: =74
+
+        dpEstadoCivil_DCA_31 As dropdown:
+            BorderStyle: =BorderStyle.None
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 0, 0, 1)
+            ChevronHoverBackground: =
+            ChevronHoverFill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            Height: =30
+            HoverBorderColor: =
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Items: |-
+                =["09:00 AM","09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","13:00 PM","13:30 PM","14:00 PM","14:30 PM","15:00 PM","15:30 PM","16:00 PM","16:30 PM","17:00 PM","17:30 PM"]
+            Size: =12
+            Visible: =_varViewDoctor
+            Width: =200
+            X: =639
+            Y: =483
+            ZIndex: =78
+
+        dpEstadoCivil_DCA_32 As dropdown:
+            BorderStyle: =BorderStyle.None
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 0, 0, 1)
+            ChevronHoverBackground: =
+            ChevronHoverFill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            Height: =30
+            HoverBorderColor: =
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Items: |-
+                =["09:00 AM","09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","13:00 PM","13:30 PM","14:00 PM","14:30 PM","15:00 PM","15:30 PM","16:00 PM","16:30 PM","17:00 PM","19:30 PM"]
+            Size: =12
+            Visible: =_varViewDoctor
+            Width: =200
+            X: =639
+            Y: =537
+            ZIndex: =79
 
