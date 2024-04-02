@@ -19,6 +19,7 @@ scDataAntigua As screen:
         UpdateContext({_showLoading: false});     
         Refresh('public.Medical_Center_Counter')  ;
         Set(varHabilitarAtencionMedica,false);  
+        UpdateContext({_varData: "citas"});
 
     Rectangle5_38 As rectangle:
         Fill: =ColorFondoBoton
@@ -1959,9 +1960,11 @@ scDataAntigua As screen:
             Color: =RGBA(44, 97, 112, 1)
             Fill: =RGBA(0, 0, 0, 0)
             Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Normal
+            FontWeight: =If(_varData =  "citas", FontWeight.Semibold , FontWeight.Normal)
             HoverColor: =RGBA(44, 97, 112, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =UpdateContext({_varData: "citas"});
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -1984,9 +1987,11 @@ scDataAntigua As screen:
             Color: =RGBA(44, 97, 112, 1)
             Fill: =RGBA(0, 0, 0, 0)
             Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Normal
+            FontWeight: =If(_varData =  "historia", FontWeight.Semibold , FontWeight.Normal)
             HoverColor: =RGBA(44, 97, 112, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =UpdateContext({_varData: "historia"});
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -2009,9 +2014,11 @@ scDataAntigua As screen:
             Color: =RGBA(44, 97, 112, 1)
             Fill: =RGBA(0, 0, 0, 0)
             Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Normal
+            FontWeight: =If(_varData =  "img", FontWeight.Semibold , FontWeight.Normal)
             HoverColor: =RGBA(44, 97, 112, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: |-
+                =UpdateContext({_varData: "img"});
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -2040,7 +2047,8 @@ scDataAntigua As screen:
 
         Rectangle72 As rectangle:
             Fill: =RGBA(44, 97, 112, 1)
-            Height: =2
+            Height: =3
+            Visible: =If(_varData =  "citas", true,false)
             Width: =140
             X: =20
             Y: =140
@@ -2048,7 +2056,8 @@ scDataAntigua As screen:
 
         Rectangle72_1 As rectangle:
             Fill: =RGBA(44, 97, 112, 1)
-            Height: =2
+            Height: =3
+            Visible: =If(_varData =  "historia", true,false)
             Width: =140
             X: =160
             Y: =140
@@ -2056,7 +2065,8 @@ scDataAntigua As screen:
 
         Rectangle72_2 As rectangle:
             Fill: =RGBA(44, 97, 112, 1)
-            Height: =2
+            Height: =3
+            Visible: =If(_varData =  "img", true,false)
             Width: =140
             X: =300
             Y: =140
@@ -2065,22 +2075,23 @@ scDataAntigua As screen:
         ContainerCitas As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Regular
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =578
+            Height: =576
+            Visible: =_varData = "citas"
             Width: =1160
             X: =20
-            Y: =142
+            Y: =144
             ZIndex: =8
 
             galCitas As gallery.galleryVertical:
                 DelayItemLoading: =true
-                Height: =481
+                Height: =517
                 Items: ='public.medical_center_anteriores_visits'
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowScrollbar: =false
                 TemplateSize: =60
                 Width: =1160
-                Y: =96
+                Y: =60
                 ZIndex: =1
 
                 Container52 As groupContainer.horizontalAutoLayoutContainer:
@@ -2109,7 +2120,7 @@ scDataAntigua As screen:
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =15
-                            Text: =ThisItem.Cabinet
+                            Text: =ThisItem.Start
                             Wrap: =false
                             ZIndex: =1
 
@@ -2122,6 +2133,21 @@ scDataAntigua As screen:
                         Width: =165
                         ZIndex: =2
 
+                        Label95_1 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =15
+                            Text: =ThisItem.End
+                            Wrap: =false
+                            ZIndex: =1
+
                     Container57 As groupContainer.verticalAutoLayoutContainer:
                         FillPortions: =0
                         LayoutDirection: =LayoutDirection.Vertical
@@ -2130,6 +2156,21 @@ scDataAntigua As screen:
                         LayoutMode: =LayoutMode.Auto
                         Width: =165
                         ZIndex: =3
+
+                        Label95_2 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =15
+                            Text: =ThisItem.Status
+                            Wrap: =false
+                            ZIndex: =1
 
                     Container60 As groupContainer.verticalAutoLayoutContainer:
                         FillPortions: =0
@@ -2140,6 +2181,21 @@ scDataAntigua As screen:
                         Width: =165
                         ZIndex: =4
 
+                        Label95_3 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =15
+                            Text: =ThisItem.Cabinet
+                            Wrap: =false
+                            ZIndex: =1
+
                     Container61 As groupContainer.verticalAutoLayoutContainer:
                         FillPortions: =0
                         LayoutDirection: =LayoutDirection.Vertical
@@ -2148,6 +2204,21 @@ scDataAntigua As screen:
                         LayoutMode: =LayoutMode.Auto
                         Width: =165
                         ZIndex: =5
+
+                        Label95_4 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =15
+                            Text: =ThisItem.Doctor
+                            Wrap: =false
+                            ZIndex: =1
 
                     Container62 As groupContainer.verticalAutoLayoutContainer:
                         FillPortions: =0
@@ -2158,6 +2229,21 @@ scDataAntigua As screen:
                         Width: =165
                         ZIndex: =6
 
+                        Label95_5 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =15
+                            Text: =ThisItem.'Service Names'
+                            Wrap: =false
+                            ZIndex: =1
+
                     Container63 As groupContainer.verticalAutoLayoutContainer:
                         FillPortions: =0
                         LayoutDirection: =LayoutDirection.Vertical
@@ -2166,4 +2252,247 @@ scDataAntigua As screen:
                         LayoutMode: =LayoutMode.Auto
                         Width: =165
                         ZIndex: =7
+
+                        Label95_6 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =15
+                            Text: =ThisItem.Comment
+                            Wrap: =false
+                            ZIndex: =1
+
+            Label95_7 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: ="Inicio"
+                Width: =80
+                Wrap: =false
+                X: =44
+                Y: =20
+                ZIndex: =2
+
+            Label95_8 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: ="Fin"
+                Width: =80
+                Wrap: =false
+                X: =172
+                Y: =20
+                ZIndex: =3
+
+            Label95_9 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: ="Estado"
+                Width: =80
+                Wrap: =false
+                X: =278
+                Y: =20
+                ZIndex: =4
+
+            Label95_10 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: ="Consultorio"
+                Wrap: =false
+                X: =406
+                Y: =20
+                ZIndex: =5
+
+            Label95_11 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: ="Doctor"
+                Width: =80
+                Wrap: =false
+                X: =610
+                Y: =20
+                ZIndex: =6
+
+            Label95_12 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: ="Servicio"
+                Width: =100
+                Wrap: =false
+                X: =752
+                Y: =20
+                ZIndex: =7
+
+            Label95_13 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                Height: =24
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: ="Comentario"
+                Width: =140
+                Wrap: =false
+                X: =993
+                Y: =20
+                ZIndex: =8
+
+            Rectangle74 As rectangle:
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =2
+                Width: =1128
+                X: =16
+                Y: =58
+                ZIndex: =9
+
+        Rectangle75 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =60
+            Width: =1054
+            X: =20
+            Y: =20
+            ZIndex: =9
+
+        Label95_14 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =28
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Paciente:"
+            Width: =65
+            Wrap: =false
+            X: =40
+            Y: =36
+            ZIndex: =10
+
+        Label95_15 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =28
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Documento Identidad:"
+            Width: =164
+            Wrap: =false
+            X: =426
+            Y: =36
+            ZIndex: =11
+
+        Label95_16 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =28
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Celular:"
+            Width: =55
+            Wrap: =false
+            X: =824
+            Y: =36
+            ZIndex: =12
+
+        Label95_17 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =28
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Celular:"
+            Width: =250
+            Wrap: =false
+            X: =109
+            Y: =36
+            ZIndex: =13
+
+        Label95_18 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =28
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Celular:"
+            Width: =200
+            Wrap: =false
+            X: =598
+            Y: =36
+            ZIndex: =14
+
+        Label95_19 As label:
+            Color: =RGBA(95, 106, 146, 1)
+            Font: =Font.'Segoe UI'
+            Height: =28
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                ="Celular:"
+            Wrap: =false
+            X: =887
+            Y: =36
+            ZIndex: =15
 
