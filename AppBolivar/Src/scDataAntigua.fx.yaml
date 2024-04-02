@@ -2417,6 +2417,13 @@ scDataAntigua As screen:
                     Y: =58
                     ZIndex: =9
 
+            Button13 As button:
+                OnSelect: =Set(_varDatass, Buscador.Run(recordsvalue.id));
+                Text: ="Botón"
+                X: =977
+                Y: =90
+                ZIndex: =18
+
     Group39_3 As group:
         Height: =5
         Width: =5
