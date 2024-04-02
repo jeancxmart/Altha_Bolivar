@@ -9,11 +9,7 @@
       <string name="ManualTriggerInput_text_4_def" />
       <string name="ManualTriggerInput_text_7_def" />
       <string name="ManualTriggerInput_text_8_def" />
-      <string name="ManualTriggerInput_text_5_def" />
       <string name="ManualTriggerInput_text_6_def" />
-      <string name="ManualTriggerInput_text_10_def" />
-      <string name="ManualTriggerInput_text_11_def" />
-      <number name="ManualTriggerInput_number_def" />
       <object name="ManualTriggerInput">
         <property name="text" type="string" />
         <property name="text_1" type="string" />
@@ -22,11 +18,7 @@
         <property name="text_4" type="string" />
         <property name="text_7" type="string" />
         <property name="text_8" type="string" />
-        <property name="text_5" type="string" />
         <property name="text_6" type="string" />
-        <property name="text_10" type="string" />
-        <property name="text_11" type="string" />
-        <property name="number" type="number" />
       </object>
     </jsonTypes>
   </grammars>
@@ -61,20 +53,8 @@
             <param style="plain" name="text_8" path="/text_8" type="xs:string" required="true">
               <doc title="Doctor" />
             </param>
-            <param style="plain" name="text_5" path="/text_5" type="xs:string" required="true">
-              <doc title="url_LogoConsultorio" />
-            </param>
             <param style="plain" name="text_6" path="/text_6" type="xs:string" required="true">
               <doc title="Precio" />
-            </param>
-            <param style="plain" name="text_10" path="/text_10" type="xs:string" required="true">
-              <doc title="Direccion_Consultorio" />
-            </param>
-            <param style="plain" name="text_11" path="/text_11" type="xs:string" required="true">
-              <doc title="Telefono" />
-            </param>
-            <param style="plain" name="number" path="/number" type="xs:double" required="true">
-              <doc title="id_sede" />
             </param>
           </representation>
         </request>

@@ -2814,6 +2814,7 @@
             ));
             
             
+            
             Patch('public.Medical_Center_Pacientes', Defaults('public.Medical_Center_Pacientes'),{
             
             id: GUID(),
@@ -3641,78 +3642,50 @@
             OnSelect: |
                 =UpdateContext({CitaLlamada: false});
                 //DEPURAR, NO SE USA EN OTROS LADOS
-                /**
                 Set(
                     varParticipantes,
                     Concatenate(
                         TextInput35_3.Text,
                         ";",
                         LookUp(
-                            'public.medical_center_sedes_users',
-                           e_usuario = dpEstadoCivil_DCA_20.Selected.e_usuario,
-                            correo
+                            'public.Medical_Center_Usuario',
+                            id = dpEstadoCivil_DCA_20.Selected.id_doctor,
+                            Correo
                         )
                     )
-                );**/
-                
-                /* LookUp(
-                            'public.Medical_Center_Usuario';
-                            Usuario = dpEstadoCivil_DCA_20.Selected.Usuario;
-                            Correo
-                        )*/
-                
-                
-                //Este flujo no está corriendo correctamente - Observación
-                
-                /*
-                Calendario_Compartir.Run(
-                    varParticipantes;
+                );
+                Calendario_Compartir_1.Run(
+                    varParticipantes,
                     Text(
                         DateTimeValue(
                             DatePicker3.SelectedDate & " " & Left(
-                                dpHora.Selected.Value;
+                                dpHora.Selected.Value,
                                 5
                             )
-                        );
+                        ),
                         "yyyy-mm-ddThh:mm:ss"
-                    );
+                    ),
                     Text(
                         DateTimeValue(
                             DatePicker3.SelectedDate & " " & DateAdd(
-                                TimeValue(dpHora.Selected.Value);
-                                1;
+                                TimeValue(dpHora.Selected.Value),
+                                1,
                                 TimeUnit.Hours
                             )
-                        );
+                        ),
                         "yyyy-mm-ddThh:mm:ss"
-                    );
-                    TextInput35_1.Text;
-                    dpEstadoCivil_DCA_19.Selected.Servicio;
-                    DatePicker3.SelectedDate;
-                    dpEstadoCivil_DCA_20.Selected.Usuario;
-                    LookUp(
-                        'public.Medical_Center_Consultorio_Medico';
-                        id_sede = _varSede.id;
-                        url_Logo
-                    );
+                    ),
+                    TextInput35_1.Text,
+                    dpServicioNuevoTicket.Selected.Servicio,
+                    DatePicker3.SelectedDate,
+                    dpEstadoCivil_DCA_20.Selected.Doctor,
                     varSimboloMaestros & " " & LookUp(
-                        'public.Medical_Center_Servicios';
-                        Servicio = dpEstadoCivil_DCA_19.Selected.Servicio;
+                        'public.Medical_Center_Servicios',
+                        Servicio = dpServicioNuevoTicket.Selected.Servicio,
                         Costo
-                    );
-                    LookUp(
-                        'public.Medical_Center_Consultorio_Medico';
-                        id_sede = _varSede.id;
-                        Direccion
-                    );
-                    LookUp(
-                        'public.Medical_Center_Consultorio_Medico';
-                        id_sede = _varSede.id;
-                        Telefono
-                    );
-                     _varSede.id
-                );;
-                */
+                    )
+                );
+                
                 
                 If(
                     varAgendarCitaNew,
@@ -4084,7 +4057,7 @@
                 Height: =108
                 OnSelect: |-
                     =UpdateContext({_newDesignCita:false});
-                    UpdateContext({_varSelectUser:true});
+                    UpdateContext({_varSelectUser:true});Reset(TextInputSearchPacientes)
                 PaddingLeft: =31.5
                 PaddingRight: =31.5
                 PaddingTop: =54
@@ -4310,6 +4283,7 @@
                                 Set(varAgendarCitaNew,false);
                                 Set(varAgendarCitaEdit,true);
                                 UpdateContext({_varSelectUser:false});
+                                UpdateContext({UpdatePaciente: ThisItem});
                                 Reset(tiDNI_AgendarCita_1);
                                 Reset(dpEspecialidadNewAppointment_1);
                                 Reset(TextInput35_10);
@@ -4749,80 +4723,8 @@
                 HoverFill: =ColorFondoBoton
                 OnSelect: |+
                     =UpdateContext({CitaLlamadaExistente: false});
-                    //DEPURAR, NO SE USA EN OTROS LADOS
-                    /**
-                    Set(
-                        varParticipantes,
-                        Concatenate(
-                            TextInput35_3.Text,
-                            ";",
-                            LookUp(
-                                'public.medical_center_sedes_users',
-                               e_usuario = dpEstadoCivil_DCA_20.Selected.e_usuario,
-                                correo
-                            )
-                        )
-                    );**/
                     
-                    /* LookUp(
-                                'public.Medical_Center_Usuario';
-                                Usuario = dpEstadoCivil_DCA_20.Selected.Usuario;
-                                Correo
-                            )*/
-                    
-                    
-                    //Este flujo no está corriendo correctamente - Observación
-                    
-                    /*
-                    Calendario_Compartir.Run(
-                        varParticipantes;
-                        Text(
-                            DateTimeValue(
-                                DatePicker3.SelectedDate & " " & Left(
-                                    dpHora.Selected.Value;
-                                    5
-                                )
-                            );
-                            "yyyy-mm-ddThh:mm:ss"
-                        );
-                        Text(
-                            DateTimeValue(
-                                DatePicker3.SelectedDate & " " & DateAdd(
-                                    TimeValue(dpHora.Selected.Value);
-                                    1;
-                                    TimeUnit.Hours
-                                )
-                            );
-                            "yyyy-mm-ddThh:mm:ss"
-                        );
-                        TextInput35_1.Text;
-                        dpEstadoCivil_DCA_19.Selected.Servicio;
-                        DatePicker3.SelectedDate;
-                        dpEstadoCivil_DCA_20.Selected.Usuario;
-                        LookUp(
-                            'public.Medical_Center_Consultorio_Medico';
-                            id_sede = _varSede.id;
-                            url_Logo
-                        );
-                        varSimboloMaestros & " " & LookUp(
-                            'public.Medical_Center_Servicios';
-                            Servicio = dpEstadoCivil_DCA_19.Selected.Servicio;
-                            Costo
-                        );
-                        LookUp(
-                            'public.Medical_Center_Consultorio_Medico';
-                            id_sede = _varSede.id;
-                            Direccion
-                        );
-                        LookUp(
-                            'public.Medical_Center_Consultorio_Medico';
-                            id_sede = _varSede.id;
-                            Telefono
-                        );
-                         _varSede.id
-                    );;
-                    */
-                    
+                    Concurrent(
                         Patch(
                             'public.Medical_Center_Ticket',
                             Defaults('public.Medical_Center_Ticket'),
@@ -4850,25 +4752,17 @@
                                 fecha_creacion:Now(),
                                 id_sede: dpEspecialidadNewAppointment_1.Selected.id_sede
                             }
-                        );
-                     
-                    /**
-                        ClearCollect(
-                            col_citas,
-                            Filter(
-                                'public.Medical_Center_Ticket',
-                                id_Pacientes_DNI = gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
-                                Estatus = "En Cola",
-                                Text(
-                                    fecha_cita,
-                                    "dd/mm/yyyy"
-                                ) = Text(
-                                    Today(),
-                                    "dd/mm/yyyy"
-                                )
-                            )
-                        )
-                    **/
+                        ),
+                    Patch('public.Medical_Center_Historial_Principal', LookUp('public.Medical_Center_Historial_Principal', DNI_CI = UpdatePaciente.DNI_CI || telefono = UpdatePaciente.Telefono ), {
+                     DNI_CI: tiDNI_AgendarCita_1.Text,
+                     correo: TextInput35_12.Text, 
+                     telefono: TextInput35_18.Text
+                    }),
+                    Patch('public.Medical_Center_Pacientes', LookUp('public.Medical_Center_Pacientes',id = UpdatePaciente.id), {
+                     DNI_CI: tiDNI_AgendarCita_1.Text,
+                     Correo: TextInput35_12.Text, 
+                     Telefono: TextInput35_18.Text
+                    }));
                     
                 RadiusBottomLeft: =8
                 RadiusBottomRight: =8
