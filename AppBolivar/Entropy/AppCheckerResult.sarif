@@ -112096,6 +112096,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scDataAntigua.ContainerRecords.ContainerHistoria.galRecords.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scDataAntigua.ContainerRecords.ContainerHistoria.galRecords.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scDataAntigua",
+                "type": "scDataAntigua.ContainerRecords.ContainerHistoria.galRecords"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scDataAntigua.ContainerRecords.ContainerHistoria.galRecords.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scDataAntigua.ContainerRecords.ContainerHistoria.galRecords.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scDataAntigua",
+                "type": "scDataAntigua.ContainerRecords.ContainerHistoria.galRecords"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.getEspecialidad"
                 }
               ],
