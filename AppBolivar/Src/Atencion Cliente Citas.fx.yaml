@@ -2808,12 +2808,12 @@
                     Alergias: If(ComboBox1_16.Selected.Value="Otro",TxtEnfermedadDCA_45.Text,ComboBox1_16.Selected.Value),
                      id_sede : _varSede.id,
                     fecha_creacion:Now(),
-                    correo:AtencionSelected.Correo,
-                    telefono:AtencionSelected.Telefono_Celular
+                    correo: TxtdniDCA_9.Text,
+                    telefono:TxtdniDCA_10.Text
                 }
             ));
             
-            
+            If( IsEmpty(Filter('public.Medical_Center_Pacientes', DNI_CI = TxtdniDCA_6.Text)),
             
             Patch('public.Medical_Center_Pacientes', Defaults('public.Medical_Center_Pacientes'),{
             
@@ -2827,10 +2827,10 @@
             Domicilio: _varnewPaciente.Direccion,
             NombreMadre: _varnewPaciente.Nombre_Madre,
             NombrePadre: _varnewPaciente.Nombre_Padre,
-            Telefono: AtencionSelected.Telefono_Celular,
-            Correo: AtencionSelected.Correo,
+            Telefono: _varnewPaciente.telefono,
+            Correo: _varnewPaciente.correo,
             id_sede: _varSede.id,
-            nacionalidad: _varnewPaciente.Nacionalidad})
+            nacionalidad: _varnewPaciente.Nacionalidad}), "")
             
             
         RadiusBottomLeft: =8
