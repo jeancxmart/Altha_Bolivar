@@ -2291,3 +2291,38 @@
         Y: =59
         ZIndex: =112
 
+    btnDataAntiguaCm As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btnDataAntiguaCm.BorderColor
+        Font: =Font.'Segoe UI'
+        Height: =56
+        HoverBorderColor: =ColorFade(btnDataAntiguaCm.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(scDataAntigua)
+        PaddingLeft: =15
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Data Antigua"
+        Width: =216
+        X: =30
+        Y: =376
+        ZIndex: =113
+
+    Image44 As image:
+        Height: =24
+        Image: ='Save Search (1)'
+        Width: =24
+        X: =50
+        Y: =393
+        ZIndex: =114
+

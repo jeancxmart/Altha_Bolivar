@@ -1,0 +1,26 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-03-28T20:18:03.0200000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "EHR": "EHR",
+      "Element_x0020_Name": "Element Name",
+      "Element_x0020_Value": "Element Value",
+      "Group_x0020_Name": "Group Name",
+      "id": "id",
+      "Patient_x0020_id": "Patient id",
+      "Protocol_x0020_Name": "Protocol Name",
+      "Visit_x0020_id": "Visit id"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.medical_center_anteriores_records",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

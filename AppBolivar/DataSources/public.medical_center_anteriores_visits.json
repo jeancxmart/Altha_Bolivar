@@ -1,0 +1,36 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-03-28T20:18:03.0200000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "Appointment_x0020_id": "Appointment id",
+      "Cabinet": "Cabinet",
+      "Comment": "Comment",
+      "Created_x0020_At": "Created At",
+      "Description": "Description",
+      "Doctor": "Doctor",
+      "Doctor_x0020_Role": "Doctor Role",
+      "EHR": "EHR",
+      "End": "End",
+      "id": "id",
+      "Invoice_x0020_IDs": "Invoice IDs",
+      "Name": "Name",
+      "Patient_x0020_id": "Patient id",
+      "Payment_x0020_Status": "Payment Status",
+      "Service_x0020_Names": "Service Names",
+      "Start": "Start",
+      "Status": "Status",
+      "Tags": "Tags"
+    },
+    "DatasetName": "default",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "public.medical_center_anteriores_visits",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
