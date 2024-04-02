@@ -111346,19 +111346,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scDataAntigua.ContainerExistUser_1.galDataAntigua.AccessibleLabel"
+                  "fullyQualifiedName": "scDataAntigua.ContainerPacientesAnt.galDataAntigua.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scDataAntigua.ContainerExistUser_1.galDataAntigua.AccessibleLabel",
+                  "fullyQualifiedName": "scDataAntigua.ContainerPacientesAnt.galDataAntigua.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scDataAntigua",
-                "type": "scDataAntigua.ContainerExistUser_1.galDataAntigua"
+                "type": "scDataAntigua.ContainerPacientesAnt.galDataAntigua"
               }
             }
           ],
@@ -111376,19 +111376,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scDataAntigua.ContainerExistUser_1.TextInputSearchPacientes_1.AccessibleLabel"
+                  "fullyQualifiedName": "scDataAntigua.ContainerPacientesAnt.TextInputSearchPacientes_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scDataAntigua.ContainerExistUser_1.TextInputSearchPacientes_1.AccessibleLabel",
+                  "fullyQualifiedName": "scDataAntigua.ContainerPacientesAnt.TextInputSearchPacientes_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scDataAntigua",
-                "type": "scDataAntigua.ContainerExistUser_1.TextInputSearchPacientes_1"
+                "type": "scDataAntigua.ContainerPacientesAnt.TextInputSearchPacientes_1"
               }
             }
           ],
@@ -111526,6 +111526,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scDataAntigua.ContainerRecords.ContainerCitas.galCitas.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scDataAntigua.ContainerRecords.ContainerCitas.galCitas.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scDataAntigua",
+                "type": "scDataAntigua.ContainerRecords.ContainerCitas.galCitas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scDataAntigua.icon_Cerrar_Reporte_AM_1.AccessibleLabel"
                 }
               ],
@@ -111586,19 +111616,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scDataAntigua.ContainerExistUser_1.galDataAntigua.TabIndex"
+                  "fullyQualifiedName": "scDataAntigua.ContainerRecords.ContainerCitas.galCitas.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scDataAntigua.ContainerExistUser_1.galDataAntigua.TabIndex",
+                  "fullyQualifiedName": "scDataAntigua.ContainerRecords.ContainerCitas.galCitas.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scDataAntigua",
+                "type": "scDataAntigua.ContainerRecords.ContainerCitas.galCitas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scDataAntigua.ContainerPacientesAnt.galDataAntigua.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scDataAntigua.ContainerPacientesAnt.galDataAntigua.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "scDataAntigua",
-                "type": "scDataAntigua.ContainerExistUser_1.galDataAntigua"
+                "type": "scDataAntigua.ContainerPacientesAnt.galDataAntigua"
               }
             }
           ],
@@ -118893,6 +118953,35 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 18
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scDataAntigua"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scDataAntigua",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "scDataAntigua",
+                "type": "scDataAntigua"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ScreenHasManyControls",
+          "ruleIndex": 22
         },
         {
           "locations": [

@@ -1681,7 +1681,7 @@ scDataAntigua As screen:
         Y: =137
         ZIndex: =115
 
-    ContainerExistUser_1 As groupContainer.manualLayoutContainer:
+    ContainerPacientesAnt As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Fill: =RGBA(255, 255, 255, 1)
         Height: =618
@@ -1945,4 +1945,225 @@ scDataAntigua As screen:
             X: =36
             Y: =76
             ZIndex: =11
+
+    ContainerRecords As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(241, 242, 246,1)
+        Height: =740
+        Width: =1200
+        X: =83
+        Y: =14
+        ZIndex: =118
+
+        btnCitas As button:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(44, 97, 112, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Normal
+            HoverColor: =RGBA(44, 97, 112, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedColor: =RGBA(44, 97, 112, 1)
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =18
+            Text: ="Citas"
+            Width: =140
+            X: =20
+            Y: =100
+            ZIndex: =1
+
+        btnHistorias As button:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(44, 97, 112, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Normal
+            HoverColor: =RGBA(44, 97, 112, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedColor: =RGBA(44, 97, 112, 1)
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =18
+            Text: ="Historias"
+            Width: =140
+            X: =160
+            Y: =100
+            ZIndex: =2
+
+        btnImg As button:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(44, 97, 112, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Normal
+            HoverColor: =RGBA(44, 97, 112, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedColor: =RGBA(44, 97, 112, 1)
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =18
+            Text: ="Imágenes"
+            Width: =140
+            X: =300
+            Y: =100
+            ZIndex: =3
+
+        Icon59 As icon.Cancel:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =24
+            Icon: =Icon.Cancel
+            Width: =24
+            X: =1156
+            Y: =20
+            ZIndex: =4
+
+        Rectangle72 As rectangle:
+            Fill: =RGBA(44, 97, 112, 1)
+            Height: =2
+            Width: =140
+            X: =20
+            Y: =140
+            ZIndex: =5
+
+        Rectangle72_1 As rectangle:
+            Fill: =RGBA(44, 97, 112, 1)
+            Height: =2
+            Width: =140
+            X: =160
+            Y: =140
+            ZIndex: =6
+
+        Rectangle72_2 As rectangle:
+            Fill: =RGBA(44, 97, 112, 1)
+            Height: =2
+            Width: =140
+            X: =300
+            Y: =140
+            ZIndex: =7
+
+        ContainerCitas As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =578
+            Width: =1160
+            X: =20
+            Y: =142
+            ZIndex: =8
+
+            galCitas As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =481
+                Items: ='public.medical_center_anteriores_visits'
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TemplateSize: =60
+                Width: =1160
+                Y: =96
+                ZIndex: =1
+
+                Container52 As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =60
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Container55 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =60
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =165
+                        ZIndex: =1
+
+                        Label95 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =RGBA(95, 106, 146, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =15
+                            Text: =ThisItem.Cabinet
+                            Wrap: =false
+                            ZIndex: =1
+
+                    Container56 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =60
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =165
+                        ZIndex: =2
+
+                    Container57 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =60
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =165
+                        ZIndex: =3
+
+                    Container60 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =60
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =165
+                        ZIndex: =4
+
+                    Container61 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =60
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =165
+                        ZIndex: =5
+
+                    Container62 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =60
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =165
+                        ZIndex: =6
+
+                    Container63 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =60
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =165
+                        ZIndex: =7
 

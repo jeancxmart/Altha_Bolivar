@@ -171,6 +171,7 @@
     "scHistoriaMedicaOtorrinolaringologia",
     "scHistoriaMedicaMedicinaGeneral",
     "scHistoriaCirugiaPediatrica",
-    "scHistoriaGinecologia"
+    "scHistoriaGinecologia",
+    "ScDatosAntiguosView"
   ]
 }
