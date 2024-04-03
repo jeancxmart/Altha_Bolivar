@@ -2303,7 +2303,7 @@
         HoverBorderColor: =ColorFade(btnDataAntiguaCm.BorderColor, 20%)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        OnSelect: =Navigate(scDataAntigua);Reset(DatePickerCitas_4)
+        OnSelect: =Navigate(scDataAntigua);Reset(DatePickerCitas_4);Reset(TextInputSearchPacientes_1)
         PaddingLeft: =15
         PressedBorderColor: =RGBA(0, 0, 0, 1)
         PressedColor: =RGBA(0, 0, 0, 1)

@@ -80,7 +80,20 @@
         BorderColor: =RGBA(0, 0, 0, 1)
         BorderThickness: =2
         Height: =231
-        Image: =If(IsBlank(ImagenID_HistoriaMedico.Text),If(LookUp('public.Medical_Center_Historial_Principal',DNI_CI=TicketSelected.DNI_Paciente,Sexo)="Masculino",hombre,mujer),AzureBlobStorage.GetFileContent(ImagenID_HistoriaMedico.Text))
+        Image: |-
+            =If(
+                IsBlank(ImagenID_HistoriaMedico.Text),
+                If(
+                    LookUp(
+                        'public.Medical_Center_Historial_Principal',
+                        DNI_CI = TicketSelected.DNI_Paciente,
+                        Sexo
+                    ) = "Masculino",
+                    hombre,
+                    mujer
+                ),
+                AzureBlobStorage.GetFileContent(ImagenID_HistoriaMedico.Text)
+            )
         RadiusBottomLeft: =8
         RadiusBottomRight: =8
         RadiusTopLeft: =8
@@ -970,9 +983,12 @@
 
                 EvidenciasImage5_3 As image:
                     Height: =60
-                    Image: |+
-                        =If(IsBlank(ThisItem.id_Image),SampleImage,AzureBlobStorage.GetFileContent(ThisItem.id_Image))
-                        
+                    Image: |-
+                        =If(
+                            IsBlank(ThisItem.id_Image),
+                            SampleImage,
+                            AzureBlobStorage.GetFileContent(ThisItem.id_Image)
+                        )
                     OnSelect: =Select(Parent)
                     Width: =60
                     X: =10
@@ -3804,7 +3820,12 @@
 
     Image13_3 As image:
         Height: =240
-        Image: =If(IsBlank(EvidenciasGallery_3.Selected.id_Image),SampleImage,AzureBlobStorage.GetFileContent(EvidenciasGallery_3.Selected.id_Image))
+        Image: |-
+            =If(
+                IsBlank(EvidenciasGallery_3.Selected.id_Image),
+                SampleImage,
+                AzureBlobStorage.GetFileContent(EvidenciasGallery_3.Selected.id_Image)
+            )
         RadiusBottomLeft: =8
         RadiusBottomRight: =8
         RadiusTopLeft: =8
@@ -6665,7 +6686,24 @@
                 Height: =70
                 HoverBorderColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                Image: =If(IsBlank(LookUp('public.Medical_Center_Historial_Principal',DNI_CI=TicketSelected.DNI_Paciente,Imagen_Id)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Historial_Principal',DNI_CI=TicketSelected.DNI_Paciente,Imagen_Id)))
+                Image: |-
+                    =If(
+                        IsBlank(
+                            LookUp(
+                                'public.Medical_Center_Historial_Principal',
+                                DNI_CI = TicketSelected.DNI_Paciente,
+                                Imagen_Id
+                            )
+                        ),
+                        SampleImage,
+                        AzureBlobStorage.GetFileContent(
+                            LookUp(
+                                'public.Medical_Center_Historial_Principal',
+                                DNI_CI = TicketSelected.DNI_Paciente,
+                                Imagen_Id
+                            )
+                        )
+                    )
                 PressedBorderColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =8
@@ -10945,7 +10983,24 @@
 
             Image32 As image:
                 Height: =54
-                Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+                Image: |-
+                    =IfError(
+                        IsBlank(
+                            LookUp(
+                                'public.Medical_Center_Usuario',
+                                Correo = User().Email,
+                                NombreImage
+                            )
+                        ),
+                        SampleImage,
+                        AzureBlobStorage.GetFileContent(
+                            LookUp(
+                                'public.Medical_Center_Usuario',
+                                Correo = User().Email,
+                                NombreImage
+                            )
+                        )
+                    )
                 Visible: =_varRECETAR
                 Width: =151
                 X: =607
@@ -11779,7 +11834,24 @@
 
         Image32_3 As image:
             Height: =54
-            Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+            Image: |-
+                =IfError(
+                    IsBlank(
+                        LookUp(
+                            'public.Medical_Center_Usuario',
+                            Correo = User().Email,
+                            NombreImage
+                        )
+                    ),
+                    SampleImage,
+                    AzureBlobStorage.GetFileContent(
+                        LookUp(
+                            'public.Medical_Center_Usuario',
+                            Correo = User().Email,
+                            NombreImage
+                        )
+                    )
+                )
             Visible: =_varEXAMENsOLICITADO
             Width: =151
             X: =969
@@ -13616,7 +13688,24 @@
 
         Image32_4 As image:
             Height: =54
-            Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+            Image: |-
+                =IfError(
+                    IsBlank(
+                        LookUp(
+                            'public.Medical_Center_Usuario',
+                            Correo = User().Email,
+                            NombreImage
+                        )
+                    ),
+                    SampleImage,
+                    AzureBlobStorage.GetFileContent(
+                        LookUp(
+                            'public.Medical_Center_Usuario',
+                            Correo = User().Email,
+                            NombreImage
+                        )
+                    )
+                )
             Visible: =_varDESCANSOMEDICO
             Width: =151
             X: =630
@@ -13969,9 +14058,12 @@
 
             EvidenciasImage5_4 As image:
                 Height: =60
-                Image: |+
-                    =If(IsBlank(ThisItem.id_Image),SampleImage,AzureBlobStorage.GetFileContent(ThisItem.id_Image))
-                    
+                Image: |-
+                    =If(
+                        IsBlank(ThisItem.id_Image),
+                        SampleImage,
+                        AzureBlobStorage.GetFileContent(ThisItem.id_Image)
+                    )
                 OnSelect: =Select(Parent)
                 Width: =60
                 X: =10
@@ -14031,7 +14123,24 @@
 
         Image32_2 As image:
             Height: =78
-            Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+            Image: |-
+                =IfError(
+                    IsBlank(
+                        LookUp(
+                            'public.Medical_Center_Usuario',
+                            Correo = User().Email,
+                            NombreImage
+                        )
+                    ),
+                    SampleImage,
+                    AzureBlobStorage.GetFileContent(
+                        LookUp(
+                            'public.Medical_Center_Usuario',
+                            Correo = User().Email,
+                            NombreImage
+                        )
+                    )
+                )
             Width: =151
             X: =800
             Y: =516
@@ -15459,17 +15568,8 @@
             Button3_12 As button:
                 BorderColor: =RGBA(255, 0, 0, 1)
                 Color: =RGBA(255, 0, 0, 1)
-                DisplayMode: |-
-                    =If(
-                        CountRows(
-                            Filter(
-                                'public.Medical_Center_S&E_Relacion',
-                                id_sede = _varDeleteSedes.id
-                            )
-                        ) > 0,
-                        DisplayMode.Disabled,
-                        DisplayMode.Edit
-                    )
+                DisplayMode: |
+                    =DisplayMode.Edit
                 Fill: =RGBA(255, 255, 255, 1)
                 Font: =Font.'Segoe UI'
                 HoverFill: =RGBA(255, 0, 0, 0.25)

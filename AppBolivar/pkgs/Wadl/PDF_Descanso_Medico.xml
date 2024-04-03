@@ -2,7 +2,16 @@
   <doc title="PDF_Descanso_Medico" />
   <grammars>
     <jsonTypes targetNamespace="https://brazil-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
-      <object name="ManualTriggerInput" />
+      <string name="ManualTriggerInput_Creararchivo_Contenidodelarchivo_def" />
+      <string name="ManualTriggerInput_Enviarcorreoelectr_uxF3_nico_ux28_V2_ux29__A_def" />
+      <string name="ManualTriggerInput_HTTP_Body_def" />
+      <string name="ManualTriggerInput_HTTP_Body_1_def" />
+      <object name="ManualTriggerInput">
+        <property name="Creararchivo_Contenidodelarchivo" type="string" />
+        <property name="Enviarcorreoelectrónico(V2)_A" type="string" />
+        <property name="HTTP_Body" type="string" />
+        <property name="HTTP_Body_1" type="string" />
+      </object>
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://brazil-001.azure-apim.net/apim/logicflows">
@@ -14,7 +23,12 @@
           <param style="query" name="api-version" type="xs:string" required="true" fixed="2015-02-01-preview">
             <doc title="The api version" />
           </param>
-          <representation mediaType="application/json" />
+          <representation mediaType="application/json">
+            <param style="plain" name="Creararchivo_Contenidodelarchivo" path="/Creararchivo_Contenidodelarchivo" type="xs:string" required="true" />
+            <param style="plain" name="Enviarcorreoelectrónico(V2)_A" path="/Enviarcorreoelectrónico(V2)_A" type="xs:string" required="true" />
+            <param style="plain" name="HTTP_Body" path="/HTTP_Body" type="xs:string" required="true" />
+            <param style="plain" name="HTTP_Body_1" path="/HTTP_Body_1" type="xs:string" required="true" />
+          </representation>
         </request>
       </method>
     </resource>

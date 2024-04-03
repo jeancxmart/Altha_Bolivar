@@ -2754,7 +2754,24 @@
 
         Image32_7 As image:
             Height: =78
-            Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+            Image: |-
+                =IfError(
+                    IsBlank(
+                        LookUp(
+                            'public.Medical_Center_Usuario',
+                            Correo = User().Email,
+                            NombreImage
+                        )
+                    ),
+                    SampleImage,
+                    AzureBlobStorage.GetFileContent(
+                        LookUp(
+                            'public.Medical_Center_Usuario',
+                            Correo = User().Email,
+                            NombreImage
+                        )
+                    )
+                )
             Width: =151
             X: =800
             Y: =516
@@ -3080,7 +3097,7 @@
 
         Image32_1 As image:
             Height: =49
-            Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+            Image: =IfError(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
             Visible: =_varRECETAMEDICA
             Width: =194
             X: =619
