@@ -2,7 +2,28 @@
   <doc title="Boleta_Venta" />
   <grammars>
     <jsonTypes targetNamespace="https://brazil-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
-      <object name="ManualTriggerInput" />
+      <string name="ManualTriggerInput_text_def" />
+      <string name="ManualTriggerInput_text_1_def" />
+      <string name="ManualTriggerInput_text_2_def" />
+      <string name="ManualTriggerInput_text_3_def" />
+      <string name="ManualTriggerInput_text_4_def" />
+      <string name="ManualTriggerInput_text_5_def" />
+      <string name="ManualTriggerInput_text_6_def" />
+      <string name="ManualTriggerInput_text_7_def" />
+      <string name="ManualTriggerInput_text_9_def" />
+      <string name="ManualTriggerInput_text_8_def" />
+      <object name="ManualTriggerInput">
+        <property name="text" type="string" />
+        <property name="text_1" type="string" />
+        <property name="text_2" type="string" />
+        <property name="text_3" type="string" />
+        <property name="text_4" type="string" />
+        <property name="text_5" type="string" />
+        <property name="text_6" type="string" />
+        <property name="text_7" type="string" />
+        <property name="text_9" type="string" />
+        <property name="text_8" type="string" />
+      </object>
       <string name="ResponseActionOutput_urlblob_def" />
       <string name="ResponseActionOutput_idblob_def" />
       <object name="ResponseActionOutput">
@@ -21,7 +42,38 @@
           <param style="query" name="api-version" type="xs:string" required="true" fixed="2015-02-01-preview">
             <doc title="The api version" />
           </param>
-          <representation mediaType="application/json" />
+          <representation mediaType="application/json">
+            <param style="plain" name="text" path="/text" type="xs:string" required="true">
+              <doc title="id_counter" />
+            </param>
+            <param style="plain" name="text_1" path="/text_1" type="xs:string" required="true">
+              <doc title="id_pago" />
+            </param>
+            <param style="plain" name="text_2" path="/text_2" type="xs:string" required="true">
+              <doc title="correo" />
+            </param>
+            <param style="plain" name="text_3" path="/text_3" type="xs:string" required="true">
+              <doc title="direccion_consultorio" />
+            </param>
+            <param style="plain" name="text_4" path="/text_4" type="xs:string" required="true">
+              <doc title="telefono_consultorio" />
+            </param>
+            <param style="plain" name="text_5" path="/text_5" type="xs:string" required="true">
+              <doc title="ruc" />
+            </param>
+            <param style="plain" name="text_6" path="/text_6" type="xs:string" required="true">
+              <doc title="Importe" />
+            </param>
+            <param style="plain" name="text_7" path="/text_7" type="xs:string" required="true">
+              <doc title="Igv" />
+            </param>
+            <param style="plain" name="text_9" path="/text_9" type="xs:string" required="true">
+              <doc title="Logo" />
+            </param>
+            <param style="plain" name="text_8" path="/text_8" type="xs:string" required="true">
+              <doc title="telefono_paciente" />
+            </param>
+          </representation>
         </request>
         <response>
           <representation mediaType="application/json" element="service:ResponseActionOutput" />

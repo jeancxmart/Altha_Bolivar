@@ -1,7 +1,7 @@
 [
   {
     "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
-    "FlowNameId": "3e018df9-959b-4848-b636-751a2473c704",
+    "FlowNameId": "f4101442-4e76-4324-81e7-0ae43c7de610",
     "Name": "Boleta_Venta",
     "ServiceKind": "ConnectedWadl",
     "Type": "ServiceInfo",
