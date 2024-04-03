@@ -101,7 +101,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 106,
+    "BindingErrorCount": 70,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -164,7 +164,6 @@
     "Sin Acceso",
     "Onboarding",
     "Test_Maestro",
-    "Screen2",
     "scHistoriaMedicaNutricion",
     "scHistoriaMedicaOftalmologia",
     "scHistoriaMedicaPediatria",
