@@ -60,7 +60,7 @@ App As appinfo:
         );
         Set(
             getLogo,
-            IfError(
+            If(
                 IsBlank(
                     LookUp(
                         'public.Medical_Center_Consultorio_Medico',
@@ -69,18 +69,12 @@ App As appinfo:
                     )
                 ),
                 SampleImage,
-                IfError( IsBlank(AzureBlobStorage.GetFileContent(
+                IfError( AzureBlobStorage.GetFileContent(
                     LookUp(
                         'public.Medical_Center_Consultorio_Medico',
                         id_sede = _varSede.id,
                         Imagen_Id
-                    )
-                )), SampleImage, AzureBlobStorage.GetFileContent(
-                    LookUp(
-                        'public.Medical_Center_Consultorio_Medico',
-                        id_sede = _varSede.id,
-                        Imagen_Id
-                )))
+                )), SampleImage)
             )
         );
         //REVISAR, al primer onstart no figura el logo

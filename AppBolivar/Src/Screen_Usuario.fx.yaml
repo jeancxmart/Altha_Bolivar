@@ -589,7 +589,7 @@ Screen_Usuario As screen:
                     HoverBorderColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     Image: |-
-                        =IfError(
+                        =If(
                             IsBlank(
                                 LookUp(
                                     'public.Medical_Center_Usuario',
@@ -597,14 +597,14 @@ Screen_Usuario As screen:
                                     NombreImage
                                 )
                             ),
-                            SampleImage,
+                            SampleImage,IfError(
                             AzureBlobStorage.GetFileContent(
                                 LookUp(
                                     'public.Medical_Center_Usuario',
                                     Correo = User().Email,
                                     NombreImage
                                 )
-                            )
+                            ), SampleImage)
                         )
                     PressedBorderColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)

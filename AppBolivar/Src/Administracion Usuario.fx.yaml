@@ -824,15 +824,14 @@
                             Imagen_Id
                         )
                     ),
-                    SampleImage,
+                    SampleImage, IfError(
                     AzureBlobStorage.GetFileContent(
                         LookUp(
                             'public.Medical_Center_Consultorio_Medico',
                             id_sede = _varSede.id,
                             Imagen_Id
                         )
-                    )
-                )
+                    ), SampleImage ))
             );
             ClearCollect(
                 colMaestroSimboloMoneda,
@@ -4703,7 +4702,7 @@
                     Height: =90
                     HoverBorderColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    Image: =If(IsBlank(UsuarioAdmin.NombreImage),SampleImage,IfError(IsBlank( AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage)), SampleImage, AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage)))
+                    Image: =If(IsBlank(UsuarioAdmin.NombreImage),SampleImage,IfError(AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage), SampleImage))
                     PressedBorderColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =8
@@ -7603,20 +7602,13 @@
                             Imagen_Id
                         )
                     ),
-                    SampleImage, IfError( IsBlank(
-                    AzureBlobStorage.GetFileContent(
+                    SampleImage, IfError(AzureBlobStorage.GetFileContent(
                         LookUp(
                             'public.Medical_Center_Consultorio_Medico',
                             id_sede = _varSede.id,
                             Imagen_Id
                         )
-                    )), SampleImage, AzureBlobStorage.GetFileContent(
-                        LookUp(
-                            'public.Medical_Center_Consultorio_Medico',
-                            id_sede = _varSede.id,
-                            Imagen_Id
-                        )
-                    ))
+                    ), SampleImage)
                 )
             PressedBorderColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(255, 255, 255, 1)

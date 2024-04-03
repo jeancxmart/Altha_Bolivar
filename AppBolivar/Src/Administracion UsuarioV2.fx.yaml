@@ -1578,8 +1578,7 @@
                     Image: |-
                         =If(
                             IsBlank(UsuarioAdmin.NombreImage),
-                            SampleImage, IfError( IsBlank(
-                            AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage)), SampleImage,  AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage))
+                            SampleImage, IfError( AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage), SampleImage)
                         )
                     PressedBorderColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
@@ -4979,8 +4978,8 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Image: |
                         =//User().Image
-                        IfError( IsBlank(
-                        AzureBlobStorage.GetFileContent(_varEditUserV2.NombreImage)), SampleImage, AzureBlobStorage.GetFileContent(_varEditUserV2.NombreImage))
+                        If( IsBlank(
+                        AzureBlobStorage.GetFileContent(_varEditUserV2.NombreImage)), SampleImage,IfError( AzureBlobStorage.GetFileContent(_varEditUserV2.NombreImage), SampleImage))
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     RadiusBottomLeft: =8
@@ -11482,20 +11481,13 @@
                                     Imagen_Id
                                 )
                             ),
-                            SampleImage, IfError(IsBlank(
-                            AzureBlobStorage.GetFileContent(
+                            SampleImage, IfError(AzureBlobStorage.GetFileContent(
                                 LookUp(
                                     'public.Medical_Center_Consultorio_Medico',
                                     id_sede = _varSede.id,
                                     Imagen_Id
                                 )
-                            )), SampleImage , AzureBlobStorage.GetFileContent(
-                                LookUp(
-                                    'public.Medical_Center_Consultorio_Medico',
-                                    id_sede = _varSede.id,
-                                    Imagen_Id
-                                )
-                            )
+                            ), SampleImage)
                         )
                     );
                     ClearCollect(
@@ -12021,7 +12013,7 @@
                     HoverBorderColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     Image: |-
-                        =IfError(
+                        =If(
                             IsBlank(
                                 LookUp(
                                     'public.Medical_Center_Consultorio_Medico',
@@ -12029,20 +12021,13 @@
                                     Imagen_Id
                                 )
                             ),
-                            SampleImage,IfError( IsBlank(
-                            AzureBlobStorage.GetFileContent(
+                            SampleImage,IfError( AzureBlobStorage.GetFileContent(
                                 LookUp(
                                     'public.Medical_Center_Consultorio_Medico',
                                     id_sede = _varSede.id,
                                     Imagen_Id
                                 )
-                            )), SampleImage, AzureBlobStorage.GetFileContent(
-                                LookUp(
-                                    'public.Medical_Center_Consultorio_Medico',
-                                    id_sede = _varSede.id,
-                                    Imagen_Id
-                                )
-                            ))
+                            ), SampleImage)
                         )
                     PressedBorderColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)

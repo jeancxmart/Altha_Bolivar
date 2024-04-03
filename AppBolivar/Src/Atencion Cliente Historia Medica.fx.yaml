@@ -2388,8 +2388,7 @@
                 Image: |-
                     =If(
                         IsBlank(HMSelected.Imagen_Id),
-                        SampleImage,IfError( IsBlank(
-                        AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id)), SampleImage, AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id))
+                        SampleImage,IfError( AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id), SampleImage)
                     )
                 PressedBorderColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)

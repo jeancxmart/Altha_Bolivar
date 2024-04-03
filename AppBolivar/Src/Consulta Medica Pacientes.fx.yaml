@@ -2043,7 +2043,7 @@
 
         Image32_5 As image:
             Height: =54
-            Image: =IfError(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+            Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,IfError(AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)), SampleImage))
             Visible: =_varDESCANSOMEDICO
             Width: =151
             X: =630
@@ -2321,7 +2321,7 @@
         Image32_6 As image:
             Height: =54
             Image: |-
-                =IfError(
+                =If(
                     IsBlank(
                         LookUp(
                             'public.Medical_Center_Usuario',
@@ -2329,14 +2329,14 @@
                             NombreImage
                         )
                     ),
-                    SampleImage,
+                    SampleImage,IfError(
                     AzureBlobStorage.GetFileContent(
                         LookUp(
                             'public.Medical_Center_Usuario',
                             Correo = User().Email,
                             NombreImage
                         )
-                    )
+                    ), SampleImage)
                 )
             Visible: =_varEXAMENsOLICITADO
             Width: =151
@@ -2729,8 +2729,7 @@
                 Image: |-
                     =If(
                         IsBlank(ThisItem.id_Image),
-                        SampleImage, IfError( IsBlank(
-                        AzureBlobStorage.GetFileContent(ThisItem.id_Image)),SampleImage,AzureBlobStorage.GetFileContent(ThisItem.id_Image) )
+                        SampleImage, IfError(AzureBlobStorage.GetFileContent(ThisItem.id_Image), SampleImage )
                     )
                 OnSelect: =Select(Parent)
                 Width: =60
@@ -2762,7 +2761,7 @@
         Image32_7 As image:
             Height: =78
             Image: |-
-                =IfError(
+                =If(
                     IsBlank(
                         LookUp(
                             'public.Medical_Center_Usuario',
@@ -2770,14 +2769,14 @@
                             NombreImage
                         )
                     ),
-                    SampleImage,
+                    SampleImage, IfError(
                     AzureBlobStorage.GetFileContent(
                         LookUp(
                             'public.Medical_Center_Usuario',
                             Correo = User().Email,
                             NombreImage
                         )
-                    )
+                    ), SampleImage)
                 )
             Width: =151
             X: =800
@@ -3104,7 +3103,7 @@
 
         Image32_1 As image:
             Height: =49
-            Image: =IfError(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+            Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage, IfError(AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)), SampleImage))
             Visible: =_varRECETAMEDICA
             Width: =194
             X: =619
