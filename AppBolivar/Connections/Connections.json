@@ -1,112 +1,4 @@
 {
-  "02b92e45-c3dc-4b7a-8cdb-07d90de05afd": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "1813ac54-ba4c-41a5-9c88-f22a07d29ab0": {
-          "value": "shared_onedriveforbusiness"
-        },
-        "a3bf6afb-cccd-4a4c-b1a6-663935cb835b": {
-          "value": "shared_azureblob"
-        },
-        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
-          "value": "shared_office365"
-        },
-        "workflowDisplayName": {
-          "value": "PDF_Laboratorio"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "0c69d102-074c-4d5a-871b-2a579e29e97e"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_azureblob": {
-          "value": "a3bf6afb-cccd-4a4c-b1a6-663935cb835b"
-        },
-        "shared_office365": {
-          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
-        },
-        "shared_onedriveforbusiness": {
-          "value": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
-        },
-        "workflowDisplayName": {
-          "value": "PDF_Laboratorio"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "0c69d102-074c-4d5a-871b-2a579e29e97e"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "PDF_Laboratorio"
-    ],
-    "dependencies": {
-      "shared_azureblob": "a3bf6afb-cccd-4a4c-b1a6-663935cb835b",
-      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
-      "shared_onedriveforbusiness": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
-    },
-    "dependents": [],
-    "id": "02b92e45-c3dc-4b7a-8cdb-07d90de05afd"
-  },
-  "09f9340e-d733-4532-984e-5937b0d44541": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "1813ac54-ba4c-41a5-9c88-f22a07d29ab0": {
-          "value": "shared_onedriveforbusiness_1"
-        },
-        "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c": {
-          "value": "shared_azureblob"
-        },
-        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
-          "value": "shared_office365_1"
-        },
-        "workflowDisplayName": {
-          "value": "Receta Medica"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "f01cd0d7-0df2-4834-8434-864d7d81d773"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_azureblob": {
-          "value": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-        },
-        "shared_office365_1": {
-          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
-        },
-        "shared_onedriveforbusiness_1": {
-          "value": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
-        },
-        "workflowDisplayName": {
-          "value": "Receta Medica"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "f01cd0d7-0df2-4834-8434-864d7d81d773"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "RecetaMedica"
-    ],
-    "dependencies": {
-      "shared_azureblob": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c",
-      "shared_office365_1": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
-      "shared_onedriveforbusiness_1": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
-    },
-    "dependents": [],
-    "id": "09f9340e-d733-4532-984e-5937b0d44541"
-  },
   "0d1598b1-f308-484a-a560-deec206e3ef3": {
     "appActions": [
       "providers/PowerPlatform.Governance/Operations/Read",
@@ -118,9 +10,10 @@
       "displayName": "PostgreSQL",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+        "apiVer": 1,
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-03 16:46:17",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-03 17:00:01",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[public].[mc_historias_especialidad]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_cirugia_pediatrica]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_ginecologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_medicina_general]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_nutricion]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_oftalmologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_otorrinolaringologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_pediatria]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_servicios_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_analisis]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_calendario_bloquear]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_consultorio_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_counter]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_descanso_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_diagnostico]\":[\"get\"],\"[public].[medical_center_encuesta]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_especialidad]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_evidencias]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_examenes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examenes_laboratorio_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examen_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_historial_principal]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_informe_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medicamentos]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_medicamento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medios_pago]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_odontologia]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pacientes]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pagos]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_r\\u0026d_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_r\\u0026s_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_receta_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_roles_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_s\\u0026e_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_sedes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_servicios]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tests]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_test_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_ticket]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_time_log]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tipo_registro]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tratamiento]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_triaje]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_users_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_usuario]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_verificacionapp]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_anteriores_records]\":[\"get\"],\"[public].[medical_center_anteriores_visits]\":[\"get\"]}}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/postgresql/icon.png",
@@ -288,8 +181,7 @@
     ],
     "dependencies": {},
     "dependents": [
-      "8c321e1d-3411-4f02-92fb-284295d644c4",
-      "73b9c987-851d-4c67-9f54-6fdff26bdead"
+      "e39c49a6-dcc9-4061-90d0-b92278fdc21e"
     ],
     "id": "0d1598b1-f308-484a-a560-deec206e3ef3"
   },
@@ -309,8 +201,7 @@
     ],
     "dependencies": {},
     "dependents": [
-      "20c189dc-0cf2-4cbb-bdb5-cb6d8175aa38",
-      "89d20b8f-8c32-40af-bf3d-c8560b04007c"
+      "ce52b60c-c0cc-4b68-ab29-cc51567a3ea6"
     ],
     "id": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
   },
@@ -379,203 +270,15 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "2718c580-323c-49bc-a2e7-902699d03f89",
-      "9854a058-4000-440b-829c-46b5608a6950",
       "117f3a3b-9f57-4ea3-9c69-07a7356a4eb8",
       "a0bd1ea5-a39d-4138-bb9f-f5f8101e853a",
-      "02b92e45-c3dc-4b7a-8cdb-07d90de05afd",
-      "09f9340e-d733-4532-984e-5937b0d44541",
-      "73b9c987-851d-4c67-9f54-6fdff26bdead",
-      "83c7a93b-a006-4186-87e2-e6282a169136"
+      "7a6dcb81-9ddd-476b-9294-66e43510f135",
+      "e39c49a6-dcc9-4061-90d0-b92278fdc21e",
+      "a65423de-b315-4d09-b8ac-3fb8186873f8",
+      "6df1bcf2-25d2-4d14-883b-a702b5426522",
+      "5c01950e-9820-4ccd-8258-c893ba3c9d6b"
     ],
     "id": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
-  },
-  "197ee4a4-762e-43c8-ba5e-8edd174d187b": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c": {
-          "value": "shared_azureblob"
-        },
-        "workflowDisplayName": {
-          "value": "RecetaImagen DataURi Firma"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "748ea0df-12da-44f6-bb24-2a36fdd56815"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_azureblob": {
-          "value": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-        },
-        "workflowDisplayName": {
-          "value": "RecetaImagen DataURi Firma"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "748ea0df-12da-44f6-bb24-2a36fdd56815"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "RecetaImagenDataURiFirma"
-    ],
-    "dependencies": {
-      "shared_azureblob": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-    },
-    "dependents": [],
-    "id": "197ee4a4-762e-43c8-ba5e-8edd174d187b"
-  },
-  "1cc35fc6-82fd-4c24-8760-17ebacf0e29d": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c": {
-          "value": "shared_azureblob"
-        },
-        "workflowDisplayName": {
-          "value": "RecetaImagen DataURi"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "2d2f9ece-1650-498f-89e9-48318c73ff85"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_azureblob": {
-          "value": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-        },
-        "workflowDisplayName": {
-          "value": "RecetaImagen DataURi"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "2d2f9ece-1650-498f-89e9-48318c73ff85"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "RecetaImagenDataURi"
-    ],
-    "dependencies": {
-      "shared_azureblob": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-    },
-    "dependents": [],
-    "id": "1cc35fc6-82fd-4c24-8760-17ebacf0e29d"
-  },
-  "20c189dc-0cf2-4cbb-bdb5-cb6d8175aa38": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Flujos lógicos",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "10228439-87b6-4f4a-927b-bf3bfa2f8d91": {
-          "value": "shared_teams"
-        },
-        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
-          "value": "shared_office365"
-        },
-        "workflowDisplayName": {
-          "value": "Calendario_Compartir"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "9fab14db-d8c3-433f-89c0-d892b5bdd898"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_office365": {
-          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
-        },
-        "shared_teams": {
-          "value": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
-        },
-        "workflowDisplayName": {
-          "value": "Calendario_Compartir"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "9fab14db-d8c3-433f-89c0-d892b5bdd898"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Calendario_Compartir"
-    ],
-    "dependencies": {
-      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
-      "shared_teams": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
-    },
-    "dependents": [],
-    "id": "20c189dc-0cf2-4cbb-bdb5-cb6d8175aa38"
-  },
-  "2718c580-323c-49bc-a2e7-902699d03f89": {
-    "appActions": [
-      "Run"
-    ],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Flujos lógicos",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "1813ac54-ba4c-41a5-9c88-f22a07d29ab0": {
-          "value": "shared_onedriveforbusiness"
-        },
-        "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c": {
-          "value": "shared_azureblob"
-        },
-        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
-          "value": "shared_office365"
-        },
-        "workflowDisplayName": {
-          "value": "PDF_Descanso_Medico"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "de72a67d-cb89-4b46-93ca-e66cef634f05"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_azureblob": {
-          "value": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-        },
-        "shared_office365": {
-          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
-        },
-        "shared_onedriveforbusiness": {
-          "value": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
-        },
-        "workflowDisplayName": {
-          "value": "PDF_Descanso_Medico"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "de72a67d-cb89-4b46-93ca-e66cef634f05"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "PDF_Descanso_Medico"
-    ],
-    "dependencies": {
-      "shared_azureblob": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c",
-      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
-      "shared_onedriveforbusiness": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
-    },
-    "dependents": [],
-    "id": "2718c580-323c-49bc-a2e7-902699d03f89"
   },
   "29244c6a-d9bb-4f9f-bffd-244d2c7b0223": {
     "appActions": [
@@ -588,9 +291,10 @@
       "displayName": "PostgreSQL",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+        "apiVer": 1,
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-03 16:46:17",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-03 17:00:01",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[public].[mc_historias_especialidad]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_cirugia_pediatrica]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_ginecologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_medicina_general]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_nutricion]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_oftalmologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_otorrinolaringologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_pediatria]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_servicios_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_analisis]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_calendario_bloquear]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_consultorio_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_counter]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_descanso_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_diagnostico]\":[\"get\"],\"[public].[medical_center_encuesta]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_especialidad]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_evidencias]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_examenes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examenes_laboratorio_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examen_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_historial_principal]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_informe_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medicamentos]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_medicamento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medios_pago]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_odontologia]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pacientes]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pagos]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_r\\u0026d_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_r\\u0026s_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_receta_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_roles_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_s\\u0026e_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_sedes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_servicios]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tests]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_test_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_ticket]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_time_log]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tipo_registro]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tratamiento]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_triaje]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_users_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_usuario]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_verificacionapp]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_anteriores_records]\":[\"get\"],\"[public].[medical_center_anteriores_visits]\":[\"get\"]}}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/postgresql/icon.png",
@@ -676,6 +380,40 @@
     "dependents": [],
     "id": "29244c6a-d9bb-4f9f-bffd-244d2c7b0223"
   },
+  "376abe52-7f50-4201-ae77-48216490bd53": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "Data_URI_Lab"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "4f8a38f4-10cb-4d5e-ba9f-52ca76d77ede"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "Data_URI_Lab"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "4f8a38f4-10cb-4d5e-ba9f-52ca76d77ede"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Data_URI_Lab"
+    ],
+    "dependencies": {
+      "shared_azureblob_1": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5"
+    },
+    "dependents": [],
+    "id": "376abe52-7f50-4201-ae77-48216490bd53"
+  },
   "37fc8b2b-9246-4a08-92fd-23cbed11c454": {
     "appActions": [
       "SearchUser",
@@ -760,24 +498,19 @@
     ],
     "dependencies": {},
     "dependents": [
-      "ccec861f-4952-4bab-aabd-07310b5a7649",
-      "8c321e1d-3411-4f02-92fb-284295d644c4",
-      "c9be32f2-1739-4353-abb6-68f91e4cf138",
       "6f572cee-01e7-47f2-9512-10ed920dfe03",
-      "56b7ad31-9eff-488c-9e5d-e23652722ec2",
       "e39f1417-8bd2-4093-b5e9-f6ee778106fd",
-      "e1a09e2e-4042-46c8-bff3-d9af77c253b5",
-      "65dc1a2e-1d91-4aaf-ba9d-25d52bf8b3ca"
+      "65dc1a2e-1d91-4aaf-ba9d-25d52bf8b3ca",
+      "56b7ad31-9eff-488c-9e5d-e23652722ec2",
+      "92c83d40-96db-4f50-afde-aaead7751eed",
+      "c7236eee-19a7-48b7-a441-c51497107944",
+      "bfbfdf95-ece9-4084-8bb6-e8942e234915"
     ],
     "id": "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8"
   },
   "56b7ad31-9eff-488c-9e5d-e23652722ec2": {
-    "appActions": [
-      "Run"
-    ],
     "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Flujos lógicos",
+      "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
@@ -836,13 +569,95 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "8c321e1d-3411-4f02-92fb-284295d644c4",
-      "c9be32f2-1739-4353-abb6-68f91e4cf138",
       "6f572cee-01e7-47f2-9512-10ed920dfe03",
+      "e39f1417-8bd2-4093-b5e9-f6ee778106fd",
       "56b7ad31-9eff-488c-9e5d-e23652722ec2",
-      "e39f1417-8bd2-4093-b5e9-f6ee778106fd"
+      "bfbfdf95-ece9-4084-8bb6-e8942e234915"
     ],
     "id": "5b0574b5-6db9-4b05-a6b8-e167e987009d"
+  },
+  "5c01950e-9820-4ccd-8258-c893ba3c9d6b": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "PDF_Descanso_Medico"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "de72a67d-cb89-4b46-93ca-e66cef634f05"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "PDF_Descanso_Medico"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "de72a67d-cb89-4b46-93ca-e66cef634f05"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PDF_Descanso_Medico"
+    ],
+    "dependencies": {
+      "shared_azureblob_1": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5",
+      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
+      "shared_onedriveforbusiness": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
+    },
+    "dependents": [],
+    "id": "5c01950e-9820-4ccd-8258-c893ba3c9d6b"
+  },
+  "63ddc7e3-7fbc-4722-9e7b-bd1d5526fea7": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
+          "value": "shared_office365"
+        },
+        "cdcf077e-7891-4c18-bbf7-8574bc40f4f5": {
+          "value": "shared_azureblob"
+        },
+        "workflowDisplayName": {
+          "value": "Enviar_Tests_Correo_Whatsaap"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "52d0c4ce-6e25-460a-8052-a1acc077b9ae"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_azureblob": {
+          "value": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5"
+        },
+        "shared_office365": {
+          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
+        },
+        "workflowDisplayName": {
+          "value": "Enviar_Tests_Correo_Whatsaap"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "52d0c4ce-6e25-460a-8052-a1acc077b9ae"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Enviar_Tests_Correo_Whatsaap"
+    ],
+    "dependencies": {
+      "shared_azureblob": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5",
+      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
+    },
+    "dependents": [],
+    "id": "63ddc7e3-7fbc-4722-9e7b-bd1d5526fea7"
   },
   "65273a47-6de8-41e5-88d2-96c9b2a50258": {
     "appActions": [
@@ -905,6 +720,42 @@
     "dependents": [],
     "id": "65dc1a2e-1d91-4aaf-ba9d-25d52bf8b3ca"
   },
+  "6df1bcf2-25d2-4d14-883b-a702b5426522": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "Receta Medica"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "f01cd0d7-0df2-4834-8434-864d7d81d773"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "Receta Medica"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "f01cd0d7-0df2-4834-8434-864d7d81d773"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "RecetaMedica"
+    ],
+    "dependencies": {
+      "shared_azureblob_1": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5",
+      "shared_office365_1": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
+      "shared_onedriveforbusiness_1": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
+    },
+    "dependents": [],
+    "id": "6df1bcf2-25d2-4d14-883b-a702b5426522"
+  },
   "6f572cee-01e7-47f2-9512-10ed920dfe03": {
     "appActions": [],
     "connectionRef": {
@@ -954,68 +805,7 @@
     "dependents": [],
     "id": "6f572cee-01e7-47f2-9512-10ed920dfe03"
   },
-  "73b9c987-851d-4c67-9f54-6fdff26bdead": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "0d1598b1-f308-484a-a560-deec206e3ef3": {
-          "value": "shared_postgresql_1"
-        },
-        "1813ac54-ba4c-41a5-9c88-f22a07d29ab0": {
-          "value": "shared_onedriveforbusiness_1"
-        },
-        "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c": {
-          "value": "shared_azureblob"
-        },
-        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
-          "value": "shared_office365"
-        },
-        "workflowDisplayName": {
-          "value": "Boleta_Venta"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "3e018df9-959b-4848-b636-751a2473c704"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_azureblob": {
-          "value": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-        },
-        "shared_office365": {
-          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
-        },
-        "shared_onedriveforbusiness_1": {
-          "value": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
-        },
-        "shared_postgresql_1": {
-          "value": "0d1598b1-f308-484a-a560-deec206e3ef3"
-        },
-        "workflowDisplayName": {
-          "value": "Boleta_Venta"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "3e018df9-959b-4848-b636-751a2473c704"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Boleta_Venta"
-    ],
-    "dependencies": {
-      "shared_azureblob": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c",
-      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
-      "shared_onedriveforbusiness_1": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0",
-      "shared_postgresql_1": "0d1598b1-f308-484a-a560-deec206e3ef3"
-    },
-    "dependents": [],
-    "id": "73b9c987-851d-4c67-9f54-6fdff26bdead"
-  },
-  "83c7a93b-a006-4186-87e2-e6282a169136": {
+  "7a6dcb81-9ddd-476b-9294-66e43510f135": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
@@ -1024,23 +814,23 @@
         "1813ac54-ba4c-41a5-9c88-f22a07d29ab0": {
           "value": "shared_onedriveforbusiness"
         },
-        "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c": {
-          "value": "shared_azureblob"
-        },
         "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
           "value": "shared_office365"
         },
+        "cdcf077e-7891-4c18-bbf7-8574bc40f4f5": {
+          "value": "shared_azureblob_1"
+        },
         "workflowDisplayName": {
-          "value": "Informe clinico"
+          "value": "PDF_Laboratorio"
         },
         "workflowEntityId": {},
         "workflowName": {
-          "value": "b9abb71c-509b-473e-a52b-01be1434a7b3"
+          "value": "0c69d102-074c-4d5a-871b-2a579e29e97e"
         }
       },
       "parameterHintsV2": {
-        "shared_azureblob": {
-          "value": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
+        "shared_azureblob_1": {
+          "value": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5"
         },
         "shared_office365": {
           "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
@@ -1049,181 +839,139 @@
           "value": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
         },
         "workflowDisplayName": {
-          "value": "Informe clinico"
+          "value": "PDF_Laboratorio"
         },
         "workflowEntityId": {},
         "workflowName": {
-          "value": "b9abb71c-509b-473e-a52b-01be1434a7b3"
+          "value": "0c69d102-074c-4d5a-871b-2a579e29e97e"
         }
       }
     },
     "datasets": {},
     "dataSources": [
-      "Informeclinico"
+      "PDF_Laboratorio"
     ],
     "dependencies": {
-      "shared_azureblob": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c",
+      "shared_azureblob_1": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5",
       "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
       "shared_onedriveforbusiness": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
     },
     "dependents": [],
-    "id": "83c7a93b-a006-4186-87e2-e6282a169136"
+    "id": "7a6dcb81-9ddd-476b-9294-66e43510f135"
   },
-  "89d20b8f-8c32-40af-bf3d-c8560b04007c": {
+  "8c183554-6562-47bd-8ef1-3817275537e0": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "10228439-87b6-4f4a-927b-bf3bfa2f8d91": {
-          "value": "shared_teams"
-        },
-        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
-          "value": "shared_office365"
+        "cdcf077e-7891-4c18-bbf7-8574bc40f4f5": {
+          "value": "shared_azureblob_1"
         },
         "workflowDisplayName": {
-          "value": "Calendario_Compartir"
+          "value": "RecetaImagen DataURi"
         },
         "workflowEntityId": {},
         "workflowName": {
-          "value": "35c31a67-2bda-4b8d-8879-7947024604b6"
+          "value": "2d2f9ece-1650-498f-89e9-48318c73ff85"
         }
       },
       "parameterHintsV2": {
-        "shared_office365": {
-          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
-        },
-        "shared_teams": {
-          "value": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
+        "shared_azureblob_1": {
+          "value": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5"
         },
         "workflowDisplayName": {
-          "value": "Calendario_Compartir"
+          "value": "RecetaImagen DataURi"
         },
         "workflowEntityId": {},
         "workflowName": {
-          "value": "35c31a67-2bda-4b8d-8879-7947024604b6"
+          "value": "2d2f9ece-1650-498f-89e9-48318c73ff85"
         }
       }
     },
     "datasets": {},
     "dataSources": [
-      "Calendario_Compartir_1"
+      "RecetaImagenDataURi"
     ],
     "dependencies": {
-      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
-      "shared_teams": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
+      "shared_azureblob_1": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5"
     },
     "dependents": [],
-    "id": "89d20b8f-8c32-40af-bf3d-c8560b04007c"
+    "id": "8c183554-6562-47bd-8ef1-3817275537e0"
   },
-  "8c321e1d-3411-4f02-92fb-284295d644c4": {
-    "appActions": [
-      "Run"
-    ],
+  "8fa92d7e-1f5b-4d1d-bc62-ee333338646b": {
     "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Flujos lógicos",
+      "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "0d1598b1-f308-484a-a560-deec206e3ef3": {
-          "value": "shared_postgresql_1"
-        },
-        "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8": {
-          "value": "shared_sharepointonline"
-        },
-        "5b0574b5-6db9-4b05-a6b8-e167e987009d": {
-          "value": "shared_excelonlinebusiness"
-        },
         "workflowDisplayName": {
-          "value": "CargaDatosMedicamento-Altha"
+          "value": "RecetaImagen DataURi Firma"
         },
         "workflowEntityId": {},
         "workflowName": {
-          "value": "2ac2108a-7625-4ae1-8065-f5beff4f3925"
+          "value": "748ea0df-12da-44f6-bb24-2a36fdd56815"
         }
       },
       "parameterHintsV2": {
-        "shared_excelonlinebusiness": {
-          "value": "5b0574b5-6db9-4b05-a6b8-e167e987009d"
+        "workflowDisplayName": {
+          "value": "RecetaImagen DataURi Firma"
         },
-        "shared_postgresql_1": {
-          "value": "0d1598b1-f308-484a-a560-deec206e3ef3"
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "748ea0df-12da-44f6-bb24-2a36fdd56815"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "RecetaImagenDataURiFirma"
+    ],
+    "dependencies": {
+      "shared_azureblob_1": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5"
+    },
+    "dependents": [],
+    "id": "8fa92d7e-1f5b-4d1d-bc62-ee333338646b"
+  },
+  "92c83d40-96db-4f50-afde-aaead7751eed": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8": {
+          "value": "shared_sharepointonline"
         },
+        "workflowDisplayName": {
+          "value": "Bolivar Imagenes Evidencia"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "98834ef3-f829-4d1c-adf5-f7f3d3a6554a"
+        }
+      },
+      "parameterHintsV2": {
         "shared_sharepointonline": {
           "value": "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8"
         },
         "workflowDisplayName": {
-          "value": "CargaDatosMedicamento-Altha"
+          "value": "Bolivar Imagenes Evidencia"
         },
         "workflowEntityId": {},
         "workflowName": {
-          "value": "2ac2108a-7625-4ae1-8065-f5beff4f3925"
+          "value": "98834ef3-f829-4d1c-adf5-f7f3d3a6554a"
         }
       }
     },
     "datasets": {},
     "dataSources": [
-      "CargaDatosMedicamento-Altha"
+      "BolivarImagenesEvidencia"
     ],
     "dependencies": {
-      "shared_excelonlinebusiness": "5b0574b5-6db9-4b05-a6b8-e167e987009d",
-      "shared_postgresql_1": "0d1598b1-f308-484a-a560-deec206e3ef3",
       "shared_sharepointonline": "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8"
     },
     "dependents": [],
-    "id": "8c321e1d-3411-4f02-92fb-284295d644c4"
-  },
-  "9854a058-4000-440b-829c-46b5608a6950": {
-    "appActions": [
-      "Run"
-    ],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Flujos lógicos",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "1813ac54-ba4c-41a5-9c88-f22a07d29ab0": {
-          "value": "shared_onedriveforbusiness_1"
-        },
-        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
-          "value": "shared_office365_1"
-        },
-        "workflowDisplayName": {
-          "value": "CSV_RegistroPago"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "2ac2108a-7625-4ae1-8065-f5beff4f3925"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_office365_1": {
-          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
-        },
-        "shared_onedriveforbusiness_1": {
-          "value": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
-        },
-        "workflowDisplayName": {
-          "value": "CSV_RegistroPago"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "2ac2108a-7625-4ae1-8065-f5beff4f3925"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "CSV_RegistroPago"
-    ],
-    "dependencies": {
-      "shared_office365_1": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
-      "shared_onedriveforbusiness_1": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
-    },
-    "dependents": [],
-    "id": "9854a058-4000-440b-829c-46b5608a6950"
+    "id": "92c83d40-96db-4f50-afde-aaead7751eed"
   },
   "a0bd1ea5-a39d-4138-bb9f-f5f8101e853a": {
     "appActions": [
@@ -1292,8 +1040,8 @@
       "executionRestrictions": {
         "apiId": "unknown",
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-03 16:46:17",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-03 17:00:01",
+        "policy": "{\"type\":\"invalid\"}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1674/1.0.1674.3602/azureblob/icon.png",
@@ -1307,13 +1055,59 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "a0bd1ea5-a39d-4138-bb9f-f5f8101e853a",
-      "02b92e45-c3dc-4b7a-8cdb-07d90de05afd"
+      "a0bd1ea5-a39d-4138-bb9f-f5f8101e853a"
     ],
     "endpoints": [
       "blobauroranuevo"
     ],
     "id": "a3bf6afb-cccd-4a4c-b1a6-663935cb835b"
+  },
+  "a65423de-b315-4d09-b8ac-3fb8186873f8": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "1813ac54-ba4c-41a5-9c88-f22a07d29ab0": {
+          "value": "shared_onedriveforbusiness_1"
+        },
+        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
+          "value": "shared_office365_1"
+        },
+        "workflowDisplayName": {
+          "value": "CSV_RegistroPago"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "b627693b-d643-40e9-9919-8d30243316ef"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365_1": {
+          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
+        },
+        "shared_onedriveforbusiness_1": {
+          "value": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
+        },
+        "workflowDisplayName": {
+          "value": "CSV_RegistroPago"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "b627693b-d643-40e9-9919-8d30243316ef"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "CSV_RegistroPago_1"
+    ],
+    "dependencies": {
+      "shared_office365_1": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
+      "shared_onedriveforbusiness_1": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
+    },
+    "dependents": [],
+    "id": "a65423de-b315-4d09-b8ac-3fb8186873f8"
   },
   "b00a8d73-ba7d-4b16-bc1f-58b639e4bb74": {
     "connectionRef": {
@@ -1366,9 +1160,10 @@
       "displayName": "PostgreSQL",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+        "apiVer": 1,
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-03 16:46:17",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-03 17:00:01",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[public].[mc_historias_especialidad]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_cirugia_pediatrica]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_ginecologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_medicina_general]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_nutricion]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_oftalmologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_otorrinolaringologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_pediatria]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_servicios_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_analisis]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_calendario_bloquear]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_consultorio_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_counter]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_descanso_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_diagnostico]\":[\"get\"],\"[public].[medical_center_encuesta]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_especialidad]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_evidencias]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_examenes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examenes_laboratorio_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examen_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_historial_principal]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_informe_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medicamentos]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_medicamento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medios_pago]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_odontologia]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pacientes]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pagos]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_r\\u0026d_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_r\\u0026s_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_receta_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_roles_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_s\\u0026e_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_sedes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_servicios]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tests]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_test_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_ticket]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_time_log]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tipo_registro]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tratamiento]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_triaje]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_users_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_usuario]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_verificacionapp]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_anteriores_records]\":[\"get\"],\"[public].[medical_center_anteriores_visits]\":[\"get\"]}}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/postgresql/icon.png",
@@ -1412,9 +1207,10 @@
       "displayName": "PostgreSQL",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_postgresql",
+        "apiVer": 1,
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-03 16:46:17",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-03 17:00:01",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[public].[mc_historias_especialidad]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_cirugia_pediatrica]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_ginecologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_medicina_general]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_nutricion]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_oftalmologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_otorrinolaringologia]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_historia_pediatria]\":[\"post\",\"patch\",\"get\"],\"[public].[mc_servicios_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_analisis]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_calendario_bloquear]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_consultorio_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_counter]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_descanso_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_diagnostico]\":[\"get\"],\"[public].[medical_center_encuesta]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_especialidad]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_evidencias]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_examenes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examenes_laboratorio_paciente]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_examen_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_historial_principal]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_informe_medico]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medicamentos]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_medicamento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_medios_pago]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_odontologia]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pacientes]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_pagos]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_r\\u0026d_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_r\\u0026s_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_receta_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_roles_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_s\\u0026e_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_sedes]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_servicios]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tests]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_test_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_ticket]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_time_log]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tipo_registro]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_tratamiento]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_maestro]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_tratamiento_paciente]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_triaje]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_users_relacion]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_usuario]\":[\"post\",\"patch\",\"get\",\"delete\"],\"[public].[medical_center_verificacionapp]\":[\"post\",\"patch\",\"get\"],\"[public].[medical_center_anteriores_records]\":[\"get\"],\"[public].[medical_center_anteriores_visits]\":[\"get\"]}}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/postgresql/icon.png",
@@ -1440,93 +1236,40 @@
     "dependents": [],
     "id": "b7018813-fb9e-420a-b1a8-962e59b93d0c"
   },
-  "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c": {
-    "appActions": [
-      "GetFileContent",
-      "CreateFile"
-    ],
-    "connectionRef": {
-      "apiTier": "Premium",
-      "authenticationType": "keyBasedAuth",
-      "displayName": "Azure Blob Storage",
-      "executionRestrictions": {
-        "apiId": "unknown",
-        "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-03 16:46:17",
-        "policy": "{\"type\":\"unused\"}",
-        "version": 1
-      },
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1674/1.0.1674.3602/azureblob/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_azureblob",
-      "parameterHints": {},
-      "parameterHintsV2": {},
-      "runtimePolicyName": "13683f0e-0d45-4767-8ef2-b156038e0694",
-      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_azureblob/connections/b357b5fe1d1f4d079e0f3376ebff3184"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "2718c580-323c-49bc-a2e7-902699d03f89",
-      "197ee4a4-762e-43c8-ba5e-8edd174d187b",
-      "1cc35fc6-82fd-4c24-8760-17ebacf0e29d",
-      "09f9340e-d733-4532-984e-5937b0d44541",
-      "73b9c987-851d-4c67-9f54-6fdff26bdead",
-      "bd658123-e3c6-42a2-869a-e35ab4cc4e94",
-      "83c7a93b-a006-4186-87e2-e6282a169136",
-      "c5d9d14c-a429-48c9-8ce2-6bed6eea6c32"
-    ],
-    "endpoints": [
-      "blobauroranuevo"
-    ],
-    "id": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-  },
-  "bd658123-e3c6-42a2-869a-e35ab4cc4e94": {
+  "bfbfdf95-ece9-4084-8bb6-e8942e234915": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c": {
-          "value": "shared_azureblob"
-        },
-        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
-          "value": "shared_office365"
-        },
         "workflowDisplayName": {
-          "value": "Enviar_Tests_Correo_Whatsaap"
+          "value": "ImportarDatos_Servicios"
         },
         "workflowEntityId": {},
         "workflowName": {
-          "value": "52d0c4ce-6e25-460a-8052-a1acc077b9ae"
+          "value": "5aa7221c-6fa8-44b3-a4a5-bfe266405f21"
         }
       },
       "parameterHintsV2": {
-        "shared_azureblob": {
-          "value": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-        },
-        "shared_office365": {
-          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
-        },
         "workflowDisplayName": {
-          "value": "Enviar_Tests_Correo_Whatsaap"
+          "value": "ImportarDatos_Servicios"
         },
         "workflowEntityId": {},
         "workflowName": {
-          "value": "52d0c4ce-6e25-460a-8052-a1acc077b9ae"
+          "value": "5aa7221c-6fa8-44b3-a4a5-bfe266405f21"
         }
       }
     },
     "datasets": {},
     "dataSources": [
-      "Enviar_Tests_Correo_Whatsaap"
+      "ImportarDatos_Servicios"
     ],
     "dependencies": {
-      "shared_azureblob": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c",
-      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
+      "shared_excelonlinebusiness": "5b0574b5-6db9-4b05-a6b8-e167e987009d",
+      "shared_sharepointonline": "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8"
     },
     "dependents": [],
-    "id": "bd658123-e3c6-42a2-869a-e35ab4cc4e94"
+    "id": "bfbfdf95-ece9-4084-8bb6-e8942e234915"
   },
   "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
     "appActions": [
@@ -1547,155 +1290,20 @@
     ],
     "dependencies": {},
     "dependents": [
-      "2718c580-323c-49bc-a2e7-902699d03f89",
-      "9854a058-4000-440b-829c-46b5608a6950",
       "117f3a3b-9f57-4ea3-9c69-07a7356a4eb8",
       "a0bd1ea5-a39d-4138-bb9f-f5f8101e853a",
-      "20c189dc-0cf2-4cbb-bdb5-cb6d8175aa38",
-      "02b92e45-c3dc-4b7a-8cdb-07d90de05afd",
-      "09f9340e-d733-4532-984e-5937b0d44541",
-      "73b9c987-851d-4c67-9f54-6fdff26bdead",
-      "bd658123-e3c6-42a2-869a-e35ab4cc4e94",
       "b00a8d73-ba7d-4b16-bc1f-58b639e4bb74",
-      "83c7a93b-a006-4186-87e2-e6282a169136",
-      "89d20b8f-8c32-40af-bf3d-c8560b04007c"
+      "ce52b60c-c0cc-4b68-ab29-cc51567a3ea6",
+      "7a6dcb81-9ddd-476b-9294-66e43510f135",
+      "e39c49a6-dcc9-4061-90d0-b92278fdc21e",
+      "a65423de-b315-4d09-b8ac-3fb8186873f8",
+      "63ddc7e3-7fbc-4722-9e7b-bd1d5526fea7",
+      "6df1bcf2-25d2-4d14-883b-a702b5426522",
+      "5c01950e-9820-4ccd-8258-c893ba3c9d6b"
     ],
     "id": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
   },
-  "c5d9d14c-a429-48c9-8ce2-6bed6eea6c32": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c": {
-          "value": "shared_azureblob"
-        },
-        "workflowDisplayName": {
-          "value": "Data_URI_Lab"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "4f8a38f4-10cb-4d5e-ba9f-52ca76d77ede"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_azureblob": {
-          "value": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-        },
-        "workflowDisplayName": {
-          "value": "Data_URI_Lab"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "4f8a38f4-10cb-4d5e-ba9f-52ca76d77ede"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Data_URI_Lab"
-    ],
-    "dependencies": {
-      "shared_azureblob": "b7a8e70c-cbac-4ed9-b0ea-2d6b63581d8c"
-    },
-    "dependents": [],
-    "id": "c5d9d14c-a429-48c9-8ce2-6bed6eea6c32"
-  },
-  "c9be32f2-1739-4353-abb6-68f91e4cf138": {
-    "appActions": [
-      "Run"
-    ],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Flujos lógicos",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8": {
-          "value": "shared_sharepointonline"
-        },
-        "5b0574b5-6db9-4b05-a6b8-e167e987009d": {
-          "value": "shared_excelonlinebusiness"
-        },
-        "workflowDisplayName": {
-          "value": "ImportarDatos_Servicios"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "5aa7221c-6fa8-44b3-a4a5-bfe266405f21"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_excelonlinebusiness": {
-          "value": "5b0574b5-6db9-4b05-a6b8-e167e987009d"
-        },
-        "shared_sharepointonline": {
-          "value": "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8"
-        },
-        "workflowDisplayName": {
-          "value": "ImportarDatos_Servicios"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "5aa7221c-6fa8-44b3-a4a5-bfe266405f21"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "ImportarDatos_Servicios"
-    ],
-    "dependencies": {
-      "shared_excelonlinebusiness": "5b0574b5-6db9-4b05-a6b8-e167e987009d",
-      "shared_sharepointonline": "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8"
-    },
-    "dependents": [],
-    "id": "c9be32f2-1739-4353-abb6-68f91e4cf138"
-  },
-  "ccec861f-4952-4bab-aabd-07310b5a7649": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Flujos lógicos",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8": {
-          "value": "shared_sharepointonline"
-        },
-        "workflowDisplayName": {
-          "value": "Bolivar Imagenes Evidencia"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "98834ef3-f829-4d1c-adf5-f7f3d3a6554a"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_sharepointonline": {
-          "value": "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8"
-        },
-        "workflowDisplayName": {
-          "value": "Bolivar Imagenes Evidencia"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "98834ef3-f829-4d1c-adf5-f7f3d3a6554a"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "BolivarImagenesEvidencia"
-    ],
-    "dependencies": {
-      "shared_sharepointonline": "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8"
-    },
-    "dependents": [],
-    "id": "ccec861f-4952-4bab-aabd-07310b5a7649"
-  },
-  "e1a09e2e-4042-46c8-bff3-d9af77c253b5": {
+  "c7236eee-19a7-48b7-a441-c51497107944": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
@@ -1733,17 +1341,17 @@
       "shared_sharepointonline": "3e469bc3-fb6e-4dbf-b35b-f0b5ad2c35d8"
     },
     "dependents": [],
-    "id": "e1a09e2e-4042-46c8-bff3-d9af77c253b5"
+    "id": "c7236eee-19a7-48b7-a441-c51497107944"
   },
-  "e1c08fc8-58ea-47ac-a28f-1fecb94dd45c": {
+  "cdcf077e-7891-4c18-bbf7-8574bc40f4f5": {
     "connectionRef": {
       "authenticationType": "keyBasedAuth",
       "displayName": "Azure Blob Storage",
       "executionRestrictions": {
-        "apiId": "/providers/microsoft.powerapps/apis/shared_azureblob",
+        "apiId": "unknown",
         "appVer": "3.24034.15",
-        "modifiedOn": "2024-04-03 16:46:17",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-04-03 17:00:01",
+        "policy": "{\"type\":\"invalid\"}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1683/1.0.1683.3685/azureblob/icon.png",
@@ -1755,8 +1363,125 @@
       "AzureBlobStorage"
     ],
     "dependencies": {},
+    "dependents": [
+      "7a6dcb81-9ddd-476b-9294-66e43510f135",
+      "8c183554-6562-47bd-8ef1-3817275537e0",
+      "e39c49a6-dcc9-4061-90d0-b92278fdc21e",
+      "63ddc7e3-7fbc-4722-9e7b-bd1d5526fea7",
+      "376abe52-7f50-4201-ae77-48216490bd53",
+      "8fa92d7e-1f5b-4d1d-bc62-ee333338646b",
+      "6df1bcf2-25d2-4d14-883b-a702b5426522",
+      "5c01950e-9820-4ccd-8258-c893ba3c9d6b"
+    ],
+    "id": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5"
+  },
+  "ce52b60c-c0cc-4b68-ab29-cc51567a3ea6": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "10228439-87b6-4f4a-927b-bf3bfa2f8d91": {
+          "value": "shared_teams"
+        },
+        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
+          "value": "shared_office365"
+        },
+        "workflowDisplayName": {
+          "value": "Calendario_Compartir"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "35c31a67-2bda-4b8d-8879-7947024604b6"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365": {
+          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
+        },
+        "shared_teams": {
+          "value": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
+        },
+        "workflowDisplayName": {
+          "value": "Calendario_Compartir"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "35c31a67-2bda-4b8d-8879-7947024604b6"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Calendario_Compartir_1"
+    ],
+    "dependencies": {
+      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
+      "shared_teams": "10228439-87b6-4f4a-927b-bf3bfa2f8d91"
+    },
     "dependents": [],
-    "id": "e1c08fc8-58ea-47ac-a28f-1fecb94dd45c"
+    "id": "ce52b60c-c0cc-4b68-ab29-cc51567a3ea6"
+  },
+  "e39c49a6-dcc9-4061-90d0-b92278fdc21e": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "0d1598b1-f308-484a-a560-deec206e3ef3": {
+          "value": "shared_postgresql_1"
+        },
+        "1813ac54-ba4c-41a5-9c88-f22a07d29ab0": {
+          "value": "shared_onedriveforbusiness_1"
+        },
+        "c4a712dd-ca0c-4291-a786-9e1f8bf17263": {
+          "value": "shared_office365"
+        },
+        "cdcf077e-7891-4c18-bbf7-8574bc40f4f5": {
+          "value": "shared_azureblob_1"
+        },
+        "workflowDisplayName": {
+          "value": "Boleta_Venta"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "3e018df9-959b-4848-b636-751a2473c704"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_azureblob_1": {
+          "value": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5"
+        },
+        "shared_office365": {
+          "value": "c4a712dd-ca0c-4291-a786-9e1f8bf17263"
+        },
+        "shared_onedriveforbusiness_1": {
+          "value": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0"
+        },
+        "shared_postgresql_1": {
+          "value": "0d1598b1-f308-484a-a560-deec206e3ef3"
+        },
+        "workflowDisplayName": {
+          "value": "Boleta_Venta"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "3e018df9-959b-4848-b636-751a2473c704"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Boleta_Venta"
+    ],
+    "dependencies": {
+      "shared_azureblob_1": "cdcf077e-7891-4c18-bbf7-8574bc40f4f5",
+      "shared_office365": "c4a712dd-ca0c-4291-a786-9e1f8bf17263",
+      "shared_onedriveforbusiness_1": "1813ac54-ba4c-41a5-9c88-f22a07d29ab0",
+      "shared_postgresql_1": "0d1598b1-f308-484a-a560-deec206e3ef3"
+    },
+    "dependents": [],
+    "id": "e39c49a6-dcc9-4061-90d0-b92278fdc21e"
   },
   "e39f1417-8bd2-4093-b5e9-f6ee778106fd": {
     "appActions": [
