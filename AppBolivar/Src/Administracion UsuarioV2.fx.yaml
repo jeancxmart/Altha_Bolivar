@@ -12009,7 +12009,30 @@
                     Height: =70
                     HoverBorderColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    Image: =If(IsBlank(LookUp('public.Medical_Center_Consultorio_Medico',id_sede = _varSede.id,Imagen_Id)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Consultorio_Medico',id_sede = _varSede.id,Imagen_Id)))
+                    Image: |-
+                        =IfError(
+                            IsBlank(
+                                LookUp(
+                                    'public.Medical_Center_Consultorio_Medico',
+                                    id_sede = _varSede.id,
+                                    Imagen_Id
+                                )
+                            ),
+                            SampleImage,IfError( IsBlank(
+                            AzureBlobStorage.GetFileContent(
+                                LookUp(
+                                    'public.Medical_Center_Consultorio_Medico',
+                                    id_sede = _varSede.id,
+                                    Imagen_Id
+                                )
+                            )), SampleImage, AzureBlobStorage.GetFileContent(
+                                LookUp(
+                                    'public.Medical_Center_Consultorio_Medico',
+                                    id_sede = _varSede.id,
+                                    Imagen_Id
+                                )
+                            ))
+                        )
                     PressedBorderColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =8

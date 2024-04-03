@@ -2388,7 +2388,7 @@ scDataAntigua As screen:
                 galCitas_1 As gallery.galleryVertical:
                     DelayItemLoading: =true
                     Height: =517
-                    Items: =_varDatass
+                    Items: =Table(ParseJSON(_varDatass.salida))
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
@@ -2422,7 +2422,7 @@ scDataAntigua As screen:
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =15
-                                Text: =
+                                Text: =//ThisItem.Value.Name
                                 Wrap: =false
                                 ZIndex: =1
 
@@ -2434,20 +2434,10 @@ scDataAntigua As screen:
                             Width: =165
                             ZIndex: =2
 
-                            Label95_25 As label:
-                                Align: =Align.Center
-                                AlignInContainer: =AlignInContainer.Stretch
-                                Color: =RGBA(95, 106, 146, 1)
-                                FillPortions: =1
-                                Font: =Font.'Segoe UI'
-                                PaddingBottom: =0
-                                PaddingLeft: =0
-                                PaddingRight: =0
-                                PaddingTop: =0
-                                Size: =15
-                                Text: =
-                                Wrap: =false
-                                ZIndex: =1
+                            Button14 As button:
+                                OnSelect: =//Launch(ThisItem.Value.LinkingUrl)
+                                Text: ="Botón"
+                                ZIndex: =2
 
                 Label95_35 As label:
                     Font: =Font.'Segoe UI'
