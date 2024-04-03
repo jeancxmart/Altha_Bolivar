@@ -6,10 +6,7 @@
       <object name="ManualTriggerInput">
         <property name="text" type="string" />
       </object>
-      <string name="ResponseActionOutput_salida_def" />
-      <object name="ResponseActionOutput">
-        <property name="salida" type="string" />
-      </object>
+      <object name="ResponseActionOutput" />
       <object name="Run_responses_default_def" />
     </jsonTypes>
   </grammars>

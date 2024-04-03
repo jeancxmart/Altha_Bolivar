@@ -2422,7 +2422,7 @@ scDataAntigua As screen:
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =15
-                                Text: =ThisItem.salida
+                                Text: =
                                 Wrap: =false
                                 ZIndex: =1
 
