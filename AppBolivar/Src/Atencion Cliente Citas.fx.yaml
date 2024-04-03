@@ -335,8 +335,8 @@
                         );
                     Visible: =!IconHistoria.Visible
                     Width: =32
-                    X: =If(_ResponsiveM = false, 957, 1215)
-                    Y: =64
+                    X: =1224
+                    Y: =34
                     ZIndex: =1
 
                 IconCaja As icon.Money:
@@ -419,8 +419,8 @@
                         
                     Visible: =!IconHistoria.Visible
                     Width: =32
-                    X: =If(_ResponsiveM = false, 863,1121)
-                    Y: =64
+                    X: =1129
+                    Y: =34
                     ZIndex: =2
 
                 IconTriaje As icon.Health:
@@ -477,8 +477,8 @@
                         );
                     Visible: =!IconHistoria.Visible
                     Width: =32
-                    X: =If(_ResponsiveM = false, 910 , 1168)
-                    Y: =64
+                    X: =1172
+                    Y: =36
                     ZIndex: =3
 
                 IconHistoria As icon.Medical:
@@ -507,6 +507,10 @@
                     Font: =Font.'Segoe UI'
                     Height: =48
                     OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Size: =12
                     Text: |-
                         =If(
@@ -542,9 +546,8 @@
                         )
                         /* &" "&  If(LookUp('public.Medical_Center_Historial_Principal';DNI_CI=ThisItem.id_Pacientes_DNI;DNI_CI)=ThisItem.id_Pacientes_DNI;"(Rellenada)";"(Falta Rellenar)") */
                     Visible: =!IconHistoria.Visible
-                    Wrap: =false
-                    X: =922
-                    Y: =16
+                    X: =893
+                    Y: =26
                     ZIndex: =5
 
                 Label17_40 As label:
@@ -556,8 +559,8 @@
                     Text: ="Sin Historia"
                     Visible: =IconHistoria.Visible
                     Wrap: =false
-                    X: =446
-                    Y: =14
+                    X: =878
+                    Y: =26
                     ZIndex: =6
 
                 Label17_25 As label:
@@ -565,12 +568,16 @@
                     Font: =Font.'Segoe UI'
                     Height: =48
                     OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Size: =12
                     Text: |-
                         =Text(ThisItem.fecha_cita, "hh:mm AM/PM")
                     Width: =100
-                    X: =482
-                    Y: =40
+                    X: =773
+                    Y: =26
                     ZIndex: =7
 
                 Image34_2 As image:
@@ -586,8 +593,8 @@
                         Set(varAgendarCitaNew,false);
                         Set(varAgendarCitaEdit,true);
                     Width: =24
-                    X: =850
-                    Y: =64
+                    X: =1088
+                    Y: =40
                     ZIndex: =8
 
                 Label17_12 As label:
@@ -595,15 +602,17 @@
                     Font: =Font.'Segoe UI'
                     Height: =48
                     OnSelect: =
-                    PaddingTop: =3
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Size: =12
                     Text: |-
                         =Proper(If(ThisItem.Estatus="En Cola",Substitute(ThisItem.Servicio,"Cita: ",""),ThisItem.Estatus))
                     VerticalAlign: =VerticalAlign.Top
                     Width: =180
-                    Wrap: =false
-                    X: =40
-                    Y: =40
+                    X: =252
+                    Y: =26
                     ZIndex: =9
 
                 Label17_4 As label:
@@ -611,6 +620,9 @@
                     Font: =Font.'Segoe UI'
                     Height: =48
                     OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
                     PaddingTop: =0
                     Size: =12
                     Text: |-
@@ -618,10 +630,9 @@
                         Proper(TipoDoc.nombres &" " & TipoDoc.apellidoPaterno &" " & TipoDoc.apellidoMaterno))*/
                         If(Len(ThisItem.Nombre_Paciente)<27,Proper(ThisItem.Nombre_Paciente),Left(Proper(ThisItem.Nombre_Paciente),27)&"...")
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =180
-                    Wrap: =false
-                    X: =721
-                    Y: =16
+                    Width: =200
+                    X: =23
+                    Y: =26
                     ZIndex: =10
 
                 Label17_20 As label:
@@ -629,11 +640,15 @@
                     Font: =Font.'Segoe UI'
                     Height: =48
                     OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
                     Size: =12
                     Text: =Text(ThisItem.fecha_cita,"dd/mm/yyyy")
                     Width: =100
-                    X: =606
-                    Y: =40
+                    X: =634
+                    Y: =26
                     ZIndex: =11
 
                 Label17_2 As label:
@@ -641,14 +656,15 @@
                     Font: =Font.'Segoe UI'
                     Height: =48
                     OnSelect: =
+                    PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
+                    PaddingTop: =0
                     Size: =12
                     Text: |
                         =LookUp('public.Medical_Center_Usuario',Correo=ThisItem.Doctor,Usuario)
-                    Wrap: =false
-                    X: =220
-                    Y: =14
+                    X: =451
+                    Y: =26
                     ZIndex: =12
 
         btn_Agendar_Cita As button:
