@@ -4057,7 +4057,7 @@
                 Height: =108
                 OnSelect: |-
                     =UpdateContext({_newDesignCita:false});
-                    UpdateContext({_varSelectUser:true});Reset(TextInputSearchPacientes)
+                    UpdateContext({_varSelectUser:true});Reset(TextInputSearchPacientes);Reset(DatePickerCitas_3)
                 PaddingLeft: =31.5
                 PaddingRight: =31.5
                 PaddingTop: =54
@@ -4156,7 +4156,26 @@
             galUsuariosExis As gallery.galleryVertical:
                 DelayItemLoading: =true
                 Height: =472
-                Items: =Search('public.Medical_Center_Pacientes', TextInputSearchPacientes.Text, "Nombres", "Apellidos", "Telefono","DNI_CI")
+                Items: |+
+                    =Search(If(
+                             IsBlank(DatePickerCitas_3.SelectedDate),
+                        Filter(
+                            AddColumns(
+                                'public.Medical_Center_Pacientes',
+                                "fecha_format",
+                                Text(
+                                    fecha_nacimiento,
+                                    "dd/mm/yyyy"
+                                )
+                            ), 
+                            fecha_format = Text(DatePickerCitas_3.SelectedDate,"dd/mm/yyyy")),
+                                'public.Medical_Center_Pacientes')
+                            , TextInputSearchPacientes.Text, 
+                           "Nombres", "Apellidos","Telefono","DNI_CI")
+                    
+                    
+                    
+                    
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowScrollbar: =false
@@ -4260,7 +4279,7 @@
                             FontWeight: =FontWeight.Semibold
                             Height: =50
                             Size: =12
-                            Text: =ThisItem.Correo
+                            Text: =Text(ThisItem.fecha_nacimiento, "dd/mm/yyyy")
                             Wrap: =false
                             ZIndex: =1
 
@@ -4370,8 +4389,8 @@
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =12
-                Text: ="Correo"
-                Width: =80
+                Text: ="Fecha de Nacimiento"
+                Width: =200
                 X: =804
                 Y: =138
                 ZIndex: =8
@@ -4409,6 +4428,39 @@
                 X: =36
                 Y: =76
                 ZIndex: =11
+
+            GroupSearchFecha_3 As group:
+                Height: =5
+                Width: =5
+                X: =-425
+                Y: =-44
+                ZIndex: =14
+
+                TextInput26_3 As text:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Default: =""
+                    DisabledBorderColor: |-
+                        =ColorValue("#26495B")
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Height: =36
+                    Width: =200
+                    X: =846
+                    Y: =70
+                    ZIndex: =12
+
+                DatePickerCitas_3 As datepicker:
+                    BorderStyle: =BorderStyle.None
+                    DefaultDate: =
+                    Height: =30
+                    IconBackground: =
+                    IconFill: =RGBA(0, 0, 0, 1)
+                    InputTextPlaceholder: ="--/--/--"
+                    PaddingBottom: =0
+                    Width: =190
+                    X: =850
+                    Y: =73
+                    ZIndex: =13
 
     GroupAgendarEUser As group:
         Height: =5
