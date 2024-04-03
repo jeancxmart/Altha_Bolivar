@@ -139,7 +139,7 @@ Screen_Usuario As screen:
                 HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
                 OnSelect: |+
                     =If(CountRows(Adjunto_17.Attachments)=0,false,
-                     Set(varAzureFileUsuario2,AzureBlobStorageNew.CreateFile("images",GUID() & Last(Adjunto_17.Attachments).Name,Last(Adjunto_17.Attachments).Value)));
+                     Set(varAzureFileUsuario2,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_17.Attachments).Name,Last(Adjunto_17.Attachments).Value)));
                     Patch(
                         'public.Medical_Center_Usuario',
                         LookUp(
@@ -598,7 +598,7 @@ Screen_Usuario As screen:
                                 )
                             ),
                             SampleImage,IfError(
-                            AzureBlobStorageNew.GetFileContent(
+                            AzureBlobStorage.GetFileContent(
                                 LookUp(
                                     'public.Medical_Center_Usuario',
                                     Correo = User().Email,

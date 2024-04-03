@@ -69,7 +69,7 @@ App As appinfo:
                     )
                 ),
                 SampleImage,
-                IfError( AzureBlobStorageNew.GetFileContent(
+                IfError( AzureBlobStorage.GetFileContent(
                     LookUp(
                         'public.Medical_Center_Consultorio_Medico',
                         id_sede = _varSede.id,

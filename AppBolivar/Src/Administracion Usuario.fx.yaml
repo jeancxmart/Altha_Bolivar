@@ -760,7 +760,7 @@
                 false,
                 Set(
                     varAzureFileConsultorioLogo,
-                    AzureBlobStorageNew.CreateFile(
+                    AzureBlobStorage.CreateFile(
                         "images",
                         GUID() & Last(Adjunto_15.Attachments).Name,
                         Last(Adjunto_15.Attachments).Value
@@ -825,7 +825,7 @@
                         )
                     ),
                     SampleImage, IfError(
-                    AzureBlobStorageNew.GetFileContent(
+                    AzureBlobStorage.GetFileContent(
                         LookUp(
                             'public.Medical_Center_Consultorio_Medico',
                             id_sede = _varSede.id,
@@ -4407,7 +4407,7 @@
                     HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
                     OnSelect: |
                         =If(CountRows(Adjunto_12.Attachments)=0,false,
-                         Set(varAzureFileUsuario,AzureBlobStorageNew.CreateFile("images",GUID() & Last(Adjunto_12.Attachments).Name,Last(Adjunto_12.Attachments).Value)));
+                         Set(varAzureFileUsuario,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_12.Attachments).Name,Last(Adjunto_12.Attachments).Value)));
                         Patch(
                             'public.Medical_Center_Usuario',
                             LookUp(
@@ -4702,7 +4702,7 @@
                     Height: =90
                     HoverBorderColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    Image: =If(IsBlank(UsuarioAdmin.NombreImage),SampleImage,IfError(AzureBlobStorageNew.GetFileContent(UsuarioAdmin.NombreImage), SampleImage))
+                    Image: =If(IsBlank(UsuarioAdmin.NombreImage),SampleImage,IfError(AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage), SampleImage))
                     PressedBorderColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =8
@@ -5245,7 +5245,7 @@
                     OnSelect: |-
                         =UpdateContext({_varNewUsuario:false});
                         If(CountRows(Adjunto_11.Attachments)=0,false,
-                         Set(varAzureFileUsuarioNew,AzureBlobStorageNew.CreateFile("images",GUID() & Last(Adjunto_11.Attachments).Name,Last(Adjunto_11.Attachments).Value)));
+                         Set(varAzureFileUsuarioNew,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_11.Attachments).Name,Last(Adjunto_11.Attachments).Value)));
                         
                         Patch('public.Medical_Center_Usuario',Defaults('public.Medical_Center_Usuario'),{
                          id:First(SortByColumns('public.Medical_Center_Usuario',"id",SortOrder.Descending)).id+1,   
@@ -7602,7 +7602,7 @@
                             Imagen_Id
                         )
                     ),
-                    SampleImage, IfError(AzureBlobStorageNew.GetFileContent(
+                    SampleImage, IfError(AzureBlobStorage.GetFileContent(
                         LookUp(
                             'public.Medical_Center_Consultorio_Medico',
                             id_sede = _varSede.id,
