@@ -831,7 +831,7 @@
                 ;
                 
                 If(CountRows(Adjunto_5.Attachments)=0,false,
-                 Set(varAzureFileCaja,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_5.Attachments).Name,Last(Adjunto_5.Attachments).Value)));
+                 Set(varAzureFileCaja,AzureBlobStorageNew.CreateFile("images",GUID() & Last(Adjunto_5.Attachments).Name,Last(Adjunto_5.Attachments).Value)));
                 
                 Set(varPago_Patch,Patch('public.Medical_Center_Pagos',LookUp('public.Medical_Center_Pagos',id_ticket=CajaSelected.id_Ticket),
                 {
@@ -882,7 +882,7 @@
                 ;
                 
                 If(CountRows(Adjunto_5.Attachments)=0,false,
-                 Set(varAzureFileCaja,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_5.Attachments).Name,Last(Adjunto_5.Attachments).Value)));
+                 Set(varAzureFileCaja,AzureBlobStorageNew.CreateFile("images",GUID() & Last(Adjunto_5.Attachments).Name,Last(Adjunto_5.Attachments).Value)));
                 
                 Set(varPago_Patch,Patch('public.Medical_Center_Pagos',Defaults('public.Medical_Center_Pagos'),
                 {

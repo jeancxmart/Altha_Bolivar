@@ -53482,7 +53482,7 @@
       "MetaDataIDKey": "",
       "Name": "Group14_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 191,
+      "ParentIndex": 189,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53534,7 +53534,7 @@
       "MetaDataIDKey": "",
       "Name": "Group14_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 192,
+      "ParentIndex": 190,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53586,7 +53586,7 @@
       "MetaDataIDKey": "",
       "Name": "Group20",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 190,
+      "ParentIndex": 188,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53638,7 +53638,7 @@
       "MetaDataIDKey": "",
       "Name": "Group27",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 194,
+      "ParentIndex": 193,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53742,7 +53742,7 @@
       "MetaDataIDKey": "",
       "Name": "Group7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 193,
+      "ParentIndex": 194,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53794,7 +53794,7 @@
       "MetaDataIDKey": "",
       "Name": "Group8_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 189,
+      "ParentIndex": 192,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53846,7 +53846,7 @@
       "MetaDataIDKey": "",
       "Name": "GroupChecklistVerificación_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 188,
+      "ParentIndex": 191,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -71066,7 +71066,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "SampleImage",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Image",
           "IsLockable": false,
           "NameMapSourceSchema": "?"

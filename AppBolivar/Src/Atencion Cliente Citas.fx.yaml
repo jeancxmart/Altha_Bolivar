@@ -2645,7 +2645,7 @@
         OnSelect: |+
             =Set(_varCrearHistoriaMedica,false);
             If(CountRows(Adjunto_13.Attachments)=0,false,
-             Set(varAzureFileUsuarioNewCita,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_13.Attachments).Name,Last(Adjunto_13.Attachments).Value)));
+             Set(varAzureFileUsuarioNewCita,AzureBlobStorageNew.CreateFile("images",GUID() & Last(Adjunto_13.Attachments).Name,Last(Adjunto_13.Attachments).Value)));
             Set(_varnewPaciente,
             Patch(
                 'public.Medical_Center_Historial_Principal',

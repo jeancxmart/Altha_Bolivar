@@ -218,7 +218,7 @@ scHistoriaMedica As screen:
                                 
                                 UpdateContext({_ViewFormularioDCA:false});
                                 If(CountRows(Adjunto_14.Attachments)=0,false,
-                                 Set(varAzureFileUsuarioNewHM,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_14.Attachments).Name,Last(Adjunto_14.Attachments).Value)));
+                                 Set(varAzureFileUsuarioNewHM,AzureBlobStorageNew.CreateFile("images",GUID() & Last(Adjunto_14.Attachments).Name,Last(Adjunto_14.Attachments).Value)));
                                 
                                 
                                 Patch(
@@ -2550,7 +2550,7 @@ scHistoriaMedica As screen:
                             Image: |-
                                 =If(
                                     IsBlank(HMSelected.Imagen_Id),
-                                    SampleImage,IfError(AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id), SampleImage)
+                                    SampleImage,IfError(AzureBlobStorageNew.GetFileContent(HMSelected.Imagen_Id), SampleImage)
                                 )
                             PressedBorderColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(255, 255, 255, 1)

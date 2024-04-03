@@ -2571,7 +2571,7 @@ scHistoriaMedicaNutricion As screen:
                         
                         UpdateContext({_ViewFormularioDCA:false});
                         If(CountRows(Adjunto_14.Attachments)=0,false,
-                         Set(varAzureFileUsuarioNewHM,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_14.Attachments).Name,Last(Adjunto_14.Attachments).Value)));
+                         Set(varAzureFileUsuarioNewHM,AzureBlobStorageNew.CreateFile("images",GUID() & Last(Adjunto_14.Attachments).Name,Last(Adjunto_14.Attachments).Value)));
                         
                         
                         Patch(

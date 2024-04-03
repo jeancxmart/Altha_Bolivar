@@ -1484,7 +1484,7 @@ Caja_Registro As screen:
             Image: |-
                 =If(
                     IsBlank(CajaRegistroSelected.id_Image),
-                    SampleImage,IfError(  AzureBlobStorage.GetFileContent(CajaRegistroSelected.id_Image), SampleImage)
+                    SampleImage,IfError(  AzureBlobStorageNew.GetFileContent(CajaRegistroSelected.id_Image), SampleImage)
                 )
             RadiusBottomLeft: =8
             RadiusBottomRight: =8

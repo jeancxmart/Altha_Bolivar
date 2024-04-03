@@ -2388,7 +2388,7 @@
                 Image: |-
                     =If(
                         IsBlank(HMSelected.Imagen_Id),
-                        SampleImage,IfError( AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id), SampleImage)
+                        SampleImage,IfError( AzureBlobStorageNew.GetFileContent(HMSelected.Imagen_Id), SampleImage)
                     )
                 PressedBorderColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -2525,7 +2525,7 @@
         OnSelect: |-
             =UpdateContext({_ViewFormularioDCA:false});
             If(CountRows(Adjunto_14.Attachments)=0,false,
-             Set(varAzureFileUsuarioNewHM,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_14.Attachments).Name,Last(Adjunto_14.Attachments).Value)));
+             Set(varAzureFileUsuarioNewHM,AzureBlobStorageNew.CreateFile("images",GUID() & Last(Adjunto_14.Attachments).Name,Last(Adjunto_14.Attachments).Value)));
             Patch(
                 'public.Medical_Center_Historial_Principal',
                 LookUp('public.Medical_Center_Historial_Principal',DNI_CI=HMSelected.DNI_CI),
