@@ -754,31 +754,57 @@
         HoverBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
         HoverColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
         HoverFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
-        OnSelect: |
-            =
-            If(CountRows(Adjunto_15.Attachments)=0,false,
-             Set(varAzureFileConsultorioLogo,AzureBlobStorage.CreateFile("images",GUID() & Last(Adjunto_15.Attachments).Name,Last(Adjunto_15.Attachments).Value)));
-            
-            Patch('public.Medical_Center_Consultorio_Medico',LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id),
-            
-            {
-                Telefono:TextInput27_3.Text,
-            RUC:TextInput27_2.Text,
-            triaje:Toggle2.Value,
-            test:Toggle2_1.Value,
-            Direccion:TextInput27_4.Text,
-            Url_Bookings:TextInput27_8.Text,
-            Moneda:dp_Moneda_Consultorio_DCA_18.Selected.Value,
-            Nombre_Contacto_Principal:TextInput27_5.Text,
-            Correo_Contacto_Principa:TextInput27_6.Text,
-            Apellido_Contacto_Principal:TextInput27_7.Text,
-            Pais:dp_Pais_Consultorio_DCA_17.Selected.Value,
-            Imagen_Id:If(CountRows(Adjunto_15.Attachments)>0,varAzureFileConsultorioLogo.Id,LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Imagen_Id)),
-            url_Logo:If(CountRows(Adjunto_15.Attachments)>0,"https://blobauroranuevo.blob.core.windows.net"&varAzureFileConsultorioLogo.Path,LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,url_Logo))
-            
-            
-            });
-            
+        OnSelect: |-
+            =If(
+                CountRows(Adjunto_15.Attachments) = 0,
+                false,
+                Set(
+                    varAzureFileConsultorioLogo,
+                    AzureBlobStorage.CreateFile(
+                        "images",
+                        GUID() & Last(Adjunto_15.Attachments).Name,
+                        Last(Adjunto_15.Attachments).Value
+                    )
+                )
+            );
+            Patch(
+                'public.Medical_Center_Consultorio_Medico',
+                LookUp(
+                    'public.Medical_Center_Consultorio_Medico',
+                    id_sede = _varSede.id
+                ),
+                {
+                    Telefono: TextInput27_3.Text,
+                    RUC: TextInput27_2.Text,
+                    triaje: Toggle2.Value,
+                    test: Toggle2_1.Value,
+                    Direccion: TextInput27_4.Text,
+                    Url_Bookings: TextInput27_8.Text,
+                    Moneda: dp_Moneda_Consultorio_DCA_18.Selected.Value,
+                    Nombre_Contacto_Principal: TextInput27_5.Text,
+                    Correo_Contacto_Principa: TextInput27_6.Text,
+                    Apellido_Contacto_Principal: TextInput27_7.Text,
+                    Pais: dp_Pais_Consultorio_DCA_17.Selected.Value,
+                    Imagen_Id: If(
+                        CountRows(Adjunto_15.Attachments) > 0,
+                        varAzureFileConsultorioLogo.Id,
+                        LookUp(
+                            'public.Medical_Center_Consultorio_Medico',
+                            id_sede = _varSede.id,
+                            Imagen_Id
+                        )
+                    ),
+                    url_Logo: If(
+                        CountRows(Adjunto_15.Attachments) > 0,
+                        "https://blobauroranuevo.blob.core.windows.net" & varAzureFileConsultorioLogo.Path,
+                        LookUp(
+                            'public.Medical_Center_Consultorio_Medico',
+                            id_sede = _varSede.id,
+                            url_Logo
+                        )
+                    )
+                }
+            );
             Reset(TextInput27_3);
             Reset(TextInput27_2);
             Reset(TextInput27_4);
@@ -788,29 +814,124 @@
             Reset(dp_Pais_Consultorio_DCA_17);
             Reset(Adjunto_15);
             Refresh('public.Medical_Center_Consultorio_Medico');
-            Set(getLogo,If(IsBlank(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Imagen_Id)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Imagen_Id))))
-            ;
-            ClearCollect(colMaestroSimboloMoneda,
-            {Descrip:"SOLES",Simbolo:"S/ "},
-            {Descrip:"DOLARES",Simbolo:"$ "},
-            {Descrip:"EUROS",Simbolo:"€ "},
-            {Descrip:"BOLIVAR",Simbolo:"Bs. "});
-            
-            Set(varSimboloMaestros,LookUp(colMaestroSimboloMoneda,Descrip=LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Moneda),Simbolo));
-            
-            If(And(LookUp('public.Medical_Center_Usuario',Correo=User().Email,Rol)="Administrador",LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,fase)="Incompleto"),
-            
-            Patch('public.Medical_Center_VerificacionApp',LookUp('public.Medical_Center_VerificacionApp',correo=User().Email),
-            {informacion_consultorio:true});
-            
-            If(And(LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,informacion_consultorio)=true,
-            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,lista_especialidades)=true,
-            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,configuracion_usuario)=true,
-            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_examenes)=true,
-            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_medicamento)=true,
-            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_tratamiento)=true,
-            LookUp('public.Medical_Center_VerificacionApp',correo=User().Email,agregar_servicio)=true),Set(varViewPopUpVerificacionCompletado,true),false),
-            false)
+            Set(
+                getLogo,
+                If(
+                    IsBlank(
+                        LookUp(
+                            'public.Medical_Center_Consultorio_Medico',
+                            id_sede = _varSede.id,
+                            Imagen_Id
+                        )
+                    ),
+                    SampleImage,
+                    AzureBlobStorage.GetFileContent(
+                        LookUp(
+                            'public.Medical_Center_Consultorio_Medico',
+                            id_sede = _varSede.id,
+                            Imagen_Id
+                        )
+                    )
+                )
+            );
+            ClearCollect(
+                colMaestroSimboloMoneda,
+                {
+                    Descrip: "SOLES",
+                    Simbolo: "S/ "
+                },
+                {
+                    Descrip: "DOLARES",
+                    Simbolo: "$ "
+                },
+                {
+                    Descrip: "EUROS",
+                    Simbolo: "€ "
+                },
+                {
+                    Descrip: "BOLIVAR",
+                    Simbolo: "Bs. "
+                }
+            );
+            Set(
+                varSimboloMaestros,
+                LookUp(
+                    colMaestroSimboloMoneda,
+                    Descrip = LookUp(
+                        'public.Medical_Center_Consultorio_Medico',
+                        id_sede = _varSede.id,
+                        Moneda
+                    ),
+                    Simbolo
+                )
+            );
+            If(
+                And(
+                    LookUp(
+                        'public.Medical_Center_Usuario',
+                        Correo = User().Email,
+                        Rol
+                    ) = "Administrador",
+                    LookUp(
+                        'public.Medical_Center_VerificacionApp',
+                        correo = User().Email,
+                        fase
+                    ) = "Incompleto"
+                ),
+                Patch(
+                    'public.Medical_Center_VerificacionApp',
+                    LookUp(
+                        'public.Medical_Center_VerificacionApp',
+                        correo = User().Email
+                    ),
+                    {informacion_consultorio: true}
+                );
+                If(
+                    And(
+                        LookUp(
+                            'public.Medical_Center_VerificacionApp',
+                            correo = User().Email,
+                            informacion_consultorio
+                        ) = true,
+                        LookUp(
+                            'public.Medical_Center_VerificacionApp',
+                            correo = User().Email,
+                            lista_especialidades
+                        ) = true,
+                        LookUp(
+                            'public.Medical_Center_VerificacionApp',
+                            correo = User().Email,
+                            configuracion_usuario
+                        ) = true,
+                        LookUp(
+                            'public.Medical_Center_VerificacionApp',
+                            correo = User().Email,
+                            agregar_examenes
+                        ) = true,
+                        LookUp(
+                            'public.Medical_Center_VerificacionApp',
+                            correo = User().Email,
+                            agregar_medicamento
+                        ) = true,
+                        LookUp(
+                            'public.Medical_Center_VerificacionApp',
+                            correo = User().Email,
+                            agregar_tratamiento
+                        ) = true,
+                        LookUp(
+                            'public.Medical_Center_VerificacionApp',
+                            correo = User().Email,
+                            agregar_servicio
+                        ) = true
+                    ),
+                    Set(
+                        varViewPopUpVerificacionCompletado,
+                        true
+                    ),
+                    false
+                ),
+                false
+            )
         PressedBorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroTextoPrimario)
         PressedColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
         PressedFill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
@@ -4582,7 +4703,7 @@
                     Height: =90
                     HoverBorderColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    Image: =If(IsBlank(UsuarioAdmin.NombreImage),SampleImage,AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage))
+                    Image: =If(IsBlank(UsuarioAdmin.NombreImage),SampleImage,IfError(IsBlank( AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage)), SampleImage, AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage)))
                     PressedBorderColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =8
@@ -7473,7 +7594,30 @@
             Height: =70
             HoverBorderColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
-            Image: =If(IsBlank(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Imagen_Id)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Consultorio_Medico', id_sede = _varSede.id,Imagen_Id)))
+            Image: |-
+                =If(
+                    IsBlank(
+                        LookUp(
+                            'public.Medical_Center_Consultorio_Medico',
+                            id_sede = _varSede.id,
+                            Imagen_Id
+                        )
+                    ),
+                    SampleImage, IfError( IsBlank(
+                    AzureBlobStorage.GetFileContent(
+                        LookUp(
+                            'public.Medical_Center_Consultorio_Medico',
+                            id_sede = _varSede.id,
+                            Imagen_Id
+                        )
+                    )), SampleImage, AzureBlobStorage.GetFileContent(
+                        LookUp(
+                            'public.Medical_Center_Consultorio_Medico',
+                            id_sede = _varSede.id,
+                            Imagen_Id
+                        )
+                    ))
+                )
             PressedBorderColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
             RadiusBottomLeft: =8

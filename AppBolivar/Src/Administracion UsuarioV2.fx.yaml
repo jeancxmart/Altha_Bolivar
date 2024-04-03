@@ -1575,7 +1575,12 @@
                     Height: =90
                     HoverBorderColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    Image: =If(IsBlank(UsuarioAdmin.NombreImage),SampleImage,AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage))
+                    Image: |-
+                        =If(
+                            IsBlank(UsuarioAdmin.NombreImage),
+                            SampleImage, IfError( IsBlank(
+                            AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage)), SampleImage,  AzureBlobStorage.GetFileContent(UsuarioAdmin.NombreImage))
+                        )
                     PressedBorderColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =8
@@ -4974,8 +4979,8 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Image: |
                         =//User().Image
-                        IfError(
-                        AzureBlobStorage.GetFileContent(_varEditUserV2.NombreImage), SampleImage)
+                        IfError( IsBlank(
+                        AzureBlobStorage.GetFileContent(_varEditUserV2.NombreImage)), SampleImage, AzureBlobStorage.GetFileContent(_varEditUserV2.NombreImage))
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     RadiusBottomLeft: =8
@@ -11477,8 +11482,14 @@
                                     Imagen_Id
                                 )
                             ),
-                            SampleImage,
+                            SampleImage, IfError(IsBlank(
                             AzureBlobStorage.GetFileContent(
+                                LookUp(
+                                    'public.Medical_Center_Consultorio_Medico',
+                                    id_sede = _varSede.id,
+                                    Imagen_Id
+                                )
+                            )), SampleImage , AzureBlobStorage.GetFileContent(
                                 LookUp(
                                     'public.Medical_Center_Consultorio_Medico',
                                     id_sede = _varSede.id,

@@ -588,7 +588,24 @@ Screen_Usuario As screen:
                     Height: =70
                     HoverBorderColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+                    Image: |-
+                        =IfError(
+                            IsBlank(
+                                LookUp(
+                                    'public.Medical_Center_Usuario',
+                                    Correo = User().Email,
+                                    NombreImage
+                                )
+                            ),
+                            SampleImage,
+                            AzureBlobStorage.GetFileContent(
+                                LookUp(
+                                    'public.Medical_Center_Usuario',
+                                    Correo = User().Email,
+                                    NombreImage
+                                )
+                            )
+                        )
                     PressedBorderColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
                     RadiusBottomLeft: =8

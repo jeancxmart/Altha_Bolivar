@@ -1184,9 +1184,7 @@
             Height: =48
             HoverBorderColor: =ColorFade(img_Perfil_AC.BorderColor, 20%)
             HoverFill: =ColorFade(img_Perfil_AC.Fill, 20%)
-            Image: |-
-                =/*If(IsBlank(LookUp('public.Medical_Center_Usuario';Correo=User().Email;Imagen));SampleImage;AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario';Correo=User().Email;Imagen)))*/
-                User().Image
+            Image: =User().Image
             PressedBorderColor: =ColorFade(img_Perfil_AC.BorderColor, -20%)
             PressedFill: =ColorFade(img_Perfil_AC.Fill, -20%)
             RadiusBottomLeft: =60

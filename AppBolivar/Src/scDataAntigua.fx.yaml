@@ -666,9 +666,7 @@ scDataAntigua As screen:
             Height: =48
             HoverBorderColor: =ColorFade(img_Perfil_AM_1.BorderColor, 20%)
             HoverFill: =ColorFade(img_Perfil_AM_1.Fill, 20%)
-            Image: |-
-                =/*If(IsBlank(LookUp('public.Medical_Center_Usuario';Correo=User().Email;Imagen));SampleImage;AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario';Correo=User().Email;Imagen)))*/
-                User().Image
+            Image: =User().Image
             PressedBorderColor: =ColorFade(img_Perfil_AM_1.BorderColor, -20%)
             PressedFill: =ColorFade(img_Perfil_AM_1.Fill, -20%)
             RadiusBottomLeft: =60

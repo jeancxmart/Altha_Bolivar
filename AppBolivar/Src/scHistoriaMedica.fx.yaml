@@ -2547,7 +2547,12 @@ scHistoriaMedica As screen:
                             Height: =70
                             HoverBorderColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
-                            Image: =If(IsBlank(HMSelected.Imagen_Id),SampleImage,AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id))
+                            Image: |-
+                                =If(
+                                    IsBlank(HMSelected.Imagen_Id),
+                                    SampleImage,IfError(IsBlank(
+                                    AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id)),SampleImage, AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id))
+                                )
                             PressedBorderColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(255, 255, 255, 1)
                             RadiusBottomLeft: =8

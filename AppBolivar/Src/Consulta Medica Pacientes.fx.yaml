@@ -2043,7 +2043,7 @@
 
         Image32_5 As image:
             Height: =54
-            Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+            Image: =IfError(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
             Visible: =_varDESCANSOMEDICO
             Width: =151
             X: =630
@@ -2320,7 +2320,24 @@
 
         Image32_6 As image:
             Height: =54
-            Image: =If(IsBlank(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)),SampleImage,AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario',Correo=User().Email,NombreImage)))
+            Image: |-
+                =IfError(
+                    IsBlank(
+                        LookUp(
+                            'public.Medical_Center_Usuario',
+                            Correo = User().Email,
+                            NombreImage
+                        )
+                    ),
+                    SampleImage,
+                    AzureBlobStorage.GetFileContent(
+                        LookUp(
+                            'public.Medical_Center_Usuario',
+                            Correo = User().Email,
+                            NombreImage
+                        )
+                    )
+                )
             Visible: =_varEXAMENsOLICITADO
             Width: =151
             X: =969
@@ -2709,9 +2726,12 @@
 
             EvidenciasImage5_5 As image:
                 Height: =60
-                Image: |+
-                    =If(IsBlank(ThisItem.id_Image),SampleImage,AzureBlobStorage.GetFileContent(ThisItem.id_Image))
-                    
+                Image: |-
+                    =If(
+                        IsBlank(ThisItem.id_Image),
+                        SampleImage, IfError( IsBlank(
+                        AzureBlobStorage.GetFileContent(ThisItem.id_Image)),SampleImage,AzureBlobStorage.GetFileContent(ThisItem.id_Image) )
+                    )
                 OnSelect: =Select(Parent)
                 Width: =60
                 X: =10

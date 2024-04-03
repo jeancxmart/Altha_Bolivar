@@ -214,9 +214,7 @@
             Height: =48
             HoverBorderColor: =ColorFade(img_Perfil_AC_1.BorderColor, 20%)
             HoverFill: =ColorFade(img_Perfil_AC_1.Fill, 20%)
-            Image: |-
-                =/*If(IsBlank(LookUp('public.Medical_Center_Usuario';Correo=User().Email;Imagen));SampleImage;AzureBlobStorage.GetFileContent(LookUp('public.Medical_Center_Usuario';Correo=User().Email;Imagen)))*/
-                User().Image
+            Image: =User().Image
             PressedBorderColor: =ColorFade(img_Perfil_AC_1.BorderColor, -20%)
             PressedFill: =ColorFade(img_Perfil_AC_1.Fill, -20%)
             RadiusBottomLeft: =60
@@ -2387,7 +2385,12 @@
                 Height: =70
                 HoverBorderColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                Image: =If(IsBlank(HMSelected.Imagen_Id),SampleImage,AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id))
+                Image: |-
+                    =If(
+                        IsBlank(HMSelected.Imagen_Id),
+                        SampleImage,IfError( IsBlank(
+                        AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id)), SampleImage, AzureBlobStorage.GetFileContent(HMSelected.Imagen_Id))
+                    )
                 PressedBorderColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =8
