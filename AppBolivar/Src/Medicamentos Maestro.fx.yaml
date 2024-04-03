@@ -1998,7 +1998,7 @@
                 Set(varDemoFromAttachmentMedicamento, JSON(Image29_1.Image, JSONFormat.IncludeBinaryData));
                 Set(varBase64OnlyMedicamento, Mid(varDemoFromAttachmentMedicamento, Find(",", varDemoFromAttachmentMedicamento)+1, Len(varDemoFromAttachmentMedicamento) - Find(",",varDemoFromAttachmentMedicamento) -1));
                 
-                CSV_RegistroPago_1.Run(Last(Adjunto_4.Attachments).Name, varBase64OnlyMedicamento);Reset(Adjunto_4)
+                CSV_RegistroPago.Run(Last(Adjunto_4.Attachments).Name, varBase64OnlyMedicamento);Reset(Adjunto_4)
                 /*RemoveIf(papps_Medi_Plus_Medicamento_Temporal;true);;
                 ImportarDatos_Medicamentos.Run(Last(Adjunto_4.Attachments).Name; varBase64OnlyMedicamento);;
                 Refresh(papps_Medi_Plus_Medicamento_Temporal);;

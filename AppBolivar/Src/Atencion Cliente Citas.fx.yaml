@@ -3475,7 +3475,7 @@
                         )
                     )
                 );
-                Calendario_Compartir_1.Run(
+                Calendario_Compartir.Run(
                     varParticipantes,
                     Text(
                         DateTimeValue(
@@ -4609,7 +4609,7 @@
                             )
                         )
                     );
-                    Calendario_Compartir_1.Run(
+                    Calendario_Compartir.Run(
                         varParticipantes,
                         Text(
                             DateTimeValue(
