@@ -262,579 +262,394 @@
             Y: =137
             ZIndex: =5
 
-            TextInput6 As text:
-                BorderStyle: =BorderStyle.None
-                Default: =""
-                DisabledFill: |-
+            ContainerCitasPen As groupContainer.manualLayoutContainer:
+                BorderColor: |-
                     =Switch(LookUp('public.Medical_Center_Counter', id_Ticket = ThisItem.id).etapa,
                     "Triaje", RGBA(180, 130, 0 , 1),
                     "Caja", RGBA(0, 73, 135, 1),
                     "Atención Medica", RGBA(8, 136, 49,1),
                     RGBA(234,76,83, 1)
                     )
-                DisplayMode: =DisplayMode.Disabled
-                Fill: =RGBA(95, 106, 146, 1)
-                Height: =100
-                OnSelect: =Select(Parent)
-                RadiusBottomLeft: =12
-                RadiusBottomRight: =12
-                RadiusTopLeft: =12
-                RadiusTopRight: =12
-                Width: =39
-                X: =2
-                ZIndex: =1
-
-            Container23 As groupContainer.horizontalAutoLayoutContainer:
                 BorderThickness: =2
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =Parent.TemplateHeight
-                LayoutMode: =LayoutMode.Auto
-                PaddingLeft: =10
-                PaddingRight: =5
-                RadiusBottomLeft: =15
-                RadiusBottomRight: =15
-                RadiusTopLeft: =15
-                RadiusTopRight: =15
-                Width: =If(_ResponsiveM = false,  1000, 1258)
-                X: =10
-                ZIndex: =2
+                Height: =100
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =1270
+                ZIndex: =25
 
-                Container22_1 As groupContainer.horizontalAutoLayoutContainer:
-                    FillPortions: =0
-                    Height: =24
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutGap: =10
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =80
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingTop: =15
-                    Width: =If(_ResponsiveM = false, 350, 400)
+                IconAtencion As icon.Hospital:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisplayMode: |-
+                        =With(
+                            {
+                                lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
+                            },
+                            If( getUser.Rol = "Caja" || 
+                                getUser.Rol = "Triaje" || getUser.Rol = "Doctor" And
+                                Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true || lookupResult = "Atención Medica",
+                                DisplayMode.Disabled,
+                                DisplayMode.Edit
+                            )
+                        )
+                    Height: =28
+                    Icon: =Icon.Hospital
+                    OnSelect: |-
+                        =If(IsEmpty(Filter('public.Medical_Center_Counter',id_Ticket=ThisItem.id)),
+                        Patch('public.Medical_Center_Counter',Defaults('public.Medical_Center_Counter'),
+                        { 
+                        id_Ticket:ThisItem.id,  
+                          estado:"En Cola",
+                          etapa:"Atención Medica",
+                          usuario:ThisItem.Doctor,
+                            id_sede : _varSede.id  ,
+                          fecha:gal_Citas_Pendientes.Selected.fecha_cita,
+                          fecha_texto:Text(ThisItem.fecha_cita,"yymmdd"),
+                          Paciente:gal_Citas_Pendientes.Selected.Nombre_Paciente,
+                          DNI_Paciente:gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
+                          Servicio:gal_Citas_Pendientes.Selected.Servicio,
+                          Alerta:true
+                        }),
+                        Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=ThisItem.id),
+                        { 
+                          estado:"En Cola",
+                          etapa:"Atención Medica"
+                        })
+                        );
+                        
+                        Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=ThisItem.id_Pacientes_DNI),{Estatus:"En Atención"});
+                        
+                        
+                        
+                        If(
+                            LookUp(
+                                'public.Medical_Center_Historial_Principal',
+                                DNI_CI = AtencionSelected.id_Pacientes_DNI,
+                                DNI_CI
+                            ) = AtencionSelected.id_Pacientes_DNI,
+                          If(getUser.Rol= "Administrador",  Navigate('Consulta Medica Dashboard') & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
+                          ""    
+                        );
+                    Visible: =!IconHistoria.Visible
+                    Width: =32
+                    X: =If(_ResponsiveM = false, 957, 1215)
+                    Y: =64
                     ZIndex: =1
 
-                    Container22 As groupContainer.horizontalAutoLayoutContainer:
-                        FillPortions: =0
-                        Height: =24
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        ZIndex: =1
-
-                        Label17_6 As label:
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Bold
-                            Height: =24
-                            OnSelect: =0
-                            Size: =12
-                            Text: ="Paciente"
-                            Width: =75
-                            X: =20
-                            Y: =20
-                            ZIndex: =1
-
-                        Label17_4 As label:
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            Height: =24
-                            OnSelect: =
-                            PaddingTop: =0
-                            Size: =12
-                            Text: |-
-                                =/*If(LookUp(col_citas;id_Pacientes_DNI=DNITextInput.Text;Nacionalidad)="Extranjero(a)";ThisItem.Nombre_Paciente;
-                                Proper(TipoDoc.nombres &" " & TipoDoc.apellidoPaterno &" " & TipoDoc.apellidoMaterno))*/
-                                If(Len(ThisItem.Nombre_Paciente)<27,Proper(ThisItem.Nombre_Paciente),Left(Proper(ThisItem.Nombre_Paciente),27)&"...")
-                            VerticalAlign: =VerticalAlign.Top
-                            Width: =180
-                            Wrap: =false
-                            X: =85
-                            Y: =20
-                            ZIndex: =2
-
-                    Container22_5 As groupContainer.horizontalAutoLayoutContainer:
-                        FillPortions: =0
-                        Height: =24
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        ZIndex: =2
-
-                        Label17_15 As label:
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Bold
-                            Height: =24
-                            OnSelect: =0
-                            Size: =12
-                            Text: ="Servicio"
-                            Width: =75
-                            X: =20
-                            Y: =20
-                            ZIndex: =1
-
-                        Label17_12 As label:
-                            Color: =RGBA(95, 106, 146, 1)
-                            Font: =Font.'Segoe UI'
-                            Height: =24
-                            OnSelect: =
-                            PaddingTop: =3
-                            Size: =12
-                            Text: |-
-                                =Proper(If(ThisItem.Estatus="En Cola",Substitute(ThisItem.Servicio,"Cita: ",""),ThisItem.Estatus))
-                            VerticalAlign: =VerticalAlign.Top
-                            Width: =180
-                            Wrap: =false
-                            X: =85
-                            Y: =20
-                            ZIndex: =2
-
-                Container22_2 As groupContainer.horizontalAutoLayoutContainer:
-                    Height: =24
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutGap: =10
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =If(_ResponsiveM = false, 300, 400)
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingTop: =15
+                IconCaja As icon.Money:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    DisplayMode: |-
+                        =With(
+                            {
+                                lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
+                            },
+                            If(
+                                getUser.Rol = "Caja" ||  getUser.Rol = "Triaje" ||  getUser.Rol = "Doctor" || ThisItem.caja_finalizada = true || lookupResult = "Caja" || Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") ,
+                                DisplayMode.Disabled,
+                                DisplayMode.Edit
+                            )
+                        )
+                    Height: =28
+                    Icon: =Icon.Money
+                    OnSelect: |+
+                        =Set(
+                            AtencionSelected,
+                            gal_Citas_Pendientes.Selected
+                        );
+                        If(
+                            LookUp(
+                                'public.Medical_Center_Historial_Principal',
+                                DNI_CI = AtencionSelected.id_Pacientes_DNI,
+                                DNI_CI
+                            ) = AtencionSelected.id_Pacientes_DNI,
+                          If(getUser.Rol= "Administrador",  Navigate(Caja) & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
+                          
+                            Set(
+                                varCaja,
+                                false
+                            )
+                            
+                            
+                        );
+                        If(IsEmpty(Filter('public.Medical_Center_Counter',id_Ticket=AtencionSelected.id)),
+                        Patch('public.Medical_Center_Counter',Defaults('public.Medical_Center_Counter'),
+                        {
+                        id_Ticket:AtencionSelected.id,  
+                          estado:"En Cola",
+                          etapa:"Caja",
+                          usuario:ThisItem.Doctor,
+                           id_sede : _varSede.id  ,
+                          fecha:gal_Citas_Pendientes.Selected.fecha_cita,
+                          fecha_texto:Text(gal_Citas_Pendientes.Selected.fecha_cita,"yymmdd"),
+                          Paciente:gal_Citas_Pendientes.Selected.Nombre_Paciente,
+                          DNI_Paciente:gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
+                          Servicio:gal_Citas_Pendientes.Selected.Servicio,
+                          Alerta:true
+                        }),
+                        Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=AtencionSelected.id),
+                        {
+                          estado:"En Cola",
+                          etapa:"Caja"
+                        })
+                        );
+                        
+                        
+                        
+                        If(IsEmpty(Filter('public.MC_Servicios_Paciente',id_ticket=ThisItem.id,id_servicio=ThisItem.id_servicio)),
+                        Patch('public.MC_Servicios_Paciente',Defaults('public.MC_Servicios_Paciente'),{
+                            id:GUID(),
+                            id_ticket:ThisItem.id,
+                            id_dni_paciente:ThisItem.id_Pacientes_DNI,
+                            id_sede:_varSede.id,
+                            id_especialidad:LookUp('public.Medical_Center_S&E_Relacion',id=ThisItem.id_especialidad_x_sede,id_especialidad),
+                            id_servicio:ThisItem.id_servicio,
+                            id_doctor:getUser.id,
+                            fecha_registro:Now()
+                        })
+                        );
+                        
+                        Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=AtencionSelected.id_Pacientes_DNI),{Estatus:"En Atención"})
+                        
+                        
+                        
+                    Visible: =!IconHistoria.Visible
+                    Width: =32
+                    X: =If(_ResponsiveM = false, 863,1121)
+                    Y: =64
                     ZIndex: =2
 
-                    Container22_6 As groupContainer.horizontalAutoLayoutContainer:
-                        FillPortions: =0
-                        Height: =24
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =100
-                        LayoutMode: =LayoutMode.Auto
-                        ZIndex: =3
-
-                        Label17_8 As label:
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Bold
-                            Height: =24
-                            OnSelect: =
-                            Size: =12
-                            Text: ="Médico"
-                            Width: =75
-                            X: =213
-                            Y: =20
-                            ZIndex: =1
-
-                        Label17_2 As label:
-                            Color: =RGBA(95, 106, 146, 1)
-                            Font: =Font.'Segoe UI'
-                            Height: =24
-                            OnSelect: =
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            Size: =12
-                            Text: |
-                                =LookUp('public.Medical_Center_Usuario',Correo=ThisItem.Doctor,Usuario)
-                            Wrap: =false
-                            X: =72
-                            Y: =20
-                            ZIndex: =2
-
-                    Container22_7 As groupContainer.horizontalAutoLayoutContainer:
-                        FillPortions: =0
-                        Height: =24
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =100
-                        LayoutMode: =LayoutMode.Auto
-                        ZIndex: =4
-
-                        Label17_21 As label:
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Bold
-                            Height: =24
-                            OnSelect: =
-                            Size: =12
-                            Text: ="Fecha"
-                            Width: =75
-                            X: =213
-                            Y: =20
-                            ZIndex: =1
-
-                        Label17_20 As label:
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            Height: =24
-                            LayoutMinWidth: =50
-                            OnSelect: =
-                            Size: =12
-                            Text: =Text(ThisItem.fecha_cita,"dd/mm/yyyy")
-                            Width: =100
-                            X: =72
-                            Y: =20
-                            ZIndex: =2
-
-                Container22_3 As groupContainer.horizontalAutoLayoutContainer:
-                    FillPortions: =2
-                    Height: =24
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutGap: =10
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =200
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingTop: =15
+                IconTriaje As icon.Health:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisplayMode: |-
+                        =With(
+                            {
+                                lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
+                            },
+                            If(
+                               getUser.Rol = "Triaje" ||getUser.Rol = "Caja" ||  getUser.Rol = "Doctor" And Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true || lookupResult = "Triaje",
+                                DisplayMode.Disabled,
+                                DisplayMode.Edit
+                            )
+                        )
+                    Height: =28
+                    Icon: =Icon.Health
+                    OnSelect: |-
+                        =
+                        If(IsEmpty(Filter('public.Medical_Center_Counter',id_Ticket=ThisItem.id)),
+                        Patch('public.Medical_Center_Counter',Defaults('public.Medical_Center_Counter'),
+                        { 
+                        id_Ticket:ThisItem.id,  
+                          estado:"En Cola",
+                          etapa:"Triaje",
+                          usuario:ThisItem.Doctor,
+                            id_sede : _varSede.id  ,
+                          fecha:gal_Citas_Pendientes.Selected.fecha_cita,
+                          fecha_texto:Text(ThisItem.fecha_cita,"yymmdd"),
+                          Paciente:gal_Citas_Pendientes.Selected.Nombre_Paciente,
+                          DNI_Paciente:gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
+                          Servicio:gal_Citas_Pendientes.Selected.Servicio,
+                          Alerta:true
+                        }),
+                        Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=ThisItem.id),
+                        {  
+                          estado:"En Cola",
+                          etapa:"Triaje"
+                        })
+                        );
+                        
+                        Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=ThisItem.id_Pacientes_DNI),{Estatus:"En Atención"});
+                        
+                        
+                        
+                        If(
+                            LookUp(
+                                'public.Medical_Center_Historial_Principal',
+                                DNI_CI = AtencionSelected.id_Pacientes_DNI,
+                                DNI_CI
+                            ) = AtencionSelected.id_Pacientes_DNI,
+                          If(getUser.Rol= "Administrador",   Navigate(Triaje_Dashboard) & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard')) , ""  
+                        );
+                    Visible: =!IconHistoria.Visible
+                    Width: =32
+                    X: =If(_ResponsiveM = false, 910 , 1168)
+                    Y: =64
                     ZIndex: =3
 
-                    Container22_8 As groupContainer.horizontalAutoLayoutContainer:
-                        FillPortions: =0
-                        Height: =24
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        ZIndex: =1
-
-                        Label17_22 As label:
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Bold
-                            Height: =24
-                            OnSelect: =
-                            Size: =12
-                            Text: ="Estatus"
-                            Width: =70
-                            X: =213
-                            Y: =20
-                            ZIndex: =1
-
-                        Label17_23 As label:
-                            Color: =RGBA(95, 106, 146, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            Height: =24
-                            LayoutMinWidth: =100
-                            OnSelect: =
-                            Size: =12
-                            Text: |-
-                                =If(
-                                    IsBlank(
-                                        LookUp(
-                                            Filter(
-                                                'public.Medical_Center_Counter',
-                                                id_Ticket = ThisItem.id,
-                                                id_sede = _varSede.id
-                                            ),
-                                            DNI_Paciente = ThisItem.id_Pacientes_DNI,
-                                            estado
-                                        )
-                                    ),
-                                    "Atención Paciente - " & ThisItem.Estatus,
-                                    LookUp(
-                                        Filter(
-                                            'public.Medical_Center_Counter',
-                                            id_Ticket = ThisItem.id,
-                                            id_sede = _varSede.id
-                                        ),
-                                        DNI_Paciente = ThisItem.id_Pacientes_DNI,
-                                        etapa
-                                    ) & " - " & LookUp(
-                                        Filter(
-                                            'public.Medical_Center_Counter',
-                                            id_Ticket = ThisItem.id,
-                                            id_sede = _varSede.id
-                                        ),
-                                        DNI_Paciente = ThisItem.id_Pacientes_DNI,
-                                        estado
-                                    )
-                                )
-                                /* &" "&  If(LookUp('public.Medical_Center_Historial_Principal';DNI_CI=ThisItem.id_Pacientes_DNI;DNI_CI)=ThisItem.id_Pacientes_DNI;"(Rellenada)";"(Falta Rellenar)") */
-                            Visible: =!IconHistoria.Visible
-                            Wrap: =false
-                            X: =72
-                            Y: =20
-                            ZIndex: =2
-
-                        Label17_40 As label:
-                            Color: =RGBA(255, 0, 0, 1)
-                            FillPortions: =1
-                            Font: =Font.'Segoe UI'
-                            Height: =24
-                            LayoutMinWidth: =100
-                            OnSelect: =
-                            Size: =12
-                            Text: ="Sin Historia"
-                            Visible: =IconHistoria.Visible
-                            Wrap: =false
-                            X: =72
-                            Y: =20
-                            ZIndex: =3
-
-                    Container22_9 As groupContainer.horizontalAutoLayoutContainer:
-                        FillPortions: =0
-                        Height: =24
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =100
-                        ZIndex: =2
-
-                        Label17_24 As label:
-                            Font: =Font.'Segoe UI'
-                            FontWeight: =FontWeight.Bold
-                            Height: =24
-                            OnSelect: =
-                            Size: =12
-                            Text: ="Hora"
-                            Width: =70
-                            X: =213
-                            Y: =20
-                            ZIndex: =1
-
-                        Label17_25 As label:
-                            Color: =RGBA(95, 106, 146, 1)
-                            Font: =Font.'Segoe UI'
-                            Height: =24
-                            OnSelect: =
-                            Size: =12
-                            Text: |-
-                                =Text(ThisItem.fecha_cita, "hh:mm AM/PM")
-                            Width: =100
-                            X: =72
-                            Y: =20
-                            ZIndex: =2
-
-                        Image34_2 As image:
-                            DisplayMode: =If(getUser.Rol = "Administrador" || getUser.Rol = "Asistente", DisplayMode.Edit, DisplayMode.Disabled)
-                            Height: =24
-                            Image: ='Shape - 2023-04-21T124119.492'
-                            OnSelect: |-
-                                =Set(
-                                    AtencionSelected,
-                                    gal_Citas_Pendientes.Selected
-                                );
-                                UpdateContext({CitaLlamada:true});
-                                Set(varAgendarCitaNew,false);
-                                Set(varAgendarCitaEdit,true);
-                            Width: =24
-                            X: =932
-                            Y: =7
-                            ZIndex: =4
-
-            IconAtencion As icon.Hospital:
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisplayMode: |-
-                    =With(
-                        {
-                            lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
-                        },
-                        If( getUser.Rol = "Caja" || 
-                            getUser.Rol = "Triaje" || getUser.Rol = "Doctor" And
-                            Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true || lookupResult = "Atención Medica",
-                            DisplayMode.Disabled,
-                            DisplayMode.Edit
-                        )
-                    )
-                Height: =28
-                Icon: =Icon.Hospital
-                OnSelect: |-
-                    =
-                    
-                    If(IsEmpty(Filter('public.Medical_Center_Counter',id_Ticket=ThisItem.id)),
-                    Patch('public.Medical_Center_Counter',Defaults('public.Medical_Center_Counter'),
-                    { 
-                    id_Ticket:ThisItem.id,  
-                      estado:"En Cola",
-                      etapa:"Atención Medica",
-                      usuario:ThisItem.Doctor,
-                        id_sede : _varSede.id  ,
-                      fecha:gal_Citas_Pendientes.Selected.fecha_cita,
-                      fecha_texto:Text(ThisItem.fecha_cita,"yymmdd"),
-                      Paciente:gal_Citas_Pendientes.Selected.Nombre_Paciente,
-                      DNI_Paciente:gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
-                      Servicio:gal_Citas_Pendientes.Selected.Servicio,
-                      Alerta:true
-                    }),
-                    Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=ThisItem.id),
-                    { 
-                      estado:"En Cola",
-                      etapa:"Atención Medica"
-                    })
-                    );
-                    
-                    Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=ThisItem.id_Pacientes_DNI),{Estatus:"En Atención"});
-                    
-                    
-                    
-                    If(
-                        LookUp(
-                            'public.Medical_Center_Historial_Principal',
-                            DNI_CI = AtencionSelected.id_Pacientes_DNI,
-                            DNI_CI
-                        ) = AtencionSelected.id_Pacientes_DNI,
-                      If(getUser.Rol= "Administrador",  Navigate('Consulta Medica Dashboard') & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
-                      ""    
-                    );
-                Visible: =!IconHistoria.Visible
-                Width: =32
-                X: =If(_ResponsiveM = false, 957, 1215)
-                Y: =4
-                ZIndex: =4
-
-            IconCaja As icon.Money:
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                DisplayMode: |-
-                    =With(
-                        {
-                            lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
-                        },
-                        If(
-                            getUser.Rol = "Caja" ||  getUser.Rol = "Triaje" ||  getUser.Rol = "Doctor" || ThisItem.caja_finalizada = true || lookupResult = "Caja" || Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") ,
-                            DisplayMode.Disabled,
-                            DisplayMode.Edit
-                        )
-                    )
-                Height: =28
-                Icon: =Icon.Money
-                OnSelect: |+
-                    =Set(
-                        AtencionSelected,
-                        gal_Citas_Pendientes.Selected
-                    );
-                    If(
-                        LookUp(
-                            'public.Medical_Center_Historial_Principal',
-                            DNI_CI = AtencionSelected.id_Pacientes_DNI,
-                            DNI_CI
-                        ) = AtencionSelected.id_Pacientes_DNI,
-                      If(getUser.Rol= "Administrador",  Navigate(Caja) & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard'));
-                      
-                        Set(
-                            varCaja,
-                            false
-                        )
-                        
-                        
-                    );
-                    If(IsEmpty(Filter('public.Medical_Center_Counter',id_Ticket=AtencionSelected.id)),
-                    Patch('public.Medical_Center_Counter',Defaults('public.Medical_Center_Counter'),
-                    {
-                    id_Ticket:AtencionSelected.id,  
-                      estado:"En Cola",
-                      etapa:"Caja",
-                      usuario:ThisItem.Doctor,
-                       id_sede : _varSede.id  ,
-                      fecha:gal_Citas_Pendientes.Selected.fecha_cita,
-                      fecha_texto:Text(gal_Citas_Pendientes.Selected.fecha_cita,"yymmdd"),
-                      Paciente:gal_Citas_Pendientes.Selected.Nombre_Paciente,
-                      DNI_Paciente:gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
-                      Servicio:gal_Citas_Pendientes.Selected.Servicio,
-                      Alerta:true
-                    }),
-                    Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=AtencionSelected.id),
-                    {
-                      estado:"En Cola",
-                      etapa:"Caja"
-                    })
-                    );
-                    
-                    
-                    
-                    If(IsEmpty(Filter('public.MC_Servicios_Paciente',id_ticket=ThisItem.id,id_servicio=ThisItem.id_servicio)),
-                    Patch('public.MC_Servicios_Paciente',Defaults('public.MC_Servicios_Paciente'),{
-                        id:GUID(),
-                        id_ticket:ThisItem.id,
-                        id_dni_paciente:ThisItem.id_Pacientes_DNI,
-                        id_sede:_varSede.id,
-                        id_especialidad:LookUp('public.Medical_Center_S&E_Relacion',id=ThisItem.id_especialidad_x_sede,id_especialidad),
-                        id_servicio:ThisItem.id_servicio,
-                        id_doctor:getUser.id,
-                        fecha_registro:Now()
-                    })
-                    );
-                    
-                    Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=AtencionSelected.id_Pacientes_DNI),{Estatus:"En Atención"})
-                    
-                    
-                    
-                Visible: =!IconHistoria.Visible
-                Width: =32
-                X: =If(_ResponsiveM = false, 863,1121)
-                Y: =4
-                ZIndex: =5
-
-            IconTriaje As icon.Health:
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisplayMode: |-
-                    =With(
-                        {
-                            lookupResult: LookUp('public.Medical_Center_Counter',id_Ticket = ThisItem.id,etapa)
-                        },
-                        If(
-                           getUser.Rol = "Triaje" ||getUser.Rol = "Caja" ||  getUser.Rol = "Doctor" And Text(Today(), "dd/mm/yyyy") <> Text(ThisItem.fecha_cita, "dd/mm/yyyy") || ThisItem.cita_finalizada = true || ThisItem.triaje_finalizada = true || lookupResult = "Triaje",
-                            DisplayMode.Disabled,
-                            DisplayMode.Edit
-                        )
-                    )
-                Height: =28
-                Icon: =Icon.Health
-                OnSelect: |-
-                    =
-                    If(IsEmpty(Filter('public.Medical_Center_Counter',id_Ticket=ThisItem.id)),
-                    Patch('public.Medical_Center_Counter',Defaults('public.Medical_Center_Counter'),
-                    { 
-                    id_Ticket:ThisItem.id,  
-                      estado:"En Cola",
-                      etapa:"Triaje",
-                      usuario:ThisItem.Doctor,
-                        id_sede : _varSede.id  ,
-                      fecha:gal_Citas_Pendientes.Selected.fecha_cita,
-                      fecha_texto:Text(ThisItem.fecha_cita,"yymmdd"),
-                      Paciente:gal_Citas_Pendientes.Selected.Nombre_Paciente,
-                      DNI_Paciente:gal_Citas_Pendientes.Selected.id_Pacientes_DNI,
-                      Servicio:gal_Citas_Pendientes.Selected.Servicio,
-                      Alerta:true
-                    }),
-                    Patch('public.Medical_Center_Counter',LookUp('public.Medical_Center_Counter',id_Ticket=ThisItem.id),
-                    {  
-                      estado:"En Cola",
-                      etapa:"Triaje"
-                    })
-                    );
-                    
-                    Patch('public.Medical_Center_Ticket',LookUp('public.Medical_Center_Ticket',id=ThisItem.id_Pacientes_DNI),{Estatus:"En Atención"});
-                    
-                    
-                    
-                    If(
-                        LookUp(
-                            'public.Medical_Center_Historial_Principal',
-                            DNI_CI = AtencionSelected.id_Pacientes_DNI,
-                            DNI_CI
-                        ) = AtencionSelected.id_Pacientes_DNI,
-                      If(getUser.Rol= "Administrador",   Navigate(Triaje_Dashboard) & Refresh('public.Medical_Center_Counter'),Navigate('Atencion Cliente Dashboard')) , ""  
-                    );
-                Visible: =!IconHistoria.Visible
-                Width: =32
-                X: =If(_ResponsiveM = false, 910 , 1168)
-                Y: =4
-                ZIndex: =6
-
-            IconHistoria As icon.Medical:
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisplayMode: =If(getUser.Rol = "Administrador" || getUser.Rol = "Asistente", DisplayMode.Edit, DisplayMode.Disabled)
-                Height: =28
-                Icon: =Icon.Medical
-                OnSelect: |-
-                    =Set(
-                            _varCrearHistoriaMedica,
-                            true
+                IconHistoria As icon.Medical:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisplayMode: =If(getUser.Rol = "Administrador" || getUser.Rol = "Asistente", DisplayMode.Edit, DisplayMode.Disabled)
+                    Height: =28
+                    Icon: =Icon.Medical
+                    OnSelect: |-
+                        =Set(
+                                _varCrearHistoriaMedica,
+                                true
+                            );
+                            Set(
+                            AtencionSelected,
+                            gal_Citas_Pendientes.Selected
                         );
-                        Set(
-                        AtencionSelected,
-                        gal_Citas_Pendientes.Selected
-                    );
-                Visible: =IsEmpty(Filter('public.Medical_Center_Historial_Principal',DNI_CI=ThisItem.id_Pacientes_DNI))
-                Width: =32
-                X: =If(_ResponsiveM = false, 957, 1215)
-                Y: =36
-                ZIndex: =7
+                    Visible: =IsEmpty(Filter('public.Medical_Center_Historial_Principal',DNI_CI=ThisItem.id_Pacientes_DNI))
+                    Width: =32
+                    X: =1111
+                    Y: =62
+                    ZIndex: =4
+
+                Label17_23 As label:
+                    Color: =RGBA(95, 106, 146, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =48
+                    OnSelect: =
+                    Size: =12
+                    Text: |-
+                        =If(
+                            IsBlank(
+                                LookUp(
+                                    Filter(
+                                        'public.Medical_Center_Counter',
+                                        id_Ticket = ThisItem.id,
+                                        id_sede = _varSede.id
+                                    ),
+                                    DNI_Paciente = ThisItem.id_Pacientes_DNI,
+                                    estado
+                                )
+                            ),
+                            "Atención Paciente - " & ThisItem.Estatus,
+                            LookUp(
+                                Filter(
+                                    'public.Medical_Center_Counter',
+                                    id_Ticket = ThisItem.id,
+                                    id_sede = _varSede.id
+                                ),
+                                DNI_Paciente = ThisItem.id_Pacientes_DNI,
+                                etapa
+                            ) & " - " & LookUp(
+                                Filter(
+                                    'public.Medical_Center_Counter',
+                                    id_Ticket = ThisItem.id,
+                                    id_sede = _varSede.id
+                                ),
+                                DNI_Paciente = ThisItem.id_Pacientes_DNI,
+                                estado
+                            )
+                        )
+                        /* &" "&  If(LookUp('public.Medical_Center_Historial_Principal';DNI_CI=ThisItem.id_Pacientes_DNI;DNI_CI)=ThisItem.id_Pacientes_DNI;"(Rellenada)";"(Falta Rellenar)") */
+                    Visible: =!IconHistoria.Visible
+                    Wrap: =false
+                    X: =922
+                    Y: =16
+                    ZIndex: =5
+
+                Label17_40 As label:
+                    Color: =RGBA(255, 0, 0, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =48
+                    OnSelect: =
+                    Size: =12
+                    Text: ="Sin Historia"
+                    Visible: =IconHistoria.Visible
+                    Wrap: =false
+                    X: =446
+                    Y: =14
+                    ZIndex: =6
+
+                Label17_25 As label:
+                    Color: =RGBA(95, 106, 146, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =48
+                    OnSelect: =
+                    Size: =12
+                    Text: |-
+                        =Text(ThisItem.fecha_cita, "hh:mm AM/PM")
+                    Width: =100
+                    X: =482
+                    Y: =40
+                    ZIndex: =7
+
+                Image34_2 As image:
+                    DisplayMode: =If(getUser.Rol = "Administrador" || getUser.Rol = "Asistente", DisplayMode.Edit, DisplayMode.Disabled)
+                    Height: =24
+                    Image: ='Shape - 2023-04-21T124119.492'
+                    OnSelect: |-
+                        =Set(
+                            AtencionSelected,
+                            gal_Citas_Pendientes.Selected
+                        );
+                        UpdateContext({CitaLlamada:true});
+                        Set(varAgendarCitaNew,false);
+                        Set(varAgendarCitaEdit,true);
+                    Width: =24
+                    X: =850
+                    Y: =64
+                    ZIndex: =8
+
+                Label17_12 As label:
+                    Color: =RGBA(95, 106, 146, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =48
+                    OnSelect: =
+                    PaddingTop: =3
+                    Size: =12
+                    Text: |-
+                        =Proper(If(ThisItem.Estatus="En Cola",Substitute(ThisItem.Servicio,"Cita: ",""),ThisItem.Estatus))
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =180
+                    Wrap: =false
+                    X: =40
+                    Y: =40
+                    ZIndex: =9
+
+                Label17_4 As label:
+                    Color: =RGBA(95, 106, 146, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =48
+                    OnSelect: =
+                    PaddingTop: =0
+                    Size: =12
+                    Text: |-
+                        =/*If(LookUp(col_citas;id_Pacientes_DNI=DNITextInput.Text;Nacionalidad)="Extranjero(a)";ThisItem.Nombre_Paciente;
+                        Proper(TipoDoc.nombres &" " & TipoDoc.apellidoPaterno &" " & TipoDoc.apellidoMaterno))*/
+                        If(Len(ThisItem.Nombre_Paciente)<27,Proper(ThisItem.Nombre_Paciente),Left(Proper(ThisItem.Nombre_Paciente),27)&"...")
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =180
+                    Wrap: =false
+                    X: =721
+                    Y: =16
+                    ZIndex: =10
+
+                Label17_20 As label:
+                    Color: =RGBA(95, 106, 146, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =48
+                    OnSelect: =
+                    Size: =12
+                    Text: =Text(ThisItem.fecha_cita,"dd/mm/yyyy")
+                    Width: =100
+                    X: =606
+                    Y: =40
+                    ZIndex: =11
+
+                Label17_2 As label:
+                    Color: =RGBA(95, 106, 146, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =48
+                    OnSelect: =
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    Size: =12
+                    Text: |
+                        =LookUp('public.Medical_Center_Usuario',Correo=ThisItem.Doctor,Usuario)
+                    Wrap: =false
+                    X: =220
+                    Y: =14
+                    ZIndex: =12
 
         btn_Agendar_Cita As button:
             BorderColor: =ColorFondoBoton
