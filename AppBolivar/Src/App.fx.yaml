@@ -60,7 +60,7 @@ App As appinfo:
         );
         Set(
             getLogo,
-            If(
+            IfError(
                 IsBlank(
                     LookUp(
                         'public.Medical_Center_Consultorio_Medico',

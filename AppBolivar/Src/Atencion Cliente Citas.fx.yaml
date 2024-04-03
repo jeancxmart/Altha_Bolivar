@@ -499,8 +499,8 @@
                         );
                     Visible: =IsEmpty(Filter('public.Medical_Center_Historial_Principal',DNI_CI=ThisItem.id_Pacientes_DNI))
                     Width: =32
-                    X: =1111
-                    Y: =62
+                    X: =1172
+                    Y: =36
                     ZIndex: =4
 
                 Label17_23 As label:
@@ -681,7 +681,7 @@
                     Text: =""
                     Width: =28
                     X: =1131
-                    Y: =6
+                    Y: =12
                     ZIndex: =13
 
         btn_Agendar_Cita As button:

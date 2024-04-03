@@ -1341,7 +1341,7 @@ scDataAntigua As screen:
                     "Nombres",
                     "Apellidos",
                     "Telefono",
-                    "DNI_CI"
+                    "DNI_CI", "id"
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
@@ -2388,7 +2388,7 @@ scDataAntigua As screen:
                 galCitas_1 As gallery.galleryVertical:
                     DelayItemLoading: =true
                     Height: =517
-                    Items: ='public.medical_center_anteriores_visits'
+                    Items: =_varDatass
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
@@ -2422,7 +2422,7 @@ scDataAntigua As screen:
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =15
-                                Text: =ThisItem.Start
+                                Text: =ThisItem.salida
                                 Wrap: =false
                                 ZIndex: =1
 
@@ -2445,7 +2445,7 @@ scDataAntigua As screen:
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =15
-                                Text: =ThisItem.End
+                                Text: =
                                 Wrap: =false
                                 ZIndex: =1
 
