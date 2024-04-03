@@ -667,6 +667,22 @@
                     Y: =26
                     ZIndex: =12
 
+                btnMoney As button:
+                    BorderColor: =RGBA(44, 97, 112, 1)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =28
+                    HoverFill: =RGBA(44, 97, 112, 0.25)
+                    PressedFill: =RGBA(44, 97, 112, 0.25)
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Text: =""
+                    Width: =28
+                    X: =1131
+                    Y: =6
+                    ZIndex: =13
+
         btn_Agendar_Cita As button:
             BorderColor: =ColorFondoBoton
             Color: =ColorFondoBoton
@@ -758,6 +774,30 @@
                 X: =470
                 Y: =87
                 ZIndex: =2
+
+        btnFiltradog As button:
+            BorderColor: =RGBA(44, 97, 112, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =36
+            HoverFill: =RGBA(44, 97, 112, 0.25)
+            PressedFill: =RGBA(44, 97, 112, 0.25)
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Text: =""
+            Width: =36
+            X: =707
+            Y: =84
+            ZIndex: =9
+
+        Image47 As image:
+            Height: =24
+            Image: =Filter
+            Width: =24
+            X: =713
+            Y: =90
+            ZIndex: =10
 
     lbl_Sin_Citas As label:
         Color: =RGBA(147, 147, 147, 1)
@@ -4110,7 +4150,7 @@
                             FontWeight: =FontWeight.Semibold
                             Height: =50
                             Size: =12
-                            Text: =Text(ThisItem.fecha_nacimiento, "dd/mm/yyyy")
+                            Text: =Text(ThisItem.fecha_nacimiento,"dd/mm/yyyy")
                             Wrap: =false
                             ZIndex: =1
 
