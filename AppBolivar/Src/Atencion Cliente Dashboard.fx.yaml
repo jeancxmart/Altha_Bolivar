@@ -343,15 +343,6 @@
             Width: =1366
             ZIndex: =4
 
-        img_Logo_AC As image:
-            Height: =80
-            Image: =getLogo
-            OnSelect: =Navigate(Home)
-            Width: =119
-            X: =30
-            Y: =8
-            ZIndex: =5
-
         btn_Dashboard_AC As button:
             BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroTextoPrimario,varcolor_OscuroTextoPrimario)
             Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroTextoPrimario)
@@ -1295,6 +1286,14 @@
         X: =940
         Y: =122
         ZIndex: =63
+
+    Image48_1 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =64
 
     Group_Emergencia As group:
         Height: =5

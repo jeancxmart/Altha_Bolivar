@@ -18,6 +18,27 @@ Home As screen:
                 Correo = User().Email
             ))
 
+    Rectangle3 As rectangle:
+        Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
+        Height: =96
+        Width: =1366
+        ZIndex: =1
+
+    Image1 As image:
+        Height: =96
+        Image: ='Vector 32'
+        ImagePosition: =ImagePosition.Stretch
+        Width: =337
+        ZIndex: =2
+
+    Image2 As image:
+        Height: =96
+        Image: ='Vector 31'
+        ImagePosition: =ImagePosition.Stretch
+        Width: =337
+        X: =1029
+        ZIndex: =3
+
     btn_AtencionCliente As button:
         BorderColor: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
         Color: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroElementoPrimario,varcolor_OscuroElementoPrimario)
@@ -335,42 +356,6 @@ Home As screen:
         X: =617
         Y: =692
         ZIndex: =15
-
-    Group_Barra_Superior As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =17
-
-        Rectangle3 As rectangle:
-            Fill: =If(Or(getUser.Modo_Nocturno=false ,IsBlank(getUser.Modo_Nocturno)),varcolor_ClaroBackgroundBlanco,varcolor_OscuroBackgroundNegro)
-            Height: =96
-            Width: =1366
-            ZIndex: =1
-
-        Image1 As image:
-            Height: =96
-            Image: ='Vector 32'
-            ImagePosition: =ImagePosition.Stretch
-            Width: =337
-            ZIndex: =2
-
-        Image2 As image:
-            Height: =96
-            Image: ='Vector 31'
-            ImagePosition: =ImagePosition.Stretch
-            Width: =337
-            X: =1029
-            ZIndex: =3
-
-        img_Logo As image:
-            Height: =80
-            Image: =getLogo
-            Width: =119
-            X: =624
-            Y: =8
-            ZIndex: =12
 
     GroupChecklistVerificación As group:
         Height: =5
@@ -3458,4 +3443,12 @@ Home As screen:
         X: =602
         Y: =155
         ZIndex: =57
+
+    Image48 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =624
+        Y: =8
+        ZIndex: =58
 

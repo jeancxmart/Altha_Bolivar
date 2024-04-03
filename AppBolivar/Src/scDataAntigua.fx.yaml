@@ -63,15 +63,6 @@ scDataAntigua As screen:
         Y: =27
         ZIndex: =4
 
-    img_Logo_AM_1 As image:
-        Height: =80
-        Image: =getLogo
-        OnSelect: =Navigate(Home)
-        Width: =119
-        X: =30
-        Y: =8
-        ZIndex: =5
-
     btn_Dashboard_AM_1 As button:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(0, 0, 0, 1)
@@ -1614,6 +1605,14 @@ scDataAntigua As screen:
                 X: =835
                 Y: =71
                 ZIndex: =13
+
+    Image48_11 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =91
 
     GroupRecords As group:
         Height: =5

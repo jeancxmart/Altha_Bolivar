@@ -9,163 +9,147 @@
         Y: =96
         ZIndex: =1
 
-    Group2_9 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =11
+    Rectangle_Barra_Superior_1 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =96
+        Width: =1366
+        ZIndex: =2
 
-        Rectangle_Barra_Superior_1 As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =96
-            Width: =1366
-            ZIndex: =2
+    btn_Dashboard_AC_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn_Dashboard_AC_1.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn_Dashboard_AC_1.BorderColor, 20%)
+        HoverColor: |-
+            =ColorValue("#26495B")
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate('Atencion Cliente Dashboard')
+        PaddingLeft: =15
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Dashboard"
+        Width: =216
+        X: =30
+        Y: =126
+        ZIndex: =4
 
-        img_Logo_AC_1 As image:
-            Height: =80
-            Image: =getLogo
-            OnSelect: =Navigate(Home)
-            Width: =119
-            X: =30
-            Y: =8
-            ZIndex: =3
+    img_Dashboard_AC_1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Dashboard_AC_1.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Dashboard_AC_1.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Dashboard_AC_1.Fill, 20%)
+        Image: ='Shape (91)'
+        OnSelect: =
+        PressedBorderColor: =ColorFade(img_Dashboard_AC_1.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Dashboard_AC_1.Fill, -20%)
+        Width: =25
+        X: =51
+        Y: =143
+        ZIndex: =5
 
-        btn_Dashboard_AC_1 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledBorderColor: =RGBA(116, 116, 116, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderColor: =btn_Dashboard_AC_1.BorderColor
-            Height: =56
-            HoverBorderColor: =ColorFade(btn_Dashboard_AC_1.BorderColor, 20%)
-            HoverColor: |-
-                =ColorValue("#26495B")
-            HoverFill: =RGBA(255, 255, 255, 1)
-            OnSelect: =Navigate('Atencion Cliente Dashboard')
-            PaddingLeft: =15
-            PressedBorderColor: =RGBA(0, 0, 0, 1)
-            PressedColor: =RGBA(0, 0, 0, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Text: ="Dashboard"
-            Width: =216
-            X: =30
-            Y: =126
-            ZIndex: =4
+    btn_Citas_AC_3 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn_Citas_AC_3.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn_Citas_AC_3.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate('Atencion Cliente Citas')
+        PaddingLeft: =0
+        PaddingRight: =50
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Citas"
+        Width: =216
+        X: =30
+        Y: =212
+        ZIndex: =6
 
-        img_Dashboard_AC_1 As image:
-            BorderColor: =RGBA(32, 54, 71, 1)
-            FocusedBorderColor: =img_Dashboard_AC_1.BorderColor
-            Height: =25
-            HoverBorderColor: =ColorFade(img_Dashboard_AC_1.BorderColor, 20%)
-            HoverFill: =ColorFade(img_Dashboard_AC_1.Fill, 20%)
-            Image: ='Shape (91)'
-            OnSelect: =
-            PressedBorderColor: =ColorFade(img_Dashboard_AC_1.BorderColor, -20%)
-            PressedFill: =ColorFade(img_Dashboard_AC_1.Fill, -20%)
-            Width: =25
-            X: =51
-            Y: =143
-            ZIndex: =5
+    img_Citas_AC_1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Citas_AC_1.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Citas_AC_1.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Citas_AC_1.Fill, 20%)
+        Image: ='Shape (88)'
+        OnSelect: =Navigate('Atencion Cliente Citas')
+        PressedBorderColor: =ColorFade(img_Citas_AC_1.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Citas_AC_1.Fill, -20%)
+        Width: =25
+        X: =51
+        Y: =229
+        ZIndex: =7
 
-        btn_Citas_AC_3 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledBorderColor: =RGBA(116, 116, 116, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderColor: =btn_Citas_AC_3.BorderColor
-            Height: =56
-            HoverBorderColor: =ColorFade(btn_Citas_AC_3.BorderColor, 20%)
-            HoverColor: =RGBA(0, 0, 0, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            OnSelect: =Navigate('Atencion Cliente Citas')
-            PaddingLeft: =0
-            PaddingRight: =50
-            PressedBorderColor: =RGBA(0, 0, 0, 1)
-            PressedColor: =RGBA(0, 0, 0, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Text: ="Citas"
-            Width: =216
-            X: =30
-            Y: =212
-            ZIndex: =6
+    btn_Salir_AC_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =btn_Salir_AC_1.BorderColor
+        Height: =56
+        HoverBorderColor: =ColorFade(btn_Salir_AC_1.BorderColor, 20%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(Home)
+        PaddingLeft: =0
+        PaddingRight: =50
+        PressedBorderColor: =RGBA(0, 0, 0, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Text: ="Salir"
+        Width: =216
+        X: =30
+        Y: =676
+        ZIndex: =8
 
-        img_Citas_AC_1 As image:
-            BorderColor: =RGBA(32, 54, 71, 1)
-            FocusedBorderColor: =img_Citas_AC_1.BorderColor
-            Height: =25
-            HoverBorderColor: =ColorFade(img_Citas_AC_1.BorderColor, 20%)
-            HoverFill: =ColorFade(img_Citas_AC_1.Fill, 20%)
-            Image: ='Shape (88)'
-            OnSelect: =Navigate('Atencion Cliente Citas')
-            PressedBorderColor: =ColorFade(img_Citas_AC_1.BorderColor, -20%)
-            PressedFill: =ColorFade(img_Citas_AC_1.Fill, -20%)
-            Width: =25
-            X: =51
-            Y: =229
-            ZIndex: =7
+    img_Salir_AC_1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FocusedBorderColor: =img_Salir_AC_1.BorderColor
+        Height: =25
+        HoverBorderColor: =ColorFade(img_Salir_AC_1.BorderColor, 20%)
+        HoverFill: =ColorFade(img_Salir_AC_1.Fill, 20%)
+        Image: ='Shape (87)'
+        OnSelect: =Navigate(Home)
+        PressedBorderColor: =ColorFade(img_Salir_AC_1.BorderColor, -20%)
+        PressedFill: =ColorFade(img_Salir_AC_1.Fill, -20%)
+        Width: =25
+        X: =51
+        Y: =693
+        ZIndex: =9
 
-        btn_Salir_AC_1 As button:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledBorderColor: =RGBA(116, 116, 116, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderColor: =btn_Salir_AC_1.BorderColor
-            Height: =56
-            HoverBorderColor: =ColorFade(btn_Salir_AC_1.BorderColor, 20%)
-            HoverColor: =RGBA(0, 0, 0, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            OnSelect: =Navigate(Home)
-            PaddingLeft: =0
-            PaddingRight: =50
-            PressedBorderColor: =RGBA(0, 0, 0, 1)
-            PressedColor: =RGBA(0, 0, 0, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Text: ="Salir"
-            Width: =216
-            X: =30
-            Y: =676
-            ZIndex: =8
-
-        img_Salir_AC_1 As image:
-            BorderColor: =RGBA(32, 54, 71, 1)
-            FocusedBorderColor: =img_Salir_AC_1.BorderColor
-            Height: =25
-            HoverBorderColor: =ColorFade(img_Salir_AC_1.BorderColor, 20%)
-            HoverFill: =ColorFade(img_Salir_AC_1.Fill, 20%)
-            Image: ='Shape (87)'
-            OnSelect: =Navigate(Home)
-            PressedBorderColor: =ColorFade(img_Salir_AC_1.BorderColor, -20%)
-            PressedFill: =ColorFade(img_Salir_AC_1.Fill, -20%)
-            Width: =25
-            X: =51
-            Y: =693
-            ZIndex: =9
-
-        Rectangle_Separador_AC_1 As rectangle:
-            BorderColor: =RGBA(32, 54, 71, 1)
-            DisabledFill: =Rectangle_Separador_AC_1.Fill
-            Fill: =RGBA(147, 147, 147, 1)
-            FocusedBorderColor: =Rectangle_Separador_AC_1.BorderColor
-            Height: =672
-            HoverFill: =Rectangle_Separador_AC_1.Fill
-            PressedFill: =Rectangle_Separador_AC_1.Fill
-            Width: =1
-            X: =276
-            Y: =96
-            ZIndex: =10
+    Rectangle_Separador_AC_1 As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =Rectangle_Separador_AC_1.Fill
+        Fill: =RGBA(147, 147, 147, 1)
+        FocusedBorderColor: =Rectangle_Separador_AC_1.BorderColor
+        Height: =672
+        HoverFill: =Rectangle_Separador_AC_1.Fill
+        PressedFill: =Rectangle_Separador_AC_1.Fill
+        Width: =1
+        X: =276
+        Y: =96
+        ZIndex: =10
 
     btn_Emergencia_AC_1 As button:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -3592,4 +3576,12 @@
             X: =20
             Y: =274
             ZIndex: =7
+
+    Image48_2 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =45
 

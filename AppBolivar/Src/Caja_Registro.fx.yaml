@@ -9,15 +9,6 @@ Caja_Registro As screen:
         Width: =1366
         ZIndex: =1
 
-    img_Logo_Caja_Registro As image:
-        Height: =80
-        Image: =getLogo
-        OnSelect: =Navigate(Home)
-        Width: =119
-        X: =30
-        Y: =8
-        ZIndex: =2
-
     btn_Emergencia_Caja_Registro As button:
         BorderColor: =RGBA(0, 0, 0, 1)
         Fill: =RGBA(232, 17, 17, 1)
@@ -1580,6 +1571,14 @@ Caja_Registro As screen:
             X: =895
             Y: =140
             ZIndex: =65
+
+    Image48_6 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =97
 
     Group23 As group:
         Height: =5

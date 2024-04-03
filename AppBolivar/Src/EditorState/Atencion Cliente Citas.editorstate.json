@@ -14724,7 +14724,7 @@
       "MetaDataIDKey": "",
       "Name": "DatePicker3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 77,
+      "ParentIndex": 76,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16861,7 +16861,7 @@
       "MetaDataIDKey": "",
       "Name": "dpEspecialidadNewAppointment",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 65,
+      "ParentIndex": 64,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18785,7 +18785,7 @@
       "MetaDataIDKey": "",
       "Name": "dpEstadoCivil_DCA_20",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 76,
+      "ParentIndex": 75,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21441,7 +21441,7 @@
       "MetaDataIDKey": "",
       "Name": "dpServicioNuevoTicket",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 66,
+      "ParentIndex": 65,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23158,7 +23158,7 @@
       "MetaDataIDKey": "",
       "Name": "gal_Paciente_por_Atender_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 78,
+      "ParentIndex": 77,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23377,7 +23377,7 @@
       "MetaDataIDKey": "",
       "Name": "gal_Paciente_por_Atender_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 79,
+      "ParentIndex": 78,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30743,7 +30743,7 @@
       "MetaDataIDKey": "",
       "Name": "Image13",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 75,
+      "ParentIndex": 74,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34176,7 +34176,7 @@
       "MetaDataIDKey": "",
       "Name": "img_Pacientes_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 67,
+      "ParentIndex": 66,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -42952,7 +42952,7 @@
       "MetaDataIDKey": "",
       "Name": "Label51_10",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 70,
+      "ParentIndex": 69,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -43270,7 +43270,7 @@
       "MetaDataIDKey": "",
       "Name": "Label51_11",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 71,
+      "ParentIndex": 70,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -43588,7 +43588,7 @@
       "MetaDataIDKey": "",
       "Name": "Label51_12",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 80,
+      "ParentIndex": 79,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -44231,7 +44231,7 @@
       "MetaDataIDKey": "",
       "Name": "Label51_14",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 69,
+      "ParentIndex": 68,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -51751,7 +51751,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_Count_Pacientes_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 68,
+      "ParentIndex": 67,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53004,7 +53004,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_Sin_Citas",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 61,
+      "ParentIndex": 80,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -63299,7 +63299,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle_Separador_Calendario_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 62,
+      "ParentIndex": 61,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -63452,7 +63452,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle_Separador_Paciente_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 74,
+      "ParentIndex": 73,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -69944,7 +69944,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput35_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 63,
+      "ParentIndex": 62,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -70284,7 +70284,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput35_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 64,
+      "ParentIndex": 63,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -70624,7 +70624,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput35_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 72,
+      "ParentIndex": 71,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -70964,7 +70964,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput35_7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 73,
+      "ParentIndex": 72,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

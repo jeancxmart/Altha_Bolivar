@@ -49,20 +49,6 @@
         Y: =60
         ZIndex: =3
 
-    Image12_7 As image:
-        Height: =80
-        Image: =getLogo
-        OnSelect: =Navigate(Home)
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        Visible: =Not(Parent.Printing)
-        Width: =119
-        X: =30
-        Y: =8
-        ZIndex: =4
-
     Rectangle1_4 As rectangle:
         BorderColor: =RGBA(32, 54, 71, 1)
         DisabledFill: =Rectangle1_4.Fill
@@ -17373,4 +17359,12 @@
             X: =conAgregarServicio.X+conAgregarServicio.Width-1.5*Self.Width
             Y: =conAgregarServicio.Y+0.5*Self.Height
             ZIndex: =2
+
+    Image48_12 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =323
 

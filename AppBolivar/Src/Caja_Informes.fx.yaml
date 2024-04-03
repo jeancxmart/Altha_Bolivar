@@ -9,15 +9,6 @@ Caja_Informes As screen:
         Width: =1366
         ZIndex: =1
 
-    img_Logo_Caja_Registro_2 As image:
-        Height: =80
-        Image: =getLogo
-        OnSelect: =Navigate(Home)
-        Width: =119
-        X: =30
-        Y: =8
-        ZIndex: =2
-
     Group12_3 As group:
         Height: =5
         Width: =5
@@ -1160,4 +1151,12 @@ Caja_Informes As screen:
             X: =1112
             Y: =194
             ZIndex: =61
+
+    Image48_5 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =62
 

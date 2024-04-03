@@ -31,19 +31,6 @@
         Y: =60
         ZIndex: =3
 
-    img_Logo_Registro_AM As image:
-        Height: =80
-        Image: =getLogo
-        OnSelect: =Navigate(Home)
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        Width: =119
-        X: =30
-        Y: =8
-        ZIndex: =4
-
     Group3_2 As group:
         Height: =5
         Width: =5
@@ -3856,4 +3843,12 @@
         X: =1206
         Y: =59
         ZIndex: =174
+
+    Image48_10 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =175
 

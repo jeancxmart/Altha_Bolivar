@@ -277,15 +277,6 @@
             Width: =1366
             ZIndex: =2
 
-        img_Logo_AM As image:
-            Height: =80
-            Image: =getLogo
-            OnSelect: =Navigate(Home)
-            Width: =119
-            X: =30
-            Y: =8
-            ZIndex: =5
-
         btn_Dashboard_AM As button:
             BorderColor: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(116, 116, 116, 1)
@@ -2325,4 +2316,12 @@
         X: =50
         Y: =393
         ZIndex: =114
+
+    Image48_9 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =115
 

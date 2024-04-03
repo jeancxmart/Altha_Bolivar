@@ -49,15 +49,6 @@ Caja As screen:
         Width: =1366
         ZIndex: =6
 
-    img_Logo_Dashboard_Caja As image:
-        Height: =80
-        Image: =getLogo
-        OnSelect: =Navigate(Home)
-        Width: =118
-        X: =30
-        Y: =8
-        ZIndex: =7
-
     Group12 As group:
         Height: =5
         Width: =5
@@ -2392,6 +2383,14 @@ Caja As screen:
             X: =351
             Y: =10
             ZIndex: =2
+
+    Image48_3 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =59
 
     Calendario_34 As group:
         Height: =5

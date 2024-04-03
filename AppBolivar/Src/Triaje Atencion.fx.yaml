@@ -40,19 +40,6 @@
         Width: =1366
         ZIndex: =2
 
-    img_Logo_Atencion_Triaje As image:
-        Height: =80
-        Image: =getLogo
-        OnSelect: =Navigate(Home)
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        Width: =119
-        X: =30
-        Y: =8
-        ZIndex: =3
-
     btn_Emregencia_Atencion_Triaje As button:
         BorderColor: =RGBA(0, 0, 0, 1)
         Fill: =RGBA(232, 17, 17, 1)
@@ -728,6 +715,14 @@
                 X: =1022
                 Y: =473
                 ZIndex: =2
+
+    Image48_8 As image:
+        Height: =80
+        Image: ='imagen (1)'
+        Width: =119
+        X: =30
+        Y: =8
+        ZIndex: =57
 
     Group2_7 As group:
         Height: =5
