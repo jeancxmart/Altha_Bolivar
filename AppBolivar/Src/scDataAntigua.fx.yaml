@@ -1321,7 +1321,28 @@ scDataAntigua As screen:
         galDataAntigua As gallery.galleryVertical:
             DelayItemLoading: =true
             Height: =405
-            Items: =Search('public.Medical_Center_Pacientes', TextInputSearchPacientes_1.Text, "Nombres", "Apellidos", "Telefono","DNI_CI")
+            Items: |-
+                =Search(If( IsBlank(DatePickerCitas_4),'public.Medical_Center_Pacientes',
+                    Filter(
+                        AddColumns(
+                            'public.Medical_Center_Pacientes',
+                            "formato",
+                            Text(
+                                fecha_nacimiento,
+                                "dd/mm/yyyy"
+                            )
+                        ),
+                        formato = Text(
+                            DatePickerCitas_4.SelectedDate,
+                            "dd/mm/yyyy"
+                        )
+                )),
+                    TextInputSearchPacientes_1.Text,
+                    "Nombres",
+                    "Apellidos",
+                    "Telefono",
+                    "DNI_CI"
+                )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
@@ -1421,11 +1442,12 @@ scDataAntigua As screen:
                     Label41_25 As label:
                         AlignInContainer: =AlignInContainer.Stretch
                         Color: =RGBA(95, 106, 146, 1)
+                        ContentLanguage: =
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
                         Height: =50
                         Size: =12
-                        Text: =ThisItem.Correo
+                        Text: =ThisItem.fecha_nacimiento
                         Wrap: =false
                         ZIndex: =1
 
@@ -1520,8 +1542,8 @@ scDataAntigua As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: ="Correo"
-            Width: =80
+            Text: ="Fecha de Nacimiento"
+            Width: =200
             X: =700
             Y: =138
             ZIndex: =8
@@ -1559,6 +1581,39 @@ scDataAntigua As screen:
             X: =36
             Y: =76
             ZIndex: =11
+
+        GroupSearchFecha_4 As group:
+            Height: =5
+            Width: =5
+            X: =-425
+            Y: =-44
+            ZIndex: =14
+
+            TextInput26_4 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Default: =""
+                DisabledBorderColor: |-
+                    =ColorValue("#26495B")
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =36
+                Width: =150
+                X: =830
+                Y: =68
+                ZIndex: =12
+
+            DatePickerCitas_4 As datepicker:
+                BorderStyle: =BorderStyle.None
+                DefaultDate: =
+                Height: =30
+                IconBackground: =
+                IconFill: =RGBA(0, 0, 0, 1)
+                InputTextPlaceholder: ="--/--/--"
+                PaddingBottom: =0
+                Width: =140
+                X: =835
+                Y: =71
+                ZIndex: =13
 
     GroupRecords As group:
         Height: =5

@@ -77476,19 +77476,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.TextInput5_41.AccessibleLabel"
+                  "fullyQualifiedName": "scDataAntigua.ContainerPacientesAnt.TextInput26_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Atencion Cliente Citas'.TextInput5_41.AccessibleLabel",
+                  "fullyQualifiedName": "scDataAntigua.ContainerPacientesAnt.TextInput26_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Atencion Cliente Citas",
-                "type": "'Atencion Cliente Citas'.TextInput5_41"
+                "module": "scDataAntigua",
+                "type": "scDataAntigua.ContainerPacientesAnt.TextInput26_4"
               }
             }
           ],
@@ -112240,6 +112240,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scDataAntigua.ContainerPacientesAnt.DatePickerCitas_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scDataAntigua.ContainerPacientesAnt.DatePickerCitas_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scDataAntigua",
+                "type": "scDataAntigua.ContainerPacientesAnt.DatePickerCitas_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 12
         },
         {
           "locations": [
